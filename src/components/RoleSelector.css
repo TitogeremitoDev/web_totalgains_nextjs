@@ -1,0 +1,118 @@
+.role-selector {
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.05) 0%, transparent 100%);
+}
+
+.role-toggle {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    margin-bottom: var(--spacing-3xl);
+    flex-wrap: wrap;
+}
+
+.role-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    background: var(--bg-card);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    min-width: 200px;
+}
+
+.role-btn:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--primary);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.role-btn.active {
+    background: var(--primary-gradient);
+    border-color: transparent;
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+.role-icon {
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.role-label {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-3xl);
+}
+
+.benefit-card {
+    padding: var(--spacing-xl);
+    text-align: center;
+    transition: var(--transition-base);
+}
+
+.benefit-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    margin-bottom: var(--spacing-lg);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.benefit-card:hover .benefit-icon {
+    transform: scale(1.08) translateY(-4px) rotate(4deg);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.benefit-card p {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.role-cta {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .role-toggle {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .role-btn {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+}

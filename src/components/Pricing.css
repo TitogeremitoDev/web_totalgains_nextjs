@@ -1,0 +1,1044 @@
+.pricing {
+    padding: var(--spacing-3xl) 0;
+    position: relative;
+}
+
+.pricing .section-header {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Toggles */
+.pricing-toggles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.role-toggle {
+    display: flex;
+    background: var(--bg-card);
+    border-radius: var(--radius-md);
+    padding: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.toggle-btn {
+    padding: var(--spacing-sm) var(--spacing-lg);
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-base);
+}
+
+.toggle-btn.active {
+    background: var(--primary-gradient);
+    color: white;
+}
+
+.toggle-btn:hover:not(.active) {
+    color: var(--text-primary);
+}
+
+/* ============================================================ */
+/* Billing Toggle - Monthly / Annual - PREMIUM STYLE */
+/* ============================================================ */
+.billing-toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-2xl);
+}
+
+.billing-toggle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: 12px 28px;
+    background: linear-gradient(135deg, rgba(30, 30, 50, 0.9), rgba(40, 40, 70, 0.8));
+    border-radius: 50px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.billing-toggle>span {
+    font-size: 1rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.billing-toggle>span.active {
+    color: white;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.billing-toggle .annual-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.billing-toggle .annual-label.active .free-months {
+    animation: pulse-glow 1.5s ease-in-out infinite;
+}
+
+.billing-toggle .free-months {
+    background: linear-gradient(135deg, #10b981, #34d399);
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 10px rgba(16, 185, 129, 0.4);
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 2px 10px rgba(16, 185, 129, 0.4);
+        transform: scale(1);
+    }
+
+    50% {
+        box-shadow: 0 4px 20px rgba(16, 185, 129, 0.8);
+        transform: scale(1.05);
+    }
+}
+
+.switch {
+    width: 60px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.switch:hover {
+    border-color: rgba(255, 255, 255, 0.4);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.switch.active {
+    background: linear-gradient(135deg, #10b981, #059669);
+    border-color: #10b981;
+    box-shadow: 0 0 20px rgba(16, 185, 129, 0.5), inset 0 2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.switch-thumb {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: white;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.switch.active .switch-thumb {
+    transform: translateX(28px);
+}
+
+/* Annual Billing Note - IMPROVED READABILITY */
+.annual-billing-note {
+    font-size: 0.9rem;
+    margin-top: 12px;
+    padding: 10px 14px;
+    background: rgba(16, 185, 129, 0.15);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    border-radius: 8px;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.annual-billing-note strong {
+    color: #4ade80;
+    font-weight: 700;
+}
+
+/* Override for accent card (PRO) */
+.gradient-card-accent .annual-billing-note {
+    background: rgba(6, 95, 70, 0.2);
+    border-color: rgba(6, 95, 70, 0.4);
+    color: #1a1a2e;
+}
+
+.gradient-card-accent .annual-billing-note strong {
+    color: #065f46;
+}
+
+/* ============================================================ */
+/* Pricing Grid - Base */
+/* ============================================================ */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    align-items: stretch;
+}
+
+/* Coach 3 Cards Layout */
+.pricing-grid.coach-three-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+
+/* ============================================================ */
+/* Pricing Card - Base Styles */
+/* ============================================================ */
+.pricing-card {
+    padding: var(--spacing-lg) var(--spacing-md);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: all var(--transition-base);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+
+.pricing-card h3 {
+    color: white !important;
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.pricing-card p,
+.pricing-card .pricing-description {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.pricing-card .pricing-features li {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.pricing-card .pricing-features .check {
+    color: #4ade80 !important;
+}
+
+.pricing-card .pricing-features .cross {
+    color: #f87171 !important;
+}
+
+.pricing-card .currency,
+.pricing-card .period {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================================ */
+/* Recommended Card (PRO) - Highlighted */
+/* ============================================================ */
+.pricing-card.recommended {
+    transform: scale(1.05);
+    z-index: 2;
+    border-color: transparent;
+}
+
+.pricing-card.recommended::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(135deg, #fa709a, #fee140, #fa709a);
+    background-size: 200% 200%;
+    animation: gradient-border 3s ease infinite;
+    border-radius: calc(var(--radius-lg) + 3px);
+    z-index: -1;
+}
+
+@keyframes gradient-border {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.pricing-card.recommended::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--bg-card);
+    border-radius: var(--radius-lg);
+    z-index: -1;
+}
+
+.pricing-card.recommended:hover {
+    transform: scale(1.05) translateY(-8px);
+}
+
+/* ============================================================ */
+/* Card Gradient Variants */
+/* ============================================================ */
+
+/* START Card - Subtle, less attention-grabbing */
+.gradient-card-outline {
+    background: linear-gradient(135deg, rgba(30, 30, 50, 0.8), rgba(40, 40, 70, 0.6)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.gradient-card-outline .btn-outline {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-weight: 600;
+}
+
+.gradient-card-outline .btn-outline:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+/* BUSINESS Card - Solid, premium dark */
+.gradient-card-business {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(51, 65, 85, 0.9)) !important;
+    border: 1px solid rgba(148, 163, 184, 0.25) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-card-business::before {
+    display: none !important;
+}
+
+.gradient-card-business .btn-primary {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+/* Secondary gradient card */
+.gradient-card-secondary {
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.2), rgba(118, 75, 162, 0.3)) !important;
+    border: 1px solid rgba(102, 126, 234, 0.3) !important;
+}
+
+/* Accent Card (PRO - Highlighted) */
+.gradient-card-accent {
+    background: linear-gradient(135deg, #fa709a 0%, #ffc629 50%, #fee140 100%) !important;
+    background-size: 200% 200%;
+    animation: gradient-shift 6s ease infinite;
+    border: none !important;
+    box-shadow: 0 20px 60px rgba(250, 112, 154, 0.4);
+}
+
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Remove dark overlay from accent cards */
+.gradient-card-accent::before,
+.gradient-card-accent::after {
+    display: none !important;
+}
+
+/* Dark text for bright accent card */
+.gradient-card-accent h3 {
+    color: #1a1a2e !important;
+    -webkit-text-fill-color: #1a1a2e !important;
+}
+
+.gradient-card-accent .pricing-description {
+    color: rgba(26, 26, 46, 0.8) !important;
+}
+
+.gradient-card-accent .currency,
+.gradient-card-accent .period {
+    color: rgba(26, 26, 46, 0.7) !important;
+}
+
+.gradient-card-accent .pricing-features li {
+    color: #1a1a2e !important;
+}
+
+.gradient-card-accent .pricing-price .amount {
+    background: none !important;
+    -webkit-background-clip: unset !important;
+    background-clip: unset !important;
+    -webkit-text-fill-color: #4a1a50 !important;
+    color: #4a1a50 !important;
+    font-size: 4rem;
+    font-weight: 900;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
+}
+
+.gradient-card-accent .pricing-price {
+    border-bottom-color: rgba(26, 26, 46, 0.15);
+}
+
+.gradient-card-accent .pricing-features .check {
+    color: #065f46 !important;
+    font-size: 1.1rem;
+}
+
+.gradient-card-accent .pricing-features .cross {
+    color: #9f1239 !important;
+}
+
+.gradient-card-accent .btn-primary {
+    background: linear-gradient(135deg, #1a1a2e, #2d2d4d);
+    color: white;
+    box-shadow: 0 10px 30px rgba(26, 26, 46, 0.5);
+    font-weight: 800;
+    font-size: 1.1rem;
+    border: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gradient-card-accent .btn-primary:hover {
+    background: linear-gradient(135deg, #2d2d4d, #1a1a2e);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(26, 26, 46, 0.6);
+}
+
+/* ============================================================ */
+/* Recommended Badge */
+/* ============================================================ */
+.recommended-badge {
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.5);
+    z-index: 10;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ============================================================ */
+/* Pricing Header & Price */
+/* ============================================================ */
+.pricing-header {
+    margin-bottom: var(--spacing-sm);
+    padding-top: var(--spacing-sm);
+}
+
+.pricing-header h3 {
+    font-size: 1.6rem;
+    margin-bottom: var(--spacing-xs);
+    color: var(--text-primary);
+}
+
+.pricing-description {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.pricing-price {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-lg);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.pricing-price .currency {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    vertical-align: top;
+}
+
+.pricing-price .amount {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+}
+
+.pricing-card.recommended .pricing-price .amount {
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.pricing-price .period {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.original-price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+.save-pill {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+    color: white;
+    font-size: 0.75rem;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+/* ============================================================ */
+/* Pricing Features List */
+/* ============================================================ */
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-lg);
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.pricing-features .check {
+    color: var(--success);
+    font-weight: bold;
+    flex-shrink: 0;
+    font-size: 1rem;
+}
+
+.pricing-features .not-included {
+    opacity: 0.5;
+}
+
+.pricing-features .cross {
+    color: var(--danger);
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.pricing-card .btn {
+    margin-top: auto;
+    padding: 16px 28px;
+    font-size: 1.05rem;
+    font-weight: 800;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.5px;
+    border: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-card-outline .btn-outline {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: white;
+}
+
+.gradient-card-outline .btn-outline:hover {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+.pricing-features .check {
+    color: #10b981 !important;
+    font-weight: bold;
+    flex-shrink: 0;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+}
+
+.pricing-features li:hover .check {
+    transform: scale(1.3) rotate(5deg);
+}
+
+/* ============================================================ */
+/* RENOVE BANNER - Whale Section */
+/* ============================================================ */
+.renove-banner {
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-xl) var(--spacing-2xl);
+    background: linear-gradient(135deg, rgba(15, 15, 25, 0.98), rgba(25, 25, 40, 0.95));
+    border: 2px solid rgba(212, 175, 55, 0.4);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(212, 175, 55, 0.2);
+}
+
+.renove-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #d4af37, #ffd700, #f0c14b, #d4af37);
+    background-size: 200% 100%;
+    animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.renove-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-xl);
+    flex-wrap: wrap;
+}
+
+.renove-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.renove-text h3 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: white;
+    font-weight: 700;
+}
+
+.renove-text p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: var(--spacing-md);
+    font-size: 1rem;
+}
+
+.renove-offer {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(255, 215, 0, 0.1));
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+}
+
+.gift-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.offer-text {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.5;
+}
+
+.offer-text strong {
+    color: #ffd700;
+}
+
+.btn-renove {
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: white;
+    padding: 16px 32px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+    white-space: nowrap;
+}
+
+.btn-renove:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5);
+    background: linear-gradient(135deg, #2ae076, #159f74);
+}
+
+/* ============================================================ */
+/* Pricing Note */
+/* ============================================================ */
+.pricing-note {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}
+
+.pricing-note p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ============================================================ */
+/* Responsive Design */
+/* ============================================================ */
+@media (max-width: 1024px) {
+    .pricing-grid.coach-three-cards {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+    }
+
+    .pricing-card.recommended {
+        transform: none;
+    }
+
+    .pricing-card.recommended:hover {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 992px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+        margin: 0 auto;
+    }
+
+    .pricing-card.recommended {
+        transform: none;
+    }
+
+    .pricing-card.recommended:hover {
+        transform: translateY(-8px);
+    }
+}
+
+@media (max-width: 768px) {
+    .billing-toggle {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 16px 20px;
+    }
+
+    .renove-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .renove-text {
+        min-width: auto;
+    }
+
+    .renove-offer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .btn-renove {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .role-toggle {
+        width: 100%;
+    }
+
+    .toggle-btn {
+        flex: 1;
+        padding: var(--spacing-sm);
+    }
+
+    .renove-banner {
+        padding: var(--spacing-lg);
+    }
+
+    .renove-text h3 {
+        font-size: 1.25rem;
+    }
+
+    .billing-toggle .free-months {
+        font-size: 0.65rem;
+        padding: 3px 8px;
+    }
+
+    .free-plan-section {
+        padding: var(--spacing-md);
+    }
+
+    .free-plan-link {
+        font-size: 0.9rem;
+        padding: 10px 16px;
+    }
+}
+
+/* ============================================================ */
+/* NEW STYLES - IVA Highlight & Labels */
+/* ============================================================ */
+
+/* IVA Highlight in subtitle */
+.iva-highlight {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(52, 211, 153, 0.15));
+    color: #4ade80;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-weight: 700;
+    display: inline-block;
+    margin-top: 4px;
+}
+
+/* VAT Label under price */
+.vat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.gradient-card-accent .vat-label {
+    color: rgba(26, 26, 46, 0.6);
+}
+
+/* ============================================================ */
+/* Microcopy - "Sin cobro hoy" */
+/* ============================================================ */
+.microcopy {
+    display: block;
+    text-align: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+.gradient-card-accent .microcopy {
+    color: rgba(26, 26, 46, 0.6);
+}
+
+/* ============================================================ */
+/* FREE PLAN SECTION - Bottom Link */
+/* ============================================================ */
+.free-plan-section {
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-xl);
+    text-align: center;
+    background: linear-gradient(135deg, rgba(30, 30, 50, 0.6), rgba(40, 40, 70, 0.4));
+    border-radius: var(--radius-lg);
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+}
+
+.free-plan-question {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: var(--spacing-md);
+    font-weight: 500;
+}
+
+.free-plan-link {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #4ade80;
+    text-decoration: none;
+    padding: 12px 24px;
+    border: 2px solid rgba(74, 222, 128, 0.3);
+    border-radius: var(--radius-md);
+    background: rgba(74, 222, 128, 0.1);
+    transition: all 0.3s ease;
+}
+
+.free-plan-link:hover {
+    background: rgba(74, 222, 128, 0.2);
+    border-color: rgba(74, 222, 128, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(74, 222, 128, 0.2);
+}
+
+.free-plan-subtext {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: var(--spacing-md);
+    margin-bottom: 0;
+}
+
+/* ============================================================ */
+/* TOOLTIPS - Feature Info */
+/* ============================================================ */
+.feature-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tooltip-container {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: help;
+}
+
+.tooltip-icon {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.tooltip-container:hover .tooltip-icon {
+    opacity: 1;
+}
+
+.tooltip-text {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 6px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+.tooltip-container:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-8px);
+}
+
+/* ============================================================ */
+/* GRADIENT CARD VARIANTS - STARTER & UNLIMITED */
+/* ============================================================ */
+
+/* STARTER Card - Cool Blue/Cyan */
+.gradient-card-starter {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(14, 165, 233, 0.1)) !important;
+    border: 1px solid rgba(59, 130, 246, 0.25) !important;
+}
+
+.gradient-card-starter:hover {
+    border-color: rgba(59, 130, 246, 0.4) !important;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2);
+}
+
+.gradient-card-starter .btn-primary {
+    background: linear-gradient(135deg, #3b82f6, #0ea5e9);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+}
+
+.gradient-card-starter .btn-primary:hover {
+    background: linear-gradient(135deg, #2563eb, #0284c7);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+}
+
+/* UNLIMITED Card - Premium Dark/Purple */
+.gradient-card-unlimited {
+    background: linear-gradient(135deg, rgba(88, 28, 135, 0.25), rgba(124, 58, 237, 0.15)) !important;
+    border: 1px solid rgba(168, 85, 247, 0.3) !important;
+}
+
+.gradient-card-unlimited:hover {
+    border-color: rgba(168, 85, 247, 0.5) !important;
+    box-shadow: 0 20px 40px rgba(168, 85, 247, 0.25);
+}
+
+.gradient-card-unlimited .btn-primary {
+    background: linear-gradient(135deg, #a855f7, #7c3aed);
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.4);
+}
+
+.gradient-card-unlimited .btn-primary:hover {
+    background: linear-gradient(135deg, #9333ea, #6d28d9);
+    box-shadow: 0 8px 25px rgba(168, 85, 247, 0.5);
+}
+
+.trust-badges-pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 10px;
+}
+
+.trust-badge-mini {
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 6px 0;
+}
