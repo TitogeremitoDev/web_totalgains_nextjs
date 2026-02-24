@@ -4,15 +4,15 @@ import React, { useEffect, useState } from 'react';
 import { Flame, Clock, Diamond, Handshake } from 'lucide-react';
 import './Stats.css';
 
+const stats = [
+    { number: '100%', suffix: '', label: 'Compromiso', icon: <Flame size={40} color="#f97316" strokeWidth={2.5} /> },
+    { number: '24/7', suffix: '', label: 'Disponibilidad', icon: <Clock size={40} color="#3b82f6" strokeWidth={2.5} /> },
+    { number: 'Pro', suffix: '', label: 'Calidad', icon: <Diamond size={40} color="#a855f7" strokeWidth={2.5} /> },
+    { number: '1-1', suffix: '', label: 'Atención', icon: <Handshake size={40} color="#10b981" strokeWidth={2.5} /> }
+];
+
 const Stats = () => {
     const [animated, setAnimated] = useState(false);
-
-    const stats = [
-        { number: '100%', suffix: '', label: 'Compromiso', icon: <Flame size={40} color="#f97316" strokeWidth={2.5} /> },
-        { number: '24/7', suffix: '', label: 'Disponibilidad', icon: <Clock size={40} color="#3b82f6" strokeWidth={2.5} /> },
-        { number: 'Pro', suffix: '', label: 'Calidad', icon: <Diamond size={40} color="#a855f7" strokeWidth={2.5} /> },
-        { number: '1-1', suffix: '', label: 'Atención', icon: <Handshake size={40} color="#10b981" strokeWidth={2.5} /> }
-    ];
 
     useEffect(() => {
         const observer = new IntersectionObserver(

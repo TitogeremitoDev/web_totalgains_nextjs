@@ -11,33 +11,34 @@ import {
 } from "lucide-react";
 import "./HowItWorks.css";
 
+const steps = [
+  {
+    number: "01",
+    icon: <Building2 size={44} className="text-purple-400" />,
+    title: "Configura tu Espacio",
+    description:
+      "Accede desde Web, Android o iOS. Define tus servicios y prepara tu entorno de trabajo profesional.",
+    color: "primary",
+  },
+  {
+    number: "02",
+    icon: <Users size={44} className="text-blue-400" />,
+    title: "Añade a tus Atletas",
+    description:
+      "Invita a tus clientes, centraliza sus datos y ofréceles una app dedicada para realizar sus rutinas.",
+    color: "secondary",
+  },
+  {
+    number: "03",
+    icon: <LineChart size={44} className="text-yellow-400" />,
+    title: "Escala tu Negocio",
+    description:
+      "Diseña programas de entrenamiento con IA, automatiza cobros y fideliza a tus clientes.",
+    color: "accent",
+  },
+];
+
 const HowItWorks = () => {
-  const steps = [
-    {
-      number: "01",
-      icon: <Building2 size={44} className="text-purple-400" />,
-      title: "Configura tu Espacio",
-      description:
-        "Accede desde Web, Android o iOS. Define tus servicios y prepara tu entorno de trabajo profesional.",
-      color: "primary",
-    },
-    {
-      number: "02",
-      icon: <Users size={44} className="text-blue-400" />,
-      title: "Añade a tus Atletas",
-      description:
-        "Invita a tus clientes, centraliza sus datos y ofréceles una app dedicada para realizar sus rutinas.",
-      color: "secondary",
-    },
-    {
-      number: "03",
-      icon: <LineChart size={44} className="text-yellow-400" />,
-      title: "Escala tu Negocio",
-      description:
-        "Diseña programas de entrenamiento con IA, automatiza cobros y fideliza a tus clientes.",
-      color: "accent",
-    },
-  ];
 
   return (
     <section className="how-it-works" id="how-it-works">

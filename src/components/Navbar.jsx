@@ -5,6 +5,13 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import './Navbar.css';
 
+const navLinks = [
+    { href: '#how-it-works', label: 'Cómo Funciona' },
+    { href: '#app-showcase', label: 'Explora la App' },
+    { href: '/alternativas/trainerize', label: 'vs Trainerize' },
+    { href: '#pricing', label: 'Precios' }
+];
+
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
@@ -50,13 +57,6 @@ const Navbar = () => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
-    const navLinks = [
-        { href: '#how-it-works', label: 'Cómo Funciona' },
-        { href: '#app-showcase', label: 'Explora la App' },
-        { href: '/alternativas/trainerize', label: 'vs Trainerize' },
-        { href: '#pricing', label: 'Precios' }
-    ];
-
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}>
             <div className="container navbar-container">
@@ -72,6 +72,7 @@ const Navbar = () => {
                             href={link.href}
                             className="nav-link"
                             onClick={(e) => handleNavigation(e, link.href)}
+                            prefetch={false}
                         >
                             {link.label}
                         </Link>
@@ -79,10 +80,10 @@ const Navbar = () => {
                 </div>
 
                 <div className="navbar-actions">
-                    <Link href="https://totalgains.es/app/login" className="btn btn-outline">
+                    <Link href="https://totalgains.es/app/login" className="btn btn-outline" prefetch={false}>
                         Ya estoy<br />registrado
                     </Link>
-                    <Link href="/onboarding" className="btn btn-primary">
+                    <Link href="/onboarding" className="btn btn-primary" prefetch={false}>
                         Empieza gratis<br />14 Días
                     </Link>
                 </div>
@@ -106,6 +107,7 @@ const Navbar = () => {
                         href={link.href}
                         className="mobile-link"
                         onClick={(e) => handleNavigation(e, link.href)}
+                        prefetch={false}
                     >
                         {link.label}
                     </Link>
@@ -115,6 +117,7 @@ const Navbar = () => {
                     className="btn btn-outline mobile-cta"
                     onClick={() => setMenuOpen(false)}
                     style={{ marginBottom: '10px' }}
+                    prefetch={false}
                 >
                     Ya estoy registrado
                 </Link>
@@ -122,6 +125,7 @@ const Navbar = () => {
                     href="/onboarding"
                     className="btn btn-primary mobile-cta"
                     onClick={() => setMenuOpen(false)}
+                    prefetch={false}
                 >
                     Empieza gratis 14 Días
                 </Link>

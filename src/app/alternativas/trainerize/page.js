@@ -176,7 +176,7 @@ export default function AlternativaCompetidores() {
                     whileTap={{ scale: 0.95 }}
                     className="cta-wrapper"
                 >
-                    <Link href="/onboarding" className="btn btn-primary btn-lg cta-migrar">
+                    <Link href="/onboarding" className="btn btn-primary btn-lg cta-migrar" prefetch={false}>
                         Quiero migrar mis atletas gratis (En 5 Min) 🚀
                     </Link>
                     <p className="microcopy-secure mt-2">Atención prioritaria para cuentas que huyen de {currentData.name}.</p>

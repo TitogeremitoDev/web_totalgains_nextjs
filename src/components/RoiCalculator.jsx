@@ -96,10 +96,10 @@ const RoiCalculator = () => {
         return data;
     }, [price]);
 
-    const timeData = [
+    const timeData = useMemo(() => [
         { name: 'Manuales', horas: m.noTg, fill: 'url(#colorManuales)' },
         { name: 'TotalGains', horas: m.withTg, fill: 'url(#colorTotalGainsBar)' }
-    ];
+    ], [m]);
 
     const expensePercent = ((m.cost / m.rev) * 100).toFixed(1);
 

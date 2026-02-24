@@ -22,7 +22,9 @@ export default function Home() {
       <AppShowcase />
       <HowItWorks />
       {/* <LeadMagnet /> */}
-      <RoiCalculator />
+      <div className="hide-on-mobile">
+        <RoiCalculator />
+      </div>
       <Pricing />
       <FAQ />
       <Contact />

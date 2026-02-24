@@ -1,5 +1,6 @@
 import React from 'react';
 import { Heart } from 'lucide-react';
+import Link from 'next/link';
 import './Footer.css';
 
 const Footer = () => {
@@ -60,8 +61,8 @@ const Footer = () => {
                         <div className="footer-column">
                             <h4>Legal</h4>
                             <ul>
-                                <li><a href="/privacy">Privacidad</a></li>
-                                <li><a href="/terms">Términos</a></li>
+                                <li><Link href="/privacy" prefetch={false}>Privacidad</Link></li>
+                                <li><Link href="/terms" prefetch={false}>Términos</Link></li>
                             </ul>
                         </div>
 

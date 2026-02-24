@@ -62,6 +62,41 @@
   --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ================================
+   Responsive Utilities
+   ================================ */
+@media (max-width: 768px) {
+  :root {
+    --spacing-lg: 1.5rem;
+    /* original 2rem */
+    --spacing-xl: 2rem;
+    /* original 3rem */
+    --spacing-2xl: 2.5rem;
+    /* original 4rem */
+    --spacing-3xl: 3.5rem;
+    /* original 6rem */
+  }
+
+  .hide-on-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  :root {
+    --spacing-md: 1.0rem;
+    /* original 1.5rem */
+    --spacing-lg: 1.25rem;
+    /* target 20px gaps */
+    --spacing-xl: 1.75rem;
+    /* target 28px gaps */
+    --spacing-2xl: 2rem;
+    /* target 32px paddings */
+    --spacing-3xl: 2.5rem;
+    /* target 40px massive section padding */
+  }
+}
+
 /* Reset & Base Styles */
 * {
   margin: 0;
@@ -157,6 +192,19 @@ a:hover {
 section {
   padding: var(--spacing-3xl) 0;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  section {
+    padding: var(--spacing-xl) 0;
+  }
+}
+
+@media (max-width: 576px) {
+  section {
+    padding: var(--spacing-lg) 0;
+    /* Reduce padding on mobile */
+  }
 }
 
 /* Advanced Glassmorphism Card */

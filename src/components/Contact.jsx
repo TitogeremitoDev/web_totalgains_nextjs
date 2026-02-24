@@ -28,8 +28,9 @@ const Contact = () => {
         e.preventDefault();
         setStatus('sending');
 
-        // Verify email format
-        if (!formData.email.includes('@')) {
+        // Verify email format with a robust regex
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
             setStatus('error');
             return;
         }
@@ -42,9 +43,9 @@ const Contact = () => {
         // 3. Crea una plantilla con variables: from_name, from_email, subject, message
         // 4. Reemplaza los valores de abajo con los tuyos:
 
-        const SERVICE_ID = 'service_99ejjjc';
-        const TEMPLATE_ID = 'template_hf246pd';
-        const USER_ID = 'osz7_oiLJCzwqVzJu';
+        const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+        const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+        const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
 
         emailjs.send(
             SERVICE_ID,
@@ -59,12 +60,10 @@ const Contact = () => {
             USER_ID
         )
             .then((response) => {
-                console.log('Email enviado correctamente!', response.status);
                 setStatus('success');
                 setFormData({ name: '', email: '', subject: '', message: '' });
             })
             .catch((err) => {
-                console.error('Error al enviar:', err);
                 setStatus('error');
             });
     };
@@ -80,16 +79,20 @@ const Contact = () => {
                         </div>
 
                         <div className="info-cards">
-                            <div className="info-item">
-                                <Mail size={24} className="info-icon" />
+                            <div className="info-card">
+                                <div className="info-icon">
+                                    <Mail size={24} />
+                                </div>
                                 <div>
                                     <h3>Email</h3>
                                     <p>ger3dman@gmail.com</p>
                                 </div>
                             </div>
 
-                            <div className="info-item">
-                                <Phone size={24} className="info-icon" />
+                            <div className="info-card">
+                                <div className="info-icon">
+                                    <Phone size={24} />
+                                </div>
                                 <div>
                                     <h3>Redes Sociales</h3>
                                     <div className="social-links">

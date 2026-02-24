@@ -129,10 +129,6 @@
 }
 
 @media (max-width: 768px) {
-    .footer-links {
-        grid-template-columns: 1fr;
-    }
-
     .footer-social {
         justify-content: center;
     }
@@ -140,9 +136,38 @@
     .footer-tagline {
         text-align: center;
         max-width: 100%;
+        font-size: 0.95rem;
     }
 
     .footer-logo {
         justify-content: center;
+    }
+}
+
+@media (max-width: 576px) {
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+        /* Mantiene 2 columnas en móvil */
+        gap: var(--spacing-md) var(--spacing-sm);
+        /* Reduce gap horizontal y vertical */
+    }
+
+    .footer-column h4 {
+        font-size: 1.05rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .footer-column ul {
+        gap: 10px;
+        /* Listas más apretadas */
+    }
+
+    .footer-column a {
+        font-size: 0.85rem;
+    }
+
+    .footer {
+        padding: var(--spacing-xl) 0 var(--spacing-md) 0;
+        margin-top: var(--spacing-xl);
     }
 }
