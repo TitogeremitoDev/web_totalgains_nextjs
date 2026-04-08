@@ -114,8 +114,8 @@ const Pricing = () => {
         <section className="pricing" id="pricing">
             <div className="container">
                 <div className="section-header">
-                    <h2 className="gradient-text">Planes simples. Precios transparentes.</h2>
-                    <p>El software B2B para entrenadores más rentable. Sin permanencia. Sin sustos: <span className="iva-highlight">IVA ya incluido en el precio.</span></p>
+                    <h2 className="gradient-text">Precios del software para entrenadores</h2>
+                    <p>La plataforma SaaS fitness más rentable del mercado. Sin permanencia. Sin sustos: <span className="iva-highlight">IVA ya incluido en el precio.</span></p>
                 </div>
 
                 <div className="billing-toggle-container">

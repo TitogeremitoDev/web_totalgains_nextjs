@@ -14,7 +14,7 @@ export const features = {
     board: {
         id: "board",
         icon: <LayoutDashboard size={28} color="#3b82f6" strokeWidth={2} />,
-        title: "Tu Centro de Mando",
+        title: "Panel de Gestión de Atletas Online",
         subtitle: "Command Center",
         image: "/carrousel/BOARD.png",
         description: "El software para entrenadores definitivo. Gestiona atletas online, tareas pendientes, finanzas y alertas desde un único dashboard centralizado.",
@@ -34,7 +34,7 @@ export const features = {
     rutinas: {
         id: "rutinas",
         icon: <Activity size={28} color="#eab308" strokeWidth={2} />,
-        title: "Ingeniería de Entrenamiento",
+        title: "Creador de Rutinas con Inteligencia Artificial",
         subtitle: "Training Engineering & AI",
         image: "/carrousel/RUTINAS.png",
         description: "El creador de rutinas para entrenadores personales más avanzado. Deja que la IA diseñe periodizaciones complejas, o accede a nuestra biblioteca infinita para estructurar series adaptables.",
@@ -44,7 +44,7 @@ export const features = {
     seguimiento: {
         id: "seguimiento",
         icon: <RefreshCw size={28} color="#a855f7" strokeWidth={2} />,
-        title: "Seguimiento 360º",
+        title: "Seguimiento de Progreso del Atleta 360º",
         subtitle: "Full Tracking & Audio Transcription",
         image: "/carrousel/SEGUIMIENTO.png",
         description: 'La app para entrenadores personales líder en tracking. Compara y analiza métricas vitales de tu atleta, fotos "Antes/Después" y lee los audios de tus clientes transcritos a texto.',
@@ -64,7 +64,7 @@ export const features = {
     facturacion: {
         id: "facturacion",
         icon: <CreditCard size={28} color="#4ade80" strokeWidth={2} />,
-        title: "Piloto Automático Financiero",
+        title: "Cobros Automáticos y Gestión de Pagos",
         subtitle: "Anti-Churn System",
         image: "/carrousel/FACTURACION.png",
         description: "Automatiza los cobros de tus clientes de entrenamiento. El sistema B2B cobra suscripciones recurrentes, previene impagos y bloquea el acceso en caso de morosidad.",
@@ -74,7 +74,7 @@ export const features = {
     progresion: {
         id: "progresion",
         icon: <BarChart3 size={28} color="#ef4444" strokeWidth={2} />,
-        title: "Analítica de Progreso Visual",
+        title: "Analítica y Gráficas de Progreso Visual",
         subtitle: "Visual Progress Analytics",
         image: "/carrousel/PROGRESION.png",
         description: "Multiplica el ticket medio con datos medibles. Transforma la evolución de peso, 1RM, y adherencia en espectaculares gráficas visuales que fidelizan automáticamente.",
@@ -84,7 +84,7 @@ export const features = {
     branding: {
         id: "branding",
         icon: <Palette size={28} color="#ec4899" strokeWidth={2} />,
-        title: "Implementador de Branding IA",
+        title: "App de Fitness Marca Blanca con IA",
         subtitle: "White Label Experience",
         image: "/carrousel/BOARD.png",
         description:

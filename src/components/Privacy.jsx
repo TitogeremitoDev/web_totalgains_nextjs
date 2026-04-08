@@ -67,7 +67,7 @@ const Privacy = () => {
                         <li><strong>Portabilidad:</strong> Recibir tus datos en formato legible</li>
                         <li><strong>Oposición:</strong> Oponerte al procesamiento de ciertos datos</li>
                     </ul>
-                    <p>Para ejercer estos derechos, contacta: <a href="mailto:ger3dman@gmail.com">ger3dman@gmail.com</a></p>
+                    <p>Para ejercer estos derechos, contacta: <a href="mailto:soporte@totalgains.es">soporte@totalgains.es</a></p>
                     <p><strong>Eliminación de Cuenta en la App:</strong> Además de contactar por email, puedes solicitar la eliminación inmediata de tu cuenta y todos tus datos asociados directamente desde la aplicación móvil. Esta opción se encuentra disponible en la sección de "Perfil" o "Ajustes" &gt; "Eliminar Cuenta". Una vez solicitada, tus datos dejarán de ser visibles y se eliminarán permanentemente según nuestros plazos de retención.</p>
                 </section>
 
@@ -100,7 +100,7 @@ const Privacy = () => {
                     <h2>10. Contacto</h2>
                     <p>Para cualquier consulta sobre privacidad:</p>
                     <ul>
-                        <li>Email: <a href="mailto:ger3dman@gmail.com">ger3dman@gmail.com</a></li>
+                        <li>Email: <a href="mailto:soporte@totalgains.es">soporte@totalgains.es</a></li>
                         <li>Web: <a href="https://totalgains.es">totalgains.es</a></li>
                     </ul>
                 </section>

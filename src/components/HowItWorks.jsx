@@ -15,7 +15,7 @@ const steps = [
   {
     number: "01",
     icon: <Building2 size={44} className="text-purple-400" />,
-    title: "Configura tu Espacio",
+    title: "Configura tu Software de Entrenamiento",
     description:
       "Accede desde Web, Android o iOS. Define tus servicios y prepara tu entorno de trabajo profesional.",
     color: "primary",
@@ -23,7 +23,7 @@ const steps = [
   {
     number: "02",
     icon: <Users size={44} className="text-blue-400" />,
-    title: "Añade a tus Atletas",
+    title: "Añade y Gestiona tus Atletas",
     description:
       "Invita a tus clientes, centraliza sus datos y ofréceles una app dedicada para realizar sus rutinas.",
     color: "secondary",
@@ -31,7 +31,7 @@ const steps = [
   {
     number: "03",
     icon: <LineChart size={44} className="text-yellow-400" />,
-    title: "Escala tu Negocio",
+    title: "Escala tu Negocio de Entrenamiento",
     description:
       "Diseña programas de entrenamiento con IA, automatiza cobros y fideliza a tus clientes.",
     color: "accent",
@@ -50,8 +50,8 @@ const HowItWorks = () => {
           transition={{ duration: 0.6 }}
           className="section-header"
         >
-          <h2 className="gradient-text">Cómo Funciona</h2>
-          <p>Digitaliza tu negocio de entrenamiento en 3 pasos clave</p>
+          <h2 className="gradient-text">Cómo funciona nuestro software de entrenamiento</h2>
+          <p>Digitaliza tu negocio fitness y empieza a gestionar atletas en 3 pasos</p>
         </motion.div>
 
         <div className="steps-container">

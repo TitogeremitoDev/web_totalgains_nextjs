@@ -57,7 +57,7 @@ const AppShowcase = () => {
       <div className="showcase-bg-gradient"></div>
       <div className="container">
         <div className="section-header animate-on-scroll">
-          <h2 className="gradient-text">La App en Acción</h2>
+          <h2 className="gradient-text">Explora la app de entrenamiento en acción</h2>
           <p>
             Pulsa en los elementos de la pantalla para navegar como en la app
             real

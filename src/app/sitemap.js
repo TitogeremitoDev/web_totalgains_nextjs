@@ -7,31 +7,49 @@ export default function sitemap() {
 
     return [
         {
-            url: `${baseUrl}`,
+            url: `${baseUrl}/`,
             lastModified: new Date(),
             changeFrequency: 'weekly',
             priority: 1,
         },
         {
-            url: `${baseUrl}/alternativas/trainerize`,
+            url: `${baseUrl}/alternativas/trainerize/`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: `${baseUrl}/onboarding`,
+            url: `${baseUrl}/alternativas/harbiz/`,
             lastModified: new Date(),
             changeFrequency: 'monthly',
             priority: 0.8,
         },
         {
-            url: `${baseUrl}/privacy`,
+            url: `${baseUrl}/alternativas/mypthub/`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/alternativas/dudapp/`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.8,
+        },
+        {
+            url: `${baseUrl}/onboarding/`,
+            lastModified: new Date(),
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: `${baseUrl}/privacy/`,
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,
         },
         {
-            url: `${baseUrl}/terms`,
+            url: `${baseUrl}/terms/`,
             lastModified: new Date(),
             changeFrequency: 'yearly',
             priority: 0.3,

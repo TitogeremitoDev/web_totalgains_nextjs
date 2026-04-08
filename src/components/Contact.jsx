@@ -55,7 +55,7 @@ const Contact = () => {
                 from_email: formData.email,
                 subject: formData.subject,
                 message: formData.message,
-                to_email: 'ger3dman@gmail.com'
+                to_email: 'soporte@totalgains.es'
             },
             USER_ID
         )
@@ -74,8 +74,8 @@ const Contact = () => {
                 <div className="contact-grid">
                     <div className="contact-info">
                         <div className="section-header text-left">
-                            <h2 className="gradient-text">Hablemos</h2>
-                            <p>¿Tienes alguna duda o sugerencia? Estamos aquí para ayudarte en tu transformación.</p>
+                            <h2 className="gradient-text">Contacta con TotalGains</h2>
+                            <p>¿Tienes alguna duda sobre nuestro software de gestión deportiva? Estamos aquí para ayudarte.</p>
                         </div>
 
                         <div className="info-cards">
@@ -85,7 +85,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3>Email</h3>
-                                    <p>ger3dman@gmail.com</p>
+                                    <p>soporte@totalgains.es</p>
                                 </div>
                             </div>
 
@@ -182,7 +182,7 @@ const Contact = () => {
 
                             {status === 'error' && (
                                 <div className="form-message error animate-fadeIn">
-                                    <XCircle size={18} className="inline mr-2 text-red-500" /> Hubo un error al enviar el mensaje. Por favor intenta de nuevo o escribe directamente a ger3dman@gmail.com
+                                    <XCircle size={18} className="inline mr-2 text-red-500" /> Hubo un error al enviar el mensaje. Por favor intenta de nuevo o escribe directamente a soporte@totalgains.es
                                 </div>
                             )}
                         </form>

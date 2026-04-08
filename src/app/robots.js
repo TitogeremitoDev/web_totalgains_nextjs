@@ -4,11 +4,21 @@ export const dynamic = "force-static";
 
 export default function robots() {
     return {
-        rules: {
-            userAgent: '*',
-            allow: '/',
-            disallow: ['/private/', '/api/'],
-        },
+        rules: [
+            {
+                userAgent: '*',
+                allow: '/',
+                disallow: ['/private/', '/api/', '/app/'],
+            },
+            {
+                userAgent: 'GPTBot',
+                allow: '/',
+            },
+            {
+                userAgent: 'Google-Extended',
+                allow: '/',
+            }
+        ],
         sitemap: 'https://totalgains.es/sitemap.xml',
     };
 }

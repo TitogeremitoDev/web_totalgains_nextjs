@@ -16,7 +16,7 @@ const Footer = () => {
                             <span className="gradient-text">TotalGains</span>
                         </div>
                         <p className="footer-tagline">
-                            Conectando entrenadores y clientes para alcanzar objetivos extraordinarios.
+                            Software SaaS de fitness para entrenadores personales. Gestión de atletas, rutinas con IA, dietas automáticas y cobros — todo en una plataforma.
                         </p>
                         <div className="footer-social">
                             <a href="https://www.instagram.com/totalgainsfitness/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">
@@ -71,7 +71,7 @@ const Footer = () => {
                             <ul>
                                 <li><a href="#contact">Soporte</a></li>
                                 <li><a href="https://titogeremito.com" target="_blank" rel="noopener noreferrer">Web Desarrollador</a></li>
-                                <li><a href="mailto:ger3dman@gmail.com">Email</a></li>
+                                <li><a href="mailto:soporte@totalgains.es">Email</a></li>
                             </ul>
                         </div>
                     </div>

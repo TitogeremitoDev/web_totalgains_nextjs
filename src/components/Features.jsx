@@ -98,7 +98,7 @@ const Features = () => {
               Producto
             </div>
             <h2 className="gradient-text">
-              Tu Suite de Herramientas Profesional
+              Herramientas profesionales de gestión deportiva
             </h2>
             <p>
               Haz clic en cada funcionalidad para ver cómo potenciará tu negocio

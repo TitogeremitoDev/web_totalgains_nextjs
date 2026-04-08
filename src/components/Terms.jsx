@@ -132,7 +132,7 @@ const Terms = () => {
                     <h2>13. Contacto</h2>
                     <p>Para consultas sobre estos términos:</p>
                     <ul>
-                        <li>Email: <a href="mailto:ger3dman@gmail.com">ger3dman@gmail.com</a></li>
+                        <li>Email: <a href="mailto:soporte@totalgains.es">soporte@totalgains.es</a></li>
                         <li>Web: <a href="https://totalgains.es">totalgains.es</a></li>
                     </ul>
                 </section>

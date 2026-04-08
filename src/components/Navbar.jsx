@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import './Navbar.css';
+import { trackEvent } from '@/components/Analytics';
 
 const navLinks = [
     { href: '#how-it-works', label: 'Cómo Funciona' },
@@ -83,7 +84,9 @@ const Navbar = () => {
                     <Link href="https://totalgains.es/app/login" className="btn btn-outline" prefetch={false}>
                         Ya estoy<br />registrado
                     </Link>
-                    <Link href="/onboarding" className="btn btn-primary" prefetch={false}>
+                    <Link href="/onboarding" className="btn btn-primary" prefetch={false}
+                        onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis 14 Días', cta_location: 'navbar' })}
+                    >
                         Empieza gratis<br />14 Días
                     </Link>
                 </div>
@@ -101,34 +104,42 @@ const Navbar = () => {
 
             {/* Mobile menu */}
             <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
-                {navLinks.map((link, index) => (
+                <div className="mobile-links-container">
+                    {navLinks.map((link, index) => (
+                        <Link
+                            key={index}
+                            href={link.href}
+                            className="mobile-link"
+                            onClick={(e) => handleNavigation(e, link.href)}
+                            prefetch={false}
+                        >
+                            {link.label}
+                            <svg className="mobile-link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </Link>
+                    ))}
+                </div>
+
+                <div className="mobile-footer">
                     <Link
-                        key={index}
-                        href={link.href}
-                        className="mobile-link"
-                        onClick={(e) => handleNavigation(e, link.href)}
+                        href="https://totalgains.es/app/login"
+                        className="btn btn-outline"
+                        onClick={() => setMenuOpen(false)}
                         prefetch={false}
                     >
-                        {link.label}
+                        Ya estoy registrado
                     </Link>
-                ))}
-                <Link
-                    href="https://totalgains.es/app/login"
-                    className="btn btn-outline mobile-cta"
-                    onClick={() => setMenuOpen(false)}
-                    style={{ marginBottom: '10px' }}
-                    prefetch={false}
-                >
-                    Ya estoy registrado
-                </Link>
-                <Link
-                    href="/onboarding"
-                    className="btn btn-primary mobile-cta"
-                    onClick={() => setMenuOpen(false)}
-                    prefetch={false}
-                >
-                    Empieza gratis 14 Días
-                </Link>
+                    <Link
+                        href="/onboarding"
+                        className="btn btn-primary"
+                        onClick={() => { setMenuOpen(false); trackEvent('cta_click', { cta_text: 'Empieza gratis 14 Días', cta_location: 'navbar_mobile' }); }}
+                        prefetch={false}
+                    >
+                        Empieza gratis 14 Días
+                    </Link>
+                </div>
             </div>
         </nav>
     );

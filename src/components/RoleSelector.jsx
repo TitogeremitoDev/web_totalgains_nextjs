@@ -39,12 +39,12 @@ const benefits = {
     entrenador: [
         {
             icon: <Users size={38} className="text-emerald-400" strokeWidth={2} />,
-            title: 'Gestión de Clientes',
+            title: 'Gestión de Clientes Online',
             description: 'Panel profesional para administrar todos tus clientes'
         },
         {
             icon: <ClipboardList size={38} className="text-indigo-400" strokeWidth={2} />,
-            title: 'Creación de Planes',
+            title: 'Creador de Rutinas y Dietas con IA',
             description: 'Herramientas avanzadas para diseñar rutinas y dietas'
         },
         {
@@ -54,7 +54,7 @@ const benefits = {
         },
         {
             icon: <Coins size={38} className="text-amber-400" strokeWidth={2} />,
-            title: 'Sistema de Pagos',
+            title: 'Cobros y Pagos Recurrentes',
             description: 'Cobra a tus clientes directamente a través de la plataforma'
         },
         {

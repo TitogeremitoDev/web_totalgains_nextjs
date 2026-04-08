@@ -1,22 +1,16 @@
-# Next.js Static Export .htaccess para Hostinger
+# ─────────────────────────────────────────────────────
+# TotalGains — .htaccess para Hostinger (LiteSpeed)
+# Next.js Static Export con trailingSlash: true
+# ─────────────────────────────────────────────────────
+
 RewriteEngine On
 
 # 1. Forzar HTTPS
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 
-# 2. Quitar el "index.html" de la URL si el usuario lo escribe
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^/]+/)*index\.html\ HTTP/
-RewriteRule ^(([^/]+/)*)index\.html$ https://%{HTTP_HOST}/$1 [R=301,L]
+# 2. Página 404 de Next.js
+ErrorDocument 404 /404/index.html
 
-# 3. Quitar el ".html" de cualquier otra URL si el usuario lo escribe
-RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /([^.]+)\.html\ HTTP
-RewriteRule ^([^.]+)\.html$ https://%{HTTP_HOST}/$1 [R=301,L]
-
-# 4. Añadir internamente el ".html" a las rutas limpias (ej: /onboarding -> /onboarding.html)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [L]
-
-# 5. Gestionar la página 404 generada por Next.js
-ErrorDocument 404 /404.html
+# 3. Desactivar listado de directorios
+Options -Indexes

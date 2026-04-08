@@ -3,6 +3,7 @@
 import React, { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { Smartphone, Apple, Globe, Rocket, UserCheck, Trophy, Palette, Play, ChevronDown } from 'lucide-react';
+import { trackEvent } from '@/components/Analytics';
 import './Hero.css';
 
 const Hero = () => {
@@ -39,10 +40,10 @@ const Hero = () => {
                         <span className="platform-tag"><Apple size={14} className="icon-text" /> iOS</span>
                         <span className="platform-tag"><Globe size={14} className="icon-text" /> Web App</span>
                     </div>
-                    <h1 className="hero-title">Escala tu negocio de <span className="accent-text">entrenamiento</span></h1>
+                    <h1 className="hero-title">Software para entrenadores personales — <span className="accent-text">Escala sin límites</span></h1>
 
                     <p className="hero-subtitle">
-                        Gestiona atletas, automatiza cobros y diseña rutinas con IA.
+                        La plataforma fitness que gestiona atletas, automatiza cobros y diseña rutinas con IA. Todo desde una sola app.
                     </p>
 
                     <div className="hero-cta">
@@ -50,6 +51,7 @@ const Hero = () => {
                             whileHover={{ y: -2, scale: 1.02 }}
                             whileTap={{ scale: 0.95 }}
                             href="/onboarding" className="btn btn-gold btn-lg"
+                            onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis 14 días', cta_location: 'hero' })}
                         >
                             <Rocket size={20} /> Empieza gratis 14 días
                         </motion.a>
