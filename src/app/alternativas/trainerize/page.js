@@ -16,6 +16,7 @@ export const metadata = {
     description:
       "Tabla comparativa completa: soporte, velocidad, IA, precios y más. Migra gratis en 5 minutos.",
     url: "https://totalgains.es/alternativas/trainerize/",
+    images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },
 };
 

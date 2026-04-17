@@ -19,6 +19,7 @@ export const metadata = {
     description:
       "Tabla comparativa: UX intuitiva, IA integrada, soporte español. Migra gratis.",
     url: "https://totalgains.es/alternativas/mypthub/",
+    images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },
   robots: {
     index: true,

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { Heart } from 'lucide-react';
 import Link from 'next/link';
 import './Footer.css';
@@ -12,7 +13,7 @@ const Footer = () => {
                 <div className="footer-content">
                     <div className="footer-brand">
                         <div className="footer-logo">
-                            <img src="/logo-optimized.webp" alt="TotalGains" />
+                            <Image src="/logo-optimized.webp" alt="TotalGains" width={36} height={36} />
                             <span className="gradient-text">TotalGains</span>
                         </div>
                         <p className="footer-tagline">
@@ -59,6 +60,36 @@ const Footer = () => {
                         </div>
 
                         <div className="footer-column">
+                            <h4>Recursos</h4>
+                            <ul>
+                                <li><Link href="/blog/" prefetch={false}>Blog</Link></li>
+                                <li><Link href="/casos-de-exito/nacho-pulido/" prefetch={false}>Caso: Nacho Pulido</Link></li>
+                                <li><Link href="/casos-de-exito/lorena-eses/" prefetch={false}>Caso: Lorena Eses</Link></li>
+                                <li><Link href="/software-entrenador-personal/" prefetch={false}>Software para EP</Link></li>
+                                <li><Link href="/ia-entrenador-personal/" prefetch={false}>IA para entrenadores</Link></li>
+                                <li><Link href="/app-marca-blanca-entrenador-personal/" prefetch={false}>App marca blanca</Link></li>
+                                <li><Link href="/base-datos-alimentos-fitness/" prefetch={false}>Base datos alimentos</Link></li>
+                                <li><Link href="/app-entrenador-personal-online/" prefetch={false}>App entrenador online</Link></li>
+                                <li><Link href="/gestion-clientes-fitness/" prefetch={false}>Gestión clientes fitness</Link></li>
+                                <li><Link href="/plataforma-entrenamiento-online/" prefetch={false}>Plataforma entrenamiento</Link></li>
+                                <li><Link href="/software-nutricionista-online/" prefetch={false}>Software nutricionista</Link></li>
+                            </ul>
+                        </div>
+
+                        <div className="footer-column">
+                            <h4>Alternativas</h4>
+                            <ul>
+                                <li><Link href="/alternativas/trainerize/" prefetch={false}>vs Trainerize</Link></li>
+                                <li><Link href="/alternativas/harbiz/" prefetch={false}>vs Harbiz</Link></li>
+                                <li><Link href="/alternativas/truecoach/" prefetch={false}>vs TrueCoach</Link></li>
+                                <li><Link href="/alternativas/mypthub/" prefetch={false}>vs MyPT Hub</Link></li>
+                                <li><Link href="/alternativas/ptminder/" prefetch={false}>vs PTminder</Link></li>
+                                <li><Link href="/alternativas/dudapp/" prefetch={false}>vs Dudapp</Link></li>
+                                <li><Link href="/alternativas/virtuagym/" prefetch={false}>vs Virtuagym</Link></li>
+                            </ul>
+                        </div>
+
+                        <div className="footer-column">
                             <h4>Legal</h4>
                             <ul>
                                 <li><Link href="/privacy" prefetch={false}>Privacidad</Link></li>
@@ -70,7 +101,6 @@ const Footer = () => {
                             <h4>Contacto</h4>
                             <ul>
                                 <li><a href="#contact">Soporte</a></li>
-                                <li><a href="https://titogeremito.com" target="_blank" rel="noopener noreferrer">Web Desarrollador</a></li>
                                 <li><a href="mailto:soporte@totalgains.es">Email</a></li>
                             </ul>
                         </div>
@@ -81,7 +111,7 @@ const Footer = () => {
                     <div className="divider"></div>
                     <p className="flex items-center justify-center gap-1">
                         © {currentYear} TotalGains. Todos los derechos reservados.
-                        Desarrollado con <Heart size={14} className="text-purple-500 fill-current" /> por <a href="https://titogeremito.com" target="_blank" rel="noopener noreferrer">Tito Geremito</a>
+                        Desarrollado con <Heart size={14} className="text-purple-500 fill-current" /> en España
                     </p>
                 </div>
             </div>

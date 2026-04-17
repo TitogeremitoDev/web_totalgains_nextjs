@@ -1,0 +1,178 @@
+.comparison-section {
+    padding: var(--spacing-3xl) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ct-bg-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* ── Wrapper ── */
+.ct-wrapper {
+    max-width: 860px;
+    margin: var(--spacing-2xl) auto 0;
+}
+
+/* ── Scroll container for mobile ── */
+.ct-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ── Table ── */
+.ct-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 540px;
+}
+
+/* ── Headers ── */
+.ct-th-feature {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    background: rgba(255, 255, 255, 0.02);
+    width: 40%;
+}
+
+.ct-th {
+    padding: 16px 12px;
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.ct-th--tg {
+    background: rgba(102, 126, 234, 0.08);
+    border-left: 2px solid rgba(102, 126, 234, 0.3);
+    border-right: 2px solid rgba(102, 126, 234, 0.3);
+}
+
+.ct-th--comp {
+    color: var(--text-muted);
+}
+
+.ct-brand-tg {
+    display: block;
+    color: var(--primary-light);
+    font-size: 0.95rem;
+}
+
+.ct-brand-badge {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ── Rows ── */
+.ct-row-even {
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.ct-td-feature {
+    padding: 14px 20px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.ct-td {
+    padding: 14px 12px;
+    text-align: center;
+}
+
+.ct-td--tg {
+    background: rgba(102, 126, 234, 0.04);
+    border-left: 2px solid rgba(102, 126, 234, 0.15);
+    border-right: 2px solid rgba(102, 126, 234, 0.15);
+}
+
+/* ── Cells ── */
+.ct-check {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(16, 185, 129, 0.15);
+    color: #34d399;
+}
+
+.ct-cross {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(239, 68, 68, 0.1);
+    color: #f87171;
+}
+
+.ct-price {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.ct-td--tg .ct-price {
+    color: #34d399;
+}
+
+/* ── CTA ── */
+.ct-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+    margin-top: var(--spacing-xl);
+    text-align: center;
+}
+
+.ct-link {
+    font-size: 0.85rem;
+    color: var(--primary-light);
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.ct-link:hover {
+    opacity: 0.7;
+}
+
+/* ── Responsive ── */
+@media (max-width: 576px) {
+    .ct-th-feature,
+    .ct-td-feature {
+        padding-left: 14px;
+        font-size: 0.82rem;
+    }
+
+    .ct-th,
+    .ct-td {
+        padding: 12px 8px;
+    }
+}

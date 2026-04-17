@@ -19,7 +19,7 @@ export default function OnboardingContent() {
     return (
         <main className="onboarding-page">
             <div className="glass onboarding-card animate-fadeInUp">
-                <div className="onboarding-content">
+                <div className="onboarding-content"><h1 className="sr-only">Empieza gratis con TotalGains — Configura tu entorno</h1>
                     <div className="progress-bar">
                         <div className={`progress-segment ${step >= 1 ? 'active' : ''}`}></div>
                         <div className={`progress-segment ${step >= 2 ? 'active' : ''}`}></div>

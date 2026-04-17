@@ -1,9 +1,12 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import './FAQ.css';
 
+/* ─────────────────────────────────────────────
+   DATA — sincronizado con el FAQPage schema de page.js
+   ───────────────────────────────────────────── */
 const faqs = [
     {
         question: '¿Qué es TotalGains y cómo funciona como software para entrenadores personales?',
@@ -42,32 +45,12 @@ const faqs = [
 const FAQ = () => {
     const [activeIndex, setActiveIndex] = useState(null);
 
-    const toggleFAQ = (index) => {
+    const toggle = (index) => {
         setActiveIndex(activeIndex === index ? null : index);
-    };
-
-    // Generate FAQPage JSON-LD schema
-    const faqSchema = {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": faqs.map(faq => ({
-            "@type": "Question",
-            "name": faq.question,
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": faq.answer
-            }
-        }))
     };
 
     return (
         <section className="faq" id="faq">
-            {/* FAQPage JSON-LD — Invisible for users, gold for Google */}
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-            />
-
             <div className="container">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
@@ -81,37 +64,48 @@ const FAQ = () => {
                 </motion.div>
 
                 <div className="faq-container">
-                    {faqs.map((faq, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true, margin: "-50px" }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className={`faq-item glass ${activeIndex === index ? 'active' : ''}`}
-                            onClick={() => toggleFAQ(index)}
-                        >
-                            <div className="faq-question">
-                                <h4>{faq.question}</h4>
-                                <span className="faq-icon">
-                                    {activeIndex === index ? '−' : '+'}
-                                </span>
-                            </div>
-                            <AnimatePresence>
-                                {activeIndex === index && (
-                                    <motion.div
-                                        initial={{ height: 0, opacity: 0 }}
-                                        animate={{ height: "auto", opacity: 1 }}
-                                        exit={{ height: 0, opacity: 0 }}
-                                        transition={{ duration: 0.3 }}
-                                        className="faq-answer-animated"
-                                    >
-                                        <p>{faq.answer}</p>
-                                    </motion.div>
-                                )}
-                            </AnimatePresence>
-                        </motion.div>
-                    ))}
+                    {faqs.map((faq, index) => {
+                        const isOpen = activeIndex === index;
+                        return (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true, margin: "-50px" }}
+                                transition={{ duration: 0.5, delay: index * 0.05 }}
+                                className={`faq-item glass ${isOpen ? 'active' : ''}`}
+                            >
+                                {/*
+                                  Usamos <button> para accesibilidad: aria-expanded y
+                                  aria-controls comunican el estado al lector de pantalla.
+                                */}
+                                <button
+                                    className="faq-question"
+                                    onClick={() => toggle(index)}
+                                    aria-expanded={isOpen}
+                                    aria-controls={`faq-answer-${index}`}
+                                >
+                                    <h3 className="faq-question-text">{faq.question}</h3>
+                                    <span className="faq-icon" aria-hidden="true">
+                                        {isOpen ? '−' : '+'}
+                                    </span>
+                                </button>
+
+                                {/*
+                                  La respuesta SIEMPRE está en el DOM — Google la indexa.
+                                  CSS controla la visibilidad: max-height 0 → auto con transition.
+                                  aria-hidden oculta el contenido colapsado a lectores de pantalla.
+                                */}
+                                <div
+                                    id={`faq-answer-${index}`}
+                                    className={`faq-answer ${isOpen ? 'faq-answer--open' : ''}`}
+                                    aria-hidden={!isOpen}
+                                >
+                                    <p>{faq.answer}</p>
+                                </div>
+                            </motion.div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

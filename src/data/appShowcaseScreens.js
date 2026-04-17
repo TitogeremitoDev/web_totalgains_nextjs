@@ -5,7 +5,7 @@ export const screens = {
     id: "login",
     title: "Iniciar Sesión",
     subtitle: "Accede a tu cuenta",
-    image: "/screenshots/LOGIN.png",
+    image: "/screenshots/LOGIN.webp",
     description:
       "Inicia sesión con tu email o con Google para acceder a todas las funcionalidades de TotalGains.",
     category: "auth",
@@ -28,7 +28,7 @@ export const screens = {
     id: "home",
     title: "Dashboard Principal",
     subtitle: "Tu centro de control fitness",
-    image: "/screenshots/home.png",
+    image: "/screenshots/home.webp",
     description:
       "Accede a todas las funciones desde un solo lugar: entrenamientos, nutrición, seguimiento y más.",
     category: "cliente",
@@ -111,7 +111,7 @@ export const screens = {
     id: "entreno",
     title: "Entreno del Día",
     subtitle: "Tu rutina actual",
-    image: "/screenshots/Entreno.png",
+    image: "/screenshots/Entreno.webp",
     description:
       "Visualiza y ejecuta tu rutina de entrenamiento con cronómetro, series y repeticiones.",
     category: "cliente",
@@ -132,7 +132,7 @@ export const screens = {
     id: "rutinas",
     title: "Mis Rutinas",
     subtitle: "Gestiona tus entrenamientos",
-    image: "/screenshots/Rutinas.png",
+    image: "/screenshots/Rutinas.webp",
     description: "Explora, crea y personaliza tus rutinas de entrenamiento.",
     category: "cliente",
     hotspots: [
@@ -152,7 +152,7 @@ export const screens = {
     id: "nutricion",
     title: "Nutrición",
     subtitle: "Control de macros",
-    image: "/screenshots/Nutricion.png",
+    image: "/screenshots/Nutricion.webp",
     description:
       "Calcula tus calorías diarias y distribución de macronutrientes automáticamente.",
     category: "cliente",
@@ -173,7 +173,7 @@ export const screens = {
     id: "seguimiento",
     title: "Seguimiento",
     subtitle: "Visualiza tu evolución",
-    image: "/screenshots/seguimiento.png",
+    image: "/screenshots/seguimiento.webp",
     description:
       "Gráficos de peso, estado de ánimo y métricas para ver tu progreso real.",
     category: "cliente",
@@ -195,7 +195,7 @@ export const screens = {
     id: "perfil",
     title: "Mi Perfil",
     subtitle: "Tu información personal",
-    image: "/screenshots/Perfil.png",
+    image: "/screenshots/Perfil.webp",
     description:
       "Gestiona tu perfil, logros, evolución y configuración de la aplicación.",
     category: "cliente",
@@ -294,7 +294,7 @@ export const screens = {
     id: "perfil_info",
     title: "Información Personal",
     subtitle: "Tus datos de perfil",
-    image: "/screenshots/perfil-informacionpersonal.png",
+    image: "/screenshots/perfil-informacionpersonal.webp",
     description:
       "Edita tu información personal: nombre, edad, peso objetivo y más.",
     category: "cliente",
@@ -315,7 +315,7 @@ export const screens = {
     id: "perfil_logros",
     title: "Logros",
     subtitle: "Tus medallas",
-    image: "/screenshots/perfil-logros.png",
+    image: "/screenshots/perfil-logros.webp",
     description:
       "Desbloquea logros completando objetivos y mantén tu racha de entrenamientos.",
     category: "cliente",
@@ -336,7 +336,7 @@ export const screens = {
     id: "perfil_evolucion",
     title: "Evolución",
     subtitle: "Tu progreso visual",
-    image: "/screenshots/perfil-evolucion.png",
+    image: "/screenshots/perfil-evolucion.webp",
     description:
       "Sube fotos para comparar tu evolución física a lo largo del tiempo.",
     category: "cliente",
@@ -357,7 +357,7 @@ export const screens = {
     id: "perfil_seguimiento",
     title: "Seguimiento",
     subtitle: "Métricas avanzadas",
-    image: "/screenshots/perfil-seguimiento.png",
+    image: "/screenshots/perfil-seguimiento.webp",
     description:
       "Registra tus medidas corporales y visualiza gráficos detallados.",
     category: "cliente",
@@ -378,7 +378,7 @@ export const screens = {
     id: "perfil_videos",
     title: "Vídeos",
     subtitle: "Tutoriales y guías",
-    image: "/screenshots/perfil-videos.png",
+    image: "/screenshots/perfil-videos.webp",
     description:
       "Accede a vídeos de ejercicios y tutoriales para mejorar tu técnica.",
     category: "cliente",
@@ -399,7 +399,7 @@ export const screens = {
     id: "perfil_comunidad",
     title: "Comunidad",
     subtitle: "Conecta con otros",
-    image: "/screenshots/perfil-comunidad.png",
+    image: "/screenshots/perfil-comunidad.webp",
     description: "Únete a la comunidad TotalGains y comparte tu progreso.",
     category: "cliente",
     hotspots: [
@@ -419,7 +419,7 @@ export const screens = {
     id: "perfil_amigos",
     title: "Amigos",
     subtitle: "Tu red fitness",
-    image: "/screenshots/perfil_amigos.png",
+    image: "/screenshots/perfil_amigos.webp",
     description:
       "Conecta con amigos, compara progreso y motívate mutuamente.",
     category: "cliente",
@@ -440,7 +440,7 @@ export const screens = {
     id: "perfil_ajustes",
     title: "Ajustes",
     subtitle: "Configuración",
-    image: "/screenshots/perfil-ajustes.png",
+    image: "/screenshots/perfil-ajustes.webp",
     description: "Personaliza la app: temas, notificaciones y preferencias.",
     category: "cliente",
     hotspots: [
@@ -460,7 +460,7 @@ export const screens = {
     id: "suscripcion",
     title: "Suscripción",
     subtitle: "Planes Premium",
-    image: "/screenshots/suscripcion.png",
+    image: "/screenshots/suscripcion.webp",
     description:
       "Elige el plan que mejor se adapte a tus necesidades y objetivos.",
     category: "cliente",
@@ -482,7 +482,7 @@ export const screens = {
     id: "home_coach",
     title: "Panel Coach",
     subtitle: "Gestiona tus clientes",
-    image: "/screenshots/home_coach.png",
+    image: "/screenshots/home_coach.webp",
     description:
       "Panel profesional para entrenadores con gestión de clientes y rutinas personalizadas.",
     category: "coach",
@@ -561,7 +561,7 @@ export const screens = {
     id: "coach_clientes",
     title: "Mis Clientes",
     subtitle: "Gestión de clientes",
-    image: "/screenshots/coach_clientes.png",
+    image: "/screenshots/coach_clientes.webp",
     description:
       "Visualiza y gestiona todos tus clientes, asigna rutinas y realiza seguimiento.",
     category: "coach",
@@ -591,7 +591,7 @@ export const screens = {
     id: "coach_rutinas",
     title: "Crear Rutinas",
     subtitle: "Editor de rutinas",
-    image: "/screenshots/coach_rutinas.png",
+    image: "/screenshots/coach_rutinas.webp",
     description:
       "Crea rutinas personalizadas para tus clientes con ejercicios, series y repeticiones.",
     category: "coach",
@@ -621,7 +621,7 @@ export const screens = {
     id: "coach_nutricion",
     title: "Nutrición Coach",
     subtitle: "Planes nutricionales",
-    image: "/screenshots/coach_nutricion.png",
+    image: "/screenshots/coach_nutricion.webp",
     description:
       "Diseña planes de alimentación personalizados para cada cliente.",
     category: "coach",
@@ -651,7 +651,7 @@ export const screens = {
     id: "coach_seguimiento",
     title: "Seguimiento Coach",
     subtitle: "Métricas de clientes",
-    image: "/screenshots/coach_seguimiento.png",
+    image: "/screenshots/coach_seguimiento.webp",
     description:
       "Monitoriza el progreso de tus clientes con gráficos y estadísticas.",
     category: "coach",
@@ -681,7 +681,7 @@ export const screens = {
     id: "coach_evolucion",
     title: "Evolución Coach",
     subtitle: "Progreso visual",
-    image: "/screenshots/coach_evolucion.png",
+    image: "/screenshots/coach_evolucion.webp",
     description:
       "Compara fotos de evolución de tus clientes a lo largo del tiempo.",
     category: "coach",
@@ -711,7 +711,7 @@ export const screens = {
     id: "coach_perfil",
     title: "Perfil Coach",
     subtitle: "Tu perfil de entrenador",
-    image: "/screenshots/coach_perfil.png",
+    image: "/screenshots/coach_perfil.webp",
     description:
       "Gestiona tu perfil profesional, certificaciones y configuración.",
     category: "coach",

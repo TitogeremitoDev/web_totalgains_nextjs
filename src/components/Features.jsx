@@ -6,7 +6,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Sparkles,
   Rocket,
+  ArrowRight,
 } from "lucide-react";
+import Link from "next/link";
 import "./Features.css";
 import { features, featureOrder } from "../data/featuresData";
 
@@ -151,6 +153,11 @@ const Features = () => {
                         }}
                       />
                       <p className="feature-highlight">{feature.highlight}</p>
+                      {feature.link && (
+                        <Link href={feature.link.href} className="feature-learn-more" prefetch={false}>
+                          {feature.link.label} <ArrowRight size={14} />
+                        </Link>
+                      )}
                     </div>
                   </div>
                 </div>
@@ -269,6 +276,11 @@ const Features = () => {
                   />
                   {currentFeature.highlight}
                 </p>
+                {currentFeature.link && (
+                  <Link href={currentFeature.link.href} className="feature-learn-more" prefetch={false}>
+                    {currentFeature.link.label} <ArrowRight size={14} />
+                  </Link>
+                )}
               </motion.div>
             </AnimatePresence>
           </div>

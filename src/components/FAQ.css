@@ -32,14 +32,22 @@
     align-items: center;
     padding: var(--spacing-md) var(--spacing-lg);
     gap: var(--spacing-md);
+    /* Reset button styles */
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
 }
 
-.faq-question h4 {
+.faq-question-text {
     margin: 0;
     font-size: 1.1rem;
     font-weight: 600;
     color: var(--text-primary);
     text-align: left;
+    /* h3 sin márgenes heredados */
+    line-height: 1.4;
 }
 
 .faq-icon {
@@ -55,18 +63,35 @@
     font-weight: 600;
     color: white;
     transition: transform var(--transition-base);
+    /* centrar el símbolo verticalmente */
+    line-height: 1;
 }
 
 .faq-item.active .faq-icon {
-    transform: rotate(180deg);
+    transform: rotate(45deg);
 }
 
-.faq-answer-animated {
-    padding: 0 var(--spacing-lg) var(--spacing-lg);
+/*
+  La respuesta siempre está en el DOM (para Google).
+  max-height + overflow:hidden crea la transición de acordeón.
+  Usamos un valor alto (2000px) como proxy de "auto".
+*/
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, opacity 0.3s ease;
+    opacity: 0;
+    padding: 0 var(--spacing-lg);
     color: var(--text-secondary);
 }
 
-.faq-answer-animated p {
+.faq-answer--open {
+    max-height: 2000px;
+    opacity: 1;
+    padding-bottom: var(--spacing-lg);
+}
+
+.faq-answer p {
     margin: 0;
     line-height: 1.6;
     font-size: 1.05rem;

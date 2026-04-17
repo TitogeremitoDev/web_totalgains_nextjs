@@ -8,7 +8,7 @@ export default function robots() {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/private/', '/api/', '/app/'],
+                disallow: ['/private/', '/api/', '/app/', '/delete-account/'],
             },
             {
                 userAgent: 'GPTBot',

@@ -358,6 +358,23 @@
     margin: 0;
 }
 
+.feature-learn-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: var(--spacing-sm);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: gap 0.2s ease, opacity 0.2s ease;
+}
+
+.feature-learn-more:hover {
+    gap: 10px;
+    opacity: 0.8;
+}
+
 .highlight-icon {
     flex-shrink: 0;
 }

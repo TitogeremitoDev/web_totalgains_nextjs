@@ -17,8 +17,8 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
             features: [
                 { feature: "Soporte e Idioma", tg: "VIP 24h en Español nativo", bg: "Lento y en Inglés" },
                 { feature: "Velocidad UX/UI", tg: "Next.js (Instantánea)", bg: "Sobrecargada y pesada" },
-                { feature: "Generación de Atletas", tg: "Integración de IA Rápida", bg: "Alta fricción manual" },
-                { feature: "Dietas y Base", tg: "+240.000 Alimentos / IA", bg: "Limitada" },
+                { feature: "IA con tu base de datos", tg: "Rutinas y dietas generadas con TUS ejercicios y alimentos", bg: "IA genérica que inventa contenido" },
+                { feature: "Dietas y Base", tg: "+240.000 Alimentos validados en español", bg: "Base limitada en inglés" },
                 { feature: "App Marca Blanca", tg: "Colores y Logos generados (1 Clic)", bg: "Básico o requiere plan caro" },
                 { feature: "Sistema Anti-Abandono", tg: "Predicción Automática B2B", bg: "No tiene" }
             ]
@@ -30,8 +30,8 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
             features: [
                 { feature: "Soporte e Idioma", tg: "VIP 24h en Español nativo", bg: "Lento o genérico" },
                 { feature: "Velocidad UX/UI", tg: "Intuitiva y veloz (Apple Style)", bg: "Curva de aprendizaje gigante" },
-                { feature: "Generación de Atletas", tg: "IA Integrada (Milisegundos)", bg: "Plantillas rígidas" },
-                { feature: "Dietas y Base", tg: "Generador IA Autónomo", bg: "Depende de plugins o MyFitnessPal" },
+                { feature: "IA con tu base de datos", tg: "Rutinas y dietas con IA usando tus propios ejercicios y alimentos", bg: "Sin IA propia — depende de integraciones" },
+                { feature: "Dietas y Base", tg: "+240.000 alimentos en español + generador IA", bg: "Depende de plugins o MyFitnessPal" },
                 { feature: "App Marca Blanca", tg: "Branding Inteligente (Ecosistema)", bg: "Branding básico" },
                 { feature: "Sistema Anti-Abandono", tg: "Bloqueos y Predicción Automatizada", bg: "Inexistente" }
             ]
@@ -43,8 +43,8 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
             features: [
                 { feature: "Soporte e Idioma", tg: "VIP en Español + Desarrolladores Directos", bg: "Soporte Normal" },
                 { feature: "Precios y Escalabilidad", tg: "Planes Claros B2B sin sustos", bg: "Tarifas ocultas o penalización por volumen" },
-                { feature: "Desarrollo a Medida", tg: "App Personalizada sin costes extra", bg: "App B2B propia cuesta miles al mes" },
-                { feature: "Creador Multimodal", tg: "Rutinas con IA Dinámicas", bg: "Constructor Clásico" },
+                { feature: "IA con tu base de datos", tg: "Genera rutinas y dietas con TUS ejercicios y alimentos, sin inventar nada", bg: "Sin generación IA propia integrada" },
+                { feature: "Creador Multimodal", tg: "Rutinas con IA + tu metodología", bg: "Constructor clásico sin IA" },
                 { feature: "Analítica ROI", tg: "Gráficas de progresión de Ticket Medio", bg: "Dashboards Estándar" },
                 { feature: "Sistema Anti-Abandono", tg: "Inteligencia para detectar inactividad", bg: "Avisos básicos" }
             ]
@@ -54,12 +54,51 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
             h1: "Mejor Alternativa a Dudapp para Entrenadores Personales",
             painPoint: "Si necesitas cruzar la línea y pasar de un excel bonito a un Software verdaderamente B2B para monetizar.",
             features: [
-                { feature: "Procesamiento Nutricional", tg: "Generador de macros asistido por IA", bg: "Manual y requiere integraciones" },
-                { feature: "Estabilidad en Volumen", tg: "Servidores Globales (Infinito)", bg: "Caída de rendimiento con +50 clientes" },
+                { feature: "IA con tu base de datos", tg: "Rutinas y dietas generadas por IA usando TUS ejercicios y alimentos", bg: "Sin IA integrada" },
+                { feature: "Procesamiento Nutricional", tg: "Generador de macros con IA + 240.000 alimentos", bg: "Manual y requiere integraciones" },
                 { feature: "Pagos Online Activos", tg: "Sistema Financiero Automático", bg: "Solo gestión superficial" },
                 { feature: "Experiencia Atleta", tg: "Gamificación y Tracking 360", bg: "Interfaz de solo-lectura" },
                 { feature: "App Marca Blanca", tg: "Tu propia App nativa para el cliente", bg: "La App de ellos, no la tuya" },
                 { feature: "Onboarding de Clientes", tg: "Migración de 0 Fricción Garantizada", bg: "Te lo tienes que hacer tú" }
+            ]
+        },
+        truecoach: {
+            name: "TrueCoach",
+            h1: "Mejor Alternativa a TrueCoach para Entrenadores Personales",
+            painPoint: "Si TrueCoach te parece una herramienta pensada para el mercado anglosajón que no encaja con cómo trabajas en España.",
+            features: [
+                { feature: "Soporte e Idioma", tg: "VIP 24h en Español nativo", bg: "Solo en Inglés" },
+                { feature: "IA con tu base de datos", tg: "Genera rutinas y dietas con IA usando tus propios ejercicios y alimentos", bg: "Sin IA integrada" },
+                { feature: "Base de Alimentos", tg: "+240.000 alimentos validados en español", bg: "USDA (base en inglés, sin adaptar)" },
+                { feature: "App Marca Blanca", tg: "Tu logo y colores en 1 clic", bg: "No disponible" },
+                { feature: "Precio de entrada", tg: "Desde 29,90€/mes (IVA incluido)", bg: "Desde 19$ pero en dólares + impuestos" },
+                { feature: "Sistema Anti-Abandono", tg: "Detección automática de inactividad", bg: "No tiene" }
+            ]
+        },
+        ptminder: {
+            name: "PTminder",
+            h1: "Mejor Alternativa a PTminder para Entrenadores Personales",
+            painPoint: "Si PTminder se ha quedado pequeño para lo que necesitas o su interfaz anticuada ralentiza tu día a día.",
+            features: [
+                { feature: "Soporte e Idioma", tg: "Español nativo + desarrolladores directos", bg: "Inglés, soporte lento por tickets" },
+                { feature: "IA con tu base de datos", tg: "Rutinas y dietas generadas por IA con tus propios ejercicios y alimentos", bg: "Sin generación IA" },
+                { feature: "Nutrición", tg: "+240.000 alimentos + generador IA de dietas", bg: "Integración básica con MyFitnessPal" },
+                { feature: "App Marca Blanca", tg: "Branding completo para tus clientes", bg: "No disponible" },
+                { feature: "Automatización", tg: "Seguimientos y recordatorios automáticos", bg: "Manual o muy limitado" },
+                { feature: "Precio / Valor", tg: "Todo incluido desde 29,90€", bg: "Módulos por separado encarecen el precio" }
+            ]
+        },
+        virtuagym: {
+            name: "Virtuagym",
+            h1: "Mejor Alternativa a Virtuagym para Entrenadores Personales",
+            painPoint: "Si Virtuagym está diseñado para grandes gimnasios y pagas por funciones que no usas como entrenador personal online.",
+            features: [
+                { feature: "Enfoque de producto", tg: "100% diseñado para entrenadores personales", bg: "Pensado para gimnasios y clubes, no para PT" },
+                { feature: "IA con tu base de datos", tg: "Genera rutinas y dietas con IA usando tus propios ejercicios y alimentos", bg: "Sin IA integrada para PT online" },
+                { feature: "Precio de entrada", tg: "Desde 29,90€/mes sin sorpresas", bg: "Planes empresariales caros para PT online" },
+                { feature: "App cliente", tg: "Marca blanca con tu logo y colores", bg: "Siempre con el logo de Virtuagym" },
+                { feature: "Soporte hispanohablante", tg: "Equipo en España, respuesta rápida", bg: "Soporte genérico en inglés" },
+                { feature: "Curva de aprendizaje", tg: "Intuitivo desde el primer día", bg: "Alta complejidad para uso individual" }
             ]
         }
     };

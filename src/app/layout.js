@@ -3,8 +3,15 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
+import ScrollProgress from "@/components/ScrollProgress";
 
-const dmSans = DM_Sans({ subsets: ["latin"], weight: ["400", "500", "700"] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
+  display: "swap",
+  preload: true,
+  variable: "--font-dm-sans",
+});
 
 /* ──────────────────────────────────────────────
    METADATA GLOBAL — SEO / OG / TWITTER / CANONICAL
@@ -90,77 +97,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  // Schema Org — SoftwareApplication (enriquecido)
-  const softwareSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "TotalGains",
-    description:
-      "Software para entrenadores personales y preparadores físicos. Gestión de atletas, rutinas con IA, dietas automáticas, cobros recurrentes y app de fitness marca blanca.",
-    url: "https://totalgains.es",
-    image: "https://totalgains.es/og-image.jpg",
-    operatingSystem: "Android, iOS, Web",
-    applicationCategory: "BusinessApplication",
-    applicationSubCategory: "HealthApplication",
-    offers: {
-      "@type": "AggregateOffer",
-      lowPrice: "29.90",
-      highPrice: "79.90",
-      priceCurrency: "EUR",
-      offerCount: "3",
-    },
-    author: {
-      "@type": "Organization",
-      name: "TotalGains",
-      url: "https://totalgains.es",
-    },
-    inLanguage: "es",
-  };
-
-  // Schema Org — Organization
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "TotalGains",
-    url: "https://totalgains.es",
-    logo: "https://totalgains.es/logo-optimized.webp",
-    sameAs: [
-      "https://www.instagram.com/totalgainsfitness/",
-      "https://www.tiktok.com/@totalgainsapp",
-      "https://www.youtube.com/channel/UCOJehcX1G6jABjONKmXCmbQ",
-    ],
-    contactPoint: {
-      "@type": "ContactPoint",
-      email: "soporte@totalgains.es",
-      contactType: "customer service",
-      availableLanguage: "Spanish",
-    },
-  };
-
-  // Schema Org — WebSite (para el Sitelinks Search Box)
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "TotalGains",
-    url: "https://totalgains.es",
-  };
-
   return (
     <html lang="es" className="scroll-smooth">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([
-              softwareSchema,
-              organizationSchema,
-              websiteSchema,
-            ]),
-          }}
-        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <Analytics />
       </head>
       <body className={dmSans.className}>
+        <ScrollProgress />
         <Navbar />
         {children}
         <Footer />

@@ -1,8 +1,10 @@
 "use client";
 
 import React, { useRef, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { Smartphone, Apple, Globe, Rocket, UserCheck, Trophy, Palette, Play, ChevronDown } from 'lucide-react';
+import { Smartphone, Apple, Globe, Rocket, UserCheck, Trophy, Palette, Play, ChevronDown, Sparkles } from 'lucide-react';
 import { trackEvent } from '@/components/Analytics';
 import './Hero.css';
 
@@ -12,6 +14,12 @@ const Hero = () => {
 
     const handleVideoClick = () => {
         if (videoRef.current && !isPlaying) {
+            // Asignar src aquí (no en el JSX) evita que el navegador
+            // descargue el vídeo con preload="metadata" antes de que el
+            // usuario lo pida — mejora LCP y ahorra ~200KB en mobile.
+            if (!videoRef.current.src) {
+                videoRef.current.src = '/video/Futuristic_Tech_Commercial_Generation.mp4';
+            }
             videoRef.current.currentTime = 0;
             videoRef.current.play();
             videoRef.current.controls = true;
@@ -69,19 +77,31 @@ const Hero = () => {
                             initial={{ opacity: 0, x: -20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.5 }}
-                            className="trust-badge animate-pulse"
                         >
-                            <Trophy size={20} color="#eab308" strokeWidth={2.5} />
-                            <span>+240.000 Alimentos</span>
+                            <Link href="/base-datos-alimentos-fitness/" className="trust-badge trust-badge-link animate-pulse" prefetch={false}>
+                                <Trophy size={20} color="#eab308" strokeWidth={2.5} />
+                                <span>+240.000 Alimentos</span>
+                            </Link>
                         </motion.div>
                         <motion.div
                             initial={{ opacity: 0, x: 20 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ delay: 0.7 }}
-                            className="trust-badge animate-pulse"
                         >
-                            <Palette size={20} color="#ec4899" strokeWidth={2.5} />
-                            <span>Branding IA</span>
+                            <Link href="/app-marca-blanca-entrenador-personal/" className="trust-badge trust-badge-link animate-pulse" prefetch={false}>
+                                <Palette size={20} color="#ec4899" strokeWidth={2.5} />
+                                <span>Branding IA</span>
+                            </Link>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.9 }}
+                        >
+                            <Link href="/ia-entrenador-personal/" className="trust-badge trust-badge-link" prefetch={false}>
+                                <Sparkles size={20} color="#a855f7" strokeWidth={2.5} />
+                                <span>IA con tu base de datos →</span>
+                            </Link>
                         </motion.div>
                     </div>
                 </motion.div>
@@ -100,18 +120,27 @@ const Hero = () => {
                             onClick={handleVideoClick}
                         >
                             <div className="video-border-glow"></div>
+                            {/* Sin src en el HTML inicial: el navegador no descarga
+                                nada hasta que el usuario pulsa play → LCP óptimo */}
                             <video
                                 ref={videoRef}
-                                src="/video/Futuristic_Tech_Commercial_Generation.mp4"
                                 title="TotalGains - Video Promocional"
-                                preload="metadata"
+                                preload="none"
                                 playsInline
                                 className="promo-video"
                             ></video>
 
                             {!isPlaying && (
                                 <div className="custom-video-poster">
-                                    <img src="/logo-optimized.webp" alt="Logotipo principal de TotalGains" className="poster-logo" />
+                                    {/* priority: preload en el <head> → mejora LCP significativamente */}
+                                    <Image
+                                        src="/logo-optimized.webp"
+                                        alt="TotalGains — Software para entrenadores personales"
+                                        className="poster-logo"
+                                        width={280}
+                                        height={140}
+                                        priority
+                                    />
                                     <div className="video-overlay-permanent">
                                         <div className="play-button-wrapper">
                                             <Play size={32} className="play-icon" fill="currentColor" />

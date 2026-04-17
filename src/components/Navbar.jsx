@@ -10,7 +10,8 @@ const navLinks = [
     { href: '#how-it-works', label: 'Cómo Funciona' },
     { href: '#app-showcase', label: 'Explora la App' },
     { href: '/alternativas/trainerize', label: 'vs Trainerize' },
-    { href: '#pricing', label: 'Precios' }
+    { href: '#pricing', label: 'Precios' },
+    { href: '/blog/', label: 'Blog' },
 ];
 
 const Navbar = () => {

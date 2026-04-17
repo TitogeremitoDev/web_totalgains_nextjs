@@ -1,16 +1,46 @@
-# ─────────────────────────────────────────────────────
-# TotalGains — .htaccess para Hostinger (LiteSpeed)
-# Next.js Static Export con trailingSlash: true
-# ─────────────────────────────────────────────────────
+# ── Compresión ──────────────────────────────────────────────────────────────
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
+    AddOutputFilterByType DEFLATE image/svg+xml font/woff font/woff2
+</IfModule>
 
-RewriteEngine On
+# ── Cache-Control ────────────────────────────────────────────────────────────
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 year"
+    ExpiresByType font/woff2 "access plus 1 year"
+    ExpiresByType font/woff "access plus 1 year"
+</IfModule>
 
-# 1. Forzar HTTPS
-RewriteCond %{HTTPS} !=on
-RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+<IfModule mod_headers.c>
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+    <FilesMatch "\.(webp|png|jpg|jpeg|gif|svg|ico)$">
+        Header set Cache-Control "public, max-age=31536000"
+    </FilesMatch>
+    <FilesMatch "\.html$">
+        Header set Cache-Control "public, max-age=0, must-revalidate"
+    </FilesMatch>
+    <FilesMatch "\.(woff2|woff)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+</IfModule>
 
-# 2. Página 404 de Next.js
-ErrorDocument 404 /404/index.html
+# ── Tipos MIME correctos ─────────────────────────────────────────────────────
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+    AddType font/woff2 .woff2
+</IfModule>
 
-# 3. Desactivar listado de directorios
-Options -Indexes
+# ── Seguridad básica ─────────────────────────────────────────────────────────
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
