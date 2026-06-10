@@ -1,4 +1,4 @@
-import { DM_Sans } from "next/font/google";
+import { DM_Sans, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -11,6 +11,13 @@ const dmSans = DM_Sans({
   display: "swap",
   preload: true,
   variable: "--font-dm-sans",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  display: "swap",
+  variable: "--font-display",
 });
 
 /* ──────────────────────────────────────────────
@@ -65,10 +72,21 @@ export const metadata = {
   // ── Twitter Cards ──
   twitter: {
     card: "summary_large_image",
+    site: "@totalgainsapp",
+    creator: "@totalgainsapp",
     title: "TotalGains | Software para Entrenadores Personales",
     description:
       "Escala tu negocio fitness con IA. Rutinas, dietas, cobros y app marca blanca. Empieza gratis.",
     images: ["/og-image.jpg"],
+  },
+
+  // ── Otros meta (Bing, geolocalización, sitemap reference) ──
+  other: {
+    "bingbot": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+    "geo.region": "ES-AN",
+    "geo.placename": "La Zubia, Granada",
+    "geo.position": "37.1356;-3.6019",
+    "ICBM": "37.1356, -3.6019",
   },
 
   // ── Robots ──
@@ -100,15 +118,19 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es" className="scroll-smooth">
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <Analytics />
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        <script
+          type="text/javascript"
+          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+          async
+        />
       </head>
-      <body className={dmSans.className}>
+      <body className={`${dmSans.variable} ${spaceGrotesk.variable}`}>
         <ScrollProgress />
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

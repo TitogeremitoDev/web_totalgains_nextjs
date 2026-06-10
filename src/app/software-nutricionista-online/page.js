@@ -1,8 +1,9 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import Link from "next/link";
 import { Utensils, Calendar, Bell, FileText, BarChart3, Shield } from "lucide-react";
 
 export const metadata = {
-  title: "Software Nutricionista Online — Gestión de Pacientes",
+  title: "Software Nutricionista Online",
   description:
     "Software para nutricionistas online: gestiona pacientes, crea planes de dieta con +240.000 alimentos, automatiza revisiones y agenda citas. Prueba gratis 14 días.",
   alternates: { canonical: "https://totalgains.es/software-nutricionista-online/" },
@@ -38,8 +39,36 @@ const faqs = [
 ];
 
 export default function SoftwareNutricionistaOnline() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        name: "TotalGains",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, iOS, Android",
+        "@id": "https://totalgains.es/#software",
+        description: "Software para nutricionistas online con +240.000 alimentos, generación IA de dietas, seguimiento de pacientes y automatización de revisiones.",
+        image: "https://totalgains.es/og-image.jpg",
+        url: "https://totalgains.es/software-nutricionista-online/",
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        inLanguage: "es",
+        publisher: { "@id": "https://totalgains.es/#organization" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Inicio", item: "https://totalgains.es/" },
+          { "@type": "ListItem", position: 2, name: "Software para Nutricionista Online", item: "https://totalgains.es/software-nutricionista-online/" },
+        ],
+      },
+    ],
+  };
   return (
-    <LandingPageTemplate
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <LandingPageTemplate
       badge="Software para nutricionistas"
       h1="Software para Nutricionista Online con +240.000 Alimentos"
       subtitle="Gestiona pacientes, crea planes de alimentación y automatiza tus revisiones. La plataforma que usan nutricionistas como Lorena Eses para ahorrar más de 10 horas semanales."
@@ -49,5 +78,19 @@ export default function SoftwareNutricionistaOnline() {
       ctaLocation="lp_nutricionista"
       faqs={faqs}
     />
+    <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
+      <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+        {[
+          { href: "/blog/crear-planes-nutricionales-clientes-entrenador-personal/", label: "Guía: crear planes nutricionales 2026" },
+          { href: "/base-datos-alimentos-fitness/", label: "Base de datos alimentos" },
+          { href: "/ia-entrenador-personal/", label: "IA para entrenadores" },
+          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+        ].map(({ href, label }) => (
+          <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
+        ))}
+      </div>
+    </section>
+    </>
   );
 }

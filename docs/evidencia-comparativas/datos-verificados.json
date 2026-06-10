@@ -1,0 +1,217 @@
+{
+  "version": "1.1",
+  "fechaVerificacion": "2026-05-13",
+  "fechaVerificacionPrevia": "2026-04-24",
+  "proximaRevision": "2026-08-13",
+  "verificadoPor": "Germán Martínez Calvente",
+  "proposito": "Evidencia documental de las afirmaciones en páginas /alternativas/[competidor]/ y artículo de blog de comparativa 2026",
+  "competidores": {
+    "trainerize": {
+      "url": "https://www.trainerize.com/pricing.aspx",
+      "moneda": "USD",
+      "idioma": "inglés",
+      "verifiedAt": "2026-05-13",
+      "planes": [
+        { "nombre": "Basic (Free)", "precio": 0, "clientes": 1, "entrenadores": "ilimitados" },
+        { "nombre": "Grow", "precio": 10, "clientes": 2, "entrenadores": "ilimitados", "ivaIncluido": 12.10 },
+        { "nombre": "Pro 5", "precio": 25, "clientes": 5, "entrenadores": 1, "ivaIncluido": 30.25 },
+        { "nombre": "Pro 15", "precio": 50, "clientes": 15, "entrenadores": 1, "ivaIncluido": 60.50 },
+        { "nombre": "Pro 30", "precio": 79, "clientes": 30, "entrenadores": 3, "ivaIncluido": 95.59 },
+        { "nombre": "Pro 50", "precio": 135, "clientes": 50, "entrenadores": 3, "ivaIncluido": 163.35 },
+        { "nombre": "Pro 75", "precio": 180, "clientes": 75, "entrenadores": 3, "ivaIncluido": 217.80 },
+        { "nombre": "Pro 100", "precio": 225, "clientes": 100, "entrenadores": 5, "ivaIncluido": 272.25 },
+        { "nombre": "Pro 200", "precio": 250, "clientes": 200, "entrenadores": 5, "ivaIncluido": 302.50 },
+        { "nombre": "Studio Plus", "precio": 275, "clientes": 500, "entrenadores": "ilimitados", "ivaIncluido": 332.75, "incluyeAddons": true },
+        { "nombre": "Studio Max", "precio": 380, "clientes": 1000, "entrenadores": "ilimitados", "ivaIncluido": 459.80, "incluyeAddons": true }
+      ],
+      "addons": [
+        { "nombre": "Business", "precio": 25, "unidad": "USD/mes", "aplicaA": "Grow / Pro (todos)", "incluidoEn": "Studio Plus / Max" },
+        { "nombre": "Advanced Nutrition Coaching", "precio": 20, "precioTier2": 45, "unidad": "USD/mes", "aplicaA": "Grow/Pro 5-15: $20 | Pro 30-200: $45", "incluidoEn": "Studio Plus / Max" },
+        { "nombre": "Video Coaching", "precio": 10, "unidad": "USD/mes", "aplicaA": "Grow / Pro (todos)", "incluidoEn": "Studio Plus / Max" },
+        { "nombre": "Stripe Integrated Payments", "precio": 10, "unidad": "USD/mes", "aplicaA": "Grow / Pro (todos)", "incluidoEn": "Studio Plus / Max" },
+        { "nombre": "Custom Branded App", "precio": 169, "unidad": "USD pago único", "aplicaA": "Pro (todos)", "noDisponibleEn": "Basic / Grow", "incluidoEn": "Studio Plus / Max" }
+      ],
+      "totalConTodosLosAddons": {
+        "Grow": { "totalUsdMes": 75, "ivaIncluido": 90.75 },
+        "Pro 5": { "totalUsdMes": 90, "ivaIncluido": 108.90 },
+        "Pro 15": { "totalUsdMes": 115, "ivaIncluido": 139.15 },
+        "Pro 30": { "totalUsdMes": 169, "ivaIncluido": 204.49 },
+        "Pro 50": { "totalUsdMes": 225, "ivaIncluido": 272.25 },
+        "Pro 75": { "totalUsdMes": 270, "ivaIncluido": 326.70 },
+        "Pro 100": { "totalUsdMes": 315, "ivaIncluido": 381.15 },
+        "Pro 200": { "totalUsdMes": 340, "ivaIncluido": 411.40 },
+        "Studio Plus": { "totalUsdMes": 275, "ivaIncluido": 332.75 },
+        "Studio Max": { "totalUsdMes": 380, "ivaIncluido": 459.80 }
+      },
+      "descuentoAnual": "~10% sobre plan base",
+      "soporte": "EN (franjas EE.UU./Canadá)"
+    },
+    "harbiz": {
+      "url": "https://www.harbiz.io/en/pricing",
+      "moneda": "EUR",
+      "idioma": "español/inglés",
+      "verifiedAt": "2026-05-13",
+      "nota": "Web Harbiz muestra sin IVA. IVA 21% aplicado para España.",
+      "planesMensuales": {
+        "Basic": [
+          { "clientes": 5, "sinIva": 19, "conIva": 22.99 },
+          { "clientes": 15, "sinIva": 39, "conIva": 47.19 },
+          { "clientes": 30, "sinIva": 69, "conIva": 83.49 },
+          { "clientes": 40, "sinIva": 99, "conIva": 119.79 }
+        ],
+        "Pro": [
+          { "clientes": 50, "sinIva": 119, "conIva": 143.99 },
+          { "clientes": 75, "sinIva": 169, "conIva": 204.49 },
+          { "clientes": 100, "sinIva": 199, "conIva": 240.79 },
+          { "clientes": 200, "sinIva": 224, "conIva": 271.04 },
+          { "clientes": 500, "sinIva": 249, "conIva": 301.29 },
+          { "clientes": 5000, "sinIva": 349, "conIva": 422.29 },
+          { "clientes": "+5000", "sinIva": "custom", "conIva": "custom" }
+        ],
+        "MyAPP": [
+          { "clientes": 50, "sinIva": 199, "conIva": 240.79 },
+          { "clientes": 75, "sinIva": 229, "conIva": 277.09 },
+          { "clientes": 100, "sinIva": 259, "conIva": 313.39 },
+          { "clientes": 200, "sinIva": 284, "conIva": 343.64 },
+          { "clientes": 500, "sinIva": 309, "conIva": 373.89 },
+          { "clientes": 5000, "sinIva": 399, "conIva": 482.79 },
+          { "clientes": "+5000", "sinIva": "custom", "conIva": "custom" }
+        ]
+      },
+      "planesAnuales": {
+        "descuento": "-25%",
+        "Basic": [
+          { "clientes": 5, "sinIva": 14, "conIva": 16.94 },
+          { "clientes": 15, "sinIva": 29, "conIva": 35.09 },
+          { "clientes": 30, "sinIva": 52, "conIva": 62.92 },
+          { "clientes": 40, "sinIva": 74, "conIva": 89.54 }
+        ],
+        "Pro": [
+          { "clientes": 50, "sinIva": 89, "conIva": 107.69 },
+          { "clientes": 75, "sinIva": 127, "conIva": 153.67 },
+          { "clientes": 100, "sinIva": 149, "conIva": 180.29 },
+          { "clientes": 200, "sinIva": 168, "conIva": 203.28 },
+          { "clientes": 500, "sinIva": 187, "conIva": 226.27 },
+          { "clientes": 5000, "sinIva": 262, "conIva": 317.02 }
+        ],
+        "MyAPP": [
+          { "clientes": 50, "sinIva": 149, "conIva": 180.29 },
+          { "clientes": 75, "sinIva": 172, "conIva": 208.12 },
+          { "clientes": 100, "sinIva": 194, "conIva": 234.74 },
+          { "clientes": 200, "sinIva": 213, "conIva": 257.73 },
+          { "clientes": 500, "sinIva": 232, "conIva": 280.72 },
+          { "clientes": 5000, "sinIva": 299, "conIva": 361.79 }
+        ]
+      },
+      "addons": [
+        { "nombre": "Personaliza tu app", "sinIva": 24.99, "conIva": 30.24, "unidad": "EUR/mes" },
+        { "nombre": "Nutri AI", "sinIva": 14.99, "conIva": 18.14, "unidad": "EUR/mes" },
+        { "nombre": "Biblioteca de Vídeos", "sinIva": 19.99, "conIva": 24.19, "unidad": "EUR/mes" }
+      ],
+      "soporte": "ES",
+      "trial": "14 días sin tarjeta"
+    },
+    "mypthub": {
+      "url": "https://www.mypthub.net/pricing",
+      "moneda": "EUR",
+      "idioma": "inglés",
+      "planes": [
+        { "nombre": "Starter", "precio": 25, "precioAnual": 22.50, "clientes": 3 },
+        { "nombre": "Premium", "precio": 59, "precioAnual": 52, "clientes": "ilimitados" }
+      ],
+      "addons": [
+        { "nombre": "Custom Branded App", "precio": 95, "unidad": "EUR pago único" },
+        { "nombre": "White Label App", "precio": 145, "unidad": "EUR/mes (requiere Premium)" },
+        { "nombre": "Check-Ins AI", "precio": 17, "precioPromo": 10, "unidad": "EUR/mes" },
+        { "nombre": "Zapier Integration", "precio": 18, "unidad": "EUR/mes" }
+      ],
+      "soporte": "EN"
+    },
+    "truecoach": {
+      "url": "https://truecoach.co/pricing",
+      "moneda": "USD",
+      "idioma": "inglés",
+      "planes": [
+        { "nombre": "Starter", "precio": 26.34, "clientes": 5 },
+        { "nombre": "Standard", "precio": 57.99, "clientes": 20, "nota": "más popular" },
+        { "nombre": "Pro", "precio": 136.99, "clientes": 50 }
+      ],
+      "features": {
+        "iaGeneracionRutinas": "no mencionada en web oficial",
+        "appMarcaBlanca": "Custom-branded fitness app en Standard/Pro (no marca blanca completa)",
+        "nutricion": "Integración con MyFitnessPal",
+        "wearables": "Apple, Garmin, WHOOP (Standard/Pro)",
+        "pagos": "Automated via Stripe",
+        "videoLibrary": "3.000+ ejercicios"
+      },
+      "soporte": "EN"
+    },
+    "ptminder": {
+      "url": "https://www.ptminder.com/pricing",
+      "moneda": "USD",
+      "idioma": "inglés",
+      "planes": [
+        { "nombre": "50 Client Plan", "precio": 59, "clientes": 50 },
+        { "nombre": "100 Client Plan", "precio": 89, "clientes": 100 },
+        { "nombre": "150 Client Plan", "precio": 119, "clientes": 150 },
+        { "nombre": "200 Client Plan", "precio": 149, "clientes": 200 },
+        { "nombre": "Unlimited", "precio": 209, "clientes": "ilimitados" }
+      ],
+      "addons": [
+        { "nombre": "White-label app", "precio": 40, "unidad": "USD/mes" }
+      ],
+      "features": {
+        "iaGeneracionRutinas": "no mencionada en web oficial",
+        "nutricion": "Planificador sin base de datos específica integrada"
+      },
+      "trial": "14 días sin tarjeta",
+      "soporte": "24/7 live chat (EN)"
+    },
+    "trainerstudio": {
+      "url": "https://www.trainerstudio.com/es/precios",
+      "moneda": "EUR",
+      "idioma": "español",
+      "verifiedAt": "2026-05-13",
+      "nota": "Web TrainerStudio muestra sin IVA. IVA 21% aplicado para España.",
+      "planes": [
+        { "nombre": "5 clientes", "sinIva": 19, "conIva": 22.99, "clientes": 5 },
+        { "nombre": "15 clientes", "sinIva": 39, "conIva": 47.19, "clientes": 15 },
+        { "nombre": "30 clientes", "sinIva": 69, "conIva": 83.49, "clientes": 30 },
+        { "nombre": "50 clientes", "sinIva": 99, "conIva": 119.79, "clientes": 50 },
+        { "nombre": "Ilimitado", "sinIva": 149, "conIva": 180.29, "clientes": "ilimitados" }
+      ],
+      "features": {
+        "appMarcaBlanca": "Incluida en planes de pago según web oficial",
+        "idiomaInterfaz": "español",
+        "mercadoObjetivo": "España y Latinoamérica"
+      }
+    }
+  },
+  "competidoresSinVerificacionCompleta": {
+    "dudapp": "Plataforma pequeña/regional — afirmaciones en comparativas limitadas a generalidades verificables",
+    "dudyfit": "Plataforma pequeña — afirmaciones limitadas a generalidades verificables",
+    "virtuagym": "URL /personal-training devolvió 404 en la verificación — afirmaciones limitadas a posicionamiento conocido (orientado a gimnasios)"
+  },
+  "totalgains": {
+    "url": "https://totalgains.es",
+    "moneda": "EUR",
+    "idioma": "español",
+    "planes": [
+      { "nombre": "Starter", "precio": 29.90, "clientes": 25 },
+      { "nombre": "Pro", "precio": 89.90, "clientes": 100, "nota": "marca blanca incluida" },
+      { "nombre": "Unlimited", "precio": 149.90, "clientes": "ilimitados", "nota": "soporte VIP + migración asistida" }
+    ],
+    "todoIncluidoEnPlanPro": [
+      "IA generación rutinas",
+      "IA generación dietas",
+      "App marca blanca",
+      "Check-ins automáticos",
+      "Pagos recurrentes Stripe",
+      "Módulo resistencia/cardio",
+      "Base datos alimentos personalizable",
+      "Soporte en español <24h",
+      "Migración asistida"
+    ],
+    "trial": "14 días sin tarjeta"
+  }
+}

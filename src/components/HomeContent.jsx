@@ -8,18 +8,19 @@ import Features from "@/components/Features";
 import AppShowcase from "@/components/AppShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import Pricing from "@/components/Pricing";
-import FAQ from "@/components/FAQ";
-import Contact from "@/components/Contact";
+import AppDownload from "@/components/AppDownload";
 import LeadMagnet from "@/components/LeadMagnet";
 import dynamic from "next/dynamic";
 const RoiCalculator = dynamic(() => import("@/components/RoiCalculator"), {
   ssr: false,
   loading: () => <div style={{ height: "400px" }} />,
 });
-import Testimonials from "@/components/Testimonials";
 import ScrollInitializer from "@/components/ScrollInitializer";
 import StickyCTA from "@/components/StickyCTA";
-import ComparisonTable from "@/components/ComparisonTable";
+const Testimonials = dynamic(() => import("@/components/Testimonials"));
+const ComparisonTable = dynamic(() => import("@/components/ComparisonTable"));
+const FAQ = dynamic(() => import("@/components/FAQ"));
+const Contact = dynamic(() => import("@/components/Contact"));
 
 export default function HomeContent() {
   return (
@@ -37,6 +38,7 @@ export default function HomeContent() {
         <RoiCalculator />
       </div>
       <Testimonials />
+      <AppDownload />
       <ComparisonTable />
       <Pricing />
       <FAQ />

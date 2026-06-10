@@ -4,7 +4,7 @@ import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
 import "./blog.css";
 
 export const metadata = {
-  title: "Blog para Entrenadores Personales — Consejos y Estrategias",
+  title: "Blog para Entrenadores Personales 2026",
   description: "Artículos sobre negocio fitness, captación de clientes, herramientas y metodología para entrenadores personales online. Aprende a escalar tu negocio.",
   alternates: { canonical: "https://totalgains.es/blog/" },
   openGraph: {
@@ -22,11 +22,32 @@ const CATEGORY_LABELS = {
   nutricion: "Nutrición",
 };
 
+const blogSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "name": "Blog TotalGains",
+      "url": "https://totalgains.es/blog/",
+      "inLanguage": "es",
+      "publisher": { "@id": "https://totalgains.es/#organization" },
+    },
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://totalgains.es/" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: "https://totalgains.es/blog/" },
+      ],
+    },
+  ],
+};
+
 export default function BlogPage() {
   const posts = getAllPosts();
 
   return (
     <main className="blog-page">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       {/* Hero */}
       <section className="blog-hero">
         <div className="blog-hero-bg" />

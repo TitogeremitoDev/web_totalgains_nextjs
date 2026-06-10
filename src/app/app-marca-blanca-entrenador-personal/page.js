@@ -1,8 +1,9 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import Link from "next/link";
 import { Palette, Smartphone, Zap, Star, Shield, Users } from "lucide-react";
 
 export const metadata = {
-  title: "App Marca Blanca para Entrenadores Personales con IA",
+  title: "App Marca Blanca para Entrenadores con IA",
   description:
     "Ofrece a tus clientes una app de fitness con tu nombre, colores y logo. Branding generado por IA en un clic. Sin programar, sin costes extra. Prueba gratis 14 días.",
   alternates: { canonical: "https://totalgains.es/app-marca-blanca-entrenador-personal/" },
@@ -75,8 +76,36 @@ const faqs = [
 ];
 
 export default function AppMarcaBlanca() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        name: "TotalGains",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, iOS, Android",
+        "@id": "https://totalgains.es/#software",
+        description: "App de marca blanca para entrenadores personales: tus clientes descargan una app con tu nombre, logo y colores en iOS y Android sin coste extra.",
+        image: "https://totalgains.es/og-image.jpg",
+        url: "https://totalgains.es/app-marca-blanca-entrenador-personal/",
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        inLanguage: "es",
+        publisher: { "@id": "https://totalgains.es/#organization" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Inicio", item: "https://totalgains.es/" },
+          { "@type": "ListItem", position: 2, name: "App Marca Blanca para Entrenadores", item: "https://totalgains.es/app-marca-blanca-entrenador-personal/" },
+        ],
+      },
+    ],
+  };
   return (
-    <LandingPageTemplate
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <LandingPageTemplate
       badge="App Marca Blanca"
       h1="Tu Propia App de Fitness con tu Marca y Branding IA"
       subtitle="Ofrece a tus clientes una experiencia 100% tuya: tu nombre, tus colores, tu logo. La IA genera el branding completo en un clic — sin programar, sin diseñador, sin coste extra."
@@ -86,5 +115,19 @@ export default function AppMarcaBlanca() {
       ctaLocation="lp_marca_blanca"
       faqs={faqs}
     />
+    <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
+      <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+        {[
+          { href: "/blog/app-marca-blanca-entrenadores-personales/", label: "Guía completa app marca blanca 2026" },
+          { href: "/app-entrenador-personal-online/", label: "App entrenador online" },
+          { href: "/gestion-clientes-fitness/", label: "Gestión de clientes" },
+          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+        ].map(({ href, label }) => (
+          <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
+        ))}
+      </div>
+    </section>
+    </>
   );
 }

@@ -1,8 +1,9 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import Link from "next/link";
 import { Globe, Video, LayoutDashboard, Zap, Users, TrendingUp } from "lucide-react";
 
 export const metadata = {
-  title: "Plataforma de Entrenamiento Online para Entrenadores",
+  title: "Plataforma de Entrenamiento Online 2026",
   description:
     "La plataforma de entrenamiento online todo-en-uno. Gestiona atletas, diseña rutinas, haz seguimiento y cobra desde cualquier lugar. Disponible en España y Latinoamérica.",
   alternates: { canonical: "https://totalgains.es/plataforma-entrenamiento-online/" },
@@ -37,8 +38,36 @@ const faqs = [
 ];
 
 export default function PlataformaEntrenamientoOnline() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        name: "TotalGains",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, iOS, Android",
+        "@id": "https://totalgains.es/#software",
+        description: "Plataforma de entrenamiento online para entrenadores personales con app cliente, creador de rutinas con IA y cobros automáticos.",
+        image: "https://totalgains.es/og-image.jpg",
+        url: "https://totalgains.es/plataforma-entrenamiento-online/",
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        inLanguage: "es",
+        publisher: { "@id": "https://totalgains.es/#organization" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Inicio", item: "https://totalgains.es/" },
+          { "@type": "ListItem", position: 2, name: "Plataforma de Entrenamiento Online", item: "https://totalgains.es/plataforma-entrenamiento-online/" },
+        ],
+      },
+    ],
+  };
   return (
-    <LandingPageTemplate
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <LandingPageTemplate
       badge="Plataforma de entrenamiento online"
       h1="La Plataforma de Entrenamiento Online para Coaches Profesionales"
       subtitle="Todo lo que necesitas para ofrecer entrenamiento online de alto nivel: gestión de atletas, rutinas, seguimiento y comunicación desde una sola plataforma accesible en todo el mundo."
@@ -48,5 +77,18 @@ export default function PlataformaEntrenamientoOnline() {
       ctaLocation="lp_plataforma_entrenamiento"
       faqs={faqs}
     />
+    <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
+      <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+        {[
+          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+          { href: "/gestion-clientes-fitness/", label: "Gestión de clientes" },
+          { href: "/app-entrenador-personal-online/", label: "App entrenador online" },
+        ].map(({ href, label }) => (
+          <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
+        ))}
+      </div>
+    </section>
+    </>
   );
 }

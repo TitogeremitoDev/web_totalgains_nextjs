@@ -1,4 +1,3 @@
-/* Tailwind removed */
 /* ================================
    TOTALGAINS - PREMIUM DESIGN SYSTEM
    ================================ */
@@ -41,8 +40,12 @@
   --spacing-3xl: 6rem;
 
   /* Typography */
-  --font-primary: "__DM_Sans_8b3b42", 'DM Sans', sans-serif;
-  --font-display: "__DM_Sans_8b3b42", 'DM Sans', sans-serif;
+  --font-primary: var(--font-dm-sans), 'DM Sans', sans-serif;
+  --font-display: var(--font-display), 'Space Grotesk', sans-serif;
+
+  /* Easing */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring:   cubic-bezier(0.34, 1.56, 0.64, 1);
 
   /* Border Radius */
   --radius-sm: 0.5rem;
@@ -118,17 +121,6 @@ body {
   background-color: var(--bg-dark);
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: var(--dark-gradient);
-  z-index: -10;
-  pointer-events: none;
-}
 
 /* Typography */
 h1,
@@ -652,97 +644,6 @@ section {
   transition-delay: 0.3s;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 0.5s ease forwards;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeInUp {
-  animation: fadeInUp 0.5s ease forwards;
-}
-
-@keyframes scaleIn {
-  from {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-scaleIn {
-  animation: scaleIn 0.5s ease forwards;
-}
-
-/* Enhanced Gradient Text Utility */
-.gradient-text {
-  background: var(--primary-gradient);
-  background-size: 200% 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: gradient-shift 8s ease infinite;
-}
-
-/* Subtle text depth for headers */
-h1,
-h2 {
-  text-shadow: 0 2px 20px rgba(102, 126, 234, 0.3);
-}
-
-/* Smooth loading for sections */
-section {
-  opacity: 0;
-  animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-section:nth-child(1) {
-  animation-delay: 0s;
-}
-
-section:nth-child(2) {
-  animation-delay: 0.1s;
-}
-
-section:nth-child(3) {
-  animation-delay: 0.2s;
-}
-
-section:nth-child(4) {
-  animation-delay: 0.3s;
-}
-
-section:nth-child(5) {
-  animation-delay: 0.4s;
-}
-
-section:nth-child(6) {
-  animation-delay: 0.5s;
-}
 
 /* ================================
    ACCESSIBILITY - Reduced Motion
@@ -756,11 +657,6 @@ section:nth-child(6) {
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-
-  section {
-    opacity: 1;
-    animation: none;
   }
 
   .glass:hover {

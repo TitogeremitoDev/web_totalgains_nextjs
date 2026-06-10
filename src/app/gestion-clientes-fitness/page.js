@@ -1,10 +1,11 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import Link from "next/link";
 import { Users, FileText, CreditCard, Bell, BarChart3, Shield } from "lucide-react";
 
 export const metadata = {
   title: "Gestión de Clientes Fitness para Entrenadores",
   description:
-    "Centraliza la gestión de tus clientes fitness: historial de entrenamientos, pagos, seguimiento y comunicación. Todo en una plataforma. Prueba gratis 14 días.",
+    "Gestiona hasta 100 clientes desde una sola plataforma: rutinas, dietas, cobros recurrentes. App marca blanca incluida desde 89,90 €/mes.",
   alternates: { canonical: "https://totalgains.es/gestion-clientes-fitness/" },
   openGraph: {
     title: "Gestión de Clientes Fitness | TotalGains",
@@ -37,8 +38,36 @@ const faqs = [
 ];
 
 export default function GestionClientesFitness() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        name: "TotalGains",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, iOS, Android",
+        "@id": "https://totalgains.es/#software",
+        description: "Gestión de clientes fitness profesional: historial, seguimiento, comunicación y facturación centralizados para entrenadores personales.",
+        image: "https://totalgains.es/og-image.jpg",
+        url: "https://totalgains.es/gestion-clientes-fitness/",
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        inLanguage: "es",
+        publisher: { "@id": "https://totalgains.es/#organization" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Inicio", item: "https://totalgains.es/" },
+          { "@type": "ListItem", position: 2, name: "Gestión de Clientes Fitness", item: "https://totalgains.es/gestion-clientes-fitness/" },
+        ],
+      },
+    ],
+  };
   return (
-    <LandingPageTemplate
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <LandingPageTemplate
       badge="Gestión de clientes"
       h1="Gestión de Clientes Fitness Sin Excel, Sin Caos"
       subtitle="Centraliza el historial, los pagos, las rutinas y el progreso de cada cliente en un perfil estructurado. Dedica menos tiempo a buscar información y más a entrenar."
@@ -48,5 +77,18 @@ export default function GestionClientesFitness() {
       ctaLocation="lp_gestion_clientes"
       faqs={faqs}
     />
+    <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
+      <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+        {[
+          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+          { href: "/plataforma-entrenamiento-online/", label: "Plataforma de entrenamiento" },
+          { href: "/ia-entrenador-personal/", label: "IA para entrenadores" },
+        ].map(({ href, label }) => (
+          <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
+        ))}
+      </div>
+    </section>
+    </>
   );
 }

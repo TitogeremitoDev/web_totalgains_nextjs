@@ -1,3 +1,27 @@
+# ── Routing Next.js estático ─────────────────────────────────────────────────
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 410 Gone — APK eliminado
+    Redirect 410 /TotalGains.apk
+
+    # 301 redirects — blogs antiguos sin contenido actual
+    Redirect 301 /blog/app-entrenamiento-personalizado /blog/ia-entrenador-personal-rutinas-dietas/
+    Redirect 301 /blog/app-entrenamiento-personalizado/ /blog/ia-entrenador-personal-rutinas-dietas/
+    Redirect 301 /blog/gestion-clientes-entrenador-personal /gestion-clientes-fitness/
+    Redirect 301 /blog/gestion-clientes-entrenador-personal/ /gestion-clientes-fitness/
+
+    # Añadir trailing slash a rutas sin extensión
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_URI} !/$
+    RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]+$
+    RewriteRule ^(.+)$ /$1/ [R=301,L]
+
+    # Servir index.html para directorios
+    DirectoryIndex index.html
+    Options -Indexes
+</IfModule>
+
 # ── Compresión ──────────────────────────────────────────────────────────────
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
@@ -43,4 +67,19 @@
 <IfModule mod_headers.c>
     Header set X-Content-Type-Options "nosniff"
     Header set X-Frame-Options "SAMEORIGIN"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Permissions-Policy "camera=(), microphone=(), geolocation=()"
+</IfModule>
+
+# ── App autenticada — NO indexar en SEO ni AI ────────────────────────────────
+# SetEnvIf SÍ funciona en .htaccess (al contrario que LocationMatch).
+# Marca solo las URLs /app/ y /api/ con env, y luego aplica X-Robots-Tag a esas.
+<IfModule mod_setenvif.c>
+    SetEnvIf Request_URI "^/app/" NOINDEX_APP=1
+    SetEnvIf Request_URI "^/api/"  NOINDEX_API=1
+</IfModule>
+
+<IfModule mod_headers.c>
+    Header set X-Robots-Tag "noindex, nofollow, noarchive, nosnippet" env=NOINDEX_APP
+    Header set X-Robots-Tag "noindex, nofollow" env=NOINDEX_API
 </IfModule>

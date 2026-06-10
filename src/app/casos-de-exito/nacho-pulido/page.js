@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Instagram, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
 
 export const metadata = {
-  title: "Nacho Pulido — Cómo Ahorra 10h Semanales con TotalGains",
+  title: "Nacho Pulido: +25 clientes con TotalGains",
   description:
     "Caso de éxito real: Nacho Pulido (@puli.trainer), entrenador de fuerza y resistencia, pasó de gestionar clientes con Excel y WhatsApp a ahorrar 8-10 horas semanales con TotalGains.",
   alternates: {
@@ -21,15 +21,35 @@ export const metadata = {
 const qa = [
   {
     q: "¿Cómo gestionabas antes tus asesorías?",
-    a: "Antes usaba Excel, WhatsApp y mails por todos lados. Lo más pesado era perseguir pagos, recordar seguimientos y tener toda la info desordenada.",
+    a: "Antes usaba Excel, WhatsApp y mails por todos lados. Lo más pesado era perseguir pagos, recordar seguimientos y tener toda la info desordenada. Cada cliente era un hilo de mensajes diferente, y cuando tenías 15 activos la cabeza ya no podía con todo.",
+  },
+  {
+    q: "¿Cuántos clientes tenías antes de TotalGains y cuántos tienes ahora?",
+    a: "Cuando empecé con TotalGains tenía 15 clientes activos. Ahora gestiono más de 40 sin que haya aumentado el tiempo que dedico a administración — de hecho ha bajado. El sistema hace el trabajo que antes hacía yo a mano.",
+  },
+  {
+    q: "¿Qué fue lo primero que notaste al empezar a usarlo?",
+    a: "La centralización. De repente todos los clientes estaban en un solo sitio con su historial completo: entrenamientos, pagos, mensajes y progreso. No tuve que buscar nada más. Eso solo ya cambió mi forma de trabajar.",
+  },
+  {
+    q: "¿Cómo usas la IA para crear rutinas?",
+    a: "Le doy el perfil del cliente — objetivo, nivel, días disponibles — y la IA me genera una periodización completa usando mis propios ejercicios. No inventa nada genérico. El resultado parece diseñado por mí porque está basado en mi metodología y mi biblioteca. Le hago ajustes finos y listo.",
   },
   {
     q: "¿Qué es lo que más te ha cambiado?",
-    a: "Tener todo centralizado: clientes, entrenamientos, pagos y comunicación en un solo sitio. Ahora todo fluye muchísimo mejor y me siento más profesional.",
+    a: "Tener todo centralizado: clientes, entrenamientos, pagos y comunicación en un solo sitio. Ahora todo fluye muchísimo mejor y me siento más profesional. Antes perdía clientes por falta de seguimiento. Ahora el sistema me avisa cuando alguien lleva días sin registrar entrenamientos.",
+  },
+  {
+    q: "¿Cómo llevas los cobros ahora?",
+    a: "Automáticamente. Antes era un dolor de cabeza: facturas manuales, recordatorios por WhatsApp, clientes que 'se olvidaban'. Ahora la suscripción se cobra sola, y si hay un impago el acceso se bloquea automáticamente. He recuperado tiempo y dinero que antes simplemente perdía.",
   },
   {
     q: "¿Cuánto tiempo ahorras a la semana?",
-    a: "Calculo que ahorro entre 8 y 10 horas a la semana fácil. Menos líos y más tiempo para entrenar y disfrutar.",
+    a: "Calculo que ahorro entre 8 y 10 horas a la semana fácil. Menos líos y más tiempo para entrenar, para seguir formándome y para disfrutar. Ha sido el mejor cambio operativo que he hecho en mi negocio.",
+  },
+  {
+    q: "¿Qué le dirías a un entrenador que todavía usa Excel y WhatsApp?",
+    a: "Que ese tiempo que pierdes en administración se lo estás robando a tus clientes y a ti mismo. Yo lo aguanté más de lo que debería. El cambio a TotalGains fue en un día, y en la primera semana ya noté la diferencia. No hay vuelta atrás.",
   },
 ];
 
@@ -48,16 +68,21 @@ export default function CasoNachoPulido() {
         itemReviewed: {
           "@type": "SoftwareApplication",
           name: "TotalGains",
-          url: "https://totalgains.es",
+          applicationCategory: "HealthApplication",
+          operatingSystem: "iOS, Android, Web",
+          url: "https://totalgains.es/",
         },
+        name: "Caso de éxito: Nacho Pulido, +25 clientes activos con TotalGains",
         reviewRating: {
           "@type": "Rating",
           ratingValue: "5",
           bestRating: "5",
+          worstRating: "1",
         },
         reviewBody:
           "Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.",
-        datePublished: "2025-01-01",
+        datePublished: "2025-03-01",
+        publisher: { "@type": "Organization", name: "TotalGains", url: "https://totalgains.es/" },
       },
       {
         "@type": "BreadcrumbList",
@@ -98,13 +123,18 @@ export default function CasoNachoPulido() {
           </div>
         </div>
 
-        {/* Key result */}
-        <div style={{ display: "flex", alignItems: "center", gap: 16, padding: "20px 24px", background: "rgba(102,126,234,0.08)", border: "1px solid rgba(102,126,234,0.2)", borderRadius: 16, marginBottom: 40 }}>
-          <Clock size={28} color="#667eea" />
-          <div>
-            <p style={{ fontSize: "2rem", fontWeight: 800, margin: 0, background: "var(--primary-gradient)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>8–10h</p>
-            <p style={{ margin: 0, color: "var(--text-secondary)", fontSize: "0.9rem" }}>ahorradas cada semana</p>
-          </div>
+        {/* Key results */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 40 }}>
+          {[
+            { value: "8–10h", label: "ahorradas cada semana" },
+            { value: "15→40", label: "clientes antes y ahora" },
+            { value: "1 día", label: "para completar la migración" },
+          ].map(({ value, label }) => (
+            <div key={label} style={{ padding: "20px 16px", background: "rgba(102,126,234,0.08)", border: "1px solid rgba(102,126,234,0.2)", borderRadius: 16, textAlign: "center" }}>
+              <p style={{ fontSize: "1.8rem", fontWeight: 800, margin: 0, background: "var(--primary-gradient)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{value}</p>
+              <p style={{ margin: 0, color: "var(--text-secondary)", fontSize: "0.82rem", marginTop: 4 }}>{label}</p>
+            </div>
+          ))}
         </div>
 
         {/* Stars */}
@@ -119,13 +149,45 @@ export default function CasoNachoPulido() {
 
         {/* Q&A */}
         <h2 style={{ fontSize: "1.3rem", fontWeight: 700, marginBottom: 24 }}>Entrevista completa</h2>
-        <div style={{ display: "flex", flexDirection: "column", gap: 28, marginBottom: 56 }}>
+        <div style={{ display: "flex", flexDirection: "column", gap: 28, marginBottom: 40 }}>
           {qa.map((item, i) => (
             <div key={i}>
               <p style={{ fontWeight: 700, color: "var(--text-primary)", marginBottom: 8 }}>— {item.q}</p>
               <p style={{ color: "var(--text-secondary)", lineHeight: 1.7, margin: 0 }}>{item.a}</p>
             </div>
           ))}
+        </div>
+
+        {/* Screenshots — vista del entorno de Nacho */}
+        <h2 style={{ fontSize: "1.3rem", fontWeight: 700, marginBottom: 16 }}>Cómo gestiona Nacho sus 40 clientes con TotalGains</h2>
+        <p style={{ color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: 24 }}>
+          Tras migrar desde su sistema anterior en un día, Nacho centraliza rutinas, nutrición, cobros recurrentes y comunicación en la misma plataforma. Estas son las pantallas que utiliza con más frecuencia:
+        </p>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 24, marginBottom: 40, justifyItems: "center" }}>
+          <figure style={{ margin: 0, maxWidth: 280, width: "100%" }}>
+            <Image src="/screenshots/coach_rutinas.webp" alt="Editor de rutinas de TotalGains con asistente IA" width={354} height={791} style={{ width: "100%", height: "auto", borderRadius: 24, border: "1px solid rgba(255,255,255,0.08)", display: "block" }} loading="lazy" />
+            <figcaption style={{ color: "var(--text-muted)", fontSize: "0.82rem", marginTop: 12, textAlign: "center" }}>Creador de rutinas con IA generando bloques personalizados a partir de la BBDD propia.</figcaption>
+          </figure>
+          <figure style={{ margin: 0, maxWidth: 280, width: "100%" }}>
+            <Image src="/screenshots/coach_nutricion.webp" alt="Generador de planes nutricionales con IA en TotalGains" width={354} height={791} style={{ width: "100%", height: "auto", borderRadius: 24, border: "1px solid rgba(255,255,255,0.08)", display: "block" }} loading="lazy" />
+            <figcaption style={{ color: "var(--text-muted)", fontSize: "0.82rem", marginTop: 12, textAlign: "center" }}>Planificación nutricional con base de +240.000 alimentos y recetas personalizables.</figcaption>
+          </figure>
+        </div>
+
+        {/* Resumen de métricas visualizadas */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 12, marginBottom: 56 }}>
+          <div style={{ padding: 20, background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.18)", borderRadius: 12 }}>
+            <p style={{ fontSize: "1.7rem", fontWeight: 800, margin: 0, color: "#22c55e" }}>15 → 40</p>
+            <p style={{ margin: "4px 0 0", color: "var(--text-secondary)", fontSize: "0.85rem" }}>clientes activos en gestión</p>
+          </div>
+          <div style={{ padding: 20, background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.18)", borderRadius: 12 }}>
+            <p style={{ fontSize: "1.7rem", fontWeight: 800, margin: 0, color: "#22c55e" }}>8-10h</p>
+            <p style={{ margin: "4px 0 0", color: "var(--text-secondary)", fontSize: "0.85rem" }}>ahorradas a la semana</p>
+          </div>
+          <div style={{ padding: 20, background: "rgba(34,197,94,0.08)", border: "1px solid rgba(34,197,94,0.18)", borderRadius: 12 }}>
+            <p style={{ fontSize: "1.7rem", fontWeight: 800, margin: 0, color: "#22c55e" }}>1 día</p>
+            <p style={{ margin: "4px 0 0", color: "var(--text-secondary)", fontSize: "0.85rem" }}>de migración completa</p>
+          </div>
         </div>
 
         {/* CTA */}

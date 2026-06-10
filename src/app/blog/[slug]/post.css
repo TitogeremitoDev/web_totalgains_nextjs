@@ -129,6 +129,152 @@
     display: block;
 }
 
+/* Logos de marca — tamaño reducido, fondo claro para SVGs con colores oscuros */
+.post-body img[src*="/logos/"] {
+    max-width: 180px;
+    max-height: 70px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 1.5rem 0 0.8rem;
+    background: #ffffff;
+    padding: 12px 20px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    display: block;
+}
+
+/* Tablas comparativas */
+.post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.92rem;
+    background: rgba(255,255,255,0.02);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+.post-body thead {
+    background: rgba(139, 92, 246, 0.12);
+}
+
+.post-body th {
+    text-align: left;
+    padding: 14px 16px;
+    font-weight: 700;
+    color: var(--text-primary);
+    font-size: 0.88rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+.post-body td {
+    padding: 14px 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-secondary, #ccc);
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1.3;
+    font-size: 1.25rem;
+}
+
+/* Texto descriptivo debajo del emoji — pequeño y tenue */
+.post-body td small {
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: var(--text-muted, #888);
+    margin-top: 4px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+}
+
+/* La primera columna (nombre de la característica) alineada a la izquierda con texto normal */
+.post-body td:first-child {
+    text-align: left;
+    font-size: 0.92rem;
+    color: var(--text-primary);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.post-body tbody tr:hover {
+    background: rgba(255,255,255,0.02);
+}
+
+.post-body tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Destacar primera columna en tablas comparativas */
+.post-body td:first-child {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+/* Scroll horizontal en móvil */
+@media (max-width: 768px) {
+    .post-body table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        font-size: 0.82rem;
+    }
+    .post-body th,
+    .post-body td {
+        padding: 10px 12px;
+    }
+}
+
+/* Anchor offset — cuando haces click en enlaces del ToC, no queda pegado debajo del navbar */
+.post-body h2 span[id],
+.post-body h3 span[id] {
+    display: block;
+    position: relative;
+    top: -90px;
+    visibility: hidden;
+    height: 0;
+}
+
+/* Smooth scroll (mejor UX al clicar ToC) */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Índice del artículo (ToC) */
+.post-body h2:first-of-type + ol,
+.post-body > ol:first-of-type {
+    background: rgba(139, 92, 246, 0.05);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+    border-left: 3px solid var(--primary, #8b5cf6);
+    border-radius: var(--radius-md);
+    padding: 1.2rem 1.5rem 1.2rem 2.8rem;
+    margin: 1.5rem 0 2.5rem;
+}
+
+.post-body h2 + ol li,
+.post-body > ol li {
+    margin-bottom: 0.4rem;
+}
+
+.post-body h2 + ol li a,
+.post-body > ol li a {
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+.post-body h2 + ol li a:hover,
+.post-body > ol li a:hover {
+    color: var(--primary-light, #a78bfa);
+    text-decoration: underline;
+}
+
 .post-body ul,
 .post-body ol {
     padding-left: 1.5rem;

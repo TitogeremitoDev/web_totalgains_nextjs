@@ -5,7 +5,7 @@ import HomeContent from "@/components/HomeContent";
    ────────────────────────────────────────────── */
 export const metadata = {
   // Title más corto y enfocado — usa el template "%s | TotalGains" de layout.js
-  title: "Software para Entrenadores Personales",
+  title: "TotalGains — Software para Entrenadores Personales con IA",
   description:
     "Gestiona atletas, diseña rutinas, automatiza seguimientos y escala tu negocio. La plataforma fitness todo-en-uno para entrenadores personales. 14 días gratis sin tarjeta.",
   alternates: {
@@ -16,6 +16,17 @@ export const metadata = {
     description:
       "Todo lo que necesita un entrenador personal online en una sola plataforma: gestión de atletas, rutinas, dietas, seguimiento y facturación.",
     url: "https://totalgains.es/",
+    type: "website",
+    locale: "es_ES",
+    siteName: "TotalGains",
+    images: [{ url: "https://totalgains.es/og-image.jpg", width: 1200, height: 630, alt: "TotalGains" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@totalgainsapp",
+    title: "TotalGains — Software para Entrenadores Personales",
+    description: "Gestión de atletas, IA para rutinas y dietas, facturación. Todo en una sola plataforma.",
+    images: ["https://totalgains.es/og-image.jpg"],
   },
 };
 
@@ -63,6 +74,7 @@ export default function Home() {
         "@type": "SoftwareApplication",
         "@id": "https://totalgains.es/#software",
         name: "TotalGains",
+        image: "https://totalgains.es/og-image.jpg",
         applicationCategory: "BusinessApplication",
         applicationSubCategory: "HealthApplication",
         operatingSystem: "Web, iOS, Android",
@@ -72,14 +84,17 @@ export default function Home() {
         inLanguage: "es",
         offers: {
           "@type": "AggregateOffer",
-          lowPrice: "29.90",
-          highPrice: "199.90",
+          lowPrice: 29.90,
+          highPrice: 149.90,
           priceCurrency: "EUR",
-          offerCount: "3",
+          offerCount: 3,
+          availability: "https://schema.org/InStock",
+          url: "https://totalgains.es/onboarding/",
+          image: "https://totalgains.es/og-image.jpg",
         },
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: "5",
+          ratingValue: "4.0",
           bestRating: "5",
           worstRating: "1",
           ratingCount: "3",
@@ -88,24 +103,45 @@ export default function Home() {
         review: [
           {
             "@type": "Review",
-            author: { "@type": "Person", name: "Nacho Pulido" },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            author: { "@type": "Person", name: "Alosquita" },
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
+            datePublished: "2026-05-12",
+            name: "Aplicación profesional, mis entrenamientos ahora son una fantasía",
             reviewBody:
-              "Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.",
+              "Me encanta usar esta aplicación es súper intuitiva, fácil de usar y ahorro un montón de tiempo en mis entrenamientos es una fantasía. Mi entrenadora puede gestionarme mis entrenamientos, cambiar ejercicios, mi dieta, consultar mi progreso de forma automática. Estoy encantadísima!",
+            publisher: {
+              "@type": "Organization",
+              name: "Trustpilot",
+              url: "https://es.trustpilot.com/review/totalgains.es",
+            },
           },
           {
             "@type": "Review",
-            author: { "@type": "Person", name: "Lorena Eses" },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            author: { "@type": "Person", name: "Macarena H" },
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
+            datePublished: "2026-05-12",
+            name: "Ha conseguido que adelgace",
             reviewBody:
-              "La tranquilidad de saber que está todo automatizado y la ganancia de tiempo al poder delegar en la app la agenda, las citas y las revisiones quincenales. Más de 10 horas semanales ahorradas.",
+              "Ha conseguido que adelgace progresivamente he pasado de 120kg a 100 en menos de 3 meses. Con una buena alimentación y esta aplicación maravillosa puedes conseguir unos resultados inmejorables.",
+            publisher: {
+              "@type": "Organization",
+              name: "Trustpilot",
+              url: "https://es.trustpilot.com/review/totalgains.es",
+            },
           },
           {
             "@type": "Review",
-            author: { "@type": "Person", name: "Germán" },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5" },
+            author: { "@type": "Person", name: "Ana García Carrero" },
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
+            datePublished: "2026-05-12",
+            name: "Esta aplicación me ha cambiado la vida",
             reviewBody:
-              "Versatilidad y rapidez. Poder cambiar un ejercicio desde el móvil dándole a dos botones, poder ver cómo van mis atletas con un vistazo.",
+              "Esta aplicación me ha cambiado la vida. He cogido hábitos increíbles que no tenía y una disciplina que me faltaba. Lo recomendaría a todo el mundo independientemente de su edad y situación personal.",
+            publisher: {
+              "@type": "Organization",
+              name: "Trustpilot",
+              url: "https://es.trustpilot.com/review/totalgains.es",
+            },
           },
         ],
         publisher: {
@@ -117,12 +153,24 @@ export default function Home() {
         "@type": "Organization",
         "@id": "https://totalgains.es/#organization",
         name: "TotalGains",
+        legalName: "Germán Martínez Calvente",
+        vatID: "77137460Z",
         url: "https://totalgains.es",
-        logo: "https://totalgains.es/logo-optimized.webp",
+        logo: { "@type": "ImageObject", url: "https://totalgains.es/logo-optimized.webp", width: 140, height: 140 },
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "C/Sur Nº9 1ª",
+          postalCode: "18140",
+          addressLocality: "La Zubia",
+          addressRegion: "Granada",
+          addressCountry: "ES",
+        },
         sameAs: [
           "https://www.instagram.com/totalgainsfitness/",
           "https://www.tiktok.com/@totalgainsapp",
           "https://www.youtube.com/channel/UCOJehcX1G6jABjONKmXCmbQ",
+          "https://es.trustpilot.com/review/totalgains.es",
+          "https://www.wikidata.org/wiki/Q139823576",
         ],
         contactPoint: {
           "@type": "ContactPoint",
@@ -135,8 +183,9 @@ export default function Home() {
       {
         "@type": "FAQPage",
         "@id": "https://totalgains.es/#faq",
-        mainEntity: faqData.map((faq) => ({
+        mainEntity: faqData.map((faq, i) => ({
           "@type": "Question",
+          "@id": `https://totalgains.es/#faq-${i + 1}`,
           name: faq.question,
           acceptedAnswer: {
             "@type": "Answer",
@@ -150,6 +199,16 @@ export default function Home() {
         "@id": "https://totalgains.es/#website",
         name: "TotalGains",
         url: "https://totalgains.es",
+        inLanguage: "es",
+        publisher: { "@id": "https://totalgains.es/#organization" },
+        potentialAction: {
+          "@type": "SearchAction",
+          target: {
+            "@type": "EntryPoint",
+            urlTemplate: "https://totalgains.es/blog/?q={search_term_string}",
+          },
+          "query-input": "required name=search_term_string",
+        },
       },
     ],
   };

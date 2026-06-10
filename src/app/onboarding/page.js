@@ -5,7 +5,7 @@ import OnboardingContent from "@/components/OnboardingContent";
    SEO Metadata para conversión de leads
    ────────────────────────────────────────────── */
 export const metadata = {
-  title: "Empieza Gratis 14 Días — Configura tu Entorno",
+  title: "Empieza Gratis 14 Días",
   description:
     "Crea tu cuenta de TotalGains en menos de 2 minutos. Sin tarjeta de crédito. Configura tu panel de control profesional para gestionar atletas, rutinas con IA y cobros.",
   alternates: {
@@ -18,7 +18,7 @@ export const metadata = {
     url: "https://totalgains.es/onboarding/",
   },
   robots: {
-    index: true,
+    index: false,
     follow: true,
   },
 };

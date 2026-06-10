@@ -1,0 +1,35 @@
+import "./index.css";
+import { Composition } from "remotion";
+import { MyComposition } from "./Composition";
+import { ReelTotalGains } from "./ReelTotalGains";
+
+export const RemotionRoot: React.FC = () => {
+  return (
+    <>
+      <Composition
+        id="MyComp"
+        component={MyComposition}
+        durationInFrames={60}
+        fps={30}
+        width={1280}
+        height={720}
+      />
+      <Composition
+        id="ReelTotalGains"
+        component={ReelTotalGains}
+        durationInFrames={480}
+        fps={30}
+        width={1080}
+        height={1920}
+        defaultProps={{
+          hook: "Tu gym pierde clientes cada día",
+          subtext: "Y no es por el precio",
+          cta: "totalgains.es · 14 días gratis",
+          clips: ["clip1.mp4"],
+          music: "phonk.mp3",
+          clipFrames: 240,
+        }}
+      />
+    </>
+  );
+};

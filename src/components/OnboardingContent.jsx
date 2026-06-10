@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import { trackEvent } from '@/components/Analytics';
 import '@/app/onboarding/Onboarding.css';
 
 export default function OnboardingContent() {
@@ -9,9 +10,12 @@ export default function OnboardingContent() {
     const router = useRouter();
 
     const handleNext = () => {
+        trackEvent('onboarding_step_complete', { step });
         if (step < 3) {
             setStep(step + 1);
         } else {
+            trackEvent('onboarding_complete', { step: 3 });
+            trackEvent('signup_redirect', { destination: 'app_login' });
             window.location.href = "https://totalgains.es/app/login";
         }
     };

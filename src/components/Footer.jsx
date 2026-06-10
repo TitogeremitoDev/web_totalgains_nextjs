@@ -2,6 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import { Heart } from 'lucide-react';
 import Link from 'next/link';
+import TrustpilotBadge from '@/components/TrustpilotBadge';
 import './Footer.css';
 
 const Footer = () => {
@@ -35,6 +36,9 @@ const Footer = () => {
                                     <path d="M23 9.71a8.5 8.5 0 00-.91-4.13 2.92 2.92 0 00-1.72-1A78.36 78.36 0 0012 4.27a78.45 78.45 0 00-8.34.3 2.87 2.87 0 00-1.46.74c-.9.83-1 2.25-1.1 3.45a48.29 48.29 0 000 6.48 9.55 9.55 0 00.3 2.12 2.93 2.93 0 001.74 1.52 78.36 78.36 0 008.34.3 78.45 78.45 0 008.34-.3 2.92 2.92 0 001.73-1 8.5 8.5 0 00.91-4.14 48.29 48.29 0 00-.01-4.03zM9.74 14.85V8.66l5.92 3.11z" />
                                 </svg>
                             </a>
+                        </div>
+                        <div style={{ marginTop: 20 }}>
+                            <TrustpilotBadge score={4.0} totalReviews={3} variant="compact" />
                         </div>
                     </div>
 
@@ -86,12 +90,15 @@ const Footer = () => {
                                 <li><Link href="/alternativas/ptminder/" prefetch={false}>vs PTminder</Link></li>
                                 <li><Link href="/alternativas/dudapp/" prefetch={false}>vs Dudapp</Link></li>
                                 <li><Link href="/alternativas/virtuagym/" prefetch={false}>vs Virtuagym</Link></li>
+                                <li><Link href="/alternativas/dudyfit/" prefetch={false}>vs Dudyfit</Link></li>
                             </ul>
                         </div>
 
                         <div className="footer-column">
                             <h4>Legal</h4>
                             <ul>
+                                <li><Link href="/sobre-nosotros/" prefetch={false}>Sobre nosotros</Link></li>
+                                <li><Link href="/aviso-legal/" prefetch={false}>Aviso legal</Link></li>
                                 <li><Link href="/privacy" prefetch={false}>Privacidad</Link></li>
                                 <li><Link href="/terms" prefetch={false}>Términos</Link></li>
                             </ul>

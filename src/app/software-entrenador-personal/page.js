@@ -1,10 +1,11 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import Link from "next/link";
 import { Users, LayoutDashboard, Bell, CreditCard, Palette, BarChart3 } from "lucide-react";
 
 export const metadata = {
-  title: "Software para Entrenadores Personales — Gestión Integral",
+  title: "Software para Entrenadores Personales 2026",
   description:
-    "El software para entrenadores personales que centraliza atletas, rutinas, dietas y seguimiento. Diseñado en España, en español. Prueba gratis 14 días sin tarjeta.",
+    "Software para entrenadores personales en español: rutinas con IA, dietas, app marca blanca y pagos Stripe. Desde 29,90 €/mes. Prueba gratis 14 días.",
   alternates: { canonical: "https://totalgains.es/software-entrenador-personal/" },
   openGraph: {
     title: "Software para Entrenadores Personales | TotalGains",
@@ -38,8 +39,36 @@ const faqs = [
 ];
 
 export default function SoftwareEntrenadorPersonal() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        name: "TotalGains",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, iOS, Android",
+        "@id": "https://totalgains.es/#software",
+        description: "Software de gestión integral para entrenadores personales: clientes, rutinas, dietas y pagos en una sola plataforma en español.",
+        image: "https://totalgains.es/og-image.jpg",
+        url: "https://totalgains.es/software-entrenador-personal/",
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        inLanguage: "es",
+        publisher: { "@id": "https://totalgains.es/#organization" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Inicio", item: "https://totalgains.es/" },
+          { "@type": "ListItem", position: 2, name: "Software para Entrenadores Personales", item: "https://totalgains.es/software-entrenador-personal/" },
+        ],
+      },
+    ],
+  };
   return (
-    <LandingPageTemplate
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <LandingPageTemplate
       badge="Software para entrenadores"
       h1="El Software para Entrenadores Personales que Centraliza Todo"
       subtitle="Gestiona atletas, rutinas, dietas y seguimiento desde una sola plataforma. Diseñada para entrenadores que quieren trabajar con más clientes sin más horas de administración."
@@ -49,5 +78,18 @@ export default function SoftwareEntrenadorPersonal() {
       ctaLocation="lp_software_entrenador"
       faqs={faqs}
     />
+    <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
+      <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+        {[
+          { href: "/ia-entrenador-personal/", label: "IA para entrenadores" },
+          { href: "/app-marca-blanca-entrenador-personal/", label: "App marca blanca" },
+          { href: "/gestion-clientes-fitness/", label: "Gestión de clientes" },
+        ].map(({ href, label }) => (
+          <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
+        ))}
+      </div>
+    </section>
+    </>
   );
 }

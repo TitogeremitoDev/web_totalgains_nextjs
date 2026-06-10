@@ -1,8 +1,9 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import Link from "next/link";
 import { Sparkles, Dumbbell, Apple, Clock, Shield, Zap } from "lucide-react";
 
 export const metadata = {
-  title: "IA para Entrenadores Personales — Rutinas y Dietas sin Alucinaciones",
+  title: "IA para Entrenadores: Rutinas y Dietas 2026",
   description:
     "Genera rutinas y dietas con inteligencia artificial usando tu propia biblioteca de ejercicios y alimentos. Sin inventar contenido, sin plantillas genéricas. Prueba gratis 14 días.",
   alternates: { canonical: "https://totalgains.es/ia-entrenador-personal/" },
@@ -75,8 +76,36 @@ const faqs = [
 ];
 
 export default function IAEntrenadorPersonal() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        name: "TotalGains",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, iOS, Android",
+        "@id": "https://totalgains.es/#software",
+        description: "Inteligencia artificial para entrenadores personales que genera rutinas y dietas usando tu propia base de datos, sin alucinaciones ni contenido inventado.",
+        image: "https://totalgains.es/og-image.jpg",
+        url: "https://totalgains.es/ia-entrenador-personal/",
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        inLanguage: "es",
+        publisher: { "@id": "https://totalgains.es/#organization" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Inicio", item: "https://totalgains.es/" },
+          { "@type": "ListItem", position: 2, name: "IA para Entrenadores Personales", item: "https://totalgains.es/ia-entrenador-personal/" },
+        ],
+      },
+    ],
+  };
   return (
-    <LandingPageTemplate
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <LandingPageTemplate
       badge="Inteligencia Artificial para Entrenadores"
       h1="IA que Genera Rutinas y Dietas con Tu Propia Base de Datos"
       subtitle="Sin inventar ejercicios. Sin alimentos ficticios. La inteligencia artificial de TotalGains trabaja exclusivamente con tu biblioteca de contenido — tu metodología, automatizada."
@@ -86,5 +115,18 @@ export default function IAEntrenadorPersonal() {
       ctaLocation="lp_ia_entrenador"
       faqs={faqs}
     />
+    <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
+      <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+        {[
+          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+          { href: "/base-datos-alimentos-fitness/", label: "Base de datos alimentos" },
+          { href: "/plataforma-entrenamiento-online/", label: "Plataforma de entrenamiento" },
+        ].map(({ href, label }) => (
+          <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
+        ))}
+      </div>
+    </section>
+    </>
   );
 }

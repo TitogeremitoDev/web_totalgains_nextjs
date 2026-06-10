@@ -158,5 +158,69 @@
     "status": "pending",
     "intent": "informacional",
     "notes": "TOP — Menciona TotalGains junto a otras herramientas de marketing"
+  },
+  {
+    "keyword": "mejores alternativas a Harbiz para entrenadores personales",
+    "slug": "alternativas-harbiz-entrenadores-personales",
+    "category": "herramientas",
+    "status": "pending",
+    "intent": "transaccional",
+    "notes": "ALTERNATIVAS 2026 — Intención de compra máxima, usuario ya paga Harbiz y quiere irse"
+  },
+  {
+    "keyword": "mejores alternativas a Trainerize en español",
+    "slug": "alternativas-trainerize-espanol",
+    "category": "herramientas",
+    "status": "pending",
+    "intent": "transaccional",
+    "notes": "ALTERNATIVAS 2026 — Alto volumen, mercado hispanohablante harto del inglés"
+  },
+  {
+    "keyword": "mejores alternativas a Dudyfit para entrenadores",
+    "slug": "alternativas-dudyfit-entrenadores",
+    "category": "herramientas",
+    "status": "pending",
+    "intent": "transaccional",
+    "notes": "ALTERNATIVAS 2026 — Keyword emergente muy buscada en España"
+  },
+  {
+    "keyword": "mejores alternativas a TrueCoach en 2026",
+    "slug": "alternativas-truecoach-2026",
+    "category": "herramientas",
+    "status": "pending",
+    "intent": "transaccional",
+    "notes": "ALTERNATIVAS 2026 — Usuarios anglosajones que buscan plataforma en español"
+  },
+  {
+    "keyword": "mejores alternativas a MyPT Hub para entrenadores",
+    "slug": "alternativas-mypthub-entrenadores",
+    "category": "herramientas",
+    "status": "pending",
+    "intent": "transaccional",
+    "notes": "ALTERNATIVAS 2026 — MyPT Hub muy usado en España, alta búsqueda de alternativas"
+  },
+  {
+    "keyword": "mejores alternativas a Virtuagym para entrenadores personales online",
+    "slug": "alternativas-virtuagym-entrenadores-personales",
+    "category": "herramientas",
+    "status": "pending",
+    "intent": "transaccional",
+    "notes": "ALTERNATIVAS 2026 — Virtuagym caro para PT solo, buscan algo más asequible"
+  },
+  {
+    "keyword": "mejores alternativas a PTminder en 2026",
+    "slug": "alternativas-ptminder-2026",
+    "category": "herramientas",
+    "status": "pending",
+    "intent": "transaccional",
+    "notes": "ALTERNATIVAS 2026 — PTminder perdiendo usuarios por interfaz anticuada"
+  },
+  {
+    "keyword": "mejores alternativas a Dudapp para entrenadores",
+    "slug": "alternativas-dudapp-entrenadores",
+    "category": "herramientas",
+    "status": "pending",
+    "intent": "transaccional",
+    "notes": "ALTERNATIVAS 2026 — Dudapp limitado para escalar, alta búsqueda de alternativas"
   }
 ]

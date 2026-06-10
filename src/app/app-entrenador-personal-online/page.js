@@ -1,8 +1,9 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import Link from "next/link";
 import { Smartphone, Apple, Globe, Bell, MessageSquare, TrendingUp } from "lucide-react";
 
 export const metadata = {
-  title: "App para Entrenador Personal Online — iOS, Android y Web",
+  title: "App Entrenador Personal Online 2026",
   description:
     "La app para entrenadores personales online disponible en iOS, Android y web. Tus clientes entrenan con tu propia app de marca blanca. Prueba gratis 14 días.",
   alternates: { canonical: "https://totalgains.es/app-entrenador-personal-online/" },
@@ -37,8 +38,36 @@ const faqs = [
 ];
 
 export default function AppEntrenadorPersonalOnline() {
+  const schema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        name: "TotalGains",
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web, iOS, Android",
+        "@id": "https://totalgains.es/#software",
+        description: "App para entrenadores personales online disponible en iOS, Android y web. Gestiona clientes, rutinas, nutrición y pagos desde cualquier dispositivo.",
+        image: "https://totalgains.es/og-image.jpg",
+        url: "https://totalgains.es/app-entrenador-personal-online/",
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        inLanguage: "es",
+        publisher: { "@id": "https://totalgains.es/#organization" },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Inicio", item: "https://totalgains.es/" },
+          { "@type": "ListItem", position: 2, name: "App para Entrenador Personal Online", item: "https://totalgains.es/app-entrenador-personal-online/" },
+        ],
+      },
+    ],
+  };
   return (
-    <LandingPageTemplate
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <LandingPageTemplate
       badge="App para entrenadores online"
       h1="La App para Entrenador Personal Online con tu Propia Marca"
       subtitle="iOS, Android y web en una sola plataforma. Tus clientes entrenan con una app que lleva tu nombre. Tú gestionas todo desde el panel web."
@@ -48,5 +77,18 @@ export default function AppEntrenadorPersonalOnline() {
       ctaLocation="lp_app_entrenador"
       faqs={faqs}
     />
+    <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
+      <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
+      <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+        {[
+          { href: "/app-marca-blanca-entrenador-personal/", label: "App marca blanca" },
+          { href: "/plataforma-entrenamiento-online/", label: "Plataforma de entrenamiento" },
+          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+        ].map(({ href, label }) => (
+          <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
+        ))}
+      </div>
+    </section>
+    </>
   );
 }
