@@ -17,9 +17,21 @@ import "./LandingPageTemplate.css";
  *   useCases     Array<string>  — lista de casos de uso específicos
  *   ctaText      string  — texto del botón principal
  *   ctaLocation  string  — para analytics
+ *   ctaHref      string  — destino del CTA principal (default "/onboarding")
+ *   ctaNote      string  — texto pequeño junto al CTA (default "14 días gratis · Sin tarjeta")
+ *   bottomCtaHeadline   string — H2 del bloque CTA inferior
+ *   bottomCtaSubtitle   string — párrafo del bloque CTA inferior
+ *   bottomCtaText       string — texto del botón del bloque CTA inferior
  *   faqs         Array<{ q: string, a: string }>
  */
-const LandingPageTemplate = ({ badge, h1, subtitle, features, useCases, ctaText, ctaLocation, faqs }) => (
+const LandingPageTemplate = ({
+    badge, h1, subtitle, features, useCases, ctaText, ctaLocation, faqs,
+    ctaHref = "/onboarding",
+    ctaNote = "14 días gratis · Sin tarjeta",
+    bottomCtaHeadline = "Empieza hoy. Sin tarjeta.",
+    bottomCtaSubtitle = "Únete a los entrenadores que ya escalaron su negocio con TotalGains.",
+    bottomCtaText = "Empieza gratis 14 días",
+}) => (
     <main className="lp-page">
         {/* ── Hero ── */}
         <section className="lp-hero">
@@ -37,13 +49,13 @@ const LandingPageTemplate = ({ badge, h1, subtitle, features, useCases, ctaText,
 
                     <div className="lp-cta-row">
                         <Link
-                            href="/onboarding"
+                            href={ctaHref}
                             className="btn btn-gold btn-lg"
                             onClick={() => trackEvent('cta_click', { cta_text: ctaText, cta_location: ctaLocation })}
                         >
                             <Rocket size={20} /> {ctaText}
                         </Link>
-                        <span className="lp-cta-note">14 días gratis · Sin tarjeta</span>
+                        <span className="lp-cta-note">{ctaNote}</span>
                     </div>
 
                     <div className="lp-stars">
@@ -112,14 +124,14 @@ const LandingPageTemplate = ({ badge, h1, subtitle, features, useCases, ctaText,
         {/* ── Bottom CTA ── */}
         <section className="lp-bottom-cta">
             <div className="container lp-bottom-cta-inner">
-                <h2>Empieza hoy. Sin tarjeta.</h2>
-                <p>Únete a los entrenadores que ya escalaron su negocio con TotalGains.</p>
+                <h2>{bottomCtaHeadline}</h2>
+                <p>{bottomCtaSubtitle}</p>
                 <Link
-                    href="/onboarding"
+                    href={ctaHref}
                     className="btn btn-gold btn-lg"
-                    onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis', cta_location: `${ctaLocation}_bottom` })}
+                    onClick={() => trackEvent('cta_click', { cta_text: bottomCtaText, cta_location: `${ctaLocation}_bottom` })}
                 >
-                    <Rocket size={20} /> Empieza gratis 14 días
+                    <Rocket size={20} /> {bottomCtaText}
                 </Link>
             </div>
         </section>

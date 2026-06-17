@@ -496,6 +496,7 @@ Las alternativas en español más consolidadas en 2026 son [TotalGains](/alterna
 - 🤖 **[IA para Entrenadores Personales: Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — Cómo aprovechar la IA en tu negocio fitness con ejemplos reales.
 - 📱 **[App de Marca Blanca para Entrenadores: Guía Completa 2026](/blog/app-marca-blanca-entrenadores-personales/)** — Cómo funciona la marca blanca, qué cuesta en cada plataforma y cuándo te conviene.
 - 🥗 **[Cómo Crear Planes Nutricionales para Clientes: Guía 2026](/blog/crear-planes-nutricionales-clientes-entrenador-personal/)** — Componentes de un plan nutricional profesional, cálculo de macros y workflow operativo del nutricionista online en 2026.
+- 🏋️ **[Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach](/blog/software-gimnasios-pequenos-boutique-2026/)** — Si tu modelo es gimnasio con 2-15 coaches en lugar de coach autónomo, esta guía cubre multi-coach con permisos granulares, reservas y panel supervisor.
 
 ---
 

@@ -473,6 +473,7 @@ Si detectas algún dato obsoleto o incorrecto, [escríbeme](/sobre-nosotros/) y 
 - 💶 **[Harbiz Precios 2026: La Tabla Real con IVA y Add-ons](/blog/harbiz-precios-2026/)** — Desglose Basic, Pro y My APP con los 3 add-ons que disparan el precio funcional
 - 📱 **[App de Marca Blanca para Entrenadores: Guía Completa 2026](/blog/app-marca-blanca-entrenadores-personales/)** — Cómo funciona, dos modelos técnicos, qué cuesta en cada plataforma y cuándo te conviene
 - 🥗 **[Cómo Crear Planes Nutricionales para Clientes: Guía 2026](/blog/crear-planes-nutricionales-clientes-entrenador-personal/)** — Componentes de un plan nutricional profesional, cálculo de macros, base de alimentos y workflow operativo del nutricionista online.
+- 🏋️ **[Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach](/blog/software-gimnasios-pequenos-boutique-2026/)** — Comparativa para gimnasios de 2-15 coaches: multi-coach, reservas, marca blanca del gym y panel supervisor.
 
 ---
 

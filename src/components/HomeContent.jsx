@@ -9,6 +9,7 @@ import AppShowcase from "@/components/AppShowcase";
 import HowItWorks from "@/components/HowItWorks";
 import Pricing from "@/components/Pricing";
 import AppDownload from "@/components/AppDownload";
+import ForGymsTeaser from "@/components/ForGymsTeaser";
 import LeadMagnet from "@/components/LeadMagnet";
 import dynamic from "next/dynamic";
 const RoiCalculator = dynamic(() => import("@/components/RoiCalculator"), {
@@ -41,6 +42,7 @@ export default function HomeContent() {
       <AppDownload />
       <ComparisonTable />
       <Pricing />
+      <ForGymsTeaser />
       <FAQ />
       <Contact />
       <StickyCTA />

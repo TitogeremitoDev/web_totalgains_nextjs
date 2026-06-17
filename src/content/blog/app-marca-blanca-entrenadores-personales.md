@@ -381,6 +381,7 @@ Estrictamente gratuitas en plataformas profesionales, prácticamente no. Algunas
 - 💵 **[Trainerize Precios 2026: Cuánto Cuesta Realmente con Todos los Add-ons](/blog/trainerize-precios-2026/)** — Coste real de la Custom Branded App de Trainerize en contexto del plan completo.
 - 💶 **[Harbiz Precios 2026: Guía Completa con IVA y Add-ons](/blog/harbiz-precios-2026/)** — Desglose del add-on "Personaliza tu app" y plan My APP de Harbiz.
 - 🤖 **[IA para Entrenadores Personales: Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — Cómo aprovechar la IA en tu negocio fitness con ejemplos reales.
+- 🏋️ **[Software para Gimnasios Pequeños y Boutique 2026](/blog/software-gimnasios-pequenos-boutique-2026/)** — Si tu modelo es gimnasio multi-coach en lugar de coach individual, cómo funciona la marca blanca DEL GIMNASIO (no de cada coach).
 
 ---
 

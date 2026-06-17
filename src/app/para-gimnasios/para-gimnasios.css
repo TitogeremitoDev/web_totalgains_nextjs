@@ -1,0 +1,351 @@
+/* ============================================================
+   TOTALGAINS · Para Gimnasios — refined design system
+   Scoped to .pg wrapper. Identity unchanged (palette, fonts).
+   What's elevated: aurora hero, microinteractions, smooth FAQ,
+   stat counters, parallax shot, accessible focus, motion respect.
+   ============================================================ */
+
+.pg {
+  /* ── Spacing tokens (4 · 8 · 16 · 24 · 40 · 64 · 96) ── */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 16px;
+  --sp-4: 24px;
+  --sp-5: 40px;
+  --sp-6: 64px;
+  --sp-7: 96px;
+  --section-y: clamp(64px, 9vw, 112px);
+
+  /* ── Fluid type scale ── */
+  --fs-eyebrow: 0.78rem;
+  --fs-xs: 0.8rem;
+  --fs-sm: 0.92rem;
+  --fs-body: 1.0625rem;
+  --fs-lead: clamp(1.05rem, 0.9rem + 0.7vw, 1.22rem);
+  --fs-h3: clamp(1.15rem, 1rem + 0.9vw, 1.5rem);
+  --fs-h2: clamp(1.7rem, 1.2rem + 2.4vw, 2.5rem);
+  --fs-hero: clamp(2.2rem, 1.4rem + 3.6vw, 3.4rem);
+
+  /* ── Type families ── */
+  --font-display: var(--font-space-grotesk, "Space Grotesk", "DM Sans", sans-serif);
+
+  /* ── Radius ── */
+  --radius-sm: 12px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+
+  /* ── Easing ── */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pg h1, .pg h2, .pg h3, .pg h4 {
+  font-family: var(--font-display);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+.pg p { text-wrap: pretty; }
+
+/* ============================================================
+   Scroll progress bar (top of page)
+   ============================================================ */
+.pg-scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: var(--primary-gradient);
+  z-index: 1001;
+  will-change: transform;
+}
+
+/* ============================================================
+   Animated gradient text (hue-pan)
+   ============================================================ */
+.pg .grad-text-anim {
+  background: linear-gradient(110deg, #667eea, #764ba2, #f093fb, #764ba2, #667eea);
+  background-size: 280% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: pg-hue-pan 9s linear infinite;
+}
+@keyframes pg-hue-pan {
+  to { background-position: 280% 0; }
+}
+
+/* ============================================================
+   Hero aurora — 3 drifting orbs
+   ============================================================ */
+.pg-aurora {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.pg-aurora span {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.5;
+  will-change: transform;
+}
+.pg-aurora .a1 {
+  width: 620px;
+  height: 620px;
+  top: -180px;
+  left: -120px;
+  background: radial-gradient(circle, rgba(102,126,234,0.5), transparent 65%);
+  animation: pg-drift1 22s ease-in-out infinite;
+}
+.pg-aurora .a2 {
+  width: 520px;
+  height: 520px;
+  bottom: -200px;
+  right: -80px;
+  background: radial-gradient(circle, rgba(250,112,154,0.32), transparent 65%);
+  animation: pg-drift2 26s ease-in-out infinite;
+}
+.pg-aurora .a3 {
+  width: 460px;
+  height: 460px;
+  top: 30%;
+  right: 22%;
+  background: radial-gradient(circle, rgba(79,172,254,0.26), transparent 65%);
+  animation: pg-drift3 30s ease-in-out infinite;
+}
+@keyframes pg-drift1 { 50% { transform: translate(80px, 60px) scale(1.1); } }
+@keyframes pg-drift2 { 50% { transform: translate(-70px, -50px) scale(1.08); } }
+@keyframes pg-drift3 { 50% { transform: translate(-50px, 70px) scale(0.92); } }
+
+/* ============================================================
+   Hero shot — floaty + sheen + parallax wrapper
+   ============================================================ */
+.pg-hero-shot {
+  position: relative;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  box-shadow:
+    0 30px 80px rgba(102, 126, 234, 0.28),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  animation: pg-floaty 7s ease-in-out infinite;
+  transition: transform 0.35s var(--ease-smooth);
+  will-change: transform;
+}
+@keyframes pg-floaty {
+  50% { transform: translateY(-12px); }
+}
+.pg-hero-shot::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: linear-gradient(120deg, transparent 40%, rgba(255,255,255,0.08) 50%, transparent 60%);
+  background-size: 220% 100%;
+  animation: pg-sheen 6s ease-in-out infinite;
+}
+@keyframes pg-sheen {
+  0%, 70%, 100% { background-position: 130% 0; }
+  35% { background-position: -30% 0; }
+}
+
+.pg-float-badge {
+  animation: pg-floaty 7s ease-in-out infinite 0.4s;
+  will-change: transform;
+}
+
+/* ============================================================
+   Card hover refinements (declarative CSS, no React)
+   Applied via .pg-card-hover class on feature/scenario/step cards
+   ============================================================ */
+.pg-card-hover {
+  transition:
+    transform 0.2s var(--ease-spring),
+    border-color 0.25s var(--ease-smooth),
+    box-shadow 0.25s var(--ease-smooth),
+    background 0.25s var(--ease-smooth);
+  will-change: transform;
+}
+.pg-card-hover:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(139, 157, 248, 0.32);
+  box-shadow:
+    0 18px 44px rgba(2, 6, 23, 0.55),
+    0 0 0 1px rgba(139, 157, 248, 0.06);
+}
+.pg-card-hover .pg-icon-badge {
+  transition: transform 0.3s var(--ease-spring);
+}
+.pg-card-hover:hover .pg-icon-badge {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+/* ============================================================
+   Tab buttons — refined hover state
+   ============================================================ */
+.pg-tab {
+  transition:
+    color 0.25s,
+    background 0.25s,
+    box-shadow 0.25s,
+    transform 0.2s var(--ease-spring),
+    border-color 0.25s;
+  will-change: transform;
+}
+.pg-tab:hover:not(.pg-tab-active) {
+  color: #fff !important;
+  transform: translateY(-1px);
+  border-color: rgba(139, 157, 248, 0.3) !important;
+}
+
+/* ============================================================
+   FAQ smooth accordion (grid-template-rows trick)
+   ============================================================ */
+.pg-faq {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: border-color 0.25s, background 0.25s;
+}
+.pg-faq.pg-faq-open {
+  border-color: rgba(139, 157, 248, 0.35);
+  background: rgba(102, 126, 234, 0.05);
+}
+.pg-faq-q {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  text-align: left;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--text-primary, #fff);
+  transition: color 0.2s;
+}
+.pg-faq-q:hover { color: #fff; }
+.pg-faq-q .pg-chev {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  color: var(--primary-light, #8b9df8);
+  transition: transform 0.3s var(--ease-out-expo);
+}
+.pg-faq.pg-faq-open .pg-faq-q .pg-chev {
+  transform: rotate(180deg);
+}
+.pg-faq-a {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s var(--ease-out-expo);
+}
+.pg-faq.pg-faq-open .pg-faq-a {
+  grid-template-rows: 1fr;
+}
+.pg-faq-a > div {
+  overflow: hidden;
+}
+.pg-faq-a p {
+  padding: 0 24px 20px;
+  color: var(--text-secondary, #b8b8d1);
+  line-height: 1.7;
+  font-size: 0.93rem;
+}
+
+/* ============================================================
+   CTA rocket floaty
+   ============================================================ */
+.pg-cta-rocket {
+  animation: pg-floaty 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ============================================================
+   Chip hover
+   ============================================================ */
+.pg-chip {
+  transition:
+    transform 0.2s var(--ease-spring),
+    color 0.2s,
+    border-color 0.2s,
+    background 0.2s;
+}
+.pg-chip:hover {
+  transform: translateY(-2px);
+  color: #fff !important;
+  border-color: rgba(139, 157, 248, 0.4) !important;
+  background: rgba(102, 126, 234, 0.1) !important;
+}
+
+/* ============================================================
+   Comparison table — row hover
+   ============================================================ */
+.pg-compare-table tbody tr {
+  transition: background 0.2s;
+}
+.pg-compare-table tbody tr:hover {
+  background: rgba(102, 126, 234, 0.06);
+}
+
+/* ============================================================
+   Buttons — sheen on hover (gold/gradient buttons inside .pg)
+   ============================================================ */
+.pg .btn,
+.pg .btn-gold,
+.pg .btn-secondary {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.25s var(--ease-spring),
+    box-shadow 0.25s var(--ease-smooth);
+}
+.pg .btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  left: -120%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
+  transition: left 0.6s var(--ease-smooth);
+  z-index: 1;
+  pointer-events: none;
+}
+.pg .btn:hover::before { left: 120%; }
+.pg .btn:active { transform: scale(0.97); }
+
+/* ============================================================
+   Reduced motion — honor prefers-reduced-motion
+   ============================================================ */
+@media (prefers-reduced-motion: reduce) {
+  .pg *,
+  .pg *::before,
+  .pg *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .pg-aurora span,
+  .pg-hero-shot,
+  .pg-float-badge,
+  .pg-cta-rocket {
+    animation: none !important;
+  }
+}
