@@ -4,7 +4,7 @@ import "./para-gimnasios.css";
 export const metadata = {
   title: "Software Gimnasios Pequeños 2026: Multi-Coach",
   description:
-    "Software para gimnasios pequeños y boutique: clases con reserva, multi-coach con permisos granulares, app marca blanca, cobros Stripe y IA. Desde 149 €/mes con IVA.",
+    "Software para gimnasios pequeños y boutique: clases con reserva, multi-coach, app marca blanca y cobros Stripe. Desde 149 €/mes con IVA.",
   keywords: [
     "software gimnasio pequeño",
     "app gestión gimnasio",

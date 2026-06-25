@@ -215,3 +215,4 @@ Los que superan 5.000€/mes combinan cuatro factores: precio medio-alto por cli
 - 🛠️ **[Los 5 Mejores Software para Entrenadores Personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)** — Comparativa completa con precios verificados
 - 🚀 **[Cómo Migrar de Trainerize, Harbiz o MyPT Hub a TotalGains: Guía 2026](/blog/como-migrar-software-entrenador-personal/)** — Proceso paso a paso para cambiar de software sin perder clientes ni datos
 - 🤖 **[IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — Guía real con capturas y ejemplos de cómo aprovechar la IA en tu negocio fitness
+- ☀️ **[Tu Primer Verano como Entrenador Personal: Por Qué Empezar con App Desde el Día 1 (Guía 2026)](/blog/primer-verano-entrenador-personal-2026/)** — Guía operativa para coaches juniors arrancando este verano: precios, captación y herramientas mínimas

@@ -4,7 +4,7 @@ import "@/app/alternativas/trainerize/Alternativas.css";
 export const metadata = {
   title: "Precios Harbiz 2026: Planes y Add-ons (con IVA)",
   description:
-    "Tablas verificadas de precios Harbiz Basic, Pro y My APP en 2026: mensual y anual, todos los tramos, todos los add-ons. Datos actualizados manualmente en mayo de 2026 con IVA 21% aplicado.",
+    "Tablas verificadas de precios Harbiz Basic, Pro y My APP en 2026: mensual y anual, todos los tramos y add-ons con IVA 21% aplicado.",
   keywords: [
     "Harbiz precios",
     "Harbiz precios 2026",

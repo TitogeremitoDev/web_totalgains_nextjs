@@ -474,6 +474,7 @@ Si detectas algún dato obsoleto o incorrecto, [escríbeme](/sobre-nosotros/) y 
 - 📱 **[App de Marca Blanca para Entrenadores: Guía Completa 2026](/blog/app-marca-blanca-entrenadores-personales/)** — Cómo funciona, dos modelos técnicos, qué cuesta en cada plataforma y cuándo te conviene
 - 🥗 **[Cómo Crear Planes Nutricionales para Clientes: Guía 2026](/blog/crear-planes-nutricionales-clientes-entrenador-personal/)** — Componentes de un plan nutricional profesional, cálculo de macros, base de alimentos y workflow operativo del nutricionista online.
 - 🏋️ **[Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach](/blog/software-gimnasios-pequenos-boutique-2026/)** — Comparativa para gimnasios de 2-15 coaches: multi-coach, reservas, marca blanca del gym y panel supervisor.
+- ☀️ **[Tu Primer Verano como Entrenador Personal: Por Qué Empezar con App Desde el Día 1 (Guía 2026)](/blog/primer-verano-entrenador-personal-2026/)** — Para coaches juniors que arrancan en verano: software mínimo viable, captación y plan de 5 días.
 
 ---
 

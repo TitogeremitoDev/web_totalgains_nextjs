@@ -2,8 +2,8 @@ import Link from "next/link";
 import TrustpilotBadge from "@/components/TrustpilotBadge";
 
 export const metadata = {
-  title: "Sobre Nosotros — TotalGains",
-  description: "TotalGains nació de la frustración de un entrenador personal con Excel y WhatsApp. Conoce la historia de Germán Martínez, fundador, y por qué construimos el software que nos hubiera gustado tener.",
+  title: "Sobre Nosotros",
+  description: "Construido por un entrenador, para entrenadores. La historia de Germán Martínez Calvente y por qué nació TotalGains. Software fitness en español.",
   alternates: { canonical: "https://totalgains.es/sobre-nosotros/" },
   openGraph: {
     title: "Sobre TotalGains — La historia detrás del software",
