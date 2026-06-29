@@ -119,6 +119,9 @@ export default function RootLayout({ children }) {
     <html lang="es" className="scroll-smooth">
       <head>
         <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+        {/* LLM-friendly markdown index & full documentation — discoverable by ChatGPT, Claude, Perplexity, Copilot */}
+        <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly index" />
+        <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLM-friendly full documentation" />
         <script
           type="text/javascript"
           src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
