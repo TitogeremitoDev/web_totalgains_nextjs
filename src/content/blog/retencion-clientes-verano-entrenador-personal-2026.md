@@ -274,6 +274,7 @@ Soy Germán Martínez Calvente, fundador de [TotalGains](/sobre-nosotros/). Cons
 - [¿Cuánto Cobra un Entrenador Personal Online?](/blog/cuanto-cobra-entrenador-personal-online/) — Por qué el coste de una baja silenciosa duplica el de una baja avisada.
 - [Top 7 Errores que Arruinan el Negocio](/blog/errores-entrenadores-personales-online/) — Errores operativos que disparan el churn.
 - [Cómo Conseguir Clientes Online](/blog/como-conseguir-clientes-entrenador-personal-online/) — Captar sirve poco si no retienes.
+- [Has Tocado Techo de Clientes: Escalar en 2026](/blog/techo-clientes-entrenador-personal-escalar-2026/) — Los 4 techos operativos entre 15-25 clientes; retención es el techo #4.
 
 ---
 

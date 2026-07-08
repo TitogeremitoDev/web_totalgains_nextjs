@@ -410,6 +410,7 @@ Cuatro a vigilar. 1) Subestimar el coste de tu tiempo: 8 sesiones presenciales p
 - ⚠️ **[Los 7 Errores que Arruinan el Negocio de los Entrenadores Personales Online](/blog/errores-entrenadores-personales-online/)** — Errores comunes que frenan el crecimiento del coach junior
 - 🤖 **[IA para Entrenadores Personales: Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — Cómo aprovechar la IA para ganar tiempo desde el primer cliente
 - 🌊 **[El Cliente Que Se Va Sin Avisar: Retención en Verano para Coaches Online (Guía 2026)](/blog/retencion-clientes-verano-entrenador-personal-2026/)** — Cuando ya tengas cartera consolidada, la otra cara del verano: cómo no perder lo que ya conseguiste captar
+- 🚪 **[Has Tocado Techo de Clientes y No es Por Falta de Horas](/blog/techo-clientes-entrenador-personal-escalar-2026/)** — Cuando cruces los 15-20 clientes activos, los 4 techos operativos que te bloquean y cómo romperlos
 
 ---
 

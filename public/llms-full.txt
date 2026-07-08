@@ -309,6 +309,12 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 - Fecha: 2026-06-27
 - Qué cubre: Protocolo de retención de verano para coaches online. Detección temprana del cliente que se va sin avisar, coste real de la baja silenciosa (1.440 € al año si la tarifa es 120 €/mes) y plan operativo de 30 días.
 
+#### Has Tocado Techo de Clientes y No es Por Falta de Horas: Por Qué Tu Negocio No Escala (y Cómo Romper el Límite en 2026)
+
+- URL: https://totalgains.es/blog/techo-clientes-entrenador-personal-escalar-2026/
+- Fecha: 2026-07-04
+- Qué cubre: Guía para coaches consolidados atascados entre 15 y 25 clientes activos, con la tesis operativa de que el techo no es de horas sino de sistema. Identifica los 4 techos operativos del entrenador personal online (diseñar cada rutina y dieta desde cero, perseguir datos en WhatsApp en lugar de recibirlos en un dashboard, cobrar por Bizum uno a uno cada mes, no ver las señales tempranas del cliente que se va) y cómo romperlos con IA usada con cabeza (rutinas en <2 min con biblioteca del coach, base nutricional de +240.000 alimentos, Stripe SEPA automatizado, sistema de retención asistida con IA). Incluye el módulo Coach Insights como palanca de "estudiar a los clientes de un solo vistazo" que resuelve la operativa cruzada del coach a partir de 20 clientes activos. Tarifa ancla: pasar de 20 a 30 clientes a 120 €/mes con IVA = +1.200 €/mes = +14.400 €/año, con ROI 13,35 € por cada 1 € invertido en el plan Pro (89,90 €/mes). Compara TotalGains Pro (89,90 €/mes con IVA, hasta 100 clientes activos, marca blanca incluida, IA generativa, Coach Insights, retención asistida) con el escenario de contratar un asistente (500-800 €/mes) antes de sistematizar, y desglosa 5 errores comunes que NO rompen el techo (contratar antes de sistematizar, trabajar los sábados, subir precios sin cambiar servicio, bajar precios porque "no capto", cambiar de nicho cada 3 meses). Plan de 30 días semana a semana: migración asistida → automatización de operativa → sistemas de retención → captación con el tiempo liberado. Cierra con 4 escenarios en los que NO deberías romper el techo (vida personal en 20 clientes, especialización alto rendimiento con techo por horas humanas, cambio de sector inminente, servicio 1:1 presencial obligatorio) por honestidad editorial.
+
 ### Categoría: Metodología
 
 #### Cómo Crear un Plan de Entrenamiento Personalizado que Realmente Funcione
@@ -455,4 +461,4 @@ Sí. Trustpilot: 4,0/5 sobre 3 reseñas verificadas a junio 2026. Casos de éxit
 
 ## Última actualización
 
-Fecha verificada: 2026-06-29. Este archivo se mantiene actualizado tras cada deploy de contenido editorial. Próxima revisión programada: tras la siguiente publicación en el blog o cambio de pricing.
+Fecha verificada: 2026-07-04. Este archivo se mantiene actualizado tras cada deploy de contenido editorial. Próxima revisión programada: tras la siguiente publicación en el blog o cambio de pricing.

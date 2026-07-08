@@ -97,7 +97,7 @@ const Contact = () => {
                                     <h3>Redes Sociales</h3>
                                     <div className="social-links">
                                         <a href="https://www.instagram.com/totalgainsfitness/" target="_blank" rel="noopener noreferrer" className="social-link instagram">Instagram</a>
-                                        <a href="https://www.tiktok.com/@totalgainsapp" target="_blank" rel="noopener noreferrer" className="social-link tiktok">TikTok</a>
+                                        <a href="https://www.tiktok.com/@totalgainsfitness" target="_blank" rel="noopener noreferrer" className="social-link tiktok">TikTok</a>
                                         <a href="https://www.youtube.com/channel/UCOJehcX1G6jABjONKmXCmbQ" target="_blank" rel="noopener noreferrer" className="social-link youtube">YouTube</a>
                                     </div>
                                 </div>

@@ -23,7 +23,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    site: "@totalgainsapp",
+    site: "@totalgainsfitness",
     title: "TotalGains — Software para Entrenadores Personales",
     description: "Gestión de atletas, IA para rutinas y dietas, facturación. Todo en una sola plataforma.",
     images: ["https://totalgains.es/og-image.jpg"],
@@ -167,7 +167,7 @@ export default function Home() {
         },
         sameAs: [
           "https://www.instagram.com/totalgainsfitness/",
-          "https://www.tiktok.com/@totalgainsapp",
+          "https://www.tiktok.com/@totalgainsfitness",
           "https://www.youtube.com/channel/UCOJehcX1G6jABjONKmXCmbQ",
           "https://es.trustpilot.com/review/totalgains.es",
           "https://www.wikidata.org/wiki/Q139823576",

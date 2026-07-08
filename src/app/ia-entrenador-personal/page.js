@@ -3,13 +3,13 @@ import Link from "next/link";
 import { Sparkles, Dumbbell, Apple, Clock, Shield, Zap } from "lucide-react";
 
 export const metadata = {
-  title: "IA para Entrenadores: Rutinas y Dietas 2026",
+  title: "IA para Entrenadores: Rutinas en <2 Min con +240.000 Alimentos",
   description:
-    "Genera rutinas y dietas con inteligencia artificial usando tu propia biblioteca de ejercicios y alimentos. Sin inventar contenido, sin plantillas genéricas. Prueba gratis 14 días.",
+    "Genera rutinas personalizadas en menos de 2 minutos y planes nutricionales con +240.000 alimentos en español. Tu propia biblioteca, cero contenido genérico.",
   alternates: { canonical: "https://totalgains.es/ia-entrenador-personal/" },
   openGraph: {
-    title: "IA para Entrenadores Personales | TotalGains",
-    description: "Inteligencia artificial que genera rutinas y dietas usando tu base de datos propia. Tu metodología, automatizada.",
+    title: "IA para Entrenadores: Rutinas en <2 Min con +240.000 Alimentos",
+    description: "Genera rutinas personalizadas en menos de 2 minutos y planes nutricionales con +240.000 alimentos en español. Tu biblioteca, cero contenido genérico.",
     url: "https://totalgains.es/ia-entrenador-personal/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },

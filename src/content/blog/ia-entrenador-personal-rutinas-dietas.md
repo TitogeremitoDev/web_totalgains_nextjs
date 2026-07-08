@@ -1,7 +1,7 @@
 ---
 title: "IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas Personalizadas en Minutos (Guía Real 2026)"
-seoTitle: "IA Entrenadores: Rutinas y Dietas en Minutos"
-description: "Cómo usar IA avanzada para crear rutinas, dietas y planes personalizados en minutos sin perder calidad. Guía real con ejemplos del fundador de TotalGains."
+seoTitle: "IA para Entrenadores: Rutinas en <2 Min por Cliente"
+description: "Genera rutinas en menos de 2 minutos y planes nutricionales con +240.000 alimentos en español. Caso real: pasar de 45 min a 2 min por cliente sin perder calidad."
 date: "2026-05-04"
 lastModified: "2026-05-04"
 author: "Germán Martínez Calvente"
@@ -340,6 +340,7 @@ Las funcionalidades descritas en este artículo corresponden a la versión de To
 - 🎯 **[Cómo Conseguir Clientes como Entrenador Personal Online](/blog/como-conseguir-clientes-entrenador-personal-online/)** — El método probado para pasar de 0 a 30 clientes
 - 💰 **[¿Cuánto Cobra un Entrenador Personal Online en 2026?](/blog/cuanto-cobra-entrenador-personal-online/)** — Tarifas reales del mercado español
 - 🥗 **[Cómo Crear Planes Nutricionales para Clientes: Guía Completa 2026](/blog/crear-planes-nutricionales-clientes-entrenador-personal/)** — Workflow paso a paso para diseñar planes nutricionales profesionales: macros, comidas, base de alimentos y seguimiento.
+- 🚪 **[Has Tocado Techo de Clientes: Escalar en 2026](/blog/techo-clientes-entrenador-personal-escalar-2026/)** — Cómo usar la IA con cabeza para romper el techo operativo del coach entre 15-25 clientes activos.
 
 ---
 

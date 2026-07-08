@@ -72,8 +72,8 @@ export const metadata = {
   // ── Twitter Cards ──
   twitter: {
     card: "summary_large_image",
-    site: "@totalgainsapp",
-    creator: "@totalgainsapp",
+    site: "@totalgainsfitness",
+    creator: "@totalgainsfitness",
     title: "TotalGains | Software para Entrenadores Personales",
     description:
       "Escala tu negocio fitness con IA. Rutinas, dietas, cobros y app marca blanca. Empieza gratis.",

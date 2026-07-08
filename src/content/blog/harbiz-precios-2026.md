@@ -1,7 +1,7 @@
 ---
-title: "Harbiz Precios 2026: Guía Completa con IVA y Add-ons"
-seoTitle: "Harbiz Precios 2026: Guía con IVA"
-description: "Guía editorial de precios Harbiz 2026: planes Basic, Pro y My APP mensual y anual con IVA aplicado, add-ons explicados y cuándo cada plan tiene sentido."
+title: "Harbiz Precios 2026: El Coste Real Sube a 313 €/mes con Add-ons y Marca Blanca"
+seoTitle: "Harbiz Precios 2026: Coste Real 313 €/mes"
+description: "Harbiz arranca en 22,99 €/mes pero con app marca blanca, IA y vídeos el precio real sube a 240-313 €/mes al escalar. Desglose con IVA y los 3 add-ons que lo disparan."
 date: "2026-05-23"
 lastModified: "2026-05-29"
 author: "Germán Martínez Calvente"

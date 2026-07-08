@@ -1,9 +1,9 @@
 import AlternativaHarbizContent from "@/components/AlternativaHarbizContent";
 
 export const metadata = {
-  title: "Alternativa a Harbiz 2026: Precios y Opiniones",
+  title: "Alternativa a Harbiz: TotalGains 89,90 € vs Harbiz 313 €/mes al Escalar",
   description:
-    "Comparativa TotalGains vs Harbiz con precios reales (verificados mayo 2026), opiniones de Capterra y migración asistida en español. TotalGains Pro 89,90€/mes con todo incluido frente a Harbiz Pro 100 + add-ons ≈ 313€/mes.",
+    "Harbiz sube a 313 €/mes con marca blanca, IA y vídeos al escalar. TotalGains Pro incluye todo por 89,90 €/mes con IVA. Migración asistida gratis en español.",
   keywords: [
     "alternativa a Harbiz",
     "Harbiz alternativa",
@@ -17,9 +17,9 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/harbiz/",
   },
   openGraph: {
-    title: "TotalGains vs Harbiz — ¿Cuál es mejor para entrenadores?",
+    title: "Alternativa a Harbiz: TotalGains 89,90 € vs Harbiz 313 €/mes al Escalar",
     description:
-      "Tabla comparativa: precios sin penalización, IA, marca blanca y más. Migra gratis.",
+      "Harbiz sube a 313 €/mes con marca blanca, IA y vídeos al escalar. TotalGains Pro incluye todo por 89,90 €/mes con IVA.",
     url: "https://totalgains.es/alternativas/harbiz/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },

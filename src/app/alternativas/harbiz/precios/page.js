@@ -2,9 +2,9 @@ import Link from "next/link";
 import "@/app/alternativas/trainerize/Alternativas.css";
 
 export const metadata = {
-  title: "Precios Harbiz 2026: Planes y Add-ons (con IVA)",
+  title: "Precios Harbiz 2026: Cuánto Cuesta de Verdad al Escalar (con IVA)",
   description:
-    "Tablas verificadas de precios Harbiz Basic, Pro y My APP en 2026: mensual y anual, todos los tramos y add-ons con IVA 21% aplicado.",
+    "Precios Harbiz 2026 con IVA: Basic 22,99 €/mes, Pro 143,99 €/mes, My APP 240,79 €/mes. Con marca blanca, IA y vídeos el precio real sube a 313 €/mes al escalar.",
   keywords: [
     "Harbiz precios",
     "Harbiz precios 2026",
@@ -17,9 +17,9 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/harbiz/precios/",
   },
   openGraph: {
-    title: "Precios Harbiz 2026: Todos los Planes y Add-ons (con IVA)",
+    title: "Precios Harbiz 2026: Cuánto Cuesta de Verdad al Escalar (con IVA)",
     description:
-      "Tablas completas de precios Harbiz verificadas en mayo de 2026. Plan Basic, Pro y My APP. Add-ons explicados.",
+      "Harbiz arranca en 22,99 €/mes pero con marca blanca, IA y vídeos sube a 313 €/mes al escalar. Tabla completa con IVA.",
     url: "https://totalgains.es/alternativas/harbiz/precios/",
     images: [{ url: "https://totalgains.es/og-image.jpg", width: 1200, height: 630, alt: "TotalGains" }],
   },

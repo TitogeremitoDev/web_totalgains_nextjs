@@ -38,7 +38,7 @@ export default function SobreNosotros() {
         },
         sameAs: [
           "https://www.instagram.com/totalgainsfitness/",
-          "https://www.tiktok.com/@totalgainsapp",
+          "https://www.tiktok.com/@totalgainsfitness",
           "https://www.youtube.com/channel/UCOJehcX1G6jABjONKmXCmbQ",
           "https://es.trustpilot.com/review/totalgains.es",
           "https://www.wikidata.org/wiki/Q139823576",
@@ -67,7 +67,7 @@ export default function SobreNosotros() {
         ],
         sameAs: [
           "https://www.instagram.com/totalgainsfitness/",
-          "https://www.tiktok.com/@totalgainsapp",
+          "https://www.tiktok.com/@totalgainsfitness",
           "https://www.youtube.com/channel/UCOJehcX1G6jABjONKmXCmbQ",
         ],
       },
