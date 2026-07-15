@@ -7,7 +7,7 @@ import OnboardingContent from "@/components/OnboardingContent";
 export const metadata = {
   title: "Empieza Gratis 14 Días",
   description:
-    "Crea tu cuenta de TotalGains en menos de 2 minutos. Sin tarjeta de crédito. Configura tu panel de control profesional para gestionar atletas, rutinas con IA y cobros.",
+    "Crea tu cuenta de TotalGains en menos de 2 minutos. Sin tarjeta. Panel profesional para gestionar atletas, rutinas con IA y seguimiento.",
   alternates: {
     canonical: "https://totalgains.es/onboarding/",
   },

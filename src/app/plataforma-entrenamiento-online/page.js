@@ -5,7 +5,7 @@ import { Globe, Video, LayoutDashboard, Zap, Users, TrendingUp } from "lucide-re
 export const metadata = {
   title: "Plataforma de Entrenamiento Online 2026",
   description:
-    "La plataforma de entrenamiento online todo-en-uno. Gestiona atletas, diseña rutinas, haz seguimiento y cobra desde cualquier lugar. Disponible en España y Latinoamérica.",
+    "Plataforma de entrenamiento online todo-en-uno: gestiona atletas, diseña rutinas con IA y haz seguimiento profesional. España y Latinoamérica.",
   alternates: { canonical: "https://totalgains.es/plataforma-entrenamiento-online/" },
   openGraph: {
     title: "Plataforma de Entrenamiento Online | TotalGains",
@@ -47,7 +47,7 @@ export default function PlataformaEntrenamientoOnline() {
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web, iOS, Android",
         "@id": "https://totalgains.es/#software",
-        description: "Plataforma de entrenamiento online para entrenadores personales con app cliente, creador de rutinas con IA y cobros automáticos.",
+        description: "Plataforma de entrenamiento online para entrenadores personales con app cliente, creador de rutinas con IA y seguimiento de adherencia.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/plataforma-entrenamiento-online/",
         offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },

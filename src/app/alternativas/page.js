@@ -3,7 +3,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Alternativas Software Entrenadores 2026",
   description:
-    "Compara TotalGains con Trainerize, Harbiz, MyPT Hub, TrueCoach, PTminder, Dudapp, Dudyfit y Virtuagym. El software para entrenadores personales más completo en español.",
+    "Compara TotalGains con Trainerize, Harbiz, MyPT Hub, TrueCoach, PTminder, Dudapp, Dudyfit y Virtuagym. Software para coaches en español.",
   alternates: { canonical: "https://totalgains.es/alternativas/" },
   openGraph: {
     title: "TotalGains vs Competencia — Comparativas para Entrenadores Personales",
@@ -20,7 +20,7 @@ const alternativas = [
   { slug: "mypthub", name: "MyPT Hub", desc: "Curva de aprendizaje alta. Sin IA propia ni app de marca blanca real." },
   { slug: "truecoach", name: "TrueCoach", desc: "Pensado para el mercado anglosajón. Base de alimentos en inglés." },
   { slug: "ptminder", name: "PTminder", desc: "Interfaz anticuada. Módulos separados que encarecen el precio final." },
-  { slug: "dudapp", name: "Dudapp", desc: "Herramienta básica sin IA, sin cobros automáticos y sin app de marca blanca." },
+  { slug: "dudapp", name: "Dudapp", desc: "Herramienta básica sin IA, sin sistema de retención y sin app de marca blanca." },
   { slug: "dudyfit", name: "Dudyfit", desc: "App genérica sin personalización de marca ni generación IA de contenido." },
   { slug: "virtuagym", name: "Virtuagym", desc: "Diseñado para gimnasios. Pagas por funciones que nunca usarás como entrenador personal." },
 ];

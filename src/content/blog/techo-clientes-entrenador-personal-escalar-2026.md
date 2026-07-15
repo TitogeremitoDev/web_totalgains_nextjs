@@ -24,8 +24,8 @@ comparison:
   reviewedProducts:
     - name: "TotalGains Pro"
       rating: 4.7
-      pros: "Plan pensado para el coach que rompe el techo (89,90 €/mes con IVA, hasta 100 clientes activos) con IA generativa de rutinas <2 min por cliente, IA nutricional con base de +240.000 alimentos, app marca blanca incluida, cobros recurrentes Stripe, panel Coach Insights para estudiar a tus clientes de un vistazo, sistema de retención asistida con IA y priorización de contactos en riesgo. 14 días gratis sin tarjeta. Sin permanencia."
-      cons: "El plan Pro requiere que el coach venga de una operativa profesionalizable: si sigues cobrando por Bizum y no quieres dejar de perseguir cobros manualmente, la app te sobra. La capa de retención asistida con IA es uno de los pilares activos del roadmap, lo que significa que sigue evolucionando por releases mensuales. Valoración del propio fundador, autodeclarada."
+      pros: "Plan pensado para el coach que rompe el techo (89,90 €/mes con IVA, hasta 100 clientes activos) con IA generativa de rutinas <2 min por cliente, IA nutricional con base de +240.000 alimentos, app marca blanca incluida, sistema de recordatorios automáticos de cobro con win-back al cliente, panel Coach Insights para estudiar a tus clientes de un vistazo, sistema de retención asistida con IA y priorización de contactos en riesgo. 14 días gratis sin tarjeta. Sin permanencia."
+      cons: "El plan Pro requiere que el coach venga de una operativa profesionalizable: si no quieres dejar de gestionar el seguimiento manual del cobro cliente a cliente, la app te sobra. La capa de retención asistida con IA es uno de los pilares activos del roadmap, lo que significa que sigue evolucionando por releases mensuales. Valoración del propio fundador, autodeclarada."
       lowPrice: 29.90
       highPrice: 149.90
       priceCurrency: "EUR"
@@ -38,7 +38,7 @@ faqs:
   - q: "¿Puedo escalar sin usar app profesional?"
     a: "Sí, pero el techo real está entre 15 y 25 clientes según lo bueno que seas gestionando manualmente y lo tolerante que sea tu vida personal a trabajar noches y fines de semana. Por encima de ese número la calidad del servicio cae de forma proporcional al volumen: revisiones más cortas, respuestas más lentas, planes menos personalizados, seguimiento reactivo en lugar de preventivo. He hablado con coaches que llegaron a 40 clientes con Excel y WhatsApp, y todos sin excepción reportaron que los últimos 15 los daban mal, se quemaron y volvieron a 25. La app no es magia: es apalancamiento. Te devuelve entre 6 y 10 horas semanales que puedes reinvertir en captación, formación o en tu vida personal. Escalar sin herramientas es posible en el sentido literal, pero el coste operativo real (tiempo perdido, calidad caída, churn silencioso) suele superar con creces los 30-90 €/mes de una plataforma profesional."
   - q: "¿Cuánto tarda romper el techo si migro a un sistema profesional?"
-    a: "Depende de dos variables: cuánto has crecido en manual (5, 20 o 40 clientes) y cuánto tiempo dedicas a la migración. En mi experiencia hablando con coaches, un rango realista es entre 4 y 8 semanas desde el día que activas la nueva plataforma hasta que tu operativa está estable, tu cartera ha aceptado el cambio y tú has liberado tiempo suficiente para captar más. La primera semana la usas para migrar datos y aprender la herramienta; la segunda, comunicar el cambio a tus clientes actuales y activar cobros automáticos; las semanas 3 a 6 son de adaptación (ajustar la IA a tu método, crear plantillas base, dejar rutinas de check-in); a partir de la semana 6-8 empiezas a notar el margen real de tiempo libre. Ese margen es lo que te permite pasar de 20 a 30 clientes: no captas más porque puedas, captas más porque tienes hueco real para atenderlos bien."
+    a: "Depende de dos variables: cuánto has crecido en manual (5, 20 o 40 clientes) y cuánto tiempo dedicas a la migración. En mi experiencia hablando con coaches, un rango realista es entre 4 y 8 semanas desde el día que activas la nueva plataforma hasta que tu operativa está estable, tu cartera ha aceptado el cambio y tú has liberado tiempo suficiente para captar más. La primera semana la usas para migrar datos y aprender la herramienta; la segunda, comunicar el cambio a tus clientes actuales y activar los recordatorios automáticos de cobro; las semanas 3 a 6 son de adaptación (ajustar la IA a tu método, crear plantillas base, dejar rutinas de check-in); a partir de la semana 6-8 empiezas a notar el margen real de tiempo libre. Ese margen es lo que te permite pasar de 20 a 30 clientes: no captas más porque puedas, captas más porque tienes hueco real para atenderlos bien."
   - q: "¿La IA sustituye la personalización del cliente?"
     a: "No, y quien te venda eso no ha entrenado a nadie de verdad. La IA sustituye la parte mecánica de la personalización (calcular macros, elegir ejercicios de tu biblioteca, ordenar el volumen por bloques, transcribir rutinas antiguas) que te lleva 30-45 minutos por cliente y que aporta poco valor real. Lo que NO sustituye es la parte humana: entender por qué tu cliente lleva 3 semanas sin dormir bien, decidir si toca subir volumen o dar semana de descarga, escuchar en la videollamada por qué está tirando la toalla. La IA bien usada libera esos 30-45 minutos por cliente para que se los dediques a lo que sí requiere tu criterio profesional. Mal usada, se convierte en generador de rutinas genéricas que el cliente descubre a la primera y se va. La regla que yo aplico: IA para el 80% mecánico, criterio humano para el 20% que decide el resultado."
   - q: "¿Cómo estudio a mis clientes de un solo vistazo?"
@@ -110,11 +110,11 @@ En WhatsApp tienes que preguntar activamente:
 
 Cada pregunta abre una conversación que ocupa contexto mental. Cada respuesta te llega desordenada, sin histórico visible y mezclada con memes que te manda tu primo por el mismo canal. Con 5 clientes lo aguantas; con 20, pierdes 4-6 horas semanales solo en **perseguir información que un sistema profesional te entrega automáticamente en un dashboard**.
 
-### Techo #3 — Cobras uno a uno cada mes
+### Techo #3 — Persigues cobros manualmente cada mes
 
-Bizum manual a fin de mes es el techo que menos coach reconoce y el que más quiebra escalabilidad. Perseguir cobros de 20 clientes te lleva entre 3 y 5 horas mensuales entre recordatorios, verificaciones, gestión de retrasos y respuestas a "se me olvidó, ¿me lo mandas otra vez?". Con Stripe SEPA automatizado, esas horas bajan a cero.
+Bizum manual a fin de mes es el techo que menos coach reconoce y el que más quiebra escalabilidad. Perseguir cobros de 20 clientes te lleva entre 3 y 5 horas mensuales entre recordatorios, verificaciones, gestión de retrasos y respuestas a "se me olvidó, ¿me lo mandas otra vez?". Con un sistema de recordatorios automáticos al cliente esas horas bajan drásticamente: **el sistema avisa por ti, tú dejas de perseguir**. El cobro efectivo sigue haciéndose por tu canal habitual (transferencia, Bizum, TPV), pero el "oye ¿me pagaste?" desaparece del día a día.
 
-Además el churn silencioso es más alto en cobro manual: el cliente que "se olvida" de pagar dos meses seguidos suele estar a punto de irse sin avisar. Sin sistema, no te enteras hasta que has perdido dos cuotas.
+Además el churn silencioso es más alto en cobro manual: el cliente que "se olvida" de pagar dos meses seguidos suele estar a punto de irse sin avisar. Sin sistema de recordatorios con win-back, no te enteras hasta que has perdido dos cuotas.
 
 ### Techo #4 — No sabes quién está a punto de irse
 
@@ -176,14 +176,14 @@ En vez de perseguir información:
 
 Tiempo semanal recuperado con 25 clientes: **4-6 horas**.
 
-### Romper Techo #3 — Stripe SEPA automatizado
+### Romper Techo #3 — Recordatorios automáticos con win-back al cliente
 
-- Configuras la suscripción del cliente al darlo de alta
-- Stripe cobra automáticamente en la fecha pactada
-- Si un cobro falla, el sistema reintenta y te avisa solo si requiere acción manual
-- Cero horas semanales dedicadas a perseguir Bizums
+- **Aviso automático al cliente en su app** cuando toca renovar/cobrar, sin que tú levantes un dedo
+- **Segunda vuelta con mensaje de reengagement** si no responde en 48h — recuperas al que "se olvida" sin sonar pesado
+- **Alerta al coach en el panel** si un cliente supera N días sin pagar → conversación proactiva antes de la baja
+- El **cobro efectivo lo mantienes por tu canal actual** (transferencia, Bizum, TPV o Stripe fuera de la app) — no cambias tu operativa, solo delegas el "chase"
 
-Bonus: churn silencioso baja de forma significativa porque el cliente que se olvida de pagar YA no puede olvidarse; el sistema le cobra.
+Bonus: churn silencioso baja de forma significativa porque el cliente que "se olvida" ya no depende de tu memoria; el sistema le pincha por ti, y si aun así no reacciona, tú te enteras en el panel el día 3, no el día 60.
 
 ### Romper Techo #4 — Sistema de retención asistida con IA
 
@@ -260,11 +260,11 @@ Plan operativo semana a semana:
 - Alta en TotalGains (14 días gratis sin tarjeta)
 - Migración de los 20 clientes actuales con soporte humano en español
 - Configura tu biblioteca de ejercicios y plantillas base
-- Conecta Stripe para cobros recurrentes automáticos
+- Configura los recordatorios automáticos de cobro con win-back al cliente
 
 ### Semana 2 — Automatización de operativa
 
-- Migra a suscripción recurrente a los 20 clientes actuales (comunicación clara, cero fricción)
+- Activa los recordatorios de cobro para los 20 clientes actuales (comunicación clara, cero fricción — sigues cobrando por tu canal habitual)
 - Configura la app marca blanca del plan Pro con tu logo y colores
 - Activa el sistema de check-ins automáticos semanales
 - Cierra los canales de WhatsApp para admin (mantén solo para urgencia real)
@@ -314,7 +314,7 @@ Sí, pero el techo real está entre 15 y 25 clientes según lo bueno que seas ge
 
 ### ¿Cuánto tarda romper el techo si migro a un sistema profesional?
 
-Depende de dos variables: cuánto has crecido en manual (5, 20 o 40 clientes) y cuánto tiempo dedicas a la migración. En mi experiencia hablando con coaches, un rango realista es entre 4 y 8 semanas desde el día que activas la nueva plataforma hasta que tu operativa está estable, tu cartera ha aceptado el cambio y tú has liberado tiempo suficiente para captar más. La primera semana la usas para migrar datos y aprender la herramienta; la segunda, comunicar el cambio a tus clientes actuales y activar cobros automáticos; las semanas 3 a 6 son de adaptación (ajustar la IA a tu método, crear plantillas base, dejar rutinas de check-in); a partir de la semana 6-8 empiezas a notar el margen real de tiempo libre. Ese margen es lo que te permite pasar de 20 a 30 clientes: no captas más porque puedas, captas más porque tienes hueco real para atenderlos bien.
+Depende de dos variables: cuánto has crecido en manual (5, 20 o 40 clientes) y cuánto tiempo dedicas a la migración. En mi experiencia hablando con coaches, un rango realista es entre 4 y 8 semanas desde el día que activas la nueva plataforma hasta que tu operativa está estable, tu cartera ha aceptado el cambio y tú has liberado tiempo suficiente para captar más. La primera semana la usas para migrar datos y aprender la herramienta; la segunda, comunicar el cambio a tus clientes actuales y activar los recordatorios automáticos de cobro; las semanas 3 a 6 son de adaptación (ajustar la IA a tu método, crear plantillas base, dejar rutinas de check-in); a partir de la semana 6-8 empiezas a notar el margen real de tiempo libre. Ese margen es lo que te permite pasar de 20 a 30 clientes: no captas más porque puedas, captas más porque tienes hueco real para atenderlos bien.
 
 ### ¿La IA sustituye la personalización del cliente?
 
@@ -355,7 +355,8 @@ Es la trampa clásica del coach que ha tocado techo y prefiere gastar 500-800 �
 - 💰 **[¿Cuánto Cobra un Entrenador Personal Online?](/blog/cuanto-cobra-entrenador-personal-online/)** — Cómo el precio real por cliente cambia la ecuación del techo
 - 🤖 **[IA para Entrenadores Personales: Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — La IA que rompe el techo #1 en detalle
 - ⚠️ **[Top 7 Errores que Arruinan el Negocio de los Entrenadores Personales](/blog/errores-entrenadores-personales-online/)** — Otros errores operativos que disparan el churn
+- ⚙️ **[Top 5 Cosas que Automatiza el Entrenador de +50 Clientes](/blog/top-5-automatizaciones-coach-50-clientes-2026/)** — Las 5 automatizaciones reales que sostienen la cartera cuando pasas el techo
 
 ---
 
-Si trabajas 12 horas al día en 22 clientes y llevas 6 meses igual, no es que trabajes poco: es que tu operativa no escala. Puedes seguir empujando con Excel + WhatsApp durante 12 meses más y llegarás al mismo punto; o puedes [probar TotalGains 14 días gratis sin tarjeta](/onboarding/) y ver en menos de una semana cuánto tiempo real recuperas cuando la IA genera tus rutinas, el dashboard te dice a quién priorizar y Stripe cobra sin que persigas nada. Los primeros 10 clientes extra pagan 130 veces el coste del plan Pro. La cuenta es matemática, no marketing. El techo no lo rompes trabajando más: lo rompes cambiando el sistema.
+Si trabajas 12 horas al día en 22 clientes y llevas 6 meses igual, no es que trabajes poco: es que tu operativa no escala. Puedes seguir empujando con Excel + WhatsApp durante 12 meses más y llegarás al mismo punto; o puedes [probar TotalGains 14 días gratis sin tarjeta](/onboarding/) y ver en menos de una semana cuánto tiempo real recuperas cuando la IA genera tus rutinas, el dashboard te dice a quién priorizar y los recordatorios de cobro llegan al cliente sin que tú persigas nada. Los primeros 10 clientes extra pagan 130 veces el coste del plan Pro. La cuenta es matemática, no marketing. El techo no lo rompes trabajando más: lo rompes cambiando el sistema.

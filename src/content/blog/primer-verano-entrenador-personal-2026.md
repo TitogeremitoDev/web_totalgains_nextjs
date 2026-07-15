@@ -200,7 +200,7 @@ Esta es la cuenta que la mayoría de coaches juniors no hace. Vamos a hacerla co
 - 5 conversaciones de "te voy a cambiar a una nueva app, descárgatela aquí" (uno o dos clientes pierden el flujo y dejan de entrenar regularmente)
 - 3-4 reuniones explicativas con clientes que no pillan la migración
 
-Mismo coach que arranca con app desde el día uno: los 5 clientes entran ya con la app, todos los planes están en sistema, comunicación centralizada, cobros automáticos. **Cero coste de migración**.
+Mismo coach que arranca con app desde el día uno: los 5 clientes entran ya con la app, todos los planes están en sistema, comunicación centralizada, recordatorios de renovación al cliente. **Cero coste de migración**.
 
 > Empezar con app desde el día uno no es un gasto. Es elegir hacer el trabajo de profesionalización una vez al inicio, en lugar de tener que hacerlo después con más clientes y más complejidad.
 
@@ -228,7 +228,7 @@ Comparativa honesta de las dos rutas para que decidas con criterio:
 | Función | App de gestión (TG Starter) | WhatsApp + Excel + Bizum |
 |---|---|---|
 | Comunicación centralizada por cliente | ✅ Hilo en app con historial | ⚠️ Hilos sueltos en WhatsApp |
-| Cobros recurrentes automáticos | ✅ Stripe SEPA o tarjeta | ❌ Manual cada mes |
+| Recordatorios de renovación con win-back | ✅ Automáticos al cliente | ❌ Perseguir por WhatsApp cada mes |
 | Seguimiento entrenos registrados | ✅ Automático | ❌ Tienes que preguntar |
 | App descargable por el cliente | ✅ iOS y Android | ❌ Solo WhatsApp |
 | Marca propia visible | ⚠️ En plan Pro (89,90 €) | ❌ Tu nombre en WhatsApp |

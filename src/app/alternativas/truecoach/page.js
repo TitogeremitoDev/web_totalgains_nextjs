@@ -3,7 +3,7 @@ import AlternativaCompetidoresContent from "@/components/AlternativaCompetidores
 export const metadata = {
   title: "Alternativa a TrueCoach en España",
   description:
-    "¿Buscas una alternativa a TrueCoach en español? TotalGains ofrece app marca blanca, +240.000 alimentos, soporte en español y precios sin sorpresas. Prueba gratis 14 días.",
+    "Alternativa a TrueCoach en español: TotalGains con app marca blanca, +240.000 alimentos y soporte nativo. Prueba gratis 14 días sin tarjeta.",
   alternates: {
     canonical: "https://totalgains.es/alternativas/truecoach/",
   },

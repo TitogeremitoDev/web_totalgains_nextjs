@@ -2,7 +2,7 @@ import Link from "next/link";
 import "@/app/alternativas/trainerize/Alternativas.css";
 
 export const metadata = {
-  title: "Precios Harbiz 2026: Cuánto Cuesta de Verdad al Escalar (con IVA)",
+  title: "Precios Harbiz 2026: Cuánto Cuesta de Verdad al Escalar",
   description:
     "Precios Harbiz 2026 con IVA: Basic 22,99 €/mes, Pro 143,99 €/mes, My APP 240,79 €/mes. Con marca blanca, IA y vídeos el precio real sube a 313 €/mes al escalar.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/harbiz/precios/",
   },
   openGraph: {
-    title: "Precios Harbiz 2026: Cuánto Cuesta de Verdad al Escalar (con IVA)",
+    title: "Precios Harbiz 2026: Cuánto Cuesta de Verdad al Escalar",
     description:
       "Harbiz arranca en 22,99 €/mes pero con marca blanca, IA y vídeos sube a 313 €/mes al escalar. Tabla completa con IVA.",
     url: "https://totalgains.es/alternativas/harbiz/precios/",

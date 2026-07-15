@@ -3,7 +3,7 @@ import AlternativaCompetidoresContent from "@/components/AlternativaCompetidores
 export const metadata = {
   title: "Alternativa a Virtuagym: TotalGains desde 29,90 €/mes (2026)",
   description:
-    "Virtuagym está diseñado para gimnasios y cobra por atleta. TotalGains es la alternativa para el entrenador personal online desde 29,90 €/mes con IVA. Migración en español.",
+    "Virtuagym está diseñado para gimnasios y cobra por atleta. TotalGains es la alternativa para el coach autónomo desde 29,90 €/mes con IVA. Migración en español.",
   alternates: {
     canonical: "https://totalgains.es/alternativas/virtuagym/",
   },

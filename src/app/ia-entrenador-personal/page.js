@@ -3,12 +3,12 @@ import Link from "next/link";
 import { Sparkles, Dumbbell, Apple, Clock, Shield, Zap } from "lucide-react";
 
 export const metadata = {
-  title: "IA para Entrenadores: Rutinas en <2 Min con +240.000 Alimentos",
+  title: "IA para Entrenadores: Rutinas en <2 Min por Cliente",
   description:
-    "Genera rutinas personalizadas en menos de 2 minutos y planes nutricionales con +240.000 alimentos en español. Tu propia biblioteca, cero contenido genérico.",
+    "Genera rutinas en menos de 2 minutos y planes nutricionales con +240.000 alimentos en español. Tu biblioteca, cero contenido genérico.",
   alternates: { canonical: "https://totalgains.es/ia-entrenador-personal/" },
   openGraph: {
-    title: "IA para Entrenadores: Rutinas en <2 Min con +240.000 Alimentos",
+    title: "IA para Entrenadores: Rutinas en <2 Min por Cliente",
     description: "Genera rutinas personalizadas en menos de 2 minutos y planes nutricionales con +240.000 alimentos en español. Tu biblioteca, cero contenido genérico.",
     url: "https://totalgains.es/ia-entrenador-personal/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],

@@ -5,7 +5,7 @@ import { Palette, Smartphone, Zap, Star, Shield, Users } from "lucide-react";
 export const metadata = {
   title: "App Marca Blanca para Entrenadores con IA",
   description:
-    "Ofrece a tus clientes una app de fitness con tu nombre, colores y logo. Branding generado por IA en un clic. Sin programar, sin costes extra. Prueba gratis 14 días.",
+    "Ofrece a tus clientes una app fitness con tu nombre, colores y logo. Branding generado por IA en un clic. Prueba gratis 14 días sin tarjeta.",
   alternates: { canonical: "https://totalgains.es/app-marca-blanca-entrenador-personal/" },
   openGraph: {
     title: "App Marca Blanca para Entrenadores Personales | TotalGains",

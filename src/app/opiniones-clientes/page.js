@@ -4,7 +4,7 @@ import Image from "next/image";
 export const metadata = {
   title: "Opiniones de Clientes TotalGains 2026",
   description:
-    "Opiniones verificadas de TotalGains: 3 reseñas Trustpilot (TrustScore 4,0/5) y casos de éxito reales de Nacho Pulido y Lorena Eses. Fuentes externas comprobables.",
+    "Opiniones verificadas TotalGains: 3 reseñas Trustpilot (4,0/5) y casos de éxito reales de Nacho Pulido y Lorena Eses. Fuentes comprobables.",
   keywords: [
     "TotalGains opiniones",
     "opiniones TotalGains",

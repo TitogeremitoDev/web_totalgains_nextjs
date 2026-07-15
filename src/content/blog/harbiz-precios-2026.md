@@ -1,7 +1,7 @@
 ---
 title: "Harbiz Precios 2026: El Coste Real Sube a 313 €/mes con Add-ons y Marca Blanca"
 seoTitle: "Harbiz Precios 2026: Coste Real 313 €/mes"
-description: "Harbiz arranca en 22,99 €/mes pero con app marca blanca, IA y vídeos el precio real sube a 240-313 €/mes al escalar. Desglose con IVA y los 3 add-ons que lo disparan."
+description: "Harbiz arranca en 22,99 €/mes pero con marca blanca, IA y vídeos el precio real sube a 240-313 €/mes al escalar. Con IVA y los 3 add-ons ocultos."
 date: "2026-05-23"
 lastModified: "2026-05-29"
 author: "Germán Martínez Calvente"

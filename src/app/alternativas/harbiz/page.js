@@ -1,7 +1,7 @@
 import AlternativaHarbizContent from "@/components/AlternativaHarbizContent";
 
 export const metadata = {
-  title: "Alternativa a Harbiz: TotalGains 89,90 € vs Harbiz 313 €/mes al Escalar",
+  title: "Alternativa Harbiz 2026: TotalGains 89,90 € vs Harbiz 313 €",
   description:
     "Harbiz sube a 313 €/mes con marca blanca, IA y vídeos al escalar. TotalGains Pro incluye todo por 89,90 €/mes con IVA. Migración asistida gratis en español.",
   keywords: [
@@ -17,7 +17,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/harbiz/",
   },
   openGraph: {
-    title: "Alternativa a Harbiz: TotalGains 89,90 € vs Harbiz 313 €/mes al Escalar",
+    title: "Alternativa Harbiz 2026: TotalGains 89,90 € vs Harbiz 313 €",
     description:
       "Harbiz sube a 313 €/mes con marca blanca, IA y vídeos al escalar. TotalGains Pro incluye todo por 89,90 €/mes con IVA.",
     url: "https://totalgains.es/alternativas/harbiz/",

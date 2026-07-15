@@ -35,8 +35,8 @@ export default function AlternativaDudapp() {
         "@type": "FAQPage",
         mainEntity: [
           { "@type": "Question", name: "¿TotalGains es una alternativa a Dudapp con IA integrada?", acceptedAnswer: { "@type": "Answer", text: "Sí. Genera rutinas y dietas con IA usando tu propia biblioteca de ejercicios y alimentos sin inventar contenido. Dudapp no tiene IA propia." } },
-          { "@type": "Question", name: "¿Puedo cobrar automáticamente a mis clientes con TotalGains, a diferencia de Dudapp?", acceptedAnswer: { "@type": "Answer", text: "Sí. Suscripciones recurrentes con Stripe, bloqueo por impago y registro de cobros. Sin perseguir pagos por WhatsApp." } },
-          { "@type": "Question", name: "¿Por qué TotalGains es mejor alternativa a Dudapp para escalar mi negocio?", acceptedAnswer: { "@type": "Answer", text: "Dudapp es una herramienta básica. TotalGains es SaaS B2B completo: gestión de clientes, IA, cobros automáticos, app de marca blanca y sistema anti-abandono." } },
+          { "@type": "Question", name: "¿TotalGains tiene recordatorios automáticos de cobro a diferencia de Dudapp?", acceptedAnswer: { "@type": "Answer", text: "Sí. El sistema avisa al cliente en su app cuando toca renovar, con segunda vuelta de win-back si no responde. El cobro efectivo sigue haciéndose por tu canal habitual (transferencia, Bizum, TPV). En Dudapp lo llevas manual." } },
+          { "@type": "Question", name: "¿Por qué TotalGains es mejor alternativa a Dudapp para escalar mi negocio?", acceptedAnswer: { "@type": "Answer", text: "Dudapp es una herramienta básica. TotalGains es SaaS B2B completo: gestión de clientes, IA, recordatorios automáticos al cliente, app de marca blanca y sistema anti-abandono." } },
           { "@type": "Question", name: "¿Mis clientes tendrán una app con mi marca en TotalGains?", acceptedAnswer: { "@type": "Answer", text: "Sí. App con tu nombre, logo y colores en iOS y Android. Con Dudapp, tus clientes usan la app de Dudapp, no la tuya." } },
         ],
       },

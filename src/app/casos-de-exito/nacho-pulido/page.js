@@ -5,7 +5,7 @@ import { Instagram, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
 export const metadata = {
   title: "Nacho Pulido: +25 clientes con TotalGains",
   description:
-    "Caso de éxito real: Nacho Pulido (@puli.trainer), entrenador de fuerza y resistencia, pasó de gestionar clientes con Excel y WhatsApp a ahorrar 8-10 horas semanales con TotalGains.",
+    "Caso de éxito: Nacho Pulido (@puli.trainer), coach de fuerza, pasó de Excel y WhatsApp a ahorrar 8-10 horas semanales con TotalGains.",
   alternates: {
     canonical: "https://totalgains.es/casos-de-exito/nacho-pulido/",
   },

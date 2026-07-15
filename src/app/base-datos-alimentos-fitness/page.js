@@ -5,7 +5,7 @@ import { Apple, Search, Zap, Globe, Shield, BarChart3 } from "lucide-react";
 export const metadata = {
   title: "+240.000 Alimentos para Entrenadores Personales",
   description:
-    "La base de datos de alimentos más completa para entrenadores personales: más de 240.000 alimentos validados en español. Crea dietas precisas con macros y calorías automáticos.",
+    "La base más completa para coaches: +240.000 alimentos validados en español. Dietas precisas con macros y calorías al instante.",
   alternates: { canonical: "https://totalgains.es/base-datos-alimentos-fitness/" },
   openGraph: {
     title: "+240.000 Alimentos para Entrenadores | TotalGains",

@@ -187,7 +187,7 @@ Trainerize estructura su oferta como **plan base + 5 módulos opcionales** que s
 - **Qué activa**: cobros automáticos, sistema de paquetes/bonos, gestión de clientes, packs de venta.
 - **Merece la pena si**: gestionas más de 5 clientes activos con cobros recurrentes; para la mayoría de coaches autónomos profesionales es un add-on muy utilizado.
 
-**Decisión de diseño en TotalGains**: TG incluye cobros automáticos, paquetes/bonos y gestión avanzada de clientes en el plan base (Starter desde 29,90 €/mes con IVA). Tomamos esa decisión porque al hablar con coaches autónomos en España, las funciones de gestión de negocio eran las primeras que pedían cuando profesionalizaban su práctica; tratarlas como módulo opcional añadía fricción a la decisión de contratación.
+**Decisión de diseño en TotalGains**: TG incluye recordatorios automáticos de renovación al cliente, paquetes/bonos y gestión avanzada de clientes en el plan base (Starter desde 29,90 €/mes con IVA). Tomamos esa decisión porque al hablar con coaches autónomos en España, las funciones de gestión de negocio eran las primeras que pedían cuando profesionalizaban su práctica; tratarlas como módulo opcional añadía fricción a la decisión de contratación.
 
 ### 2. Advanced Nutrition Coaching — planificación nutricional asistida
 

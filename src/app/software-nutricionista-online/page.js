@@ -5,7 +5,7 @@ import { Utensils, Calendar, Bell, FileText, BarChart3, Shield } from "lucide-re
 export const metadata = {
   title: "Software Nutricionista Online",
   description:
-    "Software para nutricionistas online: gestiona pacientes, crea planes de dieta con +240.000 alimentos, automatiza revisiones y agenda citas. Prueba gratis 14 días.",
+    "Software para nutricionistas online: gestiona pacientes, crea planes de dieta con +240.000 alimentos y agenda citas. Prueba gratis 14 días.",
   alternates: { canonical: "https://totalgains.es/software-nutricionista-online/" },
   openGraph: {
     title: "Software para Nutricionista Online | TotalGains",

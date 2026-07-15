@@ -7,7 +7,7 @@ import AlternativaCompetidoresContent from "@/components/AlternativaCompetidores
 export const metadata = {
   title: "Alternativa a Trainerize 2026 en Español",
   description:
-    "TotalGains vs Trainerize: 89,90€/mes con marca blanca incluida frente a Trainerize Pro 50 completo (≈250 €/mes con IVA, $272 USD) o Pro 100 (≈352 €/mes, $381 USD). Precios verificados mayo 2026. Soporte en español, migración asistida gratis.",
+    "TotalGains 89,90€/mes con marca blanca incluida vs Trainerize Pro 50 (≈250 €/mes con IVA) o Pro 100 (≈352 €/mes). Soporte y migración en español.",
   alternates: {
     canonical: "https://totalgains.es/alternativas/trainerize/",
   },
