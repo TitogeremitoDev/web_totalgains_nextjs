@@ -1,8 +1,8 @@
 import ResetPassword from "@/components/ResetPassword";
 
 export const metadata = {
-    title: "Restablecer Contraseña | TotalGains",
-    description: "Restablece tu contraseña de TotalGains de forma segura.",
+    title: "Restablecer Contraseña",
+    description: "Restablece tu contraseña de TotalGains de forma segura. Introduce tu correo y recibirás un enlace de recuperación en menos de un minuto.",
     alternates: {
         canonical: "https://totalgains.es/reset-password/",
     },

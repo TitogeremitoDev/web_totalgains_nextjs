@@ -1,15 +1,16 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import LandingExtrasBlock from "@/components/LandingExtrasBlock";
 import Link from "next/link";
 import { Users, FileText, CreditCard, Bell, BarChart3, Shield } from "lucide-react";
 
 export const metadata = {
   title: "Gestión de Clientes Fitness para Entrenadores",
   description:
-    "Gestiona hasta 100 clientes desde una sola plataforma: rutinas, dietas, cobros recurrentes. App marca blanca incluida desde 89,90 €/mes.",
+    "Gestiona hasta 100 clientes desde una sola plataforma: rutinas con IA, dietas y seguimiento estructurado. App marca blanca incluida desde 89,90 €/mes con IVA.",
   alternates: { canonical: "https://totalgains.es/gestion-clientes-fitness/" },
   openGraph: {
-    title: "Gestión de Clientes Fitness | TotalGains",
-    description: "Software de gestión de clientes para entrenadores personales y profesionales del fitness. Sin Excel, sin caos.",
+    title: "Gestión de Clientes Fitness para Entrenadores | TotalGains",
+    description: "Gestiona hasta 100 clientes desde una sola plataforma: rutinas con IA, dietas y seguimiento estructurado. App marca blanca incluida desde 89,90 €/mes con IVA.",
     url: "https://totalgains.es/gestion-clientes-fitness/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },
@@ -18,7 +19,7 @@ export const metadata = {
 const features = [
   { icon: <Users size={22} />, title: "Ficha completa de cada cliente", desc: "Historial de entrenamientos, medidas, fotos de progreso, objetivos y notas. Todo en un perfil estructurado." },
   { icon: <FileText size={22} />, title: "Rutinas y dietas asignadas", desc: "Asocia cada plan de entrenamiento y nutrición directamente al perfil del cliente. Sin confusiones, sin archivos perdidos." },
-  { icon: <CreditCard size={22} />, title: "Control de pagos por cliente", desc: "Registro de cobros, fechas de renovación y estado de cada cliente. Siempre sabes quién está al día." },
+  { icon: <CreditCard size={22} />, title: "Control de renovaciones por cliente", desc: "Registro de fechas de renovación y estado de cada cliente. Siempre sabes quién sigue activo y quién está a punto de vencer." },
   { icon: <Bell size={22} />, title: "Alertas de inactividad", desc: "El sistema detecta cuando un cliente lleva días sin entrenar y te avisa para que actúes antes de que abandone." },
   { icon: <BarChart3 size={22} />, title: "Progresión visual por cliente", desc: "Gráficas de evolución que puedes compartir con el cliente para motivarle y demostrar resultados." },
   { icon: <Shield size={22} />, title: "Datos seguros y cumple RGPD", desc: "Tus datos y los de tus clientes protegidos con encriptación de nivel bancario. Cumplimiento total con la normativa europea." },
@@ -32,9 +33,30 @@ const useCases = [
 ];
 
 const faqs = [
-  { q: "¿Cuántos clientes puedo gestionar?", a: "El plan Starter incluye hasta 15 clientes. Pro y Unlimited no tienen límite. Puedes empezar con el plan gratuito para hasta 3 clientes sin tarjeta." },
-  { q: "¿Puedo gestionar clientes tanto online como presenciales?", a: "Sí. TotalGains funciona igual para clientes online y presenciales. Tú decides cómo usas las funciones según tu modelo de negocio." },
-  { q: "¿Los clientes ven la información de otros clientes?", a: "No. Cada cliente solo accede a su perfil y su contenido. La privacidad entre clientes es total." },
+  { q: "¿Cuántos clientes puedo gestionar en TotalGains?", a: "El plan Starter incluye hasta 25 clientes activos (29,90 €/mes con IVA). El plan Pro sube hasta 100 clientes (89,90 €/mes con IVA) y añade app marca blanca. El plan Unlimited (149,90 €/mes con IVA) permite clientes ilimitados. Todos los planes incluyen IA generativa de rutinas y dietas, +240.000 alimentos en español y migración asistida gratuita." },
+  { q: "¿Puedo gestionar clientes tanto online como presenciales?", a: "Sí. TotalGains funciona igual para clientes online y presenciales. La ficha estructurada, el historial de entrenamientos, las medidas y las fotos de progreso son transversales al modelo. Tú decides cómo usas las funciones según tu operativa (asesoría 100% online, mixto con sesiones presenciales, o solo presencial con seguimiento digital)." },
+  { q: "¿Los clientes ven la información de otros clientes?", a: "No. Cada cliente solo accede a su propio perfil, su rutina asignada, su plan nutricional y su histórico. La privacidad entre clientes es total y el sistema cumple RGPD desde el diseño con encriptación en tránsito y en reposo, y borrado a demanda del interesado." },
+  { q: "¿Cuánto tiempo lleva migrar mis clientes desde Excel o WhatsApp?", a: "El tiempo típico de migración para carteras de 30-60 clientes es menos de 5 días con soporte humano en español. La IA de TotalGains transcribe rutinas y dietas antiguas en menos de 2 minutos por documento, ya vengas de Excel, PDF, Trainerize, Harbiz o MyPT Hub. El coach hace la comunicación al cliente con plantillas que preparamos; nosotros hacemos la importación estructurada." },
+  { q: "¿Qué diferencia a TotalGains de un CRM genérico o de una hoja de Excel?", a: "Un CRM genérico y Excel te dan campos vacíos que tú rellenas. TotalGains está construido específicamente para el flujo del coach: fichas con historial de entrenamientos y macros, sincronización con la app del cliente, alertas de inactividad automáticas, renovación con win-back, y biblioteca compartida de rutinas y ejercicios. La curva de aprendizaje es de horas, no de semanas, porque el software habla el idioma del coach en español." },
+  { q: "¿Y si un cliente se da de baja? ¿Se pierde su información?", a: "No. Puedes archivar al cliente y su historial completo queda guardado. Si vuelve más adelante, recuperas todo su contexto sin repetir onboarding. Los datos personales se pueden eliminar en cualquier momento a petición del interesado (RGPD), pero el histórico anonimizado permanece para tus estadísticas de negocio." },
+  { q: "¿Puedo probar TotalGains sin compromiso?", a: "Sí. 14 días de prueba gratuita sin tarjeta de crédito. Configuras tu cuenta, migras a 3-5 clientes de muestra, generas rutinas con IA y decides si el flujo te encaja. Sin permanencia ni cláusulas de mínima duración; puedes cancelar desde el panel en cualquier momento." },
+];
+
+const pricingPlans = [
+  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["IA generativa incluida", "+240.000 alimentos", "Migración asistida"] },
+  { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 clientes activos", extras: ["Todo lo del Starter", "App marca blanca incluida", "Coach Insights + retención IA"], highlight: true },
+  { name: "Unlimited", price: "149,90 €/mes", incl: "Clientes ilimitados", extras: ["Todo lo del Pro", "Multi-coach", "Prioridad soporte"] },
+];
+
+const testimonials = [
+  { name: "Nacho Pulido", handle: "@puli.trainer", role: "Entrenador de Fuerza & Resistencia", quote: "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.", result: "15 → 40+ clientes, 8-10h/sem ahorradas", href: "/casos-de-exito/nacho-pulido/" },
+  { name: "Lorena Eses", handle: "@lorena.eses", role: "Nutricionista Online", quote: "He automatizado revisiones, citas y seguimiento. Ahora ofrezco un servicio más profesional a mis pacientes y ahorro más de 10 horas semanales de gestión.", result: "10+ h/sem ahorradas, 28K seguidores", href: "/casos-de-exito/lorena-eses/" },
+];
+
+const competencia = [
+  { tool: "TotalGains Pro", precio: "89,90 €/mes", ia: true, marca: true, esp: true },
+  { tool: "Trainerize Pro 100", precio: "≈352 €/mes", ia: false, marca: false, esp: false },
+  { tool: "Harbiz Pro 100 + add-ons", precio: "≈313 €/mes", ia: false, marca: false, esp: true },
 ];
 
 export default function GestionClientesFitness() {
@@ -50,8 +72,7 @@ export default function GestionClientesFitness() {
         description: "Gestión de clientes fitness profesional: historial, seguimiento, comunicación y facturación centralizados para entrenadores personales.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/gestion-clientes-fitness/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
-        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos con IA generativa incluida" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos con app marca blanca incluida" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados" }] },
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },
@@ -70,13 +91,14 @@ export default function GestionClientesFitness() {
       <LandingPageTemplate
       badge="Gestión de clientes"
       h1="Gestión de Clientes Fitness Sin Excel, Sin Caos"
-      subtitle="Centraliza el historial, los pagos, las rutinas y el progreso de cada cliente en un perfil estructurado. Dedica menos tiempo a buscar información y más a entrenar."
+      subtitle="Centraliza el historial, el seguimiento, las rutinas y el progreso de cada cliente en un perfil estructurado. Dedica menos tiempo a buscar información y más a entrenar. Desde 29,90 €/mes con IVA."
       features={features}
       useCases={useCases}
       ctaText="Gestiona tus clientes gratis"
       ctaLocation="lp_gestion_clientes"
       faqs={faqs}
     />
+    <LandingExtrasBlock plans={pricingPlans} testimonials={testimonials} competencia={competencia} pageContext="Gestión de clientes fitness" />
     <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
       <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>

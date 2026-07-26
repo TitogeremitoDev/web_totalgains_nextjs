@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Instagram, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
 
 export const metadata = {
-  title: "Nacho Pulido: +25 clientes con TotalGains",
+  title: "Nacho Pulido: +25 clientes activos con nuestro software",
   description:
     "Caso de éxito: Nacho Pulido (@puli.trainer), coach de fuerza, pasó de Excel y WhatsApp a ahorrar 8-10 horas semanales con TotalGains.",
   alternates: {
@@ -21,7 +21,7 @@ export const metadata = {
 const qa = [
   {
     q: "¿Cómo gestionabas antes tus asesorías?",
-    a: "Antes usaba Excel, WhatsApp y mails por todos lados. Lo más pesado era perseguir pagos, recordar seguimientos y tener toda la info desordenada. Cada cliente era un hilo de mensajes diferente, y cuando tenías 15 activos la cabeza ya no podía con todo.",
+    a: "Antes usaba Excel, WhatsApp y mails por todos lados. Lo más pesado era perseguir a clientes para el seguimiento, recordar revisiones y tener toda la info desordenada. Cada cliente era un hilo de mensajes diferente, y cuando tenías 15 activos la cabeza ya no podía con todo.",
   },
   {
     q: "¿Cuántos clientes tenías antes de TotalGains y cuántos tienes ahora?",
@@ -29,7 +29,7 @@ const qa = [
   },
   {
     q: "¿Qué fue lo primero que notaste al empezar a usarlo?",
-    a: "La centralización. De repente todos los clientes estaban en un solo sitio con su historial completo: entrenamientos, pagos, mensajes y progreso. No tuve que buscar nada más. Eso solo ya cambió mi forma de trabajar.",
+    a: "La centralización. De repente todos los clientes estaban en un solo sitio con su historial completo: entrenamientos, seguimiento, mensajes y progreso. No tuve que buscar nada más. Eso solo ya cambió mi forma de trabajar.",
   },
   {
     q: "¿Cómo usas la IA para crear rutinas?",
@@ -37,11 +37,11 @@ const qa = [
   },
   {
     q: "¿Qué es lo que más te ha cambiado?",
-    a: "Tener todo centralizado: clientes, entrenamientos, pagos y comunicación en un solo sitio. Ahora todo fluye muchísimo mejor y me siento más profesional. Antes perdía clientes por falta de seguimiento. Ahora el sistema me avisa cuando alguien lleva días sin registrar entrenamientos.",
+    a: "Tener todo centralizado: clientes, entrenamientos, seguimiento y comunicación en un solo sitio. Ahora todo fluye muchísimo mejor y me siento más profesional. Antes perdía clientes por falta de seguimiento. Ahora el sistema me avisa cuando alguien lleva días sin registrar entrenamientos.",
   },
   {
-    q: "¿Cómo llevas los cobros ahora?",
-    a: "Automáticamente. Antes era un dolor de cabeza: facturas manuales, recordatorios por WhatsApp, clientes que 'se olvidaban'. Ahora la suscripción se cobra sola, y si hay un impago el acceso se bloquea automáticamente. He recuperado tiempo y dinero que antes simplemente perdía.",
+    q: "¿Cómo llevas el seguimiento de renovaciones ahora?",
+    a: "Antes era un dolor de cabeza: recordatorios por WhatsApp, clientes que 'se olvidaban', persecución manual mes tras mes. Ahora el sistema avisa al cliente en su app cuando toca renovar y me alerta a mí si alguien lleva días sin responder. El cobro efectivo sigo llevándolo por mi canal habitual, pero he dejado de perseguir a nadie.",
   },
   {
     q: "¿Cuánto tiempo ahorras a la semana?",
@@ -80,7 +80,7 @@ export default function CasoNachoPulido() {
           worstRating: "1",
         },
         reviewBody:
-          "Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.",
+          "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.",
         datePublished: "2025-03-01",
         publisher: { "@type": "Organization", name: "TotalGains", url: "https://totalgains.es/" },
       },
@@ -144,7 +144,7 @@ export default function CasoNachoPulido() {
 
         {/* Quote */}
         <blockquote style={{ borderLeft: "3px solid var(--primary)", paddingLeft: 20, margin: "0 0 48px", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--text-secondary)", fontStyle: "italic" }}>
-          "Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahora todo fluye muchísimo mejor y me siento más profesional."
+          "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahora todo fluye muchísimo mejor y me siento más profesional."
         </blockquote>
 
         {/* Q&A */}
@@ -161,7 +161,7 @@ export default function CasoNachoPulido() {
         {/* Screenshots — vista del entorno de Nacho */}
         <h2 style={{ fontSize: "1.3rem", fontWeight: 700, marginBottom: 16 }}>Cómo gestiona Nacho sus 40 clientes con TotalGains</h2>
         <p style={{ color: "var(--text-secondary)", lineHeight: 1.7, marginBottom: 24 }}>
-          Tras migrar desde su sistema anterior en un día, Nacho centraliza rutinas, nutrición, cobros recurrentes y comunicación en la misma plataforma. Estas son las pantallas que utiliza con más frecuencia:
+          Tras migrar desde su sistema anterior en un día, Nacho centraliza rutinas, nutrición, seguimiento de adherencia y comunicación en la misma plataforma. Estas son las pantallas que utiliza con más frecuencia:
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 24, marginBottom: 40, justifyItems: "center" }}>
           <figure style={{ margin: 0, maxWidth: 280, width: "100%" }}>
@@ -193,7 +193,7 @@ export default function CasoNachoPulido() {
         {/* CTA */}
         <div style={{ textAlign: "center", padding: "40px 24px", background: "rgba(255,255,255,0.03)", borderRadius: 20, border: "1px solid rgba(255,255,255,0.06)" }}>
           <p style={{ fontSize: "1.1rem", fontWeight: 600, marginBottom: 20 }}>¿Quieres resultados como los de Nacho?</p>
-          <Link href="/onboarding" className="btn btn-gold btn-lg" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+          <Link href="/onboarding/" className="btn btn-gold btn-lg" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
             <Rocket size={20} /> Empieza gratis 14 días
           </Link>
           <p style={{ color: "var(--text-muted)", fontSize: "0.8rem", marginTop: 12 }}>Sin tarjeta · Sin compromiso</p>

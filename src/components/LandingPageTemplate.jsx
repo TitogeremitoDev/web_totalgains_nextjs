@@ -17,7 +17,7 @@ import "./LandingPageTemplate.css";
  *   useCases     Array<string>  — lista de casos de uso específicos
  *   ctaText      string  — texto del botón principal
  *   ctaLocation  string  — para analytics
- *   ctaHref      string  — destino del CTA principal (default "/onboarding")
+ *   ctaHref      string  — destino del CTA principal (default "/onboarding/")
  *   ctaNote      string  — texto pequeño junto al CTA (default "14 días gratis · Sin tarjeta")
  *   bottomCtaHeadline   string — H2 del bloque CTA inferior
  *   bottomCtaSubtitle   string — párrafo del bloque CTA inferior
@@ -26,7 +26,7 @@ import "./LandingPageTemplate.css";
  */
 const LandingPageTemplate = ({
     badge, h1, subtitle, features, useCases, ctaText, ctaLocation, faqs,
-    ctaHref = "/onboarding",
+    ctaHref = "/onboarding/",
     ctaNote = "14 días gratis · Sin tarjeta",
     bottomCtaHeadline = "Empieza hoy. Sin tarjeta.",
     bottomCtaSubtitle = "Únete a los entrenadores que ya escalaron su negocio con TotalGains.",

@@ -85,7 +85,7 @@ const Navbar = () => {
                     <Link href="https://totalgains.es/app/login" className="btn btn-outline" prefetch={false}>
                         Ya estoy<br />registrado
                     </Link>
-                    <Link href="/onboarding" className="btn btn-primary" prefetch={false}
+                    <Link href="/onboarding/" className="btn btn-primary" prefetch={false}
                         onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis 14 Días', cta_location: 'navbar' })}
                     >
                         Empieza gratis<br />14 Días
@@ -133,7 +133,7 @@ const Navbar = () => {
                         Ya estoy registrado
                     </Link>
                     <Link
-                        href="/onboarding"
+                        href="/onboarding/"
                         className="btn btn-primary"
                         onClick={() => { setMenuOpen(false); trackEvent('cta_click', { cta_text: 'Empieza gratis 14 Días', cta_location: 'navbar_mobile' }); }}
                         prefetch={false}

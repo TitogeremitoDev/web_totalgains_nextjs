@@ -24,7 +24,7 @@ const StickyCTA = () => {
     return (
         <div className={`sticky-cta ${visible ? 'sticky-cta--visible' : ''}`} aria-hidden={!visible}>
             <a
-                href="/onboarding"
+                href="/onboarding/"
                 className="sticky-cta-btn"
                 tabIndex={visible ? 0 : -1}
                 onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis', cta_location: 'sticky_mobile' })}

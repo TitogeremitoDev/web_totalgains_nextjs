@@ -410,7 +410,7 @@ export default function HarbizPreciosPage() {
               <Link href="/alternativas/harbiz/" className="btn btn-secondary" prefetch={false}>
                 Ver comparativa completa TotalGains vs Harbiz →
               </Link>{" "}
-              <Link href="/onboarding" className="btn btn-primary" prefetch={false}>
+              <Link href="/onboarding/" className="btn btn-primary" prefetch={false}>
                 Probar TotalGains gratis 14 días 🚀
               </Link>
             </p>

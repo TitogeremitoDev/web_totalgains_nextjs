@@ -356,6 +356,7 @@ Es la trampa clásica del coach que ha tocado techo y prefiere gastar 500-800 �
 - 🤖 **[IA para Entrenadores Personales: Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — La IA que rompe el techo #1 en detalle
 - ⚠️ **[Top 7 Errores que Arruinan el Negocio de los Entrenadores Personales](/blog/errores-entrenadores-personales-online/)** — Otros errores operativos que disparan el churn
 - ⚙️ **[Top 5 Cosas que Automatiza el Entrenador de +50 Clientes](/blog/top-5-automatizaciones-coach-50-clientes-2026/)** — Las 5 automatizaciones reales que sostienen la cartera cuando pasas el techo
+- 💵 **[El Precio Real de Tu Tarifa: Calculadora €/hora Real 2026](/blog/precio-real-tarifa-coach-online-2026/)** — Calcula si tu tarifa efectiva por hora te compensa las horas totales que echas
 
 ---
 

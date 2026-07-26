@@ -59,11 +59,11 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
         dudapp: {
             name: "Dudapp",
             h1: "Mejor Alternativa a Dudapp para Entrenadores Personales",
-            painPoint: "Si necesitas un software más completo con IA integrada, app marca blanca y pagos recurrentes automatizados.",
+            painPoint: "Si necesitas un software más completo con IA integrada, app marca blanca y sistema de retención asistida.",
             features: [
                 { feature: "IA integrada", tg: "Rutinas y dietas generadas con IA", bg: "IA no promocionada en su oferta pública" },
                 { feature: "Base de alimentos", tg: "Base personalizable con +240.000 alimentos", bg: "Base estándar" },
-                { feature: "Pagos recurrentes Stripe", tg: "Integración nativa, sin comisiones extra", bg: "Gestión de pagos básica" },
+                { feature: "Recordatorios de renovación", tg: "Avisos automáticos al cliente + win-back", bg: "Seguimiento básico" },
                 { feature: "App marca blanca", tg: "App con tu logo y colores (plan Pro)", bg: "App con branding del proveedor" },
                 { feature: "Módulo resistencia/cardio", tg: "Integrado con fuerza — carrera, bici, natación", bg: "Enfoque principal en fuerza" },
                 { feature: "Migración asistida", tg: "Incluida por soporte humano en español", bg: "Onboarding disponible" }
@@ -98,11 +98,11 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
         dudyfit: {
             name: "Dudyfit",
             h1: "Mejor Alternativa a Dudyfit para Entrenadores Personales",
-            painPoint: "Si buscas IA avanzada integrada, cobros automáticos con Stripe y app marca blanca con tu propia identidad.",
+            painPoint: "Si buscas IA avanzada integrada, +240.000 alimentos en español y app marca blanca con tu propia identidad.",
             features: [
                 { feature: "IA integrada", tg: "Rutinas y dietas generadas con IA avanzada", bg: "IA no promocionada en su oferta pública" },
                 { feature: "App marca blanca", tg: "App con tu logo y colores en iOS y Android (plan Pro)", bg: "Opciones de personalización variables" },
-                { feature: "Cobros automáticos", tg: "Suscripciones Stripe + bloqueo automático por impago", bg: "Gestión de cobros básica" },
+                { feature: "Recordatorios de renovación", tg: "Avisos automáticos al cliente en su app + win-back", bg: "Seguimiento básico" },
                 { feature: "Base de alimentos", tg: "Base propia con +240.000 alimentos validados en español", bg: "Base estándar" },
                 { feature: "Soporte en español", tg: "Equipo en España, respuesta en menos de 24h", bg: "Soporte disponible" },
                 { feature: "Migración asistida", tg: "Incluida por soporte humano en todos los planes", bg: "Onboarding básico" }
@@ -245,7 +245,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
                     whileTap={{ scale: 0.95 }}
                     className="cta-wrapper"
                 >
-                    <Link href="/onboarding" className="btn btn-primary btn-lg cta-migrar" prefetch={false}>
+                    <Link href="/onboarding/" className="btn btn-primary btn-lg cta-migrar" prefetch={false}>
                         Probar TotalGains gratis 14 días 🚀
                     </Link>
                     <p className="microcopy-secure mt-2">Sin tarjeta. Sin permanencia. Migración asistida incluida si vienes de {currentData.name}.</p>

@@ -1,4 +1,5 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import LandingExtrasBlock from "@/components/LandingExtrasBlock";
 import Link from "next/link";
 import { Apple, Search, Zap, Globe, Shield, BarChart3 } from "lucide-react";
 
@@ -59,20 +60,49 @@ const useCases = [
 const faqs = [
   {
     q: "¿La base de datos incluye productos de supermercados españoles?",
-    a: "Sí. Incluye productos de las principales cadenas españolas (Mercadona, Lidl, Carrefour, Alcampo) con los macros reales del etiquetado, no estimaciones genéricas.",
+    a: "Sí. Incluye productos de las principales cadenas españolas (Mercadona, Lidl, Carrefour, Alcampo, Eroski) con los macros reales del etiquetado, no estimaciones genéricas. Reconoce marcas como Hacendado, Deliplus, Bio, Selección, Milbona, Sondey, Freeway, Producto Alcampo, Consumer y Basic. La búsqueda inteligente reconoce nombres coloquiales, marcas comerciales y variantes (por ejemplo escribir 'griego' devuelve yogur griego y skyr).",
   },
   {
     q: "¿Puedo añadir alimentos personalizados que no estén en la base?",
-    a: "Sí. Puedes crear alimentos personalizados introduciendo los macros manualmente. Quedan guardados en tu biblioteca para usarlos en futuros planes.",
+    a: "Sí. Puedes crear alimentos personalizados introduciendo los macros manualmente desde el envase o desde una tabla nutricional profesional. Quedan guardados en tu biblioteca y en la del cliente para usarlos en futuros planes. Cuando el cliente registra un alimento nuevo, tú lo revisas y decides si lo incorporas a tu biblioteca compartida.",
   },
   {
     q: "¿Funciona también para dietas específicas como cetogénica, vegana o sin gluten?",
-    a: "Sí. Puedes filtrar por tipo de alimento y las etiquetas de cada producto incluyen información suficiente para adaptar los planes a cualquier restricción dietética.",
+    a: "Sí. Puedes filtrar por tipo de alimento y las etiquetas de cada producto incluyen información suficiente para adaptar los planes a cualquier restricción dietética. La IA genera dietas respetando restricciones marcadas en el perfil del cliente (alérgenos, intolerancias, preferencias religiosas o éticas). Cero alucinaciones: si un alimento no está en tu base o no cumple la restricción, la IA no lo elige.",
   },
   {
     q: "¿La IA genera la dieta completa o solo busca alimentos?",
-    a: "La IA genera el plan nutricional completo: distribución de comidas, cantidades y macros por toma, ajustados al objetivo calórico y de macronutrientes del cliente.",
+    a: "La IA genera el plan nutricional completo: distribución de comidas, cantidades y macros por toma, ajustados al objetivo calórico y de macronutrientes del cliente. Tiempo por plan: menos de 3 minutos de generación + 5-10 minutos que el coach dedica a revisar y ajustar. La comparación con diseñar el plan manualmente en Excel (45-90 min) supone entre 40 y 75 minutos ahorrados por cliente y mes.",
   },
+  {
+    q: "¿Cuánto cuesta acceder a la base de +240.000 alimentos?",
+    a: "Está incluida en todos los planes desde el Starter (29,90 €/mes con IVA hasta 25 clientes). Sin add-ons, sin cuota extra, sin límite de consultas ni de creación de planes nutricionales. La base evoluciona por importaciones mensuales del origen OpenFoodFacts filtrado a España y por contribuciones curadas de la comunidad de coaches y nutricionistas.",
+  },
+  {
+    q: "¿Se compara mejor la base de TotalGains con MyFitnessPal, USDA o FatSecret?",
+    a: "MyFitnessPal tiene una base amplia (~14 millones de alimentos) pero con datos crowdsourced sin validación, muchos en inglés y con calorías incorrectas frecuentes. USDA es referencia científica pero solo en inglés y sin marcas de supermercado. FatSecret es intermedio pero anglosajón. TotalGains prioriza la base española validada (+240.000 alimentos), con marcas de supermercado reales y macros del envase — cubre el 90% de lo que compra el cliente español real sin necesidad de traducciones ni ediciones manuales.",
+  },
+  {
+    q: "¿La base también sirve para nutricionistas que no son coaches de entrenamiento?",
+    a: "Sí. TotalGains tiene una landing específica para nutricionistas online que usa la misma base de +240.000 alimentos con enfoque en gestión de pacientes, revisiones periódicas, agenda de citas y facturación integrada. El caso de éxito de Lorena Eses documenta el flujo real de una nutricionista con más de 28K seguidores que ahorra +10 h semanales gestionando su cartera con esta base.",
+  },
+];
+
+const pricingPlans = [
+  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["Base de +240.000 alimentos", "IA generativa incluida", "Migración asistida"] },
+  { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 clientes activos", extras: ["Todo lo del Starter", "App marca blanca incluida", "Coach Insights + retención IA"], highlight: true },
+  { name: "Unlimited", price: "149,90 €/mes", incl: "Clientes ilimitados", extras: ["Todo lo del Pro", "Multi-coach", "Prioridad soporte"] },
+];
+
+const testimonials = [
+  { name: "Lorena Eses", handle: "@lorena.eses", role: "Nutricionista Online", quote: "Los planes nutricionales generados con IA a partir de mi propia base de alimentos han cambiado mi día a día. Ahorro más de 10 horas semanales en gestión.", result: "10+ h/sem ahorradas, 28K seguidores", href: "/casos-de-exito/lorena-eses/" },
+  { name: "Nacho Pulido", handle: "@puli.trainer", role: "Entrenador de Fuerza & Resistencia", quote: "La base de alimentos con marcas de supermercado español es lo que más me ahorra tiempo. El cliente registra lo que come y yo lo veo sin transcribir nada.", result: "15 → 40+ clientes, 8-10h/sem ahorradas", href: "/casos-de-exito/nacho-pulido/" },
+];
+
+const competencia = [
+  { tool: "TotalGains (+240.000 alim.)", precio: "29,90 €/mes", ia: true, marca: true, esp: true },
+  { tool: "Trainerize (~5.000 alim.)", precio: "≈250 €/mes", ia: false, marca: false, esp: false },
+  { tool: "Harbiz (base moderada)", precio: "≈240 €/mes", ia: false, marca: false, esp: true },
 ];
 
 export default function BaseDatosAlimentos() {
@@ -88,8 +118,7 @@ export default function BaseDatosAlimentos() {
         description: "+240.000 alimentos validados en español con macros y calorías precisos. Base de datos nutricional para entrenadores personales y nutricionistas.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/base-datos-alimentos-fitness/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
-        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos con IA generativa incluida" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos con app marca blanca incluida" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados" }] },
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },
@@ -115,6 +144,7 @@ export default function BaseDatosAlimentos() {
       ctaLocation="lp_alimentos"
       faqs={faqs}
     />
+    <LandingExtrasBlock plans={pricingPlans} testimonials={testimonials} competencia={competencia} pageContext="Base de alimentos" />
     <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
       <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
@@ -122,6 +152,8 @@ export default function BaseDatosAlimentos() {
           { href: "/ia-entrenador-personal/", label: "IA para entrenadores" },
           { href: "/software-nutricionista-online/", label: "Software para nutricionistas" },
           { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+          { href: "/blog/top-10-alimentos-proteina-por-euro-2026/", label: "Top 10 alimentos proteicos por euro" },
+          { href: "/blog/crear-planes-nutricionales-clientes-entrenador-personal/", label: "Crear planes nutricionales" },
         ].map(({ href, label }) => (
           <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
         ))}

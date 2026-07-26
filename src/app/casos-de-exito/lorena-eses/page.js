@@ -21,7 +21,7 @@ export const metadata = {
 const qa = [
   {
     q: "¿Cómo gestionabas antes tus asesorías?",
-    a: "Lo gestionaba con diferentes Excel. Era un lío, ya que llevaba diferentes sistemas de pago, cobros y almacenamiento de datos que acababan siendo incompatibles entre sí. Dedicaba mucho tiempo a los seguimientos y desde que tengo la app, ese tiempo puedo invertirlo en mejorar la calidad de mis planes y asesorías.",
+    a: "Lo gestionaba con diferentes Excel. Era un lío, ya que llevaba diferentes sistemas de seguimiento y almacenamiento de datos que acababan siendo incompatibles entre sí. Dedicaba mucho tiempo a los seguimientos y desde que tengo la app, ese tiempo puedo invertirlo en mejorar la calidad de mis planes y asesorías.",
   },
   {
     q: "¿Qué es lo que más te ha cambiado?",
@@ -33,7 +33,7 @@ const qa = [
   },
   {
     q: "¿Qué funcionalidades de TotalGains usas más en tu día a día?",
-    a: "Los planes nutricionales generados con IA a partir de mi propia base de alimentos, las revisiones quincenales automáticas con los datos de progreso del paciente, y el módulo de cobros recurrentes con Stripe que evita persecución de pagos a final de mes. La mayoría de mis pacientes están en seguimiento mensual o trimestral y antes les enviaba PDFs y mensajes sueltos por WhatsApp; ahora todo está centralizado en su app con notificaciones push.",
+    a: "Los planes nutricionales generados con IA a partir de mi propia base de alimentos, las revisiones quincenales automáticas con los datos de progreso del paciente, y los recordatorios de renovación al cliente para no perseguir a nadie manualmente. La mayoría de mis pacientes están en seguimiento mensual o trimestral y antes les enviaba PDFs y mensajes sueltos por WhatsApp; ahora todo está centralizado en su app con notificaciones push.",
   },
   {
     q: "¿Qué le dirías a una nutricionista o entrenadora que está dudando si dar el salto a una plataforma profesional?",
@@ -168,7 +168,7 @@ export default function CasoLorenaEses() {
         {/* CTA */}
         <div style={{ textAlign: "center", padding: "40px 24px", background: "rgba(255,255,255,0.03)", borderRadius: 20, border: "1px solid rgba(255,255,255,0.06)" }}>
           <p style={{ fontSize: "1.1rem", fontWeight: 600, marginBottom: 20 }}>¿Quieres resultados como los de Lorena?</p>
-          <Link href="/onboarding" className="btn btn-gold btn-lg" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+          <Link href="/onboarding/" className="btn btn-gold btn-lg" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
             <Rocket size={20} /> Empieza gratis 14 días
           </Link>
           <p style={{ color: "var(--text-muted)", fontSize: "0.8rem", marginTop: 12 }}>Sin tarjeta · Sin compromiso</p>

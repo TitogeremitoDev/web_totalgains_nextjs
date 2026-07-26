@@ -1,6 +1,6 @@
 ---
 title: "Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach"
-seoTitle: "Software Gimnasios Pequeños 2026: Multi-Coach"
+seoTitle: "Elegir Software Gimnasios Boutique 2026 (Guía Multi-Coach)"
 description: "Guía 2026 para elegir software de gimnasio pequeño y boutique: multi-coach, reservas, branding propio, cobros recurrentes y comparativa real entre plataformas."
 date: "2026-06-12"
 lastModified: "2026-06-12"

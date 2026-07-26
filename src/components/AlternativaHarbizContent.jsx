@@ -14,7 +14,7 @@ const faqs = [
     },
     {
         question: "¿Por qué TotalGains es mejor alternativa a Harbiz para entrenadores en España?",
-        answer: "TotalGains incluye IA que genera rutinas y dietas con tu propia base de datos, app marca blanca en el plan Pro (89,90 €/mes), pagos recurrentes Stripe sin comisiones y soporte en español. Harbiz cobra Personaliza tu app, Nutri AI y Biblioteca de Vídeos como add-ons separados, lo que para funcionalidad equivalente eleva el coste a ~313 €/mes con IVA (verificado mayo 2026).",
+        answer: "TotalGains incluye IA que genera rutinas y dietas con tu propia base de datos, app marca blanca en el plan Pro (89,90 €/mes), sistema de retención asistida con recordatorios de renovación al cliente y soporte en español. Harbiz cobra Personaliza tu app, Nutri AI y Biblioteca de Vídeos como add-ons separados, lo que para funcionalidad equivalente eleva el coste a ~313 €/mes con IVA (verificado mayo 2026).",
     },
     {
         question: "¿Cobráis comisiones por las ventas que hago a mis clientes?",
@@ -252,7 +252,7 @@ export default function AlternativaHarbizContent() {
                 </section>
 
                 <div className="cta-wrapper">
-                    <Link href="/onboarding" className="btn btn-primary btn-lg cta-migrar" prefetch={false}>
+                    <Link href="/onboarding/" className="btn btn-primary btn-lg cta-migrar" prefetch={false}>
                         Probar TotalGains gratis 14 días 🚀
                     </Link>
                     <p className="microcopy-secure mt-2">Sin tarjeta. Sin permanencia. Migración asistida incluida si vienes de Harbiz.</p>

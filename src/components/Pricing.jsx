@@ -140,7 +140,7 @@ function PricingCard({ plan, isAnnual, delay = 0 }) {
                 ))}
             </ul>
 
-            <Link href="/onboarding" className="btn btn-primary" prefetch={false}
+            <Link href="/onboarding/" className="btn btn-primary" prefetch={false}
                 onClick={() => trackEvent('cta_click', { cta_text: plan.ctaText, cta_location: 'pricing', plan: plan.id })}>
                 {plan.ctaText}
             </Link>
@@ -263,7 +263,7 @@ const Pricing = () => {
                     className="free-plan-section"
                 >
                     <p className="free-plan-question">¿Quieres probar la App antes de decidir?</p>
-                    <Link href="/onboarding" className="free-plan-link" prefetch={false}>
+                    <Link href="/onboarding/" className="free-plan-link" prefetch={false}>
                         Empieza con el PLAN GRATUITO DE POR VIDA (Máx 3 Atletas)
                     </Link>
                     <p className="free-plan-subtext">Sin tarjeta. Sin compromiso. Actualiza cuando lo necesites.</p>

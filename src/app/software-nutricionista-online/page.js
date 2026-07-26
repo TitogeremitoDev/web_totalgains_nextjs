@@ -1,4 +1,5 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import LandingExtrasBlock from "@/components/LandingExtrasBlock";
 import Link from "next/link";
 import { Utensils, Calendar, Bell, FileText, BarChart3, Shield } from "lucide-react";
 
@@ -33,9 +34,30 @@ const useCases = [
 ];
 
 const faqs = [
-  { q: "¿Puedo usar TotalGains solo para nutrición, sin la parte de entrenamiento?", a: "Sí. Puedes usar exclusivamente las funciones de nutrición y gestión de pacientes. No estás obligada a usar el módulo de entrenamientos." },
-  { q: "¿Los planes de dieta se adaptan a restricciones alimentarias?", a: "Sí. Puedes filtrar y personalizar los planes según alergias, intolerancias, preferencias o tipo de dieta (vegetariana, cetogénica, etc.)." },
-  { q: "¿Es válido para cumplir con la normativa de protección de datos en salud?", a: "TotalGains cumple con el RGPD europeo. Los datos de salud se tratan con las medidas de seguridad adecuadas para datos sensibles." },
+  { q: "¿Puedo usar TotalGains solo para nutrición, sin la parte de entrenamiento?", a: "Sí. Puedes usar exclusivamente las funciones de nutrición y gestión de pacientes. No estás obligada a usar el módulo de entrenamientos. La base de +240.000 alimentos, la generación IA de dietas, las revisiones automatizadas y la agenda de citas están disponibles como funciones independientes." },
+  { q: "¿Los planes de dieta se adaptan a restricciones alimentarias?", a: "Sí. Puedes filtrar y personalizar los planes según alergias, intolerancias, preferencias o tipo de dieta (vegetariana, vegana, cetogénica, sin gluten, sin lactosa, halal, kosher, etc.). La IA respeta las restricciones marcadas en la ficha del paciente: si un alimento está bloqueado por restricción, no lo elige en la generación. Cero riesgo de que un paciente reciba un plan con un alérgeno declarado." },
+  { q: "¿Es válido para cumplir con la normativa de protección de datos en salud?", a: "TotalGains cumple con el RGPD europeo. Los datos de salud se tratan con las medidas de seguridad adecuadas para datos sensibles: encriptación en tránsito (TLS) y en reposo, control de acceso por sesión, borrado a demanda del interesado y contratos de encargado de tratamiento disponibles bajo petición." },
+  { q: "¿Cuánto tiempo lleva crear un plan nutricional en TotalGains?", a: "Con IA: menos de 3 minutos de generación + 5-10 minutos que dedicas a revisar y ajustar. Antes: 45-90 minutos por plan en Excel con tabla nutricional. Ahorro neto por paciente: 40-75 minutos. Con cartera de 30 pacientes activos con revisión mensual, son 20-37 horas ahorradas al mes solo en creación de planes." },
+  { q: "¿Cómo diferencia la ley española a nutricionista y entrenador a la hora de pautar dietas?", a: "La Ley 44/2003 sobre profesiones sanitarias reserva la prescripción dietoterapéutica al graduado en Nutrición y Dietética. El entrenador puede orientar sobre hábitos y educación nutricional, pero no prescribir dietas para patologías. TotalGains no distingue jurídicamente entre roles; corresponde al profesional respetar el marco legal de su titulación. La guía editorial 'Cómo crear planes nutricionales' del blog documenta el detalle práctico." },
+  { q: "¿Puedo integrar cobros o los sigo gestionando por mi cuenta?", a: "El cobro efectivo sigue haciéndose por tu canal habitual: transferencia, Bizum, TPV o Stripe fuera de la app. TotalGains no ofrece cobros in-app end-to-end para autónomos coach/nutricionista todavía. Lo que sí incluimos es un sistema de recordatorios de renovación con win-back automático al paciente cuando toca renovar, para que no tengas que perseguirle." },
+  { q: "¿Cómo ha ido con Lorena Eses, la nutricionista del caso de éxito?", a: "Lorena Eses (@lorena.eses, más de 28K seguidores) documenta el proceso completo. Antes gestionaba con diferentes Excel incompatibles entre sí. Con TotalGains automatizó revisiones quincenales, agenda de citas y seguimiento de progreso. El ROI fue inmediato: el coste mensual de la herramienta se recupera en horas ahorradas la primera semana. Ahora dedica ese tiempo a mejorar la calidad de sus planes en vez de a admin operativo." },
+];
+
+const pricingPlans = [
+  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 pacientes activos", extras: ["+240.000 alimentos", "IA generativa de dietas", "Migración asistida"] },
+  { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 pacientes activos", extras: ["Todo lo del Starter", "App marca blanca incluida", "Coach Insights + retención IA"], highlight: true },
+  { name: "Unlimited", price: "149,90 €/mes", incl: "Pacientes ilimitados", extras: ["Todo lo del Pro", "Multi-equipo", "Prioridad soporte"] },
+];
+
+const testimonials = [
+  { name: "Lorena Eses", handle: "@lorena.eses", role: "Nutricionista Online", quote: "Los planes generados con IA a partir de mi propia base de alimentos, más las revisiones quincenales automáticas, me han devuelto más de 10 horas semanales. Ahora las invierto en mejorar la calidad de mis asesorías.", result: "10+ h/sem ahorradas, 28K seguidores", href: "/casos-de-exito/lorena-eses/" },
+  { name: "Nacho Pulido", handle: "@puli.trainer", role: "Entrenador de Fuerza & Resistencia", quote: "Aunque yo soy entrenador y no nutricionista, la base de +240.000 alimentos con marcas de supermercado real me ahorra un tiempo brutal cuando doy pautas nutricionales básicas a mis clientes.", result: "15 → 40+ clientes, 8-10h/sem ahorradas", href: "/casos-de-exito/nacho-pulido/" },
+];
+
+const competencia = [
+  { tool: "TotalGains Pro", precio: "89,90 €/mes", ia: true, marca: true, esp: true },
+  { tool: "Harbiz Pro + Nutri AI", precio: "≈259 €/mes con IVA", ia: false, marca: false, esp: true },
+  { tool: "TrueCoach Nutrition", precio: "≈145 €/mes", ia: false, marca: false, esp: false },
 ];
 
 export default function SoftwareNutricionistaOnline() {
@@ -51,8 +73,7 @@ export default function SoftwareNutricionistaOnline() {
         description: "Software para nutricionistas online con +240.000 alimentos, generación IA de dietas, seguimiento de pacientes y automatización de revisiones.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/software-nutricionista-online/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
-        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos con IA generativa incluida" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos con app marca blanca incluida" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados" }] },
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },
@@ -78,6 +99,7 @@ export default function SoftwareNutricionistaOnline() {
       ctaLocation="lp_nutricionista"
       faqs={faqs}
     />
+    <LandingExtrasBlock plans={pricingPlans} testimonials={testimonials} competencia={competencia} pageContext="Software nutricionista" />
     <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
       <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>

@@ -31,6 +31,8 @@ export default function sitemap() {
         { url: `${baseUrl}/casos-de-exito/lorena-eses/`, lastModified: '2026-05-13' },
         { url: `${baseUrl}/sobre-nosotros/`, lastModified: '2026-05-16' },
         { url: `${baseUrl}/opiniones-clientes/`, lastModified: '2026-05-16' },
+        { url: `${baseUrl}/onboarding/`, lastModified: '2026-07-11' },
+        { url: `${baseUrl}/aviso-legal/`, lastModified: '2026-01-01' },
         { url: `${baseUrl}/blog/`, lastModified: '2026-05-29' },
         { url: `${baseUrl}/privacy/`, lastModified: '2026-01-01' },
         { url: `${baseUrl}/terms/`, lastModified: '2026-01-01' },

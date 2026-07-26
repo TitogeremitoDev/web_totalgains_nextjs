@@ -276,6 +276,7 @@ Soy Germán Martínez Calvente, fundador de [TotalGains](/sobre-nosotros/). Cons
 - [Cómo Conseguir Clientes Online](/blog/como-conseguir-clientes-entrenador-personal-online/) — Captar sirve poco si no retienes.
 - [Has Tocado Techo de Clientes: Escalar en 2026](/blog/techo-clientes-entrenador-personal-escalar-2026/) — Los 4 techos operativos entre 15-25 clientes; retención es el techo #4.
 - [Top 5 Cosas que Automatiza el Entrenador de +50 Clientes](/blog/top-5-automatizaciones-coach-50-clientes-2026/) — La adherencia automática es la palanca de retención #1 cuando cruzas los 50.
+- [El Precio Real de Tu Tarifa: Calculadora €/hora 2026](/blog/precio-real-tarifa-coach-online-2026/) — Subir retención sube el LTV: la palanca de fondo de tu €/hora efectivo.
 
 ---
 

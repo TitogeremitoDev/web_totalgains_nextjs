@@ -4,7 +4,36 @@ import { getAllSlugs, getPostBySlug, getAllPosts } from "@/lib/blog";
 import { marked } from "marked";
 import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import BlogCTAButton from "@/components/BlogCTAButton";
+import PriceCalculatorCoach from "@/components/PriceCalculatorCoach";
+import LTVCACVisualizer from "@/components/LTVCACVisualizer";
+import CoachTiersVisualizer from "@/components/CoachTiersVisualizer";
+import WaterfallHourlyRate from "@/components/WaterfallHourlyRate";
+import InvisibleTimeChart from "@/components/InvisibleTimeChart";
+import LeversRiskLadder from "@/components/LeversRiskLadder";
+import CACImpactBars from "@/components/CACImpactBars";
+import ScaleComparison from "@/components/ScaleComparison";
+import DataRecoveryFlow from "@/components/DataRecoveryFlow";
+import HistoricalTimelineClient from "@/components/HistoricalTimelineClient";
+import PreventionChecklistCard from "@/components/PreventionChecklistCard";
 import "./post.css";
+
+// Markers inline en el markdown que el template reemplaza por componentes React.
+// Uso: colocar `<div class="__MARKER__"></div>` en el .md donde debe renderizarse
+// el componente. Se pueden usar varios en el mismo post; el template divide el
+// HTML por cada marker que encuentra y renderiza el componente correspondiente.
+const COMPONENT_MARKERS = [
+  { marker: '<div class="__calculator_mount__"></div>', Component: PriceCalculatorCoach, gate: (post) => post.calculator === "coach-price" },
+  { marker: '<div class="__ltv_cac_visual__"></div>', Component: LTVCACVisualizer, gate: () => true },
+  { marker: '<div class="__coach_tiers_visual__"></div>', Component: CoachTiersVisualizer, gate: () => true },
+  { marker: '<div class="__waterfall_hourly__"></div>', Component: WaterfallHourlyRate, gate: () => true },
+  { marker: '<div class="__invisible_time__"></div>', Component: InvisibleTimeChart, gate: () => true },
+  { marker: '<div class="__levers_ladder__"></div>', Component: LeversRiskLadder, gate: () => true },
+  { marker: '<div class="__cac_impact__"></div>', Component: CACImpactBars, gate: () => true },
+  { marker: '<div class="__scale_comparison__"></div>', Component: ScaleComparison, gate: () => true },
+  { marker: '<div class="__data_recovery_flow__"></div>', Component: DataRecoveryFlow, gate: () => true },
+  { marker: '<div class="__historical_timeline_client__"></div>', Component: HistoricalTimelineClient, gate: () => true },
+  { marker: '<div class="__prevention_checklist__"></div>', Component: PreventionChecklistCard, gate: () => true },
+];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS
 // Todas las imágenes editoriales del blog se generan a 1344x768.
@@ -87,11 +116,40 @@ export default async function PostPage({ params }) {
 
   const htmlContent = marked(post.content, { breaks: true });
 
-  // Related posts (same category, max 3)
+  // Detecta cada marker en orden y divide el HTML en secciones intercalando
+  // los componentes React donde corresponda. Cada segmento del array final
+  // es { html: string } o { component: React.Component }.
+  const bodySegments = (() => {
+    let segments = [{ html: htmlContent }];
+    COMPONENT_MARKERS.forEach(({ marker, Component, gate }) => {
+      if (!gate(post)) return;
+      const next = [];
+      segments.forEach((seg) => {
+        if (seg.component) {
+          next.push(seg);
+          return;
+        }
+        const parts = seg.html.split(marker);
+        parts.forEach((part, i) => {
+          if (i > 0) next.push({ component: Component });
+          next.push({ html: part });
+        });
+      });
+      segments = next;
+    });
+    return segments;
+  })();
+
+  // Related posts: prefer same category, fill remainder with highest-authority
+  // posts from any other category so every article shows 4 related cards even
+  // when the category has fewer than 4 sibling posts (audit finding).
   const allPosts = getAllPosts();
-  const related = allPosts
-    .filter((p) => p.slug !== post.slug && p.category === post.category)
-    .slice(0, 3);
+  const otherPosts = allPosts.filter((p) => p.slug !== post.slug);
+  const sameCat = otherPosts.filter((p) => p.category === post.category);
+  const crossCat = otherPosts
+    .filter((p) => p.category !== post.category)
+    .sort((a, b) => (b.lastModified || b.date || "").localeCompare(a.lastModified || a.date || ""));
+  const related = [...sameCat, ...crossCat].slice(0, 4);
 
   const ogImage = post.image
     ? `https://totalgains.es${post.image}`
@@ -100,7 +158,7 @@ export default async function PostPage({ params }) {
   // Build schema graph: Article + BreadcrumbList always, plus ItemList + Reviews + FAQPage if comparison data provided
   const graph = [
     {
-      "@type": "Article",
+      "@type": "BlogPosting",
       headline: post.title,
       description: post.description,
       image: {
@@ -120,7 +178,7 @@ export default async function PostPage({ params }) {
         url: "https://totalgains.es/sobre-nosotros/",
         sameAs: [
           "https://www.instagram.com/totalgainsfitness/",
-          "https://www.youtube.com/channel/UCOJehcX1G6jABjONKmXCmbQ",
+          "https://www.youtube.com/@totalgainsfitness",
           "https://www.tiktok.com/@totalgainsfitness",
         ],
       },
@@ -142,13 +200,17 @@ export default async function PostPage({ params }) {
     },
   ];
 
-  // ItemList schema for product roundup posts (comparison.reviewedProducts)
-  if (post.comparison?.reviewedProducts?.length) {
+  // ItemList schema for product roundup posts (comparison.reviewedProducts).
+  // Only emit ItemList when there are ≥2 products (Google List rich results
+  // require a real list). With 1 product, promote the Product directly to
+  // the graph to avoid a semantically empty ItemList with numberOfItems=1.
+  const reviewedProducts = post.comparison?.reviewedProducts || [];
+  if (reviewedProducts.length >= 2) {
     graph.push({
       "@type": "ItemList",
       itemListOrder: "https://schema.org/ItemListOrderAscending",
-      numberOfItems: post.comparison.reviewedProducts.length,
-      itemListElement: post.comparison.reviewedProducts.map((product, i) => {
+      numberOfItems: reviewedProducts.length,
+      itemListElement: reviewedProducts.map((product, i) => {
         const productNode = {
           "@type": "Product",
           name: product.name,
@@ -203,6 +265,34 @@ export default async function PostPage({ params }) {
         };
       }),
     });
+  } else if (reviewedProducts.length === 1) {
+    // Single product: emit the Product directly (no ItemList wrapper) to avoid
+    // exposing numberOfItems=1 which Google flags as misleading list markup.
+    const product = reviewedProducts[0];
+    const productNode = {
+      "@type": "Product",
+      name: product.name,
+      description: product.pros || `${product.name} — software para entrenadores personales`,
+      image: product.image || "https://totalgains.es/og-image.jpg",
+      brand: { "@type": "Brand", name: product.name },
+      ...(product.url ? { url: product.url } : {}),
+      review: {
+        "@type": "Review",
+        name: `Valoración editorial de ${product.name}`,
+        reviewRating: { "@type": "Rating", ratingValue: product.rating, bestRating: 5, worstRating: 1 },
+        author: { "@type": "Person", "@id": "https://totalgains.es/#founder", name: "Germán Martínez Calvente" },
+        datePublished: post.date,
+        reviewBody: product.pros || "",
+        positiveNotes: { "@type": "ItemList", itemListElement: [{ "@type": "ListItem", position: 1, name: product.pros }] },
+        negativeNotes: { "@type": "ItemList", itemListElement: [{ "@type": "ListItem", position: 1, name: product.cons }] },
+      },
+    };
+    if (typeof product.lowPrice === "number" && typeof product.highPrice === "number") {
+      productNode.offers = { "@type": "AggregateOffer", lowPrice: product.lowPrice, highPrice: product.highPrice, priceCurrency: product.priceCurrency || "EUR", offerCount: product.offerCount || 1, availability: "https://schema.org/InStock", ...(product.url ? { url: product.url } : {}) };
+    } else if (typeof product.lowPrice === "number") {
+      productNode.offers = { "@type": "Offer", price: product.lowPrice, priceCurrency: product.priceCurrency || "EUR", availability: "https://schema.org/InStock", ...(product.url ? { url: product.url } : {}) };
+    }
+    graph.push(productNode);
   }
 
   // FAQPage schema if faqs provided
@@ -302,15 +392,25 @@ export default async function PostPage({ params }) {
                 </span>
               )}
             </div>
+            {post.author && (
+              <p className="post-author-bio" style={{ marginTop: 14, fontSize: "0.86rem", lineHeight: 1.55, color: "var(--text-secondary,#9aa)", maxWidth: 720 }}>
+                <strong style={{ color: "var(--text-primary,#ddd)" }}>Germán Martínez Calvente</strong> — Fundador y desarrollador de TotalGains. Coach y desarrollador desde La Zubia (Granada). Escribe sobre gestión operativa, IA aplicada al entrenamiento y escala del negocio del entrenador personal online. <Link href="/sobre-nosotros/" style={{ color: "inherit", textDecoration: "underline dotted", textUnderlineOffset: 3 }}>Sobre el autor</Link>.
+              </p>
+            )}
           </div>
         </header>
 
         {/* Body */}
         <div className="container post-layout">
-          <div
-            className="post-body"
-            dangerouslySetInnerHTML={{ __html: htmlContent }}
-          />
+          <div className="post-body">
+            {bodySegments.map((seg, i) => {
+              if (seg.component) {
+                const C = seg.component;
+                return <C key={`seg-${i}`} />;
+              }
+              return <div key={`seg-${i}`} dangerouslySetInnerHTML={{ __html: seg.html }} />;
+            })}
+          </div>
 
           {/* Sidebar CTA */}
           <aside className="post-sidebar">

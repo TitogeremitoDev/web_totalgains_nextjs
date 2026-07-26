@@ -79,7 +79,7 @@ const ComparisonTable = () => (
 
                 <div className="ct-cta">
                     <a
-                        href="/onboarding"
+                        href="/onboarding/"
                         className="btn btn-gold btn-lg"
                         onClick={() => trackEvent('cta_click', { cta_text: 'Empezar con TotalGains', cta_location: 'comparison_table' })}
                     >

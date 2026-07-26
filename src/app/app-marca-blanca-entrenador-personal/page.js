@@ -1,4 +1,5 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import LandingExtrasBlock from "@/components/LandingExtrasBlock";
 import Link from "next/link";
 import { Palette, Smartphone, Zap, Star, Shield, Users } from "lucide-react";
 
@@ -59,20 +60,49 @@ const useCases = [
 const faqs = [
   {
     q: "¿Mi app aparece en App Store y Google Play con mi nombre?",
-    a: "Sí. La app que descargan tus clientes lleva tu marca. No aparece el nombre de TotalGains en ningún lugar visible para el cliente.",
+    a: "Sí. La app que descargan tus clientes lleva tu marca. No aparece el nombre de TotalGains en ningún lugar visible para el cliente. Publicación en App Store y Google Play incluida en el plan Pro (89,90 €/mes con IVA) sin coste adicional ni proceso técnico por tu parte: el equipo de TotalGains hace la publicación con tus credenciales corporativas.",
   },
   {
     q: "¿Necesito contratar a un diseñador para configurar el branding?",
-    a: "No. El sistema de branding con IA genera los temas visuales a partir de tu logo y color principal. En la mayoría de los casos, el resultado está listo sin tocar nada más.",
+    a: "No. El sistema de branding con IA genera los temas visuales a partir de tu logo y color principal. Colores primarios, secundarios, acentos, gradientes e iconos se generan automáticamente respetando el algoritmo de tu identidad visual. En la mayoría de los casos, el resultado está listo sin tocar nada más. Si quieres afinar, puedes ajustar cada valor manualmente desde el panel de configuración.",
   },
   {
     q: "¿Puedo cambiar los colores o el logo después de configurarlo?",
-    a: "Sí, en cualquier momento. Los cambios de branding se aplican en tiempo real en toda la app sin necesidad de actualización en las tiendas.",
+    a: "Sí, en cualquier momento. Los cambios de branding se aplican en tiempo real en toda la app sin necesidad de actualización en las tiendas. Cuando tu cliente abre la app la próxima vez, el nuevo logo o los nuevos colores ya están. Cero fricción, cero coordinación con Apple/Google.",
   },
   {
     q: "¿Tiene coste adicional la funcionalidad de marca blanca?",
-    a: "No. El branding está incluido en todos los planes de TotalGains sin coste extra. No hay módulos separados ni tarifas de configuración.",
+    a: "No. Incluida en el plan Pro (89,90 €/mes con IVA hasta 100 clientes activos) sin add-ons ni pago único de publicación. Comparativa honesta: Trainerize la ofrece como Custom Branded App con pago único de $169 USD en planes Pro; Harbiz la cobra como add-on Personaliza tu app de 30,24 €/mes con IVA o requiere el plan My APP (40-60 €/mes más caro); MyPT Hub la incluye solo en planes de gama alta (~145 €/mes). En TotalGains, incluida desde 89,90 €/mes.",
   },
+  {
+    q: "¿Qué diferencia hay entre una app marca blanca y una PWA con mi logo?",
+    a: "La app marca blanca de TotalGains es app nativa real, no PWA (Progressive Web App). Se publica en App Store y Google Play con tu identidad, tiene notificaciones push nativas, gestos táctiles nativos y rendimiento comparable al de una app propia desarrollada desde cero. Las PWAs con logo suelen renquear en dispositivos Android antiguos, no aparecen en las tiendas (solo por URL) y no aprovechan las capacidades nativas del móvil.",
+  },
+  {
+    q: "¿Los clientes tienen que descargar la app de nuevo si cambio mi logo o mis colores?",
+    a: "No. Los cambios de branding se aplican en tiempo real desde el panel de configuración. Tus clientes no necesitan actualizar la app en la tienda: al abrirla, la nueva identidad ya está. Esto también aplica a cambios de nombre comercial siempre que no cambien el ID de app en la tienda (que solo se cambia una vez, al publicar la app).",
+  },
+  {
+    q: "¿Puedo probar la marca blanca sin compromiso?",
+    a: "Sí. 14 días de prueba gratuita sin tarjeta de crédito en el plan Pro. Puedes generar tu branding con IA a partir de tu logo, ver la app cliente con tu marca en cuestión de minutos y decidir si el resultado te encaja. Sin permanencia, sin cláusulas de mínima duración; cancelas desde el panel cuando quieras.",
+  },
+];
+
+const pricingPlans = [
+  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["App cliente TotalGains", "IA generativa incluida", "+240.000 alimentos"] },
+  { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 clientes activos", extras: ["App marca blanca incluida", "Publicación App Store y Google Play", "Coach Insights + retención IA"], highlight: true },
+  { name: "Unlimited", price: "149,90 €/mes", incl: "Clientes ilimitados", extras: ["Todo lo del Pro", "Multi-coach", "Prioridad soporte"] },
+];
+
+const testimonials = [
+  { name: "Nacho Pulido", handle: "@puli.trainer", role: "Entrenador de Fuerza & Resistencia", quote: "Que mis clientes tengan la app con mi marca me ha cambiado la percepción de servicio. Los referidos ahora dicen 'yo uso la app de Nacho', no 'yo uso una app de fitness'.", result: "15 → 40+ clientes, 8-10h/sem ahorradas", href: "/casos-de-exito/nacho-pulido/" },
+  { name: "Lorena Eses", handle: "@lorena.eses", role: "Nutricionista Online", quote: "Mis pacientes descargan una app con mi nombre y mis colores desde el App Store. La percepción de profesionalidad ha subido notablemente y justifica tarifas más altas.", result: "10+ h/sem ahorradas, 28K seguidores", href: "/casos-de-exito/lorena-eses/" },
+];
+
+const competencia = [
+  { tool: "TotalGains Pro (marca blanca incluida)", precio: "89,90 €/mes", ia: true, marca: true, esp: true },
+  { tool: "Trainerize + Custom Branded App", precio: "≈352 €/mes + $169 único", ia: false, marca: true, esp: false },
+  { tool: "Harbiz + Personaliza tu app", precio: "≈271 €/mes con IVA", ia: false, marca: true, esp: true },
 ];
 
 export default function AppMarcaBlanca() {
@@ -88,8 +118,7 @@ export default function AppMarcaBlanca() {
         description: "App de marca blanca para entrenadores personales: tus clientes descargan una app con tu nombre, logo y colores en iOS y Android sin coste extra.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/app-marca-blanca-entrenador-personal/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
-        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos con IA generativa incluida" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos con app marca blanca incluida" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados" }] },
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },
@@ -115,6 +144,7 @@ export default function AppMarcaBlanca() {
       ctaLocation="lp_marca_blanca"
       faqs={faqs}
     />
+    <LandingExtrasBlock plans={pricingPlans} testimonials={testimonials} competencia={competencia} pageContext="App marca blanca" />
     <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
       <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>

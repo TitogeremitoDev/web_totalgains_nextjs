@@ -1,6 +1,6 @@
 export const metadata = {
-  title: "Aviso Legal — TotalGains",
-  description: "Aviso legal e información legal de TotalGains conforme a la Ley 34/2002 (LSSICE).",
+  title: "Aviso Legal",
+  description: "Aviso legal e información legal de TotalGains conforme a la Ley 34/2002 (LSSICE): titular, datos fiscales y condiciones de uso.",
   alternates: { canonical: "https://totalgains.es/aviso-legal/" },
   robots: { index: false, follow: true },
 };

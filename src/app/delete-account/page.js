@@ -1,8 +1,8 @@
 import DeleteAccount from "@/components/DeleteAccount";
 
 export const metadata = {
-    title: "Eliminar Cuenta | TotalGains",
-    description: "Solicita la eliminación de tu cuenta de TotalGains y todos tus datos asociados.",
+    title: "Eliminar Cuenta",
+    description: "Solicita la eliminación de tu cuenta TotalGains y de todos tus datos asociados (atletas, rutinas, dietas, historial) conforme al RGPD. Confirmación en 30 días.",
     alternates: {
         canonical: "https://totalgains.es/delete-account/",
     },

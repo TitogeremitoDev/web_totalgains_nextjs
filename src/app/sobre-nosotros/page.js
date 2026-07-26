@@ -39,9 +39,8 @@ export default function SobreNosotros() {
         sameAs: [
           "https://www.instagram.com/totalgainsfitness/",
           "https://www.tiktok.com/@totalgainsfitness",
-          "https://www.youtube.com/channel/UCOJehcX1G6jABjONKmXCmbQ",
+          "https://www.youtube.com/@totalgainsfitness",
           "https://es.trustpilot.com/review/totalgains.es",
-          "https://www.wikidata.org/wiki/Q139823576",
         ],
       },
       {
@@ -68,7 +67,7 @@ export default function SobreNosotros() {
         sameAs: [
           "https://www.instagram.com/totalgainsfitness/",
           "https://www.tiktok.com/@totalgainsfitness",
-          "https://www.youtube.com/channel/UCOJehcX1G6jABjONKmXCmbQ",
+          "https://www.youtube.com/@totalgainsfitness",
         ],
       },
       {
@@ -147,7 +146,7 @@ export default function SobreNosotros() {
           <p style={{ color: "var(--text-secondary, #aaa)", marginBottom: 24, fontSize: "0.95rem" }}>
             14 días gratis. Sin tarjeta. Sin compromiso.
           </p>
-          <Link href="/onboarding" className="btn btn-primary btn-lg">
+          <Link href="/onboarding/" className="btn btn-primary btn-lg">
             Empieza gratis ahora
           </Link>
           <p style={{ marginTop: 16, fontSize: "0.82rem", color: "var(--text-muted, #666)" }}>

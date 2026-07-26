@@ -132,7 +132,7 @@ export default function AlternativasHub() {
         <section style={{ textAlign: "center", padding: "40px 24px", background: "rgba(255,255,255,0.03)", borderRadius: 20, border: "1px solid rgba(255,255,255,0.06)" }}>
           <h2 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: 8 }}>¿Listo para el cambio?</h2>
           <p style={{ color: "var(--text-secondary, #aaa)", marginBottom: 24, fontSize: "0.95rem" }}>14 días gratis. Sin tarjeta. Sin compromiso. Migración asistida incluida.</p>
-          <Link href="/onboarding" className="btn btn-primary btn-lg">Empieza gratis ahora</Link>
+          <Link href="/onboarding/" className="btn btn-primary btn-lg">Empieza gratis ahora</Link>
         </section>
       </main>
     </>

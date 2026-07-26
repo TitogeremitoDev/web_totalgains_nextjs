@@ -1,4 +1,5 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
+import LandingExtrasBlock from "@/components/LandingExtrasBlock";
 import Link from "next/link";
 import { Smartphone, Apple, Globe, Bell, MessageSquare, TrendingUp } from "lucide-react";
 
@@ -32,9 +33,30 @@ const useCases = [
 ];
 
 const faqs = [
-  { q: "¿Mis clientes tienen que pagar por la app?", a: "No. Tus clientes acceden gratis a la app con tu marca. Tú pagas el plan mensual de TotalGains y ellos usan la plataforma sin coste adicional." },
-  { q: "¿Cuánto tarda en estar lista mi app personalizada?", a: "Tu entorno con marca blanca está activo en minutos. Solo necesitas subir tu logo y elegir tus colores — el resto es automático." },
-  { q: "¿Funciona sin conexión?", a: "Las rutinas del día se pueden consultar sin conexión desde la app móvil. Los datos se sincronizan al recuperar la conexión." },
+  { q: "¿Mis clientes tienen que pagar por la app?", a: "No. Tus clientes acceden gratis a la app con tu marca. Tú pagas el plan mensual de TotalGains (Starter 29,90 €/mes con IVA, Pro 89,90 €/mes con IVA o Unlimited 149,90 €/mes con IVA) y ellos usan la plataforma sin coste adicional. Sin publicidad dentro de la app, sin ventas cruzadas, sin cargos ocultos al cliente final." },
+  { q: "¿Cuánto tarda en estar lista mi app personalizada?", a: "Tu entorno con marca blanca está activo en minutos. Solo necesitas subir tu logo y elegir tus colores — el resto es automático, generado por IA a partir de tu identidad visual. Tus clientes descargan la app real desde App Store y Google Play con tu nombre y tu logo. Publicación en tiendas incluida en el plan Pro sin coste adicional." },
+  { q: "¿Funciona sin conexión?", a: "Las rutinas del día se pueden consultar sin conexión desde la app móvil. Los datos se sincronizan al recuperar la conexión. La app está diseñada para uso en el gimnasio con conectividad limitada: el cliente puede completar el entrenamiento offline y los datos se suben automáticamente cuando vuelve a tener red." },
+  { q: "¿Cómo interactúan mi app y el panel web?", a: "El coach usa el panel web (https://totalgains.es/app/login) desde cualquier navegador para gestionar la cartera, generar rutinas con IA, revisar check-ins semanales y responder mensajes. El cliente usa la app móvil (iOS/Android) para consultar rutina del día, registrar entreno en 30 segundos, subir fotos de progreso y chatear con el coach. Todo se sincroniza en tiempo real. También hay app coach nativa iOS/Android para gestión desde el móvil sin necesidad de ordenador." },
+  { q: "¿Qué diferencia esta app de una web app disfrazada de app?", a: "Es app nativa real, no una PWA ni un WebView disfrazado. Publicada en App Store y Google Play con tu identidad, con notificaciones push nativas, gestos táctiles nativos y rendimiento comparable al de una app propia. Los coaches que vienen de Trainerize o Harbiz reportan una fluidez notablemente superior, especialmente en dispositivos Android antiguos donde las PWAs suelen renquear." },
+  { q: "¿Qué diferencia hay entre esta app y la app marca blanca del plan Pro?", a: "La app marca blanca (incluida en el plan Pro desde 89,90 €/mes con IVA) es exactamente la app cliente que llega a App Store y Google Play con tu logo, tus colores y tu nombre. En el plan Starter (29,90 €/mes con IVA) tus clientes usan la app TotalGains genérica con tu perfil de coach dentro. Cuando subes a Pro, la misma funcionalidad pasa a tu marca sin migrar datos ni pedir a los clientes que descarguen una app nueva." },
+  { q: "¿Puedo probar la app sin compromiso?", a: "Sí. 14 días de prueba gratuita sin tarjeta de crédito. Puedes descargarte la app cliente, invitar a 3-5 clientes de prueba y ver el flujo completo. Sin permanencia ni cláusulas de mínima duración. Si al final del período no te convence, no se cobra nada." },
+];
+
+const pricingPlans = [
+  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["App cliente TotalGains", "IA generativa incluida", "+240.000 alimentos"] },
+  { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 clientes activos", extras: ["Todo lo del Starter", "App marca blanca incluida", "Publicación en App Store y Google Play"], highlight: true },
+  { name: "Unlimited", price: "149,90 €/mes", incl: "Clientes ilimitados", extras: ["Todo lo del Pro", "Multi-coach", "Prioridad soporte"] },
+];
+
+const testimonials = [
+  { name: "Nacho Pulido", handle: "@puli.trainer", role: "Entrenador de Fuerza & Resistencia", quote: "Que mis clientes tengan la app con mi marca me ha cambiado la percepción de servicio. Ahorro entre 8 y 10 horas a la semana y me siento mucho más profesional.", result: "15 → 40+ clientes, 8-10h/sem ahorradas", href: "/casos-de-exito/nacho-pulido/" },
+  { name: "Lorena Eses", handle: "@lorena.eses", role: "Nutricionista Online", quote: "Mis pacientes reciben notificaciones push directamente en su app con mi marca. La comunicación es fluida y ha subido notablemente la percepción de servicio profesional.", result: "10+ h/sem ahorradas, 28K seguidores", href: "/casos-de-exito/lorena-eses/" },
+];
+
+const competencia = [
+  { tool: "TotalGains Pro", precio: "89,90 €/mes", ia: true, marca: true, esp: true },
+  { tool: "Trainerize + Custom App", precio: "≈352 €/mes + $169 único", ia: false, marca: false, esp: false },
+  { tool: "Harbiz Pro + Personaliza", precio: "≈271 €/mes con IVA", ia: false, marca: false, esp: true },
 ];
 
 export default function AppEntrenadorPersonalOnline() {
@@ -50,8 +72,7 @@ export default function AppEntrenadorPersonalOnline() {
         description: "App para entrenadores personales online disponible en iOS, Android y web. Gestiona clientes, rutinas, nutrición y pagos desde cualquier dispositivo.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/app-entrenador-personal-online/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg" },
-        aggregateRating: { "@type": "AggregateRating", ratingValue: "5", bestRating: "5", worstRating: "1", ratingCount: "3", reviewCount: "3" },
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos con IA generativa incluida" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos con app marca blanca incluida" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados" }] },
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },
@@ -77,6 +98,7 @@ export default function AppEntrenadorPersonalOnline() {
       ctaLocation="lp_app_entrenador"
       faqs={faqs}
     />
+    <LandingExtrasBlock plans={pricingPlans} testimonials={testimonials} competencia={competencia} pageContext="App entrenador online" />
     <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
       <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>

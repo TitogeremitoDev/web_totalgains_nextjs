@@ -334,7 +334,7 @@ const Testimonials = () => {
             ¿Listo para ser el próximo caso de éxito?{" "}
             <strong>Únete gratis 14 días.</strong>
           </p>
-          <a href="/onboarding" className="btn btn-gold btn-lg">
+          <a href="/onboarding/" className="btn btn-gold btn-lg">
             <Zap size={20} />
             Probar TotalGains gratis
           </a>

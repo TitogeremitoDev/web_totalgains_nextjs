@@ -152,7 +152,7 @@ const BeforeAfter = () => (
                 transition={{ duration: 0.5, delay: 0.4 }}
             >
                 <a
-                    href="/onboarding"
+                    href="/onboarding/"
                     className="btn btn-gold btn-lg"
                     onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis — sin Excel', cta_location: 'before_after' })}
                 >

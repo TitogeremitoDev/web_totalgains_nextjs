@@ -150,7 +150,7 @@ const Hero = () => {
           <div className="hero-cta">
             <motion.a
               whileTap={{ scale: 0.97 }}
-              href="/onboarding"
+              href="/onboarding/"
               className="btn-gold-lg magnetic"
               onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis 14 días', cta_location: 'hero' })}
             >

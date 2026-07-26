@@ -10,7 +10,7 @@ import './FAQ.css';
 const faqs = [
     {
         question: '¿Qué es TotalGains y cómo funciona como software para entrenadores personales?',
-        answer: 'TotalGains es una plataforma de gestión deportiva todo-en-uno. Centraliza la gestión de atletas, creación de rutinas con IA, planes nutricionales, seguimiento de progreso y cobros automáticos. Funciona en Android, iOS y Web, y cada entrenador obtiene su propia app de fitness personalizada para sus clientes.'
+        answer: 'TotalGains es una plataforma de gestión deportiva todo-en-uno. Centraliza la gestión de atletas, creación de rutinas con IA, planes nutricionales, seguimiento de progreso y recordatorios de renovación al cliente. Funciona en Android, iOS y Web, y cada entrenador obtiene su propia app de fitness personalizada para sus clientes.'
     },
     {
         question: '¿Cuánto cuesta el software de entrenamiento TotalGains?',

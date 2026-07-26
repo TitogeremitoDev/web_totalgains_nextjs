@@ -1,7 +1,7 @@
 ---
 title: "IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas Personalizadas en Minutos (Guía Real 2026)"
-seoTitle: "IA para Entrenadores: Rutinas en <2 Min por Cliente"
-description: "Genera rutinas en menos de 2 minutos y planes nutricionales con +240.000 alimentos en español. Caso real: pasar de 45 min a 2 min por cliente."
+seoTitle: "IA para Entrenadores: Guía Práctica de Rutinas y Dietas 2026"
+description: "Caso real del fundador aplicando IA al diseño de rutinas y dietas: de 45 min a 2 min por cliente sin perder calidad. Guía paso a paso con capturas."
 date: "2026-05-04"
 lastModified: "2026-05-04"
 author: "Germán Martínez Calvente"

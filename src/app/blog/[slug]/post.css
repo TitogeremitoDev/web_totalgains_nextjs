@@ -442,6 +442,29 @@ html {
     margin: 0;
 }
 
+/* ── Callout de respuesta rápida (para artículos en modo pánico) ── */
+.post-body .tg-callout {
+    margin: 20px 0 28px;
+    padding: 16px 20px;
+    border-radius: 14px;
+    background: linear-gradient(180deg, rgba(34, 197, 94, 0.08) 0%, rgba(34, 197, 94, 0.03) 100%);
+    border: 1px solid rgba(34, 197, 94, 0.28);
+    border-left: 4px solid #22c55e;
+    color: var(--text-primary, #fff);
+    font-size: 0.94rem;
+    line-height: 1.55;
+}
+
+.post-body .tg-callout-panic {
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, rgba(102, 126, 234, 0.04) 100%);
+    border-color: rgba(102, 126, 234, 0.35);
+    border-left-color: #667eea;
+}
+
+.post-body .tg-callout strong {
+    color: var(--text-primary, #fff);
+}
+
 /* ── Responsive ── */
 @media (max-width: 960px) {
     .post-layout {

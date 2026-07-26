@@ -7,14 +7,14 @@ export const metadata = {
   // Title más corto y enfocado — usa el template "%s | TotalGains" de layout.js
   title: "TotalGains — Software para Entrenadores Personales con IA",
   description:
-    "Gestiona atletas, rutinas con IA, dietas y cobros desde una sola plataforma. Software fitness en español para entrenadores. 14 días gratis sin tarjeta.",
+    "Gestiona atletas, rutinas con IA, dietas y seguimiento desde una sola plataforma. Software fitness en español para entrenadores. 14 días gratis sin tarjeta.",
   alternates: {
     canonical: "https://totalgains.es/",
   },
   openGraph: {
-    title: "TotalGains — Software para Entrenadores Personales",
+    title: "TotalGains — Software para Entrenadores Personales con IA",
     description:
-      "Todo lo que necesita un entrenador personal online en una sola plataforma: gestión de atletas, rutinas, dietas, seguimiento y facturación.",
+      "Gestiona atletas, rutinas con IA, dietas y seguimiento desde una sola plataforma. Software fitness en español para entrenadores. 14 días gratis sin tarjeta.",
     url: "https://totalgains.es/",
     type: "website",
     locale: "es_ES",
@@ -24,8 +24,8 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@totalgainsfitness",
-    title: "TotalGains — Software para Entrenadores Personales",
-    description: "Gestión de atletas, IA para rutinas y dietas, facturación. Todo en una sola plataforma.",
+    title: "TotalGains — Software para Entrenadores Personales con IA",
+    description: "Gestiona atletas, rutinas con IA, dietas y seguimiento desde una sola plataforma. Software fitness en español para entrenadores.",
     images: ["https://totalgains.es/og-image.jpg"],
   },
 };
@@ -91,13 +91,17 @@ export default function Home() {
           availability: "https://schema.org/InStock",
           url: "https://totalgains.es/onboarding/",
           image: "https://totalgains.es/og-image.jpg",
+          offers: [
+            { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos con IA generativa incluida" },
+            { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos con app marca blanca incluida" },
+            { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados" },
+          ],
         },
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: "4.0",
+          ratingValue: "5.0",
           bestRating: "5",
           worstRating: "1",
-          ratingCount: "3",
           reviewCount: "3",
         },
         review: [
@@ -168,9 +172,8 @@ export default function Home() {
         sameAs: [
           "https://www.instagram.com/totalgainsfitness/",
           "https://www.tiktok.com/@totalgainsfitness",
-          "https://www.youtube.com/channel/UCOJehcX1G6jABjONKmXCmbQ",
+          "https://www.youtube.com/@totalgainsfitness",
           "https://es.trustpilot.com/review/totalgains.es",
-          "https://www.wikidata.org/wiki/Q139823576",
         ],
         contactPoint: {
           "@type": "ContactPoint",
