@@ -15,6 +15,8 @@ import ScaleComparison from "@/components/ScaleComparison";
 import DataRecoveryFlow from "@/components/DataRecoveryFlow";
 import HistoricalTimelineClient from "@/components/HistoricalTimelineClient";
 import PreventionChecklistCard from "@/components/PreventionChecklistCard";
+import WhatsAppChatComparison from "@/components/WhatsAppChatComparison";
+import TrustDamageScale from "@/components/TrustDamageScale";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -33,6 +35,8 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__data_recovery_flow__"></div>', Component: DataRecoveryFlow, gate: () => true },
   { marker: '<div class="__historical_timeline_client__"></div>', Component: HistoricalTimelineClient, gate: () => true },
   { marker: '<div class="__prevention_checklist__"></div>', Component: PreventionChecklistCard, gate: () => true },
+  { marker: '<div class="__whatsapp_chat_comparison__"></div>', Component: WhatsAppChatComparison, gate: () => true },
+  { marker: '<div class="__trust_damage_scale__"></div>', Component: TrustDamageScale, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS
