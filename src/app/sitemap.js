@@ -11,7 +11,7 @@ export default function sitemap() {
         { url: `${baseUrl}/alternativas/`, lastModified: '2026-04-19' },
         { url: `${baseUrl}/alternativas/trainerize/`, lastModified: '2026-05-13' },
         { url: `${baseUrl}/alternativas/harbiz/`, lastModified: '2026-05-13' },
-        { url: `${baseUrl}/alternativas/harbiz/precios/`, lastModified: '2026-05-13' },
+        { url: `${baseUrl}/alternativas/harbiz/precios/`, lastModified: '2026-07-26' },
         { url: `${baseUrl}/alternativas/mypthub/`, lastModified: '2026-04-19' },
         { url: `${baseUrl}/alternativas/dudapp/`, lastModified: '2026-04-01' },
         { url: `${baseUrl}/alternativas/truecoach/`, lastModified: '2026-04-01' },
@@ -33,7 +33,7 @@ export default function sitemap() {
         { url: `${baseUrl}/opiniones-clientes/`, lastModified: '2026-05-16' },
         { url: `${baseUrl}/onboarding/`, lastModified: '2026-07-11' },
         { url: `${baseUrl}/aviso-legal/`, lastModified: '2026-01-01' },
-        { url: `${baseUrl}/blog/`, lastModified: '2026-05-29' },
+        { url: `${baseUrl}/blog/`, lastModified: '2026-07-26' },
         { url: `${baseUrl}/privacy/`, lastModified: '2026-01-01' },
         { url: `${baseUrl}/terms/`, lastModified: '2026-01-01' },
         ...posts.map(post => ({

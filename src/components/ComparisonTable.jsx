@@ -11,7 +11,7 @@ const rows = [
     { feature: '+240.000 alimentos en BD',      tg: true,  tr: false, ha: false },
     { feature: 'App marca blanca para clientes',tg: true,  tr: false, ha: true  },
     { feature: 'Sin penalización por volumen',  tg: true,  tr: false, ha: false },
-    { feature: 'Precio desde',                  tg: '29,90€', tr: '35€', ha: '49€' },
+    { feature: 'Precio desde (plan de entrada)', tg: '29,90 €/mes', tr: '≈$10/mes', ha: '22,99 €/mes' },
     { feature: 'Prueba gratuita sin tarjeta',   tg: true,  tr: false, ha: false },
     { feature: 'Seguimiento de progreso',        tg: true,  tr: true,  ha: true  },
     { feature: 'Gestión de rutinas',            tg: true,  tr: true,  ha: true  },
@@ -76,6 +76,25 @@ const ComparisonTable = () => (
                         </tbody>
                     </table>
                 </div>
+
+                <p
+                    style={{
+                        marginTop: 12,
+                        fontSize: '0.78rem',
+                        color: 'var(--text-secondary, #aaa)',
+                        textAlign: 'center',
+                        lineHeight: 1.5,
+                    }}
+                >
+                    Precios verificados en mayo de 2026 en las webs oficiales de cada proveedor.
+                    Son los planes <strong>de entrada</strong> de cada plataforma; con app marca blanca, IA y
+                    biblioteca de vídeos incluidas, el coste sube a ~89,90 € (TotalGains Pro) frente a ~250 €
+                    (Trainerize Pro 50) y ~313 € (Harbiz My APP 100).{' '}
+                    <a href="/alternativas/harbiz/precios/" style={{ color: 'inherit', textDecoration: 'underline' }}>
+                        Ver desglose completo
+                    </a>
+                    .
+                </p>
 
                 <div className="ct-cta">
                     <a

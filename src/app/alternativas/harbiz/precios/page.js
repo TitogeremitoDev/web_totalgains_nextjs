@@ -2,9 +2,9 @@ import Link from "next/link";
 import "@/app/alternativas/trainerize/Alternativas.css";
 
 export const metadata = {
-  title: "Precios Harbiz 2026: Cuánto Cuesta de Verdad al Escalar",
+  title: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes (con IVA)",
   description:
-    "Precios Harbiz 2026 con IVA: Basic 22,99 €/mes, Pro 143,99 €/mes, My APP 240,79 €/mes. Con marca blanca, IA y vídeos el precio real sube a 313 €/mes al escalar.",
+    "Precios Harbiz 2026 con IVA: Basic 22,99 €/mes, Pro 143,99 €/mes, My APP 240,79 €/mes. Con marca blanca y add-ons llega a 313 €/mes. Verificado mayo 2026.",
   keywords: [
     "Harbiz precios",
     "Harbiz precios 2026",
@@ -17,9 +17,9 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/harbiz/precios/",
   },
   openGraph: {
-    title: "Precios Harbiz 2026: Cuánto Cuesta de Verdad al Escalar",
+    title: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes (con IVA)",
     description:
-      "Harbiz arranca en 22,99 €/mes pero con marca blanca, IA y vídeos sube a 313 €/mes al escalar. Tabla completa con IVA.",
+      "Precios Harbiz 2026 verificados con IVA: Basic 22,99 €, Pro 143,99 €, My APP 240,79 €. Al escalar con add-ons llega a 313 €/mes.",
     url: "https://totalgains.es/alternativas/harbiz/precios/",
     images: [{ url: "https://totalgains.es/og-image.jpg", width: 1200, height: 630, alt: "TotalGains" }],
   },
@@ -304,16 +304,82 @@ export default function HarbizPreciosPage() {
         <div className="container alternativas-container">
           <div className="alternativas-header">
             <span style={{ fontSize: "0.78rem", color: "var(--text-secondary,#aaa)", display: "block", marginBottom: 4 }}>
-              Actualizado: 13 de mayo de 2026 · Verificado manualmente en harbiz.com
+              Actualizado: 13 de mayo de 2026 · Verificado manualmente en harbiz.io
             </span>
-            <h1 className="alternativas-title gradient-text">Precios Harbiz 2026: todos los planes y add-ons explicados</h1>
+            <h1 className="alternativas-title gradient-text">Harbiz Precios 2026: desde 22,99 €/mes hasta 313 €/mes</h1>
             <p className="alternativas-subtitle mt-4">
-              Tablas completas de precios Harbiz para 2026. Tres planes (Basic, Pro y My APP), facturación mensual y anual con descuento del 25 %, y add-ons opcionales. Datos verificados manualmente en la web oficial de Harbiz el 13 de mayo de 2026, con IVA 21 % aplicado para España.
+              Todas las tarifas de Harbiz en 2026 con IVA 21 % aplicado, planes Basic, Pro y My APP, mensual y anual (-25 %), y los 3 add-ons opcionales. Verificado a mano en la web oficial el 13 de mayo de 2026.
             </p>
           </div>
 
+          {/* TL;DR arriba del todo — precios visibles sin scroll */}
+          <section
+            aria-label="Precios de Harbiz de un vistazo"
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: 16,
+              margin: "24px 0 8px",
+            }}
+          >
+            <article
+              style={{
+                padding: "18px 20px",
+                background: "linear-gradient(180deg, rgba(34,197,94,0.08) 0%, rgba(34,197,94,0.03) 100%)",
+                border: "1px solid rgba(34,197,94,0.35)",
+                borderRadius: 14,
+              }}
+            >
+              <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "#22c55e", textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 6 }}>Basic</div>
+              <div style={{ fontSize: "1.6rem", fontWeight: 800, color: "var(--text-primary,#fff)", lineHeight: 1.1 }}>
+                <span style={{ whiteSpace: "nowrap" }}>22,99 €</span><span style={{ fontSize: "0.86rem", fontWeight: 500, color: "var(--text-secondary,#aaa)" }}>/mes</span>
+              </div>
+              <div style={{ fontSize: "0.8rem", color: "var(--text-secondary,#aaa)", marginTop: 4, lineHeight: 1.4 }}>
+                Con IVA · desde <strong style={{ color: "var(--text-primary,#ddd)" }}>16,94 €/mes</strong> anual · hasta 5 clientes
+              </div>
+            </article>
+
+            <article
+              style={{
+                padding: "18px 20px",
+                background: "linear-gradient(180deg, rgba(234,179,8,0.08) 0%, rgba(234,179,8,0.03) 100%)",
+                border: "1px solid rgba(234,179,8,0.35)",
+                borderRadius: 14,
+              }}
+            >
+              <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "#eab308", textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 6 }}>Pro 50</div>
+              <div style={{ fontSize: "1.6rem", fontWeight: 800, color: "var(--text-primary,#fff)", lineHeight: 1.1 }}>
+                <span style={{ whiteSpace: "nowrap" }}>143,99 €</span><span style={{ fontSize: "0.86rem", fontWeight: 500, color: "var(--text-secondary,#aaa)" }}>/mes</span>
+              </div>
+              <div style={{ fontSize: "0.8rem", color: "var(--text-secondary,#aaa)", marginTop: 4, lineHeight: 1.4 }}>
+                Con IVA · <strong style={{ color: "var(--text-primary,#ddd)" }}>107,69 €/mes</strong> anual · hasta 50 clientes
+              </div>
+            </article>
+
+            <article
+              style={{
+                padding: "18px 20px",
+                background: "linear-gradient(180deg, rgba(239,68,68,0.08) 0%, rgba(239,68,68,0.03) 100%)",
+                border: "1px solid rgba(239,68,68,0.35)",
+                borderRadius: 14,
+              }}
+            >
+              <div style={{ fontSize: "0.72rem", fontWeight: 800, color: "#ef4444", textTransform: "uppercase", letterSpacing: 0.5, marginBottom: 6 }}>My APP 100 + add-ons</div>
+              <div style={{ fontSize: "1.6rem", fontWeight: 800, color: "var(--text-primary,#fff)", lineHeight: 1.1 }}>
+                <span style={{ whiteSpace: "nowrap" }}>313 €</span><span style={{ fontSize: "0.86rem", fontWeight: 500, color: "var(--text-secondary,#aaa)" }}>/mes</span>
+              </div>
+              <div style={{ fontSize: "0.8rem", color: "var(--text-secondary,#aaa)", marginTop: 4, lineHeight: 1.4 }}>
+                Con IVA · pico real al escalar con marca blanca, IA y vídeos
+              </div>
+            </article>
+          </section>
+
+          <p style={{ fontSize: "0.78rem", color: "var(--text-secondary,#aaa)", textAlign: "center", margin: "0 0 24px" }}>
+            Los 3 planes base con precio mensual, con IVA. Anual aplica -25 % al plan base (no a los add-ons). Tabla completa por tramos ↓
+          </p>
+
           <section className="alternativas-section glass" style={{ padding: 28, borderRadius: 16, margin: "32px 0" }}>
-            <h2>Resumen rápido</h2>
+            <h2>Resumen detallado (todos los tramos)</h2>
             <ul>
               <li>Precio de entrada Basic anual: <strong>14 €/mes sin IVA</strong> (16,94 €/mes con IVA) hasta 5 clientes.</li>
               <li>Plan Pro más popular (50 clientes, anual): <strong>89 €/mes sin IVA</strong> (107,69 €/mes con IVA).</li>

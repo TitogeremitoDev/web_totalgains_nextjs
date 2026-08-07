@@ -1,9 +1,9 @@
 ---
-title: "Harbiz Precios 2026: El Coste Real Sube a 313 €/mes con Add-ons y Marca Blanca"
-seoTitle: "Harbiz Precios 2026: Coste Real 313 €/mes"
-description: "Harbiz arranca en 22,99 €/mes pero con marca blanca, IA y vídeos el precio real sube a 240-313 €/mes al escalar. Con IVA y los 3 add-ons ocultos."
+title: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes (con IVA)"
+seoTitle: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes con IVA"
+description: "Precios Harbiz 2026 con IVA: Basic 22,99 €, Pro 143,99 €, My APP 240,79 €. Con marca blanca y add-ons llega a 313 €/mes. Verificado mayo 2026."
 date: "2026-05-23"
-lastModified: "2026-05-29"
+lastModified: "2026-07-26"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 16
@@ -70,6 +70,16 @@ faqs:
   - q: "¿Qué alternativas a Harbiz hay en español en 2026?"
     a: "Las alternativas en español más consolidadas en 2026 son [TotalGains](/alternativas/harbiz/) (plan plano desde 29,90 €/mes con IVA hasta 100 clientes, sin add-ons), [TrainerStudio](https://www.trainerstudio.com) (plan gratuito permanente para 3 clientes e ilimitado a 180,29 €/mes con IVA) y opciones internacionales como Trainerize ($10-380 USD/mes con add-ons). Cada una atiende un perfil distinto: Harbiz prioriza catálogo modular, TotalGains prioriza todo incluido y TrainerStudio prioriza simplicidad con plan free permanente. La elección depende del tamaño de tu cartera, la necesidad de marca blanca y la importancia que des a la modularidad."
 ---
+
+<div class="tg-callout" role="note">
+<strong>Precios Harbiz 2026 de un vistazo (con IVA):</strong>
+<ul style="margin: 8px 0 0; padding-left: 20px;">
+<li><strong>Basic 5 clientes:</strong> 22,99 €/mes mensual · 16,94 €/mes en anual</li>
+<li><strong>Pro 50 clientes:</strong> 143,99 €/mes mensual · 107,69 €/mes en anual</li>
+<li><strong>My APP 100 + add-ons:</strong> ~313 €/mes (con marca blanca, IA y vídeos)</li>
+</ul>
+Verificado a mano en harbiz.io el 13 de mayo de 2026. Tabla completa por tramos y desglose de add-ons más abajo.
+</div>
 
 Harbiz es una de las plataformas de gestión para entrenadores personales más utilizadas en España y Latam. Sus precios empiezan en 19 €/mes (sin IVA) para coaches que arrancan y escalan hasta planes profesionales con app marca blanca para coaches de varios cientos de clientes. Esta guía recoge la **tabla completa de planes y add-ons** con IVA 21% aplicado, verificada manualmente en harbiz.io el **13 de mayo de 2026**, junto a una explicación de cuándo cada plan tiene sentido y cómo encaja Harbiz frente a otras opciones del mercado en español.
 

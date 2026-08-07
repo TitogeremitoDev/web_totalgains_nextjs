@@ -17,6 +17,9 @@ import HistoricalTimelineClient from "@/components/HistoricalTimelineClient";
 import PreventionChecklistCard from "@/components/PreventionChecklistCard";
 import WhatsAppChatComparison from "@/components/WhatsAppChatComparison";
 import TrustDamageScale from "@/components/TrustDamageScale";
+import EvidenceLevelGrid from "@/components/EvidenceLevelGrid";
+import CyclePhasesReality from "@/components/CyclePhasesReality";
+import PrivacyLayersCard from "@/components/PrivacyLayersCard";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -37,6 +40,9 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__prevention_checklist__"></div>', Component: PreventionChecklistCard, gate: () => true },
   { marker: '<div class="__whatsapp_chat_comparison__"></div>', Component: WhatsAppChatComparison, gate: () => true },
   { marker: '<div class="__trust_damage_scale__"></div>', Component: TrustDamageScale, gate: () => true },
+  { marker: '<div class="__evidence_level_grid__"></div>', Component: EvidenceLevelGrid, gate: () => true },
+  { marker: '<div class="__cycle_phases_reality__"></div>', Component: CyclePhasesReality, gate: () => true },
+  { marker: '<div class="__privacy_layers__"></div>', Component: PrivacyLayersCard, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS
