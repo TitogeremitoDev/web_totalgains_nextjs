@@ -3,7 +3,7 @@ title: "App de Marca Blanca para Entrenadores: Guía Completa 2026"
 seoTitle: "App Marca Blanca Entrenadores: Guía 2026"
 description: "Guía completa de la app marca blanca para entrenadores en 2026: cómo funciona, qué cuesta en cada plataforma y cuándo te conviene."
 date: "2026-05-24"
-lastModified: "2026-05-24"
+lastModified: "2026-08-10"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 15
@@ -24,12 +24,12 @@ comparison:
   reviewedProducts:
     - name: "TotalGains"
       rating: 4.7
-      pros: "App marca blanca incluida en el plan Pro (89,90 €/mes con IVA hasta 100 clientes) y Unlimited. Sin add-on de pago único. Soporte en español para la configuración. Migración asistida gratuita."
+      pros: "App marca blanca incluida en todos los planes, desde el Starter de 29,90 €/mes con IVA. Sin add-on de pago único. Soporte en español para la configuración. Migración asistida gratuita."
       cons: "Plataforma joven (fundada en 2025), comunidad de coaches todavía en crecimiento. Sin integración nativa con MyFitnessPal. Valoración del propio fundador — autodeclarada, no auditada por tercero."
-      lowPrice: 89.90
+      lowPrice: 29.90
       highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 2
+      offerCount: 3
       url: "https://totalgains.es/onboarding/"
       image: "https://totalgains.es/images/blog/logos/logo-totalgains.webp"
     - name: "Trainerize"
@@ -56,7 +56,7 @@ faqs:
   - q: "¿Qué es una app de marca blanca para entrenadores personales?"
     a: "Una app de marca blanca es una aplicación móvil con tu logo, nombre, colores y splash screen personalizados que tus clientes descargan desde App Store y Google Play. La plataforma de gestión que la genera (Trainerize, Harbiz, TotalGains, MyPT Hub, etc.) es invisible para el cliente final: solo ve tu marca. Es lo opuesto a usar la app genérica de la plataforma con el logo del proveedor visible. Las apps marca blanca pueden ser independientes (con su propio bundle ID y listing ASO en App Store) o renderizadas dentro de una app contenedor de la plataforma, según el modelo de cada proveedor."
   - q: "¿Cuánto cuesta una app de marca blanca en 2026?"
-    a: "El coste varía mucho según la plataforma. TotalGains incluye marca blanca en el plan Pro (89,90 €/mes con IVA hasta 100 clientes) y Unlimited (149,90 €/mes) sin add-on de pago único. Trainerize cobra $169 de pago único (~204 €) por su Custom Branded App + Apple Developer Account propia obligatoria ($99/año, ~92 €), disponible solo en planes Pro y superiores. Harbiz ofrece dos rutas: add-on 'Personaliza tu app' a 30,24 €/mes con IVA o plan My APP con marca blanca incluida desde 240,79 €/mes con IVA para 50 clientes."
+    a: "El coste varía mucho según la plataforma. TotalGains incluye marca blanca en todos sus planes, desde el Starter de 29,90 €/mes con IVA, sin add-on de pago único. Trainerize cobra $169 de pago único (~204 €) por su Custom Branded App + Apple Developer Account propia obligatoria ($99/año, ~92 €), disponible solo en planes Pro y superiores. Harbiz ofrece dos rutas: add-on 'Personaliza tu app' a 30,24 €/mes con IVA o plan My APP con marca blanca incluida desde 240,79 €/mes con IVA para 50 clientes."
   - q: "¿Necesito una cuenta Apple Developer propia para tener app marca blanca?"
     a: "Depende del modelo técnico de cada plataforma. El Apple Developer Program tiene un coste real de 99 USD/año (~92 €) renovado automáticamente por Apple en la fecha de aniversario. La configuración inicial suele llevar 1-2 semanas: rellenar el formulario, verificar identidad y, si te registras como entidad jurídica en lugar de persona física, aportar un número D-U-N-S de Dun & Bradstreet (gratis pero tarda 5-15 días en emitirse). En modelos contenedor como TotalGains o Harbiz en su configuración estándar, no necesitas Apple Developer Account propia: la app se publica bajo la cuenta de la plataforma y tu marca se renderiza al login. En modelos independientes como Trainerize Custom Branded App o MyPT Hub White Label, la cuenta propia es obligatoria porque la app se publica con tu bundle ID. Decisión de diseño TG: optamos por el modelo contenedor para que el coach no se convierta en gestor de Apple Developer Account; el trade-off honesto es que pierdes listing autónomo en App Store. Si tu marketing depende de ASO independiente, el modelo independiente encaja mejor pese al coste anual."
   - q: "¿Mi app marca blanca aparece como app independiente en App Store?"
@@ -75,9 +75,9 @@ Si tu cliente abre la app y ve el logo de otra empresa antes que el tuyo, hay un
 
 ![App marca blanca para entrenadores personales: dos pantallas móvil mostrando misma plataforma con identidad visual personalizada](/images/blog/marca-blanca-hero.webp)
 
-> **Transparencia**: soy Germán Martínez Calvente, fundador de [TotalGains](/sobre-nosotros/), software de gestión que ofrece app marca blanca incluida en plan Pro. Esta guía cubre cómo funciona el modelo en distintas plataformas (Trainerize, Harbiz, MyPT Hub, TotalGains) con datos verificados; las recomendaciones sobre cuándo elegir cada una están escritas para que el lector tome la decisión que mejor encaje con SU modelo de negocio, no con la mía.
+> **Transparencia**: soy Germán Martínez Calvente, fundador de [TotalGains](/sobre-nosotros/), software de gestión que ofrece app marca blanca incluida en todos sus planes. Esta guía cubre cómo funciona el modelo en distintas plataformas (Trainerize, Harbiz, MyPT Hub, TotalGains) con datos verificados; las recomendaciones sobre cuándo elegir cada una están escritas para que el lector tome la decisión que mejor encaje con SU modelo de negocio, no con la mía.
 >
-> Por contexto: construí TotalGains porque, al hablar con coaches autónomos en España, identifiqué que **muchos de ellos invertían tiempo y dinero construyendo marca personal en Instagram, TikTok y YouTube, pero luego sus clientes abrían "la app de Trainerize" o "la app de Harbiz" en lugar de la app del coach**. Esa desconexión entre la marca que se promociona y la marca que recibe el cliente era el problema concreto que quería resolver — por eso TG incluye marca blanca en el plan Pro sin add-on de pago único. Esa filosofía no es mejor universalmente; cada plataforma resuelve esto con un modelo distinto que vamos a desglosar.
+> Por contexto: construí TotalGains porque, al hablar con coaches autónomos en España, identifiqué que **muchos de ellos invertían tiempo y dinero construyendo marca personal en Instagram, TikTok y YouTube, pero luego sus clientes abrían "la app de Trainerize" o "la app de Harbiz" en lugar de la app del coach**. Esa desconexión entre la marca que se promociona y la marca que recibe el cliente era el problema concreto que quería resolver — por eso TG incluye marca blanca en todos sus planes sin add-on de pago único. Esa filosofía no es mejor universalmente; cada plataforma resuelve esto con un modelo distinto que vamos a desglosar.
 
 ---
 
@@ -168,9 +168,9 @@ Lo que cuenta no es el precio de la app marca blanca aislada, sino el **coste fu
 
 - **Trainerize**: la Custom Branded App parece "barata" ($169 pago único) pero suma a un plan Pro 100 con add-ons que ya cuesta $315/mes y requiere Apple Developer Account anual. El coste año 1 funcional ronda los 4.500 €.
 - **Harbiz**: el add-on "Personaliza tu app" parece "barato" (30,24 €/mes) pero suma a un plan Pro 100 que ya cuesta 240,79 €/mes. El coste año 1 ronda los 3.252 €.
-- **TotalGains**: la marca blanca está dentro del plan Pro (89,90 €/mes), sin pago único ni Apple Developer Account propia. El coste año 1 es de 1.079 €.
+- **TotalGains**: la marca blanca está incluida en todos los planes, sin pago único ni Apple Developer Account propia. En este escenario de 100 clientes (plan Pro) el coste año 1 es de 1.079 €; por debajo de 25 clientes el plan Starter la incluye igual por 358,80 €/año.
 
-> **Decisión de diseño en TotalGains**: incluir marca blanca en el plan Pro sin add-on fue una decisión consciente sobre **simplicidad del coste**. Al evaluar las alternativas como coach, las facturas con plan base + 3 add-ons modulares eran difíciles de comparar. Decidimos diseñar TG con una sola cifra que represente el coste funcional completo. El trade-off: para coaches que NO necesitan marca blanca (1-2 clientes en validación de modelo), están pagando por una función que no usan, y el plan plano modular de Harbiz Basic o el Free de TrainerStudio les sale más eficiente económicamente.
+> **Decisión de diseño en TotalGains**: incluir marca blanca en todos los planes sin add-on fue una decisión consciente sobre **simplicidad del coste**. Al evaluar las alternativas como coach, las facturas con plan base + 3 add-ons modulares eran difíciles de comparar. Decidimos diseñar TG con una sola cifra que represente el coste funcional completo. El trade-off: para coaches que NO necesitan marca blanca (1-2 clientes en validación de modelo), están pagando por una función que no usan, y el plan plano modular de Harbiz Basic o el Free de TrainerStudio les sale más eficiente económicamente.
 
 ---
 
@@ -326,7 +326,7 @@ Una app de marca blanca es una aplicación móvil con tu logo, nombre, colores y
 
 ### ¿Cuánto cuesta una app de marca blanca en 2026?
 
-El coste varía mucho según la plataforma. TotalGains incluye marca blanca en el plan Pro (89,90 €/mes con IVA hasta 100 clientes) y Unlimited (149,90 €/mes) sin add-on de pago único. Trainerize cobra $169 de pago único (~204 €) por su Custom Branded App + Apple Developer Account propia obligatoria ($99/año, ~92 €), disponible solo en planes Pro y superiores. Harbiz ofrece dos rutas: add-on "Personaliza tu app" a 30,24 €/mes con IVA o plan My APP con marca blanca incluida desde 240,79 €/mes con IVA para 50 clientes.
+El coste varía mucho según la plataforma. TotalGains incluye marca blanca en todos sus planes, desde el Starter de 29,90 €/mes con IVA, sin add-on de pago único. Trainerize cobra $169 de pago único (~204 €) por su Custom Branded App + Apple Developer Account propia obligatoria ($99/año, ~92 €), disponible solo en planes Pro y superiores. Harbiz ofrece dos rutas: add-on "Personaliza tu app" a 30,24 €/mes con IVA o plan My APP con marca blanca incluida desde 240,79 €/mes con IVA para 50 clientes.
 
 ### ¿Necesito una cuenta Apple Developer propia para tener app marca blanca?
 
@@ -366,7 +366,7 @@ Estrictamente gratuitas en plataformas profesionales, prácticamente no. Algunas
 
 ## Sobre el autor
 
-**Germán Martínez Calvente** es fundador y desarrollador de [TotalGains](/), software para entrenadores personales con IA, app marca blanca incluida en plan Pro y soporte en español. Ingeniero de software con experiencia previa construyendo aplicaciones móviles y web a escala. Vive y trabaja desde La Zubia (Granada).
+**Germán Martínez Calvente** es fundador y desarrollador de [TotalGains](/), software para entrenadores personales con IA, app marca blanca incluida en todos sus planes y soporte en español. Ingeniero de software con experiencia previa construyendo aplicaciones móviles y web a escala. Vive y trabaja desde La Zubia (Granada).
 
 - 📍 La Zubia, Granada, España
 - 🔗 [Sobre nosotros](/sobre-nosotros/)

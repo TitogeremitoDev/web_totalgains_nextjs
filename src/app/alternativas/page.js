@@ -123,7 +123,7 @@ export default function AlternativasHub() {
           </p>
           <ul style={{ color: "var(--text-secondary, #aaa)", lineHeight: 1.8, paddingLeft: 20 }}>
             <li><strong>Si trabajas en España o Latinoamérica</strong>: el soporte en español y la base de alimentos hispanos hacen una diferencia operativa. Compara TotalGains con <Link href="/alternativas/harbiz/">Harbiz</Link> y <Link href="/alternativas/harbiz/precios/">sus precios reales</Link>.</li>
-            <li><strong>Si tu funcionalidad requerida es alta</strong> (marca blanca + IA dietas + biblioteca de vídeos): el "precio base" es engañoso. Suma los add-ons obligatorios y compara totales finales, no entrada.</li>
+            <li><strong>Si tu funcionalidad requerida es alta</strong> (marca blanca + IA dietas + biblioteca de vídeos): el &quot;precio base&quot; es engañoso. Suma los add-ons obligatorios y compara totales finales, no entrada.</li>
             <li><strong>Si planeas escalar 50 → 200 clientes</strong>: las plataformas con tramos discretos (Harbiz, Trainerize, PTminder) suben de precio en saltos al cruzar volúmenes. TotalGains mantiene plan plano hasta 100 clientes (Pro) y luego ilimitado (Unlimited).</li>
             <li><strong>Si tu cliente está acostumbrado al ecosistema americano</strong> (MyFitnessPal, wearables): <Link href="/alternativas/trainerize/">Trainerize</Link> tiene mejor integración aunque pagues más por funcionalidad equivalente.</li>
           </ul>

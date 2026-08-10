@@ -77,7 +77,7 @@ export default function UltimoArticuloPage() {
             href={targetUrl}
             style={{ color: "var(--primary-light, #a78bfa)", textDecoration: "underline" }}
           >
-            haz click aquí para ir a "{latest.title}"
+            haz click aquí para ir a &quot;{latest.title}&quot;
           </a>
           .
         </p>

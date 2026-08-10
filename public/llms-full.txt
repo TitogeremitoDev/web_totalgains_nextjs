@@ -30,6 +30,13 @@ El soporte es nativo en español, la migración asistida desde Trainerize, Harbi
 
 ### Vertical Coach Autónomo
 
+#### Gratuito — 0 €/mes, de por vida
+
+- Hasta 3 atletas activos.
+- Sin tarjeta de crédito y sin caducidad: no es una prueba de 14 días, es un plan permanente.
+- Pensado para el coach que arranca y quiere validar el modelo con sus primeros clientes.
+- Al superar los 3 atletas se pasa a Starter sin migrar datos.
+
 #### Starter — 29,90 €/mes con IVA
 
 - Hasta 25 clientes activos.
@@ -37,25 +44,22 @@ El soporte es nativo en español, la migración asistida desde Trainerize, Harbi
 - Generación de planes nutricionales con IA y base de +240.000 alimentos en español.
 - Cobros recurrentes con Stripe (España y Latinoamérica).
 - Seguimiento de progreso, check-ins y galería de fotos.
-- App cliente blanca TotalGains (sin branding propio).
+- App marca blanca incluida (iOS + Android con tu logo, colores y nombre).
+- Branding generado por IA en un clic.
+- Biblioteca de vídeos del coach, notificaciones push con tu marca y feedback en vídeo.
 - 14 días gratis sin tarjeta. Sin permanencia.
 - Migración asistida en español incluida.
 
 #### Pro — 89,90 €/mes con IVA
 
 - Hasta 100 clientes activos.
-- Todo lo del Starter.
-- App marca blanca incluida (iOS + Android con tu logo, colores y nombre).
-- Branding generado por IA en un clic.
-- Biblioteca de vídeos del coach (subida directa al perfil del cliente).
-- Notificaciones push personalizadas con tu marca.
-- Feedback en vídeo integrado.
-- Soporte prioritario.
+- Exactamente las mismas funciones que el Starter (app marca blanca incluida): entre planes solo cambia el número de atletas activos y el nivel de soporte.
+- Soporte prioritario (respuesta <24h).
 
 #### Unlimited — 149,90 €/mes con IVA
 
 - Clientes ilimitados.
-- Todo lo del Pro.
+- Exactamente las mismas funciones que Starter y Pro (app marca blanca incluida).
 - Soporte VIP (canal directo con el equipo).
 - Migración asistida completa con transcripción IA de documentos previos (<2 min por documento).
 - Sesión mensual de revisión de uso con el fundador.

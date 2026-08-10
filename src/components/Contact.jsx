@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import { Mail, Phone, CheckCircle, XCircle } from 'lucide-react';
@@ -16,6 +17,7 @@ const Contact = () => {
 
     // Status: 'idle', 'sending', 'success', 'error'
     const [status, setStatus] = useState('idle');
+    const [privacyAccepted, setPrivacyAccepted] = useState(false);
 
     const handleChange = (e) => {
         setFormData({
@@ -26,6 +28,11 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        // Sin consentimiento no se envía nada (el `required` del checkbox ya lo
+        // bloquea en el navegador; esto cubre el submit programático).
+        if (!privacyAccepted) return;
+
         setStatus('sending');
 
         // Verify email format with a robust regex
@@ -59,9 +66,10 @@ const Contact = () => {
             },
             USER_ID
         )
-            .then((response) => {
+            .then(() => {
                 setStatus('success');
                 setFormData({ name: '', email: '', subject: '', message: '' });
+                setPrivacyAccepted(false);
             })
             .catch((err) => {
                 setStatus('error');
@@ -162,6 +170,28 @@ const Contact = () => {
                                     placeholder="¿En qué podemos ayudarte?"
                                     rows="5"
                                 ></textarea>
+                            </div>
+
+                            {/* Consentimiento RGPD (art. 6.1.a y 13): obligatorio antes de enviar */}
+                            <div className="form-consent">
+                                <input
+                                    type="checkbox"
+                                    id="privacy-consent"
+                                    name="privacyConsent"
+                                    checked={privacyAccepted}
+                                    onChange={(e) => setPrivacyAccepted(e.target.checked)}
+                                    required
+                                />
+                                <label htmlFor="privacy-consent">
+                                    He leído y acepto la{' '}
+                                    <Link href="/privacy/" target="_blank" rel="noopener noreferrer">
+                                        Política de Privacidad
+                                    </Link>
+                                    . Responsable: Germán Martínez Calvente (NIF 77137460Z). Finalidad:
+                                    responder a tu consulta. Legitimación: tu consentimiento. No se
+                                    ceden datos a terceros salvo obligación legal. Puedes ejercer tus
+                                    derechos de acceso, rectificación y supresión en soporte@totalgains.es.
+                                </label>
                             </div>
 
                             <button

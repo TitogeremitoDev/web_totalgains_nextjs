@@ -1,0 +1,133 @@
+/* ──────────────────────────────────────────────
+   BANNER DE COOKIES
+   z-index 1001 para quedar por encima del StickyCTA (999)
+   mientras el usuario no ha decidido.
+   ────────────────────────────────────────────── */
+.cookie-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1001;
+    padding: 14px 16px calc(14px + env(safe-area-inset-bottom, 0px));
+    background: rgba(2, 6, 23, 0.94);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid var(--glass-border, rgba(255, 255, 255, 0.08));
+    animation: cookie-banner-in 0.35s ease both;
+}
+
+@keyframes cookie-banner-in {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.cookie-banner-inner {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cookie-banner-text {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    flex: 1;
+    min-width: 0;
+}
+
+.cookie-banner-icon {
+    color: #22c55e;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.cookie-banner-text p {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-secondary, #b8b8d1);
+}
+
+.cookie-banner-text a {
+    color: var(--text-primary, #fff);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.cookie-banner-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.cookie-btn {
+    font: inherit;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: transform 0.15s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.cookie-btn:active {
+    transform: scale(0.97);
+}
+
+.cookie-btn--ghost {
+    background: transparent;
+    color: var(--text-secondary, #b8b8d1);
+    border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.14));
+}
+
+.cookie-btn--ghost:hover {
+    background: rgba(255, 255, 255, 0.06);
+    color: var(--text-primary, #fff);
+}
+
+.cookie-btn--primary {
+    background: #2563eb;
+    color: #fff;
+    border: 1px solid #2563eb;
+}
+
+.cookie-btn--primary:hover {
+    background: #1d4ed8;
+}
+
+.cookie-btn:focus-visible {
+    outline: 2px solid #22c55e;
+    outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+    .cookie-banner-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .cookie-banner-text p {
+        font-size: 0.78rem;
+    }
+
+    .cookie-banner-actions {
+        justify-content: stretch;
+    }
+
+    .cookie-btn {
+        flex: 1;
+        padding: 12px 16px;
+    }
+}

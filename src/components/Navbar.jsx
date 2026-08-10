@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import './Navbar.css';
 import { trackEvent } from '@/components/Analytics';
@@ -63,7 +64,7 @@ const Navbar = () => {
         <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}>
             <div className="container navbar-container">
                 <a href="#home" className="navbar-logo" onClick={(e) => handleNavigation(e, '#home')}>
-                    <img src="/logo-optimized.webp" alt="TotalGains" />
+                    <Image src="/logo-optimized.webp" alt="TotalGains" width={40} height={40} priority />
                     <span className="logo-text">TotalGains</span>
                 </a>
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, Suspense } from 'react';
+import React, { useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { CheckCircle, XCircle, Lock, Eye, EyeOff } from 'lucide-react';
 import './ResetPassword.css';
@@ -15,16 +15,13 @@ function ResetPasswordContent() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
-    const [status, setStatus] = useState('idle'); // idle | sending | success | error
-    const [errorMessage, setErrorMessage] = useState('');
-
-    // Validar que haya token al cargar
-    useEffect(() => {
-        if (!token) {
-            setStatus('error');
-            setErrorMessage('No se encontró el token de recuperación. Solicita un nuevo email.');
-        }
-    }, [token]);
+    // El token se conoce ya en el primer render (useSearchParams dentro de
+    // <Suspense>), así que el estado inicial se deriva de él en vez de
+    // corregirlo después con un efecto.
+    const [status, setStatus] = useState(token ? 'idle' : 'error'); // idle | sending | success | error
+    const [errorMessage, setErrorMessage] = useState(
+        token ? '' : 'No se encontró el token de recuperación. Solicita un nuevo email.'
+    );
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -190,7 +187,9 @@ function ResetPasswordContent() {
 
 export default function ResetPassword() {
     return (
-        <Suspense fallback={<div className="reset-page"><div className="reset-container"><div className="reset-card">Cargando...</div></div></div>}>
+        // El fallback es lo único que existe en el HTML estático (useSearchParams
+        // fuerza render en cliente), así que lleva el <h1> de la página.
+        <Suspense fallback={<div className="reset-page"><div className="reset-container"><div className="reset-card"><h1>Nueva Contraseña</h1><p>Cargando…</p></div></div></div>}>
             <ResetPasswordContent />
         </Suspense>
     );

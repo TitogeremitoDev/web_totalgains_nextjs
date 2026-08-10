@@ -156,7 +156,7 @@ export default function EvidenceLevelGrid() {
       </div>
 
       <p style={{ marginTop: 18, textAlign: "center", fontSize: "0.8rem", color: "var(--text-secondary,#aaa)", lineHeight: 1.55, fontStyle: "italic" }}>
-        La moda del "entreno por fases" se sostiene sobre las 3 afirmaciones de arriba (bajas o sin respaldo), no sobre las 3 de abajo.
+        La moda del &quot;entreno por fases&quot; se sostiene sobre las 3 afirmaciones de arriba (bajas o sin respaldo), no sobre las 3 de abajo.
       </p>
     </section>
   );

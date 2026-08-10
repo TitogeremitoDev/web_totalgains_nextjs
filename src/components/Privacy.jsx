@@ -1,4 +1,6 @@
 import React from 'react';
+import Link from 'next/link';
+import CookiePreferencesButton from './CookiePreferencesButton';
 import './Privacy.css';
 
 const Privacy = () => {
@@ -6,7 +8,7 @@ const Privacy = () => {
         <div className="legal-page">
             <div className="container">
                 <h1>Política de Privacidad</h1>
-                <p className="last-updated">Última actualización: 11 de Enero de 2025</p>
+                <p className="last-updated">Última actualización: 10 de Agosto de 2026</p>
 
                 <section className="legal-section">
                     <h2>1. Información que Recopilamos</h2>
@@ -68,17 +70,27 @@ const Privacy = () => {
                         <li><strong>Oposición:</strong> Oponerte al procesamiento de ciertos datos</li>
                     </ul>
                     <p>Para ejercer estos derechos, contacta: <a href="mailto:soporte@totalgains.es">soporte@totalgains.es</a></p>
-                    <p><strong>Eliminación de Cuenta en la App:</strong> Además de contactar por email, puedes solicitar la eliminación inmediata de tu cuenta y todos tus datos asociados directamente desde la aplicación móvil. Esta opción se encuentra disponible en la sección de "Perfil" o "Ajustes" &gt; "Eliminar Cuenta". Una vez solicitada, tus datos dejarán de ser visibles y se eliminarán permanentemente según nuestros plazos de retención.</p>
+                    <p><strong>Eliminación de Cuenta en la App:</strong> Además de contactar por email, puedes solicitar la eliminación inmediata de tu cuenta y todos tus datos asociados directamente desde la aplicación móvil. Esta opción se encuentra disponible en la sección de &quot;Perfil&quot; o &quot;Ajustes&quot; &gt; &quot;Eliminar Cuenta&quot;. Una vez solicitada, tus datos dejarán de ser visibles y se eliminarán permanentemente según nuestros plazos de retención.</p>
                 </section>
 
                 <section className="legal-section">
                     <h2>6. Cookies</h2>
-                    <p>Utilizamos cookies esenciales para:</p>
+                    <p><strong>Cookies necesarias</strong> (no requieren consentimiento, sin ellas la web no funciona):</p>
                     <ul>
                         <li>Mantener tu sesión iniciada</li>
-                        <li>Recordar tus preferencias</li>
-                        <li>Mejorar el rendimiento de la aplicación</li>
+                        <li>Recordar tus preferencias, incluida tu decisión sobre cookies</li>
+                        <li>Seguridad y rendimiento básico de la aplicación</li>
                     </ul>
+                    <p><strong>Cookies de analítica</strong> (solo se instalan si las aceptas expresamente en el banner):</p>
+                    <ul>
+                        <li><strong>Google Analytics 4</strong> (Google Ireland Ltd.) — medición de audiencia: páginas visitadas, origen del tráfico y comportamiento agregado. Conservación máxima: 14 meses.</li>
+                        <li><strong>Microsoft Clarity</strong> (Microsoft Ireland Operations Ltd.) — mapas de calor y grabación anónima de la navegación para detectar errores de usabilidad. Conservación máxima: 13 meses.</li>
+                    </ul>
+                    <p>
+                        Mientras no aceptes, esos scripts no se cargan en tu navegador. Puedes retirar
+                        tu consentimiento en cualquier momento y sin coste: <CookiePreferencesButton />.
+                        También puedes bloquear o eliminar cookies desde la configuración de tu navegador.
+                    </p>
                 </section>
 
                 <section className="legal-section">
@@ -106,7 +118,7 @@ const Privacy = () => {
                 </section>
 
                 <div className="back-link">
-                    <a href="/" className="btn btn-outline">← Volver al Inicio</a>
+                    <Link href="/" className="btn btn-outline">← Volver al Inicio</Link>
                 </div>
             </div>
         </div>

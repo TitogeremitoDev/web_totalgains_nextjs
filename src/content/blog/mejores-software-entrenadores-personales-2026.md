@@ -3,7 +3,7 @@ title: "Los 5 Mejores Software para Entrenadores Personales en España 2026"
 seoTitle: "5 Mejores Software Entrenadores 2026: 29 a 300 €/mes"
 description: "Comparativa 2026 de los 5 software más usados en España: precios reales con IVA (de 29,90 a +300 €/mes), pros, cons y qué elegir según tu cartera."
 date: "2026-04-21"
-lastModified: "2026-04-24"
+lastModified: "2026-08-10"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 15
@@ -15,7 +15,7 @@ comparison:
   reviewedProducts:
     - name: "TotalGains"
       rating: 5
-      pros: "IA avanzada incluida, marca blanca en plan Pro, soporte en español, migración asistida"
+      pros: "IA avanzada y marca blanca incluidas en todos los planes, soporte en español, migración asistida"
       cons: "Plataforma joven (2025), sin MyFitnessPal nativo"
       lowPrice: 29.90
       highPrice: 149.90
@@ -65,11 +65,11 @@ faqs:
   - q: "¿Cuánto cuesta Trainerize al mes?"
     a: "Trainerize factura en USD (verificado mayo 2026 en trainerize.com). Plan Grow: $10/mes (2 clientes). Pro 50: $135/mes para 50 clientes. Studio Plus: $275/mes (500 clientes). Advanced Nutrition Coaching es add-on de $45/mes en planes Pro 30-200. Custom Branded App es pago único de $169. Para un coach con funcionalidad completa en Pro 50 (base + add-ons): $225/mes sin IVA, ≈ $272/mes con IVA 21% (~250 €)."
   - q: "¿Qué software para entrenadores personales tiene app marca blanca incluida?"
-    a: "TotalGains incluye app marca blanca en el plan Pro (89,90€/mes) sin add-ons. TrainerStudio la incluye en sus planes de pago según su web oficial. En Harbiz requiere el add-on \"Personaliza tu app\" por 30,24 €/mes con IVA (verificado mayo 2026), o cambiar al plan My APP. En MyPT Hub cuesta un add-on de ~145 €/mes adicional (según web oficial mypthub.com, sujeto a cambios). Trainerize requiere Custom Branded App: pago único de $169 en planes Pro, incluida en Studio Plus/Max."
+    a: "TotalGains incluye app marca blanca en todos sus planes, desde 29,90€/mes, sin add-ons. TrainerStudio la incluye en sus planes de pago según su web oficial. En Harbiz requiere el add-on \"Personaliza tu app\" por 30,24 €/mes con IVA (verificado mayo 2026), o cambiar al plan My APP. En MyPT Hub cuesta un add-on de ~145 €/mes adicional (según web oficial mypthub.com, sujeto a cambios). Trainerize requiere Custom Branded App: pago único de $169 en planes Pro, incluida en Studio Plus/Max."
   - q: "¿Hay algún software para entrenadores personales con prueba gratuita?"
-    a: "Sí. TotalGains ofrece 14 días de prueba gratis sin tarjeta. Harbiz también tiene 14 días sin tarjeta. PTminder ofrece 14 días sin tarjeta. TrainerStudio tiene un plan gratuito permanente con 3 clientes. Trainerize y MyPT Hub también ofrecen periodos de prueba, consultables en sus webs."
+    a: "Sí. TotalGains tiene un plan gratuito permanente con 3 atletas (sin tarjeta y sin caducidad) además de 14 días de prueba en sus planes de pago. Harbiz también tiene 14 días sin tarjeta. PTminder ofrece 14 días sin tarjeta. TrainerStudio tiene un plan gratuito permanente con 3 clientes. Trainerize y MyPT Hub también ofrecen periodos de prueba, consultables en sus webs."
   - q: "¿Cuál es el software más barato para entrenadores personales en España?"
-    a: "En precios base: TrainerStudio Free (3 clientes gratis) o Harbiz Basic (14€/mes sin IVA hasta 5 clientes en facturación anual, 16,94 €/mes con IVA; verificado mayo 2026) son los más baratos. TotalGains Starter (29,90€/mes) incluye 25 clientes e IA avanzada, siendo la opción más coste-efectiva cuando se consideran las funciones incluidas. En precios con funcionalidad completa (marca blanca + IA), TotalGains Pro (89,90€) es el más competitivo del mercado."
+    a: "En precios base, las opciones sin coste son TotalGains Free y TrainerStudio Free, ambas con 3 clientes gratis de forma permanente; por debajo de los planes de pago está Harbiz Basic (14€/mes sin IVA hasta 5 clientes en facturación anual, 16,94 €/mes con IVA; verificado mayo 2026). TotalGains Starter (29,90€/mes) incluye 25 clientes e IA avanzada, siendo la opción más coste-efectiva cuando se consideran las funciones incluidas. En precios con funcionalidad completa (marca blanca + IA), TotalGains Pro (89,90€) es el más competitivo del mercado."
   - q: "¿Qué software permite migrar desde Trainerize en español?"
     a: "TotalGains incluye migración asistida desde Trainerize, Harbiz, MyPT Hub o Excel en todos sus planes, gestionada por soporte humano en español. Importa clientes, recrea rutinas con IA y coordina el onboarding de los atletas. El tiempo típico de migración es menos de 5 días para 30-60 clientes activos. Ninguna plataforma anglosajona ofrece esto en español."
 ---
@@ -121,7 +121,7 @@ En mi experiencia hablando con cientos de entrenadores que han probado 3-4 plata
 | IA rutinas incluida en plan base | ✅<br><small>Sí</small> | ⚠️<br><small>Limitada</small> | ⚠️<br><small>Add-on</small> | ⚠️<br><small>Add-on</small> | ✅<br><small>Sí</small> |
 | IA dietas incluida en plan base | ✅<br><small>Avanzada</small> | ⚠️<br><small>Add-on 45 $</small> | ⚠️<br><small>Add-on 14,99 €</small> | ⚠️<br><small>Add-on</small> | ✅<br><small>Sí</small> |
 | Base datos alimentos personalizable | ✅<br><small>Sí</small> | ❌<br><small>No</small> | ⚠️<br><small>Parcial</small> | ❌<br><small>No</small> | ⚠️<br><small>Parcial</small> |
-| App marca blanca incluida | ✅<br><small>En plan Pro</small> | ⚠️<br><small>Tier alto</small> | ⚠️<br><small>Add-on 30,24 € con IVA</small> | ⚠️<br><small>Add-on ~145 €</small> | ✅<br><small>Incluida</small> |
+| App marca blanca incluida | ✅<br><small>Todos los planes</small> | ⚠️<br><small>Tier alto</small> | ⚠️<br><small>Add-on 30,24 € con IVA</small> | ⚠️<br><small>Add-on ~145 €</small> | ✅<br><small>Incluida</small> |
 | Check-ins semanales automáticos | ✅<br><small>Sí</small> | ❌<br><small>Manual</small> | ✅<br><small>Sí</small> | ✅<br><small>Sí</small> | ✅<br><small>Sí</small> |
 | Módulo resistencia/cardio integrado | ✅<br><small>Completo</small> | ⚠️<br><small>Parcial</small> | ⚠️<br><small>Parcial</small> | ⚠️<br><small>Parcial</small> | ⚠️<br><small>Parcial</small> |
 | Pagos recurrentes Stripe | ✅<br><small>Sí</small> | ⚠️<br><small>Add-on en planes bajos</small> | ✅<br><small>Sí</small> | ✅<br><small>Sí</small> | ✅<br><small>Sí</small> |
@@ -152,14 +152,14 @@ Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
 - Generador de rutinas con [IA que usa tu propia base de datos de ejercicios](/ia-entrenador-personal/)
 - Generador de dietas con [librería personalizada de más de 240.000 alimentos](/base-datos-alimentos-fitness/) y cálculo automático de macros
 - Check-ins semanales automatizados estructurados
-- [App de marca blanca](/app-marca-blanca-entrenador-personal/) **incluida desde el plan Pro** — tus clientes descargan una app con tu logo, tus colores y tu identidad visual
+- [App de marca blanca](/app-marca-blanca-entrenador-personal/) **incluida en todos los planes** — tus clientes descargan una app con tu logo, tus colores y tu identidad visual
 - Pagos recurrentes con Stripe integrados de forma nativa, sin comisiones adicionales
 - Módulo completo de entrenamiento de resistencia y endurance (carrera, bicicleta, natación) integrado con el entrenamiento de fuerza
 - [Seguimiento centralizado de clientes](/gestion-clientes-fitness/): peso, medidas, progresión de cargas, adherencia, feedback
 - Soporte en español por email y chat, con respuesta en menos de 24 horas
 
 **Ventajas diferenciales frente al resto**:
-- **Plan Pro con marca blanca incluida a 89,90 €** — el precio más bajo del mercado con app marca blanca integrada sin add-ons
+- **Marca blanca incluida en todos los planes, desde 29,90 €** — el precio más bajo del mercado con app marca blanca integrada sin add-ons
 - **IA avanzada tanto en rutinas como en dietas** incluida en el plan base — Harbiz, Trainerize y MyPT Hub cobran la IA de dietas como add-on adicional
 - **Límite de 100 clientes en el plan Pro** — el doble que Harbiz Pro (50) o Trainerize Pro 50
 - **Migración asistida por soporte humano en español, incluida en todos los planes** — ninguna plataforma anglosajona lo ofrece
@@ -359,7 +359,7 @@ En mi experiencia atendiendo a entrenadores que han migrado desde [Trainerize](/
 
 **Entrenador autónomo con 10–100 clientes activos en España o Latinoamérica** → **TotalGains Pro** (89,90 €). Es el tramo donde gana claramente: precio plano, [marca blanca incluida](/app-marca-blanca-entrenador-personal/), [IA avanzada](/ia-entrenador-personal/) de rutinas y dietas, soporte nativo en español y migración asistida. La opción más coste-efectiva del mercado con funcionalidad completa.
 
-**Entrenador empezando con 1-3 clientes y presupuesto cero** → **TrainerStudio Free** como opción inmediata, o **TotalGains Starter** (29,90 €) si quieres directamente un plan profesional con todo incluido desde el primer día.
+**Entrenador empezando con 1-3 clientes y presupuesto cero** → **TotalGains Free** o **TrainerStudio Free**, ambos con 3 clientes gratis de forma permanente. Si ya quieres el plan profesional completo desde el primer día, **TotalGains Starter** (29,90 €) sube el tope a 25 clientes con las mismas funciones.
 
 **Entrenador que trabaja principalmente con clientes anglosajones** → [Trainerize](/alternativas/trainerize/) sigue teniendo el ecosistema de integraciones más maduro con MyFitnessPal y wearables americanos — si ese es tu mercado, la diferencia de precio compensa.
 
@@ -409,15 +409,15 @@ Trainerize factura en USD (verificado mayo 2026 en trainerize.com). Plan Grow: *
 
 ### ¿Qué software para entrenadores personales tiene app marca blanca incluida?
 
-TotalGains incluye [app marca blanca](/app-marca-blanca-entrenador-personal/) en el plan Pro (89,90€/mes) sin add-ons. TrainerStudio la incluye en sus planes de pago según su web oficial. En Harbiz se obtiene mediante el add-on "Personaliza tu app" (**30,24 €/mes con IVA**, verificado mayo 2026) o cambiando al plan My APP. En MyPT Hub cuesta ~145 €/mes adicional (según mypthub.com, sujeto a cambios). En Trainerize, la **Custom Branded App es pago único de $169** en planes Pro (incluida en Studio Plus/Max).
+TotalGains incluye [app marca blanca](/app-marca-blanca-entrenador-personal/) en todos sus planes, desde 29,90€/mes, sin add-ons. TrainerStudio la incluye en sus planes de pago según su web oficial. En Harbiz se obtiene mediante el add-on "Personaliza tu app" (**30,24 €/mes con IVA**, verificado mayo 2026) o cambiando al plan My APP. En MyPT Hub cuesta ~145 €/mes adicional (según mypthub.com, sujeto a cambios). En Trainerize, la **Custom Branded App es pago único de $169** en planes Pro (incluida en Studio Plus/Max).
 
 ### ¿Hay algún software para entrenadores personales con prueba gratuita?
 
-Sí. TotalGains ofrece 14 días de prueba gratis sin tarjeta. Harbiz también tiene 14 días sin tarjeta. PTminder ofrece 14 días sin tarjeta. TrainerStudio tiene un plan gratuito permanente con 3 clientes. Trainerize y MyPT Hub también ofrecen periodos de prueba, consultables en sus webs.
+Sí. TotalGains tiene un plan gratuito permanente con 3 atletas (sin tarjeta y sin caducidad) además de 14 días de prueba en sus planes de pago. Harbiz también tiene 14 días sin tarjeta. PTminder ofrece 14 días sin tarjeta. TrainerStudio tiene un plan gratuito permanente con 3 clientes. Trainerize y MyPT Hub también ofrecen periodos de prueba, consultables en sus webs.
 
 ### ¿Cuál es el software más barato para entrenadores personales en España?
 
-En precios base: TrainerStudio Free (3 clientes gratis) o Harbiz Basic (14 €/mes sin IVA hasta 5 clientes en facturación anual, 16,94 €/mes con IVA; verificado mayo 2026) son los más baratos. TotalGains Starter (29,90€/mes) incluye 25 clientes e IA avanzada, siendo la opción más coste-efectiva cuando se consideran las funciones incluidas. En precios con funcionalidad completa (marca blanca + IA), **TotalGains Pro (89,90 €) es el más competitivo del mercado**.
+En precios base, las opciones sin coste son TotalGains Free y TrainerStudio Free, ambas con 3 clientes gratis de forma permanente; por debajo de los planes de pago está Harbiz Basic (14 €/mes sin IVA hasta 5 clientes en facturación anual, 16,94 €/mes con IVA; verificado mayo 2026). TotalGains Starter (29,90€/mes) incluye 25 clientes e IA avanzada, siendo la opción más coste-efectiva cuando se consideran las funciones incluidas. En precios con funcionalidad completa (marca blanca + IA), **TotalGains Pro (89,90 €) es el más competitivo del mercado**.
 
 ### ¿Qué software permite migrar desde Trainerize en español?
 

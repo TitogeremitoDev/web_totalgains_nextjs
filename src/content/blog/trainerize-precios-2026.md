@@ -3,7 +3,7 @@ title: "Trainerize Precios 2026: Cuánto Cuesta Realmente con Todos los Add-ons"
 seoTitle: "Trainerize Precios 2026: Add-ons Reales"
 description: "Tablas reales de precios Trainerize 2026: planes Grow, Pro y Studio, add-ons obligatorios y coste total con IVA. Verificado en mayo 2026."
 date: "2026-05-13"
-lastModified: "2026-05-29"
+lastModified: "2026-08-10"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 22
@@ -76,7 +76,7 @@ faqs:
   - q: "¿Trainerize tiene soporte en español?"
     a: "El soporte oficial de Trainerize es principalmente en inglés, con franjas horarias orientadas a EE.UU. y Canadá. La interfaz de la plataforma tampoco está traducida al español. Algunos usuarios hispanohablantes reportan respuestas en español por email pero no es el estándar. Si trabajas con clientes españoles o hispanohablantes y dependes del soporte ágil en tu idioma, este es un factor a considerar antes de contratar."
   - q: "¿Qué alternativas en español existen a Trainerize en 2026?"
-    a: "Las alternativas en español más consolidadas en 2026 son TotalGains (plan Pro 89,90 €/mes con IVA hasta 100 clientes y app marca blanca incluida), Harbiz (planes desde 22,99 €/mes hasta 482,79 €/mes con IVA según tramo y add-ons) y TrainerStudio (plan gratuito permanente para 3 clientes, ilimitado a 149 €/mes sin IVA). Cada una tiene su nicho: TotalGains apuesta por todo incluido sin add-ons, Harbiz por catálogo amplio de funciones modulares, TrainerStudio por simplicidad y plan free."
+    a: "Las alternativas en español más consolidadas en 2026 son TotalGains (plan plano desde 29,90 €/mes con IVA con app marca blanca e IA incluidas en todos los planes), Harbiz (planes desde 22,99 €/mes hasta 482,79 €/mes con IVA según tramo y add-ons) y TrainerStudio (plan gratuito permanente para 3 clientes, ilimitado a 149 €/mes sin IVA). Cada una tiene su nicho: TotalGains apuesta por todo incluido sin add-ons, Harbiz por catálogo amplio de funciones modulares, TrainerStudio por simplicidad y plan free."
 ---
 
 Trainerize es una de las plataformas de gestión para entrenadores personales con más trayectoria del mercado (12+ años) y una de las más usadas internacionalmente. Su plan base Grow cuesta **$10/mes** y aparece destacado en su página de precios. Para uso profesional completo (marca blanca, IA nutricional, pagos integrados, vídeo coaching), el coste real sube a **$225-381/mes** según el tramo de clientes activos, más un pago único de **$169** por la Custom Branded App si decides personalizar la app. Esta guía recoge la **tabla completa de planes y add-ons** con IVA 21% aplicado, verificada manualmente en trainerize.com el **13 de mayo de 2026**, junto a una explicación de cuándo Trainerize tiene sentido y cómo encaja frente a otras opciones del mercado en español.
@@ -227,7 +227,7 @@ Trainerize estructura su oferta como **plan base + 5 módulos opcionales** que s
 
 > En la práctica, **la mayoría de coaches en planes Pro pequeños (Pro 5 a Pro 30) no terminan contratando la Custom Branded App** porque $169 + $99/año + proceso de aprobación Apple no compensa para volúmenes bajos. Operan con la app genérica con la marca Trainerize visible.
 
-**Decisión de diseño en TotalGains**: la marca blanca está incluida en el plan Pro de TG (89,90 €/mes con IVA hasta 100 clientes) sin add-on de pago único. Decidimos así porque para el coach autónomo que invierte en marca personal, calcularlo aparte y gestionar Apple Developer Account añadía fricción que retrasaba la decisión de profesionalizar. El trade-off honesto: si tu modelo de marketing requiere una app totalmente independiente con tu propio bundle ID, listing ASO autónomo en App Store y control total sobre la ficha de la tienda, la Custom Branded App de Trainerize encaja mejor con ese perfil.
+**Decisión de diseño en TotalGains**: la marca blanca está incluida en todos los planes de TG, desde el Starter de 29,90 €/mes con IVA, sin add-on de pago único. Decidimos así porque para el coach autónomo que invierte en marca personal, calcularlo aparte y gestionar Apple Developer Account añadía fricción que retrasaba la decisión de profesionalizar. El trade-off honesto: si tu modelo de marketing requiere una app totalmente independiente con tu propio bundle ID, listing ASO autónomo en App Store y control total sobre la ficha de la tienda, la Custom Branded App de Trainerize encaja mejor con ese perfil.
 
 ### Tabla resumen de add-ons
 
@@ -455,7 +455,7 @@ El soporte oficial de Trainerize es **principalmente en inglés**, con franjas h
 
 ### ¿Qué alternativas en español existen a Trainerize en 2026?
 
-Las alternativas en español más consolidadas en 2026 son [TotalGains](/alternativas/trainerize/) (plan Pro 89,90 €/mes con IVA hasta 100 clientes y app marca blanca incluida), [Harbiz](/alternativas/harbiz/) (planes desde 22,99 €/mes hasta 482,79 €/mes con IVA según tramo y add-ons) y TrainerStudio (plan gratuito permanente para 3 clientes, ilimitado a 149 €/mes sin IVA). Cada una tiene su nicho: TotalGains apuesta por todo incluido sin add-ons, Harbiz por catálogo amplio de funciones modulares, TrainerStudio por simplicidad y plan free.
+Las alternativas en español más consolidadas en 2026 son [TotalGains](/alternativas/trainerize/) (plan plano desde 29,90 €/mes con IVA con app marca blanca e IA incluidas en todos los planes), [Harbiz](/alternativas/harbiz/) (planes desde 22,99 €/mes hasta 482,79 €/mes con IVA según tramo y add-ons) y TrainerStudio (plan gratuito permanente para 3 clientes, ilimitado a 149 €/mes sin IVA). Cada una tiene su nicho: TotalGains apuesta por todo incluido sin add-ons, Harbiz por catálogo amplio de funciones modulares, TrainerStudio por simplicidad y plan free.
 
 ---
 

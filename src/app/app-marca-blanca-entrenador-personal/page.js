@@ -72,7 +72,7 @@ const faqs = [
   },
   {
     q: "¿Tiene coste adicional la funcionalidad de marca blanca?",
-    a: "No. Incluida en el plan Pro (89,90 €/mes con IVA hasta 100 clientes activos) sin add-ons ni pago único de publicación. Comparativa honesta: Trainerize la ofrece como Custom Branded App con pago único de $169 USD en planes Pro; Harbiz la cobra como add-on Personaliza tu app de 30,24 €/mes con IVA o requiere el plan My APP (40-60 €/mes más caro); MyPT Hub la incluye solo en planes de gama alta (~145 €/mes). En TotalGains, incluida desde 89,90 €/mes.",
+    a: "No. Incluida en todos los planes, desde el Starter de 29,90 €/mes con IVA, sin add-ons ni pago único de publicación. Comparativa honesta: Trainerize la ofrece como Custom Branded App con pago único de $169 USD en planes Pro; Harbiz la cobra como add-on Personaliza tu app de 30,24 €/mes con IVA o requiere el plan My APP (40-60 €/mes más caro); MyPT Hub la incluye solo en planes de gama alta (~145 €/mes). En TotalGains, incluida en todos los planes desde 29,90 €/mes.",
   },
   {
     q: "¿Qué diferencia hay entre una app marca blanca y una PWA con mi logo?",
@@ -89,7 +89,7 @@ const faqs = [
 ];
 
 const pricingPlans = [
-  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["App cliente TotalGains", "IA generativa incluida", "+240.000 alimentos"] },
+  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["App marca blanca incluida", "IA generativa incluida", "+240.000 alimentos"] },
   { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 clientes activos", extras: ["App marca blanca incluida", "Publicación App Store y Google Play", "Coach Insights + retención IA"], highlight: true },
   { name: "Unlimited", price: "149,90 €/mes", incl: "Clientes ilimitados", extras: ["Todo lo del Pro", "Multi-coach", "Prioridad soporte"] },
 ];
@@ -118,7 +118,7 @@ export default function AppMarcaBlanca() {
         description: "App de marca blanca para entrenadores personales: tus clientes descargan una app con tu nombre, logo y colores en iOS y Android sin coste extra.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/app-marca-blanca-entrenador-personal/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos con IA generativa incluida" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos con app marca blanca incluida" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados" }] },
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },

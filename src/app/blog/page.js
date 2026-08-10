@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllPosts } from "@/lib/blog";
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
 import "./blog.css";
@@ -76,7 +77,7 @@ export default function BlogPage() {
                   {post.image && (
                     <div className="blog-card-image">
                       <Link href={`/blog/${post.slug}/`}>
-                        <img src={post.image} alt={post.title} loading="lazy" />
+                        <Image src={post.image} alt={post.title} width={640} height={366} loading="lazy" />
                       </Link>
                     </div>
                   )}

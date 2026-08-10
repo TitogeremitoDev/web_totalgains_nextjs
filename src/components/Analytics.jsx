@@ -1,8 +1,9 @@
 "use client";
 
 import Script from "next/script";
-import { useEffect } from "react";
+import { useEffect, useSyncExternalStore } from "react";
 import { usePathname } from "next/navigation";
+import { getConsent, getServerConsent, subscribeConsent } from "@/lib/consent";
 
 const GA4_ID = process.env.NEXT_PUBLIC_GA4_ID;
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
@@ -10,13 +11,18 @@ const CLARITY_ID = process.env.NEXT_PUBLIC_CLARITY_ID;
 
 export default function Analytics() {
     const pathname = usePathname();
+    // Ningún script de analítica se inyecta hasta que el usuario acepta en el
+    // banner (LSSI art. 22.2 + RGPD). El HTML estático sale siempre sin ellos.
+    const consent = useSyncExternalStore(subscribeConsent, getConsent, getServerConsent);
+    const granted = consent === "accepted";
 
     useEffect(() => {
-        if (GA4_ID && typeof window.gtag === "function") {
+        if (granted && GA4_ID && typeof window.gtag === "function") {
             window.gtag("config", GA4_ID, { page_path: pathname });
         }
-    }, [pathname]);
+    }, [pathname, granted]);
 
+    if (!granted) return null;
     if (!GA4_ID && !GTM_ID && !CLARITY_ID) return null;
 
     return (

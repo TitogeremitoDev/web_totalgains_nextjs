@@ -1,9 +1,9 @@
 ---
 title: "He borrado a un cliente sin querer: cómo recuperar sus datos en tu software de entrenamiento"
 seoTitle: "He borrado un cliente sin querer: guía para recuperar datos (2026)"
-description: "Le has dado a borrar por error a un atleta, a una rutina o a un plan. Guía tranquila y sin culpa para recuperar los datos, evitar que se repita y decidir qué software te protege de verdad."
+description: "Borraste un cliente por error. Qué se puede recuperar, qué se pierde para siempre y cómo montar un flujo de archivado que evite el desastre."
 date: "2026-07-26"
-lastModified: "2026-07-26"
+lastModified: "2026-08-10"
 category: "herramientas"
 author: "Germán Martínez Calvente"
 readTime: 8

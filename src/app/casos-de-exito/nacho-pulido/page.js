@@ -144,7 +144,7 @@ export default function CasoNachoPulido() {
 
         {/* Quote */}
         <blockquote style={{ borderLeft: "3px solid var(--primary)", paddingLeft: 20, margin: "0 0 48px", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--text-secondary)", fontStyle: "italic" }}>
-          "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahora todo fluye muchísimo mejor y me siento más profesional."
+          &quot;Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahora todo fluye muchísimo mejor y me siento más profesional.&quot;
         </blockquote>
 
         {/* Q&A */}

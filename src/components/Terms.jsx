@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import './Privacy.css';
 
 const Terms = () => {
@@ -99,7 +100,7 @@ const Terms = () => {
                         <li>TotalGains proporciona herramientas de fitness, no asesoramiento médico</li>
                         <li>Consulta a un profesional antes de comenzar cualquier programa de ejercicio</li>
                         <li>No somos responsables de lesiones derivadas del ejercicio</li>
-                        <li>El servicio se proporciona "tal cual" sin garantías explícitas</li>
+                        <li>El servicio se proporciona &quot;tal cual&quot; sin garantías explícitas</li>
                     </ul>
                 </section>
 
@@ -138,7 +139,7 @@ const Terms = () => {
                 </section>
 
                 <div className="back-link">
-                    <a href="/" className="btn btn-outline">← Volver al Inicio</a>
+                    <Link href="/" className="btn btn-outline">← Volver al Inicio</Link>
                 </div>
             </div>
         </div>

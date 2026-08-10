@@ -3,7 +3,7 @@ title: "Cómo Crear Planes Nutricionales para Clientes: Guía Completa para Entr
 seoTitle: "Cómo Crear Planes Nutricionales: Guía 2026"
 description: "Guía 2026 para entrenadores: crea un plan nutricional profesional paso a paso. Macros, base de alimentos, plantillas y software comparado para coaches online."
 date: "2026-05-30"
-lastModified: "2026-05-30"
+lastModified: "2026-08-10"
 author: "Germán Martínez Calvente"
 category: "nutricion"
 readTime: 16
@@ -26,10 +26,10 @@ comparison:
       rating: 4.7
       pros: "Base de alimentos verificada con productos del supermercado en español (España y Latam), IA generativa nativa que parsea PDFs/Excel de dietas existentes y los convierte en planes editables en segundos, editor de plantillas reutilizables con intercambios alimentarios, dashboard de adherencia para el coach y app del cliente integrada sin coste adicional. Precio único por coach sin add-ons ocultos."
       cons: "Producto joven en mercado: catálogo de integraciones de wearables más limitado que competidores con 10+ años. No incluye CRM de ventas avanzado (orientado a coaches que ya tienen su pipeline comercial resuelto)."
-      lowPrice: 89.9
+      lowPrice: 29.9
       highPrice: 149.9
       priceCurrency: "EUR"
-      offerCount: 2
+      offerCount: 3
       url: "https://totalgains.es/onboarding/"
     - name: "Trainerize + Advanced Nutrition Coaching"
       rating: 3.5

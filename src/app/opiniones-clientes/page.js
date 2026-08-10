@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Script from "next/script";
 
 export const metadata = {
   title: "Opiniones de Clientes TotalGains 2026",
@@ -351,7 +352,13 @@ export default function OpinionesClientes() {
             Las reseñas honestas —positivas o críticas— nos ayudan a mejorar el producto y ayudan a otros coaches a tomar una decisión informada. Tarda 2 minutos.
           </p>
 
-          {/* Widget oficial Trustpilot Review Collector */}
+          {/* Widget oficial Trustpilot Review Collector.
+              El bootstrap se carga SOLO en esta página (antes estaba en el
+              layout global y pesaba en las 56 páginas del sitio). */}
+          <Script
+            src="https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
+            strategy="lazyOnload"
+          />
           <div
             className="trustpilot-widget"
             data-locale="es-ES"

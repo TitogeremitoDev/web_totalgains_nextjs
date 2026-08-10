@@ -121,9 +121,9 @@ const Stats = () => {
                                 <div className="progress"><div className="progress-fill" data-progress="100" /></div>
                             </div>
                             <div className="food-stack" aria-hidden="true">
-                                <img className="food-card food-card--1" src="/screenshots/food-curry.webp" alt="Plato de curry con macros calculados en TotalGains" loading="lazy" decoding="async" />
-                                <img className="food-card food-card--2" src="/screenshots/food-yogur.webp" alt="Yogur con fruta y desglose nutricional en TotalGains" loading="lazy" decoding="async" />
-                                <img className="food-card food-card--3" src="/screenshots/food-tortilla.webp" alt="Tortilla de patata con macros en la base de datos de TotalGains" loading="lazy" decoding="async" />
+                                <Image className="food-card food-card--1" src="/screenshots/food-curry.webp" alt="Plato de curry con macros calculados en TotalGains" width={240} height={240} loading="lazy" decoding="async" />
+                                <Image className="food-card food-card--2" src="/screenshots/food-yogur.webp" alt="Yogur con fruta y desglose nutricional en TotalGains" width={240} height={240} loading="lazy" decoding="async" />
+                                <Image className="food-card food-card--3" src="/screenshots/food-tortilla.webp" alt="Tortilla de patata con macros en la base de datos de TotalGains" width={240} height={240} loading="lazy" decoding="async" />
                             </div>
                         </div>
                     </div>

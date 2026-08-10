@@ -127,7 +127,7 @@ export default function CasoLorenaEses() {
 
         {/* Quote */}
         <blockquote style={{ borderLeft: "3px solid #fa709a", paddingLeft: 20, margin: "0 0 48px", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--text-secondary)", fontStyle: "italic" }}>
-          "La tranquilidad de saber que está todo automatizado, y la ganancia de tiempo al poder delegar en la app cosas como la agenda, la programación de citas y las revisiones quincenales."
+          &quot;La tranquilidad de saber que está todo automatizado, y la ganancia de tiempo al poder delegar en la app cosas como la agenda, la programación de citas y las revisiones quincenales.&quot;
         </blockquote>
 
         {/* Q&A */}
@@ -161,7 +161,7 @@ export default function CasoLorenaEses() {
         <aside style={{ padding: "24px 28px", background: "linear-gradient(135deg, rgba(250,112,154,0.08), rgba(254,225,64,0.06))", borderLeft: "4px solid #fa709a", borderRadius: 12, marginBottom: 48 }}>
           <p style={{ fontSize: "0.78rem", textTransform: "uppercase", letterSpacing: 1.2, fontWeight: 700, color: "#fa709a", margin: "0 0 12px" }}>Consejo de Lorena para nutricionistas online</p>
           <p style={{ margin: 0, color: "var(--text-primary)", lineHeight: 1.7, fontSize: "1.02rem" }}>
-            <em>"Calcula primero cuántas horas semanales pierdes en seguimientos manuales, revisiones quincenales y persecución de pagos. Multiplícalo por tu tarifa-hora. Esa cifra es lo que te está costando NO tener un sistema. Cuando hice los números, el coste de la herramienta era una décima parte de lo que recuperaba al mes."</em>
+            <em>&quot;Calcula primero cuántas horas semanales pierdes en seguimientos manuales, revisiones quincenales y persecución de pagos. Multiplícalo por tu tarifa-hora. Esa cifra es lo que te está costando NO tener un sistema. Cuando hice los números, el coste de la herramienta era una décima parte de lo que recuperaba al mes.&quot;</em>
           </p>
         </aside>
 

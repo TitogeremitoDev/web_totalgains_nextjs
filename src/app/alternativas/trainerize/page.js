@@ -30,7 +30,7 @@ export default function AlternativaCompetidores() {
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web, iOS, Android",
         "@id": "https://totalgains.es/#software",
-        description: "Alternativa a Trainerize en español para entrenadores personales: IA de rutinas y dietas con biblioteca propia, app marca blanca incluida en Pro, migración asistida y precios sin penalización por volumen.",
+        description: "Alternativa a Trainerize en español para entrenadores personales: IA de rutinas y dietas con biblioteca propia, app marca blanca incluida en todos los planes, migración asistida y precios sin penalización por volumen.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/alternativas/trainerize/",
         offers: {
@@ -43,9 +43,9 @@ export default function AlternativaCompetidores() {
           url: "https://totalgains.es/onboarding/",
           image: "https://totalgains.es/og-image.jpg",
           offers: [
-            { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos con IA generativa incluida" },
-            { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos con app marca blanca incluida" },
-            { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados" },
+            { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" },
+            { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" },
+            { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" },
           ],
         },
         inLanguage: "es",

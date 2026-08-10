@@ -17,7 +17,8 @@ const coachPlans = [
         features: [
             { text: 'Hasta 25 Atletas', included: true },
             { text: 'IA Ilimitada (Dietas y Rutinas)', included: true },
-            { text: 'App para tus Atletas', included: true },
+            { text: 'App Marca Blanca INCLUIDA', included: true, tooltip: 'Tu logo y tus colores, en todos los planes' },
+            { text: 'Todas las funciones incluidas', included: true },
             { text: 'Soporte por Email (48h)', included: true },
         ],
         ctaText: 'EMPEZAR PRUEBA 14 DÍAS',
@@ -33,8 +34,8 @@ const coachPlans = [
         badge: 'RECOMENDADO',
         features: [
             { text: 'Hasta 100 Atletas', included: true },
-            { text: 'Todo lo del Plan Starter', included: true },
-            { text: 'Facturación y Finanzas', included: true },
+            { text: 'Todas las funciones incluidas', included: true },
+            { text: 'App Marca Blanca INCLUIDA', included: true },
             { text: 'Soporte Prioritario (24h)', included: true },
         ],
         ctaText: 'EMPEZAR PRUEBA 14 DÍAS',

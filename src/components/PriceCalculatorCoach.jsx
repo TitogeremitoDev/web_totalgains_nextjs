@@ -176,7 +176,7 @@ export default function PriceCalculatorCoach() {
           {r.comparadorTexto}
         </p>
         <p style={{ margin: "10px 0 0", fontSize: "0.82rem", lineHeight: 1.55, color: "var(--text-secondary,#aaa)" }}>
-          Creías cobrar <strong style={{ color: "var(--text-primary,#ddd)", whiteSpace: "nowrap" }}>{eur(r.tarifaHoraPercibida, "/h")}</strong> (precio mensual base sin IVA ÷ 2 horas de "sesión ideal"). Realmente cobras{" "}
+          Creías cobrar <strong style={{ color: "var(--text-primary,#ddd)", whiteSpace: "nowrap" }}>{eur(r.tarifaHoraPercibida, "/h")}</strong> (precio mensual base sin IVA ÷ 2 horas de &quot;sesión ideal&quot;). Realmente cobras{" "}
           <strong style={{ color: r.comparadorColor, whiteSpace: "nowrap" }}>{eur(r.tarifaHoraReal, "/h")}</strong>.{" "}
           Diferencia: <strong style={{ color: r.gap > 0 ? "#ef4444" : "#22c55e", whiteSpace: "nowrap" }}>{r.gap > 0 ? "−" : "+"}{eur(Math.abs(r.gap), "/h")}</strong>{" "}
           ({(r.cocienteVsPercibida * 100).toFixed(0)}% de lo que creías cobrar).

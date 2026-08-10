@@ -14,7 +14,7 @@ const faqs = [
     },
     {
         question: "¿Por qué TotalGains es mejor alternativa a Harbiz para entrenadores en España?",
-        answer: "TotalGains incluye IA que genera rutinas y dietas con tu propia base de datos, app marca blanca en el plan Pro (89,90 €/mes), sistema de retención asistida con recordatorios de renovación al cliente y soporte en español. Harbiz cobra Personaliza tu app, Nutri AI y Biblioteca de Vídeos como add-ons separados, lo que para funcionalidad equivalente eleva el coste a ~313 €/mes con IVA (verificado mayo 2026).",
+        answer: "TotalGains incluye IA que genera rutinas y dietas con tu propia base de datos, app marca blanca incluida en todos los planes (desde 29,90 €/mes), sistema de retención asistida con recordatorios de renovación al cliente y soporte en español. Harbiz cobra Personaliza tu app, Nutri AI y Biblioteca de Vídeos como add-ons separados, lo que para funcionalidad equivalente eleva el coste a ~313 €/mes con IVA (verificado mayo 2026).",
     },
     {
         question: "¿Cobráis comisiones por las ventas que hago a mis clientes?",
@@ -37,7 +37,7 @@ export default function AlternativaHarbizContent() {
                         Mejor Alternativa a Harbiz para Entrenadores Personales
                     </h1>
                     <p className="alternativas-subtitle mt-4">
-                        Si quieres IA y marca blanca incluidas en el plan base, sin add-ons acumulables, y con capacidad para más de 50 clientes. TotalGains es la alternativa en español con todo incluido desde 89,90 €/mes.
+                        Si quieres IA y marca blanca incluidas en el plan base, sin add-ons acumulables, y con capacidad para más de 50 clientes. TotalGains es la alternativa en español con todo incluido (IA y marca blanca) desde 29,90 €/mes.
                     </p>
                     <div style={{ marginTop: 20 }}>
                         <TrustpilotBadge score={4.0} totalReviews={3} variant="compact" />
@@ -47,7 +47,7 @@ export default function AlternativaHarbizContent() {
                 {/* Tabla KILLER de precios directos — antes del feature-by-feature */}
                 <section className="alternativas-section glass" style={{ padding: 28, borderRadius: 16, margin: '32px 0', borderLeft: '4px solid #22c55e' }}>
                     <h2 style={{ marginTop: 0 }}>El coste real para 100 clientes con marca blanca + IA</h2>
-                    <p style={{ marginBottom: 20 }}>Lo que muchas tablas omiten: para llegar a la <strong>funcionalidad equivalente a TotalGains Pro</strong> (100 clientes + app marca blanca + IA dietas), Harbiz ofrece dos rutas — sumar el add-on "Personaliza tu app" al plan Pro 100, o saltar al plan My APP. Datos verificados manualmente en harbiz.io el 13 de mayo de 2026.</p>
+                    <p style={{ marginBottom: 20 }}>Lo que muchas tablas omiten: para llegar a la <strong>funcionalidad equivalente a TotalGains Pro</strong> (100 clientes + app marca blanca + IA dietas), Harbiz ofrece dos rutas — sumar el add-on &quot;Personaliza tu app&quot; al plan Pro 100, o saltar al plan My APP. Datos verificados manualmente en harbiz.io el 13 de mayo de 2026.</p>
                     <div style={{ overflowX: 'auto' }}>
                         <table className="comparison-table" style={{ width: '100%', fontSize: '0.9rem' }}>
                             <thead>
@@ -154,7 +154,7 @@ export default function AlternativaHarbizContent() {
                             <tr>
                                 <td className="feature-name">Base de alimentos</td>
                                 <td className="tg-feature">✅ Personalizable, +240.000 alimentos y recetas</td>
-                                <td className="tr-feature">⚠️ Estándar (reseñas en Capterra mencionan que "continúa siendo un poco pobre")</td>
+                                <td className="tr-feature">⚠️ Estándar (reseñas en Capterra mencionan que &quot;continúa siendo un poco pobre&quot;)</td>
                             </tr>
                             <tr>
                                 <td className="feature-name">Límite de clientes plan medio</td>
@@ -201,10 +201,10 @@ export default function AlternativaHarbizContent() {
                     <h2>Opiniones sobre Harbiz: qué dicen los entrenadores</h2>
                     <p>Harbiz tiene una valoración de <strong>4,4 / 5 sobre 20 reseñas</strong> en <a href="https://www.capterra.es/reviews/201790/harbiz" rel="nofollow" target="_blank">Capterra España</a> (consultado el 13 de mayo de 2026). Las reseñas se reparten entre experiencia positiva con la biblioteca de ejercicios y críticas concretas a velocidad de la app, gestión de clases y profundidad de la base de alimentos. Selección de citas verificables:</p>
                     <ul>
-                        <li><strong>Víctor (5/5)</strong>: <em>"Librería de ejercicios y su facilidad de uso permite ahorrar tiempo"</em>. Crítica: <em>"Mala velocidad a la hora de usarla, CRM sin demasiada información"</em>.</li>
-                        <li><strong>Adrián (4/5)</strong>: <em>"Gestión del entrenamiento y nutrición de clientes en una aplicación"</em>. Crítica: <em>"El precio no rinde a un nivel tan alto para lo que se paga"</em>.</li>
-                        <li><strong>Ricardo (4/5)</strong>: <em>"Flexibilidad para planificar entrenamientos y adaptarlos al cliente"</em>. Crítica: <em>"La base de datos de alimentos continúa siendo un poco pobre"</em>.</li>
-                        <li><strong>Kelly Johanna (5/5)</strong>: <em>"Me encanta todo, desde la apariencia del software, la facilidad de uso"</em>.</li>
+                        <li><strong>Víctor (5/5)</strong>: <em>&quot;Librería de ejercicios y su facilidad de uso permite ahorrar tiempo&quot;</em>. Crítica: <em>&quot;Mala velocidad a la hora de usarla, CRM sin demasiada información&quot;</em>.</li>
+                        <li><strong>Adrián (4/5)</strong>: <em>&quot;Gestión del entrenamiento y nutrición de clientes en una aplicación&quot;</em>. Crítica: <em>&quot;El precio no rinde a un nivel tan alto para lo que se paga&quot;</em>.</li>
+                        <li><strong>Ricardo (4/5)</strong>: <em>&quot;Flexibilidad para planificar entrenamientos y adaptarlos al cliente&quot;</em>. Crítica: <em>&quot;La base de datos de alimentos continúa siendo un poco pobre&quot;</em>.</li>
+                        <li><strong>Kelly Johanna (5/5)</strong>: <em>&quot;Me encanta todo, desde la apariencia del software, la facilidad de uso&quot;</em>.</li>
                     </ul>
                     <p>Compárelo con los <a href="/casos-de-exito/lorena-eses/">casos de éxito públicos de TotalGains</a>: entrenadores y nutricionistas que reportan <strong>+10 horas semanales ahorradas</strong> y migración asistida completa en español. Los puntos débiles repetidos de Harbiz en Capterra (rendimiento app móvil, precio frente a profundidad de gestión, base de alimentos limitada) son exactamente los frentes donde TotalGains se diferencia: app móvil optimizada, plan plano sin add-ons y base de +240.000 alimentos personalizable.</p>
                     <p style={{ fontSize: '0.8rem', color: 'var(--text-secondary,#aaa)', marginTop: 16 }}>
@@ -226,7 +226,7 @@ export default function AlternativaHarbizContent() {
                     </div>
                     <div style={{ flex: '1 1 280px' }}>
                         <h3>Nacho Pulido · Entrenador personal</h3>
-                        <p><em>"Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana."</em></p>
+                        <p><em>&quot;Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.&quot;</em></p>
                         <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary,#aaa)' }}>Pasó de 15 a 40 clientes activos. Migración completada en 1 día. <Link href="/casos-de-exito/nacho-pulido/" prefetch={false}>Ver caso completo →</Link></p>
                     </div>
                 </section>
@@ -235,7 +235,7 @@ export default function AlternativaHarbizContent() {
                 <section className="alternativas-section" style={{ padding: '16px 0', margin: '32px 0' }}>
                     <h3>Si también estás comparando con TrainerStudio</h3>
                     <p>TrainerStudio es otra opción en español, con tramos por número de clientes verificados en su web oficial el 13 de mayo de 2026: 5 clientes 22,99 €/mes con IVA · 15 clientes 47,19 €/mes · 30 clientes 83,49 €/mes · 50 clientes 119,79 €/mes · Ilimitado 180,29 €/mes. Tiene plan gratuito permanente para 3 clientes.</p>
-                    <p>Comparación directa con TotalGains: en el tramo de 50 clientes TG Pro (89,90 €/mes, hasta 100 atletas) sale <strong>~30 €/mes más barato</strong> que el tramo "50 clientes" de TrainerStudio (119,79 €), además de doblarte el techo de atletas en el mismo plan. En el tramo ilimitado, TG Unlimited (149,90 €/mes) se queda <strong>~30 €/mes por debajo</strong> del plan Ilimitado de TrainerStudio (180,29 €). Los criterios decisivos cuando pasas a negocio profesional son la profundidad de la IA (rutinas + dietas), la migración asistida y el modelo plano sin add-ons.</p>
+                    <p>Comparación directa con TotalGains: en el tramo de 50 clientes TG Pro (89,90 €/mes, hasta 100 atletas) sale <strong>~30 €/mes más barato</strong> que el tramo &quot;50 clientes&quot; de TrainerStudio (119,79 €), además de doblarte el techo de atletas en el mismo plan. En el tramo ilimitado, TG Unlimited (149,90 €/mes) se queda <strong>~30 €/mes por debajo</strong> del plan Ilimitado de TrainerStudio (180,29 €). Los criterios decisivos cuando pasas a negocio profesional son la profundidad de la IA (rutinas + dietas), la migración asistida y el modelo plano sin add-ons.</p>
                 </section>
 
                 {/* FAQs visibles como H3 */}

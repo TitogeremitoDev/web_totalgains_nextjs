@@ -3,7 +3,7 @@ title: "Has Tocado Techo de Clientes y No es Por Falta de Horas: Por Qué Tu Neg
 seoTitle: "Has Tocado Techo de Clientes: Escalar 2026"
 description: "Guía 2026 para coaches atascados en 15-25 clientes: los 4 techos operativos que te frenan, cómo estudiar a tus clientes de un vistazo y usar IA con cabeza."
 date: "2026-07-04"
-lastModified: "2026-07-04"
+lastModified: "2026-08-10"
 author: "Germán Martínez Calvente"
 category: "negocio"
 readTime: 15
@@ -265,7 +265,7 @@ Plan operativo semana a semana:
 ### Semana 2 — Automatización de operativa
 
 - Activa los recordatorios de cobro para los 20 clientes actuales (comunicación clara, cero fricción — sigues cobrando por tu canal habitual)
-- Configura la app marca blanca del plan Pro con tu logo y colores
+- Configura la app marca blanca (incluida en tu plan) con tu logo y colores
 - Activa el sistema de check-ins automáticos semanales
 - Cierra los canales de WhatsApp para admin (mantén solo para urgencia real)
 

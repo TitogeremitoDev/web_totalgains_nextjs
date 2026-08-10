@@ -3,7 +3,7 @@ title: "Tu Primer Verano como Entrenador Personal: Por Qué Empezar con App Desd
 seoTitle: "Primer Verano Entrenador Personal: Guía 2026"
 description: "Guía 2026 para coaches que arrancan este verano: por qué empezar con app desde el día 1, qué te da que WhatsApp+Excel no te da, y cómo captar clientes."
 date: "2026-06-12"
-lastModified: "2026-06-12"
+lastModified: "2026-08-10"
 author: "Germán Martínez Calvente"
 category: "negocio"
 readTime: 14
@@ -157,13 +157,13 @@ Si vendes nutrición como parte del servicio, una base de alimentos en español 
 
 ### 6. App con tu marca incluida (en plan Pro)
 
-Cuando llegues a 15-20 clientes y quieras tu propia marca visible en la app que descarga el cliente (en lugar de la marca de la plataforma), pasas al plan Pro y la marca blanca está incluida sin add-on de pago único. No requiere Apple Developer Account propia ni proceso de aprobación Apple desde tu lado, lo cual reduce la fricción técnica para un coach junior. Más detalle en la [guía completa de app marca blanca](/blog/app-marca-blanca-entrenadores-personales/).
+Si quieres tu propia marca visible en la app que descarga el cliente (en lugar de la marca de la plataforma), la marca blanca está incluida desde el primer plan, sin add-on de pago único. No requiere Apple Developer Account propia ni proceso de aprobación Apple desde tu lado, lo cual reduce la fricción técnica para un coach junior. Más detalle en la [guía completa de app marca blanca](/blog/app-marca-blanca-entrenadores-personales/).
 
 ### 7. Acceso desde cualquier sitio con datos móviles
 
 Esto es clave en verano: tu cliente está de viaje, tu cliente está en otro gym, tú estás dando una sesión en otro sitio. La app funciona con datos móviles sin necesidad de wifi. Universal en cualquier teléfono con conexión de datos, que hoy es prácticamente todo el mundo.
 
-> **Decisión de diseño en TotalGains**: el plan Starter (29,90 €/mes con IVA hasta 25 clientes) incluye los siete bloques anteriores excepto la app marca blanca (que entra en Pro). Lo decidimos así porque al observar el patrón de los coaches que arrancan, la marca blanca **no es la prioridad del día uno**: lo es la profesionalización operativa (cobros, IA, comunicación, base de alimentos). Subir a Pro cuando ya tienes 15-20 clientes consolidados es el momento natural de añadir marca propia, no el día uno. El trade-off honesto: si tu modelo de captación gira ya desde el inicio en torno a tu marca personal en Instagram con una identidad visual fuerte, te puede compensar saltar directo a Pro y arrancar con marca blanca desde el primer cliente.
+> **Decisión de diseño en TotalGains**: el plan Starter (29,90 €/mes con IVA hasta 25 clientes) incluye los siete bloques anteriores completos, app marca blanca incluida. Lo decidimos así porque al observar el patrón de los coaches que arrancan, partir la funcionalidad en tramos obliga al coach junior a decidir sobre funciones que todavía no conoce, y a pagar un salto de plan justo cuando su marca personal empieza a importar. Entre planes solo cambia el número de atletas activos (25, 100 o ilimitados) y el nivel de soporte. El trade-off honesto: al no haber plan "recortado", el precio de entrada es algo más alto que el de plataformas con plan básico mínimo, y si estás validando el modelo con 2-3 clientes puede compensarte empezar en una opción gratuita antes de dar el salto.
 
 ---
 

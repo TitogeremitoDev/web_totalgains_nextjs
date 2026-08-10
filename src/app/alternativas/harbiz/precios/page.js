@@ -422,7 +422,7 @@ export default function HarbizPreciosPage() {
 
           <section className="alternativas-section glass" style={{ padding: 28, borderRadius: 16, margin: "48px 0" }}>
             <h2>Cuánto cuestan realmente todas las funcionalidades</h2>
-            <p>Para tener la <strong>funcionalidad equivalente</strong> a lo que muchas alternativas incluyen "todo en uno" (plan + marca blanca + IA nutrición + vídeos), un coach en Harbiz necesita combinar plan base más add-ons:</p>
+            <p>Para tener la <strong>funcionalidad equivalente</strong> a lo que muchas alternativas incluyen &quot;todo en uno&quot; (plan + marca blanca + IA nutrición + vídeos), un coach en Harbiz necesita combinar plan base más add-ons:</p>
             <div className="comparison-table-container glass">
               <table className="comparison-table">
                 <thead>

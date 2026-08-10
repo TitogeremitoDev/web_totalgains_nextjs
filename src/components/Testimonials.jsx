@@ -210,7 +210,7 @@ const TestimonialCard = ({ data, index }) => {
 
         {/* ── Quote ── */}
         <div className="card-quote">
-          <span className="quote-icon">"</span>
+          <span className="quote-icon">&quot;</span>
           <p>{renderQuote()}</p>
         </div>
 

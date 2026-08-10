@@ -3,7 +3,7 @@ title: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes (con IVA)"
 seoTitle: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes con IVA"
 description: "Precios Harbiz 2026 con IVA: Basic 22,99 €, Pro 143,99 €, My APP 240,79 €. Con marca blanca y add-ons llega a 313 €/mes. Verificado mayo 2026."
 date: "2026-05-23"
-lastModified: "2026-07-26"
+lastModified: "2026-08-10"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 16
@@ -244,7 +244,7 @@ Harbiz estructura su oferta como **plan base + 3 módulos opcionales** que el co
 
 **Merece la pena si**: tu posicionamiento comercial gira en torno a tu marca personal y la app es un punto de contacto importante con el cliente (visible en su pantalla de inicio, notifications, etc.).
 
-**Decisión de diseño en TotalGains**: la marca blanca está incluida en el plan Pro de TG (89,90 €/mes con IVA hasta 100 clientes) sin add-on por separado. Tomamos esa decisión porque para el coach autónomo que ya invierte en marca personal, era una función core; calcularlo aparte añadía fricción innecesaria al cálculo de coste por cliente.
+**Decisión de diseño en TotalGains**: la marca blanca está incluida en todos los planes de TG, desde el Starter de 29,90 €/mes con IVA, sin add-on por separado. Tomamos esa decisión porque para el coach autónomo que ya invierte en marca personal, era una función core; calcularlo aparte añadía fricción innecesaria al cálculo de coste por cliente.
 
 ### 2. Nutri AI — planificación nutricional asistida por IA
 
@@ -393,7 +393,7 @@ Si prefieres pagar solo por las funciones que usas (filosofía modular), Harbiz 
 
 **Tu situación**: tienes 1-3 clientes, no estás seguro de si el modelo de negocio va a despegar y prefieres no comprometerte con nada económicamente al inicio.
 
-**Por qué [TrainerStudio](https://www.trainerstudio.com) puede encajarte aquí**: ofrece plan gratuito permanente para 3 clientes sin límite de tiempo. **Trainerize Basic** también permite 1 cliente gratis.
+**Por qué [TrainerStudio](https://www.trainerstudio.com) puede encajarte aquí**: ofrece plan gratuito permanente para 3 clientes sin límite de tiempo. **TotalGains** tiene el mismo tramo gratuito permanente (3 atletas, sin tarjeta). **Trainerize Basic** también permite 1 cliente gratis.
 
 **Cómo lo aborda TotalGains**: ofrecemos 14 días de prueba gratis sin tarjeta de crédito, pero después el plan Starter es de pago (29,90 €/mes). Es una elección consciente de modelo: preferimos coaches que validan rápido y se comprometen, en lugar de mantener cuentas free indefinidas. Si tu perfil es validar sin compromiso económico durante meses, TrainerStudio te ofrece eso y TG no.
 

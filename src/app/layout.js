@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
+import CookieConsent from "@/components/CookieConsent";
 import ScrollProgress from "@/components/ScrollProgress";
 
 const dmSans = DM_Sans({
@@ -31,7 +32,7 @@ export const metadata = {
     template: "%s | TotalGains",
   },
   description:
-    "La app para entrenadores personales líder. Escala tu negocio fitness con nuestro creador de rutinas con IA, dietas automáticas, pagos recurrentes y tu propia app de fitness marca blanca.",
+    "Software para entrenadores personales en español: rutinas con IA, dietas automáticas, cobros y tu app marca blanca. 14 días gratis sin tarjeta.",
   keywords: [
     "software para entrenadores",
     "app entrenador personal online",
@@ -122,11 +123,9 @@ export default function RootLayout({ children }) {
         {/* LLM-friendly markdown index & full documentation — discoverable by ChatGPT, Claude, Perplexity, Copilot */}
         <link rel="alternate" type="text/markdown" href="/llms.txt" title="LLM-friendly index" />
         <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="LLM-friendly full documentation" />
-        <script
-          type="text/javascript"
-          src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"
-          async
-        />
+        {/* El bootstrap de Trustpilot NO va aquí: el único widget oficial vive en
+            /opiniones-clientes/ y lo carga esa página. El badge del footer es SVG
+            propio (TrustpilotBadge), no necesita script externo. */}
       </head>
       <body className={`${dmSans.variable} ${spaceGrotesk.variable}`}>
         <ScrollProgress />
@@ -134,6 +133,7 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <Analytics />
+        <CookieConsent />
       </body>
     </html>
   );

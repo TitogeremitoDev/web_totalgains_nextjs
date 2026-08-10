@@ -1,9 +1,9 @@
 ---
 title: "Entrenar y comer según el ciclo menstrual: qué funciona (2026)"
 seoTitle: "Ciclo menstrual, entreno y dieta: qué funciona (2026)"
-description: "El ciclo sabotea la dieta y el entreno de tus clientas de 3 formas medibles. Las plantillas de 28 días no lo resuelven. La individualización con datos reales sí. Cómo hacerlo."
+description: "El ciclo sabotea la dieta y el entreno de tus clientas de 3 formas medibles. Las plantillas de 28 días no valen; la individualización con datos, sí."
 date: "2026-07-26"
-lastModified: "2026-07-26"
+lastModified: "2026-08-10"
 category: "metodologia"
 author: "Germán Martínez Calvente"
 readTime: 12

@@ -95,22 +95,14 @@ function StatNumber({ value, style }) {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // Los early-return no tocan el estado: `display` ya arranca en `value`.
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      setDisplay(value);
-      return;
-    }
+    if (reduce) return;
     const m = value.match(/^(\d+)(.*)$/);
-    if (!m || value.indexOf("-") !== -1) {
-      setDisplay(value);
-      return;
-    }
+    if (!m || value.indexOf("-") !== -1) return;
     const target = parseInt(m[1], 10);
     const suffix = m[2] || "";
-    if (target === 0) {
-      setDisplay(value);
-      return;
-    }
+    if (target === 0) return;
 
     let observed = false;
     const io = new IntersectionObserver(

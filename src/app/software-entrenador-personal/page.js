@@ -5,11 +5,11 @@ import { Users, LayoutDashboard, Bell, CreditCard, Palette, BarChart3, Check, X,
 export const metadata = {
   title: "Software Entrenadores Personales · Desde 29,90 €/mes",
   description:
-    "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en Pro. Desde 29,90 €/mes con IVA. 14 días gratis sin tarjeta.",
+    "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en todos los planes. Desde 29,90 €/mes con IVA. 14 días gratis sin tarjeta.",
   alternates: { canonical: "https://totalgains.es/software-entrenador-personal/" },
   openGraph: {
     title: "Software Entrenadores Personales · Desde 29,90 €/mes | TotalGains",
-    description: "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en Pro. Desde 29,90 €/mes con IVA. 14 días gratis sin tarjeta.",
+    description: "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en todos los planes. Desde 29,90 €/mes con IVA. 14 días gratis sin tarjeta.",
     url: "https://totalgains.es/software-entrenador-personal/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },
@@ -20,7 +20,7 @@ const features = [
   { icon: <LayoutDashboard size={22} />, title: "Panel Coach Insights", desc: "Dashboard con métricas clave: adherencia semanal, progresión de cargas, renovaciones próximas y alertas tempranas de riesgo de baja." },
   { icon: <Bell size={22} />, title: "Seguimiento automatizado", desc: "El cliente registra entreno en 30 segundos, hace check-in semanal estructurado y el sistema te avisa cuando algo se desvía. Cero persecución por WhatsApp." },
   { icon: <CreditCard size={22} />, title: "Recordatorios de renovación", desc: "El sistema avisa al cliente en su app cuando toca renovar, con win-back automático si no responde en 48h. El cobro efectivo sigue por tu canal habitual." },
-  { icon: <Palette size={22} />, title: "App marca blanca incluida en Pro", desc: "Tus clientes descargan una app con tu logo, tus colores y tu nombre. Incluida en Pro (89,90 €/mes con IVA), sin add-on ni pago único." },
+  { icon: <Palette size={22} />, title: "App marca blanca incluida en todos los planes", desc: "Tus clientes descargan una app con tu logo, tus colores y tu nombre. Incluida en todos los planes desde 29,90 €/mes con IVA, sin add-on ni pago único." },
   { icon: <BarChart3 size={22} />, title: "IA generativa de rutinas y dietas", desc: "Menos de 2 minutos por cliente. La IA usa tu propia biblioteca de ejercicios y +240.000 alimentos validados en español. Cero alucinaciones." },
 ];
 
@@ -33,11 +33,11 @@ const useCases = [
 ];
 
 const faqs = [
-  { q: "¿Cuánto cuesta TotalGains y qué incluye cada plan?", a: "Starter 29,90 €/mes con IVA (hasta 25 clientes, IA generativa incluida). Pro 89,90 €/mes con IVA (hasta 100 clientes, incluye app marca blanca). Unlimited 149,90 €/mes con IVA (clientes ilimitados). Todos los planes incluyen IA de rutinas y dietas, base de +240.000 alimentos, seguimiento de adherencia, recordatorios de renovación y migración asistida gratuita en español. Sin permanencia, sin tarjeta para la prueba de 14 días." },
+  { q: "¿Cuánto cuesta TotalGains y qué incluye cada plan?", a: "Starter 29,90 €/mes con IVA (hasta 25 clientes, IA generativa incluida). Pro 89,90 €/mes con IVA (hasta 100 clientes). Unlimited 149,90 €/mes con IVA (clientes ilimitados). Todos los planes incluyen IA de rutinas y dietas, base de +240.000 alimentos, seguimiento de adherencia, recordatorios de renovación y migración asistida gratuita en español. Sin permanencia, sin tarjeta para la prueba de 14 días." },
   { q: "¿Cuánto tiempo lleva aprender a usar el software?", a: "La mayoría de entrenadores están trabajando desde el primer día. La curva de aprendizaje es mínima porque el software está diseñado por un coach en activo, no por un ingeniero. En 15-30 minutos de exploración ya puedes crear tu primer cliente, generar una rutina con IA y programar el primer check-in semanal." },
   { q: "¿Puedo importar mis clientes actuales desde Excel, PDF u otras plataformas?", a: "Sí. Nuestro equipo hace la migración inicial gratis y en español. La IA de TotalGains transcribe rutinas y dietas antiguas en menos de 2 minutos por documento, ya vengas de Excel, Trainerize, Harbiz o MyPT Hub. El tiempo típico de migración para 30-60 clientes es menos de 5 días." },
   { q: "¿Cómo funciona la IA generativa de rutinas y dietas?", a: "La IA genera rutinas personalizadas usando exclusivamente tu propia biblioteca de ejercicios. No inventa movimientos ni contenido genérico. Para dietas usa tu base de alimentos guardados o los +240.000 validados en español (marcas de supermercado incluidas). Tiempo por cliente: menos de 2 minutos de generación + 3-5 minutos de revisión y ajuste. Ahorro neto: 25-40 minutos por cliente frente a diseñar manual." },
-  { q: "¿La app marca blanca es realmente incluida o hay letra pequeña?", a: "En el plan Pro (89,90 €/mes con IVA) está incluida sin add-ons ni pago único de publicación. Tus clientes descargan una app en iOS y Android donde ven tu logo, tus colores y tu nombre en lugar de TotalGains. Comparativa honesta: Trainerize la ofrece como Custom Branded App con pago único de $169 en Pro; Harbiz la cobra como add-on de 30,24 €/mes con IVA; MyPT Hub la incluye solo en planes de gama alta (~145 €/mes). En TotalGains, incluida desde 89,90 €/mes." },
+  { q: "¿La app marca blanca es realmente incluida o hay letra pequeña?", a: "Está incluida en todos los planes, desde el Starter de 29,90 €/mes con IVA, sin add-ons ni pago único de publicación. Tus clientes descargan una app en iOS y Android donde ven tu logo, tus colores y tu nombre en lugar de TotalGains. Comparativa honesta: Trainerize la ofrece como Custom Branded App con pago único de $169 en Pro; Harbiz la cobra como add-on de 30,24 €/mes con IVA; MyPT Hub la incluye solo en planes de gama alta (~145 €/mes). En TotalGains, incluida en todos los planes desde 29,90 €/mes." },
   { q: "¿Funciona en móvil o solo en ordenador?", a: "Completamente. Tienes app nativa iOS y Android para el coach (gestión de cartera, edición de rutinas, revisión de check-ins) y tus clientes usan su propia app personalizada con tu marca. Panel web disponible para el coach que prefiera trabajar desde ordenador." },
   { q: "¿Qué diferencia a TotalGains de Trainerize, Harbiz o MyPT Hub?", a: "Cuatro diferencias verificables: (1) soporte nativo en español y migración asistida gratis, no traducción de plataforma anglosajona; (2) IA que trabaja con tu biblioteca sin inventar contenido, no un ChatGPT genérico embebido; (3) base de +240.000 alimentos españoles frente a bases USDA en inglés o catálogos pequeños; (4) precios con funcionalidad completa: Pro 89,90 €/mes con IVA incluye lo que en la competencia son add-ons que suman 150-300 €/mes." },
   { q: "¿Puedo cancelar cuando quiera?", a: "Sí. Sin permanencia, sin cláusulas de mínima duración. Puedes cancelar tu suscripción desde tu panel en cualquier momento y mantienes acceso hasta el final del periodo pagado. La prueba de 14 días es gratuita y no requiere tarjeta." },
@@ -79,10 +79,10 @@ export default function SoftwareEntrenadorPersonal() {
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web, iOS, Android",
         "@id": "https://totalgains.es/#software",
-        description: "Software de gestión integral para entrenadores personales en español: IA generativa de rutinas y dietas, base de +240.000 alimentos, seguimiento de adherencia, recordatorios de renovación y app marca blanca incluida en Pro. Migración asistida gratuita.",
+        description: "Software de gestión integral para entrenadores personales en español: IA generativa de rutinas y dietas, base de +240.000 alimentos, seguimiento de adherencia, recordatorios de renovación y app marca blanca incluida en todos los planes. Migración asistida gratuita.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/software-entrenador-personal/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos con IA generativa incluida" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos con app marca blanca incluida" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados" }] },
+        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
         aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", reviewCount: "2" },
         review: [
           { "@type": "Review", author: { "@type": "Person", name: "Nacho Pulido" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" }, reviewBody: "Tener todo centralizado ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.", datePublished: "2025-03-01", itemReviewed: { "@id": "https://totalgains.es/#software" } },
@@ -121,7 +121,7 @@ export default function SoftwareEntrenadorPersonal() {
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
           {[
-            { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["IA generativa incluida", "+240.000 alimentos", "Migración asistida gratis"] },
+            { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["App marca blanca incluida", "IA generativa incluida", "+240.000 alimentos", "Migración asistida gratis"] },
             { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 clientes activos", extras: ["Todo lo del Starter", "App marca blanca incluida", "Coach Insights + retención IA"], highlight: true },
             { name: "Unlimited", price: "149,90 €/mes", incl: "Clientes ilimitados", extras: ["Todo lo del Pro", "Multi-coach", "Prioridad soporte"] },
           ].map((plan) => (

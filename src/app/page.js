@@ -35,9 +35,11 @@ const faqData = [
     question: "¿Qué es TotalGains y cómo funciona como software para entrenadores personales?",
     answer: "TotalGains es una plataforma de gestión deportiva todo-en-uno. Centraliza la gestión de atletas, creación de rutinas con IA, planes nutricionales, seguimiento de progreso y recordatorios de renovación al cliente. Funciona en Android, iOS y Web, y cada entrenador obtiene su propia app de fitness personalizada para sus clientes.",
   },
+  // ⚠️ Esta respuesta va DENTRO del schema FAQPage (Google puede mostrarla como
+  // rich result) y tiene una gemela en FAQ.jsx: si tocas una, toca la otra.
   {
     question: "¿Cuánto cuesta el software de entrenamiento TotalGains?",
-    answer: "Ofrecemos planes desde 29,90€/mes (IVA incluido) con todas las herramientas profesionales. Puedes empezar con un Plan Gratuito de por vida para hasta 3 atletas, sin necesidad de tarjeta de crédito. Todos los planes incluyen IA ilimitada para dietas y rutinas.",
+    answer: "Puedes empezar con un Plan Gratuito de por vida para hasta 3 atletas, sin necesidad de tarjeta de crédito. A partir de ahí, los planes van desde 29,90€/mes (IVA incluido) y todos incluyen exactamente las mismas funciones: IA ilimitada para dietas y rutinas, app marca blanca y base de +240.000 alimentos. Lo único que cambia entre planes es el número de atletas activos (25, 100 o ilimitados) y el nivel de soporte.",
   },
   {
     question: "¿Por qué TotalGains es la mejor alternativa SaaS de fitness del mercado?",
@@ -92,9 +94,9 @@ export default function Home() {
           url: "https://totalgains.es/onboarding/",
           image: "https://totalgains.es/og-image.jpg",
           offers: [
-            { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos con IA generativa incluida" },
-            { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos con app marca blanca incluida" },
-            { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados" },
+            { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" },
+            { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" },
+            { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" },
           ],
         },
         aggregateRating: {
