@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: "¿Cuánto tarda en implementarse TotalGains en un gimnasio?",
-    a: "Una configuración base completa (carga de socios, plantillas de rutinas, programación de clases recurrentes, conexión Stripe, branding de la app) suele estar lista en 3-5 días. La migración de datos desde Harbiz, Virtuagym u otra plataforma está incluida y la gestiona soporte en español. Para gimnasios con más de 200 socios o estructura compleja, el plan Unlimited incluye onboarding asistido prioritario que reduce el tiempo a 48-72 horas.",
+    a: "Una configuración base completa (carga de socios, plantillas de rutinas, programación de clases recurrentes, conexión Stripe, branding de la app) suele estar lista en 3-5 días. La migración de datos desde Harbiz, Virtuagym u otra plataforma está incluida y la gestiona soporte en español. Para gimnasios con más de 100 socios o estructura compleja, los planes Gym Pro y Gym Elite incluyen onboarding asistido prioritario que reduce el tiempo a 48-72 horas.",
   },
   {
     q: "¿Incluye marca blanca para el gimnasio o solo para entrenadores individuales?",

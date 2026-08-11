@@ -42,6 +42,58 @@
     margin-top: 4px;
 }
 
+/* ── Audience Toggle (entrenador / gimnasio) ── */
+.audience-toggle-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+.audience-toggle {
+    display: flex;
+    gap: 6px;
+    padding: 6px;
+    background: linear-gradient(135deg, rgba(30,30,50,.9), rgba(40,40,70,.8));
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,.1);
+    box-shadow: 0 8px 32px rgba(0,0,0,.3), inset 0 1px 0 rgba(255,255,255,.05);
+    max-width: 100%;
+}
+.audience-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    background: transparent;
+    color: rgba(255,255,255,.55);
+    font-size: .95rem;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: color .25s ease, background .25s ease, box-shadow .25s ease;
+}
+.audience-btn:hover { color: rgba(255,255,255,.85) }
+.audience-btn.active {
+    background: var(--primary-gradient, linear-gradient(135deg, #667eea, #764ba2));
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(102,126,234,.4);
+}
+@media (max-width: 480px) {
+    .audience-btn { padding: 10px 14px; font-size: .82rem; gap: 6px }
+}
+
+/* Unidad del precio — sin esto, 149,90 € (atletas) y 149 € (socios) se leen igual */
+.price-unit {
+    display: block;
+    margin-top: 2px;
+    font-size: .78rem;
+    font-weight: 600;
+    color: rgba(255,255,255,.55);
+    letter-spacing: .01em;
+}
+
 /* ── Billing Toggle ── */
 .billing-toggle-container {
     display: flex;
@@ -310,10 +362,12 @@
 .gradient-card-accent .period,
 .gradient-card-accent .currency,
 .gradient-card-accent .vat-label,
+.gradient-card-accent .price-unit,
 .gradient-card-accent .microcopy,
 .gradient-card-accent .trust-badge-mini { color: #1a1a2e !important; -webkit-text-fill-color: #1a1a2e !important }
 .gradient-card-accent .pricing-description { color: rgba(26,26,46,.8) !important }
 .gradient-card-accent .vat-label,
+.gradient-card-accent .price-unit,
 .gradient-card-accent .microcopy         { color: rgba(26,26,46,.65) !important }
 .gradient-card-accent .pricing-features .check { color: #065f46 !important }
 .gradient-card-accent .pricing-price .amount {

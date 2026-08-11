@@ -19,7 +19,7 @@ export default function sitemap() {
         { url: `${baseUrl}/alternativas/dudyfit/`, lastModified: '2026-08-10' },
         { url: `${baseUrl}/alternativas/virtuagym/`, lastModified: '2026-08-10' },
         { url: `${baseUrl}/software-entrenador-personal/`, lastModified: '2026-08-10' },
-        { url: `${baseUrl}/para-gimnasios/`, lastModified: '2026-05-13' },
+        { url: `${baseUrl}/para-gimnasios/`, lastModified: '2026-08-11' },
         { url: `${baseUrl}/ia-entrenador-personal/`, lastModified: '2026-08-10' },
         { url: `${baseUrl}/app-marca-blanca-entrenador-personal/`, lastModified: '2026-08-10' },
         { url: `${baseUrl}/base-datos-alimentos-fitness/`, lastModified: '2026-08-10' },

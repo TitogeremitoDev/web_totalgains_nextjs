@@ -126,10 +126,10 @@ export default function ForGymsTeaser() {
               maxWidth: "44ch",
             }}
           >
-            TotalGains también tiene un plan para gimnasios de 2 a 15 coaches:
-            multi-coach con permisos granulares, agenda de clases con reservas
-            y waitlist, app marca blanca del centro y panel supervisor con
-            KPIs en tiempo real.
+            TotalGains tiene tarifa propia para centros, con coaches
+            ilimitados en todos los planes: multi-coach con permisos
+            granulares, agenda de clases con reservas y waitlist, app marca
+            blanca del centro y panel supervisor con KPIs en tiempo real.
           </p>
 
           {/* 3 mini-features con iconos */}

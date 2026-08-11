@@ -10,6 +10,9 @@ import { trackEvent } from '@/components/Analytics';
 const navLinks = [
     { href: '#how-it-works', label: 'Cómo Funciona' },
     { href: '#app-showcase', label: 'Explora la App' },
+    // Única puerta de entrada al vertical de gimnasios desde la navegación: sin
+    // ella la landing solo se alcanzaba haciendo scroll hasta el pie de la home.
+    { href: '/para-gimnasios/', label: 'Gimnasios' },
     { href: '/alternativas/trainerize', label: 'vs Trainerize' },
     { href: '#pricing', label: 'Precios' },
     { href: '/blog/', label: 'Blog' },
@@ -59,6 +62,10 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // Las landings de embudo (/demo/*) van sin menú: llevan su propia barra
+    // mínima con una sola acción. Ver src/app/demo/layout.js.
+    if (pathname?.startsWith('/demo')) return null;
 
     return (
         <nav className={`navbar ${scrolled ? 'scrolled' : ''} ${menuOpen ? 'menu-open' : ''}`}>

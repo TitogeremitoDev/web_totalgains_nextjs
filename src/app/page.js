@@ -84,6 +84,11 @@ export default function Home() {
           "Software integral para entrenadores personales. Gestiona atletas, diseña rutinas, automatiza dietas y escala tu negocio fitness desde una sola plataforma.",
         url: "https://totalgains.es",
         inLanguage: "es",
+        /* SOLO los 3 planes de coach. Los planes Gym se ven en #pricing tras
+           pulsar "Tengo un gimnasio", y ese contenido no está en el HTML
+           inicial: marcarlo aquí sería declarar precios que la página no
+           enseña al cargar. Las ofertas Gym viven en el schema de
+           /para-gimnasios/, donde sí son visibles en el HTML estático. */
         offers: {
           "@type": "AggregateOffer",
           lowPrice: 29.90,

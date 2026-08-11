@@ -50,6 +50,7 @@ const Footer = () => {
                                 <li><a href="#features">Funciones</a></li>
                                 <li><a href="#app-showcase">Ver App</a></li>
                                 <li><a href="#pricing">Precios</a></li>
+                                <li><Link href="/para-gimnasios/" prefetch={false}>Para gimnasios</Link></li>
                             </ul>
                         </div>
 
@@ -77,6 +78,8 @@ const Footer = () => {
                                 <li><Link href="/gestion-clientes-fitness/" prefetch={false}>Gestión clientes fitness</Link></li>
                                 <li><Link href="/plataforma-entrenamiento-online/" prefetch={false}>Plataforma entrenamiento</Link></li>
                                 <li><Link href="/software-nutricionista-online/" prefetch={false}>Software nutricionista</Link></li>
+                                <li><Link href="/para-gimnasios/" prefetch={false}>Software para gimnasios</Link></li>
+                                <li><Link href="/blog/software-gimnasios-pequenos-boutique-2026/" prefetch={false}>Guía: gimnasios boutique</Link></li>
                             </ul>
                         </div>
 
