@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
+import MetaClickId from "@/components/MetaClickId";
 import CookieConsent from "@/components/CookieConsent";
 import ScrollProgress from "@/components/ScrollProgress";
 
@@ -133,6 +134,9 @@ export default function RootLayout({ children }) {
         {children}
         <Footer />
         <Analytics />
+        {/* Guarda el click id de Meta para que el registro (que ocurre en
+            /app, mismo dominio) pueda atribuirse al anuncio. No inyecta píxel. */}
+        <MetaClickId />
         <CookieConsent />
       </body>
     </html>
