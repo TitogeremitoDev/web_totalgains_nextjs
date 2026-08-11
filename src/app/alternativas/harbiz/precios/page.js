@@ -1,5 +1,6 @@
 import Link from "next/link";
 import "@/app/alternativas/trainerize/Alternativas.css";
+import { softwareApplicationNode } from "@/data/productSchema";
 
 export const metadata = {
   title: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes (con IVA)",
@@ -139,6 +140,10 @@ export default function HarbizPreciosPage() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+      // Nuestra propia valoración de Trustpilot (4,4/12, la que muestra el
+      // badge de la página). El nodo Product de más abajo describe a Harbiz:
+      // a ese NO se le pone rating, seríamos nosotros valorando a un rival.
+      softwareApplicationNode({ description: "TotalGains, alternativa en español a Harbiz: plan plano sin add-ons, IA de rutinas y dietas, app marca blanca incluida en todos los planes y base de +240.000 alimentos." }),
       {
         "@type": "Article",
         "@id": "https://totalgains.es/alternativas/harbiz/precios/#article",
