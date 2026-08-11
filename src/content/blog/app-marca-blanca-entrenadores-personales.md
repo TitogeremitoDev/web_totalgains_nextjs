@@ -379,7 +379,7 @@ Estrictamente gratuitas en plataformas profesionales, prácticamente no. Algunas
 
 - 🏆 **[Los 5 Mejores Software para Entrenadores Personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)** — Comparativa completa con tabla de funcionalidad, precios y veredicto editorial por perfil.
 - 💵 **[Trainerize Precios 2026: Cuánto Cuesta Realmente con Todos los Add-ons](/blog/trainerize-precios-2026/)** — Coste real de la Custom Branded App de Trainerize en contexto del plan completo.
-- 💶 **[Harbiz Precios 2026: Guía Completa con IVA y Add-ons](/blog/harbiz-precios-2026/)** — Desglose del add-on "Personaliza tu app" y plan My APP de Harbiz.
+- 💶 **[Harbiz Precios 2026: Guía Completa con IVA y Add-ons](/alternativas/harbiz/precios/)** — Desglose del add-on "Personaliza tu app" y plan My APP de Harbiz.
 - 🤖 **[IA para Entrenadores Personales: Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — Cómo aprovechar la IA en tu negocio fitness con ejemplos reales.
 - 🏋️ **[Software para Gimnasios Pequeños y Boutique 2026](/blog/software-gimnasios-pequenos-boutique-2026/)** — Si tu modelo es gimnasio multi-coach en lugar de coach individual, cómo funciona la marca blanca DEL GIMNASIO (no de cada coach).
 - ⚙️ **[Top 5 Cosas que Automatiza el Entrenador de +50 Clientes](/blog/top-5-automatizaciones-coach-50-clientes-2026/)** — La marca blanca es la automatización #5 de las 5 innegociables para escalar por encima de 50 clientes activos.

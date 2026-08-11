@@ -101,10 +101,10 @@ export default function Home() {
         },
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: "5.0",
+          ratingValue: "4.4",
           bestRating: "5",
           worstRating: "1",
-          reviewCount: "3",
+          reviewCount: "12",
         },
         review: [
           {

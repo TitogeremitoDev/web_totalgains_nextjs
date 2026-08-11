@@ -1,4 +1,6 @@
 import AlternativaCompetidoresContent from "@/components/AlternativaCompetidoresContent";
+import { getAlternativaFaqs } from "@/data/alternativasFaqs";
+import { softwareApplicationNode } from "@/data/productSchema";
 
 export const metadata = {
   title: "Alternativa a Virtuagym: TotalGains desde 29,90 €/mes",
@@ -17,17 +19,22 @@ export const metadata = {
 };
 
 export default function AlternativaVirtuagym() {
+  const faqs = getAlternativaFaqs("virtuagym", "Virtuagym");
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+      // Valoración real de Trustpilot (la misma que muestra el badge de
+      // la página): hace la página elegible para estrellas en la SERP.
+      softwareApplicationNode({ description: "TotalGains, alternativa en español a Virtuagym para entrenadores personales: IA de rutinas y dietas, app marca blanca incluida en todos los planes y soporte en español." }),
       {
         "@type": "FAQPage",
-        mainEntity: [
-          { "@type": "Question", name: "¿TotalGains está diseñado para entrenadores personales a diferencia de Virtuagym?", acceptedAnswer: { "@type": "Answer", text: "Sí. 100% para entrenadores personales autónomos. Virtuagym está pensado para gimnasios y clubs — pagas por funciones que nunca usarás." } },
-          { "@type": "Question", name: "¿TotalGains es más barato que Virtuagym para entrenadores?", acceptedAnswer: { "@type": "Answer", text: "Sí. Desde 29,90€/mes con IVA incluido, sin sorpresas. Virtuagym tiene precios empresariales diseñados para instalaciones, no para autónomos." } },
-          { "@type": "Question", name: "¿Por qué TotalGains es mejor alternativa a Virtuagym para entrenadores personales online?", acceptedAnswer: { "@type": "Answer", text: "Intuitivo desde el primer día, IA nativa para rutinas y dietas, app de marca blanca y soporte en español. Virtuagym tiene alta complejidad y siempre muestra su propio logo a tus clientes." } },
-          { "@type": "Question", name: "¿Con TotalGains mis clientes verán mi marca y no la de Virtuagym?", acceptedAnswer: { "@type": "Answer", text: "Sí. La app que descargan lleva tu nombre, logo y colores. Con Virtuagym el logo de Virtuagym aparece siempre." } },
-        ],
+        // Generado desde la MISMA fuente que renderiza la página:
+        // el schema no puede declarar preguntas que el usuario no ve.
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
       },
       {
         "@type": "BreadcrumbList",

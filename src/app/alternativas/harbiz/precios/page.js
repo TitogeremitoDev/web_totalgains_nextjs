@@ -481,9 +481,13 @@ export default function HarbizPreciosPage() {
               </Link>
             </p>
             <p style={{ marginTop: 24, fontSize: "0.92rem", color: "var(--text-secondary,#aaa)" }}>
-              📖 ¿Quieres el análisis editorial completo, plan por plan, con escenarios de decisión y comparativa con Trainerize?{" "}
-              <Link href="/blog/harbiz-precios-2026/" prefetch={false}>
-                Lee la guía Harbiz Precios 2026 en el blog
+              📖 ¿Prefieres la comparativa con otras plataformas?{" "}
+              <Link href="/blog/mejores-software-entrenadores-personales-2026/" prefetch={false}>
+                Los 5 mejores software para entrenadores en 2026
+              </Link>{" "}
+              o el{" "}
+              <Link href="/blog/trainerize-precios-2026/" prefetch={false}>
+                desglose de precios de Trainerize
               </Link>.
             </p>
           </section>

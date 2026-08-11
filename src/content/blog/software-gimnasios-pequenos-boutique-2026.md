@@ -1,9 +1,9 @@
 ---
 title: "Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach"
-seoTitle: "Elegir Software Gimnasios Boutique 2026 (Guía Multi-Coach)"
-description: "Guía 2026 para elegir software de gimnasio pequeño y boutique: multi-coach, reservas, branding propio, cobros recurrentes y comparativa real entre plataformas."
+seoTitle: "Software para Gimnasios Pequeños: Guía y Precios 2026"
+description: "Qué mirar al elegir software para un gimnasio boutique: multi-coach sin coste por entrenador, reservas con lista de espera, app propia y cobros recurrentes."
 date: "2026-06-12"
-lastModified: "2026-06-12"
+lastModified: "2026-08-11"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 16
@@ -380,7 +380,7 @@ Cuatro KPIs operativos básicos: 1) Retención mensual de socios (cuántos sigue
 - 🏆 **[Los 5 Mejores Software para Entrenadores Personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)** — Comparativa completa de plataformas para coach autónomo
 - 📱 **[App de Marca Blanca para Entrenadores: Guía Completa 2026](/blog/app-marca-blanca-entrenadores-personales/)** — Cómo funciona la marca blanca, modelos técnicos y coste real
 - 🥗 **[Cómo Crear Planes Nutricionales para Clientes: Guía 2026](/blog/crear-planes-nutricionales-clientes-entrenador-personal/)** — Workflow paso a paso del nutricionista online
-- 💶 **[Harbiz Precios 2026: Guía Completa con IVA y Add-ons](/blog/harbiz-precios-2026/)** — Tablas verificadas para coach autónomo y gimnasio multi-coach con Harbiz
+- 💶 **[Harbiz Precios 2026: Guía Completa con IVA y Add-ons](/alternativas/harbiz/precios/)** — Tablas verificadas para coach autónomo y gimnasio multi-coach con Harbiz
 
 ---
 

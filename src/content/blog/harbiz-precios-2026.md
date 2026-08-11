@@ -3,6 +3,7 @@ title: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes (con IVA)"
 seoTitle: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes con IVA"
 description: "Precios Harbiz 2026 con IVA: Basic 22,99 €, Pro 143,99 €, My APP 240,79 €. Con marca blanca y add-ons llega a 313 €/mes. Verificado mayo 2026."
 date: "2026-05-23"
+canonical: "https://totalgains.es/alternativas/harbiz/precios/"
 lastModified: "2026-08-10"
 author: "Germán Martínez Calvente"
 category: "herramientas"
@@ -70,6 +71,8 @@ faqs:
   - q: "¿Qué alternativas a Harbiz hay en español en 2026?"
     a: "Las alternativas en español más consolidadas en 2026 son [TotalGains](/alternativas/harbiz/) (plan plano desde 29,90 €/mes con IVA hasta 100 clientes, sin add-ons), [TrainerStudio](https://www.trainerstudio.com) (plan gratuito permanente para 3 clientes e ilimitado a 180,29 €/mes con IVA) y opciones internacionales como Trainerize ($10-380 USD/mes con add-ons). Cada una atiende un perfil distinto: Harbiz prioriza catálogo modular, TotalGains prioriza todo incluido y TrainerStudio prioriza simplicidad con plan free permanente. La elección depende del tamaño de tu cartera, la necesidad de marca blanca y la importancia que des a la modularidad."
 ---
+
+> **📊 La tabla de precios actualizada vive ahora en [Precios de Harbiz 2026: todos los tramos con IVA](/alternativas/harbiz/precios/)**, donde además comparamos el coste total con las alternativas. Este artículo se mantiene como análisis editorial.
 
 <div class="tg-callout" role="note">
 <strong>Precios Harbiz 2026 de un vistazo (con IVA):</strong>

@@ -275,7 +275,7 @@ Elegir herramienta es elegir filosofía. Estas son las tres referencias en el me
 
 > **Decisión de diseño en TotalGains**: elegimos centrar la plataforma en el producto-nutrición-y-entrenamiento (creación, edición, seguimiento, app cliente) en lugar de construir un CRM B2C profundo. ¿Por qué? Porque los nutricionistas online que entrevistamos ya tenían su pipeline comercial resuelto (Instagram + WhatsApp + Stripe) y lo que faltaba era una herramienta que matase el Excel + MyFitnessPal + WhatsApp para crear y dar seguimiento al plan. **Trade-off honesto**: si tu cuello de botella es la captación y la gestión comercial — no la creación del plan en sí — Harbiz puede encajarte mejor que TG, porque su núcleo de CRM y agenda lleva años pulido. Si ya tienes clientes entrando y lo que necesitas es producir y supervisar 30-50 planes con calidad, TG está más afinada para esa tarea.
 
-Más comparativas detalladas en [los 5 mejores software para entrenadores personales en 2026](/blog/mejores-software-entrenadores-personales-2026/), [Harbiz Precios 2026](/blog/harbiz-precios-2026/) y [Trainerize Precios 2026](/blog/trainerize-precios-2026/).
+Más comparativas detalladas en [los 5 mejores software para entrenadores personales en 2026](/blog/mejores-software-entrenadores-personales-2026/), [Harbiz Precios 2026](/alternativas/harbiz/precios/) y [Trainerize Precios 2026](/blog/trainerize-precios-2026/).
 
 ## <span id="errores"></span>Errores comunes al crear planes nutricionales (y cómo evitarlos)
 
@@ -387,7 +387,7 @@ Las plantillas son éticas siempre que se usen como punto de partida sobre el qu
 
 - 🤖 [IA para Entrenadores Personales: rutinas y dietas en 2026](/blog/ia-entrenador-personal-rutinas-dietas/)
 - 🏆 [Los 5 mejores software para entrenadores personales en 2026](/blog/mejores-software-entrenadores-personales-2026/)
-- 💶 [Harbiz Precios 2026: guía con IVA y add-ons](/blog/harbiz-precios-2026/)
+- 💶 [Harbiz Precios 2026: guía con IVA y add-ons](/alternativas/harbiz/precios/)
 - 💵 [Trainerize Precios 2026: planes y add-ons explicados](/blog/trainerize-precios-2026/)
 - 💰 [Top 10 Alimentos Más Proteicos por Euro (Guía Coach 2026)](/blog/top-10-alimentos-proteina-por-euro-2026/)
 

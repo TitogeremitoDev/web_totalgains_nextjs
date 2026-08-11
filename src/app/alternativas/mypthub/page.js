@@ -1,4 +1,6 @@
 import AlternativaCompetidoresContent from "@/components/AlternativaCompetidoresContent";
+import { getAlternativaFaqs } from "@/data/alternativasFaqs";
+import { softwareApplicationNode } from "@/data/productSchema";
 
 export const metadata = {
   title: "Alternativa a MyPT Hub para Entrenadores",
@@ -28,17 +30,22 @@ export const metadata = {
 };
 
 export default function AlternativaMyPTHub() {
+  const faqs = getAlternativaFaqs("mypthub", "MyPT Hub");
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+      // Valoración real de Trustpilot (la misma que muestra el badge de
+      // la página): hace la página elegible para estrellas en la SERP.
+      softwareApplicationNode({ description: "TotalGains, alternativa en español a MyPT Hub para entrenadores personales: IA de rutinas y dietas, app marca blanca incluida en todos los planes y soporte en español." }),
       {
         "@type": "FAQPage",
-        mainEntity: [
-          { "@type": "Question", name: "¿Es difícil migrar desde MyPT Hub a TotalGains?", acceptedAnswer: { "@type": "Answer", text: "No. El equipo gestiona la migración sin fricción. El 95% de los atletas se adaptan en menos de 48 horas." } },
-          { "@type": "Question", name: "¿TotalGains tiene la curva de aprendizaje de MyPT Hub?", acceptedAnswer: { "@type": "Answer", text: "No. Está diseñado para que un entrenador lo use desde el primer día sin manual. La mayoría operativos en menos de 1 hora." } },
-          { "@type": "Question", name: "¿Por qué TotalGains es mejor alternativa a MyPT Hub para entrenadores en España?", acceptedAnswer: { "@type": "Answer", text: "TotalGains tiene IA nativa para rutinas y dietas, soporte en español 24h, app de marca blanca sin coste extra y sistema anti-abandono que MyPT Hub no tiene." } },
-          { "@type": "Question", name: "¿Necesito integraciones externas para nutrición como con MyPT Hub?", acceptedAnswer: { "@type": "Answer", text: "+240.000 alimentos en español y generador IA incluidos. Sin MyFitnessPal, sin plugins, sin coste adicional." } },
-        ],
+        // Generado desde la MISMA fuente que renderiza la página:
+        // el schema no puede declarar preguntas que el usuario no ve.
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
       },
       {
         "@type": "BreadcrumbList",

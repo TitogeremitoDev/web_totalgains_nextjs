@@ -5,6 +5,8 @@ import { useHydrated } from '@/hooks/useHydrated';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import TrustpilotBadge from '@/components/TrustpilotBadge';
+import { getAlternativaFaqs, FECHA_VERIFICACION } from '@/data/alternativasFaqs';
+import { getAlternativaIntro } from '@/data/alternativasIntros';
 import '@/app/alternativas/trainerize/Alternativas.css';
 
 export default function AlternativaCompetidoresContent({ defaultCompetitor = 'trainerize' }) {
@@ -122,11 +124,9 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
 
     const currentData = competitors[competitor];
 
-    const faqs = [
-        { question: `¿Perderé los datos de mis clientes al migrar desde ${currentData.name}?`, answer: "No. Nuestro equipo se encarga de importar a tus atletas actuales mediante herramientas propias de migración, guiando el proceso en español. La migración asistida está incluida en todos los planes." },
-        { question: "¿Cobráis comisiones extra por mis ventas?", answer: "No aplicamos comisiones sobre tus ventas. Usas tu propia cuenta de Stripe para los cobros de tus clientes; TotalGains es únicamente la tecnología SaaS que tú contratas." },
-        { question: `Mis clientes están acostumbrados a ${currentData.name}, ¿les costará el cambio?`, answer: "Nuestra experiencia con entrenadores que han migrado es que el periodo de adaptación suele resolverse en los primeros días. Tus clientes reciben una invitación clara con la nueva app y un onboarding guiado. Si tienes dudas sobre un caso concreto, escríbenos y te contamos cómo suele ser el proceso." }
-    ];
+    // Mismas FAQs que declara el schema FAQPage de la página (fuente única).
+    const faqs = getAlternativaFaqs(competitor, currentData.name);
+    const intro = getAlternativaIntro(competitor);
 
     return (
         <main className="alternativas-page">
@@ -138,7 +138,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
                     className="alternativas-header"
                 >
                     <span className="badge warning-badge">⚠️ Atención Entrenadores Top</span>
-                    <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary,#aaa)', display: 'block', marginBottom: 4 }}>Actualizado: Abril 2026</span>
+                    <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary,#aaa)', display: 'block', marginBottom: 4 }}>Datos de competidores verificados en sus webs oficiales: {FECHA_VERIFICACION} · Página actualizada: agosto de 2026</span>
                     <h1 className="alternativas-title gradient-text">
                         {currentData.h1}
                     </h1>
@@ -165,10 +165,42 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
                     <p className="alternativas-subtitle mt-4">
                         {currentData.painPoint} TotalGains es la alternativa en español con IA y marca blanca incluidas desde el plan base.
                     </p>
+                    {/* CTA principal, visible sin hacer scroll: quien llega buscando
+                        "alternativa a X" ya está decidido a cambiar, no hay que
+                        hacerle leer siete FAQs antes de darle el botón. */}
+                    <div className="alt-cta-top">
+                        <Link href="/onboarding/" className="btn btn-primary btn-lg" prefetch={false}>
+                            Probar TotalGains gratis 14 días
+                        </Link>
+                        <Link href="/software-entrenador-personal/#pricing" className="btn btn-outline" prefetch={false}>
+                            Ver precios
+                        </Link>
+                    </div>
+                    <p className="alt-cta-top-note">
+                        Sin tarjeta · Sin permanencia · Migración desde {currentData.name} incluida
+                    </p>
+
                     <div style={{ marginTop: 20 }}>
-                        <TrustpilotBadge score={4.0} totalReviews={3} variant="compact" />
+                        <TrustpilotBadge score={4.4} totalReviews={12} variant="compact" />
                     </div>
                 </motion.div>
+
+                {/* Introducción editorial propia de cada competidor: da a Google
+                    prosa que resumir en el snippet (antes cogía la lista de
+                    enlaces del footer) y hace única cada una de estas páginas. */}
+                {intro.length > 0 && (
+                    <motion.section
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="alt-intro"
+                    >
+                        {intro.map((parrafo, i) => (
+                            <p key={i}>{parrafo}</p>
+                        ))}
+                    </motion.section>
+                )}
 
                 {/* Tabla Comparativa Premium */}
                 <motion.div
@@ -217,6 +249,16 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
                     <span className="migration-icon">✈️</span>
                     <h3>Migración asistida desde {currentData.name} incluida</h3>
                     <p>Sabemos que mover a 30, 50 o más clientes puede dar pereza. Por eso nuestro equipo te acompaña en el proceso: importamos tus datos, recreamos tus rutinas y coordinamos el onboarding de tus clientes. La migración está incluida en todos los planes, en español.</p>
+                    {/* CTA intermedio: aquí es donde el visitante acaba de ver la
+                        comparativa y se le acaba de resolver la objeción de migrar. */}
+                    <div className="alt-cta-mid">
+                        <Link href="/onboarding/" className="btn btn-primary" prefetch={false}>
+                            Empezar la migración gratis
+                        </Link>
+                        <Link href="/casos-de-exito/nacho-pulido/" className="alt-cta-mid-link" prefetch={false}>
+                            Ver cómo Nacho pasó de 15 a 40+ clientes →
+                        </Link>
+                    </div>
                 </motion.div>
 
                 {/* Preguntas Frecuentes específicas editadas dinámicamente */}

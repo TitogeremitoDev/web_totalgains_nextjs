@@ -1,13 +1,15 @@
 import AlternativaCompetidoresContent from "@/components/AlternativaCompetidoresContent";
+import { getAlternativaFaqs } from "@/data/alternativasFaqs";
+import { softwareApplicationNode } from "@/data/productSchema";
 
 /* ──────────────────────────────────────────────
    /alternativas/trainerize — SERVER COMPONENT
    SEO Metadata para posicionar vs competencia
    ────────────────────────────────────────────── */
 export const metadata = {
-  title: "Alternativa a Trainerize 2026 en Español",
+  title: "Trainerize en Español: la Alternativa Real (2026)",
   description:
-    "TotalGains 89,90€/mes con marca blanca incluida vs Trainerize Pro 50 (≈250 €/mes con IVA) o Pro 100 (≈352 €/mes). Soporte y migración en español.",
+    "Trainerize opera en inglés y factura en dólares con add-ons aparte. TotalGains es la alternativa en español desde 29,90 €/mes con IVA y migración gratis.",
   alternates: {
     canonical: "https://totalgains.es/alternativas/trainerize/",
   },
@@ -21,60 +23,22 @@ export const metadata = {
 };
 
 export default function AlternativaCompetidores() {
+  const faqs = getAlternativaFaqs("trainerize", "Trainerize");
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
-      {
-        "@type": "SoftwareApplication",
-        name: "TotalGains",
-        applicationCategory: "BusinessApplication",
-        operatingSystem: "Web, iOS, Android",
-        "@id": "https://totalgains.es/#software",
-        description: "Alternativa a Trainerize en español para entrenadores personales: IA de rutinas y dietas con biblioteca propia, app marca blanca incluida en todos los planes, migración asistida y precios sin penalización por volumen.",
-        image: "https://totalgains.es/og-image.jpg",
-        url: "https://totalgains.es/alternativas/trainerize/",
-        offers: {
-          "@type": "AggregateOffer",
-          lowPrice: 29.90,
-          highPrice: 149.90,
-          priceCurrency: "EUR",
-          offerCount: 3,
-          availability: "https://schema.org/InStock",
-          url: "https://totalgains.es/onboarding/",
-          image: "https://totalgains.es/og-image.jpg",
-          offers: [
-            { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" },
-            { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" },
-            { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" },
-          ],
-        },
-        inLanguage: "es",
-        publisher: { "@id": "https://totalgains.es/#organization" },
-      },
+      // Valoración real de Trustpilot (la misma que muestra el badge de
+      // la página): hace la página elegible para estrellas en la SERP.
+      softwareApplicationNode({ description: "TotalGains, alternativa en español a Trainerize para entrenadores personales: IA de rutinas y dietas con biblioteca propia, app marca blanca incluida en todos los planes, migración asistida y precios sin penalización por volumen." }),
       {
         "@type": "FAQPage",
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: "¿Perderé los datos de mis clientes al migrar desde Trainerize?",
-            acceptedAnswer: { "@type": "Answer", text: "En absoluto. Nuestro equipo (y nuestras herramientas de importación) se encargan de subir a tus atletas actuales sin que ellos sientan fricción." },
-          },
-          {
-            "@type": "Question",
-            name: "¿Cobráis comisiones extra por mis ventas?",
-            acceptedAnswer: { "@type": "Answer", text: "Cero comisiones ocultas. Tú usas tu propia cuenta de Stripe o cobras por tu cuenta; nosotros solo somos tu tecnología SaaS B2B." },
-          },
-          {
-            "@type": "Question",
-            name: "Mis clientes están acostumbrados a Trainerize, ¿será difícil el cambio?",
-            acceptedAnswer: { "@type": "Answer", text: "El 95% de los atletas prefieren nuestra interfaz más moderna, rápida y gamificada. El periodo de adaptación suele ser de menos de 48 horas." },
-          },
-          {
-            "@type": "Question",
-            name: "¿Por qué TotalGains es mejor alternativa a Trainerize para entrenadores en España?",
-            acceptedAnswer: { "@type": "Answer", text: "TotalGains ofrece soporte nativo en español, IA que genera rutinas y dietas con tu propia base de datos, app de marca blanca, y precios sin penalización por volumen de atletas. A diferencia de Trainerize, está diseñado específicamente para el mercado hispanohablante." },
-          },
-        ],
+        // Generado desde la MISMA fuente que renderiza la página:
+        // el schema no puede declarar preguntas que el usuario no ve.
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
       },
       {
         "@type": "BreadcrumbList",

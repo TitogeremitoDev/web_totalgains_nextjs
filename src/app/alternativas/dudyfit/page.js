@@ -1,4 +1,6 @@
 import AlternativaCompetidoresContent from "@/components/AlternativaCompetidoresContent";
+import { getAlternativaFaqs } from "@/data/alternativasFaqs";
+import { softwareApplicationNode } from "@/data/productSchema";
 
 export const metadata = {
   title: "Alternativa a Dudyfit para Entrenadores",
@@ -17,17 +19,22 @@ export const metadata = {
 };
 
 export default function AlternativaDudyfit() {
+  const faqs = getAlternativaFaqs("dudyfit", "Dudyfit");
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+      // Valoración real de Trustpilot (la misma que muestra el badge de
+      // la página): hace la página elegible para estrellas en la SERP.
+      softwareApplicationNode({ description: "TotalGains, alternativa en español a Dudyfit para entrenadores personales: IA de rutinas y dietas, app marca blanca incluida en todos los planes y soporte en español." }),
       {
         "@type": "FAQPage",
-        mainEntity: [
-          { "@type": "Question", name: "¿TotalGains tiene app de marca blanca a diferencia de Dudyfit?", acceptedAnswer: { "@type": "Answer", text: "Sí. Tus clientes descargan una app con tu nombre, logo y colores. Con Dudyfit todos usan la app genérica sin personalización." } },
-          { "@type": "Question", name: "¿TotalGains tiene recordatorios automáticos de cobro a diferencia de Dudyfit?", acceptedAnswer: { "@type": "Answer", text: "Sí. El sistema avisa al cliente en su app cuando toca renovar, con segunda vuelta de win-back si no responde en 48h. El cobro efectivo lo mantienes por tu canal habitual (transferencia, Bizum, TPV). En Dudyfit el seguimiento es manual o muy limitado." } },
-          { "@type": "Question", name: "¿Por qué TotalGains es mejor alternativa a Dudyfit para escalar?", acceptedAnswer: { "@type": "Answer", text: "TotalGains tiene IA para rutinas y dietas, app de marca blanca, recordatorios automáticos al cliente y sistema anti-abandono. Dudyfit es básico sin IA ni automatización real." } },
-          { "@type": "Question", name: "¿La base de alimentos de TotalGains es mejor que la de Dudyfit?", acceptedAnswer: { "@type": "Answer", text: "+240.000 alimentos validados en español con generador IA. Sin comparación posible con Dudyfit." } },
-        ],
+        // Generado desde la MISMA fuente que renderiza la página:
+        // el schema no puede declarar preguntas que el usuario no ve.
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
       },
       {
         "@type": "BreadcrumbList",

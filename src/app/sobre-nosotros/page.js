@@ -92,7 +92,7 @@ export default function SobreNosotros() {
           TotalGains nació de la frustración real de gestionar clientes con Excel, WhatsApp y hojas de cálculo que se rompían. No de una consultora. No de un fondo de inversión. De alguien que vivió el problema.
         </p>
         <div style={{ marginBottom: 56 }}>
-          <TrustpilotBadge score={4.0} totalReviews={3} variant="default" />
+          <TrustpilotBadge score={4.4} totalReviews={12} variant="default" />
         </div>
 
         {/* Founder section */}

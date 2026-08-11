@@ -1,4 +1,6 @@
 import AlternativaCompetidoresContent from "@/components/AlternativaCompetidoresContent";
+import { getAlternativaFaqs } from "@/data/alternativasFaqs";
+import { softwareApplicationNode } from "@/data/productSchema";
 
 export const metadata = {
   title: "Alternativa a TrueCoach en España",
@@ -17,17 +19,22 @@ export const metadata = {
 };
 
 export default function AlternativaTrueCoach() {
+  const faqs = getAlternativaFaqs("truecoach", "TrueCoach");
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+      // Valoración real de Trustpilot (la misma que muestra el badge de
+      // la página): hace la página elegible para estrellas en la SERP.
+      softwareApplicationNode({ description: "TotalGains, alternativa en español a TrueCoach para entrenadores personales: IA de rutinas y dietas, app marca blanca incluida en todos los planes y soporte en español." }),
       {
         "@type": "FAQPage",
-        mainEntity: [
-          { "@type": "Question", name: "¿TotalGains tiene soporte en español a diferencia de TrueCoach?", acceptedAnswer: { "@type": "Answer", text: "Sí. Soporte nativo en español con respuesta en menos de 24 horas. TrueCoach solo en inglés." } },
-          { "@type": "Question", name: "¿La base de alimentos de TotalGains es mejor que la de TrueCoach?", acceptedAnswer: { "@type": "Answer", text: "+240.000 alimentos validados en español. TrueCoach usa la base USDA en inglés, sin adaptar al mercado hispanohablante." } },
-          { "@type": "Question", name: "¿Por qué TotalGains es mejor alternativa a TrueCoach para entrenadores en España?", acceptedAnswer: { "@type": "Answer", text: "TotalGains está diseñado para España: soporte en español, precios en euros con IVA incluido, base de alimentos local y app de marca blanca. TrueCoach no se adapta al entrenador personal en España." } },
-          { "@type": "Question", name: "¿TotalGains incluye app de marca blanca a diferencia de TrueCoach?", acceptedAnswer: { "@type": "Answer", text: "Sí. Desde el primer plan de pago, tu app tiene tu logo y colores en un clic. TrueCoach no tiene app de marca blanca." } },
-        ],
+        // Generado desde la MISMA fuente que renderiza la página:
+        // el schema no puede declarar preguntas que el usuario no ve.
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
       },
       {
         "@type": "BreadcrumbList",

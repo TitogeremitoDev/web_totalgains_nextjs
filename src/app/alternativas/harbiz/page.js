@@ -1,4 +1,5 @@
 import AlternativaHarbizContent from "@/components/AlternativaHarbizContent";
+import { softwareApplicationNode } from "@/data/productSchema";
 
 export const metadata = {
   title: "Alternativa Harbiz 2026: TotalGains 89,90 € vs Harbiz 313 €",
@@ -33,6 +34,9 @@ export default function AlternativaHarbiz() {
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+      // Valoración real de Trustpilot (la misma que muestra el badge de
+      // la página): hace la página elegible para estrellas en la SERP.
+      softwareApplicationNode({ description: "TotalGains, alternativa en español a Harbiz para entrenadores personales: plan plano sin add-ons, IA de rutinas y dietas, app marca blanca incluida en todos los planes y base de +240.000 alimentos." }),
       {
         "@type": "FAQPage",
         mainEntity: [

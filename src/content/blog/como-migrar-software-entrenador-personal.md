@@ -378,7 +378,7 @@ Las recomendaciones de esta guía están basadas en mi experiencia personal coor
 - 💰 **[¿Cuánto Cobra un Entrenador Personal Online en 2026?](/blog/cuanto-cobra-entrenador-personal-online/)** — Tarifas reales del mercado español
 - 📋 **[Cómo Crear un Plan de Entrenamiento Personalizado que Funcione](/blog/como-crear-plan-entrenamiento-personalizado/)** — El proceso paso a paso desde la evaluación inicial
 - 🤖 **[IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — Guía real con capturas y ejemplos de cómo aprovechar la IA en tu negocio fitness
-- 💶 **[Harbiz Precios 2026: La Tabla Real con IVA y Add-ons](/blog/harbiz-precios-2026/)** — Coste real de Harbiz Basic, Pro y My APP con los add-ons que disparan la factura
+- 💶 **[Harbiz Precios 2026: La Tabla Real con IVA y Add-ons](/alternativas/harbiz/precios/)** — Coste real de Harbiz Basic, Pro y My APP con los add-ons que disparan la factura
 
 ---
 

@@ -1,4 +1,6 @@
 import AlternativaCompetidoresContent from "@/components/AlternativaCompetidoresContent";
+import { getAlternativaFaqs } from "@/data/alternativasFaqs";
+import { softwareApplicationNode } from "@/data/productSchema";
 
 export const metadata = {
   title: "Alternativa a PTminder para Entrenadores",
@@ -17,17 +19,22 @@ export const metadata = {
 };
 
 export default function AlternativaPTminder() {
+  const faqs = getAlternativaFaqs("ptminder", "PTminder");
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+      // Valoración real de Trustpilot (la misma que muestra el badge de
+      // la página): hace la página elegible para estrellas en la SERP.
+      softwareApplicationNode({ description: "TotalGains, alternativa en español a PTminder para entrenadores personales: IA de rutinas y dietas, app marca blanca incluida en todos los planes y soporte en español." }),
       {
         "@type": "FAQPage",
-        mainEntity: [
-          { "@type": "Question", name: "¿TotalGains tiene IA integrada a diferencia de PTminder?", acceptedAnswer: { "@type": "Answer", text: "Sí. Genera rutinas y dietas con IA usando tu propia base de datos. PTminder no tiene generación de IA propia." } },
-          { "@type": "Question", name: "¿TotalGains incluye nutrición sin integraciones como PTminder?", acceptedAnswer: { "@type": "Answer", text: "+240.000 alimentos en español y generador IA incluidos en todos los planes. Sin integraciones de terceros ni coste adicional." } },
-          { "@type": "Question", name: "¿Por qué TotalGains es mejor alternativa a PTminder?", acceptedAnswer: { "@type": "Answer", text: "IA nativa, app de marca blanca, automatización y soporte en español. PTminder tiene interfaz anticuada, soporte lento en inglés y módulos separados que encarecen el precio." } },
-          { "@type": "Question", name: "¿Los módulos de TotalGains están incluidos sin coste extra?", acceptedAnswer: { "@type": "Answer", text: "Sí. Gestión de clientes, rutinas, nutrición, pagos, app de marca blanca y seguimiento — todo incluido en el plan. Sin módulos separados." } },
-        ],
+        // Generado desde la MISMA fuente que renderiza la página:
+        // el schema no puede declarar preguntas que el usuario no ve.
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
       },
       {
         "@type": "BreadcrumbList",

@@ -92,7 +92,9 @@ export async function generateMetadata({ params }) {
   return {
     title: post.seoTitle || post.title,
     description: post.description,
-    alternates: { canonical: `https://totalgains.es/blog/${slug}/` },
+    // `canonical` en el frontmatter permite consolidar un post en otra URL
+    // (contenido duplicado). El post sigue accesible; deja de indexarse.
+    alternates: { canonical: post.canonical || `https://totalgains.es/blog/${slug}/` },
     openGraph: {
       title: post.seoTitle || post.title,
       description: post.description,

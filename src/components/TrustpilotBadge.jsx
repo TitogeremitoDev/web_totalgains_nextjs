@@ -9,7 +9,7 @@
  * el valor público de Trustpilot (no la media aritmética de las reviews).
  *
  * Props:
- *   - score: number (TrustScore actual de Trustpilot, ej. 4.0)
+ *   - score: number (TrustScore actual de Trustpilot, ej. 4.4)
  *   - totalReviews: number
  *   - variant: "default" | "compact"
  */
@@ -31,7 +31,7 @@ function Star({ fill, size = 18 }) {
   );
 }
 
-export default function TrustpilotBadge({ score = 4.0, totalReviews = 3, variant = "default" }) {
+export default function TrustpilotBadge({ score = 4.4, totalReviews = 12, variant = "default" }) {
   const fullStars = Math.floor(score);
   const stars = [1, 2, 3, 4, 5].map((i) => (i <= fullStars ? STAR_FILLED : STAR_EMPTY));
   const scoreFmt = score.toString().replace(".", ",");

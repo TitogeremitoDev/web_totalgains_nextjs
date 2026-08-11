@@ -36,7 +36,9 @@ export default function sitemap() {
         { url: `${baseUrl}/blog/`, lastModified: '2026-08-10' },
         { url: `${baseUrl}/privacy/`, lastModified: '2026-08-10' },
         { url: `${baseUrl}/terms/`, lastModified: '2026-08-10' },
-        ...posts.map(post => ({
+        // Los posts con `canonical` propio apuntan a otra URL: no se listan
+        // aquí, o el sitemap contradiría a su propio canonical.
+        ...posts.filter(post => !post.canonical).map(post => ({
             url: `${baseUrl}/blog/${post.slug}/`,
             lastModified: post.lastModified || post.date || '2026-01-01',
         })),

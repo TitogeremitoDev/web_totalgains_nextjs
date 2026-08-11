@@ -1,4 +1,6 @@
 import AlternativaCompetidoresContent from "@/components/AlternativaCompetidoresContent";
+import { getAlternativaFaqs } from "@/data/alternativasFaqs";
+import { softwareApplicationNode } from "@/data/productSchema";
 
 export const metadata = {
   title: "Alternativa a Dudapp para Entrenadores",
@@ -28,17 +30,22 @@ export const metadata = {
 };
 
 export default function AlternativaDudapp() {
+  const faqs = getAlternativaFaqs("dudapp", "Dudapp");
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
+      // Valoración real de Trustpilot (la misma que muestra el badge de
+      // la página): hace la página elegible para estrellas en la SERP.
+      softwareApplicationNode({ description: "TotalGains, alternativa en español a Dudapp para entrenadores personales: IA de rutinas y dietas, app marca blanca incluida en todos los planes y soporte en español." }),
       {
         "@type": "FAQPage",
-        mainEntity: [
-          { "@type": "Question", name: "¿TotalGains es una alternativa a Dudapp con IA integrada?", acceptedAnswer: { "@type": "Answer", text: "Sí. Genera rutinas y dietas con IA usando tu propia biblioteca de ejercicios y alimentos sin inventar contenido. Dudapp no tiene IA propia." } },
-          { "@type": "Question", name: "¿TotalGains tiene recordatorios automáticos de cobro a diferencia de Dudapp?", acceptedAnswer: { "@type": "Answer", text: "Sí. El sistema avisa al cliente en su app cuando toca renovar, con segunda vuelta de win-back si no responde. El cobro efectivo sigue haciéndose por tu canal habitual (transferencia, Bizum, TPV). En Dudapp lo llevas manual." } },
-          { "@type": "Question", name: "¿Por qué TotalGains es mejor alternativa a Dudapp para escalar mi negocio?", acceptedAnswer: { "@type": "Answer", text: "Dudapp es una herramienta básica. TotalGains es SaaS B2B completo: gestión de clientes, IA, recordatorios automáticos al cliente, app de marca blanca y sistema anti-abandono." } },
-          { "@type": "Question", name: "¿Mis clientes tendrán una app con mi marca en TotalGains?", acceptedAnswer: { "@type": "Answer", text: "Sí. App con tu nombre, logo y colores en iOS y Android. Con Dudapp, tus clientes usan la app de Dudapp, no la tuya." } },
-        ],
+        // Generado desde la MISMA fuente que renderiza la página:
+        // el schema no puede declarar preguntas que el usuario no ve.
+        mainEntity: faqs.map((f) => ({
+          "@type": "Question",
+          name: f.question,
+          acceptedAnswer: { "@type": "Answer", text: f.answer },
+        })),
       },
       {
         "@type": "BreadcrumbList",

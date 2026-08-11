@@ -1,9 +1,9 @@
 ---
 title: "Los 5 Mejores Software para Entrenadores Personales en España 2026"
-seoTitle: "5 Mejores Software Entrenadores 2026: 29 a 300 €/mes"
-description: "Comparativa 2026 de los 5 software más usados en España: precios reales con IVA (de 29,90 a +300 €/mes), pros, cons y qué elegir según tu cartera."
+seoTitle: "5 Mejores Software Entrenadores 2026 (con Opciones Gratis)"
+description: "Comparativa 2026 de los 5 software más usados en España: precios reales con IVA, qué planes gratuitos existen, pros, contras y cuál encaja según tu cartera."
 date: "2026-04-21"
-lastModified: "2026-08-10"
+lastModified: "2026-08-11"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 15
@@ -470,7 +470,7 @@ Si detectas algún dato obsoleto o incorrecto, [escríbeme](/sobre-nosotros/) y 
 - 🚀 **[Cómo Migrar de Trainerize, Harbiz o MyPT Hub a TotalGains: Guía 2026](/blog/como-migrar-software-entrenador-personal/)** — Proceso paso a paso para cambiar de software sin perder clientes ni datos
 - 🤖 **[IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — Guía real con capturas y ejemplos de cómo aprovechar la IA en tu negocio fitness
 - 💵 **[Trainerize Precios 2026: Cuánto Cuesta Realmente con Todos los Add-ons](/blog/trainerize-precios-2026/)** — La tabla real de Trainerize con IVA aplicado y add-ons obligatorios
-- 💶 **[Harbiz Precios 2026: La Tabla Real con IVA y Add-ons](/blog/harbiz-precios-2026/)** — Desglose Basic, Pro y My APP con los 3 add-ons que disparan el precio funcional
+- 💶 **[Harbiz Precios 2026: La Tabla Real con IVA y Add-ons](/alternativas/harbiz/precios/)** — Desglose Basic, Pro y My APP con los 3 add-ons que disparan el precio funcional
 - 📱 **[App de Marca Blanca para Entrenadores: Guía Completa 2026](/blog/app-marca-blanca-entrenadores-personales/)** — Cómo funciona, dos modelos técnicos, qué cuesta en cada plataforma y cuándo te conviene
 - 🥗 **[Cómo Crear Planes Nutricionales para Clientes: Guía 2026](/blog/crear-planes-nutricionales-clientes-entrenador-personal/)** — Componentes de un plan nutricional profesional, cálculo de macros, base de alimentos y workflow operativo del nutricionista online.
 - 🏋️ **[Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach](/blog/software-gimnasios-pequenos-boutique-2026/)** — Comparativa para gimnasios de 2-15 coaches: multi-coach, reservas, marca blanca del gym y panel supervisor.

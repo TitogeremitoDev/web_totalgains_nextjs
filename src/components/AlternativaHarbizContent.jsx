@@ -40,7 +40,7 @@ export default function AlternativaHarbizContent() {
                         Si quieres IA y marca blanca incluidas en el plan base, sin add-ons acumulables, y con capacidad para más de 50 clientes. TotalGains es la alternativa en español con todo incluido (IA y marca blanca) desde 29,90 €/mes.
                     </p>
                     <div style={{ marginTop: 20 }}>
-                        <TrustpilotBadge score={4.0} totalReviews={3} variant="compact" />
+                        <TrustpilotBadge score={4.4} totalReviews={12} variant="compact" />
                     </div>
                 </div>
 

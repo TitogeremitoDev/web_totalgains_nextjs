@@ -250,3 +250,90 @@
     /* Green to emphasize priority */
     font-weight: 500;
 }
+/* ── CTA superior (visible sin scroll) ── */
+.alt-cta-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.alt-cta-top-note {
+    margin: 10px 0 0;
+    text-align: center;
+    font-size: 0.82rem;
+    color: #10b981;
+    font-weight: 500;
+}
+
+/* ── CTA intermedio, dentro del bloque de migración ── */
+.alt-cta-mid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.alt-cta-mid-link {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--text-secondary, #b8b8d1);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    padding-bottom: 2px;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.alt-cta-mid-link:hover {
+    color: var(--text-primary, #fff);
+    border-bottom-color: currentColor;
+}
+
+@media (max-width: 640px) {
+    .alt-cta-top,
+    .alt-cta-mid {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .alt-cta-top .btn {
+        width: 100%;
+    }
+}
+
+/* ── Introducción editorial por competidor ── */
+.alt-intro {
+    max-width: 780px;
+    margin: 34px auto 0;
+}
+
+.alt-intro p {
+    margin: 0 0 14px;
+    font-size: 1rem;
+    line-height: 1.75;
+    color: var(--text-secondary, #b8b8d1);
+}
+
+.alt-intro p:first-child {
+    color: var(--text-primary, #fff);
+    font-size: 1.05rem;
+}
+
+.alt-intro p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 640px) {
+    .alt-intro p {
+        font-size: 0.95rem;
+        line-height: 1.7;
+    }
+    .alt-intro p:first-child {
+        font-size: 1rem;
+    }
+}
