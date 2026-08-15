@@ -92,6 +92,7 @@ const testimonials = [
     role: "Entrenadores personales",
     instagram: "https://www.instagram.com/rjtrainer_/",
     handle: "@rjtrainer_",
+    avatar: "/testimonials/rjtrainer.webp",
     accentClass: "accent-german",
     resultClass: "result-german",
     keyResult: "5★",

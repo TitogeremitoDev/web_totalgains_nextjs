@@ -46,12 +46,18 @@ const meta = await sharp(origen).metadata();
 await sharp(origen)
     // cover recorta por el centro: en una foto de perfil cuadrada no toca nada,
     // y en una rectangular se queda con el centro en vez de deformarla.
-    .resize(LADO, LADO, { fit: 'cover', position: 'centre' })
+    // withoutEnlargement: si la original es menor que LADO, se respeta su
+    // tamaño. Ampliar no añade detalle, solo ablanda la imagen y engorda el
+    // fichero. Un avatar se pinta a 52px: con 150px ya vas sobrado en retina.
+    .resize(LADO, LADO, { fit: 'cover', position: 'centre', withoutEnlargement: true })
     .webp({ quality: CALIDAD })
     .toFile(destino);
 
 const kb = (fs.statSync(destino).size / 1024).toFixed(1);
+// El tamaño final se lee del fichero escrito, no se asume: con
+// withoutEnlargement una original pequeña conserva su tamaño.
+const salida = await sharp(destino).metadata();
 console.log(`\n✓ ${path.relative(process.cwd(), destino)}`);
-console.log(`  ${meta.width}×${meta.height} ${meta.format} → ${LADO}×${LADO} webp · ${kb} KB`);
+console.log(`  ${meta.width}×${meta.height} ${meta.format} → ${salida.width}×${salida.height} webp · ${kb} KB`);
 console.log(`\n  Ahora en Testimonials.jsx, en la entrada de ese testimonio:`);
 console.log(`    avatar: "/testimonials/${slug}.webp",\n`);
