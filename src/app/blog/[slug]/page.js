@@ -20,6 +20,8 @@ import TrustDamageScale from "@/components/TrustDamageScale";
 import EvidenceLevelGrid from "@/components/EvidenceLevelGrid";
 import CyclePhasesReality from "@/components/CyclePhasesReality";
 import PrivacyLayersCard from "@/components/PrivacyLayersCard";
+import HybridStructuresGrid from "@/components/HybridStructuresGrid";
+import HybridProgrammingErrors from "@/components/HybridProgrammingErrors";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -43,12 +45,17 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__evidence_level_grid__"></div>', Component: EvidenceLevelGrid, gate: () => true },
   { marker: '<div class="__cycle_phases_reality__"></div>', Component: CyclePhasesReality, gate: () => true },
   { marker: '<div class="__privacy_layers__"></div>', Component: PrivacyLayersCard, gate: () => true },
+  { marker: '<div class="__hybrid_structures__"></div>', Component: HybridStructuresGrid, gate: () => true },
+  { marker: '<div class="__hybrid_errors__"></div>', Component: HybridProgrammingErrors, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS
 // Todas las imágenes editoriales del blog se generan a 1344x768.
 // Permite override per-imagen vía title con formato "WIDTHxHEIGHT" (p.ej. ![alt](src "1200x630"))
 // o vía title con sufijo "Texto | 1200x630".
+// También soporta un sufijo "| mobile" (opcional) que aplica class="mobile-shot" al
+// <img>. Sirve para capturas de UI móvil que deben ir flotadas a la izquierda,
+// pequeñas y con marco de teléfono, en vez de expandirse a full width.
 const DEFAULT_IMG_WIDTH = 1344;
 const DEFAULT_IMG_HEIGHT = 768;
 const renderer = new marked.Renderer();
@@ -73,8 +80,34 @@ renderer.image = (...args) => {
     }
   }
 
+  // Detecta sufijos de tratamiento visual en el title:
+  //   "| shot"         → captura de UI desktop envuelta en frame estilo Apple keynote
+  //   "| shot-mobile"  → captura de UI móvil envuelta en marco de teléfono, flotada
+  //   "| mobile"       → (legacy) img suelta con estilo mobile-shot
+  let className = '';
+  let frameType = null;
+  if (cleanTitle) {
+    if (/\|\s*shot-mobile\s*$/i.test(cleanTitle)) {
+      frameType = 'mobile';
+      cleanTitle = cleanTitle.replace(/\s*\|\s*shot-mobile\s*$/i, '').trim() || null;
+    } else if (/\|\s*shot\s*$/i.test(cleanTitle)) {
+      frameType = 'desktop';
+      cleanTitle = cleanTitle.replace(/\s*\|\s*shot\s*$/i, '').trim() || null;
+    } else if (/\|\s*mobile\s*$/i.test(cleanTitle)) {
+      className = ' class="mobile-shot"';
+      cleanTitle = cleanTitle.replace(/\s*\|\s*mobile\s*$/i, '').trim() || null;
+    }
+  }
+
   const titleAttr = cleanTitle ? ` title="${cleanTitle}"` : '';
-  return `<img src="${href}" alt="${text || ''}"${titleAttr} width="${width}" height="${height}" loading="lazy" decoding="async" />`;
+  const imgTag = `<img src="${href}" alt="${text || ''}"${titleAttr}${className} width="${width}" height="${height}" loading="lazy" decoding="async" />`;
+
+  if (frameType) {
+    const captionHtml = cleanTitle ? `<figcaption>${cleanTitle}</figcaption>` : '';
+    return `<figure class="screenshot-frame screenshot-frame--${frameType}"><div class="screenshot-frame__stage">${imgTag}</div>${captionHtml}</figure>`;
+  }
+
+  return imgTag;
 };
 marked.use({ renderer });
 
