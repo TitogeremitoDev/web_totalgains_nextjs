@@ -28,6 +28,16 @@ export const metadata = {
 
 const trustpilotReviews = [
   {
+    // Primera de la lista a propósito: es la única de un ENTRENADOR, que es
+    // el cliente al que vende esta web. Las otras tres son de usuarios finales.
+    author: "RJ Trainer",
+    date: "2026-08-12",
+    rating: 5,
+    title: "Una app excelente para entrenadores",
+    excerpt:
+      "Una app excelente para dar nuestro servicio. Ofrece todo lo que un entrenador puede necesitar para tener en una sola aplicación todos los datos de tus clientes, alimentación, entrenamientos, seguimiento, control del ciclo menstrual para las propias clientas, formularios de valoración... Hemos probado varias y sin duda esta es la mejor y la más completa. Añadir que Germán, desarrollador de la app, siempre está atento y dispuesto a solucionar cualquier mínimo error que pueda surgir muy rápido y adaptar tu experiencia con la app al máximo. De nuevo, muy recomendable.",
+  },
+  {
     author: "Alosquita",
     date: "2026-05-12",
     rating: 5,

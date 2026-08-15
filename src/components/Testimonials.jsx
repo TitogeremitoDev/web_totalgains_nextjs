@@ -84,34 +84,25 @@ const testimonials = [
     ],
   },
   {
-    id: "german",
-    name: "Germán",
-    role: "Preparador Físico",
-    followers: "452",
-    instagram: "https://www.instagram.com/titogeremito/",
-    handle: "@titogeremito",
-    avatar: "/testimonials/german.webp",
+    // Reseña pública en Trustpilot (12 ago 2026). No hay entrevista: de este
+    // cliente solo tenemos lo que escribió él, así que la tarjeta se renderiza
+    // sin el desplegable de preguntas en vez de rellenarlo con texto inventado.
+    id: "rjtrainer",
+    name: "RJ Trainer",
+    role: "Entrenadores personales",
+    instagram: "https://www.instagram.com/rjtrainer_/",
+    handle: "@rjtrainer_",
     accentClass: "accent-german",
     resultClass: "result-german",
-    keyResult: "3x",
-    keyResultLabel: "Más eficiencia",
+    keyResult: "5★",
+    keyResultLabel: "Reseña verificada en Trustpilot",
     quote:
-      "Versatilidad y rapidez. Poder cambiar un ejercicio desde el móvil dándole a dos botones, poder ver cómo van mis atletas con un vistazo. Facilidad y comodidad.",
-    highlightPhrase: "Versatilidad y rapidez",
-    qa: [
-      {
-        q: "¿Cómo gestionabas antes tus asesorías?",
-        a: "Las asesorías las gestionaba a través de tablas de Excel compartidas con mis clientes. Era algo fastidioso tanto para ellos como para mí ya que cualquier cambio era pesado y lento, además de que tenían que estar rellenando todas las semanas un montón de celdas con datos, lo que les generaba hastío.",
-      },
-      {
-        q: "¿Qué es lo que más te ha cambiado?",
-        a: "Versatilidad y rapidez, poder cambiar un ejercicio desde el móvil dándole a dos botones, poder ver cómo van mis atletas con un vistazo. Al final facilidad y comodidad además de permitirme poder llevar más atletas sin gastar más tiempo y teniéndolo todo junto en la misma plataforma.",
-      },
-      {
-        q: "¿Cuánto tiempo ahorras a la semana?",
-        a: "Yo al tener todavía poca gente el ahorro no es tanto de tiempo como de aumento de comodidad, pero si antes me tiraba mirando gráficas en Excel 10-20 min, con las gráficas de la plataforma tardo 5 min en hacerme una idea concisa de cómo van mis clientes.",
-      },
-    ],
+      "Ofrece todo lo que un entrenador puede necesitar para tener en una sola aplicación todos los datos de tus clientes, alimentación, entrenamientos, seguimiento, control del ciclo menstrual para las propias clientas, formularios de valoración... Hemos probado varias y sin duda esta es la mejor y la más completa.",
+    highlightPhrase: "la mejor y la más completa",
+    source: {
+      label: "Leer la reseña completa en Trustpilot",
+      url: "https://www.trustpilot.com/reviews/6a7c86f072245e49f659db59",
+    },
   },
 ];
 
@@ -161,13 +152,25 @@ const TestimonialCard = ({ data, index }) => {
         <div className="card-profile">
           <div className="profile-top-row">
             <div className="profile-avatar-wrapper">
-              <Image
-                src={data.avatar}
-                alt={data.name}
-                width={52}
-                height={52}
-                className="profile-avatar"
-              />
+              {data.avatar ? (
+                <Image
+                  src={data.avatar}
+                  alt={data.name}
+                  width={52}
+                  height={52}
+                  className="profile-avatar"
+                />
+              ) : (
+                /* Sin foto cedida: iniciales en vez de un avatar genérico. */
+                <span className="profile-avatar profile-avatar--initials" aria-hidden="true">
+                  {data.name
+                    .split(" ")
+                    .map((w) => w[0])
+                    .join("")
+                    .slice(0, 2)
+                    .toUpperCase()}
+                </span>
+              )}
               <div className="profile-status" />
             </div>
             <div className="profile-info">
@@ -190,7 +193,7 @@ const TestimonialCard = ({ data, index }) => {
             >
               <Instagram size={13} />
               <span>{data.handle}</span>
-              <span className="followers-pill">{data.followers}</span>
+              {data.followers && <span className="followers-pill">{data.followers}</span>}
             </a>
           </div>
         </div>
@@ -201,6 +204,7 @@ const TestimonialCard = ({ data, index }) => {
             {data.id === "nacho" && <Timer size={22} />}
             {data.id === "lorena" && <Clock size={22} />}
             {data.id === "german" && <Zap size={22} />}
+            {data.id === "rjtrainer" && <Star size={22} />}
           </div>
           <div>
             <p className="key-result-value">{data.keyResult}</p>
@@ -214,7 +218,17 @@ const TestimonialCard = ({ data, index }) => {
           <p>{renderQuote()}</p>
         </div>
 
-        {/* ── Expandable Q&A ── */}
+        {/* ── Fuente verificable (reseñas de Trustpilot) ── */}
+        {data.source && (
+          <div className="card-source">
+            <a href={data.source.url} target="_blank" rel="noopener noreferrer">
+              <Shield size={12} /> {data.source.label}
+            </a>
+          </div>
+        )}
+
+        {/* ── Entrevista, solo si la hay ── */}
+        {data.qa && (
         <div className="card-qa-section">
           <button
             className={`qa-toggle-btn ${expanded ? "expanded" : ""}`}
@@ -245,6 +259,7 @@ const TestimonialCard = ({ data, index }) => {
             ))}
           </div>
         </div>
+        )}
 
         {/* ── Footer ── */}
         <div className="card-footer">

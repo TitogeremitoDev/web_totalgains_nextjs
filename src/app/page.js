@@ -114,6 +114,20 @@ export default function Home() {
         review: [
           {
             "@type": "Review",
+            author: { "@type": "Person", name: "RJ Trainer" },
+            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
+            datePublished: "2026-08-12",
+            name: "Una app excelente para entrenadores",
+            reviewBody:
+              "Una app excelente para dar nuestro servicio. Ofrece todo lo que un entrenador puede necesitar para tener en una sola aplicación todos los datos de tus clientes, alimentación, entrenamientos, seguimiento, control del ciclo menstrual para las propias clientas, formularios de valoración... Hemos probado varias y sin duda esta es la mejor y la más completa. Añadir que Germán, desarrollador de la app, siempre está atento y dispuesto a solucionar cualquier mínimo error que pueda surgir muy rápido y adaptar tu experiencia con la app al máximo. De nuevo, muy recomendable.",
+            publisher: {
+              "@type": "Organization",
+              name: "Trustpilot",
+              url: "https://es.trustpilot.com/review/totalgains.es",
+            },
+          },
+          {
+            "@type": "Review",
             author: { "@type": "Person", name: "Alosquita" },
             reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
             datePublished: "2026-05-12",
