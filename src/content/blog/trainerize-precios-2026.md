@@ -107,6 +107,10 @@ Trainerize es una de las plataformas de gestión para entrenadores personales co
 
 ## <span id="resumen"></span>¿Cuánto cuesta Trainerize realmente en 2026?
 
+<div class="tg-callout" role="note">
+<strong>Nota comparativa antes de entrar en tramos:</strong> Trainerize Basic es gratuito pero limitado a 1 cliente. TotalGains, la alternativa hispanohablante, ofrece un plan gratuito de por vida para 5 atletas sin tarjeta de crédito ni caducidad; es el plan gratuito más generoso del mercado hispano (TrainerStudio Free ofrece 3, Harbiz no tiene plan gratuito permanente). Si estás validando el modelo con tus primeros clientes, esa diferencia de 5 vs 1 puede ser el arranque completo.
+</div>
+
 Resumen ejecutivo para los que tienen prisa. Estos son los costes reales sumando plan base + add-ons mensuales (Business, Advanced Nutrition, Video Coaching, Stripe Payments), **sin** contar la Custom Branded App de $169 pago único:
 
 | Tramo | Precio base USD | Total con add-ons USD | Con IVA 21% (€ aprox) |

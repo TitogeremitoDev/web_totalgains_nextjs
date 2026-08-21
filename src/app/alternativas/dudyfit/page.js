@@ -5,7 +5,7 @@ import { softwareApplicationNode } from "@/data/productSchema";
 export const metadata = {
   title: "Alternativa a Dudyfit para Entrenadores",
   description:
-    "Alternativa a Dudyfit en español: TotalGains con IA de rutinas, app marca blanca y +240.000 alimentos. Prueba gratis 14 días sin tarjeta.",
+    "Alternativa a Dudyfit en español: TotalGains con IA de rutinas, app marca blanca y +240.000 alimentos. Plan Gratuito 5 atletas o prueba 14 días sin tarjeta.",
   alternates: {
     canonical: "https://totalgains.es/alternativas/dudyfit/",
   },

@@ -22,6 +22,28 @@ import './Pricing.css';
 
 const coachPlans = [
     {
+        id: 'free',
+        name: 'GRATUITO',
+        subtitle: 'De por vida. Sin tarjeta.',
+        unit: 'para siempre',
+        monthly: { price: '0', period: 'siempre' },
+        // Sin `annual`: no aplica tachado ni ahorro (es 0 € para siempre).
+        badge: 'MÁS GENEROSO DEL MERCADO',
+        features: [
+            { text: 'Hasta 5 Atletas', included: true, tooltip: 'Trainerize Basic ofrece 1, TrainerStudio Free ofrece 3, Harbiz no tiene plan gratuito permanente' },
+            { text: 'IA Rutinas y Dietas', included: true },
+            { text: 'App Marca Blanca INCLUIDA', included: true },
+            { text: '+240.000 alimentos', included: true },
+            { text: 'Sin tarjeta de crédito', included: true },
+        ],
+        ctaText: 'EMPEZAR GRATIS',
+        ctaHref: '/onboarding/?plan=free',
+        microcopy: 'Sin tarjeta. Sin caducidad. De por vida.',
+        gradient: 'free',
+        recommended: false,
+        isFree: true,
+    },
+    {
         id: 'starter',
         name: 'STARTER',
         subtitle: 'Para empezar con ventaja.',
@@ -190,7 +212,8 @@ function PricingCard({ plan, isAnnual, delay = 0 }) {
     const hasAnnual = Boolean(plan.annual);
     const showAnnual = isAnnual && hasAnnual;
     const displayPrice = showAnnual ? plan.annual.monthlyEquivalent : plan.monthly.price;
-    const period = '/mes';
+    // Free vive fuera de la mensualidad: "para siempre" en lugar de "/mes".
+    const period = plan.isFree ? '/siempre' : '/mes';
 
     return (
         <motion.article
@@ -303,7 +326,10 @@ const Pricing = () => {
 
     const activeMobilePlan = isGym
         ? (memberCount > 200 ? gymPlans[2] : memberCount > 100 ? gymPlans[1] : gymPlans[0])
-        : (clientCount > 100 ? coachPlans[2] : clientCount > 25 ? coachPlans[1] : coachPlans[0]);
+        : (clientCount > 100 ? coachPlans[3]           // > 100 → Unlimited
+            : clientCount > 25 ? coachPlans[2]         // 26-100 → Pro
+                : clientCount > 5 ? coachPlans[1]      // 6-25 → Starter
+                    : coachPlans[0]);                  // 1-5 → Free
 
     const switchAudience = (next) => {
         if (next === audience) return;
@@ -433,7 +459,7 @@ const Pricing = () => {
                 )}
 
                 {!isMobile ? (
-                    <div className="pricing-grid coach-three-cards">
+                    <div className={`pricing-grid ${isGym ? 'coach-three-cards' : 'coach-four-cards'}`}>
                         {plans.map((plan, index) => (
                             <PricingCard key={plan.id} plan={plan} isAnnual={isAnnual} delay={index * 0.1} />
                         ))}
@@ -468,7 +494,7 @@ const Pricing = () => {
                         <>
                             <p className="free-plan-question">¿Quieres probar la App antes de decidir?</p>
                             <Link href="/onboarding/" className="free-plan-link" prefetch={false}>
-                                Empieza con el PLAN GRATUITO DE POR VIDA (Máx 3 Atletas)
+                                Empieza con el PLAN GRATUITO DE POR VIDA (Máx 5 Atletas)
                             </Link>
                             <p className="free-plan-subtext">Sin tarjeta. Sin compromiso. Actualiza cuando lo necesites.</p>
                         </>

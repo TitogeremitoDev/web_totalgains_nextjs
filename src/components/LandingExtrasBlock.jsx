@@ -18,7 +18,7 @@ export default function LandingExtrasBlock({ plans = [], testimonials = [], comp
         <section id="precios" style={{ maxWidth: 900, margin: "0 auto", padding: "40px 24px 60px" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: 800, marginBottom: 8, textAlign: "center" }}>Precios verificados con IVA · sin permanencia</h2>
           <p style={{ textAlign: "center", color: "var(--text-secondary,#aaa)", marginBottom: 32, lineHeight: 1.6 }}>
-            14 días gratis sin tarjeta. Cancela cuando quieras.
+            Plan Gratuito 5 atletas · o 14 días de prueba Pro sin tarjeta. Cancela cuando quieras.
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
             {plans.map((plan) => (

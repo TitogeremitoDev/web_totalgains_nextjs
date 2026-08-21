@@ -396,7 +396,7 @@ Si prefieres pagar solo por las funciones que usas (filosofía modular), Harbiz 
 
 **Tu situación**: tienes 1-3 clientes, no estás seguro de si el modelo de negocio va a despegar y prefieres no comprometerte con nada económicamente al inicio.
 
-**Por qué [TrainerStudio](https://www.trainerstudio.com) puede encajarte aquí**: ofrece plan gratuito permanente para 3 clientes sin límite de tiempo. **TotalGains** tiene el mismo tramo gratuito permanente (3 atletas, sin tarjeta). **Trainerize Basic** también permite 1 cliente gratis.
+**Por qué el plan Free encaja aquí**: **TotalGains Free ofrece 5 atletas de por vida sin tarjeta**, el plan gratuito más generoso del mercado hispano. TrainerStudio tiene plan gratuito permanente pero limitado a 3 clientes. Trainerize Basic solo da 1 cliente gratis. Y Harbiz no tiene plan free permanente (sus 22,99 €/mes con IVA por 5 clientes son de pago). Si estás validando el modelo, empezar en TotalGains Free te da margen para probar con 5 personas antes de pagar nada.
 
 **Cómo lo aborda TotalGains**: ofrecemos 14 días de prueba gratis sin tarjeta de crédito, pero después el plan Starter es de pago (29,90 €/mes). Es una elección consciente de modelo: preferimos coaches que validan rápido y se comprometen, en lugar de mantener cuentas free indefinidas. Si tu perfil es validar sin compromiso económico durante meses, TrainerStudio te ofrece eso y TG no.
 

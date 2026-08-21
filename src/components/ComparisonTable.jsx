@@ -7,6 +7,7 @@ import { trackEvent } from '@/components/Analytics';
 import './ComparisonTable.css';
 
 const rows = [
+    { feature: 'Plan gratuito de por vida',      tg: '5 atletas', tr: '1 cliente', ha: 'Sin plan free' },
     { feature: 'Soporte en español nativo',    tg: true,  tr: false, ha: false },
     { feature: '+240.000 alimentos en BD',      tg: true,  tr: false, ha: false },
     { feature: 'App marca blanca para clientes',tg: true,  tr: false, ha: true  },

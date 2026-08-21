@@ -9,7 +9,7 @@
 
 /** TrustScore público en https://es.trustpilot.com/review/totalgains.es */
 export const TRUSTPILOT = {
-    score: 4.4,
+    score: 4.6,
     reviews: 12,
     url: "https://es.trustpilot.com/review/totalgains.es",
     verificado: "2026-08-11",

@@ -125,7 +125,7 @@ export default function BlogPage() {
           <h2>¿Listo para escalar tu negocio?</h2>
           <p>Únete a los entrenadores que ya usan TotalGains para gestionar más clientes en menos tiempo.</p>
           <Link href="/onboarding/" className="btn btn-gold btn-lg">
-            Empieza gratis 14 días
+            Empieza gratis · 5 atletas
           </Link>
         </div>
       </section>

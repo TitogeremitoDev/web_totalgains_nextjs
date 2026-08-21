@@ -211,7 +211,7 @@ const nutricionistas = {
         price: '29,90 €',
         priceFoot: '/mes con IVA · app marca blanca incluida',
         perks: [
-            '14 días gratis, sin tarjeta',
+            'Plan Gratuito 5 pacientes · o 14 días de prueba Pro sin tarjeta',
             'Migración de tus planes incluida',
             'Soporte en español (te contesta una persona)',
             'Cancelas en 1 clic, sin permanencia',
@@ -226,7 +226,7 @@ const nutricionistas = {
     },
 
     cta: {
-        primary: { text: 'Empezar mis 14 días gratis', href: '/onboarding/' },
+        primary: { text: 'Empezar gratis', href: '/onboarding/' },
         secondary: { text: 'Prefiero que me lo enseñes', href: '#demo-form' },
         microcopy: 'Sin tarjeta · Sin permanencia · Tus datos son tuyos',
     },

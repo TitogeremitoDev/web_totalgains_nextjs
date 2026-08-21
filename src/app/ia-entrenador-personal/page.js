@@ -6,7 +6,7 @@ import { Sparkles, Dumbbell, Apple, Clock, Shield, Zap } from "lucide-react";
 export const metadata = {
   title: "IA para Entrenadores: Rutinas en 2 Min · Prueba Gratis",
   description:
-    "Genera rutinas y dietas con IA desde tu propia biblioteca de ejercicios y +240.000 alimentos en español. Plan gratuito hasta 3 atletas, sin tarjeta.",
+    "Genera rutinas y dietas con IA desde tu propia biblioteca de ejercicios y +240.000 alimentos en español. Plan gratuito hasta 5 atletas, sin tarjeta.",
   alternates: { canonical: "https://totalgains.es/ia-entrenador-personal/" },
   openGraph: {
     title: "IA para Entrenadores: Rutinas en 2 Min · Prueba Gratis",
@@ -58,6 +58,7 @@ const useCases = [
 ];
 
 const faqs = [
+  { q: "¿Qué tiene el plan gratuito de TotalGains y en qué se diferencia de la competencia?", a: "TotalGains tiene el plan gratuito más generoso del mercado hispano: 5 atletas de por vida, sin tarjeta de crédito y sin caducidad. Trainerize Basic ofrece 1 cliente; TrainerStudio Free ofrece 3; Harbiz no tiene plan gratuito permanente (arranca a 22,99 €/mes con IVA para el mismo tramo de 5 clientes). Puedes empezar en https://totalgains.es/onboarding/ sin coste." },
   {
     q: "¿La IA inventa ejercicios que no existen en mi biblioteca?",
     a: "No. TotalGains solo usa los ejercicios que tú has añadido a tu biblioteca. Si un ejercicio no está en tu base de datos, la IA no lo incluirá en la rutina generada. La diferencia con IA genéricas tipo ChatGPT es que aquí la IA está restringida a tu contenido: cero alucinaciones, cero movimientos raros, resultado dentro de tu metodología.",
@@ -118,7 +119,7 @@ export default function IAEntrenadorPersonal() {
         description: "Inteligencia artificial para entrenadores personales que genera rutinas y dietas usando tu propia base de datos, sin alucinaciones ni contenido inventado.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/ia-entrenador-personal/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
+        offers: { "@type": "AggregateOffer", lowPrice: 0, highPrice: 149.90, priceCurrency: "EUR", offerCount: 4, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Gratuito", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=free", description: "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. El plan gratuito más generoso del mercado hispano." }, { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },
@@ -140,7 +141,7 @@ export default function IAEntrenadorPersonal() {
       subtitle="Sin inventar ejercicios. Sin alimentos ficticios. La inteligencia artificial de TotalGains trabaja exclusivamente con tu biblioteca de contenido — tu metodología, automatizada."
       features={features}
       useCases={useCases}
-      ctaText="Prueba gratis 14 días"
+      ctaText="Empieza gratis · 5 atletas"
       ctaLocation="lp_ia_entrenador"
       faqs={faqs}
     />

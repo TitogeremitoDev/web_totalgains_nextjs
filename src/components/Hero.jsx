@@ -164,6 +164,9 @@ const Hero = () => {
               <Play size={18} /> Ver en acción
             </motion.a>
           </div>
+          <p className="hero-free-tagline">
+            O empieza con el <strong>Plan Gratuito de por vida</strong> — hasta <strong>5 atletas sin tarjeta</strong>, el más generoso del mercado hispano.
+          </p>
 
           <div className="hero-stores">
             <span className="hero-stores-label">O descárgala directamente:</span>

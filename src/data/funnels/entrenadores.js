@@ -200,7 +200,7 @@ const entrenadores = {
         },
         {
             q: '¿Y si lo pruebo y no me convence?',
-            a: '14 días gratis sin tarjeta, y hay un plan gratuito de por vida para hasta 3 clientes. Si te vas, te llevas tus datos. Sin permanencia y se cancela en un clic.',
+            a: 'Plan Gratuito de por vida para 5 atletas sin tarjeta (el más generoso del mercado hispano: Trainerize da 1, TrainerStudio da 3, Harbiz no tiene free). Además, prueba de 14 días sin tarjeta en los planes de pago. Si te vas, te llevas tus datos. Sin permanencia y se cancela en un clic.',
         },
     ],
 
@@ -210,10 +210,10 @@ const entrenadores = {
         price: '29,90 €',
         priceFoot: '/mes con IVA · app marca blanca incluida',
         perks: [
-            '14 días gratis, sin tarjeta',
+            'Plan Gratuito 5 atletas · o 14 días de prueba Pro sin tarjeta',
             'Migración de tus clientes y plantillas incluida',
             'Soporte en español (te contesta una persona)',
-            'Plan gratuito de por vida hasta 3 clientes',
+            'Plan gratuito de por vida hasta 5 clientes',
         ],
         guarantee: 'Si en 14 días no has ahorrado ni una hora, no pagas nada y te llevas tus datos.',
     },
@@ -225,7 +225,7 @@ const entrenadores = {
     },
 
     cta: {
-        primary: { text: 'Empezar mis 14 días gratis', href: '/onboarding/' },
+        primary: { text: 'Empezar gratis', href: '/onboarding/' },
         secondary: { text: 'Prefiero que me lo enseñes', href: '#demo-form' },
         microcopy: 'Sin tarjeta · Sin permanencia · Tus datos son tuyos',
     },

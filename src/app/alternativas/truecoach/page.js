@@ -5,7 +5,7 @@ import { softwareApplicationNode } from "@/data/productSchema";
 export const metadata = {
   title: "Alternativa a TrueCoach en España",
   description:
-    "Alternativa a TrueCoach en español: TotalGains con app marca blanca, +240.000 alimentos y soporte nativo. Prueba gratis 14 días sin tarjeta.",
+    "Alternativa a TrueCoach en español: TotalGains con app marca blanca, +240.000 alimentos y soporte nativo. Plan Gratuito 5 atletas o prueba 14 días sin tarjeta.",
   alternates: {
     canonical: "https://totalgains.es/alternativas/truecoach/",
   },

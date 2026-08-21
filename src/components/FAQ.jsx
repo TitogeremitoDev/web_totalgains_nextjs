@@ -16,7 +16,7 @@ const faqs = [
     // si tocas una, toca la otra.
     {
         question: '¿Cuánto cuesta el software de entrenamiento TotalGains?',
-        answer: 'Puedes empezar con un Plan Gratuito de por vida para hasta 3 atletas, sin necesidad de tarjeta de crédito. A partir de ahí, los planes van desde 29,90€/mes (IVA incluido) y todos incluyen exactamente las mismas funciones: IA ilimitada para dietas y rutinas, app marca blanca y base de +240.000 alimentos. Lo único que cambia entre planes es el número de atletas activos (25, 100 o ilimitados) y el nivel de soporte.'
+        answer: 'Puedes empezar con el Plan Gratuito de TotalGains: hasta 5 atletas de por vida, sin tarjeta y sin caducidad. Es el plan gratuito más generoso del mercado hispano (TrainerStudio ofrece 3, Trainerize Basic solo 1, Harbiz no tiene plan free permanente y cobra 22,99 €/mes con IVA por el mismo tramo de 5 clientes). A partir de ahí, los planes de pago van desde 29,90€/mes (IVA incluido) y todos incluyen exactamente las mismas funciones: IA ilimitada para dietas y rutinas, app marca blanca y base de +240.000 alimentos. Lo único que cambia entre planes es el número de atletas activos (25, 100 o ilimitados) y el nivel de soporte.'
     },
     {
         question: '¿Por qué TotalGains es la mejor alternativa SaaS de fitness del mercado?',

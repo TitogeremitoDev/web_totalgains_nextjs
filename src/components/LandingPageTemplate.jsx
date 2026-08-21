@@ -59,8 +59,20 @@ const LandingPageTemplate = ({
                     </div>
 
                     <div className="lp-stars">
-                        {[...Array(5)].map((_, i) => <Star key={i} size={14} fill="#fbbf24" color="#fbbf24" />)}
-                        <span>Valorado 5★ por entrenadores reales</span>
+                        <Star size={14} fill="#fbbf24" color="#fbbf24" />
+                        <Star size={14} fill="#fbbf24" color="#fbbf24" />
+                        <Star size={14} fill="#fbbf24" color="#fbbf24" />
+                        <Star size={14} fill="#fbbf24" color="#fbbf24" />
+                        <Star size={14} fill="url(#half-fill)" color="#fbbf24" />
+                        <svg width="0" height="0" style={{ position: 'absolute' }}>
+                            <defs>
+                                <linearGradient id="half-fill">
+                                    <stop offset="60%" stopColor="#fbbf24" />
+                                    <stop offset="60%" stopColor="transparent" stopOpacity="0" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <span>4,6/5 en Trustpilot · reseñas verificadas</span>
                     </div>
                 </motion.div>
             </div>

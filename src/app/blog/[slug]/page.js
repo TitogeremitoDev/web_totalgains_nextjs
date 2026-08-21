@@ -463,7 +463,7 @@ export default async function PostPage({ params }) {
               <p className="post-sidebar-eyebrow">¿Quieres escalar?</p>
               <p className="post-sidebar-title">Gestiona más clientes, trabaja menos horas</p>
               <p className="post-sidebar-desc">
-                TotalGains automatiza rutinas, revisiones y seguimiento. Prueba gratis 14 días.
+                TotalGains automatiza rutinas, revisiones y seguimiento. Plan Gratuito 5 atletas o prueba Pro 14 días.
               </p>
               <BlogCTAButton />
               <p className="post-sidebar-note">Sin tarjeta · Sin permanencia</p>

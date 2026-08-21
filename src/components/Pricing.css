@@ -181,6 +181,25 @@
     margin: 0 auto;
     align-items: center;
 }
+.pricing-grid.coach-four-cards {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1360px;
+    margin: 0 auto;
+    align-items: stretch;
+}
+@media (max-width: 1200px) {
+    .pricing-grid.coach-four-cards {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 720px;
+    }
+}
+@media (max-width: 640px) {
+    .pricing-grid.coach-four-cards {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+    }
+}
 
 /* ── Card Base ── */
 .pricing-card {
@@ -241,6 +260,40 @@
 .pricing-card > * { position: relative; z-index: 2 }
 
 /* ── STARTER ── */
+/* ── FREE (verde: diferenciador vs competencia) ── */
+.gradient-card-free {
+    background:
+        radial-gradient(130% 80% at 50% 0%, rgba(34,197,94,.20), transparent 55%),
+        linear-gradient(180deg, #0f2a1e 0%, #0a1a13 60%, #061007 100%);
+    border-color: rgba(34,197,94,.35);
+    box-shadow:
+        inset 0 1px 0 rgba(134,239,172,.18),
+        inset 0 0 80px rgba(34,197,94,.10),
+        0 1px 2px rgba(0,0,0,.3),
+        0 25px 50px -15px rgba(0,0,0,.6),
+        0 15px 40px -15px rgba(34,197,94,.35);
+}
+.gradient-card-free:hover {
+    border-color: rgba(34,197,94,.55);
+    box-shadow:
+        inset 0 1px 0 rgba(134,239,172,.24),
+        inset 0 0 100px rgba(34,197,94,.16),
+        0 50px 100px -20px rgba(0,0,0,.75),
+        0 25px 50px -15px rgba(34,197,94,.55);
+}
+.gradient-card-free .btn-primary {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    box-shadow: 0 4px 15px rgba(34,197,94,.4);
+}
+.gradient-card-free .btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(34,197,94,.55);
+}
+.gradient-card-free .recommended-badge {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    color: #fff;
+}
+
 .gradient-card-starter {
     background:
         radial-gradient(130% 80% at 50% 0%, rgba(59,130,246,.18), transparent 55%),

@@ -94,7 +94,7 @@ const Navbar = () => {
                         Ya estoy<br />registrado
                     </Link>
                     <Link href="/onboarding/" className="btn btn-primary" prefetch={false}
-                        onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis 14 Días', cta_location: 'navbar' })}
+                        onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis · 5 atletas', cta_location: 'navbar' })}
                     >
                         Empieza gratis<br />14 Días
                     </Link>
@@ -143,10 +143,10 @@ const Navbar = () => {
                     <Link
                         href="/onboarding/"
                         className="btn btn-primary"
-                        onClick={() => { setMenuOpen(false); trackEvent('cta_click', { cta_text: 'Empieza gratis 14 Días', cta_location: 'navbar_mobile' }); }}
+                        onClick={() => { setMenuOpen(false); trackEvent('cta_click', { cta_text: 'Empieza gratis · 5 atletas', cta_location: 'navbar_mobile' }); }}
                         prefetch={false}
                     >
-                        Empieza gratis 14 Días
+                        Empieza gratis
                     </Link>
                 </div>
             </div>

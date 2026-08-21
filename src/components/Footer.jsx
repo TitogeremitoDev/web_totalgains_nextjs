@@ -38,7 +38,7 @@ const Footer = () => {
                             </a>
                         </div>
                         <div style={{ marginTop: 20 }}>
-                            <TrustpilotBadge score={4.4} totalReviews={12} variant="compact" />
+                            <TrustpilotBadge score={4.6} totalReviews={17} variant="compact" />
                         </div>
                     </div>
 

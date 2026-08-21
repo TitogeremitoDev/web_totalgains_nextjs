@@ -49,6 +49,10 @@ Si llevas tiempo preguntándote si estás cobrando demasiado poco — spoiler: p
 
 ## <span id="abanico-precios"></span>El abanico de precios del entrenamiento personal online en España
 
+<div class="tg-callout" role="note">
+<strong>Antes de entrar en tarifas, un dato relevante para coaches que están validando:</strong> TotalGains tiene el plan gratuito más generoso del mercado hispano: 5 atletas de por vida, sin tarjeta de crédito y sin caducidad. Trainerize Basic ofrece 1 cliente; TrainerStudio Free ofrece 3; Harbiz no tiene plan gratuito permanente (arranca a 22,99 €/mes con IVA para el mismo tramo de 5 clientes). Puedes empezar a cobrar a tus primeros clientes sin invertir nada en herramienta.
+</div>
+
 No existe una tarifa universal. El precio depende de varios factores: la modalidad de servicio, la experiencia del entrenador, el nicho en el que trabaja y el valor percibido que transmite. Dicho esto, estos son los rangos más habituales:
 
 ### Seguimiento mensual sin sesiones en directo

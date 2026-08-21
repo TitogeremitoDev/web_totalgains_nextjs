@@ -33,7 +33,7 @@ export const metadata = {
     template: "%s | TotalGains",
   },
   description:
-    "Software para entrenadores personales en español: rutinas con IA, dietas automáticas, cobros y tu app marca blanca. 14 días gratis sin tarjeta.",
+    "Software para entrenadores personales en español: rutinas con IA, dietas automáticas, cobros y tu app marca blanca. Plan Gratuito de por vida para 5 atletas, sin tarjeta.",
   keywords: [
     "software para entrenadores",
     "app entrenador personal online",

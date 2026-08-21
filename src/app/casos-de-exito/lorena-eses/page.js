@@ -169,7 +169,7 @@ export default function CasoLorenaEses() {
         <div style={{ textAlign: "center", padding: "40px 24px", background: "rgba(255,255,255,0.03)", borderRadius: 20, border: "1px solid rgba(255,255,255,0.06)" }}>
           <p style={{ fontSize: "1.1rem", fontWeight: 600, marginBottom: 20 }}>¿Quieres resultados como los de Lorena?</p>
           <Link href="/onboarding/" className="btn btn-gold btn-lg" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-            <Rocket size={20} /> Empieza gratis 14 días
+            <Rocket size={20} /> Empieza gratis
           </Link>
           <p style={{ color: "var(--text-muted)", fontSize: "0.8rem", marginTop: 12 }}>Sin tarjeta · Sin compromiso</p>
         </div>

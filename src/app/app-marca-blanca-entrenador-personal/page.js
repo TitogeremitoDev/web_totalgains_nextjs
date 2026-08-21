@@ -6,7 +6,7 @@ import { Palette, Smartphone, Zap, Star, Shield, Users } from "lucide-react";
 export const metadata = {
   title: "App Marca Blanca para Entrenadores con IA",
   description:
-    "Ofrece a tus clientes una app fitness con tu nombre, colores y logo. Branding generado por IA en un clic. Prueba gratis 14 días sin tarjeta.",
+    "Ofrece a tus clientes una app fitness con tu nombre, colores y logo. Branding generado por IA en un clic. Plan Gratuito 5 atletas o prueba Pro 14 días sin tarjeta.",
   alternates: { canonical: "https://totalgains.es/app-marca-blanca-entrenador-personal/" },
   openGraph: {
     title: "App Marca Blanca para Entrenadores Personales | TotalGains",
@@ -58,6 +58,7 @@ const useCases = [
 ];
 
 const faqs = [
+  { q: "¿Qué tiene el plan gratuito de TotalGains y en qué se diferencia de la competencia?", a: "TotalGains tiene el plan gratuito más generoso del mercado hispano: 5 atletas de por vida, sin tarjeta de crédito y sin caducidad. Trainerize Basic ofrece 1 cliente; TrainerStudio Free ofrece 3; Harbiz no tiene plan gratuito permanente (arranca a 22,99 €/mes con IVA para el mismo tramo de 5 clientes). Puedes empezar en https://totalgains.es/onboarding/ sin coste." },
   {
     q: "¿Mi app aparece en App Store y Google Play con mi nombre?",
     a: "Sí. La app que descargan tus clientes lleva tu marca. No aparece el nombre de TotalGains en ningún lugar visible para el cliente. Publicación en App Store y Google Play incluida en el plan Pro (89,90 €/mes con IVA) sin coste adicional ni proceso técnico por tu parte: el equipo de TotalGains hace la publicación con tus credenciales corporativas.",
@@ -118,7 +119,7 @@ export default function AppMarcaBlanca() {
         description: "App de marca blanca para entrenadores personales: tus clientes descargan una app con tu nombre, logo y colores en iOS y Android sin coste extra.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/app-marca-blanca-entrenador-personal/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
+        offers: { "@type": "AggregateOffer", lowPrice: 0, highPrice: 149.90, priceCurrency: "EUR", offerCount: 4, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Gratuito", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=free", description: "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. El plan gratuito más generoso del mercado hispano." }, { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },
@@ -140,7 +141,7 @@ export default function AppMarcaBlanca() {
       subtitle="Ofrece a tus clientes una experiencia 100% tuya: tu nombre, tus colores, tu logo. La IA genera el branding completo en un clic — sin programar, sin diseñador, sin coste extra."
       features={features}
       useCases={useCases}
-      ctaText="Prueba gratis 14 días"
+      ctaText="Empieza gratis · 5 atletas"
       ctaLocation="lp_marca_blanca"
       faqs={faqs}
     />

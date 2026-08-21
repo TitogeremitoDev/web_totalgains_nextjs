@@ -3,7 +3,7 @@ title: "App de Marca Blanca para Entrenadores: Guía Completa 2026"
 seoTitle: "App Marca Blanca Entrenadores: Guía 2026"
 description: "Guía completa de la app marca blanca para entrenadores en 2026: cómo funciona, qué cuesta en cada plataforma y cuándo te conviene."
 date: "2026-05-24"
-lastModified: "2026-08-10"
+lastModified: "2026-08-15"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 15
@@ -94,6 +94,10 @@ Si tu cliente abre la app y ve el logo de otra empresa antes que el tuyo, hay un
 9. [Preguntas frecuentes](#faqs)
 
 ---
+
+<div class="tg-callout" role="note">
+<strong>Antes de entrar en el detalle técnico:</strong> TotalGains incluye la app marca blanca en todos sus planes de pago (desde el Starter de 29,90 €/mes con IVA) y además tiene el <strong>plan gratuito más generoso del mercado hispano</strong>: 5 atletas de por vida, sin tarjeta de crédito y sin caducidad. Trainerize Basic ofrece 1 cliente y su Custom Branded App requiere plan Pro con pago único de $169; TrainerStudio Free ofrece 3 clientes; Harbiz no tiene plan gratuito permanente y su add-on "Personaliza tu app" cuesta 30,24 €/mes con IVA aparte del plan base. La app marca blanca es un feature que solo cobra sentido cuando ya tienes cartera, pero si estás validando el modelo puedes empezar con [TotalGains gratis](/onboarding/?plan=free) sin invertir nada.
+</div>
 
 ## <span id="que-es"></span>Qué es exactamente una app de marca blanca
 

@@ -92,7 +92,7 @@ export default function SobreNosotros() {
           TotalGains nació de la frustración real de gestionar clientes con Excel, WhatsApp y hojas de cálculo que se rompían. No de una consultora. No de un fondo de inversión. De alguien que vivió el problema.
         </p>
         <div style={{ marginBottom: 56 }}>
-          <TrustpilotBadge score={4.4} totalReviews={12} variant="default" />
+          <TrustpilotBadge score={4.6} totalReviews={17} variant="default" />
         </div>
 
         {/* Founder section */}
@@ -144,7 +144,7 @@ export default function SobreNosotros() {
         <section style={{ textAlign: "center", padding: "40px 24px", background: "rgba(255,255,255,0.03)", borderRadius: 20, border: "1px solid rgba(255,255,255,0.06)" }}>
           <h2 style={{ fontSize: "1.2rem", fontWeight: 700, marginBottom: 8 }}>¿Quieres probarlo?</h2>
           <p style={{ color: "var(--text-secondary, #aaa)", marginBottom: 24, fontSize: "0.95rem" }}>
-            14 días gratis. Sin tarjeta. Sin compromiso.
+            Plan Gratuito 5 atletas · o prueba Pro 14 días sin tarjeta.
           </p>
           <Link href="/onboarding/" className="btn btn-primary btn-lg">
             Empieza gratis ahora

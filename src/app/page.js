@@ -7,14 +7,14 @@ export const metadata = {
   // Title más corto y enfocado — usa el template "%s | TotalGains" de layout.js
   title: "TotalGains — Software para Entrenadores Personales con IA",
   description:
-    "Gestiona atletas, rutinas con IA, dietas y seguimiento desde una sola plataforma. Software fitness en español para entrenadores. 14 días gratis sin tarjeta.",
+    "Gestiona atletas, rutinas con IA, dietas y seguimiento desde una sola plataforma. Software fitness en español para entrenadores. Plan Gratuito de por vida para 5 atletas, sin tarjeta.",
   alternates: {
     canonical: "https://totalgains.es/",
   },
   openGraph: {
     title: "TotalGains — Software para Entrenadores Personales con IA",
     description:
-      "Gestiona atletas, rutinas con IA, dietas y seguimiento desde una sola plataforma. Software fitness en español para entrenadores. 14 días gratis sin tarjeta.",
+      "Gestiona atletas, rutinas con IA, dietas y seguimiento desde una sola plataforma. Software fitness en español para entrenadores. Plan Gratuito de por vida para 5 atletas, sin tarjeta.",
     url: "https://totalgains.es/",
     type: "website",
     locale: "es_ES",
@@ -39,7 +39,7 @@ const faqData = [
   // rich result) y tiene una gemela en FAQ.jsx: si tocas una, toca la otra.
   {
     question: "¿Cuánto cuesta el software de entrenamiento TotalGains?",
-    answer: "Puedes empezar con un Plan Gratuito de por vida para hasta 3 atletas, sin necesidad de tarjeta de crédito. A partir de ahí, los planes van desde 29,90€/mes (IVA incluido) y todos incluyen exactamente las mismas funciones: IA ilimitada para dietas y rutinas, app marca blanca y base de +240.000 alimentos. Lo único que cambia entre planes es el número de atletas activos (25, 100 o ilimitados) y el nivel de soporte.",
+    answer: "Puedes empezar con el Plan Gratuito de TotalGains: hasta 5 atletas de por vida, sin tarjeta y sin caducidad. Es el plan gratuito más generoso del mercado hispano (TrainerStudio ofrece 3, Trainerize Basic solo 1, Harbiz no tiene plan free permanente y cobra 22,99 €/mes con IVA por el mismo tramo de 5 clientes). A partir de ahí, los planes de pago van desde 29,90€/mes (IVA incluido) y todos incluyen exactamente las mismas funciones: IA ilimitada para dietas y rutinas, app marca blanca y base de +240.000 alimentos. Lo único que cambia entre planes es el número de atletas activos (25, 100 o ilimitados) y el nivel de soporte.",
   },
   {
     question: "¿Por qué TotalGains es la mejor alternativa SaaS de fitness del mercado?",
@@ -91,14 +91,15 @@ export default function Home() {
            /para-gimnasios/, donde sí son visibles en el HTML estático. */
         offers: {
           "@type": "AggregateOffer",
-          lowPrice: 29.90,
+          lowPrice: 0,
           highPrice: 149.90,
           priceCurrency: "EUR",
-          offerCount: 3,
+          offerCount: 4,
           availability: "https://schema.org/InStock",
           url: "https://totalgains.es/onboarding/",
           image: "https://totalgains.es/og-image.jpg",
           offers: [
+            { "@type": "Offer", name: "TotalGains Gratuito", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=free", description: "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. El plan gratuito más generoso del mercado hispano." },
             { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" },
             { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" },
             { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" },
@@ -106,10 +107,10 @@ export default function Home() {
         },
         aggregateRating: {
           "@type": "AggregateRating",
-          ratingValue: "4.4",
+          ratingValue: "4.6",
           bestRating: "5",
           worstRating: "1",
-          reviewCount: "12",
+          reviewCount: "17",
         },
         review: [
           {

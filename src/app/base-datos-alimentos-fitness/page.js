@@ -58,6 +58,7 @@ const useCases = [
 ];
 
 const faqs = [
+  { q: "¿Qué tiene el plan gratuito de TotalGains y en qué se diferencia de la competencia?", a: "TotalGains tiene el plan gratuito más generoso del mercado hispano: 5 atletas de por vida, sin tarjeta de crédito y sin caducidad. Trainerize Basic ofrece 1 cliente; TrainerStudio Free ofrece 3; Harbiz no tiene plan gratuito permanente (arranca a 22,99 €/mes con IVA para el mismo tramo de 5 clientes). Puedes empezar en https://totalgains.es/onboarding/ sin coste." },
   {
     q: "¿La base de datos incluye productos de supermercados españoles?",
     a: "Sí. Incluye productos de las principales cadenas españolas (Mercadona, Lidl, Carrefour, Alcampo, Eroski) con los macros reales del etiquetado, no estimaciones genéricas. Reconoce marcas como Hacendado, Deliplus, Bio, Selección, Milbona, Sondey, Freeway, Producto Alcampo, Consumer y Basic. La búsqueda inteligente reconoce nombres coloquiales, marcas comerciales y variantes (por ejemplo escribir 'griego' devuelve yogur griego y skyr).",
@@ -118,7 +119,7 @@ export default function BaseDatosAlimentos() {
         description: "+240.000 alimentos validados en español con macros y calorías precisos. Base de datos nutricional para entrenadores personales y nutricionistas.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/base-datos-alimentos-fitness/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
+        offers: { "@type": "AggregateOffer", lowPrice: 0, highPrice: 149.90, priceCurrency: "EUR", offerCount: 4, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Gratuito", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=free", description: "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. El plan gratuito más generoso del mercado hispano." }, { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },
@@ -140,7 +141,7 @@ export default function BaseDatosAlimentos() {
       subtitle="La base de datos nutricional más completa del mercado español. Crea planes de alimentación personalizados con macros exactos en segundos — sin buscar en Google, sin errores, sin perder tiempo."
       features={features}
       useCases={useCases}
-      ctaText="Prueba gratis 14 días"
+      ctaText="Empieza gratis · 5 atletas"
       ctaLocation="lp_alimentos"
       faqs={faqs}
     />

@@ -5,11 +5,11 @@ import { Users, LayoutDashboard, Bell, CreditCard, Palette, BarChart3, Check, X,
 export const metadata = {
   title: "Software Entrenadores Personales · Desde 29,90 €/mes",
   description:
-    "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en todos los planes. Desde 29,90 €/mes con IVA. 14 días gratis sin tarjeta.",
+    "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en todos los planes. Plan Gratuito de por vida para 5 atletas, sin tarjeta. De pago desde 29,90 €/mes con IVA.",
   alternates: { canonical: "https://totalgains.es/software-entrenador-personal/" },
   openGraph: {
     title: "Software Entrenadores Personales · Desde 29,90 €/mes | TotalGains",
-    description: "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en todos los planes. Desde 29,90 €/mes con IVA. 14 días gratis sin tarjeta.",
+    description: "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en todos los planes. Plan Gratuito de por vida para 5 atletas, sin tarjeta. De pago desde 29,90 €/mes con IVA.",
     url: "https://totalgains.es/software-entrenador-personal/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },
@@ -33,7 +33,8 @@ const useCases = [
 ];
 
 const faqs = [
-  { q: "¿Cuánto cuesta TotalGains y qué incluye cada plan?", a: "Starter 29,90 €/mes con IVA (hasta 25 clientes, IA generativa incluida). Pro 89,90 €/mes con IVA (hasta 100 clientes). Unlimited 149,90 €/mes con IVA (clientes ilimitados). Todos los planes incluyen IA de rutinas y dietas, base de +240.000 alimentos, seguimiento de adherencia, recordatorios de renovación y migración asistida gratuita en español. Sin permanencia, sin tarjeta para la prueba de 14 días." },
+  { q: "¿Qué tiene el plan gratuito de TotalGains y en qué se diferencia de la competencia?", a: "TotalGains tiene el plan gratuito más generoso del mercado hispano: 5 atletas de por vida, sin tarjeta de crédito y sin caducidad. Trainerize Basic ofrece 1 cliente; TrainerStudio Free ofrece 3; Harbiz no tiene plan gratuito permanente (arranca a 22,99 €/mes con IVA para el mismo tramo de 5 clientes). Puedes empezar en https://totalgains.es/onboarding/ sin coste." },
+  { q: "¿Cuánto cuesta TotalGains y qué incluye cada plan?", a: "El Plan Gratuito de por vida cubre hasta 5 atletas sin tarjeta. Los planes de pago: Starter 29,90 €/mes con IVA (hasta 25 clientes, IA generativa incluida), Pro 89,90 €/mes con IVA (hasta 100 clientes), Unlimited 149,90 €/mes con IVA (clientes ilimitados). Todos los planes de pago incluyen IA de rutinas y dietas, base de +240.000 alimentos, seguimiento de adherencia, recordatorios de renovación y migración asistida gratuita en español. Sin permanencia, sin tarjeta para la prueba de 14 días." },
   { q: "¿Cuánto tiempo lleva aprender a usar el software?", a: "La mayoría de entrenadores están trabajando desde el primer día. La curva de aprendizaje es mínima porque el software está diseñado por un coach en activo, no por un ingeniero. En 15-30 minutos de exploración ya puedes crear tu primer cliente, generar una rutina con IA y programar el primer check-in semanal." },
   { q: "¿Puedo importar mis clientes actuales desde Excel, PDF u otras plataformas?", a: "Sí. Nuestro equipo hace la migración inicial gratis y en español. La IA de TotalGains transcribe rutinas y dietas antiguas en menos de 2 minutos por documento, ya vengas de Excel, Trainerize, Harbiz o MyPT Hub. El tiempo típico de migración para 30-60 clientes es menos de 5 días." },
   { q: "¿Cómo funciona la IA generativa de rutinas y dietas?", a: "La IA genera rutinas personalizadas usando exclusivamente tu propia biblioteca de ejercicios. No inventa movimientos ni contenido genérico. Para dietas usa tu base de alimentos guardados o los +240.000 validados en español (marcas de supermercado incluidas). Tiempo por cliente: menos de 2 minutos de generación + 3-5 minutos de revisión y ajuste. Ahorro neto: 25-40 minutos por cliente frente a diseñar manual." },
@@ -82,8 +83,8 @@ export default function SoftwareEntrenadorPersonal() {
         description: "Software de gestión integral para entrenadores personales en español: IA generativa de rutinas y dietas, base de +240.000 alimentos, seguimiento de adherencia, recordatorios de renovación y app marca blanca incluida en todos los planes. Migración asistida gratuita.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/software-entrenador-personal/",
-        offers: { "@type": "AggregateOffer", lowPrice: 29.90, highPrice: 149.90, priceCurrency: "EUR", offerCount: 3, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
-        aggregateRating: { "@type": "AggregateRating", ratingValue: "4.4", bestRating: "5", worstRating: "1", reviewCount: "12" },
+        offers: { "@type": "AggregateOffer", lowPrice: 0, highPrice: 149.90, priceCurrency: "EUR", offerCount: 4, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Gratuito", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=free", description: "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. El plan gratuito más generoso del mercado hispano." }, { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
+        aggregateRating: { "@type": "AggregateRating", ratingValue: "4.6", bestRating: "5", worstRating: "1", reviewCount: "17" },
         review: [
           { "@type": "Review", author: { "@type": "Person", name: "Nacho Pulido" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" }, reviewBody: "Tener todo centralizado ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.", datePublished: "2025-03-01", itemReviewed: { "@id": "https://totalgains.es/#software" } },
           { "@type": "Review", author: { "@type": "Person", name: "Lorena Eses" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" }, reviewBody: "He automatizado revisiones, citas y seguimiento. Ahorro más de 10 horas semanales de gestión.", datePublished: "2025-01-01", itemReviewed: { "@id": "https://totalgains.es/#software" } },
@@ -109,7 +110,7 @@ export default function SoftwareEntrenadorPersonal() {
         subtitle="Deja de perder horas entre Excel, WhatsApp y Drive. Gestiona atletas, IA de rutinas y dietas, seguimiento estructurado y renovaciones desde una sola plataforma. Software para entrenadores personales en español, desde 29,90 €/mes con IVA."
         features={features}
         useCases={useCases}
-        ctaText="Prueba gratis 14 días"
+        ctaText="Empieza gratis · 5 atletas"
         ctaLocation="lp_software_entrenador"
         faqs={faqs}
       />
@@ -117,7 +118,7 @@ export default function SoftwareEntrenadorPersonal() {
       <section id="precios" style={{ maxWidth: 900, margin: "0 auto", padding: "40px 24px 60px" }}>
         <h2 style={{ fontSize: "1.6rem", fontWeight: 800, marginBottom: 8, textAlign: "center" }}>Precios verificados con IVA · sin permanencia</h2>
         <p style={{ textAlign: "center", color: "var(--text-secondary,#aaa)", marginBottom: 32, lineHeight: 1.6 }}>
-          14 días gratis sin tarjeta. Cancela cuando quieras.
+          Plan Gratuito 5 atletas · o 14 días de prueba Pro sin tarjeta. Cancela cuando quieras.
         </p>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
           {[
@@ -141,7 +142,7 @@ export default function SoftwareEntrenadorPersonal() {
                 ))}
               </ul>
               <Link href="/onboarding/" style={{ display: "block", padding: "10px 16px", textAlign: "center", background: plan.highlight ? "var(--primary,#667eea)" : "rgba(255,255,255,0.06)", color: plan.highlight ? "#fff" : "var(--text-primary,#ddd)", borderRadius: 100, textDecoration: "none", fontWeight: 600, fontSize: "0.9rem" }}>
-                Empieza gratis 14 días
+                Empieza gratis · 5 atletas
               </Link>
             </div>
           ))}

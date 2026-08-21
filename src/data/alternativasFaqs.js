@@ -142,7 +142,7 @@ const ESPECIFICAS = {
         },
         {
             question: "¿Cuál sale más a cuenta para un autónomo?",
-            answer: "TotalGains arranca en 29,90 €/mes con IVA incluido y tiene plan gratuito permanente hasta 3 atletas. Virtuagym trabaja con presupuestos orientados a instalaciones, normalmente bajo cotización y con coste por número de socios. Pide su presupuesto y compáralo con tu volumen real de clientes.",
+            answer: "TotalGains arranca en 29,90 €/mes con IVA incluido y tiene plan gratuito permanente hasta 5 atletas. Virtuagym trabaja con presupuestos orientados a instalaciones, normalmente bajo cotización y con coste por número de socios. Pide su presupuesto y compáralo con tu volumen real de clientes.",
         },
         {
             question: "¿Mis clientes verán mi marca o la de la plataforma?",
@@ -158,6 +158,10 @@ const ESPECIFICAS = {
 /** Preguntas comunes a todas las páginas de alternativa (objeciones de migración). */
 function genericas(name) {
     return [
+        {
+            question: "¿Qué tiene el plan gratuito de TotalGains y en qué se diferencia de la competencia?",
+            answer: "TotalGains tiene el plan gratuito más generoso del mercado hispano: 5 atletas de por vida, sin tarjeta de crédito y sin caducidad. Trainerize Basic ofrece 1 cliente; TrainerStudio Free ofrece 3; Harbiz no tiene plan gratuito permanente (arranca a 22,99 €/mes con IVA para el mismo tramo de 5 clientes). Puedes empezar en https://totalgains.es/onboarding/ sin coste.",
+        },
         {
             question: `¿Perderé los datos de mis clientes al migrar desde ${name}?`,
             answer: "No. Nuestro equipo se encarga de importar a tus atletas actuales con herramientas propias de migración, guiando el proceso en español. La migración asistida está incluida en todos los planes.",
