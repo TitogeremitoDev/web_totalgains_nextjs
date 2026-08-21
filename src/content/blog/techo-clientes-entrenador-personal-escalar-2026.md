@@ -26,10 +26,10 @@ comparison:
       rating: 4.7
       pros: "Plan pensado para el coach que rompe el techo (89,90 €/mes con IVA, hasta 100 clientes activos) con IA generativa de rutinas <2 min por cliente, IA nutricional con base de +240.000 alimentos, app marca blanca incluida, sistema de recordatorios automáticos de cobro con win-back al cliente, panel Coach Insights para estudiar a tus clientes de un vistazo, sistema de retención asistida con IA y priorización de contactos en riesgo. 14 días gratis sin tarjeta. Sin permanencia."
       cons: "El plan Pro requiere que el coach venga de una operativa profesionalizable: si no quieres dejar de gestionar el seguimiento manual del cobro cliente a cliente, la app te sobra. La capa de retención asistida con IA es uno de los pilares activos del roadmap, lo que significa que sigue evolucionando por releases mensuales. Valoración del propio fundador, autodeclarada."
-      lowPrice: 29.90
+      lowPrice: 0
       highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 3
+      offerCount: 4
       url: "https://totalgains.es/onboarding/"
       image: "https://totalgains.es/images/blog/logos/logo-totalgains.webp"
 faqs:

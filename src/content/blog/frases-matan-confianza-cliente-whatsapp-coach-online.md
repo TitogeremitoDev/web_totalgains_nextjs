@@ -1,6 +1,6 @@
 ---
 title: "Top 10 Frases que Matan la Confianza del Cliente por WhatsApp"
-seoTitle: "10 Frases que Matan la Confianza del Cliente (Coach WhatsApp)"
+seoTitle: "10 Frases que Matan la Confianza del Cliente"
 description: "Las 10 frases que dice sin darse cuenta un coach online por WhatsApp y hunden la confianza del cliente, con la alternativa profesional para cada una."
 date: "2026-07-26"
 lastModified: "2026-07-26"

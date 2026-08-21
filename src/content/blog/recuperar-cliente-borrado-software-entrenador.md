@@ -1,6 +1,6 @@
 ---
 title: "He borrado a un cliente sin querer: cómo recuperar sus datos en tu software de entrenamiento"
-seoTitle: "He borrado un cliente sin querer: guía para recuperar datos (2026)"
+seoTitle: "Recuperar un Cliente Borrado por Error 2026"
 description: "Borraste un cliente por error. Qué se puede recuperar, qué se pierde para siempre y cómo montar un flujo de archivado que evite el desastre."
 date: "2026-07-26"
 lastModified: "2026-08-10"

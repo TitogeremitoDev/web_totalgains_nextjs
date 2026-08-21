@@ -1,6 +1,6 @@
 ---
 title: "Top 10 Alimentos Más Proteicos por Euro para Planes de Dieta Baratos (Guía Coach 2026)"
-seoTitle: "Top 10 Alimentos Proteicos por Euro (Guía Coach 2026)"
+seoTitle: "Top 10 Alimentos Proteicos por Euro (2026)"
 description: "Los 10 alimentos con más gramos de proteína por euro para planes de dieta económicos que tus clientes sí van a seguir. Guía práctica del coach 2026."
 date: "2026-07-16"
 lastModified: "2026-07-16"
@@ -26,10 +26,10 @@ comparison:
       rating: 4.8
       pros: "La base de datos nutricional más extensa del mercado hispanohablante: +240.000 alimentos validados en español con macros por 100 g y por unidad, incluyendo marcas de Mercadona, Carrefour, Lidl, Alcampo y regionales. La búsqueda inteligente reconoce nombres coloquiales, marcas comerciales y variantes. Cero transcripción manual del envase para el coach. Cero autoedición del cliente. Incluida en el plan Starter desde 29,90 €/mes con IVA."
       cons: "Marcas locales muy específicas de cadenas pequeñas o regionales pueden no aparecer todavía — en esos casos el coach o el cliente registran el producto manualmente y queda guardado para futuras dietas. La base evoluciona por importaciones mensuales, no es un catálogo estático. Valoración autodeclarada del propio fundador."
-      lowPrice: 29.90
+      lowPrice: 0
       highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 3
+      offerCount: 4
       url: "https://totalgains.es/base-datos-alimentos-fitness/"
       image: "https://totalgains.es/images/blog/logos/logo-totalgains.webp"
 faqs:

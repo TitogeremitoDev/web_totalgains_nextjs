@@ -1,13 +1,13 @@
 import AlternativaCompetidoresContent from "@/components/AlternativaCompetidoresContent";
 import { getAlternativaFaqs } from "@/data/alternativasFaqs";
-import { softwareApplicationNode } from "@/data/productSchema";
+import { softwareApplicationNode , organizationNode } from "@/data/productSchema";
 
 /* ──────────────────────────────────────────────
    /alternativas/trainerize — SERVER COMPONENT
    SEO Metadata para posicionar vs competencia
    ────────────────────────────────────────────── */
 export const metadata = {
-  title: "Trainerize en Español: la Alternativa Real (2026)",
+  title: "Trainerize en Español: la Alternativa Real 2026",
   description:
     "Trainerize opera en inglés y factura en dólares con add-ons aparte. TotalGains es la alternativa en español desde 29,90 €/mes con IVA y migración gratis.",
   alternates: {
@@ -30,6 +30,7 @@ export default function AlternativaCompetidores() {
       // Valoración real de Trustpilot (la misma que muestra el badge de
       // la página): hace la página elegible para estrellas en la SERP.
       softwareApplicationNode({ description: "TotalGains, alternativa en español a Trainerize para entrenadores personales: IA de rutinas y dietas con biblioteca propia, app marca blanca incluida en todos los planes, migración asistida y precios sin penalización por volumen." }),
+      organizationNode(),
       {
         "@type": "FAQPage",
         // Generado desde la MISMA fuente que renderiza la página:

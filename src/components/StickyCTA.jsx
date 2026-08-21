@@ -30,7 +30,7 @@ const StickyCTA = () => {
                 onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis', cta_location: 'sticky_mobile' })}
             >
                 <Rocket size={18} />
-                <span>Empieza gratis · 14 días</span>
+                <span>Empieza gratis · 5 atletas</span>
             </a>
         </div>
     );

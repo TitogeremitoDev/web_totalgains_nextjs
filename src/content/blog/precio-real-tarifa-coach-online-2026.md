@@ -1,6 +1,6 @@
 ---
 title: "El Precio Real de Tu Tarifa: Por Qué Cobras 100 €/mes y Ganas 14 €/hora (Calculadora Coste Real)"
-seoTitle: "Precio Real Tarifa Coach: Calculadora €/hora 2026"
+seoTitle: "Precio Real Tarifa Coach: Calculadora €/hora"
 description: "Calculadora real €/hora del coach online que descuenta IVA 21 %: introduce clientes, precio y horas y ve por qué muchos cobran menos que un dependiente."
 date: "2026-07-17"
 lastModified: "2026-07-17"
@@ -27,10 +27,10 @@ comparison:
       rating: 4.8
       pros: "El plan pensado para el coach que quiere subir su €/hora efectivo sin subir tarifa: **89,90 €/mes con IVA hasta 100 clientes activos**. IA generativa de rutinas en menos de 2 minutos por cliente (recupera 25-40 min por cliente frente al diseño manual), base de +240.000 alimentos que elimina consultas nutricionales manuales (4-8 h/mes con 50 clientes), Coach Insights para revisar la cartera en 5 minutos por la mañana en vez de perseguir datos, sistema de recordatorios de renovación al cliente que baja el churn silencioso, y app marca blanca incluida que justifica tarifas 20-40 % superiores. Cada palanca sube tu €/hora efectivo por lados distintos: menos horas por cliente + más retención + tarifa premium justificada. 14 días gratis sin tarjeta."
       cons: "Subir el €/hora efectivo requiere que el coach cambie su operativa manual real, no solo que compre software. Si sigues con 20 clientes y no quieres profesionalizar el flujo, la calculadora te va a decir lo mismo pagues TG o no. La palanca operativa está condicionada al cambio de hábito del coach; la herramienta lo acelera pero no lo sustituye. Valoración autodeclarada del propio fundador."
-      lowPrice: 29.90
+      lowPrice: 0
       highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 3
+      offerCount: 4
       url: "https://totalgains.es/onboarding/"
       image: "https://totalgains.es/images/blog/logos/logo-totalgains.webp"
 faqs:

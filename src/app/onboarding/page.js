@@ -16,6 +16,11 @@ export const metadata = {
     description:
       "Configura tu entorno profesional en 3 pasos. Sin tarjeta de crédito, sin compromiso.",
     url: "https://totalgains.es/onboarding/",
+    /* ⚠️ `images` va repetido AQUÍ a propósito. Next NO fusiona este openGraph
+       con el del layout raíz: lo sustituye entero, así que omitir la clave no
+       hereda la imagen, la borra. Sin esto, la página de registro —justo la que
+       se pega en WhatsApp e Instagram— se compartía sin vista previa. */
+    images: [{ url: "https://totalgains.es/og-image.jpg", width: 1200, height: 630, alt: "TotalGains — Software para Entrenadores Personales" }],
   },
   robots: {
     index: false,

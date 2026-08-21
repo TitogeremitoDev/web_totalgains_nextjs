@@ -115,7 +115,7 @@ const Stats = () => {
                         </div>
                         <div className="hero-body">
                             <div className="hero-text">
-                                <div className="stat-number"><span data-counter>+0</span></div>
+                                <div className="stat-number"><span data-counter>+240K</span></div>
                                 <div className="stat-label">Alimentos en la base de datos</div>
                                 <div className="stat-sub">Nutrición española completa. Añade nuevos alimentos con IA desde una foto o un PDF.</div>
                                 <div className="progress"><div className="progress-fill" data-progress="100" /></div>
@@ -134,7 +134,7 @@ const Stats = () => {
                         data-value="100" data-suffix="%"
                     >
                         <div className="stat-icon"><Sparkles size={28} /></div>
-                        <div className="stat-number"><span data-counter>0%</span></div>
+                        <div className="stat-number"><span data-counter>100%</span></div>
                         <div className="stat-label">IA en Rutinas y Dietas</div>
                         <div className="stat-sub">Genera planes personalizados en segundos. Corrige en 1 clic.</div>
                         <div className="progress"><div className="progress-fill" data-progress="100" /></div>
@@ -147,7 +147,7 @@ const Stats = () => {
                     >
                         <div className="stat-icon"><Smartphone size={28} /></div>
                         <div className="stat-number platforms-row">
-                            <span data-counter>0</span>
+                            <span data-counter>3</span>
                             <PlatformLogos />
                         </div>
                         <div className="stat-label">Plataformas Web · iOS · Android</div>
@@ -170,21 +170,25 @@ const Stats = () => {
                         data-value="10" data-prefix="+" data-suffix="h"
                     >
                         <div className="stat-icon"><Clock size={28} /></div>
-                        <div className="stat-number"><span data-counter>+0h</span></div>
+                        <div className="stat-number"><span data-counter>+10h</span></div>
                         <div className="stat-label">Ahorro semanal promedio</div>
                         <div className="stat-sub">Menos admin. Más entrenamiento.</div>
                         <div className="progress"><div className="progress-fill" data-progress="100" /></div>
                     </div>
 
-                    {/* 14 días prueba */}
+                    {/* Plan gratuito — 5 atletas de por vida.
+                        Antes esta tarjeta decía "14 días · Prueba gratis sin tarjeta". Se
+                        cambió al plan free porque el mensaje de prueba ya está en el hero y
+                        en el CTA fijo: repetirlo aquí lo convertía en el dato dominante de
+                        la home y las IAs lo citaban EN LUGAR del plan gratuito permanente. */}
                     <div
                         className="stat-item stat-small tone-amber"
-                        data-value="14" data-suffix-plain=" días"
+                        data-value="5" data-suffix-plain=" atletas"
                     >
                         <div className="stat-icon"><Gift size={28} /></div>
-                        <div className="stat-number"><span data-counter>0 días</span></div>
-                        <div className="stat-label">Prueba gratis sin tarjeta</div>
-                        <div className="stat-sub">Sin permanencia. Cancela en 1 clic.</div>
+                        <div className="stat-number"><span data-counter>5 atletas</span></div>
+                        <div className="stat-label">Gratis de por vida, sin tarjeta</div>
+                        <div className="stat-sub">Sin caducidad ni permanencia. No es una prueba de 14 días.</div>
                         <div className="progress"><div className="progress-fill" data-progress="100" /></div>
                     </div>
 

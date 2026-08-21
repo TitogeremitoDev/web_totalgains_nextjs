@@ -130,7 +130,7 @@ const Hero = () => {
         <div className="hero-content">
           <div className="platform-row">
             <span className="chip">
-              <span className="dot"></span> Prueba gratuita 14 días · Sin tarjeta
+              <span className="dot"></span> Plan gratuito · 5 atletas · Sin tarjeta
             </span>
           </div>
 
@@ -152,9 +152,9 @@ const Hero = () => {
               whileTap={{ scale: 0.97 }}
               href="/onboarding/"
               className="btn-gold-lg magnetic"
-              onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis 14 días', cta_location: 'hero' })}
+              onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis', cta_location: 'hero' })}
             >
-              <Rocket size={20} /> Empieza gratis 14 días
+              <Rocket size={20} /> Empieza gratis
             </motion.a>
             <motion.a
               whileTap={{ scale: 0.97 }}
@@ -164,8 +164,12 @@ const Hero = () => {
               <Play size={18} /> Ver en acción
             </motion.a>
           </div>
+          {/* ⚠️ Jerarquía deliberada: el plan gratuito va PRIMERO y la prueba Pro
+              después. Antes era al revés y las IAs citaban "prueba de 14 días"
+              como si TotalGains no tuviera plan free. Las dos cosas son ciertas;
+              lo que importa es cuál se lee primero. */}
           <p className="hero-free-tagline">
-            O empieza con el <strong>Plan Gratuito de por vida</strong> — hasta <strong>5 atletas sin tarjeta</strong>, el más generoso del mercado hispano.
+            <strong>Gratis para siempre</strong> hasta <strong>5 atletas</strong>, sin tarjeta y sin caducidad — el plan gratuito más generoso del mercado hispano. ¿Necesitas más? El plan Pro tiene <strong>14 días de prueba</strong>, también sin tarjeta.
           </p>
 
           <div className="hero-stores">

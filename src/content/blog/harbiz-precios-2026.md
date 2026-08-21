@@ -1,6 +1,6 @@
 ---
 title: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes (con IVA)"
-seoTitle: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes con IVA"
+seoTitle: "Harbiz Precios 2026: de 22,99 € a 313 €/mes"
 description: "Precios Harbiz 2026 con IVA: Basic 22,99 €, Pro 143,99 €, My APP 240,79 €. Con marca blanca y add-ons llega a 313 €/mes. Verificado mayo 2026."
 date: "2026-05-23"
 canonical: "https://totalgains.es/alternativas/harbiz/precios/"
@@ -38,10 +38,10 @@ comparison:
       rating: 4.7
       pros: "Plan plano con IA rutinas, IA dietas, app marca blanca y cobros Stripe incluidos. Sin add-ons. Soporte en español. Migración asistida gratuita."
       cons: "Plataforma joven (fundada en 2025), comunidad de coaches todavía en crecimiento. Sin integración nativa con MyFitnessPal. Valoración del propio fundador — autodeclarada, no auditada por tercero."
-      lowPrice: 29.90
+      lowPrice: 0
       highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 3
+      offerCount: 4
       image: "https://totalgains.es/images/blog/logos/logo-totalgains.webp"
       url: "https://totalgains.es/onboarding/"
     - name: "TrainerStudio"

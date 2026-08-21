@@ -1,6 +1,6 @@
 ---
 title: "Entrenamiento híbrido en 2026: cómo programarlo (guía coach)"
-seoTitle: "Entrenamiento híbrido 2026: guía para programarlo (coach)"
+seoTitle: "Entrenamiento híbrido 2026: cómo programarlo"
 description: "Entrenamiento híbrido en 2026: 3 estructuras que sí funcionan, 4 errores a evitar y la IA que te lo monta en 30 min. Guía para coaches online."
 date: "2026-07-26"
 lastModified: "2026-07-26"

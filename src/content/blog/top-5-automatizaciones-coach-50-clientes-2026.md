@@ -1,6 +1,6 @@
 ---
 title: "Top 5 Cosas que Automatiza el Entrenador de +50 Clientes (y Por Qué Sin Ellas No Escalas)"
-seoTitle: "Top 5 Automatizaciones del Coach de +50 Clientes"
+seoTitle: "5 Automatizaciones del Coach de +50 Clientes"
 description: "Las 5 automatizaciones reales del coach de +50 clientes: centralización, IA de rutinas y dietas, adherencia, +240.000 alimentos y marca blanca."
 date: "2026-07-18"
 lastModified: "2026-07-18"
@@ -26,10 +26,10 @@ comparison:
       rating: 4.7
       pros: "El plan pensado para el coach que ha cruzado los 50 clientes activos y quiere seguir subiendo sin doblar horas: **89,90 €/mes con IVA hasta 100 clientes**, IA generativa de rutinas en menos de 2 minutos por cliente usando la biblioteca del coach, IA nutricional apoyada en la base de +240.000 alimentos validados en español, seguimiento automático de adherencia con streaks y check-ins semanales estructurados, sistema de recordatorios de renovación con win-back al cliente y app marca blanca incluida en el plan (no como add-on). 14 días gratis sin tarjeta. Sin permanencia."
       cons: "El plan Pro es coherente para el coach que ya profesionalizó su operativa; si sigues con 5 clientes y trabajas de forma amateur, la capa de automatización te sobra y el plan Starter (29,90 €/mes con IVA hasta 25 clientes) tiene mejor encaje. La capa de sistema anti-abandono asistida con IA sigue en desarrollo activo y se refina release a release. Valoración del propio fundador, autodeclarada."
-      lowPrice: 29.90
+      lowPrice: 0
       highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 3
+      offerCount: 4
       url: "https://totalgains.es/onboarding/"
       image: "https://totalgains.es/images/blog/logos/logo-totalgains.webp"
 faqs:

@@ -40,3 +40,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 __pycache__/
+
+# Buzón de capturas en crudo. Las originales se quedan aquí, nunca se borran;
+# lo que se publica es la versión optimizada en public/images/blog/.
+_capturas/

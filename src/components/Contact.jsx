@@ -5,6 +5,7 @@ import Link from 'next/link';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
 import { Mail, Phone, CheckCircle, XCircle } from 'lucide-react';
+import { trackEvent } from '@/components/Analytics';
 import './Contact.css';
 
 const Contact = () => {
@@ -18,6 +19,10 @@ const Contact = () => {
     // Status: 'idle', 'sending', 'success', 'error'
     const [status, setStatus] = useState('idle');
     const [privacyAccepted, setPrivacyAccepted] = useState(false);
+    // El email se guarda aparte porque el .then() limpia formData en el mismo
+    // batch de React que pinta el mensaje de éxito: sin esto, el acuse decía
+    // "Te responderemos a ." con el hueco vacío.
+    const [sentEmail, setSentEmail] = useState('');
 
     const handleChange = (e) => {
         setFormData({
@@ -67,11 +72,20 @@ const Contact = () => {
             USER_ID
         )
             .then(() => {
+                // Única conversión medible de la home. Si el usuario rechazó las
+                // cookies, window.gtag no existe y trackEvent es un no-op silencioso
+                // (a propósito: el consentimiento manda sobre la analítica).
+                trackEvent('lead_submit', {
+                    form_name: 'contacto_home',
+                    form_subject: formData.subject,
+                });
+                setSentEmail(formData.email);
                 setStatus('success');
                 setFormData({ name: '', email: '', subject: '', message: '' });
                 setPrivacyAccepted(false);
             })
             .catch((err) => {
+                trackEvent('lead_submit_error', { form_name: 'contacto_home' });
                 setStatus('error');
             });
     };
@@ -206,7 +220,7 @@ const Contact = () => {
 
                             {status === 'success' && (
                                 <div className="form-message success animate-fadeIn">
-                                    <CheckCircle size={18} className="inline mr-2 text-green-500" /> Tu mensaje ha sido enviado correctamente. Te responderemos pronto a {formData.email}.
+                                    <CheckCircle size={18} className="inline mr-2 text-green-500" /> Tu mensaje ha sido enviado correctamente. Te responderemos pronto a {sentEmail}.
                                 </div>
                             )}
 

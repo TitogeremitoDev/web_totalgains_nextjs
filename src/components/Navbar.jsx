@@ -96,7 +96,7 @@ const Navbar = () => {
                     <Link href="/onboarding/" className="btn btn-primary" prefetch={false}
                         onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis · 5 atletas', cta_location: 'navbar' })}
                     >
-                        Empieza gratis<br />14 Días
+                        Empieza gratis<br />5 atletas
                     </Link>
                 </div>
 

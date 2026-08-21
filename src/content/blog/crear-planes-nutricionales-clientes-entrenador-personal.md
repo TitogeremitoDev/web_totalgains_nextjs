@@ -26,10 +26,10 @@ comparison:
       rating: 4.7
       pros: "Base de alimentos verificada con productos del supermercado en español (España y Latam), IA generativa nativa que parsea PDFs/Excel de dietas existentes y los convierte en planes editables en segundos, editor de plantillas reutilizables con intercambios alimentarios, dashboard de adherencia para el coach y app del cliente integrada sin coste adicional. Precio único por coach sin add-ons ocultos."
       cons: "Producto joven en mercado: catálogo de integraciones de wearables más limitado que competidores con 10+ años. No incluye CRM de ventas avanzado (orientado a coaches que ya tienen su pipeline comercial resuelto)."
-      lowPrice: 29.9
-      highPrice: 149.9
+      lowPrice: 0
+      highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 3
+      offerCount: 4
       url: "https://totalgains.es/onboarding/"
     - name: "Trainerize + Advanced Nutrition Coaching"
       rating: 3.5

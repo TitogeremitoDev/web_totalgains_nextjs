@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Instagram, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
 
 export const metadata = {
-  title: "Nacho Pulido: +25 clientes activos con nuestro software",
+  title: "Caso Nacho Pulido: de 15 a 40 clientes activos",
   description:
     "Caso de éxito: Nacho Pulido (@puli.trainer), coach de fuerza, pasó de Excel y WhatsApp a ahorrar 8-10 horas semanales con TotalGains.",
   alternates: {

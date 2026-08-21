@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowRight, Rocket, Star, TrendingUp } from "lucide-react";
 
 export const metadata = {
-  title: "Casos de Éxito de Entrenadores y Nutricionistas Reales",
+  title: "Casos de Éxito: Entrenadores y Nutricionistas",
   description:
     "Coaches y nutricionistas reales que escalaron su negocio con TotalGains. Nacho Pulido (15→40+ clientes) y Lorena Eses (+10 h/sem ahorradas). Sin humo, sin promesas vacías.",
   alternates: { canonical: "https://totalgains.es/casos-de-exito/" },

@@ -128,6 +128,25 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/cliente-no-sigue-la-dieta-motivos-coach-2026
+*Generado 2026-08-21 con `gemini-3-pro-image` (los modelos `imagen-*:predict` dejaron de existir; el script se actualizó ese mismo dia)*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `dieta-adherencia-hero.webp` | eye-level levemente bajo | tercios sin centro focal | medium-wide | cocina doméstica de noche | nevera abierta casi vacía + encimera con 2 huevos, arroz a medias, un tomate y el plan impreso curvándose | fría de nevera contra bombilla cálida | documental nocturno, honesto |
+| `dieta-adherencia-alternativas.webp` | 3/4 bajo | simétrica de borde a borde | wide macro | estudio fondo navy | ingredientes flotando por parejas equivalentes (pescado blanco/salmón, huevos/pollo, arroz/quinoa, brócoli/espárragos, lima/limón) | lateral dura + glow coral central | bodegón comercial |
+| `dieta-adherencia-mes-tarde.webp` | medium frontal levemente elevado | diagonal con motion blur | medium | fondo navy abstracto sin locación | hojas de calendario volando, una quieta boca abajo abajo a la derecha | contraluz frío violeta + derrame coral inferior izquierdo | conceptual cinematográfico |
+| `dieta-adherencia-app-opciones.webp` | captura de app | recorte horizontal | UI móvil | pantalla Nutrición del cliente | 2 opciones de desayuno equivalentes con su botón de cambio | n/a (captura real) | producto real |
+| `dieta-adherencia-app-ciclo.webp` | captura de app | recorte horizontal | UI móvil | pantalla Nutrición del cliente | cabecera + kcal/macros + aviso de fase del ciclo con su consejo | n/a (captura real) | producto real |
+| `dieta-adherencia-ia-favoritos.webp` | captura de app | vertical completa | UI modal | configurador de dieta IA | perfil del cliente, última dieta cargada, control de parecido, usar favoritos / evitar rechazos | n/a (captura real) | producto real |
+| `dieta-adherencia-ia-revisar.webp` | captura de app | vertical completa | UI modal | revisión de dieta IA | avisos del sistema antes de guardar y varias opciones por comida | n/a (captura real) | producto real |
+
+**Origen de las 4 capturas reales:** `_capturas/cliente-no-sigue-la-dieta-motivos-coach-2026/` (buzón gitignored, los originales PNG se conservan ahí). `app-opciones` y `app-ciclo` son dos recortes de la MISMA captura de la pantalla de Nutrición del cliente. German confirmó el 21-ago-2026 que toda esta UI está publicada.
+
+**Notas:** el pool #5 ("bodegón vertical de ingredientes flotando", marcado *para nutrición*) se usó aquí y **pasa a estar consumido**. La primera versión de `dieta-adherencia-alternativas` salió con todo amontonado en el tercio izquierdo y el 60 % del cuadro vacío; se regeneró pidiendo explícitamente "filling the entire frame edge to edge, balanced symmetrical composition". Lección: con estos modelos hay que pedir el reparto horizontal de forma literal.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -154,6 +173,17 @@ Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, ve
 ---
 
 ## 🖼️ Imágenes de producto REAL (no inventar conceptos)
+
+### Capturas de IA de dietas (`public/images/blog/ia-totalgains/`)
+*Tomadas el 8-may-2026. ⚠️ El configurador de dietas ha cambiado desde entonces (ver commits `b09a489`, `9527a68`, `420323a`, `079c8a0` del repo de la app, todos posteriores al changelog de 1.3.14). **Verificar contra la versión publicada antes de reutilizarlas en un artículo nuevo.**
+
+| Archivo | Qué muestra | Usado en |
+|---|---|---|
+| `06-metodos-crear-dieta.webp` | Modal con las 4 formas de crear un plan (Dieta Completa, Plan Flex, Importar archivo, Generar con IA) | `ia-entrenador-personal-rutinas-dietas` |
+| `07-parametros-dieta-ia.webp` | Configurador de IA: objetivo, estructura por opciones o por días, kcal por tipo de día | `ia-entrenador-personal-rutinas-dietas` |
+| `09-dieta-revision-web.webp` | Revisión previa a asignar, con OPCIÓN 1 y OPCIÓN 2 por comida (web) | `ia-entrenador-personal-rutinas-dietas` |
+| `10-dieta-revision-movil.webp` | La misma revisión en vista móvil | `ia-entrenador-personal-rutinas-dietas` |
+
 
 Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunca. Son capturas reales del dashboard de TotalGains.
 
@@ -188,5 +218,7 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-08-21** — Añadido `blog/cliente-no-sigue-la-dieta-motivos-coach-2026` (2 imágenes). Consumido el concepto #5 del pool. El script `scripts/generate_image.py` se migró de `imagen-*:predict` a `gemini-3-pro-image:generateContent`. Desde hoy `npm run check-images` comprueba que ninguna imagen editorial se quede sin registrar.
 
 **2026-06-19** — Creación inicial del registry tras feedback del usuario sobre imágenes idénticas y hex codes renderizados como texto. Catalogadas 17 imágenes recientes generadas en sesión + 16 legacy + 4 screenshots reales.

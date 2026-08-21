@@ -1,5 +1,17 @@
 #!/usr/bin/env python3
-"""Fallback image generator using Google Gemini API (imagen-3.0-generate-002)."""
+"""Generador de imágenes editoriales con la Google Gemini API.
+
+Actualizado el 21-ago-2026: los modelos `imagen-*:predict` dejaron de estar
+disponibles con nuestra key ("is not found for API version v1beta"). Los
+modelos de imagen actuales van por `generateContent` y devuelven la imagen
+como `inlineData` en base64. Se puede listar lo disponible con:
+
+    curl -s "https://generativelanguage.googleapis.com/v1beta/models?key=$GEMINI_API_KEY"
+
+Recordatorio de las normas al escribir el prompt (ver
+docs/seo/image-prompts-registry.md): nunca códigos hex, nunca la palabra
+"TotalGains" si la imagen incluye una pantalla, y evitar manos frontales.
+"""
 import argparse
 import base64
 import json
@@ -23,35 +35,39 @@ def generate_image(api_key: str, prompt: str, output_path: str, width: int, heig
     else:
         aspect_ratio = "4:3"
 
-    url = f"https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key={api_key}"
+    model = os.environ.get("GEMINI_IMAGE_MODEL", "gemini-3-pro-image")
+    url = f"https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent?key={api_key}"
     payload = {
-        "instances": [{"prompt": prompt}],
-        "parameters": {
-            "sampleCount": 1,
-            "aspectRatio": aspect_ratio,
-            "safetySetting": "block_low_and_above",
-            "personGeneration": "allow_adult"
-        }
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "responseModalities": ["IMAGE"],
+            "imageConfig": {"aspectRatio": aspect_ratio},
+        },
     }
     data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(url, data=data, headers={"Content-Type": "application/json"}, method="POST")
 
     try:
-        with urllib.request.urlopen(req, timeout=120) as resp:
+        with urllib.request.urlopen(req, timeout=180) as resp:
             result = json.loads(resp.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         body = e.read().decode("utf-8")
         print(f"HTTP {e.code}: {body}", file=sys.stderr)
         sys.exit(1)
 
-    predictions = result.get("predictions", [])
-    if not predictions:
-        print(f"No predictions returned: {result}", file=sys.stderr)
-        sys.exit(1)
+    # La imagen viaja como inlineData dentro de la primera candidate.
+    img_b64 = ""
+    for cand in result.get("candidates", []):
+        for part in cand.get("content", {}).get("parts", []):
+            blob = part.get("inlineData") or part.get("inline_data")
+            if blob and blob.get("data"):
+                img_b64 = blob["data"]
+                break
+        if img_b64:
+            break
 
-    img_b64 = predictions[0].get("bytesBase64Encoded", "")
     if not img_b64:
-        print(f"No image data in response: {predictions[0]}", file=sys.stderr)
+        print(f"No image data in response: {json.dumps(result)[:600]}", file=sys.stderr)
         sys.exit(1)
 
     img_bytes = base64.b64decode(img_b64)

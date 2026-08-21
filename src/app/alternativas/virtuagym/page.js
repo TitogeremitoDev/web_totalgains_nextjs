@@ -1,9 +1,9 @@
 import AlternativaCompetidoresContent from "@/components/AlternativaCompetidoresContent";
 import { getAlternativaFaqs } from "@/data/alternativasFaqs";
-import { softwareApplicationNode } from "@/data/productSchema";
+import { softwareApplicationNode , organizationNode } from "@/data/productSchema";
 
 export const metadata = {
-  title: "Alternativa a Virtuagym: TotalGains desde 29,90 €/mes",
+  title: { absolute: "Alternativa a Virtuagym: TotalGains desde 29,90 €/mes" },
   description:
     "Virtuagym está diseñado para gimnasios y cobra por atleta. TotalGains es la alternativa para el coach autónomo desde 29,90 €/mes con IVA. Migración en español.",
   alternates: {
@@ -26,6 +26,7 @@ export default function AlternativaVirtuagym() {
       // Valoración real de Trustpilot (la misma que muestra el badge de
       // la página): hace la página elegible para estrellas en la SERP.
       softwareApplicationNode({ description: "TotalGains, alternativa en español a Virtuagym para entrenadores personales: IA de rutinas y dietas, app marca blanca incluida en todos los planes y soporte en español." }),
+      organizationNode(),
       {
         "@type": "FAQPage",
         // Generado desde la MISMA fuente que renderiza la página:

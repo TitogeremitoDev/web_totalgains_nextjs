@@ -26,10 +26,10 @@ comparison:
       rating: 4.7
       pros: "Plan de entrada (29,90 €/mes con IVA, hasta 25 clientes activos) con IA rutinas, IA dietas, base de +240.000 alimentos en español, cobros Stripe y app marca blanca incluidos sin add-ons. 14 días gratis sin tarjeta para probar antes de pagar. Migración asistida si arrancas con datos en Excel o WhatsApp."
       cons: "Plataforma joven (fundada en 2025). Sin integración nativa con MyFitnessPal o wearables americanos (Whoop, Garmin pro). Valoración del propio fundador — autodeclarada, no auditada por tercero."
-      lowPrice: 29.90
+      lowPrice: 0
       highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 3
+      offerCount: 4
       url: "https://totalgains.es/onboarding/"
       image: "https://totalgains.es/images/blog/logos/logo-totalgains.webp"
     - name: "WhatsApp + Excel + Stripe manual"

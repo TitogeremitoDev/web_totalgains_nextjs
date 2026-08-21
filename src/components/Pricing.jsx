@@ -322,7 +322,12 @@ const Pricing = () => {
         };
     }, []);
 
-    const plans = isGym ? gymPlans : coachPlans;
+    /* El plan GRATUITO sale de la REJILLA de escritorio: cuatro tarjetas rompían
+       la composición. No desaparece del producto — sigue en la calculadora móvil
+       (1-5 atletas), en la nota de abajo y en el AggregateOffer del schema
+       (lowPrice 0). Se filtra AQUÍ y no se toca `coachPlans` porque
+       `activeMobilePlan` indexa ese array por posición. */
+    const plans = isGym ? gymPlans : coachPlans.filter(p => !p.isFree);
 
     const activeMobilePlan = isGym
         ? (memberCount > 200 ? gymPlans[2] : memberCount > 100 ? gymPlans[1] : gymPlans[0])
@@ -459,7 +464,7 @@ const Pricing = () => {
                 )}
 
                 {!isMobile ? (
-                    <div className={`pricing-grid ${isGym ? 'coach-three-cards' : 'coach-four-cards'}`}>
+                    <div className="pricing-grid coach-three-cards">
                         {plans.map((plan, index) => (
                             <PricingCard key={plan.id} plan={plan} isAnnual={isAnnual} delay={index * 0.1} />
                         ))}

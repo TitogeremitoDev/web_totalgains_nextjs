@@ -1,6 +1,6 @@
 ---
 title: "Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach"
-seoTitle: "Software para Gimnasios Pequeños: Guía y Precios 2026"
+seoTitle: "Software para Gimnasios Pequeños: Precios 2026"
 description: "Qué mirar al elegir software para un gimnasio boutique: multi-coach sin coste por entrenador, reservas con lista de espera, app propia y cobros recurrentes."
 date: "2026-06-12"
 lastModified: "2026-08-11"

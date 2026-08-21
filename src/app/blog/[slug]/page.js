@@ -22,6 +22,8 @@ import CyclePhasesReality from "@/components/CyclePhasesReality";
 import PrivacyLayersCard from "@/components/PrivacyLayersCard";
 import HybridStructuresGrid from "@/components/HybridStructuresGrid";
 import HybridProgrammingErrors from "@/components/HybridProgrammingErrors";
+import DietAdherenceReasons from "@/components/DietAdherenceReasons";
+import FoodSwapLevels from "@/components/FoodSwapLevels";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -47,6 +49,8 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__privacy_layers__"></div>', Component: PrivacyLayersCard, gate: () => true },
   { marker: '<div class="__hybrid_structures__"></div>', Component: HybridStructuresGrid, gate: () => true },
   { marker: '<div class="__hybrid_errors__"></div>', Component: HybridProgrammingErrors, gate: () => true },
+  { marker: '<div class="__diet_adherence_reasons__"></div>', Component: DietAdherenceReasons, gate: () => true },
+  { marker: '<div class="__food_swap_levels__"></div>', Component: FoodSwapLevels, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS

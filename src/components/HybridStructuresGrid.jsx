@@ -141,7 +141,7 @@ export default function HybridStructuresGrid() {
         Las 3 estructuras de entrenamiento híbrido
       </h3>
       <p style={{ margin: "0 0 22px", textAlign: "center", fontSize: "0.86rem", color: "var(--text-secondary,#aaa)", lineHeight: 1.5 }}>
-        No hay una "mejor". Hay la que encaja con la cartera de días, el objetivo y la vida del cliente.
+        No hay una &quot;mejor&quot;. Hay la que encaja con la cartera de días, el objetivo y la vida del cliente.
       </p>
 
       <div

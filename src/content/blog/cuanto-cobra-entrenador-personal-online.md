@@ -1,6 +1,6 @@
 ---
 title: "¿Cuánto Cobra un Entrenador Personal Online? (La Verdad que Nadie te Dice)"
-seoTitle: "Cuánto Cobra un Entrenador Personal Online: 25-300 €/mes"
+seoTitle: "Cuánto Cobra un Entrenador Personal Online 2026"
 description: "Tarifas reales en España 2026: de 25-45 € el seguimiento básico a 150-300 € el premium. Rangos por experiencia, formatos comparados y errores de pricing."
 date: "2025-01-20"
 lastModified: "2026-08-11"

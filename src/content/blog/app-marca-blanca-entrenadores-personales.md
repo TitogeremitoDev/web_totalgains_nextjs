@@ -26,10 +26,10 @@ comparison:
       rating: 4.7
       pros: "App marca blanca incluida en todos los planes, desde el Starter de 29,90 €/mes con IVA. Sin add-on de pago único. Soporte en español para la configuración. Migración asistida gratuita."
       cons: "Plataforma joven (fundada en 2025), comunidad de coaches todavía en crecimiento. Sin integración nativa con MyFitnessPal. Valoración del propio fundador — autodeclarada, no auditada por tercero."
-      lowPrice: 29.90
+      lowPrice: 0
       highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 3
+      offerCount: 4
       url: "https://totalgains.es/onboarding/"
       image: "https://totalgains.es/images/blog/logos/logo-totalgains.webp"
     - name: "Trainerize"

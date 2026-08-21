@@ -1,6 +1,6 @@
 import AlternativaCompetidoresContent from "@/components/AlternativaCompetidoresContent";
 import { getAlternativaFaqs } from "@/data/alternativasFaqs";
-import { softwareApplicationNode } from "@/data/productSchema";
+import { softwareApplicationNode , organizationNode } from "@/data/productSchema";
 
 export const metadata = {
   title: "Alternativa a MyPT Hub para Entrenadores",
@@ -37,6 +37,7 @@ export default function AlternativaMyPTHub() {
       // Valoración real de Trustpilot (la misma que muestra el badge de
       // la página): hace la página elegible para estrellas en la SERP.
       softwareApplicationNode({ description: "TotalGains, alternativa en español a MyPT Hub para entrenadores personales: IA de rutinas y dietas, app marca blanca incluida en todos los planes y soporte en español." }),
+      organizationNode(),
       {
         "@type": "FAQPage",
         // Generado desde la MISMA fuente que renderiza la página:

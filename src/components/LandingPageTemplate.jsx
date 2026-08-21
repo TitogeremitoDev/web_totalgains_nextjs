@@ -27,10 +27,14 @@ import "./LandingPageTemplate.css";
 const LandingPageTemplate = ({
     badge, h1, subtitle, features, useCases, ctaText, ctaLocation, faqs,
     ctaHref = "/onboarding/",
-    ctaNote = "14 días gratis · Sin tarjeta",
+    /* ⚠️ Estos defaults salen en TODAS las landings. Antes anclaban en "14 días
+       gratis" y eso hacía que el mensaje dominante del site fuera la prueba y no
+       el plan gratuito permanente. Si una landing concreta necesita anclar en la
+       prueba Pro, que pase ctaNote/bottomCtaText por props — no cambiar el default. */
+    ctaNote = "Plan gratuito 5 atletas · Sin tarjeta",
     bottomCtaHeadline = "Empieza hoy. Sin tarjeta.",
     bottomCtaSubtitle = "Únete a los entrenadores que ya escalaron su negocio con TotalGains.",
-    bottomCtaText = "Empieza gratis 14 días",
+    bottomCtaText = "Empieza gratis",
 }) => (
     <main className="lp-page">
         {/* ── Hero ── */}
@@ -118,19 +122,40 @@ const LandingPageTemplate = ({
 
         {/* ── FAQs ── */}
         {faqs?.length > 0 && (
-            <section className="lp-faqs">
-                <div className="container lp-faqs-inner">
-                    <h2>Preguntas frecuentes</h2>
-                    <div className="lp-faqs-list">
-                        {faqs.map((faq, i) => (
-                            <div key={i} className="lp-faq-item glass">
-                                <h3>{faq.q}</h3>
-                                <p>{faq.a}</p>
-                            </div>
-                        ))}
+            <>
+                {/* FAQPage se emite AQUÍ, no en cada page.js: las 8 landings que pasan
+                    `faqs` lo heredan de golpe y no puede desincronizarse del texto
+                    visible, porque sale del mismo array. Ojo: desde 2023 Google sólo
+                    pinta el rich result de FAQ a sitios oficiales/sanitarios; esto es
+                    para Bing y para que los LLM extraigan las respuestas (llms.txt). */}
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                        __html: JSON.stringify({
+                            "@context": "https://schema.org",
+                            "@type": "FAQPage",
+                            mainEntity: faqs.map(({ q, a }) => ({
+                                "@type": "Question",
+                                name: q,
+                                acceptedAnswer: { "@type": "Answer", text: a },
+                            })),
+                        }),
+                    }}
+                />
+                <section className="lp-faqs">
+                    <div className="container lp-faqs-inner">
+                        <h2>Preguntas frecuentes</h2>
+                        <div className="lp-faqs-list">
+                            {faqs.map((faq, i) => (
+                                <div key={i} className="lp-faq-item glass">
+                                    <h3>{faq.q}</h3>
+                                    <p>{faq.a}</p>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </>
         )}
 
         {/* ── Bottom CTA ── */}

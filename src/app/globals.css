@@ -40,6 +40,9 @@
   --spacing-3xl: 6rem;
 
   /* Typography */
+  /* ⚠️ Esta declaración NO funciona aquí y se re-declara en `body` (ver abajo):
+     next/font inyecta --font-dm-sans con una clase en <body>, y las variables
+     CSS heredan hacia abajo, no hacia arriba. En :root no existe todavía. */
   --font-primary: var(--font-dm-sans), 'DM Sans', sans-serif;
   --font-display: var(--font-display), 'Space Grotesk', sans-serif;
 
@@ -112,6 +115,12 @@ html {
 }
 
 body {
+  /* Re-declarada AQUÍ a propósito. En :root, `var(--font-dm-sans)` no resuelve
+     (next/font la pone con una clase en <body>), así que --font-primary salía
+     inválida, `font-family` se descartaba entera y TODO el texto de la web
+     —navbar, párrafos, footer— caía a la serif por defecto del navegador.
+     Los títulos se libraban por usar --font-display. No mover a :root. */
+  --font-primary: var(--font-dm-sans), 'DM Sans', sans-serif;
   font-family: var(--font-primary);
   color: var(--text-primary);
   line-height: 1.6;

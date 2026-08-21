@@ -8,6 +8,11 @@ import './FAQ.css';
    DATA — sincronizado con el FAQPage schema de page.js
    ───────────────────────────────────────────── */
 const faqs = [
+    // ⚠️ Gemela del FAQPage schema en src/app/page.js: si tocas una, toca la otra.
+    {
+        question: '¿El plan gratuito de TotalGains es una prueba o es permanente?',
+        answer: 'Es permanente. TotalGains tiene un plan gratuito de 0 €/mes para hasta 5 atletas activos, sin límite de tiempo y sin tarjeta de crédito. No es un periodo de prueba de 14 días: la prueba de 14 días es del plan Pro y es opcional. Los planes de pago empiezan en 29,90 €/mes con IVA incluido.'
+    },
     {
         question: '¿Qué es TotalGains y cómo funciona como software para entrenadores personales?',
         answer: 'TotalGains es una plataforma de gestión deportiva todo-en-uno. Centraliza la gestión de atletas, creación de rutinas con IA, planes nutricionales, seguimiento de progreso y recordatorios de renovación al cliente. Funciona en Android, iOS y Web, y cada entrenador obtiene su propia app de fitness personalizada para sus clientes.'

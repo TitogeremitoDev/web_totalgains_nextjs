@@ -1,10 +1,10 @@
 import AlternativaHarbizContent from "@/components/AlternativaHarbizContent";
-import { softwareApplicationNode } from "@/data/productSchema";
+import { softwareApplicationNode , organizationNode } from "@/data/productSchema";
 
 export const metadata = {
-  title: "Alternativa Harbiz 2026: TotalGains 89,90 € vs Harbiz 313 €",
+  title: { absolute: "Alternativa a Harbiz 2026: TotalGains 89,90 € vs 313 €" },
   description:
-    "Harbiz sube a 313 €/mes con marca blanca, IA y vídeos al escalar. TotalGains Pro incluye todo por 89,90 €/mes con IVA. Migración asistida gratis en español.",
+    "Harbiz sube a 313 €/mes con marca blanca, IA y vídeos al escalar. En TotalGains, el plan Pro incluye todo por 89,90 €/mes con IVA. Migración asistida gratis en español.",
   keywords: [
     "alternativa a Harbiz",
     "Harbiz alternativa",
@@ -20,7 +20,7 @@ export const metadata = {
   openGraph: {
     title: "Alternativa Harbiz 2026: TotalGains 89,90 € vs Harbiz 313 €",
     description:
-      "Harbiz sube a 313 €/mes con marca blanca, IA y vídeos al escalar. TotalGains Pro incluye todo por 89,90 €/mes con IVA.",
+      "Harbiz sube a 313 €/mes con marca blanca, IA y vídeos al escalar. En TotalGains, el plan Pro incluye todo por 89,90 €/mes con IVA.",
     url: "https://totalgains.es/alternativas/harbiz/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },
@@ -37,6 +37,7 @@ export default function AlternativaHarbiz() {
       // Valoración real de Trustpilot (la misma que muestra el badge de
       // la página): hace la página elegible para estrellas en la SERP.
       softwareApplicationNode({ description: "TotalGains, alternativa en español a Harbiz para entrenadores personales: plan plano sin add-ons, IA de rutinas y dietas, app marca blanca incluida en todos los planes y base de +240.000 alimentos." }),
+      organizationNode(),
       {
         "@type": "FAQPage",
         mainEntity: [

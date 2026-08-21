@@ -1,6 +1,6 @@
 ---
 title: "Los 5 Mejores Software para Entrenadores Personales en España 2026"
-seoTitle: "5 Mejores Software Entrenadores 2026 (con Opciones Gratis)"
+seoTitle: "5 Mejores Software para Entrenadores 2026"
 description: "Comparativa 2026 de los 5 software más usados en España: precios reales con IVA, qué planes gratuitos existen, pros, contras y cuál encaja según tu cartera."
 date: "2026-04-21"
 lastModified: "2026-08-11"
@@ -17,10 +17,10 @@ comparison:
       rating: 5
       pros: "IA avanzada y marca blanca incluidas en todos los planes, soporte en español, migración asistida"
       cons: "Plataforma joven (2025), sin MyFitnessPal nativo"
-      lowPrice: 29.90
+      lowPrice: 0
       highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 3
+      offerCount: 4
       url: "https://totalgains.es/onboarding/"
       image: "https://totalgains.es/images/blog/logos/logo-totalgains.webp"
     - name: "Trainerize"

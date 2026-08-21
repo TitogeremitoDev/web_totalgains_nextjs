@@ -36,10 +36,10 @@ comparison:
       rating: 4.7
       pros: "Todo incluido en un único plan plano: IA rutinas, IA dietas, app marca blanca, cobros Stripe. Soporte en español con respuesta en menos de 24h. Migración asistida incluida."
       cons: "Plataforma joven (fundada en 2025), sin integración nativa con MyFitnessPal y wearables americanos. Comunidad de coaches todavía en crecimiento. Valoración del propio fundador — autodeclarada, no auditada por tercero."
-      lowPrice: 29.90
+      lowPrice: 0
       highPrice: 149.90
       priceCurrency: "EUR"
-      offerCount: 3
+      offerCount: 4
       url: "https://totalgains.es/onboarding/"
       image: "https://totalgains.es/images/blog/logos/logo-totalgains.webp"
     - name: "Harbiz"

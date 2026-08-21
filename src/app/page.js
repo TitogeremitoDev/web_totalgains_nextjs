@@ -1,4 +1,5 @@
 import HomeContent from "@/components/HomeContent";
+import { SAME_AS, aggregateRatingNode } from "@/data/productSchema";
 
 /* ──────────────────────────────────────────────
    HOME PAGE — SERVER COMPONENT
@@ -31,6 +32,13 @@ export const metadata = {
 };
 
 const faqData = [
+  // ⚠️ Gemela en FAQ.jsx. Va PRIMERA a propósito: es la desambiguación que las
+  // IAs estaban fallando (citaban "prueba de 14 días" como si no hubiera plan
+  // free). La primera frase responde sola, sin depender de la pregunta.
+  {
+    question: "¿El plan gratuito de TotalGains es una prueba o es permanente?",
+    answer: "Es permanente. TotalGains tiene un plan gratuito de 0 €/mes para hasta 5 atletas activos, sin límite de tiempo y sin tarjeta de crédito. No es un periodo de prueba de 14 días: la prueba de 14 días es del plan Pro y es opcional. Los planes de pago empiezan en 29,90 €/mes con IVA incluido.",
+  },
   {
     question: "¿Qué es TotalGains y cómo funciona como software para entrenadores personales?",
     answer: "TotalGains es una plataforma de gestión deportiva todo-en-uno. Centraliza la gestión de atletas, creación de rutinas con IA, planes nutricionales, seguimiento de progreso y recordatorios de renovación al cliente. Funciona en Android, iOS y Web, y cada entrenador obtiene su propia app de fitness personalizada para sus clientes.",
@@ -99,19 +107,13 @@ export default function Home() {
           url: "https://totalgains.es/onboarding/",
           image: "https://totalgains.es/og-image.jpg",
           offers: [
-            { "@type": "Offer", name: "TotalGains Gratuito", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=free", description: "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. El plan gratuito más generoso del mercado hispano." },
+            { "@type": "Offer", name: "TotalGains Gratuito", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=free", description: "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. Incluye las mismas funciones que los planes de pago: app de marca blanca, IA de rutinas y dietas y +240.000 alimentos en español. Lo único que cambia entre planes es el número de atletas." },
             { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" },
             { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" },
             { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" },
           ],
         },
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: "4.6",
-          bestRating: "5",
-          worstRating: "1",
-          reviewCount: "17",
-        },
+        aggregateRating: aggregateRatingNode(),
         review: [
           {
             "@type": "Review",
@@ -191,12 +193,7 @@ export default function Home() {
           addressRegion: "Granada",
           addressCountry: "ES",
         },
-        sameAs: [
-          "https://www.instagram.com/totalgainsfitness/",
-          "https://www.tiktok.com/@totalgainsfitness",
-          "https://www.youtube.com/@totalgainsfitness",
-          "https://es.trustpilot.com/review/totalgains.es",
-        ],
+        sameAs: SAME_AS,
         contactPoint: {
           "@type": "ContactPoint",
           email: "soporte@totalgains.es",

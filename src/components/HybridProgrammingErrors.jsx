@@ -183,7 +183,7 @@ export default function HybridProgrammingErrors() {
       ))}
 
       <p style={{ marginTop: 18, textAlign: "center", fontSize: "0.8rem", color: "var(--text-secondary,#aaa)", lineHeight: 1.55, fontStyle: "italic" }}>
-        La programación híbrida no es "meter cardio en un plan de fuerza". Es diseñar un plan pensando desde el principio en las dos cosas.
+        La programación híbrida no es &quot;meter cardio en un plan de fuerza&quot;. Es diseñar un plan pensando desde el principio en las dos cosas.
       </p>
     </section>
   );

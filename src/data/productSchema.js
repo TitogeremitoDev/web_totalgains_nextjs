@@ -7,12 +7,42 @@
    pierde el rich result. Por eso ambos leen de TRUSTPILOT.
    ────────────────────────────────────────────────────────────── */
 
-/** TrustScore público en https://es.trustpilot.com/review/totalgains.es */
+/** TrustScore público en https://es.trustpilot.com/review/totalgains.es
+ *  ⚠️ El TrustScore es una media PONDERADA de Trustpilot, no aritmética: puede
+ *  marcar 4,6 con el 100 % de las opiniones en 5★. El número correcto para el
+ *  schema es siempre el que se ve en la página enlazada, no el que salga de
+ *  promediar las estrellas a mano. */
 export const TRUSTPILOT = {
     score: 4.6,
-    reviews: 12,
+    reviews: 17,
     url: "https://es.trustpilot.com/review/totalgains.es",
-    verificado: "2026-08-11",
+    verificado: "2026-08-21",
+};
+
+/** Perfiles oficiales de la entidad TotalGains.
+ *
+ *  Fuente única del `sameAs`: antes estaba copiado a mano en 5 sitios y se
+ *  desincronizaba. Wikidata va PRIMERO — es el ancla que desambigua la marca
+ *  (sin ella "TotalGains" es una cadena de texto que suena a suplemento). */
+export const SAME_AS = [
+    "https://www.wikidata.org/wiki/Q139823576",
+    "https://apps.apple.com/es/app/totalgains/id6756856683",
+    "https://play.google.com/store/apps/details?id=com.german92.titofitapp",
+    "https://es.trustpilot.com/review/totalgains.es",
+    "https://www.instagram.com/totalgainsfitness/",
+    "https://www.tiktok.com/@totalgainsfitness",
+    "https://www.youtube.com/@totalgainsfitness",
+];
+
+/** Plan gratuito permanente. Va SIEMPRE en el AggregateOffer aunque no se
+ *  renderice como tarjeta: si falta, el schema declara que lo más barato son
+ *  29,90 € y las IAs dejan de ver el plan free. */
+export const PLAN_FREE = {
+    id: "free",
+    name: "TotalGains Gratuito",
+    price: "0",
+    description:
+        "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. Incluye las mismas funciones que los planes de pago: app de marca blanca, IA de rutinas y dietas y +240.000 alimentos en español. Lo único que cambia entre planes es el número de atletas.",
 };
 
 /** Planes de coach autónomo. Precios con IVA incluido. Escalan por ATLETAS. */
@@ -57,13 +87,13 @@ export function softwareApplicationNode({ description, id = "https://totalgains.
             "Software para entrenadores personales en español: gestión de atletas, rutinas y dietas con IA, app marca blanca incluida en todos los planes y base de +240.000 alimentos.",
         offers: {
             "@type": "AggregateOffer",
-            lowPrice: 29.9,
+            lowPrice: 0,
             highPrice: 149.9,
             priceCurrency: "EUR",
-            offerCount: PLANES_COACH.length,
+            offerCount: PLANES_COACH.length + 1,
             availability: "https://schema.org/InStock",
             url: "https://totalgains.es/onboarding/",
-            offers: PLANES_COACH.map((p) => ({
+            offers: [PLAN_FREE, ...PLANES_COACH].map((p) => ({
                 "@type": "Offer",
                 name: p.name,
                 price: p.price,
@@ -73,12 +103,53 @@ export function softwareApplicationNode({ description, id = "https://totalgains.
                 description: p.description,
             })),
         },
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: String(TRUSTPILOT.score),
-            bestRating: "5",
-            worstRating: "1",
-            reviewCount: String(TRUSTPILOT.reviews),
+        aggregateRating: aggregateRatingNode(),
+    };
+}
+
+/** AggregateRating derivado de TRUSTPILOT. Nunca escribir el número a mano:
+ *  el rating marcado debe coincidir con el visible o se pierde el rich result. */
+export function aggregateRatingNode() {
+    return {
+        "@type": "AggregateRating",
+        ratingValue: String(TRUSTPILOT.score),
+        bestRating: "5",
+        worstRating: "1",
+        reviewCount: String(TRUSTPILOT.reviews),
+    };
+}
+
+/**
+ * Nodo Organization de la marca. Fuente única del `sameAs` para que la entidad
+ * se declare igual en la home, el blog, "sobre nosotros" y el footer.
+ * @param {{id?: string}} opts
+ */
+export function organizationNode({ id = "https://totalgains.es/#organization" } = {}) {
+    return {
+        "@type": "Organization",
+        "@id": id,
+        name: "TotalGains",
+        url: "https://totalgains.es",
+        logo: {
+            "@type": "ImageObject",
+            url: "https://totalgains.es/logo-optimized.webp",
+            width: 140,
+            height: 140,
+        },
+        address: {
+            "@type": "PostalAddress",
+            streetAddress: "C/Sur Nº9 1ª",
+            postalCode: "18140",
+            addressLocality: "La Zubia",
+            addressRegion: "Granada",
+            addressCountry: "ES",
+        },
+        sameAs: SAME_AS,
+        contactPoint: {
+            "@type": "ContactPoint",
+            email: "soporte@totalgains.es",
+            contactType: "customer service",
+            availableLanguage: "Spanish",
         },
     };
 }
