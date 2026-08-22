@@ -97,7 +97,10 @@ const Contact = () => {
                     <div className="contact-info">
                         <div className="section-header text-left">
                             <h2 className="gradient-text">Contacta con TotalGains</h2>
-                            <p>¿Tienes alguna duda sobre nuestro software de gestión deportiva? Estamos aquí para ayudarte.</p>
+                            {/* Compromiso concreto, no "estamos aquí para ayudarte": la misma
+                                promesa de <24h que ya publicamos en /demo/*, /para-gimnasios/,
+                                la FAQ y sobre-nosotros. Era el único formulario sin ella. */}
+                            <p>¿Tienes alguna duda sobre nuestro software de gestión deportiva? Te responde una persona real, en español, en menos de 24 horas.</p>
                         </div>
 
                         <div className="info-cards">
@@ -220,7 +223,7 @@ const Contact = () => {
 
                             {status === 'success' && (
                                 <div className="form-message success animate-fadeIn">
-                                    <CheckCircle size={18} className="inline mr-2 text-green-500" /> Tu mensaje ha sido enviado correctamente. Te responderemos pronto a {sentEmail}.
+                                    <CheckCircle size={18} className="inline mr-2 text-green-500" /> Tu mensaje ha sido enviado correctamente. Te responderemos en menos de 24 horas a {sentEmail}.
                                 </div>
                             )}
 
