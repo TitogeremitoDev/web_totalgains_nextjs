@@ -21,6 +21,7 @@
    ────────────────────────────────────────────── */
 
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -357,6 +358,7 @@ function DemoForm({ data, srcRef, onSent }) {
     const [form, setForm] = useState({ nombre: "", email: "", telefono: "", negocio: "", volumen: "", mensaje: "" });
     const [consent, setConsent] = useState(false);
     const [status, setStatus] = useState("idle");
+    const router = useRouter();
 
     const volumenLabel = {
         nutricionista: "¿Cuántos pacientes llevas ahora?",
@@ -407,24 +409,16 @@ function DemoForm({ data, srcRef, onSent }) {
                 process.env.NEXT_PUBLIC_EMAILJS_USER_ID
             )
             .then(() => {
-                setStatus("ok");
                 onSent?.();
-                setForm({ nombre: "", email: "", telefono: "", negocio: "", volumen: "", mensaje: "" });
-                setConsent(false);
+                // La confirmación vive en /gracias/ — URL propia medible como
+                // objetivo de destino. El perfil viaja en ?de= para el desglose.
+                // gtag envía por sendBeacon, así que el evento sobrevive al push.
+                router.push(`/gracias/?de=demo-${data.perfil}`);
             })
             .catch(() => setStatus("error"));
     };
 
     const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
-
-    if (status === "ok") {
-        return (
-            <div className="fnl-form-msg ok" role="status">
-                <strong>Recibido.</strong> Te escribo yo mismo en menos de 24 h (normalmente, mucho antes).
-                Si tienes prisa: <a href={`mailto:${CONTACT_EMAIL}`} style={{ color: "inherit" }}>{CONTACT_EMAIL}</a>.
-            </div>
-        );
-    }
 
     return (
         <form className="fnl-form" onSubmit={submit} noValidate>

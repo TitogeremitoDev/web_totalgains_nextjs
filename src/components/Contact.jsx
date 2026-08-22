@@ -2,9 +2,10 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
-import { Mail, Phone, CheckCircle, XCircle } from 'lucide-react';
+import { Mail, Phone, XCircle } from 'lucide-react';
 import { trackEvent } from '@/components/Analytics';
 import './Contact.css';
 
@@ -16,13 +17,11 @@ const Contact = () => {
         message: ''
     });
 
-    // Status: 'idle', 'sending', 'success', 'error'
+    // Status: 'idle', 'sending', 'error' — no hay estado 'success': al enviar
+    // con éxito se navega a /gracias/, que es donde se mide la conversión.
     const [status, setStatus] = useState('idle');
     const [privacyAccepted, setPrivacyAccepted] = useState(false);
-    // El email se guarda aparte porque el .then() limpia formData en el mismo
-    // batch de React que pinta el mensaje de éxito: sin esto, el acuse decía
-    // "Te responderemos a ." con el hueco vacío.
-    const [sentEmail, setSentEmail] = useState('');
+    const router = useRouter();
 
     const handleChange = (e) => {
         setFormData({
@@ -72,17 +71,15 @@ const Contact = () => {
             USER_ID
         )
             .then(() => {
-                // Única conversión medible de la home. Si el usuario rechazó las
-                // cookies, window.gtag no existe y trackEvent es un no-op silencioso
-                // (a propósito: el consentimiento manda sobre la analítica).
+                // Si el usuario rechazó las cookies, trackEvent es no-op silencioso
+                // (el consentimiento manda). La conversión de verdad la mide
+                // /gracias/: page_view con URL propia + lead_confirmed con origen.
                 trackEvent('lead_submit', {
                     form_name: 'contacto_home',
                     form_subject: formData.subject,
                 });
-                setSentEmail(formData.email);
-                setStatus('success');
-                setFormData({ name: '', email: '', subject: '', message: '' });
-                setPrivacyAccepted(false);
+                // gtag envía por sendBeacon: el evento sobrevive a la navegación.
+                router.push('/gracias/?de=contacto');
             })
             .catch((err) => {
                 trackEvent('lead_submit_error', { form_name: 'contacto_home' });
@@ -214,18 +211,10 @@ const Contact = () => {
                             <button
                                 type="submit"
                                 className={`btn btn-primary btn-block ${status === 'sending' ? 'loading' : ''}`}
-                                disabled={status === 'sending' || status === 'success'}
+                                disabled={status === 'sending'}
                             >
-                                {status === 'sending' ? 'Enviando...' :
-                                    status === 'success' ? '¡Mensaje Enviado!' :
-                                        'Enviar Mensaje'}
+                                {status === 'sending' ? 'Enviando...' : 'Enviar Mensaje'}
                             </button>
-
-                            {status === 'success' && (
-                                <div className="form-message success animate-fadeIn">
-                                    <CheckCircle size={18} className="inline mr-2 text-green-500" /> Tu mensaje ha sido enviado correctamente. Te responderemos en menos de 24 horas a {sentEmail}.
-                                </div>
-                            )}
 
                             {status === 'error' && (
                                 <div className="form-message error animate-fadeIn">
