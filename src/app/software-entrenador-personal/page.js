@@ -6,7 +6,7 @@ import { Users, LayoutDashboard, Bell, CreditCard, Palette, BarChart3, Check, X,
 export const metadata = {
   title: "Software Entrenadores Personales · 29,90 €/mes",
   description:
-    "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en todos los planes. Plan Gratuito de por vida para 5 atletas, sin tarjeta. De pago desde 29,90 €/mes con IVA.",
+    "Rutinas con IA en menos de 2 min, +240.000 alimentos y app marca blanca en todos los planes. Gratis hasta 5 atletas; de pago desde 29,90 €/mes con IVA.",
   alternates: { canonical: "https://totalgains.es/software-entrenador-personal/" },
   openGraph: {
     title: "Software Entrenadores Personales · Desde 29,90 €/mes | TotalGains",

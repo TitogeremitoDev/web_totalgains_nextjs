@@ -8,7 +8,7 @@ export const metadata = {
   // Title más corto y enfocado — usa el template "%s | TotalGains" de layout.js
   title: "TotalGains — Software para Entrenadores Personales con IA",
   description:
-    "Gestiona atletas, rutinas con IA, dietas y seguimiento desde una sola plataforma. Software fitness en español para entrenadores. Plan Gratuito de por vida para 5 atletas, sin tarjeta.",
+    "Software fitness en español: atletas, rutinas con IA, dietas y seguimiento en una sola plataforma. Plan Gratuito de por vida hasta 5 atletas, sin tarjeta.",
   alternates: {
     canonical: "https://totalgains.es/",
   },

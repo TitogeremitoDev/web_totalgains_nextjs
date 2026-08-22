@@ -5,7 +5,7 @@ import { softwareApplicationNode , organizationNode } from "@/data/productSchema
 export const metadata = {
   title: "Alternativa a PTminder para Entrenadores",
   description:
-    "¿PTminder se queda corto? TotalGains es la alternativa con app nativa iOS y Android, +240.000 alimentos y soporte en español. Plan Gratuito 5 atletas o prueba 14 días.",
+    "¿PTminder se queda corto? TotalGains: app nativa iOS y Android, +240.000 alimentos y soporte en español. Plan Gratuito 5 atletas, sin tarjeta.",
   alternates: {
     canonical: "https://totalgains.es/alternativas/ptminder/",
   },

@@ -14,7 +14,15 @@ export const metadata = {
     description:
       "Caso real de una nutricionista online que pasó de múltiples Excel a gestionar todo desde una sola plataforma.",
     url: "https://totalgains.es/casos-de-exito/lorena-eses/",
-    images: [{ url: "/testimonials/lorena.webp", width: 400, height: 400, alt: "Lorena Eses" }],
+    /* Tarjeta 1200x630 generada para compartir; el avatar real mide 120x120 y
+       queda por debajo del mínimo de 200x200 de Facebook: la preview salía
+       rota o vacía. El twitter block va explícito porque si no, hereda la
+       og-image genérica del layout raíz y no esta. */
+    images: [{ url: "https://totalgains.es/testimonials/og-caso-lorena-eses.jpg", width: 1200, height: 630, alt: "Caso de éxito: Lorena Eses, nutricionista, ahorra más de 10 horas semanales con TotalGains" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://totalgains.es/testimonials/og-caso-lorena-eses.jpg"],
   },
 };
 

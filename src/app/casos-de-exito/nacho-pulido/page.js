@@ -14,7 +14,15 @@ export const metadata = {
     description:
       "Caso de éxito real de un entrenador personal que dejó Excel y WhatsApp para centralizar todo en TotalGains.",
     url: "https://totalgains.es/casos-de-exito/nacho-pulido/",
-    images: [{ url: "/testimonials/nacho.webp", width: 400, height: 400, alt: "Nacho Pulido" }],
+    /* Tarjeta 1200x630 generada para compartir; el avatar real mide 120x120 y
+       queda por debajo del mínimo de 200x200 de Facebook: la preview salía
+       rota o vacía. El twitter block va explícito porque si no, hereda la
+       og-image genérica del layout raíz y no esta. */
+    images: [{ url: "https://totalgains.es/testimonials/og-caso-nacho-pulido.jpg", width: 1200, height: 630, alt: "Caso de éxito: Nacho Pulido, de 15 a 40 clientes activos con TotalGains" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://totalgains.es/testimonials/og-caso-nacho-pulido.jpg"],
   },
 };
 

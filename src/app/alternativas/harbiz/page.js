@@ -4,7 +4,7 @@ import { softwareApplicationNode , organizationNode } from "@/data/productSchema
 export const metadata = {
   title: { absolute: "Alternativa a Harbiz 2026: TotalGains 89,90 € vs 313 €" },
   description:
-    "Harbiz sube a 313 €/mes con marca blanca, IA y vídeos al escalar. En TotalGains, el plan Pro incluye todo por 89,90 €/mes con IVA. Migración asistida gratis en español.",
+    "Harbiz sube a 313 €/mes al escalar (marca blanca, IA y vídeos). TotalGains Pro lo incluye todo por 89,90 €/mes con IVA. Migración asistida gratis en español.",
   keywords: [
     "alternativa a Harbiz",
     "Harbiz alternativa",

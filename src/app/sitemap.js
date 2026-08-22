@@ -8,6 +8,7 @@ export default function sitemap() {
 
     return [
         { url: `${baseUrl}/`, lastModified: '2026-08-15' },
+        { url: `${baseUrl}/precios/`, lastModified: '2026-08-22' },
         { url: `${baseUrl}/alternativas/`, lastModified: '2026-08-15' },
         { url: `${baseUrl}/alternativas/trainerize/`, lastModified: '2026-08-15' },
         { url: `${baseUrl}/alternativas/harbiz/`, lastModified: '2026-08-15' },
@@ -32,8 +33,9 @@ export default function sitemap() {
         { url: `${baseUrl}/casos-de-exito/lorena-eses/`, lastModified: '2026-08-15' },
         { url: `${baseUrl}/sobre-nosotros/`, lastModified: '2026-08-15' },
         { url: `${baseUrl}/opiniones-clientes/`, lastModified: '2026-08-15' },
-        { url: `${baseUrl}/onboarding/`, lastModified: '2026-07-11' },
-        { url: `${baseUrl}/aviso-legal/`, lastModified: '2026-01-01' },
+        // /onboarding/ y /aviso-legal/ NO van aquí: ambas emiten `noindex`, y
+        // listarlas hacía que Search Console las marcara como "Enviada: la URL
+        // contiene una etiqueta noindex".
         { url: `${baseUrl}/blog/`, lastModified: '2026-08-10' },
         { url: `${baseUrl}/privacy/`, lastModified: '2026-08-10' },
         { url: `${baseUrl}/terms/`, lastModified: '2026-08-10' },
