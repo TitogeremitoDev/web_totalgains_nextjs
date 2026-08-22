@@ -1,0 +1,62 @@
+/* ── /precios/ ──
+   El navbar es `position: fixed` y NO reserva espacio. Medido: 122px de alto en
+   escritorio (24px de padding arriba y abajo + logo) y ~73px en móvil. Con menos
+   colchón que eso, el breadcrumb aparece por DEBAJO del navbar y no se lee. */
+.precios-top {
+    padding-top: 150px;
+}
+
+@media (max-width: 768px) {
+    .precios-top {
+        padding-top: 96px;
+    }
+}
+
+/* El breadcrumb ya aporta el aire de la parte superior. Sin esto se le sumaban
+   los 6rem que globals.css da a TODO <section>, y el h1 caía a ~200px del
+   navbar. Ver el mismo problema documentado en /sobre-nosotros/. */
+.precios-page .pricing {
+    padding-top: 16px;
+}
+
+.precios-related {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md) var(--spacing-3xl);
+}
+
+.precios-related h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.precios-related p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.precios-related-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.precios-related-links a {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    transition: var(--transition-fast);
+}
+
+.precios-related-links a:hover {
+    border-color: rgba(102, 126, 234, 0.5);
+    color: #fff;
+}

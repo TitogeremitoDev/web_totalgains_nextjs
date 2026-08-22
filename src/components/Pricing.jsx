@@ -297,7 +297,12 @@ function PricingCard({ plan, isAnnual, delay = 0 }) {
     );
 }
 
-const Pricing = () => {
+/**
+ * `headingAs`: en la home esto es una sección más y su titular debe ser un h2,
+ * pero en /precios/ es el titular de la página y tiene que ser el h1. Se pasa
+ * el tag en vez de duplicar un h1 aparte, que competiría con este mismo texto.
+ */
+const Pricing = ({ headingAs: Heading = 'h2' }) => {
     const [isAnnual, setIsAnnual] = useState(true);
     const [isMobile, setIsMobile] = useState(false);
     const [clientCount, setClientCount] = useState(15);
@@ -354,9 +359,9 @@ const Pricing = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.9 }}
                 >
-                    <h2 className="gradient-text">
+                    <Heading className="gradient-text">
                         {isGym ? 'Precios del software para gimnasios' : 'Precios del software para entrenadores'}
-                    </h2>
+                    </Heading>
                     <p>
                         {isGym
                             ? <>Coaches ilimitados en todos los planes. La tarifa solo sube por socios activos. Sin permanencia: <span className="iva-highlight">IVA ya incluido en el precio.</span></>

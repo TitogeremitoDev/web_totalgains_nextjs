@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Check, Rocket, Star } from "lucide-react";
 import { trackEvent } from "@/components/Analytics";
+import StickyCTA from "@/components/StickyCTA";
 import "./LandingPageTemplate.css";
 
 /**
@@ -38,7 +39,8 @@ const LandingPageTemplate = ({
 }) => (
     <main className="lp-page">
         {/* ── Hero ── */}
-        <section className="lp-hero">
+        {/* El id lo necesita StickyCTA para saber cuándo el hero sale de pantalla. */}
+        <section className="lp-hero" id="lp-hero">
             <div className="lp-hero-bg" />
             <div className="container lp-hero-inner">
                 <motion.div
@@ -172,6 +174,11 @@ const LandingPageTemplate = ({
                 </Link>
             </div>
         </section>
+
+        {/* Estas páginas miden entre 8.000 y 16.000 px y en móvil la navbar
+            esconde su CTA por debajo de 992px: sin esto, quien baja del hero
+            se queda sin ningún botón a mano durante todo el scroll. */}
+        <StickyCTA anchorId="lp-hero" href={ctaHref} ctaLocation={`${ctaLocation}_sticky`} />
     </main>
 );
 

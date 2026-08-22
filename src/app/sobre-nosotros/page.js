@@ -84,8 +84,10 @@ export default function SobreNosotros() {
           (6rem) a TODO <section>. Antes eso se sumaba al marginBottom inline y
           abría socavones de ~200px entre bloques. Las secciones de esta página
           anulan ese padding a mano; si añades una nueva, hazlo también.
-          El padding-top del <main> libra el navbar, que es fixed. */}
-      <main style={{ padding: "128px 0 96px" }}>
+          El padding-top del <main> libra el navbar, que es fixed y NO reserva
+          espacio: mide 122px en escritorio y ~73px en móvil, así que el clamp
+          da 150px arriba y 96px abajo. Con 128px fijos quedaban 6px de aire. */}
+      <main style={{ padding: "clamp(96px, 12vw, 150px) 0 96px" }}>
         <div className="container" style={{ maxWidth: 880 }}>
 
           {/* El BreadcrumbList del schema ya declaraba esta jerarquía; hasta ahora
@@ -148,7 +150,10 @@ export default function SobreNosotros() {
               1 en móvil sin CSS extra. Antes eran 4 tarjetas apiladas a lo largo. */}
           <section style={{ padding: 0, marginBottom: 64 }}>
             <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: 24 }}>Lo que nos diferencia</h2>
-            <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))" }}>
+            {/* minmax de 320px, no 260: con 260 caben 3 columnas en los 880px del
+                contenedor y las 4 tarjetas quedaban 3+1. Con 320 son 2x2 en
+                escritorio y 1 columna en móvil, sin media queries. */}
+            <div style={{ display: "grid", gap: 16, gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))" }}>
               {[
               { title: "Construido desde dentro del sector", desc: "No somos una empresa de software genérico que se metió en fitness. Entendemos la diferencia entre adherencia y retención, entre un mesociclo y una periodización, entre un macro y un micronutriente." },
               { title: "IA que no alucina", desc: "Nuestra IA genera rutinas y dietas usando exclusivamente tu base de datos. Sin inventar ejercicios. Sin sustituir alimentos por otros que no usas. Tu metodología, automatizada." },

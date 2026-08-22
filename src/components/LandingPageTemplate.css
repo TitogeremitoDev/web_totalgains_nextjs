@@ -223,6 +223,30 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
+    /* El CTA, la nota ("Sin tarjeta") y las estrellas caían bajo el pliegue en
+       móviles de 640px: el botón empezaba en 599px. El padding de 140px era solo
+       parte del problema — el subtítulo a 1.1rem ocupaba 203px él solo (7 líneas).
+       Medido en 360x640: botón 599→522, y la nota entra con él.
+       Si tocas estos valores, vuelve a medir; el margen que queda es de ~20px. */
+    .lp-hero {
+        padding: 96px 0 56px;
+        min-height: auto;
+    }
+
+    .lp-badge {
+        margin-bottom: 14px;
+    }
+
+    .lp-h1 {
+        margin-bottom: 14px;
+    }
+
+    .lp-subtitle {
+        font-size: 1rem;
+        line-height: 1.55;
+        margin-bottom: 24px;
+    }
+
     .lp-features-grid {
         grid-template-columns: 1fr;
     }

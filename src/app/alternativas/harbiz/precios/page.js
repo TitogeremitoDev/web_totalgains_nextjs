@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StickyCTA from "@/components/StickyCTA";
 import "@/app/alternativas/trainerize/Alternativas.css";
 import { softwareApplicationNode , organizationNode } from "@/data/productSchema";
 
@@ -308,7 +309,7 @@ export default function HarbizPreciosPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <main className="alternativas-page">
         <div className="container alternativas-container">
-          <div className="alternativas-header">
+          <div className="alternativas-header" id="alt-hero">
             <span style={{ fontSize: "0.78rem", color: "var(--text-secondary,#aaa)", display: "block", marginBottom: 4 }}>
               Actualizado: 13 de mayo de 2026 · Verificado manualmente en harbiz.io
             </span>
@@ -478,7 +479,7 @@ export default function HarbizPreciosPage() {
           <section className="alternativas-section glass" style={{ padding: 28, borderRadius: 16, margin: "48px 0", borderColor: "rgba(34,197,94,0.4)" }}>
             <h2>¿Cuánto cuesta una alternativa a Harbiz?</h2>
             <p><strong>TotalGains ofrece un plan gratuito de por vida para 5 atletas, sin tarjeta de crédito y sin caducidad.</strong> Es el plan gratuito más generoso del mercado hispano: Trainerize Basic ofrece 1 cliente, TrainerStudio Free ofrece 3, y Harbiz no tiene plan gratuito permanente (arranca a 22,99 €/mes con IVA para el mismo tramo de 5 clientes). Si estás validando el modelo con tus primeros clientes, puedes empezar sin invertir nada.</p>
-            <p>Para entrenadores que quieran funcionalidad completa sin gestionar add-ons acumulables, <strong>TotalGains Pro</strong> incluye toda la funcionalidad equivalente (marca blanca, IA dietas, IA rutinas, biblioteca de vídeos, base de +240.000 alimentos personalizable) por <strong>89,90 €/mes</strong> con hasta 100 clientes y migración asistida en español incluida. Diferencia frente a Harbiz Pro 100 con add-ons completos en mensual: <strong>-223 €/mes</strong>. Frente a Harbiz My APP anual: <strong>-145 €/mes</strong> (~1.730 € al año).</p>
+            <p>Para entrenadores que quieran funcionalidad completa sin gestionar add-ons acumulables, <Link href="/precios/"><strong>TotalGains Pro</strong></Link> incluye toda la funcionalidad equivalente (marca blanca, IA dietas, IA rutinas, biblioteca de vídeos, base de +240.000 alimentos personalizable) por <strong>89,90 €/mes</strong> con hasta 100 clientes y migración asistida en español incluida. Diferencia frente a Harbiz Pro 100 con add-ons completos en mensual: <strong>-223 €/mes</strong>. Frente a Harbiz My APP anual: <strong>-145 €/mes</strong> (~1.730 € al año).</p>
             <p style={{ marginTop: 16 }}>
               <Link href="/alternativas/harbiz/" className="btn btn-secondary" prefetch={false}>
                 Ver comparativa completa TotalGains vs Harbiz →
@@ -515,6 +516,10 @@ export default function HarbizPreciosPage() {
             <strong>Fuente y disclaimer.</strong> Precios verificados manualmente en <a href="https://www.harbiz.io/" rel="nofollow" target="_blank">harbiz.io</a> el 13 de mayo de 2026. La web oficial de Harbiz muestra precios sin IVA. Aquí se aplica el IVA 21 % estándar de España; para México (16 %), Colombia (19 %) o Argentina (21 %) el cálculo varía. Recomendamos confirmar el precio final con Harbiz antes de tomar decisiones. Esta página es informativa y no está afiliada a Harbiz.
           </p>
         </div>
+
+        {/* Página larga de intención de precio: quien llega aquí está comparando
+            tarifas, y hasta ahora no tenía ningún botón a mano en móvil. */}
+        <StickyCTA anchorId="alt-hero" ctaLocation="harbiz_precios_sticky" />
       </main>
     </>
   );

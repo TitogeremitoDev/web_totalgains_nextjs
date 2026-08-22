@@ -13,8 +13,12 @@ const navLinks = [
     // Única puerta de entrada al vertical de gimnasios desde la navegación: sin
     // ella la landing solo se alcanzaba haciendo scroll hasta el pie de la home.
     { href: '/para-gimnasios/', label: 'Gimnasios' },
-    { href: '/alternativas/trainerize', label: 'vs Trainerize' },
-    { href: '#pricing', label: 'Precios' },
+    // El hub y no una comparativa suelta: /alternativas/ enlaza a las 9 y era
+    // huérfana (0 entrantes). Trainerize sigue a un clic desde el hub y el pie.
+    { href: '/alternativas/', label: 'Comparativas' },
+    // Ruta real, no ancla: desde cualquier página que no fuese la home esto
+    // obligaba a viajar a "/" y bajar. Y un ancla no sirve de destino de anuncio.
+    { href: '/precios/', label: 'Precios' },
     { href: '/blog/', label: 'Blog' },
 ];
 

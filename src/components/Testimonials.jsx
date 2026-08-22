@@ -354,6 +354,19 @@ const Testimonials = () => {
             <Zap size={20} />
             Probar TotalGains gratis
           </a>
+          {/* Enlaces de contenido a los dos hubs de prueba social: solo existían
+              en el pie, y un enlace contextual desde la home pesa más que 61 de
+              footer. Deliberadamente discreto para no competir con el CTA. */}
+          <p style={{ marginTop: 18, marginBottom: 0, fontSize: "0.88rem", color: "var(--text-muted, #888)" }}>
+            <a href="/opiniones-clientes/" style={{ color: "var(--text-secondary, #aaa)", textDecoration: "underline" }}>
+              Lee todas las reseñas verificadas
+            </a>{" "}
+            o los{" "}
+            <a href="/casos-de-exito/" style={{ color: "var(--text-secondary, #aaa)", textDecoration: "underline" }}>
+              casos de éxito completos
+            </a>
+            .
+          </p>
         </motion.div>
       </div>
     </section>

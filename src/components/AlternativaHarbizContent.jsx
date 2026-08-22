@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import TrustpilotBadge from '@/components/TrustpilotBadge';
+import StickyCTA from '@/components/StickyCTA';
 import '@/app/alternativas/trainerize/Alternativas.css';
 
 const faqs = [
@@ -30,7 +31,7 @@ export default function AlternativaHarbizContent() {
     return (
         <main className="alternativas-page">
             <div className="container alternativas-container">
-                <div className="alternativas-header">
+                <div className="alternativas-header" id="alt-hero">
                     <span className="badge warning-badge">⚠️ Atención Entrenadores Top</span>
                     <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary,#aaa)', display: 'block', marginBottom: 4 }}>Actualizado: 13 de mayo de 2026</span>
                     <h1 className="alternativas-title gradient-text">
@@ -258,6 +259,10 @@ export default function AlternativaHarbizContent() {
                     <p className="microcopy-secure mt-2">Sin tarjeta. Sin permanencia. Migración asistida incluida si vienes de Harbiz.</p>
                 </div>
             </div>
+
+            {/* Esta página es la de mayor intención comercial del sitio y el único
+                botón de su hero apunta FUERA (a Trustpilot). */}
+            <StickyCTA anchorId="alt-hero" ctaLocation="alternativas_harbiz_sticky" />
         </main>
     );
 }

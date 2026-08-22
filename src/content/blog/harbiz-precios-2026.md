@@ -376,7 +376,7 @@ No todos los perfiles encajan con Harbiz, igual que no todos encajan con TotalGa
 
 **Tu situación**: tu modelo requiere marca blanca + IA nutricional + biblioteca de vídeos desde el día uno y no quieres gestionar add-ons separados ni preocuparte por activar/desactivar módulos cada mes.
 
-**Por qué construimos [TotalGains](/alternativas/harbiz/) para este caso**: cuando empecé a hablar con coaches autónomos en España, el patrón que más se repetía era "quiero saber cuánto pago al mes y que esté todo dentro". El plan plano (29,90 €/Starter, 89,90 €/Pro, 149,90 €/Unlimited, todo con IVA y todo incluido) está pensado para que **el coach no tenga que hacer ingeniería de coste cada vez que crece su cartera o cambia su modelo**.
+**Por qué construimos [TotalGains](/alternativas/harbiz/) para este caso**: cuando empecé a hablar con coaches autónomos en España, el patrón que más se repetía era "quiero saber cuánto pago al mes y que esté todo dentro". [El plan plano](/precios/) (29,90 €/Starter, 89,90 €/Pro, 149,90 €/Unlimited, todo con IVA y todo incluido) está pensado para que **el coach no tenga que hacer ingeniería de coste cada vez que crece su cartera o cambia su modelo**.
 
 Si encajas en este perfil, vas a notar la diferencia frente al modelo de Harbiz Basic/Pro+add-ons en dos puntos:
 1. **Una sola factura mensual** con todas las funciones disponibles, sin ticks ni configuración de módulos.

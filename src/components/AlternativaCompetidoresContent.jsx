@@ -5,6 +5,7 @@ import { useHydrated } from '@/hooks/useHydrated';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import TrustpilotBadge from '@/components/TrustpilotBadge';
+import StickyCTA from '@/components/StickyCTA';
 import { getAlternativaFaqs, FECHA_VERIFICACION } from '@/data/alternativasFaqs';
 import { getAlternativaIntro } from '@/data/alternativasIntros';
 import '@/app/alternativas/trainerize/Alternativas.css';
@@ -136,6 +137,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6 }}
                     className="alternativas-header"
+                    id="alt-hero"
                 >
                     <span className="badge warning-badge">⚠️ Atención Entrenadores Top</span>
                     <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary,#aaa)', display: 'block', marginBottom: 4 }}>Datos de competidores verificados en sus webs oficiales: {FECHA_VERIFICACION} · Página actualizada: agosto de 2026</span>
@@ -290,6 +292,11 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
                     <p className="microcopy-secure mt-2">Sin tarjeta. Sin permanencia. Migración asistida incluida si vienes de {currentData.name}.</p>
                 </motion.div>
             </div>
+
+            {/* Es tráfico de máxima intención comercial ("alternativa a X") sobre
+                páginas de ~12.000 px. Hasta ahora el primer enlace al onboarding
+                estaba a 10.000 px de scroll. */}
+            <StickyCTA anchorId="alt-hero" ctaLocation="alternativas_sticky" />
         </main>
     );
 }

@@ -59,7 +59,7 @@ const Footer = () => {
                                 <li><Link href="/" prefetch={false}>Inicio</Link></li>
                                 <li><Link href="/#features" prefetch={false}>Funciones</Link></li>
                                 <li><Link href="/#app-showcase" prefetch={false}>Ver App</Link></li>
-                                <li><Link href="/#pricing" prefetch={false}>Precios</Link></li>
+                                <li><Link href="/precios/" prefetch={false}>Precios</Link></li>
                                 <li><Link href="/para-gimnasios/" prefetch={false}>Para gimnasios</Link></li>
                             </ul>
                         </div>
@@ -78,8 +78,13 @@ const Footer = () => {
                             <h4>Recursos</h4>
                             <ul>
                                 <li><Link href="/blog/" prefetch={false}>Blog</Link></li>
+                                {/* Los hubs van ADEMÁS de las fichas: /casos-de-exito/ y
+                                    /opiniones-clientes/ estaban en el sitemap con CERO
+                                    enlaces entrantes en todo el sitio (huérfanas). */}
+                                <li><Link href="/casos-de-exito/" prefetch={false}>Casos de éxito</Link></li>
                                 <li><Link href="/casos-de-exito/nacho-pulido/" prefetch={false}>Caso: Nacho Pulido</Link></li>
                                 <li><Link href="/casos-de-exito/lorena-eses/" prefetch={false}>Caso: Lorena Eses</Link></li>
+                                <li><Link href="/opiniones-clientes/" prefetch={false}>Opiniones de clientes</Link></li>
                                 <li><Link href="/software-entrenador-personal/" prefetch={false}>Software para EP</Link></li>
                                 <li><Link href="/ia-entrenador-personal/" prefetch={false}>IA para entrenadores</Link></li>
                                 <li><Link href="/app-marca-blanca-entrenador-personal/" prefetch={false}>App marca blanca</Link></li>
@@ -98,12 +103,14 @@ const Footer = () => {
                             <ul>
                                 <li><Link href="/alternativas/trainerize/" prefetch={false}>vs Trainerize</Link></li>
                                 <li><Link href="/alternativas/harbiz/" prefetch={false}>vs Harbiz</Link></li>
+                                <li><Link href="/alternativas/harbiz/precios/" prefetch={false}>Precios de Harbiz</Link></li>
                                 <li><Link href="/alternativas/truecoach/" prefetch={false}>vs TrueCoach</Link></li>
                                 <li><Link href="/alternativas/mypthub/" prefetch={false}>vs MyPT Hub</Link></li>
                                 <li><Link href="/alternativas/ptminder/" prefetch={false}>vs PTminder</Link></li>
                                 <li><Link href="/alternativas/dudapp/" prefetch={false}>vs Dudapp</Link></li>
                                 <li><Link href="/alternativas/virtuagym/" prefetch={false}>vs Virtuagym</Link></li>
                                 <li><Link href="/alternativas/dudyfit/" prefetch={false}>vs Dudyfit</Link></li>
+                                <li><Link href="/alternativas/" prefetch={false}>Todas las comparativas</Link></li>
                             </ul>
                         </div>
 
