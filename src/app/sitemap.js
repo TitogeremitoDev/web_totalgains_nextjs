@@ -37,8 +37,8 @@ export default function sitemap() {
         // listarlas hacía que Search Console las marcara como "Enviada: la URL
         // contiene una etiqueta noindex".
         { url: `${baseUrl}/blog/`, lastModified: '2026-08-22' },
-        { url: `${baseUrl}/privacy/`, lastModified: '2026-08-22' },
-        { url: `${baseUrl}/terms/`, lastModified: '2026-08-22' },
+        { url: `${baseUrl}/privacy/`, lastModified: '2026-08-23' },
+        { url: `${baseUrl}/terms/`, lastModified: '2026-08-23' },
         // Los posts con `canonical` propio apuntan a otra URL: no se listan
         // aquí, o el sitemap contradiría a su propio canonical.
         ...posts.filter(post => !post.canonical).map(post => ({

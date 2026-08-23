@@ -202,8 +202,9 @@ const Contact = () => {
                                         Política de Privacidad
                                     </Link>
                                     . Responsable: Germán Martínez Calvente (NIF 77137460Z). Finalidad:
-                                    responder a tu consulta. Legitimación: tu consentimiento. No se
-                                    ceden datos a terceros salvo obligación legal. Puedes ejercer tus
+                                    responder a tu consulta. Legitimación: tu consentimiento. El envío
+                                    se procesa a través de EmailJS como encargado de tratamiento; no se
+                                    ceden datos a terceros para sus propios fines. Puedes ejercer tus
                                     derechos de acceso, rectificación y supresión en soporte@totalgains.es.
                                 </label>
                             </div>
