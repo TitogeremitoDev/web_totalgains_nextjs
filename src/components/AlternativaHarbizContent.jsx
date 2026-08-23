@@ -227,7 +227,7 @@ export default function AlternativaHarbizContent() {
                     </div>
                     <div style={{ flex: '1 1 280px' }}>
                         <h3>Nacho Pulido · Entrenador personal</h3>
-                        <p><em>&quot;Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.&quot;</em></p>
+                        <p><em>&quot;Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.&quot;</em></p>
                         <p style={{ fontSize: '0.9rem', color: 'var(--text-secondary,#aaa)' }}>Pasó de 15 a 40 clientes activos. Migración completada en 1 día. <Link href="/casos-de-exito/nacho-pulido/" prefetch={false}>Ver caso completo →</Link></p>
                     </div>
                 </section>

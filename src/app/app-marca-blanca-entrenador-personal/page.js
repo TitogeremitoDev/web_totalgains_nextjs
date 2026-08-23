@@ -96,8 +96,8 @@ const pricingPlans = [
 ];
 
 const testimonials = [
-  { name: "Nacho Pulido", handle: "@puli.trainer", role: "Entrenador de Fuerza & Resistencia", quote: "Que mis clientes tengan la app con mi marca me ha cambiado la percepción de servicio. Los referidos ahora dicen 'yo uso la app de Nacho', no 'yo uso una app de fitness'.", result: "15 → 40+ clientes, 8-10h/sem ahorradas", href: "/casos-de-exito/nacho-pulido/" },
-  { name: "Lorena Eses", handle: "@lorena.eses", role: "Nutricionista Online", quote: "Mis pacientes descargan una app con mi nombre y mis colores desde el App Store. La percepción de profesionalidad ha subido notablemente y justifica tarifas más altas.", result: "10+ h/sem ahorradas, 28K seguidores", href: "/casos-de-exito/lorena-eses/" },
+  { name: "Nacho Pulido", handle: "@puli.trainer", role: "Entrenador de Fuerza & Resistencia", quote: "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.", result: "15 → 40+ clientes, 8-10h/sem ahorradas", href: "/casos-de-exito/nacho-pulido/" },
+  { name: "Lorena Eses", handle: "@lorenaeses", role: "Nutricionista Online", quote: "La tranquilidad de saber que está todo automatizado y la ganancia de tiempo al poder delegar en la app la agenda, las citas y las revisiones quincenales. Más de 10 horas semanales ahorradas.", result: "10+ h/sem ahorradas, 28K seguidores", href: "/casos-de-exito/lorena-eses/" },
 ];
 
 const competencia = [

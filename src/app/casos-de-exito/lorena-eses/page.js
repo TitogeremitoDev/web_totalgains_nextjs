@@ -135,7 +135,7 @@ export default function CasoLorenaEses() {
 
         {/* Quote */}
         <blockquote style={{ borderLeft: "3px solid #fa709a", paddingLeft: 20, margin: "0 0 48px", fontSize: "1.15rem", lineHeight: 1.7, color: "var(--text-secondary)", fontStyle: "italic" }}>
-          &quot;La tranquilidad de saber que está todo automatizado, y la ganancia de tiempo al poder delegar en la app cosas como la agenda, la programación de citas y las revisiones quincenales.&quot;
+          &quot;La tranquilidad de saber que está todo automatizado y la ganancia de tiempo al poder delegar en la app la agenda, las citas y las revisiones quincenales. Más de 10 horas semanales ahorradas.&quot;
         </blockquote>
 
         {/* Q&A */}

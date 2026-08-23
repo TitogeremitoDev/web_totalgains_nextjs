@@ -69,7 +69,7 @@ const casosExito = [
     role: "Entrenador personal online",
     photo: "/testimonials/nacho.webp",
     quote:
-      "Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.",
+      "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.",
     metric: "+25 clientes activos · -10 h/sem en gestión",
     link: "/casos-de-exito/nacho-pulido/",
     date: "2025-03-01",

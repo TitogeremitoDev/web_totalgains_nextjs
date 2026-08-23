@@ -25,7 +25,7 @@ const cases = [
     role: "Entrenador de Fuerza & Resistencia",
     avatar: "/testimonials/nacho.webp",
     quote:
-      "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana.",
+      "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.",
     keyResult: "15 → 40+ clientes",
     keySub: "8-10 h/sem ahorradas",
     accent: "#3b82f6",
@@ -33,11 +33,11 @@ const cases = [
   {
     slug: "lorena-eses",
     name: "Lorena Eses",
-    handle: "@lorena.eses",
+    handle: "@lorenaeses",
     role: "Nutricionista Online · 28K seguidores",
     avatar: "/testimonials/lorena.webp",
     quote:
-      "He automatizado revisiones, citas y seguimiento. Ahora ofrezco un servicio más profesional a mis pacientes y ahorro más de 10 horas semanales de gestión.",
+      "La tranquilidad de saber que está todo automatizado y la ganancia de tiempo al poder delegar en la app la agenda, las citas y las revisiones quincenales. Más de 10 horas semanales ahorradas.",
     keyResult: "+10 h/sem ahorradas",
     keySub: "revisiones y citas 100 % automatizadas",
     accent: "#22c55e",

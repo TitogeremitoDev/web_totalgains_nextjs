@@ -172,7 +172,7 @@ const entrenadores = {
         instagram: 'https://www.instagram.com/puli.trainer/',
         result: '8-10 h',
         resultLabel: 'a la semana',
-        quote: 'Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahora todo fluye muchísimo mejor y me siento más profesional.',
+        quote: 'Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.',
         before: 'Antes usaba Excel, WhatsApp y mails por todos lados. Lo más pesado era perseguir pagos, recordar seguimientos y tener toda la info desordenada.',
         caseHref: '/casos-de-exito/nacho-pulido/',
     },

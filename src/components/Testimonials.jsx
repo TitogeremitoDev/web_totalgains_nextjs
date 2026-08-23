@@ -36,7 +36,7 @@ const testimonials = [
     keyResult: "8-10h",
     keyResultLabel: "Ahorro semanal",
     quote:
-      "Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahora todo fluye muchísimo mejor y me siento más profesional.",
+      "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.",
     highlightPhrase: "todo centralizado",
     qa: [
       {
@@ -66,7 +66,7 @@ const testimonials = [
     keyResult: "+10h",
     keyResultLabel: "Ahorro semanal",
     quote:
-      "La tranquilidad de saber que está todo automatizado, y la ganancia de tiempo al poder delegar en la app cosas como la agenda, la programación de citas y las revisiones quincenales.",
+      "La tranquilidad de saber que está todo automatizado y la ganancia de tiempo al poder delegar en la app la agenda, las citas y las revisiones quincenales. Más de 10 horas semanales ahorradas.",
     highlightPhrase: "todo automatizado",
     qa: [
       {

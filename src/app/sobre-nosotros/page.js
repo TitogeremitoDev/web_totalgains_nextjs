@@ -173,7 +173,7 @@ export default function SobreNosotros() {
             <h2 style={{ fontSize: "1.5rem", fontWeight: 700, marginBottom: 20 }}>Lo que dicen nuestros entrenadores</h2>
             <blockquote style={{ borderLeft: "3px solid var(--primary)", paddingLeft: 24, margin: 0 }}>
               <p style={{ fontSize: "1.08rem", lineHeight: 1.7, fontStyle: "italic", color: "var(--text-secondary)", marginBottom: 12 }}>
-                &quot;Tener todo centralizado — clientes, entrenamientos, pagos y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.&quot;
+                &quot;Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.&quot;
               </p>
               <footer style={{ fontSize: "0.9rem", color: "var(--text-muted)" }}>
                 — <strong>Nacho Pulido</strong>, entrenador de fuerza y resistencia · <a href="https://www.instagram.com/puli.trainer/" target="_blank" rel="noopener noreferrer">@puli.trainer</a>
