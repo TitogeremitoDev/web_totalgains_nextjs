@@ -2,8 +2,8 @@
 title: "Septiembre es tu Enero: cómo llenar la agenda en la mejor ventana del año"
 seoTitle: "Captar clientes en septiembre: el plan de 3 semanas (2026)"
 description: "La ventana de septiembre se abre en agosto y se cierra el día 20. Plan semana a semana para captar el máximo de clientes sin bajar tu precio."
-date: "2026-08-22"
-lastModified: "2026-08-22"
+date: "2026-08-28"
+lastModified: "2026-08-28"
 category: "negocio"
 author: "Germán Martínez Calvente"
 readTime: 9
