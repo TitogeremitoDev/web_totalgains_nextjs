@@ -30,6 +30,13 @@
     Options -Indexes
 </IfModule>
 
+# ── Página de error propia ───────────────────────────────────────────────────
+# Sin esto, una URL rota devuelve el 404 genérico de Hostinger, en ingles y sin
+# salidas. El 404.html que exporta Next SI existe en el servidor y se sirve bien
+# si lo pides directo, pero Apache no lo usaba porque nadie se lo habia dicho.
+# Va FUERA de cualquier <IfModule>: ErrorDocument es del core de Apache.
+ErrorDocument 404 /404.html
+
 # ── Compresión ──────────────────────────────────────────────────────────────
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json
