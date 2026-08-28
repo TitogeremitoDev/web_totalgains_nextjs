@@ -5,6 +5,14 @@
     # 410 Gone — APK eliminado
     Redirect 410 /TotalGains.apk
 
+    # 301 rutas en inglés que los agentes prueban por convención.
+    # La página existe, pero vive en /sobre-nosotros/: sin esto, un agente que
+    # comprueba /about para verificar que el negocio es real recibe un 404.
+    Redirect 301 /about /sobre-nosotros/
+    Redirect 301 /about/ /sobre-nosotros/
+    Redirect 301 /about-us /sobre-nosotros/
+    Redirect 301 /about-us/ /sobre-nosotros/
+
     # 301 redirects — blogs antiguos sin contenido actual
     Redirect 301 /blog/app-entrenamiento-personalizado /blog/ia-entrenador-personal-rutinas-dietas/
     Redirect 301 /blog/app-entrenamiento-personalizado/ /blog/ia-entrenador-personal-rutinas-dietas/
