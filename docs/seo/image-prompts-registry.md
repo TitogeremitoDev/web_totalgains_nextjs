@@ -147,6 +147,21 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/captar-clientes-septiembre-entrenador-personal
+*Generado 2026-08-22 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `septiembre-ventana-hero.webp` | low angle a ras de suelo | perspectiva de un punto con fuga central | wide | gimnasio interior vacío al amanecer | racks de mancuernas y barras, cero humanos, sombras largas hacia cámara | amanecer duro entrando por ventanal | la sala minutos antes de llenarse |
+| `septiembre-vuelta-decision.webp` | eye-level | tercios, sujeto descentrado a la derecha | wide | balcón mediterráneo exterior al atardecer | figura de espaldas desenfocada + móvil, llaves y vaso nítidos en primer plano | contraluz de golden hour | última tarde tranquila |
+| `septiembre-preparacion.webp` | cenital 90° | knolling en rejilla milimétrica | medium | superficie de hormigón claro | libreta, pluma, cinta métrica, cronómetro, mancuerna coral, toalla, tarjeta, móvil boca abajo | cenital suave sin sombra | orden obsesivo, todo listo |
+| `septiembre-conversacion-pendiente.webp` | frontal levemente elevado | centrado con aire | medium close | estudio, fondo coral liso | móvil flotando con la pantalla apagada | dura direccional, sombra larga en diagonal | gráfico, algo sin contestar |
+| `septiembre-los-de-siempre.webp` | macro a ras de suelo | diagonal, sujeto en el tercio izquierdo | macro extremo | rack de gimnasio en penumbra | una mancuerna iluminada, el resto del rack a oscuras y desenfocado | haz único lateral, bokeh extremo | lo que dejas de mirar |
+
+**Notas:** cinco imágenes porque desde el 22-ago-2026 el mínimo son **4 por artículo**, repartidas de forma que ningún tramo de dos H2 seguidos se quede sin nada visual (petición de German: *"tenemos una norma de como mínimo 4 imágenes y mejora el diseño"*). Consumidos los conceptos **#2** (gym vacío al amanecer) y **#14** (balcón al atardecer con figura de espaldas) del pool. ⚠️ El concepto de **hojas de calendario volando** quedó quemado en `dieta-adherencia-mes-tarde` (21-ago): NO reutilizarlo en piezas de temporada aunque encaje, que es justo donde apetece.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -218,6 +233,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-08-22** — Añadido `blog/captar-clientes-septiembre-entrenador-personal` (2 imágenes). Consumidos los conceptos #2, #3, #6, #9 y #14 del pool. Quedan sin usar: 1, 4, 7, 10, 11, 12, 13, 15. ⚠️ Mínimo 4 imágenes por artículo desde hoy.
 
 **2026-08-21** — Añadido `blog/cliente-no-sigue-la-dieta-motivos-coach-2026` (2 imágenes). Consumido el concepto #5 del pool. El script `scripts/generate_image.py` se migró de `imagen-*:predict` a `gemini-3-pro-image:generateContent`. Desde hoy `npm run check-images` comprueba que ninguna imagen editorial se quede sin registrar.
 
