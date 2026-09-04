@@ -2,7 +2,7 @@
 title: "Lo que la IA se inventa: 7 errores que cazar antes de mandarle el plan a un cliente"
 seoTitle: "Errores de la IA en rutinas y dietas: 7 cosas que revisar (2026)"
 description: "La IA se equivoca por cien, no por poco. Los 7 fallos que aparecen en rutinas y dietas generadas y cómo cazarlos en 20 segundos antes de enviar."
-date: "2026-08-28"
+date: "2026-08-28T18:00:00+02:00"
 lastModified: "2026-08-28"
 category: "herramientas"
 author: "Germán Martínez Calvente"
