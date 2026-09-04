@@ -3,7 +3,7 @@ title: "IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas Personaliz
 seoTitle: "IA para Crear Rutinas y Dietas Gratis 2026"
 description: "Cómo generar rutinas y dietas con IA en menos de 2 minutos por cliente, usando tu propia biblioteca de ejercicios. Gratis hasta 5 atletas, sin tarjeta."
 date: "2026-05-04"
-lastModified: "2026-08-11"
+lastModified: "2026-08-28"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 14
@@ -23,6 +23,12 @@ faqs:
     a: "Sí. TotalGains incluye una función de auditoría de alérgenos que revisa cada plan nutricional generado y detecta automáticamente alérgenos cruzados (gluten, lactosa, frutos secos, mariscos, soja, huevo, etc.) en función de las alergias declaradas por cada cliente. Es funcionalidad única en el mercado hispano."
   - q: "¿Cuántos parámetros puedo configurar antes de generar una rutina con IA?"
     a: "En TotalGains puedes configurar tipo de rutina (PPL, Upper/Lower, Full Body, Torso/Pierna, Arnold Split, Por Músculo, Personalizado), días por semana (2-7), nivel del atleta (Principiante/Intermedio/Avanzado), enfoque (Hipertrofia/Fuerza/Resistencia Muscular/Mixto), volumen de entrenamiento (Bajo/Medio/Alto), series por ejercicio (2-6) y rango de repeticiones (Uniforme/Progresivo)."
+  - q: "¿Cuántos entrenadores personales usan ya inteligencia artificial?"
+    a: "Según el informe The State of AI in Fitness Coaching 2026, publicado por FitBudd en agosto de 2026, el 91 % de los entrenadores independientes encuestados ya usa IA en su trabajo, el 71 % de forma habitual y el 59 % a diario. Tres de cada cuatro empezaron entre 2024 y 2025, y solo un 3 % piensa evitarla del todo. Conviene leer esas cifras con contexto: quien publica el informe vende software de coaching y la nota no declara ni el tamaño de la muestra ni los países de los encuestados."
+  - q: "¿La inteligencia artificial va a sustituir a los entrenadores personales?"
+    a: "Los datos apuntan a que no, y lo dicen precisamente quienes más la usan: el 77 % de los entrenadores encuestados afirma que la IA no reemplaza al entrenador humano, y eso en un colectivo donde el 91 % ya la utiliza. La IA automatiza lo repetitivo (generar, calcular, buscar, detectar patrones) pero no cubre lo que realmente se paga: el contexto emocional del cliente, el ajuste por sensaciones del día, ser alguien a quien no querer fallar, entender el porqué de un abandono y decidir en casos límite como un trastorno alimentario o una lesión mal curada."
+  - q: "¿Qué riesgos tiene usar IA generalista para crear rutinas o dietas?"
+    a: "El principal es que invente. Una IA generalista puede proponer ejercicios que no existen en tu biblioteca, cuadrar macros con alimentos que tu cliente no puede comer, o dar una cifra con total seguridad sin tener base para ella. Es el miedo más votado del sector: un 54 % de los entrenadores teme recibir recomendaciones inexactas o inseguras. La forma de acotarlo es que la IA trabaje solo con tu propia base de ejercicios y alimentos, y que nada se guarde ni se envíe al cliente sin que tú lo revises antes."
   - q: "¿Funciona la IA de TotalGains sin conexión a internet?"
     a: "No. La IA de TotalGains requiere conexión a internet porque procesa la generación en servidores en la nube con tecnología avanzada. Sin embargo, una vez generada la rutina o dieta, queda guardada en tu base de datos y los clientes pueden acceder a ella aunque tú o ellos no tengáis conexión en ese momento."
 ---
@@ -219,25 +225,47 @@ La IA está calibrada con temperatura baja (T=0.3) precisamente para ser **empí
 
 ## <span id="no-sustituye"></span>Por qué la IA NO sustituye al entrenador
 
-Llevamos 7 funciones reales y todas tienen un patrón común: **automatizan lo repetitivo, no lo estratégico**.
+Esta es la pregunta que se hace todo el mundo, así que vamos con datos antes que con opiniones.
 
-La IA es buena en:
-- Velocidad de generación
-- Cálculo de macros y volúmenes
-- Detección de patrones y alérgenos
-- Búsqueda y matching
-- Análisis de datos
+En agosto de 2026 se publicó [The State of AI in Fitness Coaching 2026](https://mercadofitness.com/el-77-de-entrenadores-afirma-la-ia-no-puede-reemplazar-entrenador-humano/), una encuesta a entrenadores independientes. Las cifras retratan bien el momento.
 
-La IA es mala (de momento) en:
-- Contexto emocional del cliente
-- Ajuste post-entrenamiento basado en sensaciones reales del atleta
-- Motivación humana
-- Identificar el "porqué" detrás de un abandono
-- Decisiones éticas sobre nutrición o entrenamiento en casos límite
+<div class="__ai_adoption_data__"></div>
 
-Por eso TotalGains usa la IA como **capa de productividad**, no como sustituto. Tú sigues siendo el entrenador. La IA hace los 45 minutos de papeleo en 2 minutos para que tengas más tiempo para lo que importa: hablar con tus clientes, ajustar planes, escuchar.
+Lo interesante no es ninguna cifra suelta, es la contradicción aparente entre dos de ellas: **el 91 % ya la usa y el 77 % dice que no reemplaza al entrenador humano**. No es incoherencia. Es la respuesta.
 
-Si quieres entender cómo gestionar más clientes sin sacrificar calidad, lee también: [Top 7 Errores que Arruinan el Negocio de los Entrenadores Personales Online](/blog/errores-entrenadores-personales-online/).
+Quien la usa a diario es precisamente quien mejor sabe dónde se para.
+
+### Dónde se para la IA
+
+Llevamos siete funciones reales y todas comparten un patrón: **automatizan lo repetitivo, no lo estratégico**.
+
+La IA es buena en velocidad de generación, cálculo de macros y volúmenes, detección de patrones y alérgenos, búsqueda y matching, y análisis de datos.
+
+Es mala, de momento, en cinco cosas que resultan ser justo el trabajo por el que te paga un cliente:
+
+- **El contexto emocional.** No sabe que tu clienta lleva tres semanas durmiendo mal porque su padre está enfermo.
+- **El ajuste por sensaciones.** No nota que ese peso, que sobre el papel toca subir, hoy se le ha ido de las manos.
+- **La motivación humana.** Puede escribir un mensaje de ánimo. No puede ser alguien a quien no querer fallar.
+- **El porqué de un abandono.** Ve que dejó de entrar en la app. No ve que se sintió juzgado en la última revisión.
+- **Las decisiones límite.** Un cliente con antecedentes de trastorno alimentario, una lesión mal curada, una petición que no deberías aceptar. Ahí decide un profesional o no decide nadie.
+
+### El miedo que sí está justificado
+
+De los dos miedos del informe, hay uno que merece atención y otro que no.
+
+El de quedarse rezagado (43 %) se cura solo: con el 91 % ya dentro, esto ha dejado de ser una ventaja competitiva para ser la mesa de trabajo. Llegar ahora no es llegar tarde, es llegar.
+
+El otro sí es real. Un **54 % teme recomendaciones inexactas o inseguras**, y hace bien, porque una IA generalista te inventa un ejercicio que no existe, te cuadra unos macros con un alimento que tu cliente no puede comer, o te suelta con total aplomo una cifra que se acaba de sacar de la manga.
+
+Por eso en TotalGains la IA **no trabaja con el mundo, trabaja con tu base**. Elige entre tus ejercicios y tus alimentos, no entre todos los que existen. Y nada se guarda sin que tú lo revises antes: el sistema te marca sus propios avisos y tú das el visto bueno. La IA propone, tú firmas.
+
+Esa es la diferencia entre una herramienta de productividad y un sustituto. Y es también la razón por la que el 77 % de los que la usan a diario duerme tranquilo.
+
+### Una advertencia sobre esas cifras
+
+Úsalas para orientarte, no para zanjar una discusión. Quien publica ese informe es FitBudd, una empresa que vende software de coaching, así que tiene interés en que el sector parezca adoptado y entusiasta. Y la nota de prensa **no declara ni cuántos entrenadores respondieron ni de qué países son**.
+
+Que un dato te dé la razón no lo convierte en bueno. Te lo cuento porque es lo que me gustaría que hicieran conmigo.
 
 ---
 

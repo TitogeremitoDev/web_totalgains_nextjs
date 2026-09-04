@@ -162,6 +162,20 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/errores-ia-plan-cliente-verificar
+*Generado 2026-08-28 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `errores-ia-hero.webp` | macro a ras de superficie | diagonal cerrada | macro extremo | teclado en oscuridad | una tecla retroiluminada SIN letras, el resto en negro y bokeh | luz interior de la tecla, violeta | el medio segundo antes de enviar |
+| `errores-ia-libre.webp` | 3/4 elevado | centrada, partida por una diagonal de luz | medium | estudio, fondo navy | plato de salmón con media ración iluminada y media invisible en sombra | direccional dura desde arriba izquierda | lo que está pero no se cuenta |
+| `errores-ia-ejercicio.webp` | POV trasero levemente elevado | sujeto en el tercio izquierdo | medium wide | gimnasio en penumbra | silueta de espaldas ante una máquina de poleas bajo un foco | cenital fría + resplandor coral lejano | duda, no saber qué hacer |
+| `errores-ia-firma.webp` | macro a ras de escritorio | sujeto en el tercio derecho | macro | escritorio de nogal | pluma de plumín dorado sobre folios con tipografía ilegible | lateral cálida rasante | decisión deliberada |
+
+**Notas:** consumidos del pool los conceptos **#1** (POV trasero) y **#12** (macro de teclado, resuelto SIN dedo: solo la tecla). Truco que funcionó: pedir teclas **en blanco, sin letras ni símbolos**, evita que el modelo invente tipografía. La del salmón sale de un concepto nuevo (sujeto partido por una diagonal de luz para que media parte desaparezca) que merece la pena reutilizar cuando haya que enseñar algo presente pero no contabilizado.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -233,6 +247,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-08-28** — Añadidos `blog/errores-ia-plan-cliente-verificar` (4 imágenes). Consumidos #1 y #12 del pool. Quedan sin usar: 4, 7, 10, 11, 13, 15.
 
 **2026-08-22** — Añadido `blog/captar-clientes-septiembre-entrenador-personal` (2 imágenes). Consumidos los conceptos #2, #3, #6, #9 y #14 del pool. Quedan sin usar: 1, 4, 7, 10, 11, 12, 13, 15. ⚠️ Mínimo 4 imágenes por artículo desde hoy.
 
