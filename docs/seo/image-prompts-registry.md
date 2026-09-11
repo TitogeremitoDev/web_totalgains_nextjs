@@ -176,6 +176,20 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/top-suplementos-evidencia-coach-2026
+*Generado 2026-09-11 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `suplementos-hero.webp` | eye-level | perspectiva de un punto, repetición en fuga | wide | lineal de tienda | decenas de botes idénticos SIN etiqueta, uno con tinte coral | fluorescente plana de retail | todos parecen lo mismo |
+| `suplementos-vara.webp` | macro a ras de mesa | fila diagonal descendente | macro | pizarra oscura | pesas de calibración de latón de mayor a menor | lateral dura con sombras paralelas | precisión, estándar acordado |
+| `suplementos-basico.webp` | eye-level | tercios, cama a la derecha | wide | dormitorio al amanecer | cama deshecha + franja de luz por la cortina + vaso de agua | primera luz fría por rendija | lo básico y nada glamuroso |
+| `suplementos-limite.webp` | macro a ras de superficie | sujeto en el tercio izquierdo | macro | laboratorio, acero cepillado | gradilla de tubos de analítica vacíos con tapones de color | clínica cenital fría | el límite del entrenador |
+
+**Notas:** truco clave repetido del artículo de errores de IA: pedir los botes **completamente sin etiqueta, sin texto ni logos**. Es lo que evita que el modelo invente tipografía, y además dice justo lo que el artículo quiere decir. La cama deshecha al amanecer es concepto nuevo y vale para cualquier pieza sobre descanso o sobre lo poco vistoso que es lo que funciona.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -247,6 +261,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-09-11** — Añadido `blog/top-suplementos-evidencia-coach-2026` (4 imágenes). Ningún concepto del pool consumido: las cuatro son nuevas. Siguen sin usar: 4, 7, 10, 11, 13, 15.
 
 **2026-08-28** — Añadidos `blog/errores-ia-plan-cliente-verificar` (4 imágenes). Consumidos #1 y #12 del pool. Quedan sin usar: 4, 7, 10, 11, 13, 15.
 

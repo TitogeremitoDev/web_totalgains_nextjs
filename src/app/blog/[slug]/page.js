@@ -29,6 +29,8 @@ import SeptemberOfferComparison from "@/components/SeptemberOfferComparison";
 import AIAdoptionData from "@/components/AIAdoptionData";
 import AIPlanNumberErrors from "@/components/AIPlanNumberErrors";
 import AIEquivalenceTrap from "@/components/AIEquivalenceTrap";
+import SupplementEvidenceGrid from "@/components/SupplementEvidenceGrid";
+import SupplementPurposeSplit from "@/components/SupplementPurposeSplit";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -61,6 +63,8 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__ai_adoption_data__"></div>', Component: AIAdoptionData, gate: () => true },
   { marker: '<div class="__ai_number_errors__"></div>', Component: AIPlanNumberErrors, gate: () => true },
   { marker: '<div class="__ai_equivalence_trap__"></div>', Component: AIEquivalenceTrap, gate: () => true },
+  { marker: '<div class="__supplement_evidence__"></div>', Component: SupplementEvidenceGrid, gate: () => true },
+  { marker: '<div class="__supplement_purpose__"></div>', Component: SupplementPurposeSplit, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS
