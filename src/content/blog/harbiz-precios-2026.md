@@ -69,7 +69,7 @@ faqs:
   - q: "¿Qué pasa si paso de 30 a 50 clientes en Harbiz?"
     a: "Cuando excedes el número de clientes activos de tu tramo, Harbiz te avisa y debes subir al siguiente. El salto de Basic 30 a Basic 40 supone pasar de 83,49 € a 119,79 € con IVA (+36,30 €/mes mensual). El salto de Basic 40 a Pro 50 supone pasar de 119,79 € a 143,99 € con IVA (+24,20 €/mes), pero entras en la franja Pro y desbloqueas funciones de equipo. Los saltos son discretos: pagas el tramo completo aunque solo añadas un cliente nuevo."
   - q: "¿Qué alternativas a Harbiz hay en español en 2026?"
-    a: "Las alternativas en español más consolidadas en 2026 son [TotalGains](/alternativas/harbiz/) (plan plano desde 29,90 €/mes con IVA hasta 100 clientes, sin add-ons), [TrainerStudio](https://www.trainerstudio.com) (plan gratuito permanente para 3 clientes e ilimitado a 180,29 €/mes con IVA) y opciones internacionales como Trainerize ($10-380 USD/mes con add-ons). Cada una atiende un perfil distinto: Harbiz prioriza catálogo modular, TotalGains prioriza todo incluido y TrainerStudio prioriza simplicidad con plan free permanente. La elección depende del tamaño de tu cartera, la necesidad de marca blanca y la importancia que des a la modularidad."
+    a: "Las alternativas en español más consolidadas en 2026 son [TotalGains](/alternativas/harbiz/) (plan plano desde 29,90 €/mes con IVA hasta 100 clientes, sin add-ons), TrainerStudio (plan gratuito permanente para 3 clientes e ilimitado a 180,29 €/mes con IVA) y opciones internacionales como Trainerize ($10-380 USD/mes con add-ons). Cada una atiende un perfil distinto: Harbiz prioriza catálogo modular, TotalGains prioriza todo incluido y TrainerStudio prioriza simplicidad con plan free permanente. La elección depende del tamaño de tu cartera, la necesidad de marca blanca y la importancia que des a la modularidad."
 ---
 
 > **📊 La tabla de precios actualizada vive ahora en [Precios de Harbiz 2026: todos los tramos con IVA](/alternativas/harbiz/precios/)**, donde además comparamos el coste total con las alternativas. Este artículo se mantiene como análisis editorial.
@@ -482,7 +482,7 @@ Cuando excedes el número de clientes activos de tu tramo, Harbiz te avisa y deb
 
 ### ¿Qué alternativas a Harbiz hay en español en 2026?
 
-Las alternativas en español más consolidadas en 2026 son [TotalGains](/alternativas/harbiz/) (plan plano desde 29,90 €/mes con IVA hasta 100 clientes, sin add-ons), [TrainerStudio](https://www.trainerstudio.com) (plan gratuito permanente para 3 clientes e ilimitado a 180,29 €/mes con IVA) y opciones internacionales como Trainerize ($10-380 USD/mes con add-ons). Cada una atiende un perfil distinto: Harbiz prioriza catálogo modular, TotalGains prioriza todo incluido y TrainerStudio prioriza simplicidad con plan free permanente. La elección depende del tamaño de tu cartera, la necesidad de marca blanca y la importancia que des a la modularidad.
+Las alternativas en español más consolidadas en 2026 son [TotalGains](/alternativas/harbiz/) (plan plano desde 29,90 €/mes con IVA hasta 100 clientes, sin add-ons), TrainerStudio (plan gratuito permanente para 3 clientes e ilimitado a 180,29 €/mes con IVA) y opciones internacionales como Trainerize ($10-380 USD/mes con add-ons). Cada una atiende un perfil distinto: Harbiz prioriza catálogo modular, TotalGains prioriza todo incluido y TrainerStudio prioriza simplicidad con plan free permanente. La elección depende del tamaño de tu cartera, la necesidad de marca blanca y la importancia que des a la modularidad.
 
 ---
 
