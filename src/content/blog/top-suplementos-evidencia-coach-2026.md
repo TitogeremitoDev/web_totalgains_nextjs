@@ -52,16 +52,28 @@ El [Instituto Australiano del Deporte](https://www.ausport.gov.au/ais/nutrition/
 
 ![Serie de pesas de calibración de latón alineadas de mayor a menor sobre pizarra oscura, con luz lateral dura](/images/blog/suplementos-vara.webp "Medir con una vara acordada y pública, no con la opinión de quien vende el bote")
 
-- **Grupo A**: evidencia sólida para usarse en situaciones concretas del deporte, con protocolos definidos.
-- **Grupo B**: evidencia emergente o mixta. Merece atención en casos concretos, pendiente de más investigación.
-- **Grupo C**: la evidencia **no** respalda el beneficio en deportistas, o directamente no hay investigación suficiente.
+- **[Grupo A](https://www.ausport.gov.au/ais/nutrition/supplements/group_a)**: evidencia sólida para usarse en situaciones concretas del deporte, con protocolos definidos.
+- **[Grupo B](https://www.ausport.gov.au/ais/nutrition/supplements/group_b)**: evidencia emergente o mixta. Merece atención en casos concretos, pendiente de más investigación.
+- **[Grupo C](https://www.ausport.gov.au/ais/nutrition/supplements/group_c)**: la evidencia **no** respalda el beneficio en deportistas, o directamente no hay investigación suficiente.
 - **Grupo D**: prohibidos o con alto riesgo de contaminación.
+
+Cada enlace lleva a la página del grupo, así que no tienes que fiarte de mí: puedes comprobar cualquiera de los ocho en la fuente.
 
 Lo importante para lo que viene: **el grupo A no significa "bueno"**. Significa "hay evidencia sólida de que sirve para algo concreto". Y ese algo cambia muchísimo de un suplemento a otro.
 
 ## Los ocho, de mejor a peor respaldados
 
 <div class="__supplement_evidence__"></div>
+
+## Los dos que sí, con la letra pequeña
+
+De los ocho, solo la creatina y la cafeína son potenciadores de rendimiento con respaldo sólido. Y conviene saber qué dicen exactamente, porque es lo que te van a repreguntar.
+
+**Creatina.** El posicionamiento de la Sociedad Internacional de Nutrición Deportiva ([Kreider y col., 2017](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469049/), texto completo libre) concluye que la suplementación a corto y largo plazo, **hasta 30 g al día durante cinco años**, es segura y bien tolerada en personas sanas. Ese dato vale más que cualquier argumento: cuando el cliente saque lo del riñón, la respuesta no es "no pasa nada", es una cifra y un papel.
+
+**Cafeína.** El posicionamiento equivalente ([Guest y col., 2021](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7777221/)) es más matizado, y ese matiz es justo lo que no te cuentan: mejora el rendimiento **en muchos estudios, pero no en todos**. Los beneficios son de pequeños a moderados en fuerza, velocidad y saltos, y donde más consistentes son es en resistencia aeróbica.
+
+Traducido a tu cliente: no le va a cambiar la vida en el gimnasio, y le va a notar más si corre.
 
 ## La trampa del grupo A, que es donde se lía todo el mundo
 
@@ -142,6 +154,16 @@ No está en el marco porque no va de rendimiento. Su evidencia es de sueño. Pue
 ### ¿Puedo recomendar suplementos a mis clientes?
 
 Informar sí, prescribir no. La regla práctica: si la respuesta correcta depende de una analítica, deriva a un profesional sanitario.
+
+## Fuentes
+
+Todo lo que has leído se puede comprobar. Estas son las fuentes, todas de acceso libre:
+
+- **[AIS Supplement Framework](https://www.ausport.gov.au/ais/nutrition/supplements)**, Instituto Australiano del Deporte. El marco de clasificación por niveles de evidencia. Consultado en septiembre de 2026: [grupo A](https://www.ausport.gov.au/ais/nutrition/supplements/group_a), [grupo B](https://www.ausport.gov.au/ais/nutrition/supplements/group_b) y [grupo C](https://www.ausport.gov.au/ais/nutrition/supplements/group_c).
+- **Kreider RB y col. (2017)**, *ISSN position stand: safety and efficacy of creatine supplementation in exercise, sport, and medicine*. Journal of the International Society of Sports Nutrition 14(1):18. [Texto completo](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5469049/).
+- **Guest NS y col. (2021)**, *ISSN position stand: caffeine and exercise performance*. Journal of the International Society of Sports Nutrition 18(1). [Texto completo](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7777221/).
+
+No hay enlaces a tiendas de suplementos en este artículo, y es a propósito: un texto que dice que algo no sostiene lo que promete no puede enlazar a quien lo vende.
 
 ## Sobre el autor
 
