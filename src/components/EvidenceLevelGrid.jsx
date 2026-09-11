@@ -17,12 +17,12 @@ const claims = [
   {
     text: "Las mujeres deben entrenar cargas altas solo en fase folicular",
     level: "low",
-    note: "McNulty 2020 (meta-análisis 78 estudios): efecto trivial y calidad baja. No hay base para prescribir.",
+    note: "McNulty y col., 2020: meta-análisis de 78 estudios y 1.193 participantes. El efecto es trivial y la calidad de la evidencia se clasificó como baja (42 %). El propio trabajo recomienda individualizar en vez de prescribir por fase.",
   },
   {
     text: "En fase lútea hay que bajar volumen para no lesionarse",
     level: "none",
-    note: "Sin evidencia consistente. Elliott-Sale 2021 identifica sesgos metodológicos serios en los estudios que lo defendían.",
+    note: "Sin evidencia consistente. Y hay un problema de base: Elliott-Sale y col., 2021, la guía de estándares metodológicos para investigar con mujeres, nace precisamente porque la mayor parte de los datos de ciencia del deporte se obtuvieron con hombres.",
   },
   {
     text: "Ciclar carbohidratos por fase del ciclo mejora resultados",
@@ -157,6 +157,18 @@ export default function EvidenceLevelGrid() {
 
       <p style={{ marginTop: 18, textAlign: "center", fontSize: "0.8rem", color: "var(--text-secondary,#aaa)", lineHeight: 1.55, fontStyle: "italic" }}>
         La moda del &quot;entreno por fases&quot; se sostiene sobre las 3 afirmaciones de arriba (bajas o sin respaldo), no sobre las 3 de abajo.
+      </p>
+
+      <p style={{ marginTop: 12, textAlign: "center", fontSize: "0.74rem", color: "var(--text-secondary,#999)", lineHeight: 1.6 }}>
+        Fuentes principales, ambas de acceso libre:{" "}
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7497427/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-light,#8fa4f5)" }}>
+          McNulty y col., 2020
+        </a>{" "}
+        (Sports Medicine 50:1813-1827) y{" "}
+        <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC8053180/" target="_blank" rel="noopener noreferrer" style={{ color: "var(--primary-light,#8fa4f5)" }}>
+          Elliott-Sale y col., 2021
+        </a>{" "}
+        (Sports Medicine 51:843-861).
       </p>
     </section>
   );

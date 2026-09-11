@@ -3,7 +3,7 @@ title: "Entrenar y comer según el ciclo menstrual: qué funciona (2026)"
 seoTitle: "Ciclo menstrual, entreno y dieta: qué funciona"
 description: "El ciclo sabotea la dieta y el entreno de tus clientas de 3 formas medibles. Las plantillas de 28 días no valen; la individualización con datos, sí."
 date: "2026-07-26"
-lastModified: "2026-08-10"
+lastModified: "2026-09-11"
 category: "metodologia"
 author: "Germán Martínez Calvente"
 readTime: 12
@@ -60,6 +60,8 @@ Si programas a cinco clientas con la misma plantilla de 28 días, el plan está 
 ![Cinco cuencos de cerámica de distintos tamaños y colores dispuestos sobre lino natural con hierbas secas alrededor, metáfora visual de la variabilidad individual entre mujeres](/images/blog/entrenar-ciclo-menstrual-variabilidad.webp "Ningún ciclo es igual a otro, y ningún plan estándar los cubre bien")
 
 <div class="__cycle_phases_reality__"></div>
+
+Y esto no es una opinión de coach contra otra: es lo que recomienda el propio meta-análisis. [McNulty y col. (2020)](https://pmc.ncbi.nlm.nih.gov/articles/PMC7497427/), tras revisar 78 estudios con 1.193 participantes, cierra pidiendo literalmente **un enfoque personalizado basado en la respuesta individual de cada persona a lo largo del ciclo**, en lugar de directrices generales por fase. Quien te vende una plantilla de 28 días está haciendo justo lo contrario de lo que dice la mejor evidencia disponible.
 
 La solución no es sofisticar la plantilla. Es abandonarla y sustituirla por registro individual. Con 3-4 ciclos anotados por cada clienta aparecen patrones que ninguna teoría puede predecir: ella tiene SPM de 6 días, no de 2; su ventana de fuerza son los días 6-11 de su ciclo, no los teóricos 8-14; su día 22 es cuando pierde ganas de entrenar; sus antojos consistentes son al día 26. Eso sí es información accionable.
 
@@ -130,6 +132,15 @@ Mi Ciclo empieza en privado por defecto. Cuando la clienta lo activa, la entrena
 Hay cuatro tipos de dato que no salen del móvil ni con permisos: el diario personal, la vida sexual y método anticonceptivo, el autoexamen de mamas y el cuestionario ginecológico. Eso no es una casilla, es que técnicamente esa información no viaja.
 
 <div class="__privacy_layers__"></div>
+
+## Fuentes
+
+Nada de lo anterior hay que creérselo. Las dos referencias principales son de acceso libre:
+
+- **McNulty KA y col. (2020)**, *The Effects of Menstrual Cycle Phase on Exercise Performance in Eumenorrheic Women: A Systematic Review and Meta-Analysis*. Sports Medicine 50(10):1813-1827. [Texto completo](https://pmc.ncbi.nlm.nih.gov/articles/PMC7497427/). Es el trabajo que fija el estado de la cuestión: 78 estudios, 1.193 participantes, efecto trivial, calidad de la evidencia baja (42 %) y recomendación explícita de individualizar.
+- **Elliott-Sale KJ y col. (2021)**, *Methodological Considerations for Studies in Sport and Exercise Science with Women as Participants: A Working Guide for Standards of Practice for Research on Women*. Sports Medicine 51(5):843-861. [Texto completo](https://pmc.ncbi.nlm.nih.gov/articles/PMC8053180/). Explica por qué buena parte de lo que se afirma sobre entrenamiento femenino se apoya en estudios que no son comparables entre sí.
+
+Si alguien te discute algo de este artículo, esos dos enlaces valen más que cualquier discusión.
 
 ## Resumen para un coach que quiere ir en serio
 
