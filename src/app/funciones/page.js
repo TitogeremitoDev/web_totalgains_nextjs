@@ -58,22 +58,24 @@ export default function FuncionesHub() {
         <>
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <main className="fn">
-                <div className="fn-wrap">
-                    <nav aria-label="Ruta de navegación" className="fn-crumbs">
-                        <Link href="/">Inicio</Link>
-                        <span aria-hidden="true">›</span>
-                        <span>Funciones</span>
-                    </nav>
+                <section className="fn-hero">
+                    <div className="fn-hero-bg" aria-hidden="true" />
+                    <div className="container fn-hero-inner">
+                        <nav aria-label="Ruta de navegación" className="fn-crumbs">
+                            <Link href="/">Inicio</Link>
+                            <span aria-hidden="true">›</span>
+                            <span>Funciones</span>
+                        </nav>
 
-                    <header className="fn-hero">
-                        <h1 className="fn-h1">Todo lo que hace TotalGains</h1>
+                        <span className="fn-badge">Catálogo completo</span>
+                        <h1 className="fn-h1 gradient-text">Todo lo que hace TotalGains</h1>
                         <p className="fn-intro">
                             El catálogo completo, separado por perfil porque el trabajo de un entrenador y el de un
                             gimnasio no se parecen en nada. {totalEntrenadores} funciones para entrenadores y
                             nutricionistas, {totalGimnasios} para centros.
                         </p>
 
-                        <div className="fn-todo">
+                        <div className="fn-todo glass">
                             <p className="fn-todo-t">Todas las funciones entran en todos los planes</p>
                             <p className="fn-todo-d">
                                 No hay add-ons, ni módulos que se contratan aparte, ni funciones bloqueadas por plan.
@@ -83,6 +85,7 @@ export default function FuncionesHub() {
                                 puedes llevar, y todos los precios se publican con el IVA ya incluido.
                             </p>
                         </div>
+
                         <FeatureMedia
                             media={[{
                                 tipo: "video",
@@ -94,11 +97,13 @@ export default function FuncionesHub() {
                                 pie: "Asignar una rutina a un atleta, de principio a fin.",
                             }]}
                         />
-                    </header>
+                    </div>
+                </section>
 
+                <div className="container">
                     <div className="fn-hub-grid">
-                        <Link href="/funciones/entrenadores/" className="fn-hub-card" prefetch={false}>
-                            <h2>Entrenadores y nutricionistas</h2>
+                        <Link href="/funciones/entrenadores/" className="fn-hub-card glass" prefetch={false}>
+                            <h2 className="gradient-text">Entrenadores y nutricionistas</h2>
                             <p>
                                 Rutinas y dietas con IA sobre tu propia biblioteca, resistencia, seguimiento,
                                 vídeo-feedback, Mi Ciclo y app con tu marca. {totalEntrenadores} funciones repartidas en{" "}
@@ -112,8 +117,8 @@ export default function FuncionesHub() {
                             <span className="fn-hub-go">Ver el catálogo completo →</span>
                         </Link>
 
-                        <Link href="/funciones/gimnasios/" className="fn-hub-card" prefetch={false}>
-                            <h2>Gimnasios, estudios y boxes</h2>
+                        <Link href="/funciones/gimnasios/" className="fn-hub-card glass" prefetch={false}>
+                            <h2 className="gradient-text">Gimnasios, estudios y boxes</h2>
                             <p>
                                 Clases con aforo y lista de espera, tienda con stock y pedidos desde la app del socio,
                                 caja y facturación, multi-coach con permisos y retención. {totalGimnasios} funciones en{" "}
@@ -127,23 +132,26 @@ export default function FuncionesHub() {
                             <span className="fn-hub-go">Ver el catálogo completo →</span>
                         </Link>
                     </div>
+                </div>
 
-                    <section className="fn-cierre">
-                        <h2 className="fn-h2">¿Prefieres ver los precios primero?</h2>
+                <section className="fn-cierre">
+                    <div className="fn-hero-bg" aria-hidden="true" />
+                    <div className="container fn-cierre-inner">
+                        <h2 className="fn-h2 gradient-text">¿Prefieres ver los precios primero?</h2>
                         <p className="fn-intro">
-                            Plan gratuito permanente hasta 5 atletas para entrenadores, y gimnasios desde 149 euros al
+                            Plan gratuito permanente hasta 5 atletas para entrenadores, y gimnasios desde 149 € al
                             mes con IVA y coaches ilimitados.
                         </p>
                         <div className="fn-ctas">
-                            <Link href="/precios/" className="fn-btn fn-btn-primary" prefetch={false}>
+                            <Link href="/precios/" className="btn btn-primary btn-lg" prefetch={false}>
                                 Ver precios
                             </Link>
-                            <Link href="/onboarding/" className="fn-btn fn-btn-ghost" prefetch={false}>
+                            <Link href="/onboarding/" className="btn btn-outline" prefetch={false}>
                                 Empezar gratis
                             </Link>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                </section>
             </main>
         </>
     );
