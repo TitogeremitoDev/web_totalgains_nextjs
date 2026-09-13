@@ -57,7 +57,9 @@ const Footer = () => {
                                     las 60 páginas y estos id sólo existen en la home. Con "#x" el
                                     enlace era un no-op en todas las páginas menos "/". */}
                                 <li><Link href="/" prefetch={false}>Inicio</Link></li>
-                                <li><Link href="/#features" prefetch={false}>Funciones</Link></li>
+                                {/* Apunta al catálogo, no al ancla de la home: "Funciones"
+                                    prometía el inventario y llevaba a un carrusel de ocho. */}
+                                <li><Link href="/funciones/" prefetch={false}>Funciones</Link></li>
                                 <li><Link href="/#app-showcase" prefetch={false}>Ver App</Link></li>
                                 <li><Link href="/precios/" prefetch={false}>Precios</Link></li>
                                 <li><Link href="/para-gimnasios/" prefetch={false}>Para gimnasios</Link></li>
@@ -78,6 +80,8 @@ const Footer = () => {
                             <h4>Recursos</h4>
                             <ul>
                                 <li><Link href="/blog/" prefetch={false}>Blog</Link></li>
+                                <li><Link href="/funciones/entrenadores/" prefetch={false}>Funciones para entrenadores</Link></li>
+                                <li><Link href="/funciones/gimnasios/" prefetch={false}>Funciones para gimnasios</Link></li>
                                 {/* Los hubs van ADEMÁS de las fichas: /casos-de-exito/ y
                                     /opiniones-clientes/ estaban en el sitemap con CERO
                                     enlaces entrantes en todo el sitio (huérfanas). */}

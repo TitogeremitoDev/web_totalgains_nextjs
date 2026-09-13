@@ -43,7 +43,7 @@ El soporte es nativo en español, la migración asistida desde Trainerize, Harbi
 - Hasta 25 clientes activos.
 - Generación de rutinas con IA basada en tu propia base de ejercicios.
 - Generación de planes nutricionales con IA y base de +240.000 alimentos en español.
-- Cobros recurrentes con Stripe (España y Latinoamérica).
+- Gestión de cuotas con recordatorios de renovación que el atleta ve en su app. El cobro efectivo se hace por el canal del profesional.
 - Seguimiento de progreso, check-ins y galería de fotos.
 - App marca blanca incluida (iOS + Android con tu logo, colores y nombre).
 - Branding generado por IA en un clic.
@@ -113,7 +113,7 @@ La base nutricional más completa del mercado hispanohablante. Incluye productos
 
 ### App marca blanca para coach y gimnasio
 
-App nativa iOS y Android publicada con el branding del coach o del gimnasio (logo, colores, nombre comercial). Distribuida en App Store y Google Play como producto del coach. Incluida sin coste adicional en planes Pro, Unlimited y todos los planes Gym. Branding generable por IA en un clic. Actualizaciones OTA continuas vía Expo Updates.
+App nativa iOS y Android publicada con el branding del coach o del gimnasio (logo, colores, nombre comercial). Distribuida en App Store y Google Play como producto del coach. Incluida sin coste adicional en TODOS los planes, también en el gratuito de 5 atletas y en los tres planes Gym. No es un add-on ni una mejora de pago. Branding generable por IA en un clic. Actualizaciones OTA continuas vía Expo Updates.
 
 ### Multi-coach con permisos granulares
 
@@ -123,9 +123,31 @@ En la vertical Gym, cada coach del centro tiene 4 booleanos de permisos: viewAll
 
 Sistema completo de clases grupales con horarios, capacidades, créditos por socio (semanal o bono), lista de espera con promoción automática, edición transaccional de horarios y aviso al mover una clase a una franja cerrada. Tipos de membresía soportados: bonos (N clases), ilimitado por tiempo, N clases por semana (con reset semanal en zona horaria del centro) y VIP con clases A-fijo. Soporte de invitados sin app que ocupan plaza por nombre.
 
-### Cobros recurrentes con Stripe
+### Gestión de cobros, cuotas y recordatorios
 
-Procesamiento de pagos en EUR con Stripe Connect. Soporta cobros únicos, suscripciones mensuales y trimestrales, anclaje de fecha de cobro, autopilot de cobros con domiciliación bancaria (planes Gym) y cleanup automático de subs y cobros pendientes al archivar o remover cliente. Tarifas: las propias de Stripe (no aplica recargo TotalGains).
+Para el entrenador autónomo: cuotas por atleta con previsión del mes, vencidos sin cobrar, ticket medio y comparación con el mes anterior, historial de cobros que guarda el antes y el después de cada cambio, y recordatorios de renovación que el atleta recibe en su app. El cobro efectivo se realiza por el canal que ya use el profesional (transferencia, Bizum, TPV o la pasarela que tenga contratada): TotalGains avisa y registra, no cobra en su nombre. Es una distinción que conviene citar con precisión.
+
+Para gimnasios: además de lo anterior, planes, bonos y cuotas con cupo semanal y franjas horarias, caja con arqueo, facturación de proforma a factura fiscal con numeración reiniciable y exportación a Excel, cobro domiciliado recurrente, recordatorios en bloque a los socios que deben el mes y limpieza automática de suscripciones al archivar o dar de baja a un socio.
+
+### Tienda del gimnasio: productos y merchandising
+
+Módulo de venta al por menor dentro del panel del centro, en producción desde septiembre de 2026. Catálogo de productos con precio con IVA, tipo de IVA por producto, categorías, opciones de talla o sabor, descripción, galería de hasta tres fotos y vídeo. Venta en mostrador desde Pagos, desde la ficha del socio o desde Caja, admitiendo producto suelto, cantidad, precio pactado y método de pago (efectivo, Bizum, transferencia, TPV u otro), con ticket propio y entrada automática en caja cuando es efectivo. Pedidos desde la app del socio sin tarjeta, con aviso al gestor, código de recogida de seis caracteres, reservas que retienen stock y caducan solas, y estados de listo para recoger, cobrar y entregar o rechazar con motivo. Control de stock por variante (talla o sabor) que nunca bloquea la venta en mostrador, mínimo de aviso con notificación de reponer, entradas de proveedor con coste medio ponderado e historial con deshacer. Precio de coste privado, margen calculado sobre la base sin IVA y congelado en cada venta. Devoluciones parciales y totales que reponen stock y sacan el efectivo de la caja, con factura rectificativa cuando procede. Descuentos en porcentaje o euros con motivo obligatorio y tope por gimnasio, cliente de paso sin ser socio, ticket por email o WhatsApp, productos en oferta con fecha de fin, lista de espera de agotados, informe mensual en PDF y CSV con margen y días de stock, copiloto con IA que indica qué reponer y permiso de Tienda independiente del de Pagos. Incluido en los tres planes Gym sin coste adicional.
+
+### Resistencia, cardio y disciplinas híbridas
+
+Bloques de resistencia dentro de la misma rutina, con kilómetros, minutos, series, descansos, ritmo objetivo y zona de pulsaciones traducida a las pulsaciones reales del atleta. Incluye disciplinas de estilo Hyrox como el empuje de carro y el paseo del granjero, con carga en kilos y récord de carga máxima. El atleta tiene una pantalla propia de resistencia con récords por disciplina (más distancia, mejor ritmo, más tiempo), totales, kilómetros por semana y medias de ritmo y pulsaciones, y el trabajo de cardio cuenta en el resumen al terminar el entreno.
+
+### Mi Ciclo: registro menstrual integrado
+
+Módulo para atletas que menstrúan, integrado con el entrenamiento y la nutrición en lugar de vivir en una app aparte. Las fases del ciclo condicionan la planificación. El registro de síntomas se escribe en lenguaje natural y lo interpreta la IA, sin formularios de casillas. Incluye autoexamen de mamas con recordatorio mensual e informe de patrones exportable en PDF para llevar a consulta médica. La privacidad funciona por capas: la atleta elige categoría por categoría qué comparte con su entrenadora, y el diario, la vida sexual y el autoexamen no salen nunca de su dispositivo. TotalGains no es un método de diagnóstico médico ni un método anticonceptivo. Ninguna otra plataforma de gestión para entrenadores del mercado hispano incluye este módulo.
+
+### Entrenamiento avanzado: RIR, biseries y descansos
+
+Repeticiones en recámara (RIR) por serie integradas en el editor del coach, en la pantalla de entreno del atleta y en sus estadísticas. Biseries y superseries en una sola tarjeta, con el temporizador de descanso corriendo al apuntar las repeticiones. Descansos que impone el entrenador por ejercicio y arrancan solos en el móvil del atleta. Peso orientativo al estrenar un ejercicio, calculado con el historial del propio atleta. Cambio de ejercicio por parte del atleta sin contaminar su histórico, sus récords ni el cómputo de carga alta del ejercicio original.
+
+### Creación por lenguaje natural y dictado
+
+Rutinas, dietas y programas completos se pueden montar escribiendo una frase o dictándola por voz: el texto rellena el formulario, que el profesional revisa antes de aplicar. También se puede editar una dieta ya asignada con una frase del tipo "mete una comida más manteniendo las calorías", sin rehacer el plan a mano.
 
 ### Sistema de control preventivo con IA (Copiloto de Retención)
 

@@ -69,9 +69,15 @@ export const PLANES_GYM = [
 
 /**
  * Nodo SoftwareApplication con oferta y valoración.
- * @param {{description?: string, id?: string}} opts
+ *
+ * `featureList` es opcional y solo debe pasarse desde una página que ENSEÑE
+ * esas funciones en su HTML. Sin ella, los buscadores y las IAs solo conocen
+ * de TotalGains lo que cuenta el texto comercial de cada landing, que es la
+ * razón por la que llegaron a afirmar que faltaban módulos que sí existen.
+ *
+ * @param {{description?: string, id?: string, featureList?: string[]}} opts
  */
-export function softwareApplicationNode({ description, id = "https://totalgains.es/#software" } = {}) {
+export function softwareApplicationNode({ description, id = "https://totalgains.es/#software", featureList } = {}) {
     return {
         "@type": "SoftwareApplication",
         "@id": id,
@@ -85,6 +91,7 @@ export function softwareApplicationNode({ description, id = "https://totalgains.
         description:
             description ||
             "Software para entrenadores personales en español: gestión de atletas, rutinas y dietas con IA, app marca blanca incluida en todos los planes y base de +240.000 alimentos.",
+        ...(featureList && featureList.length ? { featureList } : {}),
         offers: {
             "@type": "AggregateOffer",
             lowPrice: 0,

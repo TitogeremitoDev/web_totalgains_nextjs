@@ -13,6 +13,10 @@ const navLinks = [
     // Única puerta de entrada al vertical de gimnasios desde la navegación: sin
     // ella la landing solo se alcanzaba haciendo scroll hasta el pie de la home.
     { href: '/para-gimnasios/', label: 'Gimnasios' },
+    // El catálogo completo necesita puerta propia: es la página que contesta
+    // "¿esto lo hace?" y la que leen los sistemas de IA para describir el
+    // producto. Sin enlace desde la navegación nadie la rastrea.
+    { href: '/funciones/', label: 'Funciones' },
     // El hub y no una comparativa suelta: /alternativas/ enlaza a las 9 y era
     // huérfana (0 entrantes). Trainerize sigue a un clic desde el hub y el pie.
     { href: '/alternativas/', label: 'Comparativas' },
