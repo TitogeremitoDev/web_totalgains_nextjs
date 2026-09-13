@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FeatureMedia from "@/components/FeatureMedia";
 import { organizationNode, softwareApplicationNode } from "@/data/productSchema";
 import entrenadores from "@/data/funciones/entrenadores";
 import gimnasios from "@/data/funciones/gimnasios";
@@ -82,6 +83,17 @@ export default function FuncionesHub() {
                                 puedes llevar, y todos los precios se publican con el IVA ya incluido.
                             </p>
                         </div>
+                        <FeatureMedia
+                            media={[{
+                                tipo: "video",
+                                src: "/video/coach-asignar-rutina.mp4",
+                                poster: "/video/coach-asignar-rutina.webp",
+                                w: 1280,
+                                h: 720,
+                                alt: "Asignación de una rutina a un atleta en el panel de TotalGains",
+                                pie: "Asignar una rutina a un atleta, de principio a fin.",
+                            }]}
+                        />
                     </header>
 
                     <div className="fn-hub-grid">

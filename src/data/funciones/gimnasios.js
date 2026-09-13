@@ -34,6 +34,11 @@ const gimnasios = {
             id: 'clases',
             nombre: 'Clases y reservas',
             resumen: 'El aforo cuadra solo y la lista de espera se mueve sin que nadie la mire.',
+            media: [{
+                tipo: 'imagen', src: '/images/gym/clases.webp', w: 1837, h: 916,
+                alt: 'Horario de clases del gimnasio en el panel de TotalGains',
+                pie: 'El horario del centro, con su ocupación real.',
+            }],
             items: [
                 { t: 'Reservas con aforo real', d: 'Aforo por sala, por clase y por horario. Cambiar el aforo de una sala ajusta las clases que cuelgan de ella.' },
                 { t: 'Lista de espera automática', d: 'Cuando alguien cancela, el primero de la lista recibe la notificación al instante. Nadie de recepción tiene que estar pendiente.' },
@@ -80,6 +85,11 @@ const gimnasios = {
             id: 'socios',
             nombre: 'Socios, altas y documentos',
             resumen: 'Dar de alta a alguien deja de ser papeleo repartido en cuatro sitios.',
+            media: [{
+                tipo: 'imagen', src: '/images/gym/clientes.webp', w: 1837, h: 916,
+                alt: 'Listado de socios del gimnasio en el panel de TotalGains',
+                pie: 'La ficha de socios del centro.',
+            }],
             items: [
                 { t: 'Alta en una sola pantalla', d: 'Crear, cobrar y apuntar a clases sin ir y volver tres veces.' },
                 { t: 'Alta simple sin app', d: 'Para el socio que solo quiere entrenar, basta con el nombre.' },
@@ -95,6 +105,11 @@ const gimnasios = {
             id: 'pagos',
             nombre: 'Cobros, caja y facturación',
             resumen: 'Que el dinero del mes cuadre sin sacar una hoja de cálculo.',
+            media: [{
+                tipo: 'imagen', src: '/images/gym/facturacion.webp', w: 1600, h: 798,
+                alt: 'Facturación del gimnasio en el panel de TotalGains',
+                pie: 'Facturación, con proformas y facturas fiscales.',
+            }],
             items: [
                 { t: 'Planes, bonos y cuotas', d: 'Tres tipos de plan, cupo semanal, comodín para la semana que no puede venir y restricción por franja horaria.' },
                 { t: 'Cobro manual y retroactivo', d: 'Precio y duración pactados al momento, y cobro de clases ya dadas que no tenían bono.' },
@@ -124,6 +139,18 @@ const gimnasios = {
             id: 'retencion',
             nombre: 'Retención y analítica',
             resumen: 'Enterarte de que alguien se va mientras todavía puedes hacer algo.',
+            media: [
+                {
+                    tipo: 'imagen', src: '/images/gym/dashboard.webp', w: 1837, h: 916,
+                    alt: 'Panel del gestor del gimnasio con los KPIs del centro',
+                    pie: 'El panel del gestor, en horario de Madrid.',
+                },
+                {
+                    tipo: 'imagen', src: '/images/gym/valoraciones.webp', w: 1600, h: 918,
+                    alt: 'Valoraciones de clases del gimnasio con resumen generado por IA',
+                    pie: 'Valoraciones por clase y por entrenador, con resumen IA.',
+                },
+            ],
             items: [
                 { t: 'Riesgo de baja', d: 'Calculado con la asistencia real del socio, no con la última vez que abrió la app.' },
                 { t: 'Recuperar a quien dejó de venir', d: 'El sistema te señala a los socios que dejaron de comprar bonos y te propone el mensaje con IA.' },
@@ -138,6 +165,11 @@ const gimnasios = {
             id: 'app',
             nombre: 'La app del socio, con tu marca',
             resumen: 'Tus socios se descargan la app de tu gimnasio.',
+            media: [{
+                tipo: 'imagen', src: '/images/gym/branding.webp', w: 1280, h: 2856, vertical: true,
+                alt: 'App del socio con el logo y los colores del gimnasio',
+                pie: 'La app que se descarga tu socio, con la marca del centro.',
+            }],
             items: [
                 { t: 'Marca blanca del centro', d: 'Logo, nombre y colores de tu gimnasio, también en el email de bienvenida.' },
                 { t: 'Sin rastro de proveedor', d: 'Puedes ocultar el botón de mejora a premium en el móvil del socio para que la experiencia sea del centro de principio a fin.' },

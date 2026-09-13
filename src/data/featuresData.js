@@ -63,15 +63,20 @@ export const features = {
         highlight: "Un atleta guiado de forma inmersiva es un atleta que renueva su suscripción mensual.",
         keywords: ["retiene clientes", "feedback motivacional"],
     },
+    /* ⚠️ NO devolver a "Cobros Automáticos". El entrenador autónomo NO tiene
+       cobro in-app: el sistema avisa al atleta y lleva las cuentas, pero el
+       dinero se mueve por el canal del profesional (transferencia, Bizum, TPV).
+       Prometer lo contrario en la home es vender algo que no se puede activar.
+       El cobro domiciliado existe, pero es del vertical GIMNASIO. */
     facturacion: {
         id: "facturacion",
         icon: <CreditCard size={28} color="#4ade80" strokeWidth={2} />,
-        title: "Cobros Automáticos y Gestión de Pagos",
-        subtitle: "Anti-Churn System",
+        title: "Gestión de pagos y avisos de renovación",
+        subtitle: "Sin perseguir a nadie",
         image: "/carrousel/FACTURACION.webp",
-        description: "Automatiza los cobros de tus clientes de entrenamiento. El sistema B2B cobra suscripciones recurrentes, previene impagos y bloquea el acceso en caso de morosidad.",
-        highlight: "Nuestro Sistema Anti-Abandono detecta inactividad antes de perder el Lead.",
-        keywords: ["cobros de tus clientes de entrenamiento", "Anti-Abandono", "suscripciones recurrentes"],
+        description: "Cuotas de cada atleta, previsión del mes, vencidos sin cobrar y ticket medio en un panel, con el historial de cada cambio guardado. Cuando a un atleta le toca renovar, recibe el aviso en su app.",
+        highlight: "TotalGains avisa y lleva la cuenta. El cobro lo sigues haciendo por donde ya cobras.",
+        keywords: ["gestión de pagos", "avisos de renovación", "control de cuotas"],
     },
     progresion: {
         id: "progresion",

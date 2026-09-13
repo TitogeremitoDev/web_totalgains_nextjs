@@ -34,6 +34,12 @@ const entrenadores = {
             id: 'rutinas',
             nombre: 'Rutinas y entrenamiento',
             resumen: 'Del papel en blanco a la periodización completa, sin salir de tu metodología.',
+            media: [{
+                tipo: 'video', src: '/video/coach-primera-rutina.mp4', poster: '/video/coach-primera-rutina.webp',
+                w: 1280, h: 720,
+                alt: 'Creación de una rutina en el panel del entrenador de TotalGains',
+                pie: 'Montar una rutina desde cero en el panel del entrenador.',
+            }],
             items: [
                 { t: 'Generador de rutinas con IA', d: 'Periodizaciones completas en segundos usando solo los ejercicios de tu biblioteca. Antes de aplicar nada ves exactamente qué cambia respecto a la rutina actual, y si no te convence pides otra propuesta.' },
                 { t: 'Montar la rutina escribiendo una frase', d: 'Escribes «PPL de 5 días para Iván, hipertrofia, 4 series de 8 a 12, prioriza pecho y hombro, sin sentadilla» y el formulario se rellena solo con esos datos.' },
@@ -54,6 +60,12 @@ const entrenadores = {
             id: 'nutricion',
             nombre: 'Nutrición',
             resumen: 'Dietas que se montan en minutos y se adaptan sin rehacerlas enteras.',
+            media: [{
+                tipo: 'video', src: '/video/reel-ia-edita-dieta.mp4', poster: '/video/reel-ia-edita-dieta.webp',
+                w: 720, h: 1280, vertical: true,
+                alt: 'La IA de TotalGains edita una dieta ya asignada a partir de una frase',
+                pie: 'Editar una dieta ya asignada escribiendo una frase.',
+            }],
             items: [
                 { t: 'Generador de dietas con IA', d: 'Parte del peso y el objetivo de ese atleta concreto, con las macros de su última dieta ya cargadas, así que ajustas en vez de crear de cero.' },
                 { t: 'Montar la dieta escribiendo una frase o dictándola', d: 'Describes el plan con tus palabras y el formulario queda relleno, listo para revisar.' },
@@ -73,6 +85,12 @@ const entrenadores = {
             id: 'seguimiento',
             nombre: 'Seguimiento y comunicación',
             resumen: 'Saber cómo va cada atleta sin perseguir a nadie por WhatsApp.',
+            media: [{
+                tipo: 'video', src: '/video/app-seguimiento.mp4', poster: '/video/app-seguimiento.webp',
+                w: 720, h: 1280, vertical: true,
+                alt: 'Pantalla de seguimiento del atleta en la app de TotalGains',
+                pie: 'El seguimiento, tal y como lo ve el atleta en su móvil.',
+            }],
             items: [
                 { t: 'Check-in diario y semanal', d: 'El atleta registra su día y su semana desde la app, con recordatorios en su franja horaria.' },
                 { t: 'Fotos de progreso', d: 'Comparativa de antes y después, y el atleta puede marcar fotos como privadas si no quiere compartirlas.' },
@@ -101,6 +119,12 @@ const entrenadores = {
             id: 'ciclo',
             nombre: 'Mi Ciclo',
             resumen: 'Ninguna otra plataforma de gestión para entrenadores lleva esto dentro.',
+            media: [{
+                tipo: 'imagen', src: '/images/blog/entrenar-ciclo-menstrual-privacidad.webp',
+                w: 1344, h: 768,
+                alt: 'Privacidad por capas de Mi Ciclo: la atleta elige qué comparte con su entrenadora',
+                pie: 'Privacidad por capas: la atleta decide categoría por categoría.',
+            }],
             items: [
                 { t: 'Fases del ciclo en el entreno y la nutrición', d: 'No es un calendario aparte: la fase condiciona la planificación dentro de la misma app.' },
                 { t: 'Registro de síntomas con IA', d: 'La atleta lo escribe con sus palabras y el sistema marca los síntomas, sin rellenar casillas.' },
@@ -113,6 +137,12 @@ const entrenadores = {
             id: 'marca',
             nombre: 'Tu app y tu marca',
             resumen: 'Tus atletas se descargan tu app, no la nuestra.',
+            media: [{
+                tipo: 'video', src: '/video/coach-tu-marca.mp4', poster: '/video/coach-tu-marca.webp',
+                w: 1280, h: 720,
+                alt: 'Configuración del branding del entrenador en TotalGains',
+                pie: 'Poner tu logo y tus colores en la app de tus atletas.',
+            }],
             items: [
                 { t: 'App de marca blanca en iOS y Android', d: 'Con tu logo, tu nombre y tus colores. Incluida en todos los planes, también en el gratuito, y sin coste adicional.' },
                 { t: 'Panel web del entrenador', d: 'Todo el trabajo de escritorio desde el navegador, sin instalar nada.' },
@@ -124,6 +154,12 @@ const entrenadores = {
             id: 'negocio',
             nombre: 'Gestión del negocio',
             resumen: 'Lo administrativo, en la misma ficha que el entrenamiento.',
+            media: [{
+                tipo: 'video', src: '/video/coach-invita-escritorio.mp4', poster: '/video/coach-invita-escritorio.webp',
+                w: 1280, h: 720,
+                alt: 'Alta de un cliente nuevo desde el panel web del entrenador',
+                pie: 'Dar de alta a un atleta desde el ordenador.',
+            }],
             items: [
                 { t: 'Gestión de pagos', d: 'Cuotas por atleta, previsión del mes, vencidos sin cobrar, ticket medio y comparación con el mes anterior, con las trimestrales y anuales normalizadas a mensual.' },
                 { t: 'Historial de cobros', d: 'Quién hizo qué y cuándo, guardando el antes y el después de cada modificación. Es lo que resuelve un «a mí me dijiste otro precio».' },
@@ -137,6 +173,12 @@ const entrenadores = {
             id: 'adherencia',
             nombre: 'Lo que engancha al atleta',
             resumen: 'Un atleta que abre la app sola es un atleta que renueva.',
+            media: [{
+                tipo: 'video', src: '/video/app-tour-general.mp4', poster: '/video/app-tour-general.webp',
+                w: 720, h: 1280, vertical: true,
+                alt: 'Recorrido por la app del atleta de TotalGains',
+                pie: 'La app que abre tu atleta cada día.',
+            }],
             items: [
                 { t: 'Logros y medallas', d: 'Sistema de progresión por objetivos cumplidos, con medallas que solo suben de nivel.' },
                 { t: 'Compartir el entreno', d: 'El atleta puede compartir su sesión o su récord, con tu marca en la imagen.' },

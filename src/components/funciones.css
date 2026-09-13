@@ -242,3 +242,37 @@
 @media (prefers-reduced-motion: reduce) {
     .fn-btn, .fn-hub-card, .fn-index-item { transition: none; }
 }
+
+/* ──────────────────────────────────────────────
+   MEDIA DE CATEGORÍA (vídeos y capturas reales)
+   ────────────────────────────────────────────── */
+.fn-media-row {
+    display: grid;
+    gap: 14px;
+    margin: 0 0 26px;
+}
+@media (min-width: 760px) {
+    .fn-media-row.doble { grid-template-columns: 1fr 1fr; }
+}
+
+.fn-media { margin: 0; }
+.fn-media-el {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid var(--fn-line);
+    background: linear-gradient(150deg, #111c33, #070b14);
+    box-shadow: 0 24px 56px -34px rgba(0, 0, 0, 0.9);
+}
+/* Las capturas de móvil y los reels verticales se topan: a ancho completo, un
+   9:16 empuja la lista de funciones fuera de la pantalla y obliga a hacer
+   scroll para ver de qué iba la categoría. */
+.fn-media.vertical .fn-media-el { max-width: 290px; margin: 0 auto; }
+.fn-media-cap {
+    margin: 10px 2px 0;
+    font-size: 0.82rem;
+    line-height: 1.45;
+    color: var(--fn-muted);
+}
+.fn-media.vertical .fn-media-cap { text-align: center; }

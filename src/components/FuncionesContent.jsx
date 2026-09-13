@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FeatureMedia from "./FeatureMedia";
 import "./funciones.css";
 
 /* ──────────────────────────────────────────────
@@ -64,6 +65,10 @@ export default function FuncionesContent({ data, otro }) {
                             <h2 className="fn-h2">{c.nombre}</h2>
                             <p className="fn-cat-sub">{c.resumen}</p>
                         </div>
+
+                        {/* El vídeo va ANTES de la lista: enseña de qué se está
+                            hablando en dos segundos y después se lee el detalle. */}
+                        <FeatureMedia media={c.media} />
                         <ul className="fn-items">
                             {c.items.map((it) => (
                                 <li key={it.t} className="fn-item">
