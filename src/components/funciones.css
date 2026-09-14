@@ -79,16 +79,19 @@
     backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
     border-top: 1px solid var(--fn-line); border-bottom: 1px solid var(--fn-line);
 }
+/* En escritorio CABEN TODAS: si no entran en una línea saltan a la siguiente.
+   Un scroll lateral en un monitor esconde áreas sin avisar de que están ahí, y
+   obliga a arrastrar para descubrirlas. En móvil sí se desliza, que es el
+   gesto natural del teléfono y apilar nueve pastillas se comería la pantalla. */
 .fn-tabs {
-    display: flex; gap: 8px;
+    display: flex; flex-wrap: wrap; gap: 8px;
     padding-top: 13px; padding-bottom: 13px;
-    overflow-x: auto; scrollbar-width: none;
 }
 .fn-tabs::-webkit-scrollbar { display: none; }
 .fn-tab {
     display: inline-flex; align-items: center; gap: 8px;
     flex-shrink: 0; white-space: nowrap;
-    min-height: 40px; padding: 0 16px; border-radius: 20px;
+    min-height: 40px; padding: 0 15px; border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     background: rgba(255, 255, 255, 0.03);
     color: var(--text-secondary); font-size: 0.87rem; font-weight: 600;
@@ -245,6 +248,7 @@
 @media (max-width: 900px) {
     .fn { --fn-nav: 73px; --fn-tabs-h: 62px; }
     .fn-hero { padding: 96px 0 28px; }
+    .fn-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
     .fn-main { padding-top: var(--spacing-lg); }
     .fn-incluido { flex-direction: column; gap: 9px; }
     .fn-media.vertical .fn-media-marco { max-width: 240px; }

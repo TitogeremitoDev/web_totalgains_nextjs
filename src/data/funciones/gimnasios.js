@@ -39,6 +39,7 @@ const gimnasios = {
         {
             id: 'clases',
             nombre: 'Clases y reservas',
+            railNombre: 'Clases',
             resumen: 'El aforo cuadra solo y la lista de espera se mueve sin que nadie la mire.',
             media: [{
                 tipo: 'imagen', src: '/images/gym/clases-detalle.webp',
@@ -66,7 +67,7 @@ const gimnasios = {
         {
             id: 'tienda',
             nombre: 'Tienda: productos y merchandising',
-            railNombre: 'Tienda y productos',
+            railNombre: 'Tienda',
             resumen: 'Camisetas, suplementos y bebidas con su catálogo, su stock, su margen y sus pedidos desde la app del socio.',
             destacado: true,
             nota: 'Si has llegado aquí preguntándote si TotalGains tiene tienda: la tiene, y esto es exactamente lo que hace.',
@@ -93,7 +94,7 @@ const gimnasios = {
         {
             id: 'socios',
             nombre: 'Socios, altas y documentos',
-            railNombre: 'Socios y altas',
+            railNombre: 'Socios',
             resumen: 'Dar de alta a alguien deja de ser papeleo repartido en cuatro sitios.',
             media: [{
                 tipo: 'imagen', src: '/images/gym/clientes-detalle.webp',
@@ -138,6 +139,7 @@ const gimnasios = {
         {
             id: 'equipo',
             nombre: 'Equipo y permisos',
+            railNombre: 'Equipo',
             resumen: 'Cada entrenador ve lo suyo, y solo lo suyo.',
             media: [{
                 tipo: 'imagen', src: '/images/gym/dashboard-detalle.webp',
@@ -157,6 +159,7 @@ const gimnasios = {
         {
             id: 'retencion',
             nombre: 'Retención y analítica',
+            railNombre: 'Retención',
             resumen: 'Enterarte de que alguien se va mientras todavía puedes hacer algo.',
             media: [{
                 tipo: 'imagen', src: '/images/gym/retencion.webp',
@@ -195,7 +198,7 @@ const gimnasios = {
         {
             id: 'ayuda',
             nombre: 'Puesta en marcha y ayuda',
-            railNombre: 'Puesta en marcha',
+            railNombre: 'Ayuda',
             resumen: 'No te dejamos el software y adiós.',
             items: [
                 { t: 'Migración incluida', d: 'Traemos socios, horarios, planes y bonos desde tu plataforma actual. Lo hacemos nosotros y en español.' },

@@ -39,6 +39,7 @@ const entrenadores = {
         {
             id: 'rutinas',
             nombre: 'Rutinas y entrenamiento',
+            railNombre: 'Rutinas',
             resumen: 'Del papel en blanco a la periodización completa, sin salir de tu metodología.',
             media: [{
                 tipo: 'video', src: '/video/coach-primera-rutina.mp4',
@@ -66,6 +67,7 @@ const entrenadores = {
         {
             id: 'nutricion',
             nombre: 'Nutrición',
+            railNombre: 'Nutrición',
             resumen: 'Dietas que se montan en minutos y se adaptan sin rehacerlas enteras.',
             media: [{
                 tipo: 'video', src: '/video/coach-primera-dieta.mp4',
@@ -115,6 +117,7 @@ const entrenadores = {
         {
             id: 'retencion',
             nombre: 'Retención y avisos',
+            railNombre: 'Retención',
             resumen: 'La plataforma te levanta la mano antes de que un atleta se caiga.',
             media: [{
                 tipo: 'imagen', src: '/screenshots/home_coach.webp',
@@ -134,6 +137,7 @@ const entrenadores = {
         {
             id: 'ciclo',
             nombre: 'Mi Ciclo',
+            railNombre: 'Mi Ciclo',
             resumen: 'Ninguna otra plataforma de gestión para entrenadores lleva esto dentro.',
             media: [{
                 tipo: 'imagen', src: '/images/blog/entrenar-ciclo-menstrual-privacidad.webp',
@@ -152,6 +156,7 @@ const entrenadores = {
         {
             id: 'marca',
             nombre: 'Tu app y tu marca',
+            railNombre: 'Tu marca',
             resumen: 'Tus atletas se descargan tu app, no la nuestra.',
             media: [{
                 tipo: 'video', src: '/video/coach-tu-marca.mp4',
@@ -170,6 +175,7 @@ const entrenadores = {
         {
             id: 'negocio',
             nombre: 'Gestión del negocio',
+            railNombre: 'Negocio',
             resumen: 'Lo administrativo, en la misma ficha que el entrenamiento.',
             media: [{
                 tipo: 'video', src: '/video/coach-invita-escritorio.mp4',
@@ -190,7 +196,7 @@ const entrenadores = {
         {
             id: 'adherencia',
             nombre: 'Lo que engancha al atleta',
-            railNombre: 'Adherencia del atleta',
+            railNombre: 'Adherencia',
             resumen: 'Un atleta que abre la app sola es un atleta que renueva.',
             media: [{
                 tipo: 'imagen', src: '/screenshots/perfil-logros.webp',
@@ -208,7 +214,7 @@ const entrenadores = {
         {
             id: 'ayuda',
             nombre: 'Ayuda y puesta en marcha',
-            railNombre: 'Puesta en marcha',
+            railNombre: 'Ayuda',
             resumen: 'Empezar no puede ser un problema tuyo.',
             media: [{
                 tipo: 'video', src: '/video/reel-primeros-pasos.mp4',
