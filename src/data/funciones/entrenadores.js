@@ -120,10 +120,10 @@ const entrenadores = {
             railNombre: 'Retención',
             resumen: 'La plataforma te levanta la mano antes de que un atleta se caiga.',
             media: [{
-                tipo: 'imagen', src: '/screenshots/home_coach.webp',
-                w: 354, h: 791, vertical: true,
-                alt: 'Panel del entrenador en TotalGains con el centro de alertas',
-                pie: 'El panel del entrenador, con las alertas del día arriba.',
+                tipo: 'imagen', src: '/screenshots/coach-riesgo-cliente.webp',
+                w: 800, h: 1785, vertical: true,
+                alt: 'Ficha de un atleta en TotalGains con su riesgo de abandono y las acciones sugeridas',
+                pie: 'La ficha te dice el riesgo del atleta y qué hacer con él.',
             }],
             items: [
                 { t: 'Centro de alertas', d: 'Detecta dolor o lesión en notas de entreno, formularios y comentarios del semanal, además de baja motivación, racha rota y atletas que llevan días sin subir nada.' },
@@ -140,10 +140,10 @@ const entrenadores = {
             railNombre: 'Mi Ciclo',
             resumen: 'Ninguna otra plataforma de gestión para entrenadores lleva esto dentro.',
             media: [{
-                tipo: 'imagen', src: '/images/blog/entrenar-ciclo-menstrual-privacidad.webp',
-                w: 1344, h: 768,
-                alt: 'Privacidad por capas de Mi Ciclo: la atleta elige qué comparte con su entrenadora',
-                pie: 'Privacidad por capas: la atleta decide categoría por categoría.',
+                tipo: 'imagen', src: '/images/ciclo-coach-880.webp',
+                w: 880, h: 682,
+                alt: 'Mi Ciclo en el panel del entrenador: fase folicular, qué hacer esta semana y registros de la atleta',
+                pie: 'Lo que ve la entrenadora: la fase, qué toca esa semana y los registros que la atleta ha decidido compartir.',
             }],
             items: [
                 { t: 'Fases del ciclo en el entreno y la nutrición', d: 'No es un calendario aparte: la fase condiciona la planificación dentro de la misma app.' },
