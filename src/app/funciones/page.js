@@ -86,17 +86,6 @@ export default function FuncionesHub() {
                             </p>
                         </div>
 
-                        <FeatureMedia
-                            media={[{
-                                tipo: "video",
-                                src: "/video/coach-asignar-rutina.mp4",
-                                poster: "/video/coach-asignar-rutina.webp",
-                                w: 1280,
-                                h: 720,
-                                alt: "Asignación de una rutina a un atleta en el panel de TotalGains",
-                                pie: "Asignar una rutina a un atleta, de principio a fin.",
-                            }]}
-                        />
                     </div>
                 </section>
 
@@ -132,6 +121,23 @@ export default function FuncionesHub() {
                             <span className="fn-hub-go">Ver el catálogo completo →</span>
                         </Link>
                     </div>
+
+                    {/* Debajo de las dos tarjetas, no encima. Esta página tiene un
+                        solo trabajo — mandarte a uno de los dos catálogos — y con el
+                        vídeo delante las dos puertas quedaban a 1.158px del inicio:
+                        en un portátil no se veía ninguna de las dos al llegar. */}
+                    <FeatureMedia
+                        viva
+                        media={[{
+                            tipo: "video",
+                            src: "/video/coach-asignar-rutina.mp4",
+                            poster: "/video/coach-asignar-rutina.webp",
+                            w: 1280,
+                            h: 720,
+                            alt: "Asignación de una rutina a un atleta en el panel de TotalGains",
+                            pie: "Asignar una rutina a un atleta, de principio a fin.",
+                        }]}
+                    />
                 </div>
 
                 <section className="fn-cierre">

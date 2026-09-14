@@ -17,6 +17,13 @@
     /* El navbar es fixed y no reserva espacio: 122px en escritorio, ~73 en
        móvil. Las pestañas se pegan justo debajo. */
     --fn-nav: 122px;
+    /* Cuando la barra de pestañas se pega, el navbar SIEMPRE está en estado
+       .scrolled, y ahí mide menos: su padding baja de --spacing-md (24px) a
+       --spacing-sm (16px), o sea 122 − 16 = 106. Con top:122 quedaba una
+       banda transparente de 16px entre las dos barras por la que se veían
+       desfilar las tarjetas. En móvil no encoge (--spacing-md ya vale 16), así
+       que allí los dos valores coinciden. */
+    --fn-nav-fija: 106px;
     --fn-tabs-h: 66px;
     background: var(--bg-darker);
     color: var(--text-primary);
@@ -74,18 +81,35 @@
    A todo el ancho y pegadas bajo el navbar. Sustituyen al rail lateral, que
    con una sola área abierta dejaba media pantalla vacía. */
 .fn-tabs-bar {
-    position: sticky; top: var(--fn-nav); z-index: 30;
+    position: sticky; top: var(--fn-nav-fija); z-index: 30;
     background: rgba(2, 6, 23, 0.94);
     backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
     border-top: 1px solid var(--fn-line); border-bottom: 1px solid var(--fn-line);
 }
-/* En escritorio CABEN TODAS: si no entran en una línea saltan a la siguiente.
-   Un scroll lateral en un monitor esconde áreas sin avisar de que están ahí, y
-   obliga a arrastrar para descubrirlas. En móvil sí se desliza, que es el
-   gesto natural del teléfono y apilar nueve pastillas se comería la pantalla. */
+/* En escritorio CABEN TODAS en una fila y no hay scroll: un scroll lateral en
+   un monitor esconde áreas sin avisar de que están ahí. Por debajo del ancho
+   en el que dejan de caber sí se desliza, que es el gesto del teléfono.
+   ⚠️ Antes el corte estaba en 900px y entre 901 y 1062 no había ni sitio ni
+   scroll: las 9 pestañas envolvían a una segunda fila y la barra pasaba de 66
+   a 112px, comiéndose el 30% de una pantalla de portátil.
+   La cuenta, medida con la DM Sans del build: 9 pestañas = 951px + 8 huecos de
+   8 = 1015, más los 48 de padding del contenedor = 1063px de ventana. Si
+   añades un área o alargas un nombre, RECALCULA este número. */
 .fn-tabs {
-    display: flex; flex-wrap: wrap; gap: 8px;
+    display: flex; flex-wrap: nowrap; gap: 8px;
     padding-top: 13px; padding-bottom: 13px;
+}
+@media (max-width: 1062px) {
+    .fn-tabs {
+        overflow-x: auto; scrollbar-width: none;
+        scroll-snap-type: x proximity;
+        /* Degradado de corte: sin él no hay ninguna señal de que a la derecha
+           quedan 657px de pestañas. En un móvil se ven 3 de 9 y el visitante
+           se cree razonablemente que la página tiene tres áreas. */
+        -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 34px), transparent 100%);
+        mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 34px), transparent 100%);
+    }
+    .fn-tab { scroll-snap-align: start; }
 }
 .fn-tabs::-webkit-scrollbar { display: none; }
 /* Medido con la DM Sans real del build: las 9 pestañas de entrenador pedían
@@ -102,16 +126,28 @@
     text-decoration: none; transition: var(--transition-fast);
 }
 .fn-tab:hover { border-color: rgba(102, 126, 234, 0.5); color: var(--text-primary); }
+/* La pastilla se ve de 38px pero el dedo tiene 44: es el único control de la
+   página y en móvil está en una tira que además hay que arrastrar. Se amplía
+   con un pseudo-elemento para no sumar 6px a una barra que va fija. Con
+   inset -3px las zonas de dos pestañas contiguas quedan a 8px, no se solapan. */
+.fn-tab { position: relative; }
+.fn-tab::after { content: ""; position: absolute; inset: -3px 0; }
 .fn-tab-n { font-size: 0.75rem; font-weight: 700; opacity: 0.55; }
 
 /* ── Un área ── */
-.fn-main { padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-3xl); }
-.fn-cat { scroll-margin-top: calc(var(--fn-nav) + var(--fn-tabs-h)); }
+/* Arriba 24 y no 64 (--spacing-2xl): entre la barra de pestañas y el titular
+   del área había 160px de negro, el 21% de una pantalla de portátil tirado. */
+.fn-main { padding: 24px var(--spacing-md) var(--spacing-3xl); }
+/* +8px de colchón: pegado justo, el titular queda lamiendo la barra. */
+.fn-cat { scroll-margin-top: calc(var(--fn-nav-fija) + var(--fn-tabs-h) + 8px); }
 
 .fn-area-top { margin-bottom: 26px; }
 /* Solo el vertical comparte fila con el titular */
+/* `start` y no `center`: centrada, la cabecera se alineaba contra una media
+   de ~596px de alto y el titular caía 260px más abajo que en las áreas de
+   media apaisada. Al ir pulsando pestañas, el título saltaba. */
 .fn-area-top.con-media.vertical {
-    display: grid; gap: 36px; align-items: center;
+    display: grid; gap: 36px; align-items: start;
     grid-template-columns: minmax(0, 1fr) 320px;
 }
 @media (max-width: 900px) {
@@ -155,7 +191,9 @@
 .fn-item-top { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
 .fn-item-top .fn-check { margin-top: 3px; }
 .fn-item-t { margin: 0; font-size: 0.94rem; font-weight: 700; line-height: 1.35; color: var(--text-primary); }
-.fn-item-d { margin: 0; font-size: 0.84rem; line-height: 1.55; color: var(--text-muted); }
+/* Secundario y no apagado: son 61 descripciones, el 90% del texto de la
+   página, y en #7c7c9a daban 4,82:1 — AA raspando. Ahora ~10:1. */
+.fn-item-d { margin: 0; font-size: 0.84rem; line-height: 1.55; color: var(--text-secondary); }
 
 /* El área destacada se enmarca, sin cambiar la rejilla */
 .fn-cat.destacado .fn-area-top { padding: 24px 24px 4px; }
@@ -172,7 +210,7 @@
 .fn-media-col { display: flex; flex-direction: column; gap: 16px; }
 /* El apaisado a lo grande. A 460px, una grabación de un panel de 1280 se
    queda en un 0,36x y no se lee nada de lo que se está enseñando. */
-.fn-media-col.ancha { margin-bottom: 30px; }
+.fn-media-col.ancha { margin-top: 34px; }
 .fn-media-col.ancha .fn-media-cap { max-width: 880px; }
 .fn-media { margin: 0; }
 .fn-media-marco {
@@ -251,9 +289,8 @@
 
 /* ── Móvil ── */
 @media (max-width: 900px) {
-    .fn { --fn-nav: 73px; --fn-tabs-h: 62px; }
+    .fn { --fn-nav: 73px; --fn-nav-fija: 73px; --fn-tabs-h: 62px; }
     .fn-hero { padding: 96px 0 28px; }
-    .fn-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
     .fn-main { padding-top: var(--spacing-lg); }
     .fn-incluido { flex-direction: column; gap: 9px; }
     .fn-cat.destacado { padding: 0 16px 16px; }
@@ -262,4 +299,18 @@
 
 @media (prefers-reduced-motion: reduce) {
     .fn-tab, .fn-item, .fn-crumbs a { transition: none; }
+}
+
+/* ── Impresión: el catálogo ENTERO ──
+   En pantalla se ve un área y las otras 8 están en display:none. El HTML las
+   lleva todas (que es lo que leen los rastreadores), pero quien imprime o
+   guarda en PDF quiere el inventario completo, no 13 de 61. Gratis: una regla
+   que desactiva el mecanismo de pestañas al imprimir. */
+@media print {
+    @supports selector(:has(*)) {
+        .fn-main .fn-cat { display: block !important; }
+    }
+    .fn-tabs-bar, .fn-media-col, .fn-hero-bg, .fn-ctas { display: none !important; }
+    .fn-cat { break-inside: avoid-page; padding-top: 18px; }
+    .fn-items { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 }

@@ -68,6 +68,18 @@ export default function PreciosPage() {
 
         <Pricing headingAs="h1" />
 
+        {/* El argumento de esta página es "no hay add-ons". El sitio donde eso
+            se demuestra, función por función, es el catálogo — y no se
+            enlazaba desde aquí ni desde ninguna otra página: solo desde el
+            desplegable del navbar y el pie. */}
+        <p className="precios-catalogo">
+          Todas las funciones entran en todos los planes, también en el gratuito.
+          Compruébalo una a una:{" "}
+          <Link href="/funciones/entrenadores/" prefetch={false}>las 61 de entrenador</Link>
+          {" · "}
+          <Link href="/funciones/gimnasios/" prefetch={false}>las 69 de gimnasio</Link>
+        </p>
+
         {/* Las páginas de intención de precio estaban sueltas: la comparativa de
             tarifas de Harbiz no tenía a dónde derivar y acababa enlazando al
             competidor mejor que a nosotros. */}

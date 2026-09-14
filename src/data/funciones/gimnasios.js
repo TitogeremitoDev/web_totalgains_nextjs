@@ -24,6 +24,12 @@ const gimnasios = {
     },
 
     h1: 'Todo lo que hace TotalGains para un gimnasio',
+    /* Va en el intro del héroe, a la vista. Alguien que llega preguntándose
+       "¿esto tiene tienda?" no debería tener que pulsar una pestaña para
+       averiguarlo: la única aparición de la palabra en el primer pantallazo
+       estaba en un chip de 12,48px, la tipografía más pequeña de la página. */
+    destacadas: 'reservas con aforo, tienda con stock y control de caja',
+
     intro:
         'El catálogo completo del módulo de centro, sin letra pequeña. Todo esto entra en cualquier plan de gimnasio, con coaches ilimitados en los tres. Lo único que cambia de un plan a otro es cuántos socios activos tiene el centro.',
 

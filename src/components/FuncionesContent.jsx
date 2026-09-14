@@ -66,8 +66,14 @@ export default function FuncionesContent({ data, otro }) {
                     <span className="fn-badge">{badge}</span>
                     <h1 className="fn-h1 gradient-text">{data.h1}</h1>
                     <p className="fn-intro">
-                        El catálogo completo, sin letra pequeña. <strong>{total} funciones</strong> repartidas
-                        en {data.categorias.length} áreas, y todas entran en cualquier plan.
+                        {/* La negrita va en el argumento que desactiva la objeción de
+                            compra, no en el número. "61 funciones" impresiona;
+                            "todas entran en cualquier plan" es lo que quita el miedo
+                            al recargo por módulos. */}
+                        El catálogo completo, sin letra pequeña. {total} funciones
+                        en {data.categorias.length} áreas
+                        {data.destacadas ? ` — ${data.destacadas} — ` : " "}
+                        y <strong>todas entran en cualquier plan</strong>.
                     </p>
 
                     {/* En franja y no en tarjeta flotante: las tres cosas que
@@ -98,9 +104,12 @@ export default function FuncionesContent({ data, otro }) {
             </nav>
 
             <div className="container fn-main">
-                {data.categorias.map((c) => {
+                {data.categorias.map((c, i) => {
                     const media = c.media && c.media.length ? c.media : null;
                     const vertical = media && media[0].vertical;
+                    /* La primera área es la que se ve sin tocar nada, y la única
+                       que se lleva vídeo de verdad. Ver FeatureMedia. */
+                    const viva = i === 0;
                     return (
                         <section key={c.id} id={c.id} className={`fn-cat ${c.destacado ? "destacado" : ""}`}>
                             {/* Solo el VERTICAL va al lado del titular: un móvil
@@ -119,10 +128,8 @@ export default function FuncionesContent({ data, otro }) {
                                     <p className="fn-cat-sub">{c.resumen}</p>
                                     {c.nota && <p className="fn-cat-nota">{c.nota}</p>}
                                 </div>
-                                {vertical && <FeatureMedia media={media} />}
+                                {vertical && <FeatureMedia media={media} viva={viva} />}
                             </div>
-
-                            {media && !vertical && <FeatureMedia media={media} ancha />}
 
                             <ul className="fn-items">
                                 {c.items.map((it) => (
@@ -135,6 +142,11 @@ export default function FuncionesContent({ data, otro }) {
                                     </li>
                                 ))}
                             </ul>
+
+                            {/* Debajo de la rejilla, no encima: medido, ponerla
+                                delante dejaba la primera función a 1.041 px del
+                                borde de la pantalla en cualquier pestaña. */}
+                            {media && !vertical && <FeatureMedia media={media} ancha viva={viva} />}
                         </section>
                     );
                 })}

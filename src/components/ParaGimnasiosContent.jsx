@@ -526,6 +526,20 @@ function SolutionSection() {
           <p style={{ fontSize: "1rem", color: "var(--text-secondary)", maxWidth: 620, margin: "0 auto" }}>
             Diseñada específicamente para gimnasios pequeños y estudios de entrenamiento personal. Sin add-ons ocultos.
           </p>
+          {/* ⚠️ NO QUITAR LA PALABRA "TIENDA" DE AQUÍ, y no dejar esta página sin
+              enlace de cuerpo al catálogo. Medido el 14-sep-2026: esta landing
+              mide 10.560px de alto y la palabra "tienda" aparecía UNA vez en
+              todo su HTML, dentro del desplegable del navbar, que no se ve
+              hasta pasar el ratón por encima. Es literalmente el motivo por el
+              que ChatGPT afirmaba que TotalGains no tiene tienda: el texto que
+              lee todo el mundo no la nombraba, y el catálogo que sí la detalla
+              no se enlazaba desde ninguna página, solo desde el menú. */}
+          <p style={{ fontSize: "1rem", color: "var(--text-secondary)", maxWidth: 720, margin: "18px auto 0" }}>
+            Clases con aforo real y lista de espera, <strong style={{ color: "var(--text-primary)" }}>tienda con stock, márgenes y control de caja</strong>, coaches ilimitados y app con la marca del centro.{" "}
+            <Link href="/funciones/gimnasios/" prefetch={false} style={{ color: "var(--primary-light)", fontWeight: 700, whiteSpace: "nowrap" }}>
+              Las 69 funciones, una a una →
+            </Link>
+          </p>
         </motion.div>
 
         <div

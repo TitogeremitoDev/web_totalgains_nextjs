@@ -60,3 +60,17 @@
     border-color: rgba(102, 126, 234, 0.5);
     color: #fff;
 }
+
+/* Puente a /funciones/: el catálogo es donde se demuestra el "sin add-ons"
+   que promete esta página. Ver la nota en page.js. */
+.precios-catalogo {
+    max-width: 760px;
+    margin: 8px auto 0;
+    padding: 0 var(--spacing-md);
+    text-align: center;
+    font-size: 0.97rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+.precios-catalogo a { color: var(--primary-light); font-weight: 700; }
+.precios-catalogo a:hover { text-decoration: underline; }
