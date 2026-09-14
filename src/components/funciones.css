@@ -88,20 +88,21 @@
     padding-top: 13px; padding-bottom: 13px;
 }
 .fn-tabs::-webkit-scrollbar { display: none; }
+/* Medido con la DM Sans real del build: las 9 pestañas de entrenador pedían
+   exactamente 1152 px de los 1152 útiles del contenedor. Cero margen, así que
+   saltaban a una segunda fila con cualquier redondeo. Quitando la pastilla del
+   contador (un pill dentro de otro pill) bajan a 980 y sobran 171, un 14 %. */
 .fn-tab {
-    display: inline-flex; align-items: center; gap: 8px;
+    display: inline-flex; align-items: center; gap: 6px;
     flex-shrink: 0; white-space: nowrap;
-    min-height: 40px; padding: 0 15px; border-radius: 20px;
+    min-height: 38px; padding: 0 14px; border-radius: 19px;
     border: 1px solid rgba(255, 255, 255, 0.12);
     background: rgba(255, 255, 255, 0.03);
-    color: var(--text-secondary); font-size: 0.87rem; font-weight: 600;
+    color: var(--text-secondary); font-size: 0.85rem; font-weight: 600;
     text-decoration: none; transition: var(--transition-fast);
 }
 .fn-tab:hover { border-color: rgba(102, 126, 234, 0.5); color: var(--text-primary); }
-.fn-tab-n {
-    font-size: 0.72rem; font-weight: 700;
-    background: rgba(255, 255, 255, 0.12); border-radius: 100px; padding: 2px 7px;
-}
+.fn-tab-n { font-size: 0.75rem; font-weight: 700; opacity: 0.55; }
 
 /* ── Un área ── */
 .fn-main { padding: var(--spacing-2xl) var(--spacing-md) var(--spacing-3xl); }

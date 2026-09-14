@@ -38,7 +38,12 @@ export default function FuncionesContent({ data, otro }) {
             + (i === 0 ? `,.fn:not(:has(.fn-cat:target)) .fn-tab[href="#${c.id}"]` : "")
         ))
         .join(",")
-        + "{background:var(--primary-gradient);border-color:transparent;color:#fff;box-shadow:0 6px 18px -6px rgba(102,126,234,.7)}";
+        + "{background:var(--primary-gradient);border-color:transparent;color:#fff;box-shadow:0 6px 18px -6px rgba(102,126,234,.7)}"
+        + data.categorias.map((c, i) => (
+            `.fn:has(#${c.id}:target) .fn-tab[href="#${c.id}"] .fn-tab-n`
+            + (i === 0 ? `,.fn:not(:has(.fn-cat:target)) .fn-tab[href="#${c.id}"] .fn-tab-n` : "")
+        )).join(",")
+        + "{opacity:.8}";
 
     return (
         <main className="fn">
