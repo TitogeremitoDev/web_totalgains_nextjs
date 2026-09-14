@@ -8,17 +8,20 @@ import Image from "next/image";
    lista fuera de la pantalla y se veía el vídeo en vez de para qué sirve.
 
    Los vídeos van silenciados, en bucle y sin controles: son demostraciones de
-   pocos segundos, no piezas que nadie vaya a "reproducir". Con `preload="none"`
-   y su póster, el navegador no descarga vídeo hasta que decide reproducirlo.
+   pocos segundos, no piezas que nadie vaya a "reproducir". `preload="metadata"` y no "none":
+   con "none" el navegador no baja nada y el arranque automático queda a su
+   criterio (en Safari puede no llegar a ocurrir). Con metadata baja unos pocos
+   KB, el póster cubre la primera pintada y los que quedan fuera de pantalla
+   los difiere el propio navegador.
 
    Sin JavaScript de cliente: el catálogo entero tiene que existir en el HTML.
    ────────────────────────────────────────────── */
 
-export default function FeatureMedia({ media }) {
+export default function FeatureMedia({ media, ancha = false }) {
     if (!media || !media.length) return null;
 
     return (
-        <div className="fn-media-col">
+        <div className={`fn-media-col ${ancha ? "ancha" : ""}`}>
             {media.map((m) => (
                 <figure key={m.src} className={`fn-media ${m.vertical ? "vertical" : ""}`}>
                     <div className="fn-media-marco">
@@ -32,7 +35,7 @@ export default function FeatureMedia({ media }) {
                                 muted
                                 loop
                                 playsInline
-                                preload="none"
+                                preload="metadata"
                                 aria-label={m.alt}
                             >
                                 <source src={m.src} type="video/mp4" />

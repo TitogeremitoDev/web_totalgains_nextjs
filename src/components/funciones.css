@@ -105,13 +105,12 @@
 .fn-cat { scroll-margin-top: calc(var(--fn-nav) + var(--fn-tabs-h)); }
 
 .fn-area-top { margin-bottom: 26px; }
-.fn-area-top.con-media {
+/* Solo el vertical comparte fila con el titular */
+.fn-area-top.con-media.vertical {
     display: grid; gap: 36px; align-items: center;
-    grid-template-columns: minmax(0, 1fr) 460px;
+    grid-template-columns: minmax(0, 1fr) 320px;
 }
-.fn-area-top.con-media.vertical { grid-template-columns: minmax(0, 1fr) 300px; }
 @media (max-width: 900px) {
-    .fn-area-top.con-media,
     .fn-area-top.con-media.vertical { grid-template-columns: minmax(0, 1fr); gap: 22px; }
 }
 
@@ -167,6 +166,11 @@
 
 /* ── Media del área ── */
 .fn-media-col { display: flex; flex-direction: column; gap: 16px; }
+/* El apaisado a lo grande. A 460px, una grabación de un panel de 1280 se
+   queda en un 0,36x y no se lee nada de lo que se está enseñando. */
+.fn-media-col.ancha { margin-bottom: 30px; }
+.fn-media-col.ancha .fn-media-marco { max-width: 880px; }
+.fn-media-col.ancha .fn-media-cap { max-width: 880px; }
 .fn-media { margin: 0; }
 .fn-media-marco {
     border-radius: var(--radius-md); overflow: hidden;

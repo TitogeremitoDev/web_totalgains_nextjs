@@ -98,7 +98,11 @@ export default function FuncionesContent({ data, otro }) {
                     const vertical = media && media[0].vertical;
                     return (
                         <section key={c.id} id={c.id} className={`fn-cat ${c.destacado ? "destacado" : ""}`}>
-                            <div className={`fn-area-top ${media ? (vertical ? "con-media vertical" : "con-media") : ""}`}>
+                            {/* Solo el VERTICAL va al lado del titular: un móvil
+                                estrecho cabe ahí. El apaisado es una grabación de
+                                un panel de escritorio y a 460px no se ve nada, así
+                                que va debajo y grande. */}
+                            <div className={`fn-area-top ${vertical ? "con-media vertical" : ""}`}>
                                 <div className="fn-area-head">
                                     {c.destacado && (
                                         <div className="fn-cat-flag">
@@ -115,8 +119,10 @@ export default function FuncionesContent({ data, otro }) {
                                         </p>
                                     )}
                                 </div>
-                                {media && <FeatureMedia media={media} />}
+                                {vertical && <FeatureMedia media={media} />}
                             </div>
+
+                            {media && !vertical && <FeatureMedia media={media} ancha />}
 
                             <ul className="fn-items">
                                 {c.items.map((it) => (
