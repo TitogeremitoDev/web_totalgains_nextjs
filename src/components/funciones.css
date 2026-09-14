@@ -194,6 +194,34 @@
 .fn-media-cap { margin: 11px 2px 0; font-size: 0.78rem; line-height: 1.5; color: var(--text-muted); }
 .fn-media.vertical .fn-media-cap { text-align: center; }
 
+
+/* ──────────────────────────────────────────────
+   UNA ÁREA A LA VEZ
+
+   Con las 9 áreas desplegadas la página medía más de 8.000px: un scroll sin
+   fin donde no se encontraba nada. El rail ayudaba a saltar, pero no arreglaba
+   que estuviera TODO pintado.
+
+   Ahora el rail funciona como pestañas y solo se ve el área elegida. Se hace
+   con `:target`, es decir, con el ancla de la URL: CERO JavaScript, y el HTML
+   sigue llevando las 61 funciones enteras, que es justo lo que necesitan los
+   sistemas de IA que describen el producto.
+
+   Va dentro de @supports: en un navegador sin `:has()` no se oculta nada y se
+   ve la versión larga de antes. Peor, pero nunca roto.
+   ────────────────────────────────────────────── */
+@supports selector(:has(*)) {
+    .fn-main .fn-cat { display: none; }
+    /* Sin ancla en la URL manda la primera área */
+    .fn-main .fn-cat:first-of-type { display: grid; }
+    /* Con ancla manda el ancla */
+    .fn-main:has(.fn-cat:target) .fn-cat:first-of-type { display: none; }
+    .fn-main .fn-cat:target { display: grid; }
+
+    /* El área abierta no necesita empujar: se queda donde está el rail */
+    .fn-cat { padding-bottom: var(--spacing-2xl); }
+}
+
 /* ── Preguntas ── */
 .fn-faq { padding: var(--spacing-lg) 0 0; border-top: 1px solid var(--fn-line); }
 .fn-faq .fn-h2 { margin-bottom: var(--spacing-md); }

@@ -31,6 +31,18 @@ export default function FuncionesContent({ data, otro }) {
     const unidad = data.perfil === "gimnasio" ? "socios activos" : "atletas activos";
     const esGym = data.perfil === "gimnasio";
 
+    /* Marca en el rail el área abierta. Son N reglas de una línea generadas de
+       los propios datos: no hay forma de escribirlo una sola vez en CSS, y
+       meter JavaScript por un estado de color sacaría el catálogo del HTML
+       inicial, que es justo lo que esta página no se puede permitir. */
+    const cssAreaAbierta = data.categorias
+        .map((c, i) => (
+            `.fn-layout:has(#${c.id}:target) .fn-rail-item[href="#${c.id}"]`
+            + (i === 0 ? `,.fn-layout:not(:has(.fn-cat:target)) .fn-rail-item[href="#${c.id}"]` : "")
+        ))
+        .join(",")
+        + "{background:rgba(102,126,234,.16);border-left-color:#8b9df8;color:#fff;font-weight:700}";
+
     return (
         <main className="fn">
             {/* ── Hero ──
@@ -78,6 +90,8 @@ export default function FuncionesContent({ data, otro }) {
                     </div>
                 </div>
             </section>
+
+            <style dangerouslySetInnerHTML={{ __html: cssAreaAbierta }} />
 
             <div className="container fn-layout">
                 {/* Rail de áreas. Fijo: es lo que evita que esto sea un muro. */}
