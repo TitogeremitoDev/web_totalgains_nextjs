@@ -1,11 +1,27 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import './Navbar.css';
 import { trackEvent } from '@/components/Analytics';
+
+/* Estado "scrolled" leído del navegador en el primer render de cliente, no
+   solo cuando llega un evento de scroll. Al entrar por una URL con ancla
+   (/funciones/gimnasios/#tienda, que es como llega quien viene de una IA o
+   del hub) el navegador ya ha saltado ANTES de que React se monte y no vuelve
+   a haber evento: con el useState + listener de antes la barra se quedaba
+   transparente y los botones del héroe se leían encima del menú hasta que el
+   visitante movía la rueda un píxel. Medido en navegador real el 14-sep-2026
+   (navScrolled:false a scrollY 534). useSyncExternalStore lo lee al montar y
+   mantiene el HTML del servidor en `false` para no romper la hidratación. */
+const suscribirScroll = (cb) => {
+    window.addEventListener('scroll', cb, { passive: true });
+    return () => window.removeEventListener('scroll', cb);
+};
+const leerScrolled = () => window.scrollY > 50;
+const leerScrolledEnServidor = () => false;
 
 const navLinks = [
     { href: '#how-it-works', label: 'Cómo Funciona' },
@@ -37,7 +53,7 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-    const [scrolled, setScrolled] = useState(false);
+    const scrolled = useSyncExternalStore(suscribirScroll, leerScrolled, leerScrolledEnServidor);
     const [menuOpen, setMenuOpen] = useState(false);
     const pathname = usePathname();
     const router = useRouter();
@@ -71,15 +87,6 @@ const Navbar = () => {
             router.push(`/${targetHref}`);
         }
     };
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
 
     // Las landings de embudo (/demo/*) van sin menú: llevan su propia barra
     // mínima con una sola acción. Ver src/app/demo/layout.js.
