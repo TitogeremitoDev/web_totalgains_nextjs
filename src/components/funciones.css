@@ -155,20 +155,47 @@
 /* Arriba 24 y no 64 (--spacing-2xl): entre la barra de pestañas y el titular
    del área había 160px de negro, el 21% de una pantalla de portátil tirado. */
 .fn-main { padding: 24px var(--spacing-md) var(--spacing-3xl); }
-/* +8px de colchón: pegado justo, el titular queda lamiendo la barra. */
-.fn-cat { scroll-margin-top: calc(var(--fn-nav-fija) + var(--fn-tabs-h) + 8px); }
+/* ⚠️ DOS REGLAS GLOBALES ENTRAN AQUÍ SIN PEDIR PERMISO, medidas en el
+   navegador real el 14-sep-2026 tras creer que estaban arregladas:
+   1. `section { padding: var(--spacing-3xl) 0 }` (globals.css): cada área es
+      un <section> y heredaba 96px arriba y 96 abajo. El informe lo señaló
+      ("96 px padding-top de .fn-cat") y no me lo creí porque no estaba en
+      este fichero. Por eso el titular caía a 376px del borde con la barra
+      aún sin pegar. Aquí se pisa: 16px arriba, nada abajo (el índice y la
+      FAQ traen su propio margen). `.fn-cat.destacado` tiene su padding propio
+      y más especificidad, no le afecta.
+   2. `html { scroll-padding-top: 100px }` (globals.css:114): se SUMA al
+      scroll-margin del ancla. Con 180 de margen el área aterrizaba a 280px,
+      100 más abajo de lo previsto y con la barra todavía en flujo. Se resta.
+   Cuenta resultante al pulsar una pestaña (escritorio): el área queda a
+   100 + 80 = 180px del borde, o sea 8px bajo la barra pegada (106 + 66), el
+   titular a 196 y la primera tarjeta a ~290. Antes de todo esto: 1.041. */
+.fn {
+    --fn-scroll-pad-global: 100px;
+}
+.fn-cat {
+    padding: 16px 0 0;
+    scroll-margin-top: calc(var(--fn-nav-fija) + var(--fn-tabs-h) + 8px - var(--fn-scroll-pad-global));
+}
 
 .fn-area-top { margin-bottom: 26px; }
-/* Solo el vertical comparte fila con el titular */
-/* `start` y no `center`: centrada, la cabecera se alineaba contra una media
-   de ~596px de alto y el titular caía 260px más abajo que en las áreas de
-   media apaisada. Al ir pulsando pestañas, el título saltaba. */
-.fn-area-top.con-media.vertical {
-    display: grid; gap: 36px; align-items: start;
-    grid-template-columns: minmax(0, 1fr) 320px;
+/* Media VERTICAL: columna derecha que abarca titular Y rejilla. Las tarjetas
+   pasan a dos columnas en el hueco que queda (852px) y empiezan a la misma
+   altura que en las áreas apaisadas. Antes la captura compartía fila solo con
+   el titular y empujaba la rejilla ~450px hacia abajo. */
+.fn-area.con-vertical {
+    display: grid; column-gap: 36px; align-items: start;
+    grid-template-columns: minmax(0, 1fr) 264px;
+    grid-template-areas: "top media" "items media";
 }
+.fn-area.con-vertical .fn-area-top { grid-area: top; }
+.fn-area.con-vertical .fn-items { grid-area: items; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.fn-area.con-vertical .fn-media-col { grid-area: media; }
 @media (max-width: 900px) {
-    .fn-area-top.con-media.vertical { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+    .fn-area.con-vertical {
+        grid-template-columns: minmax(0, 1fr); row-gap: 26px;
+        grid-template-areas: "top" "items" "media";
+    }
 }
 
 .fn-h2 {

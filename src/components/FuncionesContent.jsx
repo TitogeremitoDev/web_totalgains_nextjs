@@ -121,11 +121,16 @@ export default function FuncionesContent({ data, otro }) {
                     const vertical = media && media[0].vertical;
                     return (
                         <section key={c.id} id={c.id} className={`fn-cat ${c.destacado ? "destacado" : ""}`}>
-                            {/* Solo el VERTICAL va al lado del titular: un móvil
-                                estrecho cabe ahí. El apaisado es una grabación de
-                                un panel de escritorio y a 460px no se ve nada, así
-                                que va debajo y grande. */}
-                            <div className={`fn-area-top ${vertical ? "con-media vertical" : ""}`}>
+                            {/* .fn-area es quien maqueta; la sección solo se
+                                muestra u oculta (las reglas de pestañas le ponen
+                                display:block y pisarían un display:grid aquí).
+                                Con media VERTICAL, la captura va en una columna a
+                                la derecha junto a las TARJETAS, no junto al
+                                titular: medido, compartir fila con el titular
+                                dejaba la primera tarjeta a 708-827px porque la
+                                fila medía lo que mide el móvil. */}
+                            <div className={`fn-area ${vertical ? "con-vertical" : ""}`}>
+                            <div className="fn-area-top">
                                 <div className="fn-area-head">
                                     {c.destacado && (
                                         <div className="fn-cat-flag">
@@ -137,7 +142,6 @@ export default function FuncionesContent({ data, otro }) {
                                     <p className="fn-cat-sub">{c.resumen}</p>
                                     {c.nota && <p className="fn-cat-nota">{c.nota}</p>}
                                 </div>
-                                {vertical && <FeatureMedia media={media} />}
                             </div>
 
                             <ul className="fn-items">
@@ -155,7 +159,8 @@ export default function FuncionesContent({ data, otro }) {
                             {/* Debajo de la rejilla, no encima: medido, ponerla
                                 delante dejaba la primera función a 1.041 px del
                                 borde de la pantalla en cualquier pestaña. */}
-                            {media && !vertical && <FeatureMedia media={media} ancha />}
+                            {media && <FeatureMedia media={media} ancha={!vertical} />}
+                            </div>
                         </section>
                     );
                 })}
