@@ -1,347 +1,284 @@
 /* ──────────────────────────────────────────────
    CATÁLOGO DE FUNCIONES (/funciones/*)
 
-   Reutiliza el sistema del sitio en vez de traer uno propio: `.container`,
-   `.glass`, `.btn`, `.gradient-text` y los tokens de globals.css. Aquí solo
-   viven las piezas que no existían (índice, rejilla de funciones, media de
-   categoría). La primera versión traía su propia caja, su propio azul y sus
-   propios botones, y parecía otra web pegada dentro de esta.
+   Reutiliza el sistema del sitio: `.container`, `.glass`, `.btn`,
+   `.gradient-text` y los tokens de globals.css. Aquí solo viven las piezas que
+   no existían: el rail de áreas, las filas de función y la columna de media.
 
-   Densidad alta a propósito: quien llega aquí está comparando, y la
-   comparación se gana enseñándolo todo de una vez.
+   El reparto de los 1200px del contenedor, que es lo que sostiene todo:
+       rail 256  +  32  +  funciones 524  +  32  +  media 356  =  1200
+   Un área destacada sin media ocupa las dos últimas: 524 + 32 + 356 = 912.
    ────────────────────────────────────────────── */
 
 .fn {
     --fn-line: rgba(255, 255, 255, 0.08);
+    --fn-rail: 256px;
+    --fn-media: 356px;
+    --fn-gap: 32px;
+    /* El navbar es fixed y no reserva espacio. 122px medidos en escritorio,
+       ~73 en móvil: todo lo que se ancle arriba parte de ahí. */
+    --fn-top: 146px;
     background: var(--bg-darker);
     color: var(--text-primary);
 }
 
-/* ── Hero ──
-   El navbar es `position: fixed` y NO reserva espacio. Medido en /precios/:
-   122px de alto en escritorio y ~73px en móvil. Con menos colchón que este,
-   el breadcrumb y el h1 salen por debajo de la barra. */
-.fn-hero {
-    position: relative;
-    padding: 140px 0 56px;
-    overflow: hidden;
-}
-@media (max-width: 768px) {
-    .fn-hero { padding: 96px 0 40px; }
-}
+.fn *, .fn *::before, .fn *::after { box-sizing: border-box; }
 
+/* ── Hero ── */
+.fn-hero { position: relative; padding: 140px 0 44px; overflow: hidden; }
 .fn-hero-bg {
     position: absolute;
     inset: 0;
     pointer-events: none;
     background:
-        radial-gradient(ellipse 60% 60% at 20% 40%, rgba(102, 126, 234, 0.18) 0%, transparent 60%),
-        radial-gradient(ellipse 50% 50% at 80% 60%, rgba(118, 75, 162, 0.12) 0%, transparent 60%);
+        radial-gradient(ellipse 50% 55% at 18% 30%, rgba(102, 126, 234, 0.16) 0%, transparent 62%),
+        radial-gradient(ellipse 44% 50% at 82% 55%, rgba(118, 75, 162, 0.10) 0%, transparent 62%);
 }
-
 .fn-hero-inner { position: relative; z-index: 1; }
 
 .fn-crumbs {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    align-items: center;
-    font-size: 0.82rem;
-    color: var(--text-muted);
-    margin-bottom: 22px;
+    display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+    font-size: 0.82rem; color: var(--text-muted); margin-bottom: 20px;
 }
 .fn-crumbs a { color: var(--text-muted); text-decoration: none; transition: var(--transition-fast); }
 .fn-crumbs a:hover { color: var(--text-primary); }
 
-.fn-badge {
-    display: inline-block;
-    padding: 5px 14px;
-    border-radius: 20px;
-    background: rgba(102, 126, 234, 0.12);
-    border: 1px solid rgba(102, 126, 234, 0.25);
-    color: var(--primary-light);
-    font-size: 0.78rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    margin-bottom: 20px;
-}
+.fn-hero-grid { display: grid; gap: 40px; align-items: start; }
+@media (min-width: 1000px) { .fn-hero-grid { grid-template-columns: 1fr 400px; gap: 48px; } }
 
+.fn-badge {
+    display: inline-block; padding: 5px 14px; border-radius: 20px;
+    background: rgba(102, 126, 234, 0.12); border: 1px solid rgba(102, 126, 234, 0.25);
+    color: var(--primary-light); font-size: 0.78rem; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 18px;
+}
 .fn-h1 {
     font-family: var(--font-display), var(--font-primary);
-    font-size: clamp(2rem, 5vw, 3.2rem);
-    font-weight: 800;
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin: 0 0 20px;
-    max-width: 20ch;
-    text-wrap: balance;
+    font-size: clamp(2rem, 4.6vw, 3.25rem);
+    font-weight: 800; line-height: 1.08; letter-spacing: -0.02em;
+    margin: 0 0 18px; max-width: 15ch; text-wrap: balance;
 }
-
 .fn-intro {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    line-height: 1.65;
-    max-width: 68ch;
-    margin: 0 0 28px;
+    font-size: 1.06rem; line-height: 1.6; color: var(--text-secondary);
+    max-width: 56ch; margin: 0 0 26px;
+}
+.fn-intro strong { color: var(--text-primary); font-weight: 700; }
+.fn-ctas { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+
+.fn-todo { padding: 24px; border-radius: var(--radius-lg); position: relative; }
+.fn-todo-t { margin: 0 0 6px; font-size: 1rem; font-weight: 700; color: var(--text-primary); }
+.fn-todo-d { margin: 0 0 18px; font-size: 0.84rem; line-height: 1.55; color: var(--text-muted); }
+.fn-todo-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+.fn-todo-list li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 0.85rem; line-height: 1.45; color: var(--text-secondary);
 }
 
-.fn-todo {
-    padding: 22px 24px;
-    border-radius: var(--radius-md);
-    margin-bottom: 28px;
-    max-width: 860px;
-    position: relative;
-}
-.fn-todo-t {
-    margin: 0 0 8px;
-    font-size: 1.02rem;
-    font-weight: 700;
-    color: var(--text-primary);
-}
-.fn-todo-d {
-    margin: 0;
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: var(--text-secondary);
-}
+.fn-check { flex-shrink: 0; margin-top: 3px; }
 
-.fn-ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+/* ── Las tres columnas ── */
+.fn-layout { display: flex; gap: var(--fn-gap); align-items: flex-start; padding-bottom: var(--spacing-2xl); }
 
-/* ── Índice de categorías ── */
-.fn-index-wrap {
-    padding: 0 0 var(--spacing-2xl);
-    border-bottom: 1px solid var(--fn-line);
+.fn-rail { width: var(--fn-rail); flex-shrink: 0; position: sticky; top: var(--fn-top); }
+.fn-rail-label {
+    margin: 0 0 12px; font-size: 0.69rem; font-weight: 700;
+    letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted);
 }
-.fn-index { display: flex; flex-wrap: wrap; gap: 10px; }
-.fn-index-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 9px;
-    padding: 10px 18px;
-    border-radius: 100px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.03);
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
+.fn-rail-nav { display: flex; flex-direction: column; gap: 2px; }
+.fn-rail-item {
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 11px 14px; border-radius: 10px;
+    border-left: 2px solid transparent;
+    color: var(--text-secondary); font-size: 0.875rem; text-decoration: none;
     transition: var(--transition-fast);
 }
-.fn-index-item:hover {
-    border-color: rgba(102, 126, 234, 0.5);
-    background: rgba(102, 126, 234, 0.1);
-    color: var(--text-primary);
+.fn-rail-item:hover { background: rgba(255, 255, 255, 0.04); color: var(--text-primary); }
+/* :target marca el área a la que acabas de saltar, sin una línea de JS */
+.fn-cat:target { scroll-margin-top: var(--fn-top); }
+.fn-rail-n {
+    font-size: 0.74rem; font-weight: 700; color: var(--text-muted);
+    background: rgba(255, 255, 255, 0.07); border-radius: 100px; padding: 2px 8px;
 }
-.fn-index-n {
-    font-size: 0.74rem;
-    font-weight: 700;
-    color: var(--text-muted);
-    background: rgba(255, 255, 255, 0.07);
-    border-radius: 100px;
-    padding: 2px 8px;
-}
+.fn-rail-cta { margin-top: 18px; padding: 16px; border-radius: var(--radius-md); }
+.fn-rail-cta-t { margin: 0 0 4px; font-size: 0.85rem; font-weight: 700; }
+.fn-rail-cta-d { margin: 0 0 12px; font-size: 0.78rem; line-height: 1.5; color: var(--text-muted); }
+.fn-rail-btn { width: 100%; padding: 10px 14px; font-size: 0.82rem; }
 
-/* ── Categorías ── */
-.fn-body { padding-top: var(--spacing-3xl); }
+.fn-main { flex: 1; min-width: 0; }
 
+/* ── Un área ── */
+/* Rejilla con áreas nombradas: es lo que permite que en escritorio el vídeo
+   ocupe una columna entera a la derecha y en móvil se cuele ENTRE el titular y
+   la lista, con el mismo HTML y sin una línea de JavaScript. */
 .fn-cat {
-    padding: 0;
-    margin-bottom: var(--spacing-3xl);
-    scroll-margin-top: 130px;
+    display: grid;
+    gap: 0 var(--fn-gap);
+    grid-template-columns: minmax(0, 1fr) var(--fn-media);
+    grid-template-areas:
+        "head  media"
+        "list  media";
+    align-items: start;
+    padding: 0 0 var(--spacing-3xl);
+    scroll-margin-top: var(--fn-top);
 }
-.fn-cat-head { margin-bottom: 26px; }
+.fn-cat.sin-media {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "head" "list";
+}
+.fn-cat.destacado {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "caja";
+}
+.fn-cat-head { grid-area: head; }
+.fn-cat-caja { grid-area: caja; }
+.fn-items { grid-area: list; }
 
 .fn-h2 {
     font-family: var(--font-display), var(--font-primary);
-    font-size: clamp(1.5rem, 3.4vw, 2.2rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-    margin: 0 0 10px;
-    text-wrap: balance;
+    font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+    font-weight: 800; letter-spacing: -0.02em; line-height: 1.2;
+    margin: 0 0 8px; text-wrap: balance;
 }
-.fn-cat-sub {
-    margin: 0;
-    color: var(--text-secondary);
-    font-size: 1.02rem;
-    line-height: 1.6;
-    max-width: 64ch;
-}
+.fn-cat-sub { margin: 0; color: var(--text-secondary); font-size: 0.95rem; line-height: 1.55; }
+.fn-cat-nota { margin: 10px 0 0; font-size: 0.84rem; line-height: 1.55; color: var(--text-muted); }
 
-/* La Tienda es la sección que existía y la web nunca había contado, así que
-   se marca. El resto del catálogo no compite con ella. */
-.fn-cat.destacado {
+.fn-items { list-style: none; margin: 22px 0 0; padding: 0; }
+.fn-item {
+    display: flex; gap: 12px;
+    padding: 15px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+.fn-item-t { margin: 0 0 4px; font-size: 0.94rem; font-weight: 700; line-height: 1.35; color: var(--text-primary); }
+.fn-item-d { margin: 0; font-size: 0.84rem; line-height: 1.55; color: var(--text-muted); }
+
+/* ── Área destacada: ocupa centro + media (912px) porque no tiene captura ── */
+.fn-cat-caja {
     border: 1px solid rgba(102, 126, 234, 0.3);
     border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    padding: 28px;
     background:
         radial-gradient(ellipse 70% 60% at 0% 0%, rgba(102, 126, 234, 0.14) 0%, transparent 60%),
         rgba(255, 255, 255, 0.02);
 }
-
-.fn-items {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: grid;
-    gap: 14px;
+.fn-cat-flag { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 16px; }
+.fn-cat-flag-n {
+    padding: 5px 13px; border-radius: 20px; background: var(--primary-gradient);
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #fff;
 }
-@media (min-width: 700px) { .fn-items { grid-template-columns: 1fr 1fr; } }
-@media (min-width: 1024px) { .fn-items { grid-template-columns: 1fr 1fr 1fr; } }
-
-.fn-item {
-    border: 1px solid var(--fn-line);
-    border-radius: var(--radius-md);
-    background: rgba(255, 255, 255, 0.025);
-    padding: 18px 20px;
-    transition: var(--transition-fast);
-}
-.fn-item:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.15);
-}
-.fn-item-t {
-    margin: 0 0 8px;
-    font-size: 1rem;
-    font-weight: 700;
-    line-height: 1.3;
-    letter-spacing: -0.01em;
-    color: var(--text-primary);
-    padding-left: 24px;
-    position: relative;
-}
-/* La marca de verificación va en CSS y no como icono: son más de 90 items y
-   un componente por cada uno engordaría la página sin aportar nada. */
-.fn-item-t::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0.36em;
-    width: 13px;
-    height: 7px;
-    border-left: 2.5px solid #4ade80;
-    border-bottom: 2.5px solid #4ade80;
-    transform: rotate(-45deg);
-}
-.fn-item-d {
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: var(--text-muted);
-}
-
-/* ── Preguntas ── */
-.fn-faq { padding: 0 0 var(--spacing-2xl); }
-.fn-faq .fn-h2 { margin-bottom: var(--spacing-md); }
-.fn-faq-item {
+.fn-cat-flag-t { font-size: 0.82rem; color: var(--primary-light); }
+.fn-items.dos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 28px; }
+.fn-cat-pie {
+    margin: 22px 0 0; padding-top: 18px;
     border-top: 1px solid var(--fn-line);
-    padding: 24px 0;
-}
-.fn-faq-q {
-    margin: 0 0 10px;
-    font-size: 1.08rem;
-    font-weight: 700;
-    line-height: 1.35;
-    color: var(--text-primary);
-}
-.fn-faq-a {
-    margin: 0;
-    color: var(--text-secondary);
-    font-size: 0.96rem;
-    line-height: 1.7;
-    max-width: 80ch;
+    font-size: 0.78rem; color: var(--text-muted);
 }
 
-/* ── Cierre ── */
-.fn-cierre {
-    position: relative;
-    overflow: hidden;
-    border-top: 1px solid var(--fn-line);
-    padding: var(--spacing-3xl) 0;
-    text-align: center;
+/* ── Media, en su columna y fija ── */
+.fn-media-col {
+    grid-area: media;
+    position: sticky; top: var(--fn-top);
+    display: flex; flex-direction: column; gap: 18px;
 }
-.fn-cierre-inner { position: relative; z-index: 1; }
-.fn-cierre .fn-intro { margin-left: auto; margin-right: auto; }
-.fn-cierre .fn-ctas { justify-content: center; }
-
-/* ── Hub ── */
-.fn-hub-grid {
-    display: grid;
-    gap: 20px;
-    padding-bottom: var(--spacing-3xl);
-}
-@media (min-width: 860px) { .fn-hub-grid { grid-template-columns: 1fr 1fr; } }
-
-.fn-hub-card {
-    display: block;
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-lg);
-    text-decoration: none;
-    color: inherit;
-}
-.fn-hub-card h2 {
-    font-family: var(--font-display), var(--font-primary);
-    font-size: 1.45rem;
-    font-weight: 800;
-    margin: 0 0 12px;
-    letter-spacing: -0.02em;
-}
-.fn-hub-card > p {
-    margin: 0 0 18px;
-    color: var(--text-secondary);
-    font-size: 0.97rem;
-    line-height: 1.6;
-}
-.fn-hub-tags { display: flex; flex-wrap: wrap; gap: 8px; }
-.fn-hub-tag {
-    font-size: 0.78rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 100px;
-    padding: 5px 12px;
-}
-.fn-hub-go {
-    display: inline-block;
-    margin-top: 18px;
-    font-weight: 700;
-    color: var(--primary-light);
-    font-size: 0.94rem;
-}
-
-/* ──────────────────────────────────────────────
-   MEDIA DE CATEGORÍA (vídeos y capturas reales)
-   ────────────────────────────────────────────── */
-.fn-media-row {
-    display: grid;
-    gap: 18px;
-    margin: 0 0 28px;
-}
-@media (min-width: 760px) {
-    .fn-media-row.doble { grid-template-columns: 1fr 1fr; }
-}
-
 .fn-media { margin: 0; }
-.fn-media-el {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: var(--radius-md);
+.fn-media-marco {
+    border-radius: var(--radius-md); overflow: hidden;
     border: 1px solid var(--fn-line);
     background: linear-gradient(150deg, #111c33, #070b14);
     box-shadow: 0 24px 56px -34px rgba(0, 0, 0, 0.9);
 }
-/* A ancho completo del contenedor, un 16:9 ocupa 675px de alto y empuja la
-   lista de funciones fuera de la pantalla: se ve el vídeo y no de qué iba la
-   categoría. Los verticales, peor todavía. */
-.fn-media-row:not(.doble) .fn-media:not(.vertical) .fn-media-el { max-width: 780px; }
-.fn-media.vertical .fn-media-el { max-width: 290px; margin: 0 auto; }
-.fn-media-cap {
-    margin: 12px 2px 0;
-    font-size: 0.84rem;
-    line-height: 1.5;
-    color: var(--text-muted);
-    max-width: 780px;
+.fn-media-el { display: block; width: 100%; height: auto; }
+/* Las capturas de móvil y los reels verticales se topan: a ancho de columna,
+   un 9:16 mide 633px de alto y desplaza el pie fuera de la pantalla. */
+.fn-media.vertical .fn-media-marco { max-width: 244px; margin: 0 auto; border-radius: 22px; padding: 7px; }
+.fn-media.vertical .fn-media-el { border-radius: 16px; }
+.fn-media-cap { margin: 11px 2px 0; font-size: 0.78rem; line-height: 1.5; color: var(--text-muted); }
+.fn-media.vertical .fn-media-cap { text-align: center; }
+
+/* ── Preguntas ── */
+.fn-faq { padding: var(--spacing-lg) 0 0; border-top: 1px solid var(--fn-line); }
+.fn-faq .fn-h2 { margin-bottom: var(--spacing-md); }
+.fn-faq-grid { display: grid; gap: 0 44px; }
+@media (min-width: 900px) { .fn-faq-grid { grid-template-columns: 1fr 1fr; } }
+.fn-faq-item { border-top: 1px solid rgba(255, 255, 255, 0.07); padding: 20px 0; }
+.fn-faq-q { margin: 0 0 8px; font-size: 0.98rem; font-weight: 700; line-height: 1.35; color: var(--text-primary); }
+.fn-faq-a { margin: 0; font-size: 0.86rem; line-height: 1.65; color: var(--text-muted); }
+
+/* ── Cierre ── */
+.fn-cierre {
+    position: relative; overflow: hidden;
+    border-top: 1px solid var(--fn-line);
+    padding: var(--spacing-3xl) 0; text-align: center;
 }
-.fn-media.vertical .fn-media-cap { text-align: center; max-width: none; }
+.fn-cierre-inner { position: relative; z-index: 1; }
+.fn-cierre .fn-intro { margin-left: auto; margin-right: auto; }
+.fn-cierre .fn-ctas { justify-content: center; }
+.fn-cierre-nota { margin: 20px 0 0; font-size: 0.85rem; color: var(--text-muted); }
+
+/* ── Hub ── */
+.fn-hub-grid { display: grid; gap: 20px; padding-bottom: var(--spacing-3xl); }
+@media (min-width: 860px) { .fn-hub-grid { grid-template-columns: 1fr 1fr; } }
+.fn-hub-card { display: block; padding: var(--spacing-lg); border-radius: var(--radius-lg); text-decoration: none; color: inherit; }
+.fn-hub-card h2 {
+    font-family: var(--font-display), var(--font-primary);
+    font-size: 1.4rem; font-weight: 800; margin: 0 0 10px; letter-spacing: -0.02em;
+}
+.fn-hub-card > p { margin: 0 0 16px; color: var(--text-secondary); font-size: 0.93rem; line-height: 1.6; }
+.fn-hub-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+.fn-hub-tag {
+    font-size: 0.76rem; font-weight: 600; color: var(--text-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 100px; padding: 4px 11px;
+}
+.fn-hub-go { display: inline-block; margin-top: 16px; font-weight: 700; color: var(--primary-light); font-size: 0.9rem; }
+
+/* ──────────────────────────────────────────────
+   MÓVIL
+   El rail no cabe al lado, así que se convierte en una tira de pastillas
+   pegada bajo el navbar. Es la misma navegación: deslizas en horizontal y
+   sigues sabiendo qué áreas hay sin volver arriba.
+   ────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .fn { --fn-top: 88px; }
+    .fn-hero { padding: 96px 0 32px; }
+
+    .fn-layout { display: block; }
+
+    .fn-rail {
+        position: sticky; top: 73px; z-index: 20;
+        width: auto; margin: 0 calc(var(--spacing-md) * -1) 28px;
+        padding: 12px 0 12px var(--spacing-md);
+        background: rgba(2, 6, 23, 0.96);
+        backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+        border-top: 1px solid var(--fn-line); border-bottom: 1px solid var(--fn-line);
+    }
+    .fn-rail-label, .fn-rail-cta { display: none; }
+    .fn-rail-nav {
+        flex-direction: row; gap: 8px;
+        overflow-x: auto; scrollbar-width: none;
+        padding-right: var(--spacing-md);
+    }
+    .fn-rail-nav::-webkit-scrollbar { display: none; }
+    .fn-rail-item {
+        flex-shrink: 0; white-space: nowrap;
+        min-height: 44px; padding: 0 15px; border-radius: 22px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        border-left-width: 1px;
+        background: rgba(255, 255, 255, 0.03);
+    }
+
+    .fn-cat {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas: "head" "media" "list";
+        padding-bottom: var(--spacing-2xl);
+    }
+    .fn-cat.sin-media, .fn-cat.destacado { grid-template-columns: minmax(0, 1fr); }
+    /* En móvil el vídeo sí va arriba: no hay columna al lado. Pero primero el
+       titular, para que se sepa de qué va antes de verlo. */
+    .fn-media-col { position: static; margin: 18px 0 4px; }
+    .fn-media.vertical .fn-media-marco { max-width: 240px; }
+    .fn-items.dos { grid-template-columns: 1fr; }
+    .fn-cat-caja { padding: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fn-rail-item, .fn-hub-card, .fn-crumbs a { transition: none; }
+}

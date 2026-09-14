@@ -27,6 +27,12 @@ const gimnasios = {
     intro:
         'El catálogo completo del módulo de centro, sin letra pequeña. Todo esto entra en cualquier plan de gimnasio, con coaches ilimitados en los tres. Lo único que cambia de un plan a otro es cuántos socios activos tiene el centro.',
 
+    incluido: [
+        'Coaches ilimitados en los tres planes',
+        'Tienda, clases y marca blanca del centro',
+        'Migración desde Harbiz o Virtuagym',
+    ],
+
     breadcrumb: 'Gimnasios',
 
     categorias: [
@@ -35,7 +41,8 @@ const gimnasios = {
             nombre: 'Clases y reservas',
             resumen: 'El aforo cuadra solo y la lista de espera se mueve sin que nadie la mire.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/clases.webp', w: 1837, h: 916,
+                tipo: 'imagen', src: '/images/gym/clases.webp',
+                w: 1837, h: 916,
                 alt: 'Horario de clases del gimnasio en el panel de TotalGains',
                 pie: 'El horario del centro, con su ocupación real.',
             }],
@@ -59,8 +66,10 @@ const gimnasios = {
         {
             id: 'tienda',
             nombre: 'Tienda: productos y merchandising',
+            railNombre: 'Tienda y productos',
             resumen: 'Camisetas, suplementos y bebidas con su catálogo, su stock, su margen y sus pedidos desde la app del socio.',
             destacado: true,
+            nota: 'Si has llegado aquí preguntándote si TotalGains tiene tienda: la tiene, y esto es exactamente lo que hace.',
             items: [
                 { t: 'Catálogo de productos', d: 'Nombre, precio con IVA, tipo de IVA por producto, categoría, opciones de talla o sabor, descripción, galería de hasta tres fotos y vídeo.' },
                 { t: 'Venta en mostrador', d: 'Desde Pagos, desde la ficha del socio o desde Caja. Producto del catálogo o producto suelto, cantidad, precio pactado si hace falta y método de pago: efectivo, Bizum, transferencia, TPV u otro. Genera su ticket y entra en caja si fue en efectivo.' },
@@ -84,9 +93,11 @@ const gimnasios = {
         {
             id: 'socios',
             nombre: 'Socios, altas y documentos',
+            railNombre: 'Socios y altas',
             resumen: 'Dar de alta a alguien deja de ser papeleo repartido en cuatro sitios.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/clientes.webp', w: 1837, h: 916,
+                tipo: 'imagen', src: '/images/gym/clientes.webp',
+                w: 1837, h: 916,
                 alt: 'Listado de socios del gimnasio en el panel de TotalGains',
                 pie: 'La ficha de socios del centro.',
             }],
@@ -104,9 +115,11 @@ const gimnasios = {
         {
             id: 'pagos',
             nombre: 'Cobros, caja y facturación',
+            railNombre: 'Cobros y caja',
             resumen: 'Que el dinero del mes cuadre sin sacar una hoja de cálculo.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/facturacion.webp', w: 1600, h: 798,
+                tipo: 'imagen', src: '/images/gym/facturacion.webp',
+                w: 1600, h: 798,
                 alt: 'Facturación del gimnasio en el panel de TotalGains',
                 pie: 'Facturación, con proformas y facturas fiscales.',
             }],
@@ -126,6 +139,12 @@ const gimnasios = {
             id: 'equipo',
             nombre: 'Equipo y permisos',
             resumen: 'Cada entrenador ve lo suyo, y solo lo suyo.',
+            media: [{
+                tipo: 'imagen', src: '/images/gym/dashboard.webp',
+                w: 1837, h: 916,
+                alt: 'Panel del gestor del gimnasio con los KPIs del centro',
+                pie: 'El panel del gestor, desde donde se reparte el trabajo.',
+            }],
             items: [
                 { t: 'Coaches ilimitados', d: 'En los tres planes, sin coste por entrenador adicional. La tarifa sube por socios activos, nunca por plantilla.' },
                 { t: 'Permisos granulares', d: 'Ver todos los clientes, gestionar clientes, gestionar clases, gestionar facturación y gestionar la tienda, persona a persona.' },
@@ -139,18 +158,12 @@ const gimnasios = {
             id: 'retencion',
             nombre: 'Retención y analítica',
             resumen: 'Enterarte de que alguien se va mientras todavía puedes hacer algo.',
-            media: [
-                {
-                    tipo: 'imagen', src: '/images/gym/dashboard.webp', w: 1837, h: 916,
-                    alt: 'Panel del gestor del gimnasio con los KPIs del centro',
-                    pie: 'El panel del gestor, en horario de Madrid.',
-                },
-                {
-                    tipo: 'imagen', src: '/images/gym/valoraciones.webp', w: 1600, h: 918,
-                    alt: 'Valoraciones de clases del gimnasio con resumen generado por IA',
-                    pie: 'Valoraciones por clase y por entrenador, con resumen IA.',
-                },
-            ],
+            media: [{
+                tipo: 'imagen', src: '/images/gym/valoraciones.webp',
+                w: 1600, h: 918,
+                alt: 'Valoraciones de clases del gimnasio con resumen generado por IA',
+                pie: 'Valoraciones por clase y por entrenador, con resumen IA.',
+            }],
             items: [
                 { t: 'Riesgo de baja', d: 'Calculado con la asistencia real del socio, no con la última vez que abrió la app.' },
                 { t: 'Recuperar a quien dejó de venir', d: 'El sistema te señala a los socios que dejaron de comprar bonos y te propone el mensaje con IA.' },
@@ -164,9 +177,11 @@ const gimnasios = {
         {
             id: 'app',
             nombre: 'La app del socio, con tu marca',
+            railNombre: 'App del socio',
             resumen: 'Tus socios se descargan la app de tu gimnasio.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/branding.webp', w: 1280, h: 2856, vertical: true,
+                tipo: 'imagen', src: '/images/gym/branding.webp',
+                w: 1280, h: 2856, vertical: true,
                 alt: 'App del socio con el logo y los colores del gimnasio',
                 pie: 'La app que se descarga tu socio, con la marca del centro.',
             }],
@@ -180,6 +195,7 @@ const gimnasios = {
         {
             id: 'ayuda',
             nombre: 'Puesta en marcha y ayuda',
+            railNombre: 'Puesta en marcha',
             resumen: 'No te dejamos el software y adiós.',
             items: [
                 { t: 'Migración incluida', d: 'Traemos socios, horarios, planes y bonos desde tu plataforma actual. Lo hacemos nosotros y en español.' },
