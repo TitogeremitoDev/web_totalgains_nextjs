@@ -222,7 +222,12 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 @media (max-width: 1000px) { .fn-items { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 640px) { .fn-items { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 640px) { .fn-items { grid-template-columns: minmax(0, 1fr); } 
+    /* La media vertical pone la rejilla a 2 columnas (regla más específica
+       que esta); en un móvil de 390 son dos tiras de 170px con los títulos
+       en tres líneas. Aquí vuelve a una. */
+    .fn-area.con-vertical .fn-items { grid-template-columns: minmax(0, 1fr); }
+}
 
 .fn-item {
     border: 1px solid var(--fn-line);
