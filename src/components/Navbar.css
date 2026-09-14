@@ -232,3 +232,82 @@
         display: flex;
     }
 }
+/* ──────────────────────────────────────────────
+   DESPLEGABLE DE «FUNCIONES»
+
+   Son dos catálogos que no se parecen (61 funciones de entrenador, 69 de
+   centro) y quien ya sabe cuál es el suyo no tiene por qué pasar por el hub.
+
+   Solo CSS: se abre con :hover y con :focus-within, así que también funciona
+   tabulando. El hueco entre el enlace y la tarjeta va DENTRO del panel como
+   padding: si fuese margen, el ratón cruzaría zona muerta y se cerraría.
+   ────────────────────────────────────────────── */
+.nav-drop { position: relative; }
+
+.nav-drop-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+.nav-drop-arrow { transition: transform 0.22s ease; opacity: 0.6; }
+.nav-drop:hover .nav-drop-arrow,
+.nav-drop:focus-within .nav-drop-arrow { transform: rotate(180deg); opacity: 1; }
+
+.nav-drop-panel {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    padding-top: 14px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(-6px);
+    transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s;
+    z-index: 60;
+}
+.nav-drop:hover .nav-drop-panel,
+.nav-drop:focus-within .nav-drop-panel {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-drop-card {
+    width: 320px;
+    padding: 8px;
+    border-radius: 16px;
+    background: rgba(15, 23, 42, 0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 24px 60px -20px rgba(0, 0, 0, 0.85);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.nav-drop-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    padding: 12px 14px;
+    border-radius: 11px;
+    text-decoration: none;
+    transition: background 0.16s ease;
+}
+.nav-drop-item:hover { background: rgba(102, 126, 234, 0.14); }
+.nav-drop-t { font-size: 0.92rem; font-weight: 700; color: var(--text-primary); }
+.nav-drop-d { font-size: 0.78rem; line-height: 1.4; color: var(--text-muted); }
+
+/* En un móvil no hay «pasar por encima»: las dos hijas van desplegadas */
+.mobile-sublink {
+    padding-left: 2.25rem;
+    font-size: 0.94rem;
+    opacity: 0.82;
+}
+.mobile-sublink .mobile-link-arrow { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-drop-panel, .nav-drop-arrow { transition: none; }
+}

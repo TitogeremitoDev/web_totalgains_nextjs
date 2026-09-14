@@ -41,10 +41,10 @@ const gimnasios = {
             nombre: 'Clases y reservas',
             resumen: 'El aforo cuadra solo y la lista de espera se mueve sin que nadie la mire.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/clases.webp',
-                w: 1837, h: 916,
-                alt: 'Horario de clases del gimnasio en el panel de TotalGains',
-                pie: 'El horario del centro, con su ocupación real.',
+                tipo: 'imagen', src: '/images/gym/clases-detalle.webp',
+                w: 480, h: 400,
+                alt: 'Horario de clases del gimnasio con las clases programadas y su ocupación',
+                pie: 'El horario del centro, con la ocupación de cada clase.',
             }],
             items: [
                 { t: 'Reservas con aforo real', d: 'Aforo por sala, por clase y por horario. Cambiar el aforo de una sala ajusta las clases que cuelgan de ella.' },
@@ -96,10 +96,10 @@ const gimnasios = {
             railNombre: 'Socios y altas',
             resumen: 'Dar de alta a alguien deja de ser papeleo repartido en cuatro sitios.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/clientes.webp',
-                w: 1837, h: 916,
-                alt: 'Listado de socios del gimnasio en el panel de TotalGains',
-                pie: 'La ficha de socios del centro.',
+                tipo: 'imagen', src: '/images/gym/clientes-detalle.webp',
+                w: 560, h: 380,
+                alt: 'Listado de socios del gimnasio con su coach asignado y su fecha de alta',
+                pie: 'La ficha de socios, con su coach y su turno.',
             }],
             items: [
                 { t: 'Alta en una sola pantalla', d: 'Crear, cobrar y apuntar a clases sin ir y volver tres veces.' },
@@ -118,10 +118,10 @@ const gimnasios = {
             railNombre: 'Cobros y caja',
             resumen: 'Que el dinero del mes cuadre sin sacar una hoja de cálculo.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/facturacion.webp',
-                w: 1600, h: 798,
-                alt: 'Facturación del gimnasio en el panel de TotalGains',
-                pie: 'Facturación, con proformas y facturas fiscales.',
+                tipo: 'imagen', src: '/images/gym/pagos-detalle.webp',
+                w: 560, h: 330,
+                alt: 'Control de pagos del gimnasio con el estado de cada cuota',
+                pie: 'Quién está al día, quién renueva pronto y quién no.',
             }],
             items: [
                 { t: 'Planes, bonos y cuotas', d: 'Tres tipos de plan, cupo semanal, comodín para la semana que no puede venir y restricción por franja horaria.' },
@@ -140,10 +140,10 @@ const gimnasios = {
             nombre: 'Equipo y permisos',
             resumen: 'Cada entrenador ve lo suyo, y solo lo suyo.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/dashboard.webp',
-                w: 1837, h: 916,
-                alt: 'Panel del gestor del gimnasio con los KPIs del centro',
-                pie: 'El panel del gestor, desde donde se reparte el trabajo.',
+                tipo: 'imagen', src: '/images/gym/dashboard-detalle.webp',
+                w: 540, h: 350,
+                alt: 'Panel del gimnasio con los KPI del centro',
+                pie: 'El panel del centro, que cada coach ve según sus permisos.',
             }],
             items: [
                 { t: 'Coaches ilimitados', d: 'En los tres planes, sin coste por entrenador adicional. La tarifa sube por socios activos, nunca por plantilla.' },
@@ -159,10 +159,10 @@ const gimnasios = {
             nombre: 'Retención y analítica',
             resumen: 'Enterarte de que alguien se va mientras todavía puedes hacer algo.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/valoraciones.webp',
-                w: 1600, h: 918,
-                alt: 'Valoraciones de clases del gimnasio con resumen generado por IA',
-                pie: 'Valoraciones por clase y por entrenador, con resumen IA.',
+                tipo: 'imagen', src: '/images/gym/retencion.webp',
+                w: 377, h: 825, vertical: true,
+                alt: 'Pantalla de retención del gimnasio con los socios en riesgo y su puntuación',
+                pie: 'Quién está a punto de irse, con el mensaje ya preparado.',
             }],
             items: [
                 { t: 'Riesgo de baja', d: 'Calculado con la asistencia real del socio, no con la última vez que abrió la app.' },

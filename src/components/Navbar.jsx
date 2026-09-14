@@ -16,7 +16,17 @@ const navLinks = [
     // El catálogo completo necesita puerta propia: es la página que contesta
     // "¿esto lo hace?" y la que leen los sistemas de IA para describir el
     // producto. Sin enlace desde la navegación nadie la rastrea.
-    { href: '/funciones/', label: 'Funciones' },
+    //
+    // Con desplegable porque son DOS catálogos que no se parecen: 61 funciones
+    // de entrenador y 69 de centro. Mandar a todo el mundo al hub y que elija
+    // allí es un clic de más para quien ya sabe lo que es.
+    {
+        href: '/funciones/', label: 'Funciones',
+        hijas: [
+            { href: '/funciones/entrenadores/', label: 'Para entrenadores', desc: 'Rutinas y dietas con IA, seguimiento y tu marca' },
+            { href: '/funciones/gimnasios/', label: 'Para gimnasios', desc: 'Clases, tienda, caja y multi-coach' },
+        ],
+    },
     // El hub y no una comparativa suelta: /alternativas/ enlaza a las 9 y era
     // huérfana (0 entrantes). Trainerize sigue a un clic desde el hub y el pie.
     { href: '/alternativas/', label: 'Comparativas' },
@@ -85,15 +95,44 @@ const Navbar = () => {
 
                 <div className="navbar-links">
                     {navLinks.map((link, index) => (
-                        <Link
-                            key={index}
-                            href={link.href}
-                            className="nav-link"
-                            onClick={(e) => handleNavigation(e, link.href)}
-                            prefetch={false}
-                        >
-                            {link.label}
-                        </Link>
+                        link.hijas ? (
+                            /* Se abre al pasar por encima y también al tabular
+                               (:focus-within), así que funciona con teclado. El
+                               enlace padre sigue llevando al hub. */
+                            <div key={index} className="nav-drop">
+                                <Link
+                                    href={link.href}
+                                    className="nav-link nav-drop-trigger"
+                                    onClick={(e) => handleNavigation(e, link.href)}
+                                    prefetch={false}
+                                >
+                                    {link.label}
+                                    <svg className="nav-drop-arrow" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                                        <polyline points="6 9 12 15 18 9" />
+                                    </svg>
+                                </Link>
+                                <div className="nav-drop-panel">
+                                    <div className="nav-drop-card">
+                                        {link.hijas.map((h) => (
+                                            <Link key={h.href} href={h.href} className="nav-drop-item" prefetch={false}>
+                                                <span className="nav-drop-t">{h.label}</span>
+                                                <span className="nav-drop-d">{h.desc}</span>
+                                            </Link>
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        ) : (
+                            <Link
+                                key={index}
+                                href={link.href}
+                                className="nav-link"
+                                onClick={(e) => handleNavigation(e, link.href)}
+                                prefetch={false}
+                            >
+                                {link.label}
+                            </Link>
+                        )
                     ))}
                 </div>
 
@@ -123,19 +162,32 @@ const Navbar = () => {
             <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
                 <div className="mobile-links-container">
                     {navLinks.map((link, index) => (
-                        <Link
-                            key={index}
-                            href={link.href}
-                            className="mobile-link"
-                            onClick={(e) => handleNavigation(e, link.href)}
-                            prefetch={false}
-                        >
-                            {link.label}
-                            <svg className="mobile-link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                                <line x1="5" y1="12" x2="19" y2="12"></line>
-                                <polyline points="12 5 19 12 12 19"></polyline>
-                            </svg>
-                        </Link>
+                        <React.Fragment key={index}>
+                            <Link
+                                href={link.href}
+                                className="mobile-link"
+                                onClick={(e) => handleNavigation(e, link.href)}
+                                prefetch={false}
+                            >
+                                {link.label}
+                                <svg className="mobile-link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </Link>
+                            {/* Sin hover en un móvil: las dos hijas van a la vista */}
+                            {link.hijas?.map((h) => (
+                                <Link
+                                    key={h.href}
+                                    href={h.href}
+                                    className="mobile-link mobile-sublink"
+                                    onClick={() => setMenuOpen(false)}
+                                    prefetch={false}
+                                >
+                                    {h.label}
+                                </Link>
+                            ))}
+                        </React.Fragment>
                     ))}
                 </div>
 
