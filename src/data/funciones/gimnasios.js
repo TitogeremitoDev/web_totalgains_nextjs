@@ -42,7 +42,7 @@ const gimnasios = {
             railNombre: 'Clases',
             resumen: 'El aforo cuadra solo y la lista de espera se mueve sin que nadie la mire.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/clases-detalle.webp',
+                tipo: 'imagen', src: '/images/gym/clases-880.webp',
                 w: 880, h: 480,
                 alt: 'Horario de clases del gimnasio con las clases programadas y su ocupación',
                 pie: 'El horario del centro, con la ocupación de cada clase.',
@@ -97,7 +97,7 @@ const gimnasios = {
             railNombre: 'Socios',
             resumen: 'Dar de alta a alguien deja de ser papeleo repartido en cuatro sitios.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/clientes-detalle.webp',
+                tipo: 'imagen', src: '/images/gym/clientes-880.webp',
                 w: 880, h: 520,
                 alt: 'Listado de socios del gimnasio con su coach asignado y su fecha de alta',
                 pie: 'La ficha de socios, con su coach y su turno.',
@@ -119,7 +119,7 @@ const gimnasios = {
             railNombre: 'Cobros y caja',
             resumen: 'Que el dinero del mes cuadre sin sacar una hoja de cálculo.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/pagos-detalle.webp',
+                tipo: 'imagen', src: '/images/gym/pagos-880.webp',
                 w: 880, h: 498,
                 alt: 'Control de pagos del gimnasio con el estado de cada cuota',
                 pie: 'Quién está al día, quién renueva pronto y quién no.',
@@ -142,7 +142,7 @@ const gimnasios = {
             railNombre: 'Equipo',
             resumen: 'Cada entrenador ve lo suyo, y solo lo suyo.',
             media: [{
-                tipo: 'imagen', src: '/images/gym/dashboard-detalle.webp',
+                tipo: 'imagen', src: '/images/gym/dashboard-880.webp',
                 w: 880, h: 520,
                 alt: 'Panel del gimnasio con los KPI del centro',
                 pie: 'El panel del centro, que cada coach ve según sus permisos.',
