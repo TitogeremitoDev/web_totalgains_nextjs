@@ -48,6 +48,10 @@ export default function FuncionesContent({ data, otro }) {
     return (
         <main className="fn">
             <style dangerouslySetInnerHTML={{ __html: cssPestanaAbierta }} />
+            {/* Con teclado, el salto global del layout deja el foco al inicio de
+                la página; este segundo salto lleva directo a las pestañas, que
+                son el único control. Medido: sin él eran 25 tabulaciones. */}
+            <a className="skip-link" href="#areas">Ir a las áreas de funciones</a>
 
             {/* ── Hero ──
                 El navbar es fixed y no reserva espacio: el colchón lo pone
@@ -65,15 +69,23 @@ export default function FuncionesContent({ data, otro }) {
 
                     <span className="fn-badge">{badge}</span>
                     <h1 className="fn-h1 gradient-text">{data.h1}</h1>
+                    {/* Las cifras en su propia fila, no en la cola de un párrafo
+                        gris: el catálogo era la única página del sitio sin media
+                        en el héroe y con el h1 más pequeño (48px frente a 54-80),
+                        y leía como página de segundo nivel siendo la que más
+                        contenido propio tiene. */}
+                    <ul className="fn-cifras" aria-label="El catálogo en cifras">
+                        <li><strong className="gradient-text">{total}</strong><span>funciones</span></li>
+                        <li><strong className="gradient-text">{data.categorias.length}</strong><span>áreas</span></li>
+                        <li><strong className="gradient-text">0</strong><span>add-ons</span></li>
+                    </ul>
                     <p className="fn-intro">
                         {/* La negrita va en el argumento que desactiva la objeción de
-                            compra, no en el número. "61 funciones" impresiona;
-                            "todas entran en cualquier plan" es lo que quita el miedo
-                            al recargo por módulos. */}
-                        El catálogo completo, sin letra pequeña. {total} funciones
-                        en {data.categorias.length} áreas
-                        {data.destacadas ? ` — ${data.destacadas} — ` : " "}
-                        y <strong>todas entran en cualquier plan</strong>.
+                            compra, no en el número: "todas entran en cualquier plan"
+                            es lo que quita el miedo al recargo por módulos. */}
+                        El catálogo completo, sin letra pequeña{data.destacadas ? `: ${data.destacadas}` : ""}.{" "}
+                        <strong>Todas entran en cualquier plan</strong>
+                        {esGym ? ", con coaches ilimitados en los tres." : ", también en el gratuito."}
                     </p>
 
                     {/* En franja y no en tarjeta flotante: las tres cosas que
@@ -92,7 +104,7 @@ export default function FuncionesContent({ data, otro }) {
             </section>
 
             {/* ── Pestañas ── */}
-            <nav className="fn-tabs-bar" aria-label="Áreas de funciones">
+            <nav className="fn-tabs-bar" id="areas" tabIndex={-1} aria-label="Áreas de funciones">
                 <div className="container fn-tabs">
                     {data.categorias.map((c) => (
                         <a key={c.id} href={`#${c.id}`} className="fn-tab">
@@ -104,12 +116,9 @@ export default function FuncionesContent({ data, otro }) {
             </nav>
 
             <div className="container fn-main">
-                {data.categorias.map((c, i) => {
+                {data.categorias.map((c) => {
                     const media = c.media && c.media.length ? c.media : null;
                     const vertical = media && media[0].vertical;
-                    /* La primera área es la que se ve sin tocar nada, y la única
-                       que se lleva vídeo de verdad. Ver FeatureMedia. */
-                    const viva = i === 0;
                     return (
                         <section key={c.id} id={c.id} className={`fn-cat ${c.destacado ? "destacado" : ""}`}>
                             {/* Solo el VERTICAL va al lado del titular: un móvil
@@ -128,7 +137,7 @@ export default function FuncionesContent({ data, otro }) {
                                     <p className="fn-cat-sub">{c.resumen}</p>
                                     {c.nota && <p className="fn-cat-nota">{c.nota}</p>}
                                 </div>
-                                {vertical && <FeatureMedia media={media} viva={viva} />}
+                                {vertical && <FeatureMedia media={media} />}
                             </div>
 
                             <ul className="fn-items">
@@ -146,10 +155,29 @@ export default function FuncionesContent({ data, otro }) {
                             {/* Debajo de la rejilla, no encima: medido, ponerla
                                 delante dejaba la primera función a 1.041 px del
                                 borde de la pantalla en cualquier pestaña. */}
-                            {media && !vertical && <FeatureMedia media={media} ancha viva={viva} />}
+                            {media && !vertical && <FeatureMedia media={media} ancha />}
                         </section>
                     );
                 })}
+
+                {/* ── Índice plano ──
+                    En pantalla se ve un área y las otras están en display:none,
+                    así que Ctrl+F no encontraba "Stripe" o "báscula" si estaban
+                    en otra pestaña: el 64% del texto del catálogo no existía
+                    para el buscador del navegador. Un <details> cerrado SÍ es
+                    buscable y Chrome lo abre solo al encontrar dentro. Cada
+                    nombre enlaza a su área, así que también sirve de índice. */}
+                <details className="fn-indice" id="indice">
+                    <summary>Las {total} funciones en una sola lista</summary>
+                    <ul className="fn-indice-lista">
+                        {data.categorias.map((c) => c.items.map((it) => (
+                            <li key={`${c.id}-${it.t}`}>
+                                <a href={`#${c.id}`}>{it.t}</a>
+                                <span className="fn-indice-area">{c.railNombre || c.nombre}</span>
+                            </li>
+                        )))}
+                    </ul>
+                </details>
 
                 <section className="fn-faq" id="preguntas">
                     <h2 className="fn-h2 gradient-text">Preguntas frecuentes</h2>

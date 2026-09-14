@@ -127,13 +127,14 @@ export default function FuncionesHub() {
                         vídeo delante las dos puertas quedaban a 1.158px del inicio:
                         en un portátil no se veía ninguna de las dos al llegar. */}
                     <FeatureMedia
-                        viva
                         media={[{
                             tipo: "video",
                             src: "/video/coach-asignar-rutina.mp4",
                             poster: "/video/coach-asignar-rutina.webp",
                             w: 1280,
                             h: 720,
+                            pw: 1200,
+                            ph: 676,
                             alt: "Asignación de una rutina a un atleta en el panel de TotalGains",
                             pie: "Asignar una rutina a un atleta, de principio a fin.",
                         }]}

@@ -32,7 +32,7 @@
 .fn-check { flex-shrink: 0; }
 
 /* ── Hero ── */
-.fn-hero { position: relative; padding: 140px 0 40px; overflow: hidden; }
+.fn-hero { position: relative; padding: 140px 0 30px; overflow: hidden; }
 .fn-hero-bg {
     position: absolute; inset: 0; pointer-events: none;
     background:
@@ -54,10 +54,14 @@
     color: var(--primary-light); font-size: 0.76rem; font-weight: 600;
     text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 16px;
 }
-/* Sin tope de 15ch: el titular se partía en cuatro líneas */
+/* Sin tope de 15ch: el titular se partía en cuatro líneas.
+   Tope de 3.6rem (58px) y no 3rem: a 48px era el h1 más pequeño del sitio
+   (la home va a 80, precios a 72, gimnasios a 54) y el catálogo leía como
+   página de segundo nivel. El coste vertical se compensa en el padding del
+   héroe: las pestañas tienen que seguir viéndose sin bajar en un portátil. */
 .fn-h1 {
     font-family: var(--font-display), var(--font-primary);
-    font-size: clamp(1.9rem, 4.2vw, 3rem);
+    font-size: clamp(2rem, 4.8vw, 3.6rem);
     font-weight: 800; line-height: 1.1; letter-spacing: -0.02em;
     margin: 0 0 16px; max-width: 24ch; text-wrap: balance;
 }
@@ -67,8 +71,21 @@
 }
 .fn-intro strong { color: var(--text-primary); font-weight: 700; }
 
+/* Las cifras del catálogo: número grande con el gradiente, etiqueta apagada.
+   Mismo patrón que la fila de cifras de /para-gimnasios/. */
+.fn-cifras {
+    list-style: none; margin: 0 0 16px; padding: 0;
+    display: flex; flex-wrap: wrap; gap: 6px 30px;
+}
+.fn-cifras li { display: flex; align-items: baseline; gap: 7px; }
+.fn-cifras strong {
+    font-family: var(--font-display), var(--font-primary);
+    font-size: 1.75rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1;
+}
+.fn-cifras span { font-size: 0.86rem; color: var(--text-muted); }
+
 .fn-incluido {
-    list-style: none; margin: 0 0 26px; padding: 0;
+    list-style: none; margin: 0 0 20px; padding: 0;
     display: flex; flex-wrap: wrap; gap: 10px 26px;
 }
 .fn-incluido li {
@@ -213,6 +230,7 @@
 .fn-media-col.ancha { margin-top: 34px; }
 .fn-media-col.ancha .fn-media-cap { max-width: 880px; }
 .fn-media { margin: 0; }
+.fn-media-lazy { display: block; line-height: 0; }
 .fn-media-marco {
     border-radius: var(--radius-md); overflow: hidden;
     border: 1px solid var(--fn-line);
@@ -287,6 +305,38 @@
 }
 .fn-hub-go { display: inline-block; margin-top: 16px; font-weight: 700; color: var(--primary-light); font-size: 0.9rem; }
 
+/* ── Índice plano (buscable con Ctrl+F) ── */
+.fn-indice {
+    margin-top: var(--spacing-2xl);
+    border: 1px solid var(--fn-line); border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.02);
+}
+.fn-indice summary {
+    cursor: pointer; padding: 16px 20px; list-style: none;
+    display: flex; align-items: center; gap: 12px;
+    font-weight: 700; color: var(--text-primary);
+}
+.fn-indice summary::-webkit-details-marker { display: none; }
+.fn-indice summary::before {
+    content: ""; width: 8px; height: 8px; flex-shrink: 0;
+    border-right: 2px solid var(--primary-light); border-bottom: 2px solid var(--primary-light);
+    transform: rotate(-45deg); transition: transform .2s;
+}
+.fn-indice[open] summary::before { transform: rotate(45deg); }
+.fn-indice-lista {
+    list-style: none; margin: 0; padding: 2px 20px 18px;
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 24px;
+}
+.fn-indice-lista li {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 10px;
+    padding: 6px 0; border-bottom: 1px solid var(--fn-line); font-size: 0.86rem;
+}
+.fn-indice-lista a { color: var(--text-secondary); text-decoration: none; }
+.fn-indice-lista a:hover { color: var(--text-primary); }
+.fn-indice-area { color: var(--text-muted); font-size: 0.74rem; white-space: nowrap; }
+@media (max-width: 1000px) { .fn-indice-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .fn-indice-lista { grid-template-columns: minmax(0, 1fr); } }
+
 /* ── Móvil ── */
 @media (max-width: 900px) {
     .fn { --fn-nav: 73px; --fn-nav-fija: 73px; --fn-tabs-h: 62px; }
@@ -310,7 +360,7 @@
     @supports selector(:has(*)) {
         .fn-main .fn-cat { display: block !important; }
     }
-    .fn-tabs-bar, .fn-media-col, .fn-hero-bg, .fn-ctas { display: none !important; }
+    .fn-tabs-bar, .fn-media-col, .fn-hero-bg, .fn-ctas, .fn-indice { display: none !important; }
     .fn-cat { break-inside: avoid-page; padding-top: 18px; }
     .fn-items { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 }

@@ -129,8 +129,17 @@ export default function RootLayout({ children }) {
             propio (TrustpilotBadge), no necesita script externo. */}
       </head>
       <body className={`${dmSans.variable} ${spaceGrotesk.variable}`}>
+        {/* Primer elemento enfocable del documento. Medido en la auditoría del
+            14-sep-2026: había 25 paradas de tabulación (el navbar entero) antes
+            del primer enlace de contenido. Invisible hasta recibir el foco por
+            teclado; ver .skip-link en globals.css. */}
+        <a className="skip-link" href="#contenido">Saltar al contenido</a>
         <ScrollProgress />
         <Navbar />
+        {/* Destino del salto: un marcador sin altura que recibe el foco y deja
+            el siguiente Tab en el primer enlace de la página. No envuelve a
+            {children} para no cambiar la estructura de las 60 páginas. */}
+        <div id="contenido" tabIndex={-1} />
         {children}
         <Footer />
         <Analytics />
