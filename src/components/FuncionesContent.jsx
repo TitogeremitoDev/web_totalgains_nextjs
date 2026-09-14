@@ -5,50 +5,48 @@ import "./funciones.css";
 /* ──────────────────────────────────────────────
    CATÁLOGO DE FUNCIONES · vista compartida
 
-   SERVER COMPONENT, sin una línea de JavaScript de cliente: esta página existe
+   SERVER COMPONENT, sin una línea de JavaScript de cliente: la página existe
    porque las IAs afirmaban que faltaban funciones que sí están, y si el
-   catálogo viviese detrás de una pestaña que monta al hacer clic no estaría en
-   el HTML inicial y el problema seguiría igual.
+   catálogo se montara al hacer clic no estaría en el HTML inicial.
 
-   LAYOUT (rediseño del 14-sep, maquetado antes de escribirlo):
-   la primera versión apilaba 61 funciones en una columna con el vídeo encima
-   de cada bloque. Scroll infinito y sin forma de saltar. Ahora son TRES
-   columnas dentro del contenedor de 1200:
+   HISTORIAL DE ESTE LAYOUT, para no repetir los dos intentos fallidos:
+   1º Nueve áreas apiladas en una columna, con el vídeo encima de cada una.
+      Más de 8.000px de scroll. "Todo hacia abajo".
+   2º Tres columnas (rail · funciones · vídeo) y una sola área a la vez. Al
+      quedar una sola área, el rail y el vídeo medían 500px y la lista 900:
+      dos columnas vacías enormes y el contenido en una tira estrecha.
+   3º Esto. Las áreas son PESTAÑAS horizontales a todo el ancho y las
+      funciones una rejilla de tres columnas que llena los 1200px. Sin
+      columnas muertas y sin muro vertical: 13 funciones son 5 filas.
 
-     rail 256  ·  funciones 524  ·  media 356      (+ dos gaps de 32)
-
-   El rail queda fijo mientras bajas, así que nunca pierdes dónde estás; las
-   funciones son FILAS densas en vez de fichas de tres columnas; y el vídeo va
-   al lado, también fijo. El área destacada (la Tienda), que no tiene captura,
-   ocupa el centro y la columna de media: 912px.
+   Las pestañas van con `:target` (el ancla de la URL), así que siguen sin
+   necesitar JavaScript y el HTML sigue llevando las 61 funciones enteras.
    ────────────────────────────────────────────── */
 
 export default function FuncionesContent({ data, otro }) {
-    const badge = data.perfil === "gimnasio"
-        ? "Para gimnasios, estudios y boxes"
-        : "Para entrenadores y nutricionistas";
-    const total = data.categorias.reduce((n, c) => n + c.items.length, 0);
-    const unidad = data.perfil === "gimnasio" ? "socios activos" : "atletas activos";
     const esGym = data.perfil === "gimnasio";
+    const badge = esGym ? "Para gimnasios, estudios y boxes" : "Para entrenadores y nutricionistas";
+    const total = data.categorias.reduce((n, c) => n + c.items.length, 0);
+    const unidad = esGym ? "socios activos" : "atletas activos";
 
-    /* Marca en el rail el área abierta. Son N reglas de una línea generadas de
-       los propios datos: no hay forma de escribirlo una sola vez en CSS, y
-       meter JavaScript por un estado de color sacaría el catálogo del HTML
-       inicial, que es justo lo que esta página no se puede permitir. */
-    const cssAreaAbierta = data.categorias
+    /* Marca la pestaña abierta. Son N reglas generadas de los propios datos:
+       no hay forma de escribirlo una sola vez en CSS, y resolverlo con
+       JavaScript sacaría el catálogo del HTML inicial. */
+    const cssPestanaAbierta = data.categorias
         .map((c, i) => (
-            `.fn-layout:has(#${c.id}:target) .fn-rail-item[href="#${c.id}"]`
-            + (i === 0 ? `,.fn-layout:not(:has(.fn-cat:target)) .fn-rail-item[href="#${c.id}"]` : "")
+            `.fn:has(#${c.id}:target) .fn-tab[href="#${c.id}"]`
+            + (i === 0 ? `,.fn:not(:has(.fn-cat:target)) .fn-tab[href="#${c.id}"]` : "")
         ))
         .join(",")
-        + "{background:rgba(102,126,234,.16);border-left-color:#8b9df8;color:#fff;font-weight:700}";
+        + "{background:var(--primary-gradient);border-color:transparent;color:#fff;box-shadow:0 6px 18px -6px rgba(102,126,234,.7)}";
 
     return (
         <main className="fn">
+            <style dangerouslySetInnerHTML={{ __html: cssPestanaAbierta }} />
+
             {/* ── Hero ──
-                El navbar es `position: fixed` y no reserva espacio: el colchón
-                superior lo pone .fn-hero. Sin él, el breadcrumb y el h1 salen
-                por debajo de la barra. Medido en /precios/: 122px. */}
+                El navbar es fixed y no reserva espacio: el colchón lo pone
+                .fn-hero. Medido en /precios/: 122px. */}
             <section className="fn-hero">
                 <div className="fn-hero-bg" aria-hidden="true" />
                 <div className="container fn-hero-inner">
@@ -60,125 +58,92 @@ export default function FuncionesContent({ data, otro }) {
                         <span>{data.breadcrumb}</span>
                     </nav>
 
-                    <div className="fn-hero-grid">
-                        <div>
-                            <span className="fn-badge">{badge}</span>
-                            <h1 className="fn-h1 gradient-text">{data.h1}</h1>
-                            <p className="fn-intro">
-                                El catálogo completo, sin letra pequeña. <strong>{total} funciones</strong> repartidas
-                                en {data.categorias.length} áreas, y todas entran en cualquier plan.
-                            </p>
-                            <div className="fn-ctas">
-                                <Link href="/precios/" className="btn btn-primary" prefetch={false}>Ver precios</Link>
-                                <Link href={otro.href} className="btn btn-outline" prefetch={false}>{otro.label}</Link>
-                            </div>
-                        </div>
+                    <span className="fn-badge">{badge}</span>
+                    <h1 className="fn-h1 gradient-text">{data.h1}</h1>
+                    <p className="fn-intro">
+                        El catálogo completo, sin letra pequeña. <strong>{total} funciones</strong> repartidas
+                        en {data.categorias.length} áreas, y todas entran en cualquier plan.
+                    </p>
 
-                        {/* El "sin add-ons" no es una frase suelta: son las tres cosas
-                            que la gente da por hecho que se pagan aparte. */}
-                        <aside className="fn-todo glass">
-                            <p className="fn-todo-t">Todo entra en el plan</p>
-                            <p className="fn-todo-d">
-                                Sin add-ons ni módulos aparte. Lo único que cambia entre planes es cuántos {unidad} llevas.
-                            </p>
-                            <ul className="fn-todo-list">
-                                {data.incluido.map((t) => (
-                                    <li key={t}><Check /> {t}</li>
-                                ))}
-                            </ul>
-                        </aside>
+                    {/* En franja y no en tarjeta flotante: las tres cosas que
+                        la gente da por hecho que se pagan aparte, a la vista. */}
+                    <ul className="fn-incluido">
+                        {data.incluido.map((t) => (
+                            <li key={t}><Check /> {t}</li>
+                        ))}
+                    </ul>
+
+                    <div className="fn-ctas">
+                        <Link href="/precios/" className="btn btn-primary" prefetch={false}>Ver precios</Link>
+                        <Link href={otro.href} className="btn btn-outline" prefetch={false}>{otro.label}</Link>
                     </div>
                 </div>
             </section>
 
-            <style dangerouslySetInnerHTML={{ __html: cssAreaAbierta }} />
+            {/* ── Pestañas ── */}
+            <nav className="fn-tabs-bar" aria-label="Áreas de funciones">
+                <div className="container fn-tabs">
+                    {data.categorias.map((c) => (
+                        <a key={c.id} href={`#${c.id}`} className="fn-tab">
+                            {c.railNombre || c.nombre}
+                            <span className="fn-tab-n">{c.items.length}</span>
+                        </a>
+                    ))}
+                </div>
+            </nav>
 
-            <div className="container fn-layout">
-                {/* Rail de áreas. Fijo: es lo que evita que esto sea un muro. */}
-                <aside className="fn-rail">
-                    <p className="fn-rail-label">{data.categorias.length} áreas</p>
-                    <nav className="fn-rail-nav" aria-label="Áreas de funciones">
-                        {data.categorias.map((c) => (
-                            <a key={c.id} href={`#${c.id}`} className="fn-rail-item">
-                                <span>{c.railNombre || c.nombre}</span>
-                                <span className="fn-rail-n">{c.items.length}</span>
-                            </a>
-                        ))}
-                    </nav>
-                    <div className="fn-rail-cta glass">
-                        <p className="fn-rail-cta-t">{esGym ? "Desde 149 €" : "Desde 0 €"}</p>
-                        <p className="fn-rail-cta-d">
-                            {esGym
-                                ? "Coaches ilimitados en los tres planes, con migración incluida."
-                                : "Plan gratuito permanente hasta 5 atletas, sin tarjeta."}
-                        </p>
-                        <Link
-                            href={esGym ? "/para-gimnasios/" : "/onboarding/"}
-                            className="btn btn-primary fn-rail-btn"
-                            prefetch={false}
-                        >
-                            {esGym ? "Ver para gimnasios" : "Empezar gratis"}
-                        </Link>
-                    </div>
-                </aside>
-
-                <div className="fn-main">
-                    {data.categorias.map((c) => {
-                        const conMedia = !c.destacado && c.media && c.media.length > 0;
-                        return (
-                            <section
-                                key={c.id}
-                                id={c.id}
-                                className={`fn-cat ${c.destacado ? "destacado" : ""} ${conMedia ? "" : "sin-media"}`}
-                            >
-                                {c.destacado ? (
-                                    <div className="fn-cat-caja">
+            <div className="container fn-main">
+                {data.categorias.map((c) => {
+                    const media = c.media && c.media.length ? c.media : null;
+                    const vertical = media && media[0].vertical;
+                    return (
+                        <section key={c.id} id={c.id} className={`fn-cat ${c.destacado ? "destacado" : ""}`}>
+                            <div className={`fn-area-top ${media ? (vertical ? "con-media vertical" : "con-media") : ""}`}>
+                                <div className="fn-area-head">
+                                    {c.destacado && (
                                         <div className="fn-cat-flag">
                                             <span className="fn-cat-flag-n">{c.items.length} funciones</span>
                                             <span className="fn-cat-flag-t">incluidas en los tres planes Gym</span>
                                         </div>
-                                        <h2 className="fn-h2 gradient-text">{c.nombre}</h2>
-                                        <p className="fn-cat-sub">{c.resumen}</p>
-                                        {c.nota && <p className="fn-cat-nota">{c.nota}</p>}
-                                        <ul className="fn-items dos">
-                                            {c.items.map((it) => <Fila key={it.t} it={it} />)}
-                                        </ul>
-                                        <p className="fn-cat-pie">
+                                    )}
+                                    <h2 className="fn-h2 gradient-text">{c.nombre}</h2>
+                                    <p className="fn-cat-sub">{c.resumen}</p>
+                                    {c.nota && <p className="fn-cat-nota">{c.nota}</p>}
+                                    {c.destacado && (
+                                        <p className="fn-cat-nota">
                                             Única área sin captura: todavía no hay ninguna de la Tienda.
                                         </p>
-                                    </div>
-                                ) : (
-                                    <>
-                                        {/* Tres hijos sueltos, no un bloque: la rejilla los
-                                            coloca en «titular | media | lista» en escritorio
-                                            y en «titular, media, lista» en móvil, sin que el
-                                            vídeo acabe detrás de toda la lista. */}
-                                        <div className="fn-cat-head">
-                                            <h2 className="fn-h2 gradient-text">{c.nombre}</h2>
-                                            <p className="fn-cat-sub">{c.resumen}</p>
-                                        </div>
-                                        <FeatureMedia media={c.media} />
-                                        <ul className="fn-items">
-                                            {c.items.map((it) => <Fila key={it.t} it={it} />)}
-                                        </ul>
-                                    </>
-                                )}
-                            </section>
-                        );
-                    })}
-
-                    <section className="fn-faq" id="preguntas">
-                        <h2 className="fn-h2 gradient-text">Preguntas frecuentes</h2>
-                        <div className="fn-faq-grid">
-                            {data.faq.map((f) => (
-                                <div key={f.q} className="fn-faq-item">
-                                    <h3 className="fn-faq-q">{f.q}</h3>
-                                    <p className="fn-faq-a">{f.a}</p>
+                                    )}
                                 </div>
-                            ))}
-                        </div>
-                    </section>
-                </div>
+                                {media && <FeatureMedia media={media} />}
+                            </div>
+
+                            <ul className="fn-items">
+                                {c.items.map((it) => (
+                                    <li key={it.t} className="fn-item">
+                                        <div className="fn-item-top">
+                                            <Check />
+                                            <h3 className="fn-item-t">{it.t}</h3>
+                                        </div>
+                                        <p className="fn-item-d">{it.d}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </section>
+                    );
+                })}
+
+                <section className="fn-faq" id="preguntas">
+                    <h2 className="fn-h2 gradient-text">Preguntas frecuentes</h2>
+                    <div className="fn-faq-grid">
+                        {data.faq.map((f) => (
+                            <div key={f.q} className="fn-faq-item">
+                                <h3 className="fn-faq-q">{f.q}</h3>
+                                <p className="fn-faq-a">{f.a}</p>
+                            </div>
+                        ))}
+                    </div>
+                </section>
             </div>
 
             <section className="fn-cierre">
@@ -211,23 +176,11 @@ export default function FuncionesContent({ data, otro }) {
     );
 }
 
-function Fila({ it }) {
-    return (
-        <li className="fn-item">
-            <Check />
-            <div>
-                <h3 className="fn-item-t">{it.t}</h3>
-                <p className="fn-item-d">{it.d}</p>
-            </div>
-        </li>
-    );
-}
-
 /* Marca de verificación. Son más de 90 por página: un componente de icono por
    cada una engordaría el HTML sin aportar nada. */
 function Check() {
     return (
-        <svg className="fn-check" width="17" height="17" viewBox="0 0 24 24" fill="none"
+        <svg className="fn-check" width="16" height="16" viewBox="0 0 24 24" fill="none"
              stroke="#4ade80" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
             <polyline points="20 6 9 17 4 12" />
         </svg>
