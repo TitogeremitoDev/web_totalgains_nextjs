@@ -113,11 +113,6 @@ export default function FuncionesContent({ data, otro }) {
                                     <h2 className="fn-h2 gradient-text">{c.nombre}</h2>
                                     <p className="fn-cat-sub">{c.resumen}</p>
                                     {c.nota && <p className="fn-cat-nota">{c.nota}</p>}
-                                    {c.destacado && (
-                                        <p className="fn-cat-nota">
-                                            Única área sin captura: todavía no hay ninguna de la Tienda.
-                                        </p>
-                                    )}
                                 </div>
                                 {vertical && <FeatureMedia media={media} />}
                             </div>

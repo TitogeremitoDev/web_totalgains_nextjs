@@ -71,6 +71,20 @@ const gimnasios = {
             resumen: 'Camisetas, suplementos y bebidas con su catálogo, su stock, su margen y sus pedidos desde la app del socio.',
             destacado: true,
             nota: 'Si has llegado aquí preguntándote si TotalGains tiene tienda: la tiene, y esto es exactamente lo que hace.',
+            media: [
+                {
+                    tipo: 'imagen', src: '/images/gym/tienda-productos-880.webp',
+                    w: 1772, h: 820,
+                    alt: 'Catálogo de la Tienda en el panel del gimnasio, con stock, precio y margen por producto',
+                    pie: 'El catálogo del centro: tallas, stock, precio, margen y lo vendido este mes.',
+                },
+                {
+                    tipo: 'imagen', src: '/images/gym/tienda-socio.webp',
+                    w: 800, h: 1785, vertical: true,
+                    alt: 'Tienda del gimnasio en la app del socio, con productos, tallas y carrito',
+                    pie: 'Y lo que ve el socio en su móvil, con su carrito y su pedido.',
+                },
+            ],
             items: [
                 { t: 'Catálogo de productos', d: 'Nombre, precio con IVA, tipo de IVA por producto, categoría, opciones de talla o sabor, descripción, galería de hasta tres fotos y vídeo.' },
                 { t: 'Venta en mostrador', d: 'Desde Pagos, desde la ficha del socio o desde Caja. Producto del catálogo o producto suelto, cantidad, precio pactado si hace falta y método de pago: efectivo, Bizum, transferencia, TPV u otro. Genera su ticket y entra en caja si fue en efectivo.' },
