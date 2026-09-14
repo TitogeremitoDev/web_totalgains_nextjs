@@ -24,7 +24,13 @@ export default function FeatureMedia({ media, ancha = false }) {
         <div className={`fn-media-col ${ancha ? "ancha" : ""}`}>
             {media.map((m) => (
                 <figure key={m.src} className={`fn-media ${m.vertical ? "vertical" : ""}`}>
-                    <div className="fn-media-marco">
+                    {/* Tope al ANCHO REAL del fichero. Sin esto, un recorte de
+                        480px metido en una caja de 880 se amplía un 1,83x y sale
+                        borroso y gigante: pasó con las capturas del gimnasio. */}
+                    <div
+                        className="fn-media-marco"
+                        style={{ maxWidth: Math.min(m.vertical ? 264 : 880, m.w) }}
+                    >
                         {m.tipo === "video" ? (
                             <video
                                 className="fn-media-el"

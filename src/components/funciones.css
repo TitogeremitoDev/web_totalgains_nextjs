@@ -172,7 +172,6 @@
 /* El apaisado a lo grande. A 460px, una grabación de un panel de 1280 se
    queda en un 0,36x y no se lee nada de lo que se está enseñando. */
 .fn-media-col.ancha { margin-bottom: 30px; }
-.fn-media-col.ancha .fn-media-marco { max-width: 880px; }
 .fn-media-col.ancha .fn-media-cap { max-width: 880px; }
 .fn-media { margin: 0; }
 .fn-media-marco {
@@ -183,7 +182,7 @@
 }
 .fn-media-el { display: block; width: 100%; height: auto; }
 .fn-media.vertical .fn-media-marco {
-    max-width: 264px; margin: 0 auto;
+    margin: 0 auto;
     border-radius: 24px; padding: 8px;
 }
 .fn-media.vertical .fn-media-el { border-radius: 17px; }
@@ -251,7 +250,6 @@
     .fn-tabs { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; }
     .fn-main { padding-top: var(--spacing-lg); }
     .fn-incluido { flex-direction: column; gap: 9px; }
-    .fn-media.vertical .fn-media-marco { max-width: 240px; }
     .fn-cat.destacado { padding: 0 16px 16px; }
     .fn-cat.destacado .fn-area-top { padding: 18px 0 4px; }
 }
