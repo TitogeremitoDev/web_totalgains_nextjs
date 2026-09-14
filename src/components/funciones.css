@@ -120,6 +120,10 @@
     .fn-tabs {
         overflow-x: auto; scrollbar-width: none;
         scroll-snap-type: x proximity;
+        /* Sin esto el imán del snap pega la primera pastilla al borde de la
+           pantalla: el padding del contenedor queda DENTRO del scroller y
+           se lo traga (scrollLeft arrancaba en 16, no en 0). */
+        scroll-padding-inline: var(--spacing-md);
         /* Degradado de corte: sin él no hay ninguna señal de que a la derecha
            quedan 657px de pestañas. En un móvil se ven 3 de 9 y el visitante
            se cree razonablemente que la página tiene tres áreas. */
