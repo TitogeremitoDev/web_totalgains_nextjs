@@ -183,25 +183,6 @@
 }
 
 .fn-area-top { margin-bottom: 26px; }
-/* Media VERTICAL: columna derecha que abarca titular Y rejilla. Las tarjetas
-   pasan a dos columnas en el hueco que queda (852px) y empiezan a la misma
-   altura que en las áreas apaisadas. Antes la captura compartía fila solo con
-   el titular y empujaba la rejilla ~450px hacia abajo. */
-.fn-area.con-vertical {
-    display: grid; column-gap: 36px; align-items: start;
-    grid-template-columns: minmax(0, 1fr) 264px;
-    grid-template-areas: "top media" "items media";
-}
-.fn-area.con-vertical .fn-area-top { grid-area: top; }
-.fn-area.con-vertical .fn-items { grid-area: items; grid-template-columns: repeat(2, minmax(0, 1fr)); }
-.fn-area.con-vertical .fn-media-col { grid-area: media; }
-@media (max-width: 900px) {
-    .fn-area.con-vertical {
-        grid-template-columns: minmax(0, 1fr); row-gap: 26px;
-        grid-template-areas: "top" "items" "media";
-    }
-}
-
 .fn-h2 {
     font-family: var(--font-display), var(--font-primary);
     font-size: clamp(1.5rem, 3vw, 2.1rem);
@@ -226,12 +207,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 @media (max-width: 1000px) { .fn-items { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 640px) { .fn-items { grid-template-columns: minmax(0, 1fr); } 
-    /* La media vertical pone la rejilla a 2 columnas (regla más específica
-       que esta); en un móvil de 390 son dos tiras de 170px con los títulos
-       en tres líneas. Aquí vuelve a una. */
-    .fn-area.con-vertical .fn-items { grid-template-columns: minmax(0, 1fr); }
-}
+@media (max-width: 640px) { .fn-items { grid-template-columns: minmax(0, 1fr); } }
 
 .fn-item {
     border: 1px solid var(--fn-line);
@@ -247,6 +223,64 @@
 /* Secundario y no apagado: son 61 descripciones, el 90% del texto de la
    página, y en #7c7c9a daban 4,82:1 — AA raspando. Ahora ~10:1. */
 .fn-item-d { margin: 0; font-size: 0.84rem; line-height: 1.55; color: var(--text-secondary); }
+
+/* ── Escaparate: la media y las 3 funciones clave en la misma fila ──
+   Antes eran 13 tarjetas idénticas y el vídeo al final ("50 cuadrados y luego
+   un vídeo, quién se va a ver eso"). Ahora la prueba del producto y lo
+   importante se ven a la vez; el resto va debajo, compacto y sin cajas. */
+.fn-escaparate {
+    display: grid; gap: 22px; align-items: start;
+    grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr);
+}
+.fn-escaparate.vertical,
+.fn-escaparate.sin-media { grid-template-columns: minmax(0, 1fr); }
+/* Área con captura de MÓVIL: el móvil es la columna derecha de todo el área
+   (tarjetas clave e inventario a su izquierda). En la fila del escaparate
+   dejaba medio bloque vacío: mide 600px y las tres tarjetas 300. */
+.fn-area.vertical {
+    display: grid; column-gap: 36px; align-items: start;
+    grid-template-columns: minmax(0, 1fr) 264px;
+    grid-template-areas: "top top" "esc media" "resto media";
+}
+.fn-area.vertical .fn-area-top { grid-area: top; }
+.fn-area.vertical .fn-escaparate { grid-area: esc; }
+.fn-area.vertical .fn-resto { grid-area: resto; }
+.fn-area.vertical > .fn-media-col { grid-area: media; }
+.fn-area.vertical .fn-mini-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+/* pisa el margin-top:34px de .fn-media-col.ancha, que aquí no aplica */
+.fn-escaparate .fn-media-col.ancha { margin-top: 0; }
+.fn-escaparate .fn-items-clave { grid-template-columns: minmax(0, 1fr); gap: 12px; align-content: start; }
+.fn-escaparate.vertical .fn-items-clave { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.fn-escaparate.sin-media .fn-items-clave { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+/* ── Y además: el resto del inventario ── */
+.fn-resto { margin-top: 30px; }
+.fn-resto-t {
+    margin: 0 0 2px; font-size: 0.78rem; font-weight: 700;
+    letter-spacing: 0.06em; text-transform: uppercase; color: var(--primary-light);
+}
+.fn-mini-lista {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 28px;
+}
+.fn-mini { display: flex; gap: 10px; padding: 12px 0; border-top: 1px solid var(--fn-line); }
+.fn-mini .fn-check { margin-top: 3px; }
+.fn-mini-t { margin: 0 0 3px; font-size: 0.9rem; font-weight: 700; line-height: 1.35; color: var(--text-primary); }
+.fn-mini-d { margin: 0; font-size: 0.82rem; line-height: 1.5; color: var(--text-secondary); }
+@media (max-width: 1000px) { .fn-mini-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 900px) {
+    .fn-escaparate { grid-template-columns: minmax(0, 1fr); }
+    /* En móvil, primero las tres clave y luego la media */
+    .fn-escaparate .fn-media-col { order: 2; }
+    .fn-area.vertical {
+        grid-template-columns: minmax(0, 1fr); row-gap: 26px;
+        grid-template-areas: "top" "esc" "media" "resto";
+    }
+    .fn-area.vertical .fn-resto { margin-top: 0; }
+}
+@media (max-width: 640px) {
+    .fn-mini-lista, .fn-escaparate.vertical .fn-items-clave, .fn-escaparate.sin-media .fn-items-clave { grid-template-columns: minmax(0, 1fr); }
+}
 
 /* El área destacada se enmarca, sin cambiar la rejilla */
 .fn-cat.destacado .fn-area-top { padding: 24px 24px 4px; }
