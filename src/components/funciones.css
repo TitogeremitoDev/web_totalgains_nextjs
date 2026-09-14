@@ -203,8 +203,13 @@
    ────────────────────────────────────────────── */
 @supports selector(:has(*)) {
     .fn-main .fn-cat { display: none; }
-    .fn-main .fn-cat:first-of-type { display: block; }
-    .fn-main:has(.fn-cat:target) .fn-cat:first-of-type { display: none; }
+    /* ⚠️ El `:not(:has())` va en la regla que MUESTRA la primera, no en una
+       cuarta regla que la oculte. La versión anterior tenía
+       `.fn-main:has(.fn-cat:target) .fn-cat:first-of-type {display:none}`, con
+       más especificidad (0,3,1) que `.fn-cat:target {display:block}` (0,2,1):
+       al pulsar la PRIMERA pestaña se ocultaba a sí misma y el área salía en
+       blanco. Las otras ocho funcionaban porque no son `:first-of-type`. */
+    .fn-main:not(:has(.fn-cat:target)) .fn-cat:first-of-type { display: block; }
     .fn-main .fn-cat:target { display: block; }
 }
 
