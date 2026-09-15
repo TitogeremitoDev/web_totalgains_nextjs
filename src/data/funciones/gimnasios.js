@@ -114,18 +114,23 @@ const gimnasios = {
                vídeo, alternando lado (patrón AimHarder que pidió German el
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función.
+               El reel «gym-tienda-dos-lados» (24 s, marco de marca) cuenta la
+               tienda entera: app del socio → pedido en el panel → ventas y
+               tickets → catálogo con margen. Va en el primer bloque, y las
+               tres funciones que antes iban en un bloque SIN imagen se
+               reparten donde encajan: ofertas con la app del socio, informe
+               mensual con el catálogo, permiso de staff con el mostrador. */
             bloques: [
-                { titulo: 'El catálogo del centro', items: [0, 5, 6, 7, 8],
-                  media: { tipo: 'imagen', src: '/images/gym/tienda-productos-880.webp', w: 1772, h: 820, alt: 'Catálogo de productos del gimnasio en TotalGains', pie: 'El catálogo del centro: tallas, stock, precio, margen y lo vendido este mes.' } },
-                { titulo: 'Pedidos desde la app del socio', items: [2, 3, 4, 14],
-                  media: { tipo: 'video', src: '/video/gym-tienda-dos-lados.mp4', poster: '/video/gym-tienda-dos-lados.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Demostración de la Tienda de TotalGains: el socio pide desde su app y el gimnasio lo prepara, lo cobra y lo entrega desde el panel', pie: 'Los dos lados de la Tienda: el socio pide desde su móvil y el centro lo prepara, lo cobra y lo entrega.' } },
-                { titulo: 'Vender en mostrador', items: [1, 11, 12, 10, 9],
+                { titulo: 'Los dos lados, en el mismo sitio', items: [0, 5, 6, 7, 8, 15],
+                  media: { tipo: 'video', src: '/video/gym-tienda-dos-lados.mp4', poster: '/video/gym-tienda-dos-lados.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'La tienda del gimnasio: el pedido en la app del socio y su gestión en el panel del centro', pie: 'El socio pide desde la app; el centro cobra, entrega y ve el margen de cada producto.' } },
+                { titulo: 'Pedidos desde la app del socio', items: [2, 3, 4, 14, 13],
+                  media: { tipo: 'imagen', src: '/images/gym/tienda-socio.webp', w: 800, h: 1785, alt: 'La tienda del gimnasio en la app del socio', pie: 'La tienda desde la app del socio: elige, pide y recoge.', vertical: true } },
+                { titulo: 'Vender en mostrador', items: [1, 11, 12, 10, 9, 16],
                   media: { tipo: 'imagen', src: '/images/gym/pagos-panel-1920.webp', w: 1920, h: 1596, alt: 'Panel de pagos del centro con sus gráficas', pie: 'Pagos del centro: lo cobrado, lo pendiente y la caja.' } },
-                { titulo: 'Gestión y equipo', items: [13, 15, 16],
-                  /* ⚠️ SIN IMAGEN a propósito: la única captura disponible era el panel del
-                     centro, que ya va en Equipo. German: "no pongas la misma foto".
-                     Pendiente de una captura de Tienda › Resumen (informe mensual). */
-                  media: null },
             ],
             items: [
                 { t: 'Catálogo de productos', d: 'Nombre, precio con IVA, tipo de IVA por producto, categoría, opciones de talla o sabor, descripción, galería de hasta tres fotos y vídeo.' },
