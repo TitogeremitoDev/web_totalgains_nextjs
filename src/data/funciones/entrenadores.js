@@ -295,7 +295,7 @@ const entrenadores = {
             id: 'marketing',
             nombre: 'Contenido para tus redes',
             railNombre: 'Marketing',
-            resumen: 'Seis generadores que sacan el contenido de tus propios clientes, con tu marca.',
+            resumen: 'Seis generadores que sacan el contenido de tus propios clientes, con tu marca. Y tú decides cómo queda cada pieza.',
             /* Área creada el 15-sep-2026 tras auditar el producto contra el
                catálogo: `app/(coach)/marketing/` son SEIS pantallas (3.600
                líneas) y la web no las mencionaba ni una vez. La propia pantalla
@@ -305,7 +305,7 @@ const entrenadores = {
                falta repetir ninguna captura de otra área. */
             media: [{ tipo: 'video', src: '/video/coach-marketing.mp4', poster: '/video/coach-marketing.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Estudio de marketing del entrenador: testimonios, collage de dieta, ficha de plato e informe de mediciones, todo con su marca', pie: 'Las seis piezas del estudio, con la marca del entrenador. Se descargan y las sube él donde quiera.' }],
             bloques: [
-                { titulo: 'Seis piezas listas para publicar', items: [0, 1, 2, 3, 4, 5],
+                { titulo: 'Seis piezas, y cómo salen', items: [0, 1, 2, 3, 4, 5, 6, 7],
                   media: { tipo: 'video', src: '/video/coach-marketing.mp4', poster: '/video/coach-marketing.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Estudio de marketing del entrenador: testimonios, collage de dieta, ficha de plato e informe de mediciones, todo con su marca', pie: 'Las seis piezas del estudio, con la marca del entrenador. Se descargan y las sube él donde quiera.' } },
             ],
             items: [
@@ -315,6 +315,15 @@ const entrenadores = {
                   { t: 'Antes y después de tus clientes', d: 'La transformación montada con sus fotos de progreso, sin sacarlas a otra app.' },
                   { t: 'Informe corporal con sus centímetros', d: 'Un body scan con las medidas reales de un cliente, anónimo y con tu marca.' },
                   { t: 'Banco de testimonios', d: 'Lo que tus clientes responden en los seguimientos, convertido en tarjeta con tu marca. La IA te propone las mejores y tú eliges.' },
+                  /* ⚠️ El editor de la tarjeta NO vive en app/(coach)/marketing/
+                     sino en components/ShareAnswerCardModal.jsx (1.116 líneas), y
+                     se abre también desde la ficha del atleta. Lo busqué solo en
+                     la carpeta de marketing, no apareció, y estuve a punto de
+                     darlo por maqueta del reel. Verificado: formatos, plantillas,
+                     tipografías, estilos de texto, fondo, bordes, fondo de fuera,
+                     marco y qué datos salen en la imagen. */
+                  { t: 'La tarjeta, a tu gusto', d: 'Diez controles: formato (cuadrado, vertical, story, horizontal o tira), plantilla, tipografía, fondo, bordes, marco y qué datos salen. También se abre desde la ficha del atleta, sin pasar por Marketing.' },
+                  { t: 'Se descargan y las subes tú', d: 'TotalGains no publica en tu nombre. Te da la imagen, con fondo transparente si la quieres para montar varias en una story, y la subes donde te interese.' },
             ],
         },
         {
