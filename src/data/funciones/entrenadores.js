@@ -355,7 +355,7 @@ const entrenadores = {
                      entrenador (Suscripciones · Historial de pagos · Actividad, con el botón
                      «Registrar Pago» y los filtros de «Falta este mes» / «Por verificar»).
                      Ver feedback_no_marketing_cobros. */
-                  media: null },
+                  media: { tipo: 'imagen', src: '/screenshots/coach-facturacion-1760.webp', w: 1760, h: 892, alt: 'Panel de facturación del entrenador en TotalGains, con el botón Registrar Pago en cada cuota y los filtros de quién falta este mes', pie: 'Facturación del entrenador: tú registras cada pago. El filtro te dice quién falta este mes.' } },
                 { titulo: 'Altas, citas y avisos', items: [3, 4, 5, 6, 7, 8, 9, 10],
                   media: { tipo: 'video', src: '/video/coach-invita-escritorio.mp4', poster: '/video/coach-invita-escritorio.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Alta de un cliente nuevo desde el panel web del entrenador', pie: 'Dar de alta a un atleta desde el panel.' } },
             ],
