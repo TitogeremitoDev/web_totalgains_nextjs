@@ -344,14 +344,25 @@ const entrenadores = {
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
                 { titulo: 'Cobros y renovaciones', items: [0, 1, 2],
-                  media: { tipo: 'imagen', src: '/screenshots/suscripcion.webp', w: 600, h: 1339, alt: 'Pantalla de suscripción del atleta en la app', pie: 'Lo que ve el atleta cuando le toca renovar.', vertical: true } },
+                  /* ⛔ NO VOLVER A PONER AQUÍ /screenshots/suscripcion.webp. Esa captura es la
+                     pantalla donde el ENTRENADOR contrata su plan de TotalGains (19,99 €/mes,
+                     199 €/año, «Plan seleccionado»), y yo la etiqueté como «lo que ve el atleta
+                     cuando le toca renovar». Doble error: no es del atleta, y con precios y un
+                     plan marcado parece un checkout dentro de la app. German, 15-sep-2026:
+                     «ESTO ES UN FALLO GRAVE, RECUERDA QUE AÚN NO TENEMOS PAGOS IN-APP».
+                     Lo que hay es FACTURACIÓN MANUAL: tú registras el pago.
+                     Va sin imagen hasta que llegue la captura del panel de Facturación del
+                     entrenador (Suscripciones · Historial de pagos · Actividad, con el botón
+                     «Registrar Pago» y los filtros de «Falta este mes» / «Por verificar»).
+                     Ver feedback_no_marketing_cobros. */
+                  media: null },
                 { titulo: 'Altas, citas y avisos', items: [3, 4, 5, 6, 7, 8, 9, 10],
                   media: { tipo: 'video', src: '/video/coach-invita-escritorio.mp4', poster: '/video/coach-invita-escritorio.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Alta de un cliente nuevo desde el panel web del entrenador', pie: 'Dar de alta a un atleta desde el panel.' } },
             ],
             items: [
-                { t: 'Gestión de pagos', d: 'Cuotas por atleta, previsión del mes, vencidos sin cobrar, ticket medio y comparación con el mes anterior, con las trimestrales y anuales normalizadas a mensual.' },
-                { t: 'Historial de cobros', d: 'Quién hizo qué y cuándo, guardando el antes y el después de cada modificación. Es lo que resuelve un «a mí me dijiste otro precio».' },
-                { t: 'Recordatorios de renovación', d: 'El atleta recibe el aviso en su app cuando le toca renovar. El cobro se hace por el canal que ya uses: transferencia, Bizum, TPV o la pasarela que tengas montada.' },
+                { t: 'Facturación manual, no pasarela', d: 'Tú registras cada pago cuando lo cobras, y la pantalla te da la previsión del mes, lo vencido sin cobrar, el ticket medio y la comparación con el mes anterior, con las cuotas trimestrales y anuales normalizadas a mensual. TotalGains NO cobra a tus atletas: no hay pasarela ni pago dentro de la app.' },
+                { t: 'Historial de pagos y actividad', d: 'Quién hizo qué y cuándo, guardando el antes y el después de cada modificación. Es lo que resuelve un «a mí me dijiste otro precio». Con filtros de quién falta este mes y qué queda por verificar.' },
+                { t: 'Recordatorios de renovación', d: 'El atleta recibe el aviso en su app cuando le toca renovar, e insiste si el pago no se registra. Cobras por el canal que ya uses (transferencia, Bizum, TPV o lo que tengas montado por tu cuenta) y lo apuntas aquí.' },
                 { t: 'Citas con el atleta', d: 'Propones huecos, el atleta elige y la cita queda en su agenda y en la tuya.' },
                 { t: 'Eventos y avisos programados', d: 'Eventos puntuales o recurrentes con notificación al atleta.' },
                 { t: 'Migración asistida', d: 'Traemos tus atletas, plantillas y planes desde Trainerize, Harbiz, MyPT Hub o tus propios Excel. Lo hacemos nosotros, en español y sin coste.' },

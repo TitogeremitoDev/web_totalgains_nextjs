@@ -484,7 +484,7 @@ function SolutionSection() {
     {
       icon: <CreditCard size={22} />,
       title: "Cobros recurrentes Stripe",
-      desc: "Cuotas mensuales, bonos de 10 clases y anuales con cobro automático. Stripe es tu cuenta — nosotros 0% comisión.",
+      desc: "Cuotas mensuales, bonos de 10 clases y tarifas anuales. Las domiciliadas se registran solas cada mes y tú las verificas con tu banco; el resto lo cobras por tu canal y lo apuntas. No tocamos tu dinero ni cobramos comisión.",
     },
     {
       icon: <Layers size={22} />,

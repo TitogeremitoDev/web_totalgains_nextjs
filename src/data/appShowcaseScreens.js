@@ -458,11 +458,19 @@ export const screens = {
 
   suscripcion: {
     id: "suscripcion",
-    title: "Suscripción",
-    subtitle: "Planes Premium",
+    title: "Tu plan de TotalGains",
+    subtitle: "Pasar al modo entrenador",
     image: "/screenshots/suscripcion.webp",
+    // ⛔ OJO CON EL COPY DE ESTA PANTALLA. Son los planes de TotalGains para
+    // quien quiere entrenar gente (19,99 €/mes, 199 €/año), NO el cobro de un
+    // entrenador a sus atletas: TotalGains no tiene pagos in-app y venderlo
+    // sería prometer lo que no existe. Antes decía «Planes Premium · Elige el
+    // plan que mejor se adapte a tus necesidades», y con esos precios delante
+    // se leía como que el atleta paga su cuota en la app.
+    // German, 15-sep-2026: «AÚN NO TENEMOS PAGOS IN-APP, TENEMOS EL SISTEMA DE
+    // FACTURACIÓN MANUAL». Ver la memoria feedback_no_marketing_cobros.
     description:
-      "Elige el plan que mejor se adapte a tus necesidades y objetivos.",
+      "Aquí contratas tu plan de TotalGains para empezar a entrenar atletas. El cobro a tus clientes no pasa por la app: lo sigues haciendo por tu canal.",
     category: "cliente",
     hotspots: [
       {

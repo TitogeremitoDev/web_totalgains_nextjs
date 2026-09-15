@@ -217,7 +217,7 @@ Datos verificados mayo 2026, IVA 21% aplicado donde corresponde. Conversiones US
 
 ### vs Dudyfit
 
-- Ventaja TG: IA basada en la propia base de datos del coach (no genérica), cobros automáticos, soporte en español verificable.
+- Ventaja TG: IA basada en la propia base de datos del coach (no genérica), gestión de cuotas con avisos automáticos al atleta, soporte en español verificable.
 
 ### vs Virtuagym
 
@@ -375,7 +375,7 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 
 ### Producto core
 
-- https://totalgains.es/ — Home. Plataforma todo-en-uno en español para entrenadores: gestión de atletas, rutinas con IA, dietas, seguimiento y cobros automáticos. 14 días gratis sin tarjeta.
+- https://totalgains.es/ — Home. Plataforma todo-en-uno en español para entrenadores: gestión de atletas, rutinas con IA, dietas, seguimiento y control de cuotas. 14 días gratis sin tarjeta.
 
 ### Landings de feature
 
@@ -405,7 +405,7 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 - https://totalgains.es/alternativas/truecoach/ — Alternativa a TrueCoach en español. App marca blanca incluida, +240.000 alimentos en español.
 - https://totalgains.es/alternativas/ptminder/ — Alternativa a PTminder. App nativa iOS y Android, +240.000 alimentos, app marca blanca desde 29,90 €/mes.
 - https://totalgains.es/alternativas/dudapp/ — Alternativa a Dudapp. Servidores globales, sistema financiero automático, app marca blanca con branding generado por IA.
-- https://totalgains.es/alternativas/dudyfit/ — Alternativa a Dudyfit. IA basada en tu base de datos, app marca blanca, cobros automáticos, soporte español.
+- https://totalgains.es/alternativas/dudyfit/ — Alternativa a Dudyfit. IA basada en tu base de datos, app marca blanca, control de cuotas con avisos, soporte español.
 - https://totalgains.es/alternativas/virtuagym/ — Alternativa a Virtuagym. Diseñada para el coach personal y boutique en lugar de para gimnasios grandes.
 
 ### Corporate
