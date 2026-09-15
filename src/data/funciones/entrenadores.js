@@ -50,6 +50,18 @@ const entrenadores = {
                 alt: 'Creación de una rutina en el panel del entrenador de TotalGains',
                 pie: 'Montar una rutina desde cero en el panel del entrenador.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Crear la rutina', items: [0, 1, 2, 3],
+                  media: { tipo: 'video', src: '/video/coach-primera-rutina.mp4', poster: '/video/coach-primera-rutina.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Creación de una rutina en el panel del entrenador de TotalGains', pie: 'Montar una rutina desde cero en el panel del entrenador.' } },
+                { titulo: 'La rutina, ya montada', items: [4, 5, 6, 7],
+                  media: { tipo: 'imagen', src: '/images/blog/ia-totalgains/04-rutina-generada.webp', w: 1187, h: 982, alt: 'Rutina generada por la IA de TotalGains, lista para revisar', pie: 'Una rutina ya montada: días, ejercicios, series y descansos.' } },
+                { titulo: 'En el entreno del atleta', items: [8, 9, 10, 11, 12],
+                  media: { tipo: 'video', src: '/video/app-pantalla-entreno.mp4', poster: '/video/app-pantalla-entreno.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Pantalla de entreno en la app del atleta', pie: 'El entreno, tal y como lo sigue el atleta en su móvil.' } },
+            ],
             items: [
                 { t: 'Generador de rutinas con IA', d: 'Periodizaciones completas en segundos usando solo los ejercicios de tu biblioteca. Antes de aplicar nada ves exactamente qué cambia respecto a la rutina actual, y si no te convence pides otra propuesta.' },
                 { t: 'Montar la rutina escribiendo una frase', d: 'Escribes «PPL de 5 días para Iván, hipertrofia, 4 series de 8 a 12, prioriza pecho y hombro, sin sentadilla» y el formulario se rellena solo con esos datos.' },
@@ -78,6 +90,18 @@ const entrenadores = {
                 alt: 'Creación de una dieta con IA en el panel del entrenador',
                 pie: 'Generar la primera dieta de un atleta con IA.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Crear la dieta', items: [0, 1, 2, 3],
+                  media: { tipo: 'video', src: '/video/coach-primera-dieta.mp4', poster: '/video/coach-primera-dieta.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Creación de una dieta con IA en el panel del entrenador', pie: 'Generar una dieta con IA y revisarla antes de guardar.' } },
+                { titulo: 'Ajustarla sin rehacerla', items: [4, 5, 6, 7],
+                  media: { tipo: 'imagen', src: '/images/blog/ia-totalgains/09-dieta-revision-web.webp', w: 1982, h: 1073, alt: 'Dieta generada por la IA en revisión en el panel web', pie: 'La dieta propuesta, comida a comida, antes de aplicarla.' } },
+                { titulo: 'En el móvil del atleta', items: [8, 9, 10, 11],
+                  media: { tipo: 'video', src: '/video/app-tu-dieta.mp4', poster: '/video/app-tu-dieta.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'La dieta en la app del atleta', pie: 'Lo que ve el atleta: su dieta del día en el móvil.' } },
+            ],
             items: [
                 { t: 'Generador de dietas con IA', d: 'Parte del peso y el objetivo de ese atleta concreto, con las macros de su última dieta ya cargadas, así que ajustas en vez de crear de cero.' },
                 { t: 'Montar la dieta escribiendo una frase o dictándola', d: 'Describes el plan con tus palabras y el formulario queda relleno, listo para revisar.' },
@@ -105,6 +129,16 @@ const entrenadores = {
                 alt: 'Pantalla de seguimiento del atleta en la app de TotalGains',
                 pie: 'El seguimiento, tal y como lo ve el atleta en su móvil.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Lo que registra el atleta', items: [0, 1, 2, 3],
+                  media: { tipo: 'video', src: '/video/app-seguimiento.mp4', poster: '/video/app-seguimiento.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Pantalla de seguimiento del atleta en la app de TotalGains', pie: 'El seguimiento, tal y como lo ve el atleta en su móvil.' } },
+                { titulo: 'Lo que tú ves', items: [4, 5, 6, 7],
+                  media: { tipo: 'imagen', src: '/screenshots/perfil-videos.webp', w: 600, h: 1339, alt: 'Vídeos de técnica del atleta en la app', pie: 'Los vídeos de técnica del atleta, con tus anotaciones.', vertical: true } },
+            ],
             items: [
                 { t: 'Check-in diario y semanal', d: 'El atleta registra su día y su semana desde la app, con recordatorios en su franja horaria.' },
                 { t: 'Fotos de progreso', d: 'Comparativa de antes y después, y el atleta puede marcar fotos como privadas si no quiere compartirlas.' },
@@ -127,6 +161,16 @@ const entrenadores = {
                 alt: 'Ficha de un atleta en TotalGains con su riesgo de abandono y las acciones sugeridas',
                 pie: 'La ficha te dice el riesgo del atleta y qué hacer con él.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Quién está en riesgo', items: [0, 1, 2],
+                  media: { tipo: 'imagen', src: '/screenshots/coach-riesgo-cliente.webp', w: 800, h: 1785, alt: 'Ficha de un atleta en TotalGains con su riesgo de abandono y las acciones sugeridas', pie: 'La ficha del atleta con su riesgo de abandono y qué hacer.', vertical: true } },
+                { titulo: 'Lo que te avisa solo', items: [3, 4, 5],
+                  media: { tipo: 'imagen', src: '/screenshots/home_coach-600.webp', w: 600, h: 1339, alt: 'Inicio del panel del entrenador con sus avisos', pie: 'El inicio del entrenador: avisos, rachas y cumpleaños.', vertical: true } },
+            ],
             items: [
                 { t: 'Centro de alertas', d: 'Detecta dolor o lesión en notas de entreno, formularios y comentarios del semanal, además de baja motivación, racha rota y atletas que llevan días sin subir nada.' },
                 { t: 'Chat urgente detectado por IA', d: 'Cuando un mensaje pide atención inmediata se abre el caso y llega un aviso, con un borrador de respuesta listo para editar.' },
@@ -147,6 +191,14 @@ const entrenadores = {
                 alt: 'Mi Ciclo en el panel del entrenador: fase folicular, qué hacer esta semana y registros de la atleta',
                 pie: 'Lo que ve la entrenadora: la fase, qué toca esa semana y los registros que la atleta ha decidido compartir.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Mi Ciclo', items: [0, 1, 2, 3, 4],
+                  media: { tipo: 'imagen', src: '/images/ciclo-coach-880.webp', w: 880, h: 682, alt: 'Mi Ciclo en el panel del entrenador: fase folicular, qué hacer esta semana y registros de la atleta', pie: 'Mi Ciclo en el panel del entrenador.' } },
+            ],
             items: [
                 { t: 'Fases del ciclo en el entreno y la nutrición', d: 'No es un calendario aparte: la fase condiciona la planificación dentro de la misma app.' },
                 { t: 'Registro de síntomas con IA', d: 'La atleta lo escribe con sus palabras y el sistema marca los síntomas, sin rellenar casillas.' },
@@ -167,6 +219,14 @@ const entrenadores = {
                 alt: 'Configuración del branding del entrenador en TotalGains',
                 pie: 'Poner tu logo y tus colores en la app de tus atletas.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Tu marca, no la nuestra', items: [0, 1, 2, 3],
+                  media: { tipo: 'video', src: '/video/coach-tu-marca.mp4', poster: '/video/coach-tu-marca.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Configuración del branding del entrenador en TotalGains', pie: 'Tu logo y tus colores en la app de cada atleta.' } },
+            ],
             items: [
                 { t: 'App de marca blanca en iOS y Android', d: 'Con tu logo, tu nombre y tus colores. Incluida en todos los planes, también en el gratuito, y sin coste adicional.' },
                 { t: 'Panel web del entrenador', d: 'Todo el trabajo de escritorio desde el navegador, sin instalar nada.' },
@@ -186,6 +246,16 @@ const entrenadores = {
                 alt: 'Alta de un cliente nuevo desde el panel web del entrenador',
                 pie: 'Dar de alta a un atleta desde el ordenador.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Cobros y renovaciones', items: [0, 1, 2],
+                  media: { tipo: 'imagen', src: '/screenshots/suscripcion.webp', w: 600, h: 1339, alt: 'Pantalla de suscripción del atleta en la app', pie: 'Lo que ve el atleta cuando le toca renovar.', vertical: true } },
+                { titulo: 'Altas, citas y avisos', items: [3, 4, 5],
+                  media: { tipo: 'video', src: '/video/coach-invita-escritorio.mp4', poster: '/video/coach-invita-escritorio.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Alta de un cliente nuevo desde el panel web del entrenador', pie: 'Dar de alta a un atleta desde el panel.' } },
+            ],
             items: [
                 { t: 'Gestión de pagos', d: 'Cuotas por atleta, previsión del mes, vencidos sin cobrar, ticket medio y comparación con el mes anterior, con las trimestrales y anuales normalizadas a mensual.' },
                 { t: 'Historial de cobros', d: 'Quién hizo qué y cuándo, guardando el antes y el después de cada modificación. Es lo que resuelve un «a mí me dijiste otro precio».' },
@@ -206,6 +276,14 @@ const entrenadores = {
                 alt: 'Pantalla de logros y racha del atleta en la app de TotalGains',
                 pie: 'Logros y racha, en la pantalla del atleta.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Que vuelvan solos', items: [0, 1, 2, 3],
+                  media: { tipo: 'imagen', src: '/screenshots/perfil-logros.webp', w: 600, h: 1339, alt: 'Pantalla de logros y racha del atleta en la app de TotalGains', pie: 'Logros, medallas y racha en la app del atleta.', vertical: true } },
+            ],
             items: [
                 { t: 'Logros y medallas', d: 'Sistema de progresión por objetivos cumplidos, con medallas que solo suben de nivel.' },
                 { t: 'Compartir el entreno', d: 'El atleta puede compartir su sesión o su récord, con tu marca en la imagen.' },
@@ -225,6 +303,14 @@ const entrenadores = {
                 alt: 'Primeros pasos de un entrenador nuevo en TotalGains',
                 pie: 'Los primeros pasos, de la cuenta vacía al primer atleta.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Empezar', items: [0, 1, 2],
+                  media: { tipo: 'video', src: '/video/reel-primeros-pasos.mp4', poster: '/video/reel-primeros-pasos.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Primeros pasos en TotalGains', pie: 'Los primeros pasos, en un minuto.' } },
+            ],
             items: [
                 { t: 'Asistente «¿cómo hago X?»', d: 'Preguntas dentro de la app y te lleva a la pantalla exacta con los pasos.' },
                 { t: 'Soporte en español', d: 'Contesta una persona, no un formulario que se pierde.' },

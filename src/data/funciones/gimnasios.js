@@ -53,6 +53,18 @@ const gimnasios = {
                 alt: 'Horario de clases del gimnasio con las clases programadas y su ocupación',
                 pie: 'El horario del centro, con la ocupación de cada clase.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Reservas y aforo', items: [0, 1, 2, 3, 4],
+                  media: { tipo: 'imagen', src: '/images/gym/clases-1760.webp', w: 1760, h: 960, alt: 'Horario de clases del gimnasio con las clases programadas y su ocupación', pie: 'Las clases de la semana con su hora, sala y ocupación.' } },
+                { titulo: 'El horario, a tu manera', items: [5, 6, 7, 8, 9],
+                  media: { tipo: 'imagen', src: '/images/gym/clases.webp', w: 1837, h: 916, alt: 'Panel de horario del centro', pie: 'El horario completo del centro en el panel.' } },
+                { titulo: 'Lo que ve el socio', items: [10, 11, 12, 13],
+                  media: { tipo: 'imagen', src: '/screenshots/home.webp', w: 600, h: 1339, alt: 'Inicio de la app del socio con sus reservas', pie: 'La app del socio: sus clases y sus reservas.', vertical: true } },
+            ],
             items: [
                 { t: 'Reservas con aforo real', d: 'Aforo por sala, por clase y por horario. Cambiar el aforo de una sala ajusta las clases que cuelgan de ella.' },
                 { t: 'Lista de espera automática', d: 'Cuando alguien cancela, el primero de la lista recibe la notificación al instante. Nadie de recepción tiene que estar pendiente.' },
@@ -91,6 +103,20 @@ const gimnasios = {
                     pie: 'Y lo que ve el socio en su móvil, con su carrito y su pedido.',
                 },
             ],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'El catálogo del centro', items: [0, 5, 6, 7, 8],
+                  media: { tipo: 'imagen', src: '/images/gym/tienda-productos-880.webp', w: 1772, h: 820, alt: 'Catálogo de productos del gimnasio en TotalGains', pie: 'El catálogo del centro: tallas, stock, precio, margen y lo vendido este mes.' } },
+                { titulo: 'Pedidos desde la app del socio', items: [2, 3, 4, 14],
+                  media: { tipo: 'imagen', src: '/images/gym/tienda-socio.webp', w: 800, h: 1785, alt: 'La tienda del gimnasio en la app del socio', pie: 'La tienda desde la app del socio: elige, pide y recoge.', vertical: true } },
+                { titulo: 'Vender en mostrador', items: [1, 11, 12, 10, 9],
+                  media: { tipo: 'imagen', src: '/images/gym/pagos.webp', w: 1837, h: 916, alt: 'Pantalla de pagos del centro', pie: 'Vender y cobrar desde Pagos, en dos toques.' } },
+                { titulo: 'Gestión y equipo', items: [13, 15, 16],
+                  media: { tipo: 'imagen', src: '/images/gym/dashboard.webp', w: 1837, h: 916, alt: 'Panel del gimnasio con los indicadores del centro', pie: 'El panel del centro, con lo vendido y lo pendiente.' } },
+            ],
             items: [
                 { t: 'Catálogo de productos', d: 'Nombre, precio con IVA, tipo de IVA por producto, categoría, opciones de talla o sabor, descripción, galería de hasta tres fotos y vídeo.' },
                 { t: 'Venta en mostrador', d: 'Desde Pagos, desde la ficha del socio o desde Caja. Producto del catálogo o producto suelto, cantidad, precio pactado si hace falta y método de pago: efectivo, Bizum, transferencia, TPV u otro. Genera su ticket y entra en caja si fue en efectivo.' },
@@ -122,6 +148,16 @@ const gimnasios = {
                 alt: 'Listado de socios del gimnasio con su coach asignado y su fecha de alta',
                 pie: 'La ficha de socios, con su coach y su turno.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'El alta', items: [0, 1, 2, 3, 7],
+                  media: { tipo: 'imagen', src: '/images/gym/clientes-1760.webp', w: 1760, h: 1040, alt: 'Listado de socios del gimnasio con su coach asignado y su fecha de alta', pie: 'Los socios del centro, con su coach y su turno.' } },
+                { titulo: 'La ficha', items: [4, 5, 6],
+                  media: { tipo: 'imagen', src: '/screenshots/coach_clientes-600.webp', w: 600, h: 1339, alt: 'Listado de clientes en el móvil', pie: 'La lista de socios también en el móvil.', vertical: true } },
+            ],
             items: [
                 { t: 'Alta en una sola pantalla', d: 'Crear, cobrar y apuntar a clases sin ir y volver tres veces.' },
                 { t: 'Alta simple sin app', d: 'Para el socio que solo quiere entrenar, basta con el nombre.' },
@@ -144,6 +180,16 @@ const gimnasios = {
                 alt: 'Control de pagos del gimnasio con el estado de cada cuota',
                 pie: 'Quién está al día, quién renueva pronto y quién no.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Cobrar', items: [0, 1, 2, 4, 5],
+                  media: { tipo: 'imagen', src: '/images/gym/pagos-1760.webp', w: 1760, h: 995, alt: 'Control de pagos del gimnasio con el estado de cada cuota', pie: 'Quién está al día, quién renueva pronto y quién no.' } },
+                { titulo: 'Facturar', items: [3, 6, 7, 8],
+                  media: { tipo: 'imagen', src: '/images/gym/facturacion.webp', w: 1600, h: 798, alt: 'Facturación del centro', pie: 'Las facturas del centro, con su numeración y su IVA.' } },
+            ],
             items: [
                 { t: 'Planes, bonos y cuotas', d: 'Tres tipos de plan, cupo semanal, comodín para la semana que no puede venir y restricción por franja horaria.' },
                 { t: 'Cobro manual y retroactivo', d: 'Precio y duración pactados al momento, y cobro de clases ya dadas que no tenían bono.' },
@@ -167,6 +213,16 @@ const gimnasios = {
                 alt: 'Panel del gimnasio con los KPI del centro',
                 pie: 'El panel del centro, que cada coach ve según sus permisos.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Tu equipo', items: [0, 1, 2],
+                  media: { tipo: 'imagen', src: '/images/gym/dashboard-1760.webp', w: 1760, h: 1040, alt: 'Panel del gimnasio con los KPI del centro', pie: 'El panel del centro, que cada coach ve según sus permisos.' } },
+                { titulo: 'Lo que comparten', items: [3, 4, 5],
+                  media: { tipo: 'imagen', src: '/screenshots/coach_rutinas-600.webp', w: 600, h: 1339, alt: 'Biblioteca de rutinas de un coach', pie: 'Las rutinas del coach, compartidas con el centro.', vertical: true } },
+            ],
             items: [
                 { t: 'Coaches ilimitados', d: 'En los tres planes, sin coste por entrenador adicional. La tarifa sube por socios activos, nunca por plantilla.' },
                 { t: 'Permisos granulares', d: 'Ver todos los clientes, gestionar clientes, gestionar clases, gestionar facturación y gestionar la tienda, persona a persona.' },
@@ -187,6 +243,16 @@ const gimnasios = {
                 alt: 'Pantalla de retención del gimnasio con los socios en riesgo y su puntuación',
                 pie: 'Quién está a punto de irse, con el mensaje ya preparado.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Antes de que se vaya', items: [0, 1, 4, 6],
+                  media: { tipo: 'imagen', src: '/images/gym/retencion-754.webp', w: 754, h: 1650, alt: 'Pantalla de retención del gimnasio con los socios en riesgo y su puntuación', pie: 'Quién está a punto de irse, con el mensaje ya preparado.', vertical: true } },
+                { titulo: 'Lo que opinan de las clases', items: [2, 3, 5],
+                  media: { tipo: 'imagen', src: '/images/gym/valoraciones.webp', w: 1600, h: 918, alt: 'Valoraciones de las clases del centro', pie: 'Cómo valoran los socios cada clase y cada coach.' } },
+            ],
             items: [
                 { t: 'Riesgo de baja', d: 'Calculado con la asistencia real del socio, no con la última vez que abrió la app.' },
                 { t: 'Recuperar a quien dejó de venir', d: 'El sistema te señala a los socios que dejaron de comprar bonos y te propone el mensaje con IA.' },
@@ -208,6 +274,14 @@ const gimnasios = {
                 alt: 'App del socio con el logo y los colores del gimnasio',
                 pie: 'La app que se descarga tu socio, con la marca del centro.',
             }],
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'La app del centro', items: [0, 1, 2, 3],
+                  media: { tipo: 'imagen', src: '/images/gym/branding.webp', w: 1280, h: 2856, alt: 'La app con la marca del centro', pie: 'La app, con el logo y los colores del centro.', vertical: true } },
+            ],
             items: [
                 { t: 'Marca blanca del centro', d: 'Logo, nombre y colores de tu gimnasio, también en el email de bienvenida.' },
                 { t: 'Sin rastro de proveedor', d: 'Puedes ocultar el botón de mejora a premium en el móvil del socio para que la experiencia sea del centro de principio a fin.' },
@@ -220,6 +294,14 @@ const gimnasios = {
             nombre: 'Puesta en marcha y ayuda',
             railNombre: 'Ayuda',
             resumen: 'No te dejamos el software y adiós.',
+            /* Bloques visuales: cada grupo de funciones con su imagen o
+               vídeo, alternando lado (patrón AimHarder que pidió German el
+               15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
+               abajo; no se duplica ni reordena ninguna función. */
+            bloques: [
+                { titulo: 'Empezar', items: [0, 1, 2, 3],
+                  media: { tipo: 'video', src: '/video/reel-primeros-pasos.mp4', poster: '/video/reel-primeros-pasos.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Primeros pasos en TotalGains', pie: 'Los primeros pasos, en un minuto.' } },
+            ],
             items: [
                 { t: 'Migración incluida', d: 'Traemos socios, horarios, planes y bonos desde tu plataforma actual. Lo hacemos nosotros y en español.' },
                 { t: 'Configuración del centro', d: 'Clases recurrentes, salas, planes, documentos de alta y branding montados contigo. Una configuración base completa suele estar lista en tres a cinco días.' },

@@ -23,13 +23,6 @@ import "./funciones.css";
    necesitar JavaScript y el HTML sigue llevando las 61 funciones enteras.
    ────────────────────────────────────────────── */
 
-/* Funciones que van como tarjeta junto a la media; las demás, en lista
-   compacta. Los datos de cada área van ordenados de más a menos importante,
-   así que "las N primeras" es la selección. Tres junto a un vídeo apaisado
-   (van apiladas a su derecha); cuatro junto a una captura de móvil (van en
-   2x2 a su izquierda: con tres, la última se quedaba sola en su fila). */
-const CLAVE = 3;
-const CLAVE_VERTICAL = 4;
 
 export default function FuncionesContent({ data, otro }) {
     const esGym = data.perfil === "gimnasio";
@@ -125,9 +118,6 @@ export default function FuncionesContent({ data, otro }) {
 
             <div className="container fn-main">
                 {data.categorias.map((c) => {
-                    const media = c.media && c.media.length ? c.media : null;
-                    const vertical = media && media[0].vertical;
-                    const clave = vertical ? CLAVE_VERTICAL : CLAVE;
                     return (
                         <section key={c.id} id={c.id} className={`fn-cat ${c.destacado ? "destacado" : ""}`}>
                             {/* .fn-area es quien maqueta; la sección solo se
@@ -138,7 +128,7 @@ export default function FuncionesContent({ data, otro }) {
                                 titular: medido, compartir fila con el titular
                                 dejaba la primera tarjeta a 708-827px porque la
                                 fila medía lo que mide el móvil. */}
-                            <div className={`fn-area ${vertical ? "vertical" : ""}`}>
+                            <div className="fn-area">
                             <div className="fn-area-top">
                                 <div className="fn-area-head">
                                     {c.destacado && (
@@ -153,53 +143,39 @@ export default function FuncionesContent({ data, otro }) {
                                 </div>
                             </div>
 
-                            {/* ESCAPARATE: la media y las tres funciones clave en la
-                                misma fila, visibles las dos cosas nada más pulsar la
-                                pestaña. El resto va debajo en lista compacta, sin cajas.
-                                Antes eran 13 tarjetas idénticas en fila y el vídeo al
-                                final: "50 cuadrados y luego un vídeo, quién se va a ver
-                                eso" (German, 14-sep-2026). El HTML sigue llevando las
-                                61 funciones con su descripción. */}
-                            <div className={`fn-escaparate ${vertical ? "vertical" : ""} ${media ? "" : "sin-media"}`}>
-                                {media && !vertical && <FeatureMedia media={[media[0]]} ancha />}
-                                <ul className="fn-items fn-items-clave">
-                                    {c.items.slice(0, clave).map((it) => (
-                                        <li key={it.t} className="fn-item">
-                                            <div className="fn-item-top">
-                                                <Check />
-                                                <h3 className="fn-item-t">{it.t}</h3>
-                                            </div>
-                                            <p className="fn-item-d">{it.d}</p>
-                                        </li>
-                                    ))}
-                                </ul>
+                            {/* BLOQUES VISUALES: cada grupo de 3-5 funciones con su
+                                imagen o vídeo, alternando lado. Patrón AimHarder que
+                                pidió German el 15-sep-2026: "que priorice lo visual
+                                siempre". Antes: rejilla de 13 tarjetas iguales y el
+                                vídeo al final; después: escaparate con 3 clave y una
+                                lista compacta sin imagen ("aquí a la derecha podríamos
+                                añadir la imagen de una rutina ya montada").
+                                Las funciones se leen de `items` por índice, así que el
+                                inventario completo sigue en el HTML con su <h4>. */}
+                            <div className="fn-bloques">
+                                {c.bloques.map((b, k) => (
+                                    <div key={b.titulo} className={`fn-bloque ${b.media.vertical ? "vertical" : ""} ${k % 2 ? "invertido" : ""}`}>
+                                        <FeatureMedia media={[b.media]} />
+                                        <div className="fn-bloque-texto">
+                                            <h3 className="fn-bloque-t">{b.titulo}</h3>
+                                            <ul className="fn-bloque-lista">
+                                                {b.items.map((idx) => {
+                                                    const it = c.items[idx];
+                                                    return (
+                                                        <li key={it.t} className="fn-bloque-item">
+                                                            <Check />
+                                                            <div>
+                                                                <h4 className="fn-bloque-item-t">{it.t}</h4>
+                                                                <p className="fn-bloque-item-d">{it.d}</p>
+                                                            </div>
+                                                        </li>
+                                                    );
+                                                })}
+                                            </ul>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-
-                            {c.items.length > clave && (
-                                <div className="fn-resto">
-                                    <p className="fn-resto-t">Y además, en {c.railNombre || c.nombre}</p>
-                                    <ul className="fn-mini-lista">
-                                        {c.items.slice(clave).map((it) => (
-                                            <li key={it.t} className="fn-mini">
-                                                <Check />
-                                                <div>
-                                                    <h3 className="fn-mini-t">{it.t}</h3>
-                                                    <p className="fn-mini-d">{it.d}</p>
-                                                </div>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-
-                            {/* La media VERTICAL (captura de móvil) no cabe en la fila del
-                                escaparate sin dejar medio bloque vacío: mide 600px y las
-                                tres tarjetas 300. Va como columna derecha del área entera,
-                                con las tarjetas Y el inventario a su izquierda. */}
-                            {media && vertical && <FeatureMedia media={[media[0]]} />}
-
-                            {/* Tienda lleva dos medias: la segunda, debajo del inventario. */}
-                            {media && media.length > 1 && <FeatureMedia media={media.slice(1)} ancha />}
                             </div>
                         </section>
                     );
