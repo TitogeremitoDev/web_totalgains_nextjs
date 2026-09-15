@@ -1,6 +1,13 @@
 import Link from "next/link";
 import Pricing from "@/components/Pricing";
 import { softwareApplicationNode, organizationNode } from "@/data/productSchema";
+/* Los totales salen del catálogo, no escritos a mano: el 15-sep-2026 esta
+   página decía "las 61 de entrenador" cuando ya eran 67 (entró la
+   suplementación). Se resuelve en build, así que el número va en el HTML. */
+import coachData from "@/data/funciones/entrenadores";
+import gymData from "@/data/funciones/gimnasios";
+
+const totalFunciones = (d) => d.categorias.reduce((n, c) => n + c.items.length, 0);
 import "./precios.css";
 
 /* ──────────────────────────────────────────────
@@ -75,9 +82,9 @@ export default function PreciosPage() {
         <p className="precios-catalogo">
           Todas las funciones entran en todos los planes, también en el gratuito.
           Compruébalo una a una:{" "}
-          <Link href="/funciones/entrenadores/" prefetch={false}>las 61 de entrenador</Link>
+          <Link href="/funciones/entrenadores/" prefetch={false}>las {totalFunciones(coachData)} de entrenador</Link>
           {" · "}
-          <Link href="/funciones/gimnasios/" prefetch={false}>las 69 de gimnasio</Link>
+          <Link href="/funciones/gimnasios/" prefetch={false}>las {totalFunciones(gymData)} de gimnasio</Link>
         </p>
 
         {/* Las páginas de intención de precio estaban sueltas: la comparativa de

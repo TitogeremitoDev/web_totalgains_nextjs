@@ -107,6 +107,10 @@ Generador que crea rutinas personalizadas usando exclusivamente la biblioteca de
 
 Crea planes nutricionales con macros y kcal calculados automáticamente desde la base de +240.000 alimentos. Auditoría automática de alérgenos declarados, preferencias dietéticas (vegetariano, vegano, sin gluten, sin lactosa) y objetivos del cliente. Soporta importación de dietas previas en PDF con transcripción IA.
 
+### Sistema de suplementación de punta a punta
+
+El entrenador tiene su propio catálogo de suplementos: cada uno se guarda una vez con su marca, su foto, su dosis y su formato habituales, el enlace donde quiere que lo compren y su código de descuento. Con esos suplementos monta protocolos reutilizables (packs como «Mujer · energía y ciclo» o «Salud articular») que asigna a varios atletas de un toque, y también los coloca dentro del plan de nutrición, en la comida que les toca: no hay un documento de suplementación aparte. El atleta ve en su app la pauta del día ordenada por momentos (desayuno, comida, recena, pre-entreno y post-entreno), los días que le quedan de cada bote calculados con el tamaño del envase y su consumo diario, un aviso antes de quedarse a cero, y una lista de compra donde compra con el enlace y el código de su entrenador. El entrenador ve, producto a producto, cuántas veces se ha abierto su enlace, cuántas se ha copiado su código y cuántas compras se han marcado como hechas, un dato que usa para negociar con las marcas. TotalGains no cobra ni gestiona esas compras: solo registra lo que ocurre con el enlace y el código.
+
 ### Base de +240.000 alimentos en español
 
 La base nutricional más completa del mercado hispanohablante. Incluye productos de supermercado, marcas locales españolas y latinoamericanas, ingredientes frescos con macros validados. Cada alimento tiene macros, kcal, fibra, sodio y referencia de fuente cuando aplica.

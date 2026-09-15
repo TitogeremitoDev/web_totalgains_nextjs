@@ -99,8 +99,17 @@ const entrenadores = {
                   media: { tipo: 'video', src: '/video/coach-primera-dieta.mp4', poster: '/video/coach-primera-dieta.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Creación de una dieta con IA en el panel del entrenador', pie: 'Generar una dieta con IA y revisarla antes de guardar.' } },
                 { titulo: 'Ajustarla sin rehacerla', items: [4, 5, 6, 7],
                   media: { tipo: 'imagen', src: '/images/blog/ia-totalgains/09-dieta-revision-web.webp', w: 1982, h: 1073, alt: 'Dieta generada por la IA en revisión en el panel web', pie: 'La dieta propuesta, comida a comida, antes de aplicarla.' } },
-                { titulo: 'En el móvil del atleta', items: [8, 9, 10, 11],
+                { titulo: 'En el móvil del atleta', items: [8, 10, 11],
                   media: { tipo: 'video', src: '/video/app-tu-dieta.mp4', poster: '/video/app-tu-dieta.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'La dieta en la app del atleta', pie: 'Lo que ve el atleta: su dieta del día en el móvil.' } },
+                /* La suplementación era UNA línea perdida en el bloque del móvil y
+                   el sistema da para dos: el reel «de punta a punta» (33 s) cuenta
+                   la parte del entrenador, y la captura de «Mi pauta de hoy» la del
+                   atleta. Nada de esto estaba publicado, que es justo el agujero
+                   por el que las IAs decían que faltaban módulos. */
+                { titulo: 'Suplementación, de punta a punta', items: [12, 13, 14, 9, 18],
+                  media: { tipo: 'video', src: '/video/coach-suplementacion.mp4', poster: '/video/coach-suplementacion.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'El sistema de suplementación de TotalGains: catálogo del entrenador, protocolos, pauta del atleta y compra guiada', pie: 'Del catálogo del entrenador a la pauta del atleta, sin salir del plan.' } },
+                { titulo: 'Su pauta y su lista de compra', items: [15, 16, 17],
+                  media: { tipo: 'imagen', src: '/screenshots/supl-pauta-cliente-600.webp', w: 600, h: 1298, alt: 'Pauta de suplementos del día en la app del atleta, con los días que le quedan de cada bote', pie: 'Su pauta del día y cuánto le queda de cada bote, en su móvil.', vertical: true } },
             ],
             items: [
                 { t: 'Generador de dietas con IA', d: 'Parte del peso y el objetivo de ese atleta concreto, con las macros de su última dieta ya cargadas, así que ajustas en vez de crear de cero.' },
@@ -115,6 +124,21 @@ const entrenadores = {
                 { t: 'Suplementación dentro de la dieta', d: 'Los protocolos de suplementos se crean y se ven en el mismo plan, no en un documento aparte.' },
                 { t: 'Revisión antes de guardar', d: 'La dieta generada se abre en el editor completo y no se guarda hasta que tú lo dices. Un aviso señala posibles alérgenos, imprescindibles ausentes y cantidades fuera de rango.' },
                 { t: 'Analítica de qué comen de verdad', d: 'Los platos se ordenan en potenciar, ajustar o retirar, con su porqué y un resumen generado por IA.' },
+                  /* ⚠️ VERIFICADAS CONTRA EL CÓDIGO el 15-sep-2026, no contra el
+                     vídeo (que es una composición con interfaz recreada):
+                     CoachSupplement (brand, imageUrl, defaultAmount/Unit/Timing,
+                     commonSizes, purchaseUrl, discountCode), SupplementProtocol,
+                     ClientSupplementation con sus momentos, calculateDaysRemaining
+                     + getStockStatus en SupplementFooter, ShoppingListScreen, y
+                     PurchaseClick con los eventos link_click / purchase_confirmed /
+                     code_copied agregados en getCoachStats. */
+                  { t: 'Tu catálogo de suplementos', d: 'Cada suplemento se guarda una vez con su marca, su foto, su dosis y su formato habitual, y ya sale así en todas las pautas.' },
+                  { t: 'Tu enlace de compra y tu código', d: 'Cada suplemento lleva el enlace donde quieres que lo compren y tu código de descuento, que el atleta copia de un toque.' },
+                  { t: 'Protocolos que asignas de un toque', d: 'Un pack como «Mujer · energía y ciclo» o «Salud articular» se monta una vez y se asigna a los atletas que quieras.' },
+                  { t: 'Su pauta del día, por momentos', d: 'El atleta ve qué toma en el desayuno, en la comida, en la recena o después de entrenar, no una lista suelta.' },
+                  { t: 'Cuánto le queda de cada bote', d: 'Con el tamaño del envase y su consumo diario, la app le dice los días que le quedan y le avisa antes de quedarse a cero.' },
+                  { t: 'Su lista de compra', d: 'Lo que se le está acabando se junta en una lista y compra desde ahí, con tu enlace y tu código. Marca lo que ya ha comprado y le queda el historial.' },
+                  { t: 'Clics, códigos y compras confirmadas', d: 'Ves cuántas veces han abierto tu enlace, copiado tu código y marcado que ya lo compraron, producto a producto. Sirve para negociar con las marcas. TotalGains no cobra ni gestiona esas ventas.' },
             ],
         },
         {
