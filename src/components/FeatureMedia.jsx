@@ -37,7 +37,7 @@ export default function FeatureMedia({ media, ancha = false }) {
                             borroso y gigante: pasó con las capturas del gimnasio. */}
                         <div
                             className="fn-media-marco"
-                            style={{ maxWidth: Math.min(m.vertical ? 264 : 880, anchoReal) }}
+                            style={{ maxWidth: Math.min(m.vertical ? 300 : 880, anchoReal) }}
                         >
                             {m.tipo === "video" ? (
                                 <LazyVideo

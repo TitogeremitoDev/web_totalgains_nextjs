@@ -154,8 +154,10 @@ export default function FuncionesContent({ data, otro }) {
                                 inventario completo sigue en el HTML con su <h4>. */}
                             <div className="fn-bloques">
                                 {c.bloques.map((b, k) => (
-                                    <div key={b.titulo} className={`fn-bloque ${b.media.vertical ? "vertical" : ""} ${k % 2 ? "invertido" : ""}`}>
-                                        <FeatureMedia media={[b.media]} />
+                                    <div key={b.titulo} className={`fn-bloque ${b.media ? (b.media.vertical ? "vertical" : "") : "sin-media"} ${k % 2 ? "invertido" : ""}`}>
+                                        {/* media: null = todavía no hay captura DISTINTA para este
+                                            bloque; va en texto a dos columnas antes que repetir una. */}
+                                        {b.media && <FeatureMedia media={[b.media]} />}
                                         <div className="fn-bloque-texto">
                                             <h3 className="fn-bloque-t">{b.titulo}</h3>
                                             <ul className="fn-bloque-lista">

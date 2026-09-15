@@ -61,9 +61,9 @@ const gimnasios = {
                 { titulo: 'Reservas y aforo', items: [0, 1, 2, 3, 4],
                   media: { tipo: 'imagen', src: '/images/gym/clases-1760.webp', w: 1760, h: 960, alt: 'Horario de clases del gimnasio con las clases programadas y su ocupación', pie: 'Las clases de la semana con su hora, sala y ocupación.' } },
                 { titulo: 'El horario, a tu manera', items: [5, 6, 7, 8, 9],
-                  media: { tipo: 'imagen', src: '/images/gym/clases.webp', w: 1837, h: 916, alt: 'Panel de horario del centro', pie: 'El horario completo del centro en el panel.' } },
+                  media: { tipo: 'imagen', src: '/images/gym/horario-completo-1920.webp', w: 1920, h: 1317, alt: 'Horario completo del centro en el panel de TotalGains', pie: 'El horario del centro, semana completa, con todas las salas.' } },
                 { titulo: 'Lo que ve el socio', items: [10, 11, 12, 13],
-                  media: { tipo: 'imagen', src: '/screenshots/home.webp', w: 600, h: 1339, alt: 'Inicio de la app del socio con sus reservas', pie: 'La app del socio: sus clases y sus reservas.', vertical: true } },
+                  media: { tipo: 'imagen', src: '/images/gym/reservas-socio-600.webp', w: 600, h: 1339, alt: 'Pantalla de reservas en la app del socio', pie: 'La app del socio: sus clases de la semana y el botón de reservar.', vertical: true } },
             ],
             items: [
                 { t: 'Reservas con aforo real', d: 'Aforo por sala, por clase y por horario. Cambiar el aforo de una sala ajusta las clases que cuelgan de ella.' },
@@ -113,9 +113,12 @@ const gimnasios = {
                 { titulo: 'Pedidos desde la app del socio', items: [2, 3, 4, 14],
                   media: { tipo: 'imagen', src: '/images/gym/tienda-socio.webp', w: 800, h: 1785, alt: 'La tienda del gimnasio en la app del socio', pie: 'La tienda desde la app del socio: elige, pide y recoge.', vertical: true } },
                 { titulo: 'Vender en mostrador', items: [1, 11, 12, 10, 9],
-                  media: { tipo: 'imagen', src: '/images/gym/pagos.webp', w: 1837, h: 916, alt: 'Pantalla de pagos del centro', pie: 'Vender y cobrar desde Pagos, en dos toques.' } },
+                  media: { tipo: 'imagen', src: '/images/gym/pagos-panel-1920.webp', w: 1920, h: 1596, alt: 'Panel de pagos del centro con sus gráficas', pie: 'Pagos del centro: lo cobrado, lo pendiente y la caja.' } },
                 { titulo: 'Gestión y equipo', items: [13, 15, 16],
-                  media: { tipo: 'imagen', src: '/images/gym/dashboard.webp', w: 1837, h: 916, alt: 'Panel del gimnasio con los indicadores del centro', pie: 'El panel del centro, con lo vendido y lo pendiente.' } },
+                  /* ⚠️ SIN IMAGEN a propósito: la única captura disponible era el panel del
+                     centro, que ya va en Equipo. German: "no pongas la misma foto".
+                     Pendiente de una captura de Tienda › Resumen (informe mensual). */
+                  media: null },
             ],
             items: [
                 { t: 'Catálogo de productos', d: 'Nombre, precio con IVA, tipo de IVA por producto, categoría, opciones de talla o sabor, descripción, galería de hasta tres fotos y vídeo.' },
@@ -188,7 +191,7 @@ const gimnasios = {
                 { titulo: 'Cobrar', items: [0, 1, 2, 4, 5],
                   media: { tipo: 'imagen', src: '/images/gym/pagos-1760.webp', w: 1760, h: 995, alt: 'Control de pagos del gimnasio con el estado de cada cuota', pie: 'Quién está al día, quién renueva pronto y quién no.' } },
                 { titulo: 'Facturar', items: [3, 6, 7, 8],
-                  media: { tipo: 'imagen', src: '/images/gym/facturacion.webp', w: 1600, h: 798, alt: 'Facturación del centro', pie: 'Las facturas del centro, con su numeración y su IVA.' } },
+                  media: { tipo: 'imagen', src: '/images/gym/facturacion-1910.webp', w: 1910, h: 956, alt: 'Pantalla de facturación del centro', pie: 'Las facturas emitidas, con su serie, su fecha y su IVA.' } },
             ],
             items: [
                 { t: 'Planes, bonos y cuotas', d: 'Tres tipos de plan, cupo semanal, comodín para la semana que no puede venir y restricción por franja horaria.' },
@@ -300,7 +303,7 @@ const gimnasios = {
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
                 { titulo: 'Empezar', items: [0, 1, 2, 3],
-                  media: { tipo: 'video', src: '/video/reel-primeros-pasos.mp4', poster: '/video/reel-primeros-pasos.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Primeros pasos en TotalGains', pie: 'Los primeros pasos, en un minuto.' } },
+                  media: { tipo: 'video', src: '/video/app-tour-general.mp4', poster: '/video/app-tour-general.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Tour general por la app de TotalGains', pie: 'Un paseo por la app, en un minuto.' } },
             ],
             items: [
                 { t: 'Migración incluida', d: 'Traemos socios, horarios, planes y bonos desde tu plataforma actual. Lo hacemos nosotros y en español.' },
