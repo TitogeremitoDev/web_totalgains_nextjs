@@ -242,9 +242,9 @@ const gimnasios = {
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
-                { titulo: 'Tu equipo', items: [0, 1, 2, 6, 7],
+                { titulo: 'Tu equipo', items: [0, 1, 2, 7],
                   media: { tipo: 'imagen', src: '/images/gym/dashboard-1760.webp', w: 1760, h: 1040, alt: 'Panel del gimnasio con los KPI del centro', pie: 'El panel del centro, que cada coach ve según sus permisos.' } },
-                { titulo: 'Lo que comparten', items: [3, 4, 5],
+                { titulo: 'Lo que comparten', items: [3, 4, 5, 6],
                   media: { tipo: 'imagen', src: '/screenshots/coach_rutinas-600.webp', w: 600, h: 1339, alt: 'Biblioteca de rutinas de un coach', pie: 'Las rutinas del coach, compartidas con el centro.', vertical: true } },
             ],
             items: [

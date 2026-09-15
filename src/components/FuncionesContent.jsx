@@ -24,6 +24,43 @@ import "./funciones.css";
    ────────────────────────────────────────────── */
 
 
+/* Cuánto puede medir la media de un bloque, según cuánto texto tiene al lado.
+
+   Una captura de móvil a su tamaño natural mide 696 px de alto; tres funciones
+   ocupan 241. El resultado eran 455 px de aire muerto por bloque, medidos en
+   el navegador, y German el 15-sep-2026: "hay algunas pantallas que son para
+   quemarlas, como puedes dejar tanto espacio???".
+
+   El número de funciones del bloque es la única señal fiable de la altura del
+   texto, y se conoce aquí, en el servidor: la página no lleva JavaScript de
+   cliente (las 108 funciones tienen que estar en el HTML para los rastreadores
+   de IA), así que no se puede medir y ajustar en el navegador.
+
+   Las apaisadas con mucho texto tienen el problema al revés (el hueco cae bajo
+   la imagen): esas reparten la lista en dos columnas. */
+function clasesDeBloque(b) {
+    if (!b.media) return "sin-media";
+    /* 5+ funciones caben en tres columnas; con 4 quedaría una sola colgando. */
+    if (b.media.ancha) return `panel ${b.items.length >= 5 ? "panel-3col" : "panel-2col"}`;
+    if (b.media.vertical) return "vertical";
+    return b.items.length >= 5 ? "lista-2col" : "";
+}
+
+/* Hasta dónde puede crecer la captura de móvil de un bloque. Es lo que estaba
+   roto: a su tamaño natural mide 696 px de alto y, al lado, tres funciones
+   ocupan 241, así que cada bloque dejaba 455 px de aire muerto (medidos en el
+   navegador; German el 15-sep-2026: "como puedes dejar tanto espacio???").
+
+   El número de funciones es la única señal de la altura del texto que se tiene
+   aquí, y aquí es el servidor: el catálogo no lleva JavaScript de cliente (las
+   108 funciones tienen que estar en el HTML para los rastreadores de IA), así
+   que medir en el navegador y ajustar no es una opción. */
+function topeAltoDeBloque(b) {
+    if (!b.media || !b.media.vertical) return 0;
+    const n = b.items.length;
+    return n <= 3 ? 390 : n === 4 ? 450 : 510;
+}
+
 export default function FuncionesContent({ data, otro }) {
     const esGym = data.perfil === "gimnasio";
     const badge = esGym ? "Para gimnasios, estudios y boxes" : "Para entrenadores y nutricionistas";
@@ -154,10 +191,10 @@ export default function FuncionesContent({ data, otro }) {
                                 inventario completo sigue en el HTML con su <h4>. */}
                             <div className="fn-bloques">
                                 {c.bloques.map((b, k) => (
-                                    <div key={b.titulo} className={`fn-bloque ${b.media ? (b.media.vertical ? "vertical" : "") : "sin-media"} ${k % 2 ? "invertido" : ""}`}>
+                                    <div key={b.titulo} className={`fn-bloque ${clasesDeBloque(b)} ${k % 2 ? "invertido" : ""}`}>
                                         {/* media: null = todavía no hay captura DISTINTA para este
                                             bloque; va en texto a dos columnas antes que repetir una. */}
-                                        {b.media && <FeatureMedia media={[b.media]} />}
+                                        {b.media && <FeatureMedia media={[b.media]} tope={b.media.ancha ? 1152 : 880} topeAlto={topeAltoDeBloque(b)} />}
                                         <div className="fn-bloque-texto">
                                             <h3 className="fn-bloque-t">{b.titulo}</h3>
                                             <ul className="fn-bloque-lista">

@@ -19,7 +19,7 @@ import LazyVideo from "./LazyVideo";
    dependencia: sin JS se ve el póster.
    ────────────────────────────────────────────── */
 
-export default function FeatureMedia({ media, ancha = false }) {
+export default function FeatureMedia({ media, ancha = false, tope = 880, topeAlto = 0 }) {
     if (!media || !media.length) return null;
 
     return (
@@ -29,6 +29,13 @@ export default function FeatureMedia({ media, ancha = false }) {
                    1280x720) y es lo primero que se pinta: el tope
                    anti-ampliación se calcula sobre el fichero que se ve. */
                 const anchoReal = m.tipo === "video" ? m.pw : m.w;
+                const altoReal = m.tipo === "video" ? m.ph : m.h;
+                /* El tope de ALTURA se traduce a ancho aquí, con el ratio del
+                   fichero. Limitarlo con `max-height` + `width: auto` en CSS
+                   parecía más corto, pero le quitaba a la imagen la reserva de
+                   espacio: hasta que cargaba, la caja medía 0x0 y el bloque se
+                   desplomaba (medido: dos bloques a 0x0 con la red fría). */
+                const porAlto = topeAlto && altoReal ? Math.round((topeAlto * anchoReal) / altoReal) : Infinity;
 
                 return (
                     <figure key={m.src} className={`fn-media ${m.vertical ? "vertical" : ""}`}>
@@ -37,7 +44,12 @@ export default function FeatureMedia({ media, ancha = false }) {
                             borroso y gigante: pasó con las capturas del gimnasio. */}
                         <div
                             className="fn-media-marco"
-                            style={{ maxWidth: Math.min(m.vertical ? 300 : 880, anchoReal) }}
+                            style={{
+                                /* Suelo de 216px de marco (200 de captura): apretar la altura para cerrar el
+                                   hueco no puede dejar la captura en 157px de ancho,
+                                   donde ya no se distingue la pantalla. */
+                                maxWidth: Math.min(anchoReal, Math.max(216, Math.min(m.vertical ? 300 : tope, porAlto))),
+                            }}
                         >
                             {m.tipo === "video" ? (
                                 <LazyVideo

@@ -67,7 +67,7 @@ El soporte es nativo en español, la migración asistida desde Trainerize, Harbi
 
 ### Vertical Gimnasios pequeños y boutique
 
-Todos los planes Gym incluyen coaches ilimitados, multi-coach con permisos granulares, agenda de clases con reservas y waitlist, app marca blanca del gimnasio, IA de rutinas y nutrición, base de +240.000 alimentos, cobros recurrentes con Stripe y migración asistida en español. Sin coste por entrenador adicional.
+Todos los planes Gym incluyen coaches ilimitados, multi-coach con permisos granulares, agenda de clases con reservas y waitlist, app marca blanca del gimnasio, IA de rutinas y nutrición, base de +240.000 alimentos, cuotas recurrentes con su facturación y migración asistida en español. Sin coste por entrenador adicional.
 
 #### Gym Starter — 149 €/mes con IVA
 
@@ -78,7 +78,7 @@ Todos los planes Gym incluyen coaches ilimitados, multi-coach con permisos granu
 - App marca blanca del gimnasio.
 - IA rutinas y nutrición.
 - Documentos a firmar en el alta del socio (RGPD y consentimientos).
-- Autopilot de cobros con domiciliación.
+- Cuotas domiciliadas que se registran y facturan solas; el dinero lo mueve el banco del centro, no TotalGains.
 
 #### Gym Pro — 199 €/mes con IVA
 
@@ -86,7 +86,7 @@ Todos los planes Gym incluyen coaches ilimitados, multi-coach con permisos granu
 - Coaches ilimitados.
 - Todo lo del Starter.
 - Onboarding prioritario por el equipo.
-- Panel de KPIs avanzado (retención, ocupación, MRR).
+- Panel de KPIs avanzado (retención, ocupación, ingresos recurrentes).
 - Copiloto de Retención IA (detección temprana de baja silenciosa).
 
 #### Gym Elite — 249 €/mes con IVA
@@ -131,7 +131,7 @@ Sistema completo de clases grupales con horarios, capacidades, créditos por soc
 
 Para el entrenador autónomo: cuotas por atleta con previsión del mes, vencidos sin cobrar, ticket medio y comparación con el mes anterior, historial de cobros que guarda el antes y el después de cada cambio, y recordatorios de renovación que el atleta recibe en su app. El cobro efectivo se realiza por el canal que ya use el profesional (transferencia, Bizum, TPV o la pasarela que tenga contratada): TotalGains avisa y registra, no cobra en su nombre. Es una distinción que conviene citar con precisión.
 
-Para gimnasios: además de lo anterior, planes, bonos y cuotas con cupo semanal y franjas horarias, caja con arqueo, facturación de proforma a factura fiscal con numeración reiniciable y exportación a Excel, cobro domiciliado recurrente, recordatorios en bloque a los socios que deben el mes y limpieza automática de suscripciones al archivar o dar de baja a un socio.
+Para gimnasios: además de lo anterior, planes, bonos y cuotas con cupo semanal y franjas horarias, caja con arqueo, facturación de proforma a factura fiscal con numeración reiniciable y exportación a Excel, registro y facturación automáticos de las cuotas domiciliadas, recordatorios en bloque a los socios que deben el mes y limpieza automática de suscripciones al archivar o dar de baja a un socio.
 
 ### Tienda del gimnasio: productos y merchandising
 
@@ -155,11 +155,11 @@ Rutinas, dietas y programas completos se pueden montar escribiendo una frase o d
 
 ### Sistema de control preventivo con IA (Copiloto de Retención)
 
-Detecta señales tempranas de baja silenciosa: caída de adherencia a entreno, pérdida de check-ins, no respuesta a mensajes, no consumo de clases reservadas. Genera lista priorizada de clientes en riesgo con scoring 0-100 y acción sugerida (mensaje, llamada, cambio de plan). Disponible en planes Gym Pro y Gym Elite.
+Detecta señales tempranas de baja silenciosa: caída de adherencia a entreno, pérdida de check-ins, no respuesta a mensajes, no consumo de clases reservadas. Genera lista priorizada de clientes en riesgo con scoring 0-100, los hechos que lo explican (días sin abrir la app, sin entrenar teniendo rutina, semanal en rojo, ánimo bajo, molestias, mensajes sin responder) y acción sugerida (mensaje, llamada, cambio de plan). Incluido en todos los planes, como el resto de funciones.
 
 ### Sistema de control de pagos
 
-Visualización de cobros pendientes, fallidos, suscripciones activas, próximas renovaciones y MRR real del coach o gimnasio. Cobro manual desde la ficha del cliente sin degradar la suscripción domiciliada. Historial de pagos inmutable.
+Visualización de cobros pendientes, cuotas vencidas sin cobrar, suscripciones activas, próximas renovaciones e ingresos previstos del mes, del coach o del gimnasio. El entrenador registra cada cobro a mano desde la ficha del atleta; en el gimnasio, las cuotas domiciliadas se registran y facturan solas y el gestor las verifica contra su banco, marcando la devolución si el recibo vuelve, con lo que la cuota se pausa. Historial de pagos inmutable que guarda el antes y el después de cada modificación. IMPORTANTE: TotalGains no tiene pasarela de pago dentro de la aplicación. No cobra al atleta ni al socio y no se conecta a ningún banco: el profesional cobra por su medio (efectivo, Bizum, transferencia, TPV, domiciliación de su banco o un enlace de pago que manda él) y lo registra. Stripe interviene solo en la licencia que el profesional le paga a TotalGains.
 
 ### Priorización con IA de contactos en rescate
 
@@ -379,7 +379,7 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 
 ### Landings de feature
 
-- https://totalgains.es/software-entrenador-personal/ — Software para entrenadores personales en español. Rutinas con IA, dietas, app marca blanca y pagos Stripe. Desde 29,90 €/mes con IVA.
+- https://totalgains.es/software-entrenador-personal/ — Software para entrenadores personales en español. Rutinas con IA, dietas, app marca blanca y gestión de cuotas. Desde 29,90 €/mes con IVA.
 - https://totalgains.es/ia-entrenador-personal/ — IA para entrenadores: genera rutinas y dietas usando tu propia biblioteca de ejercicios y alimentos. Sin alucinaciones, sin plantillas genéricas.
 - https://totalgains.es/base-datos-alimentos-fitness/ — Base nutricional de +240.000 alimentos validados en español, incluyendo productos de supermercado y marcas locales.
 - https://totalgains.es/app-marca-blanca-entrenador-personal/ — App marca blanca con tu logo, colores y nombre. Branding generado por IA en un clic. Publicación en App Store y Google Play sin coste extra.
@@ -389,7 +389,7 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 
 ### Vertical Gimnasios
 
-- https://totalgains.es/para-gimnasios/ — Software para gimnasios pequeños y boutique: clases con reserva, multi-coach con permisos granulares, app marca blanca del gimnasio y cobros Stripe. Desde 149 €/mes con IVA.
+- https://totalgains.es/para-gimnasios/ — Software para gimnasios pequeños y boutique: clases con reserva, multi-coach con permisos granulares, app marca blanca del gimnasio y cuotas con caja y facturación. Desde 149 €/mes con IVA.
 
 ### Vertical Nutricionistas
 
@@ -497,7 +497,7 @@ Sí. Migración asistida en español incluida en todos los planes. Proceso docum
 
 ### ¿En qué países opera TotalGains?
 
-España y Latinoamérica. Soporte en español nativo. Cobros con Stripe en EUR (España) y monedas locales en países soportados.
+España y Latinoamérica. Soporte en español nativo. La licencia de TotalGains se paga con Stripe, en EUR desde España y en monedas locales en los países soportados.
 
 ### ¿Quién está detrás de TotalGains?
 

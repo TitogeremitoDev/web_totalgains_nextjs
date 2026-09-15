@@ -4,7 +4,7 @@ import "./para-gimnasios.css";
 export const metadata = {
   title: "Software Gimnasios Pequeños 2026: Multi-Coach",
   description:
-    "Software para gimnasios pequeños y boutique: clases con reserva, multi-coach, app marca blanca y cobros Stripe. Desde 149 €/mes con IVA.",
+    "Software para gimnasios pequeños y boutique: clases con reserva, multi-coach, app marca blanca y cuotas con caja y facturación. Desde 149 €/mes con IVA.",
   keywords: [
     "software gimnasio pequeño",
     "app gestión gimnasio",
@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: "¿Cuánto tarda en implementarse TotalGains en un gimnasio?",
-    a: "Una configuración base completa (carga de socios, plantillas de rutinas, programación de clases recurrentes, conexión Stripe, branding de la app) suele estar lista en 3-5 días. La migración de datos desde Harbiz, Virtuagym u otra plataforma está incluida y la gestiona soporte en español. Para gimnasios con más de 100 socios o estructura compleja, los planes Gym Pro y Gym Elite incluyen onboarding asistido prioritario que reduce el tiempo a 48-72 horas.",
+    a: "Una configuración base completa (carga de socios, plantillas de rutinas, programación de clases recurrentes, planes y cuotas, branding de la app) suele estar lista en 3-5 días. La migración de datos desde Harbiz, Virtuagym u otra plataforma está incluida y la gestiona soporte en español. Para gimnasios con más de 100 socios o estructura compleja, los planes Gym Pro y Gym Elite incluyen onboarding asistido prioritario que reduce el tiempo a 48-72 horas.",
   },
   {
     q: "¿Incluye marca blanca para el gimnasio o solo para entrenadores individuales?",
@@ -64,7 +64,7 @@ export default function ParaGimnasios() {
         applicationSubCategory: "GymManagementSoftware",
         operatingSystem: "Web, iOS, Android",
         description:
-          "Software de gestión integral para gimnasios pequeños y estudios de entrenamiento: clases grupales con waitlist, multi-coach con permisos granulares, app marca blanca, cobros recurrentes Stripe y módulos de rutinas y nutrición con IA. Diseñado en español para el mercado hispano.",
+          "Software de gestión integral para gimnasios pequeños y estudios de entrenamiento: clases grupales con waitlist, multi-coach con permisos granulares, app marca blanca, cuotas recurrentes con caja y facturación, y módulos de rutinas y nutrición con IA. Diseñado en español para el mercado hispano.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/para-gimnasios/",
         offers: {

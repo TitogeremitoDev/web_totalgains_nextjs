@@ -483,7 +483,7 @@ function SolutionSection() {
     },
     {
       icon: <CreditCard size={22} />,
-      title: "Cobros recurrentes Stripe",
+      title: "Cuotas, bonos y domiciliaciones",
       desc: "Cuotas mensuales, bonos de 10 clases y tarifas anuales. Las domiciliadas se registran solas cada mes y tú las verificas con tu banco; el resto lo cobras por tu canal y lo apuntas. No tocamos tu dinero ni cobramos comisión.",
     },
     {
@@ -824,7 +824,7 @@ function HowItWorksSection() {
     {
       n: "02",
       title: "Migramos en 3-5 días",
-      desc: "Importamos tus socios desde Excel/Sheets/software antiguo, configuramos tu agenda de clases, conectamos tu Stripe y personalizamos la app con tu marca.",
+      desc: "Importamos tus socios desde Excel/Sheets/software antiguo, configuramos tu agenda de clases, montamos tus planes y cuotas y personalizamos la app con tu marca.",
     },
     {
       n: "03",
@@ -990,7 +990,7 @@ function ComparisonSection() {
     { feature: "Reservas + waitlist", tg: "✅ Incluido", harbiz: "✅", virtuagym: "✅", trainerize: "✅" },
     { feature: "IA rutinas + nutrición", tg: "✅ Sin add-on", harbiz: "Add-on Nutri AI 18,14 €/mes", virtuagym: "Limitada", trainerize: "Add-on $45/mes" },
     { feature: "Base +240.000 alimentos ES", tg: "✅ Incluida", harbiz: "❌", virtuagym: "Base genérica", trainerize: "MyFitnessPal USA" },
-    { feature: "Cobros recurrentes Stripe", tg: "✅ 0% comisión", harbiz: "✅", virtuagym: "Pasarela propia", trainerize: "Add-on $10/mes" },
+    { feature: "Cuotas y bonos recurrentes", tg: "✅ 0% comisión", harbiz: "✅", virtuagym: "Pasarela propia", trainerize: "Add-on $10/mes" },
     { feature: "Soporte en español", tg: "✅ < 24h", harbiz: "✅", virtuagym: "Multiidioma", trainerize: "❌ Inglés" },
     { feature: "Coste hasta 100 socios funcional", tg: "149 €/mes con IVA", harbiz: "~313 €/mes", virtuagym: "Bajo demanda", trainerize: "~352 €/mes" },
   ];
@@ -1444,7 +1444,7 @@ function FAQSection() {
     },
     {
       q: "¿Cuánto tarda en implementarse TotalGains en un gimnasio?",
-      a: "Una configuración base completa (carga de socios, plantillas de rutinas, programación de clases recurrentes, conexión Stripe, branding de la app) suele estar lista en 3-5 días. La migración de datos desde Harbiz, Virtuagym u otra plataforma está incluida y la gestiona soporte en español. Para gimnasios con más de 100 socios o estructura compleja, los planes Gym Pro y Gym Elite incluyen onboarding asistido prioritario que reduce el tiempo a 48-72 horas.",
+      a: "Una configuración base completa (carga de socios, plantillas de rutinas, programación de clases recurrentes, planes y cuotas, branding de la app) suele estar lista en 3-5 días. La migración de datos desde Harbiz, Virtuagym u otra plataforma está incluida y la gestiona soporte en español. Para gimnasios con más de 100 socios o estructura compleja, los planes Gym Pro y Gym Elite incluyen onboarding asistido prioritario que reduce el tiempo a 48-72 horas.",
     },
     {
       q: "¿Incluye marca blanca para el gimnasio o solo para entrenadores individuales?",

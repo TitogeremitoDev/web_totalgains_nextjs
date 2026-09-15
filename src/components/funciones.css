@@ -210,9 +210,42 @@
     display: grid; gap: 44px; align-items: center;
     grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
 }
-.fn-bloque.vertical { grid-template-columns: 300px minmax(0, 1fr); gap: 52px; }
+.fn-bloque.vertical { grid-template-columns: max-content minmax(0, 1fr); gap: 52px; }
 .fn-bloque.invertido .fn-media-col { order: 2; }
-.fn-bloque.vertical.invertido { grid-template-columns: minmax(0, 1fr) 300px; }
+.fn-bloque.vertical.invertido { grid-template-columns: minmax(0, 1fr) max-content; }
+/* ⛔ Un movil NO manda la altura del bloque. A 300px de ancho, una captura de
+   800x1785 mide 696px de alto; al lado, tres funciones ocupan 241px: 455px de
+   aire muerto, medido en el navegador (German, 15-sep: "como puedes dejar
+   tanto espacio???"). Ahora la captura se limita por ALTURA y el marco se
+   encoge con ella, asi que la columna de texto y la de imagen se parecen. */
+/* El ancho del marco lo calcula FuncionesContent con el ratio del fichero y
+   el tope de altura que corresponde al texto de al lado; aquí solo se centra. */
+.fn-bloque.vertical .fn-media-marco { margin-inline: auto; }
+.fn-bloque.vertical .fn-media-cap { max-width: 300px; margin-inline: auto; }
+/* Y el texto en una medida que se lee: a 836px de ancho cada descripción
+   entraba en UNA línea y el bloque quedaba hueco por dentro. */
+.fn-bloque.vertical .fn-bloque-texto { max-width: 580px; }
+.fn-bloque.vertical { justify-content: center; }
+
+/* Captura de panel (>=1600px de origen): a todo el ancho, con las funciones
+   debajo en columnas. En media columna se veía como una miniatura. */
+.fn-bloque.panel { grid-template-columns: minmax(0, 1fr); gap: 26px; }
+.fn-bloque.panel .fn-media-col { order: 0; }
+.fn-bloque.panel .fn-media-marco { margin-inline: auto; }
+.fn-bloque.panel .fn-media-cap { text-align: center; }
+.fn-bloque.panel .fn-bloque-lista { gap: 16px 32px; }
+.fn-bloque.panel-2col .fn-bloque-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.fn-bloque.panel-3col .fn-bloque-lista { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.fn-bloque.panel .fn-bloque-t { text-align: center; }
+@media (max-width: 1100px) {
+    .fn-bloque.panel-3col .fn-bloque-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+/* Apaisada con 5+ funciones: el hueco cae bajo la imagen, así que la lista se
+   reparte en dos columnas y las dos columnas del bloque acaban a la par. */
+.fn-bloque.lista-2col { grid-template-columns: minmax(0, 1fr) minmax(0, 1.28fr); }
+.fn-bloque.lista-2col.invertido { grid-template-columns: minmax(0, 1.28fr) minmax(0, 1fr); }
+.fn-bloque.lista-2col .fn-bloque-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; }
 .fn-bloque .fn-media-col { margin: 0; }
 .fn-bloque.sin-media { grid-template-columns: minmax(0, 1fr); }
 .fn-bloque.sin-media .fn-bloque-lista { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px 36px; }
@@ -233,7 +266,16 @@
     .fn-bloque, .fn-bloque.vertical, .fn-bloque.vertical.invertido { grid-template-columns: minmax(0, 1fr); gap: 20px; }
     /* En móvil, siempre la imagen primero: es lo que pidió, "lo visual siempre" */
     .fn-bloque.invertido .fn-media-col { order: 0; }
-    .fn-bloque.vertical .fn-media-marco { margin-inline: auto; }
+    /* El tope de ancho que calcula FuncionesContent existe para igualar las dos
+       columnas de escritorio; en móvil no hay dos columnas que igualar y dejaba
+       la captura en 198px de 358 disponibles. `!important` porque el tope va en
+       el atributo style (lo calcula el servidor con el ratio del fichero). */
+    .fn-bloque.vertical .fn-media-marco { margin-inline: auto; max-width: min(300px, 100%) !important; }
+    .fn-bloque.vertical .fn-bloque-texto { max-width: none; }
+    .fn-bloque.lista-2col, .fn-bloque.lista-2col.invertido { grid-template-columns: minmax(0, 1fr); }
+    .fn-bloque.lista-2col .fn-bloque-lista { grid-template-columns: minmax(0, 1fr); }
+    .fn-bloque.panel-2col .fn-bloque-lista, .fn-bloque.panel-3col .fn-bloque-lista { grid-template-columns: minmax(0, 1fr); }
+    .fn-bloque.panel .fn-bloque-t, .fn-bloque.panel .fn-media-cap { text-align: left; }
 }
 
 /* El área destacada se enmarca, sin cambiar la rejilla */

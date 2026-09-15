@@ -107,9 +107,9 @@ const entrenadores = {
                    la parte del entrenador, y la captura de «Mi pauta de hoy» la del
                    atleta. Nada de esto estaba publicado, que es justo el agujero
                    por el que las IAs decían que faltaban módulos. */
-                { titulo: 'Suplementación, de punta a punta', items: [12, 13, 14, 9, 18],
+                { titulo: 'Suplementación, de punta a punta', items: [12, 13, 14, 9],
                   media: { tipo: 'video', src: '/video/coach-suplementacion.mp4', poster: '/video/coach-suplementacion.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'El sistema de suplementación de TotalGains: catálogo del entrenador, protocolos, pauta del atleta y compra guiada', pie: 'Del catálogo del entrenador a la pauta del atleta, sin salir del plan.' } },
-                { titulo: 'Su pauta y su lista de compra', items: [15, 16, 17],
+                { titulo: 'Su pauta y su lista de compra', items: [15, 16, 17, 18],
                   media: { tipo: 'imagen', src: '/screenshots/supl-pauta-cliente-600.webp', w: 600, h: 1298, alt: 'Pauta de suplementos del día en la app del atleta, con los días que le quedan de cada bote', pie: 'Su pauta del día y cuánto le queda de cada bote, en su móvil.', vertical: true } },
             ],
             items: [
@@ -199,15 +199,30 @@ const entrenadores = {
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
-                { titulo: 'Quién está en riesgo', items: [0, 1, 2],
+                { titulo: 'Quién está en riesgo', items: [0, 1, 2, 3],
                   media: { tipo: 'imagen', src: '/screenshots/coach-riesgo-cliente.webp', w: 800, h: 1785, alt: 'Ficha de un atleta en TotalGains con su riesgo de abandono y las acciones sugeridas', pie: 'La ficha del atleta con su riesgo de abandono y qué hacer.', vertical: true } },
-                { titulo: 'Lo que te avisa solo', items: [3, 4, 5],
-                  media: { tipo: 'imagen', src: '/screenshots/home_coach-600.webp', w: 600, h: 1339, alt: 'Inicio del panel del entrenador con sus avisos', pie: 'El inicio del entrenador: avisos, rachas y cumpleaños.', vertical: true } },
+                /* El panel de control, con el diseño de septiembre de 2026. La
+                   captura anterior (`home_coach-600.webp`) era el inicio VIEJO
+                   y German la señaló el 15-sep: "en control añade el nuevo
+                   dashboard". Sus cuatro piezas están verificadas en el código
+                   de la app, no en un reel: CoachStateStrip (tira de estado),
+                   CoachWorkStrip (agenda + novedades + en riesgo), CardHelp
+                   (el "?") y coachClientSignals.js (el criterio único). */
+                { titulo: 'Tu panel de control, de un vistazo', items: [4, 5, 6, 7],
+                  media: { tipo: 'imagen', src: '/screenshots/coach-dashboard-1760.webp', w: 1760, h: 837, alt: 'Panel de control del entrenador en TotalGains: la tira de estado de la cartera, la agenda de la semana, las novedades de los atletas y los que están en riesgo', pie: 'El panel del entrenador: estado de la cartera, agenda, novedades y quién está en riesgo.', ancha: true } },
+                { titulo: 'Lo que te avisa solo', items: [8, 9, 10, 11],
+                  media: { tipo: 'imagen', src: '/screenshots/coach-actividad-1026.webp', w: 1026, h: 1354, alt: 'Panel de actividad del entrenador en TotalGains, con los filtros de chat, fotos, comida, notas, cambios y suplementos', pie: 'La actividad de tus atletas, filtrable: comida, notas, cambios, suplementos.', vertical: true } },
             ],
             items: [
+                { t: 'Riesgo de abandono por atleta', d: 'Una puntuación sobre su actividad real de las últimas semanas, no sobre la última vez que abrió la app.' },
+                { t: 'El motivo del riesgo, no solo el número', d: 'Días sin abrir la app, sin entrenar teniendo rutina, semanal en rojo, ánimo bajo, molestias, mensajes sin responder o una cuota que renueva con el atleta frío. Ves los hechos que lo explican, no una nota a secas.' },
                 { t: 'Centro de alertas', d: 'Detecta dolor o lesión en notas de entreno, formularios y comentarios del semanal, además de baja motivación, racha rota y atletas que llevan días sin subir nada.' },
                 { t: 'Chat urgente detectado por IA', d: 'Cuando un mensaje pide atención inmediata se abre el caso y llega un aviso, con un borrador de respuesta listo para editar.' },
-                { t: 'Riesgo de abandono por atleta', d: 'Una puntuación sobre su actividad real de las últimas semanas, no sobre la última vez que abrió la app.' },
+                { t: 'El estado de tu cartera en una tira', d: 'Cuántos están activos esta semana, cuántos sin rutina (y cuántos con una de más de ocho semanas), sin dieta, con el semanal pendiente y cuántas cuotas llevas cobradas este mes. Cada número se pincha y te deja en esos atletas ya filtrados.' },
+                { t: 'La semana, en el propio panel', d: 'Los siete días con sus puntos; eliges uno y ves sus llamadas, seguimientos, formularios y clases. Creas un evento sin salir de ahí.' },
+                { t: 'Un solo criterio en toda la plataforma', d: 'Lo que el panel llama activo, sin rutina o cobrado es exactamente lo que cuentan las pantallas de Clientes, Rutinas, Nutrición y Facturación. Un número no cambia según dónde lo mires.' },
+                { t: 'Ayuda en cada tarjeta del panel', d: 'El «?» de cada caja te dice qué es, qué hacer con ella y un ejemplo, sin salir de la pantalla.' },
+                { t: 'Novedades de tus atletas', d: 'Fotos nuevas, notas de entreno, cambios de alimento, compras de suplementos y mensajes, en una sola lista. Tocas una y te deja donde ha pasado, no en un listado.' },
                 { t: 'Cumpleaños y aniversarios', d: 'El aviso llega el día que toca por su propio canal, separado de las alertas de problemas.' },
                 { t: 'Racha de entreno', d: 'Con margen real, para que un imprevisto no la rompa. Visible para el atleta y para ti en la lista de clientes.' },
                 { t: 'Avisos masivos', d: 'Mandas una notificación a toda tu cartera o a un segmento cuando lo necesitas.' },
