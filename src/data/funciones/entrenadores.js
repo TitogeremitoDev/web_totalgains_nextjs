@@ -210,10 +210,11 @@ const entrenadores = {
             railNombre: 'Mi Ciclo',
             resumen: 'Ninguna otra plataforma de gestión para entrenadores lleva esto dentro.',
             media: [{
-                tipo: 'imagen', src: '/images/ciclo-coach-880.webp',
-                w: 880, h: 682,
-                alt: 'Mi Ciclo en el panel del entrenador: fase folicular, qué hacer esta semana y registros de la atleta',
-                pie: 'Lo que ve la entrenadora: la fase, qué toca esa semana y los registros que la atleta ha decidido compartir.',
+                tipo: 'video', src: '/video/coach-mi-ciclo.mp4',
+                poster: '/video/coach-mi-ciclo.webp', pw: 1200, ph: 675,
+                w: 1280, h: 720,
+                alt: 'Mi Ciclo en la app de la atleta y en el panel del entrenador: fase del día, avisos en la dieta y en el entreno, y lo que ella decide compartir',
+                pie: 'Mi Ciclo por los dos lados: lo que ve ella en su móvil y lo que ve su entrenadora, solo si ella lo comparte.',
             }],
             /* Bloques visuales: cada grupo de funciones con su imagen o
                vídeo, alternando lado (patrón AimHarder que pidió German el
