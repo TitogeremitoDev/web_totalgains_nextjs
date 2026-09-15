@@ -220,9 +220,16 @@ const entrenadores = {
                vídeo, alternando lado (patrón AimHarder que pidió German el
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
+            /* Mi Ciclo era el área más pequeña del catálogo (5 funciones y una
+               captura) siendo una de las principales, y la única que ninguna
+               plataforma de gestión para entrenadores lleva dentro. El reel de
+               33 s cuenta los ocho capítulos; aquí van repartidos en lo que ve
+               ella y lo que ves tú. */
             bloques: [
-                { titulo: 'Mi Ciclo', items: [0, 1, 2, 3, 4],
-                  media: { tipo: 'imagen', src: '/images/ciclo-coach-880.webp', w: 880, h: 682, alt: 'Mi Ciclo en el panel del entrenador: fase folicular, qué hacer esta semana y registros de la atleta', pie: 'Mi Ciclo en el panel del entrenador.' } },
+                { titulo: 'Su ciclo, en su móvil', items: [5, 6, 0, 7, 1, 8],
+                  media: { tipo: 'video', src: '/video/coach-mi-ciclo.mp4', poster: '/video/coach-mi-ciclo.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Mi Ciclo en la app de la atleta: su fase de hoy, qué esperar esta semana y cómo entra en su dieta y su entreno', pie: 'Dónde está en su ciclo, qué le viene y cómo cambia su dieta y su entreno.' } },
+                { titulo: 'Lo que tú ves, y lo que no', items: [10, 4, 11, 9, 2, 3],
+                  media: { tipo: 'imagen', src: '/images/ciclo-coach-880.webp', w: 880, h: 682, alt: 'Mi Ciclo en el panel del entrenador: fase folicular, qué hacer esta semana y registros de la atleta', pie: 'En tu panel, solo si ella lo comparte: su fase y sus fechas para planificar.' } },
             ],
             items: [
                 { t: 'Fases del ciclo en el entreno y la nutrición', d: 'No es un calendario aparte: la fase condiciona la planificación dentro de la misma app.' },
@@ -230,6 +237,21 @@ const entrenadores = {
                 { t: 'Autoexamen de mamas con recordatorio mensual', d: 'Un aviso al mes y la pauta delante, dentro de la misma app que ya usa.' },
                 { t: 'Patrones a revisar con su médico', d: 'La atleta puede exportar un informe en PDF para llevarlo a consulta. TotalGains no diagnostica ni es un método anticonceptivo.' },
                 { t: 'Privacidad por capas', d: 'La atleta elige categoría por categoría qué comparte contigo. El diario, la vida sexual y el autoexamen no salen nunca de su móvil.' },
+                  /* ⚠️ VERIFICADAS contra el código y la memoria de producción
+                     (OTA 1.3.8 + fases 3A y 3B), no contra el vídeo, que lleva
+                     interfaz recreada: predicción afinada por ciclo registrado,
+                     contenido curado por fase, menstrualReminderService (opt-in,
+                     hora local), pseudo-fase 'hc' sin ovulación ni fértil,
+                     pregnancyPause con wording neutro, coachCanAccessCycle con
+                     el consentimiento estampado server-side (cambiar de coach NO
+                     lo hereda) y serializeDayForCoach por whitelist. */
+                  { t: 'Dónde está hoy y qué viene después', d: 'Su fase y su día de ciclo, hasta cuándo le dura la regla, cuándo ovula y cuándo le toca la siguiente. El primer cálculo sale de los datos del alta y se afina con cada ciclo que registra.' },
+                  { t: 'Qué esperar esta semana', d: 'Qué es normal notar en cada fase, con qué comer esos días y cómo entrenarlos, explicado en su idioma y no en jerga.' },
+                  { t: 'Aprende de sus ciclos', d: 'Su ciclo medio, lo que le dura la regla y su regularidad salen de lo que ella registra, no de una media de manual. Mientras hay pocos datos, lo dice.' },
+                  { t: 'Recordatorios que elige ella', d: 'Dos días antes de la regla, confirmación si se retrasa, ventana fértil, la pastilla a su hora y el autoexamen. Todos opcionales y en su franja horaria.' },
+                  { t: 'Con la píldora no se inventa nada', d: 'Con anticoncepción hormonal desaparecen la ovulación y la ventana fértil, porque ahí no aplican. Y la pausa por embarazo se puede llevar sin que tú te enteres si ella no quiere.' },
+                  { t: 'Lo que ves tú, si ella lo comparte', d: 'Su fase y sus fechas, que es lo que te sirve para planificarle la semana. El permiso lo da ella, va por categorías, se puede retirar y no se hereda si cambia de entrenador.' },
+                  { t: 'Dice también lo que no se sabe', d: 'Cada pantalla explica de dónde sale lo que afirma y dónde la ciencia todavía no tiene una respuesta clara. Antes eso que vender una certeza.' },
             ],
         },
         {
