@@ -296,16 +296,17 @@ const entrenadores = {
             nombre: 'Contenido para tus redes',
             railNombre: 'Marketing',
             resumen: 'Seis generadores que sacan el contenido de tus propios clientes, con tu marca.',
-            /* ⚠️ Área creada el 15-sep-2026 tras auditar el producto contra el
+            /* Área creada el 15-sep-2026 tras auditar el producto contra el
                catálogo: `app/(coach)/marketing/` son SEIS pantallas (3.600
                líneas) y la web no las mencionaba ni una vez. La propia pantalla
                se presenta como «Contenido para tus redes con tu marca».
-               El bloque va SIN imagen a propósito hasta que llegue el reel que
-               German va a grabar: antes eso que repetir una captura de otra
-               área (ver feedback_web_no_muro_de_tarjetas). */
+               El bloque nació SIN imagen esperando material: el 15-sep-2026 se
+               montó el vídeo con las capturas reales del estudio y ya no hace
+               falta repetir ninguna captura de otra área. */
+            media: [{ tipo: 'video', src: '/video/coach-marketing.mp4', poster: '/video/coach-marketing.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Estudio de marketing del entrenador: testimonios, collage de dieta, ficha de plato e informe de mediciones, todo con su marca', pie: 'Las seis piezas del estudio, con la marca del entrenador. Se descargan y las sube él donde quiera.' }],
             bloques: [
                 { titulo: 'Seis piezas listas para publicar', items: [0, 1, 2, 3, 4, 5],
-                  media: null },
+                  media: { tipo: 'video', src: '/video/coach-marketing.mp4', poster: '/video/coach-marketing.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Estudio de marketing del entrenador: testimonios, collage de dieta, ficha de plato e informe de mediciones, todo con su marca', pie: 'Las seis piezas del estudio, con la marca del entrenador. Se descargan y las sube él donde quiera.' } },
             ],
             items: [
                   { t: 'El plato que todos repiten', d: 'Coge el plato mejor valorado por tus clientes y saca la imagen con tu marca. El contenido sale de lo que ya comen, no de un banco de fotos.' },
