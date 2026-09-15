@@ -60,7 +60,7 @@ const gimnasios = {
             bloques: [
                 { titulo: 'Reservas y aforo', items: [0, 1, 2, 3, 4],
                   media: { tipo: 'imagen', src: '/images/gym/clases-1760.webp', w: 1760, h: 960, alt: 'Horario de clases del gimnasio con las clases programadas y su ocupación', pie: 'Las clases de la semana con su hora, sala y ocupación.' } },
-                { titulo: 'El horario, a tu manera', items: [5, 6, 7, 8, 9],
+                { titulo: 'El horario, a tu manera', items: [5, 6, 7, 8, 9, 14, 15, 16, 17],
                   media: { tipo: 'imagen', src: '/images/gym/horario-completo-1920.webp', w: 1920, h: 1317, alt: 'Horario completo del centro en el panel de TotalGains', pie: 'El horario del centro, semana completa, con todas las salas.' } },
                 { titulo: 'Lo que ve el socio', items: [10, 11, 12, 13],
                   media: { tipo: 'imagen', src: '/images/gym/reservas-socio-600.webp', w: 600, h: 1339, alt: 'Pantalla de reservas en la app del socio', pie: 'La app del socio: sus clases de la semana y el botón de reservar.', vertical: true } },
@@ -80,6 +80,10 @@ const gimnasios = {
                 { t: 'Avisos de apertura de plazas', d: 'Cuando se libera un hueco en una clase llena, los interesados reciben el aviso.' },
                 { t: 'Modo TV para recepción', d: 'Pantalla completa con la clase de ahora y las siguientes, las caras de quién viene, reloj y autorrefresco, con los colores de tu marca.' },
                 { t: 'Ver a los compañeros de clase', d: 'El socio ve quién más se ha apuntado, que es de lo que más engancha en un centro pequeño.' },
+                  { t: 'Plantillas de clase', d: 'Montas una clase tipo una vez y la reutilizas cada vez que la programas, archivada por categoría.' },
+                  { t: 'El día de hoy, en una pantalla', d: 'Marcar asistencia, cancelar una reserva, quitar a un invitado o liberar una plaza, sin abrir la ficha de nadie.' },
+                  { t: 'Las clases en vivo', d: 'Ves las reservas de cada clase al momento y quién ha entrado desde la lista de espera.' },
+                  { t: 'Avisos de clase que configuras tú', d: 'Recordar a cada socio sus clases habituales y avisar de la apertura de plazas, y decidir si solo a los que tienen bono activo.' },
             ],
         },
         {
@@ -170,7 +174,7 @@ const gimnasios = {
             bloques: [
                 { titulo: 'El alta', items: [0, 1, 2, 3, 7],
                   media: { tipo: 'imagen', src: '/images/gym/clientes-1760.webp', w: 1760, h: 1040, alt: 'Listado de socios del gimnasio con su coach asignado y su fecha de alta', pie: 'Los socios del centro, con su coach y su turno.' } },
-                { titulo: 'La ficha', items: [4, 5, 6],
+                { titulo: 'La ficha', items: [4, 5, 6, 8, 9],
                   media: { tipo: 'imagen', src: '/screenshots/coach_clientes-600.webp', w: 600, h: 1339, alt: 'Listado de clientes en el móvil', pie: 'La lista de socios también en el móvil.', vertical: true } },
             ],
             items: [
@@ -182,6 +186,8 @@ const gimnasios = {
                 { t: 'Archivar socios', d: 'Baja temporal que saca al socio de las listas sin borrar su historial.' },
                 { t: 'Ficha del socio', d: 'Su semana de clases, sus pagos, sus documentos y lo que le falta por rellenar en una línea.' },
                 { t: 'Proponer horario en el alta', d: 'Le dejas propuesto el horario que encaja con lo que ha contratado.' },
+                  { t: 'A quién atender hoy', d: 'Una bandeja que te dice quién tiene algo pendiente, quién no puede reservar y por qué, con el mensaje ya redactado por IA si quieres.' },
+                  { t: 'Documentos firmados con certificado', d: 'Asignas un documento (consentimiento de imagen, normativa) y el socio lo firma desde la app: se genera su certificado. Si lo firmó en papel, lo marcas.' },
             ],
         },
         {
@@ -200,7 +206,7 @@ const gimnasios = {
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
-                { titulo: 'Cobrar', items: [0, 1, 2, 4, 5],
+                { titulo: 'Cobrar', items: [0, 1, 2, 4, 5, 9, 10, 11],
                   media: { tipo: 'imagen', src: '/images/gym/pagos-1760.webp', w: 1760, h: 995, alt: 'Control de pagos del gimnasio con el estado de cada cuota', pie: 'Quién está al día, quién renueva pronto y quién no.' } },
                 { titulo: 'Facturar', items: [3, 6, 7, 8],
                   media: { tipo: 'imagen', src: '/images/gym/facturacion-1910.webp', w: 1910, h: 956, alt: 'Pantalla de facturación del centro', pie: 'Las facturas emitidas, con su serie, su fecha y su IVA.' } },
@@ -215,6 +221,9 @@ const gimnasios = {
                 { t: 'Pagos adelantados a la vista', d: 'Lo que alguien ha pagado por adelantado cuenta donde tiene que contar y no descuadra el mes.' },
                 { t: 'Devolución distinta de corrección', d: 'Una devolución real y un arreglo de un apunte equivocado no ensucian los mismos números.' },
                 { t: 'Tus facturas de TotalGains', d: 'La licencia del centro se factura sola y el gestor se descarga sus facturas desde el panel.' },
+                  { t: 'Suscripciones que pausas y reactivas', d: 'Cada cuota recurrente se puede pausar, reactivar o cancelar, y ves lo previsto del mes antes de que llegue.' },
+                  { t: 'Cuotas domiciliadas que se registran solas', d: 'El sistema registra el cobro del mes de las cuotas domiciliadas y tú lo verificas contra tu banco. Si el banco devuelve un recibo lo marcas y la cuota se pausa sola. TotalGains no se conecta a tu banco ni mueve dinero.' },
+                  { t: 'Copiloto de caja con IA', d: 'Le preguntas «¿cómo van las domiciliaciones?», «¿qué bonos expiran?» o «¿quién tiene riesgo de baja?» y te contesta con los datos de tu centro.' },
             ],
         },
         {
@@ -233,7 +242,7 @@ const gimnasios = {
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
-                { titulo: 'Tu equipo', items: [0, 1, 2],
+                { titulo: 'Tu equipo', items: [0, 1, 2, 6, 7],
                   media: { tipo: 'imagen', src: '/images/gym/dashboard-1760.webp', w: 1760, h: 1040, alt: 'Panel del gimnasio con los KPI del centro', pie: 'El panel del centro, que cada coach ve según sus permisos.' } },
                 { titulo: 'Lo que comparten', items: [3, 4, 5],
                   media: { tipo: 'imagen', src: '/screenshots/coach_rutinas-600.webp', w: 600, h: 1339, alt: 'Biblioteca de rutinas de un coach', pie: 'Las rutinas del coach, compartidas con el centro.', vertical: true } },
@@ -245,6 +254,8 @@ const gimnasios = {
                 { t: 'Biblioteca de contenido del centro', d: 'Ejercicios, alimentos, recetas y plantillas que el gestor crea una vez y comparten todos sus entrenadores.' },
                 { t: 'Rutinas y dietas del coach compartidas con el centro', d: 'Un entrenador puede poner su material a disposición del gimnasio.' },
                 { t: 'Notas privadas respetadas', d: 'El staff con permiso abre la ficha de cualquier socio, pero no ve las notas privadas del coach titular ni su suscripción personal.' },
+                  { t: 'El calendario del centro', d: 'Todo lo del centro en un calendario, con notas sobre un socio que puedes dejar bajo candado para que él no las vea nunca, y notas que se repiten cada semana.' },
+                  { t: 'Avisos que no se te pasan', d: 'El cumpleaños de un coach del equipo el día antes, o la bienvenida a un socio tras su primera clase.' },
             ],
         },
         {
@@ -294,7 +305,7 @@ const gimnasios = {
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
-                { titulo: 'La app del centro', items: [0, 1, 2, 3],
+                { titulo: 'La app del centro', items: [0, 1, 2, 3, 4, 5],
                   media: { tipo: 'imagen', src: '/images/gym/branding.webp', w: 1280, h: 2856, alt: 'La app con la marca del centro', pie: 'La app, con el logo y los colores del centro.', vertical: true } },
             ],
             items: [
@@ -302,6 +313,8 @@ const gimnasios = {
                 { t: 'Sin rastro de proveedor', d: 'Puedes ocultar el botón de mejora a premium en el móvil del socio para que la experiencia sea del centro de principio a fin.' },
                 { t: 'Rutinas y nutrición con IA para tus coaches', d: 'El mismo motor de rutinas y dietas del producto de entrenador, incluido sin add-ons, con la base de más de 240.000 alimentos en español.' },
                 { t: 'Reservas, pedidos y pagos en la misma app', d: 'El socio reserva su clase, pide en la tienda y ve sus pagos sin cambiar de aplicación.' },
+                  { t: 'Eventos del centro', d: 'Creas un evento con su aforo y les llega el aviso a los socios; si lo cancelas, también se enteran.' },
+                  { t: 'El aspecto que ven tus socios', d: 'Colores, logo y portada del centro en la app, configurables desde el panel.' },
             ],
         },
         {
@@ -341,7 +354,7 @@ const gimnasios = {
         },
         {
             q: '¿El sistema cobra solo a mis socios?',
-            a: 'El sistema gestiona planes, bonos, cuotas, caja y facturación, y avisa al socio en su app cuando le toca renovar, insistiendo si el pago no se registra. El cobro efectivo se sigue haciendo por los canales que ya usa tu centro.',
+            a: 'El sistema gestiona planes, bonos, cuotas, caja y facturación, y avisa al socio en su app cuando le toca renovar, insistiendo si el pago no se registra. Las cuotas domiciliadas las REGISTRA solas cada mes y tú las verificas contra tu banco, marcando las que te devuelvan. Pero TotalGains no se conecta a tu banco ni mueve dinero: el cobro efectivo se sigue haciendo por los canales que ya usa tu centro.',
         },
         {
             q: '¿Mis socios mayores van a saber reservar?',
