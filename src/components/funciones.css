@@ -109,14 +109,17 @@
    ⚠️ Antes el corte estaba en 900px y entre 901 y 1062 no había ni sitio ni
    scroll: las 9 pestañas envolvían a una segunda fila y la barra pasaba de 66
    a 112px, comiéndose el 30% de una pantalla de portátil.
-   La cuenta, medida con la DM Sans del build: 9 pestañas = 951px + 8 huecos de
-   8 = 1015, más los 48 de padding del contenedor = 1063px de ventana. Si
-   añades un área o alargas un nombre, RECALCULA este número. */
+   El número NO se estima, se MIDE en el navegador barriendo anchos de 1 en 1
+   hasta que `.fn-tabs` deja de desbordar. Con 10 pestañas salen 1168px de
+   ventana (mi cálculo con fontTools decía 1152 y se quedaba 16px corto, que
+   es justo el hueco donde las pestañas se salían SIN scroll porque la media
+   query aún no había entrado). Si añades un área o alargas un nombre, vuelve
+   a medirlo así y ajusta este corte. */
 .fn-tabs {
     display: flex; flex-wrap: nowrap; gap: 8px;
     padding-top: 13px; padding-bottom: 13px;
 }
-@media (max-width: 1062px) {
+@media (max-width: 1167px) {
     .fn-tabs {
         overflow-x: auto; scrollbar-width: none;
         scroll-snap-type: x proximity;

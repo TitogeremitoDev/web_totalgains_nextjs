@@ -59,7 +59,7 @@ const entrenadores = {
                   media: { tipo: 'video', src: '/video/coach-primera-rutina.mp4', poster: '/video/coach-primera-rutina.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Creación de una rutina en el panel del entrenador de TotalGains', pie: 'Montar una rutina desde cero en el panel del entrenador.' } },
                 { titulo: 'La rutina, ya montada', items: [4, 5, 6, 7],
                   media: { tipo: 'imagen', src: '/images/blog/ia-totalgains/04-rutina-generada.webp', w: 1187, h: 982, alt: 'Rutina generada por la IA de TotalGains, lista para revisar', pie: 'Una rutina ya montada: días, ejercicios, series y descansos.' } },
-                { titulo: 'En el entreno del atleta', items: [8, 9, 10, 11, 12],
+                { titulo: 'En el entreno del atleta', items: [8, 9, 10, 11, 12, 13],
                   media: { tipo: 'video', src: '/video/app-pantalla-entreno.mp4', poster: '/video/app-pantalla-entreno.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Pantalla de entreno en la app del atleta', pie: 'El entreno, tal y como lo sigue el atleta en su móvil.' } },
             ],
             items: [
@@ -76,6 +76,7 @@ const entrenadores = {
                 { t: 'Cambio de ejercicio sin ensuciar las estadísticas', d: 'El atleta puede cambiar un ejercicio por otro del mismo grupo muscular durante esa semana. Su histórico y sus récords siguen colgando del ejercicio original.' },
                 { t: 'Comparador de rutinas con IA', d: 'Enfrenta dos rutinas y te dice en qué se diferencian de verdad, más allá de los nombres de los ejercicios.' },
                 { t: 'Filtros rápidos de cartera', d: 'Pastillas para quedarte con lo que toca: sin rutina, rutina de más de 8 semanas, modificadas o con resistencia. Cada una dice cuántos atletas son.' },
+                  { t: 'Notas suyas en cada ejercicio', d: 'El atleta se apunta lo que le funciona en un ejercicio concreto y lo tiene delante la próxima vez que le toque.' },
             ],
         },
         {
@@ -99,7 +100,7 @@ const entrenadores = {
                   media: { tipo: 'video', src: '/video/coach-primera-dieta.mp4', poster: '/video/coach-primera-dieta.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Creación de una dieta con IA en el panel del entrenador', pie: 'Generar una dieta con IA y revisarla antes de guardar.' } },
                 { titulo: 'Ajustarla sin rehacerla', items: [4, 5, 6, 7],
                   media: { tipo: 'imagen', src: '/images/blog/ia-totalgains/09-dieta-revision-web.webp', w: 1982, h: 1073, alt: 'Dieta generada por la IA en revisión en el panel web', pie: 'La dieta propuesta, comida a comida, antes de aplicarla.' } },
-                { titulo: 'En el móvil del atleta', items: [8, 10, 11],
+                { titulo: 'En el móvil del atleta', items: [8, 10, 11, 19, 20, 21],
                   media: { tipo: 'video', src: '/video/app-tu-dieta.mp4', poster: '/video/app-tu-dieta.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'La dieta en la app del atleta', pie: 'Lo que ve el atleta: su dieta del día en el móvil.' } },
                 /* La suplementación era UNA línea perdida en el bloque del móvil y
                    el sistema da para dos: el reel «de punta a punta» (33 s) cuenta
@@ -139,6 +140,9 @@ const entrenadores = {
                   { t: 'Cuánto le queda de cada bote', d: 'Con el tamaño del envase y su consumo diario, la app le dice los días que le quedan y le avisa antes de quedarse a cero.' },
                   { t: 'Su lista de compra', d: 'Lo que se le está acabando se junta en una lista y compra desde ahí, con tu enlace y tu código. Marca lo que ya ha comprado y le queda el historial.' },
                   { t: 'Clics, códigos y compras confirmadas', d: 'Ves cuántas veces han abierto tu enlace, copiado tu código y marcado que ya lo compraron, producto a producto. Sirve para negociar con las marcas. TotalGains no cobra ni gestiona esas ventas.' },
+                  { t: 'Valora lo que come y la IA lo aprende', d: 'Cada plato se puntúa desde su app. Lo que valora bien entra más y lo que rechaza deja de salir, sin que tengas que preguntárselo.' },
+                  { t: 'Sus propias recetas', d: 'El atleta guarda recetas suyas y las usa dentro del plan que le has puesto, en vez de salirse a otra app.' },
+                  { t: 'Combos de comidas', d: 'Combinaciones que se guarda para repetirlas sin recomponerlas cada día.' },
             ],
         },
         {
@@ -160,7 +164,7 @@ const entrenadores = {
             bloques: [
                 { titulo: 'Lo que registra el atleta', items: [0, 1, 2, 3],
                   media: { tipo: 'video', src: '/video/app-seguimiento.mp4', poster: '/video/app-seguimiento.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Pantalla de seguimiento del atleta en la app de TotalGains', pie: 'El seguimiento, tal y como lo ve el atleta en su móvil.' } },
-                { titulo: 'Lo que tú ves', items: [4, 5, 6, 7],
+                { titulo: 'Lo que tú ves', items: [4, 5, 6, 7, 8, 9, 10, 11, 12],
                   media: { tipo: 'imagen', src: '/screenshots/perfil-videos.webp', w: 600, h: 1339, alt: 'Vídeos de técnica del atleta en la app', pie: 'Los vídeos de técnica del atleta, con tus anotaciones.', vertical: true } },
             ],
             items: [
@@ -172,6 +176,11 @@ const entrenadores = {
                 { t: 'Audios transcritos a texto', d: 'Las notas de voz del atleta llegan escritas, así que se leen en diez segundos en vez de escucharlas enteras.' },
                 { t: 'Gráficas de evolución y récords', d: 'Progreso por ejercicio, marcas personales detectadas solas y métricas de carga alta sin mezclar sesiones no comparables.' },
                 { t: 'Chat integrado', d: 'Las conversaciones viven junto a la ficha del atleta, con contador de mensajes sin leer.' },
+                  { t: 'Objetivos y metas del atleta', d: 'Lo que se propone queda escrito y con seguimiento, no en una conversación que se pierde.' },
+                  { t: 'Su transformación, con sus números', d: 'Antes y después con peso objetivo y las tendencias de peso, ánimo y sueño que ha ido registrando.' },
+                  { t: 'Récords de resistencia', d: 'Su tirada más larga y su sesión más larga, para el que corre o entrena híbrido.' },
+                  { t: 'Analíticas de sangre con lectura por IA', d: 'Sube el PDF de su analítica (panel completo, glucosa, electrolitos u hormonas) y la IA te la resume. Es información, no un diagnóstico.' },
+                  { t: 'Calendario de competición', d: 'Las fechas a las que va el atleta, para planificar hacia ellas.' },
             ],
         },
         {
@@ -271,7 +280,7 @@ const entrenadores = {
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
-                { titulo: 'Tu marca, no la nuestra', items: [0, 1, 2, 3],
+                { titulo: 'Tu marca, no la nuestra', items: [0, 1, 2, 3, 4],
                   media: { tipo: 'video', src: '/video/coach-tu-marca.mp4', poster: '/video/coach-tu-marca.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Configuración del branding del entrenador en TotalGains', pie: 'Tu logo y tus colores en la app de cada atleta.' } },
             ],
             items: [
@@ -279,6 +288,32 @@ const entrenadores = {
                 { t: 'Panel web del entrenador', d: 'Todo el trabajo de escritorio desde el navegador, sin instalar nada.' },
                 { t: 'Branding generado con IA', d: 'Genera la paleta y la identidad de tu app en un clic si no tienes manual de marca.' },
                 { t: 'Marcos y personalización', d: 'Marcos desbloqueables para tu logo y tu avatar, que tus atletas ven en su pantalla de inicio.' },
+                  { t: 'Mensajes motivacionales con tu voz', d: 'El banner de su inicio lo escribes tú, con su nombre y su racha metidos en la frase, y eliges a qué clientes les llega según cómo vayan.' },
+            ],
+        },
+        {
+            id: 'marketing',
+            nombre: 'Contenido para tus redes',
+            railNombre: 'Marketing',
+            resumen: 'Seis generadores que sacan el contenido de tus propios clientes, con tu marca.',
+            /* ⚠️ Área creada el 15-sep-2026 tras auditar el producto contra el
+               catálogo: `app/(coach)/marketing/` son SEIS pantallas (3.600
+               líneas) y la web no las mencionaba ni una vez. La propia pantalla
+               se presenta como «Contenido para tus redes con tu marca».
+               El bloque va SIN imagen a propósito hasta que llegue el reel que
+               German va a grabar: antes eso que repetir una captura de otra
+               área (ver feedback_web_no_muro_de_tarjetas). */
+            bloques: [
+                { titulo: 'Seis piezas listas para publicar', items: [0, 1, 2, 3, 4, 5],
+                  media: null },
+            ],
+            items: [
+                  { t: 'El plato que todos repiten', d: 'Coge el plato mejor valorado por tus clientes y saca la imagen con tu marca. El contenido sale de lo que ya comen, no de un banco de fotos.' },
+                  { t: 'Ficha de un plato', d: 'Un plato concreto de una dieta convertido en pieza para publicar, con sus macros.' },
+                  { t: 'Collage de una dieta', d: 'De cuatro a seis platos de un plan en una sola imagen, con tu marca, lista para subir.' },
+                  { t: 'Antes y después de tus clientes', d: 'La transformación montada con sus fotos de progreso, sin sacarlas a otra app.' },
+                  { t: 'Informe corporal con sus centímetros', d: 'Un body scan con las medidas reales de un cliente, anónimo y con tu marca.' },
+                  { t: 'Banco de testimonios', d: 'Lo que tus clientes responden en los seguimientos, convertido en tarjeta con tu marca. La IA te propone las mejores y tú eliges.' },
             ],
         },
         {
@@ -300,7 +335,7 @@ const entrenadores = {
             bloques: [
                 { titulo: 'Cobros y renovaciones', items: [0, 1, 2],
                   media: { tipo: 'imagen', src: '/screenshots/suscripcion.webp', w: 600, h: 1339, alt: 'Pantalla de suscripción del atleta en la app', pie: 'Lo que ve el atleta cuando le toca renovar.', vertical: true } },
-                { titulo: 'Altas, citas y avisos', items: [3, 4, 5],
+                { titulo: 'Altas, citas y avisos', items: [3, 4, 5, 6, 7, 8, 9, 10],
                   media: { tipo: 'video', src: '/video/coach-invita-escritorio.mp4', poster: '/video/coach-invita-escritorio.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Alta de un cliente nuevo desde el panel web del entrenador', pie: 'Dar de alta a un atleta desde el panel.' } },
             ],
             items: [
@@ -310,6 +345,11 @@ const entrenadores = {
                 { t: 'Citas con el atleta', d: 'Propones huecos, el atleta elige y la cita queda en su agenda y en la tuya.' },
                 { t: 'Eventos y avisos programados', d: 'Eventos puntuales o recurrentes con notificación al atleta.' },
                 { t: 'Migración asistida', d: 'Traemos tus atletas, plantillas y planes desde Trainerize, Harbiz, MyPT Hub o tus propios Excel. Lo hacemos nosotros, en español y sin coste.' },
+                  { t: 'Tus clases en grupo', d: 'Clases propias con su horario, públicas, privadas o de grupo cerrado, sin depender de un gimnasio.' },
+                  { t: 'Bonos que valen para todo', d: 'Un bono cuenta junto las sesiones uno a uno y las clases en grupo, con la duración que le pongas.' },
+                  { t: 'Tu agenda, y que te pidan hueco', d: 'Publicas tus horas con la antelación mínima que quieras, y el atleta puede pedirte una hora libre de tu agenda.' },
+                  { t: 'Estadísticas de tu negocio', d: 'Cómo va tu cartera y tus ingresos, sin montarte una hoja de cálculo aparte.' },
+                  { t: 'Fichajes si trabajas en un centro', d: 'Fichas entrada y salida, y si las horas no cuadran las corriges dejando el motivo.' },
             ],
         },
         {
@@ -355,13 +395,17 @@ const entrenadores = {
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
-                { titulo: 'Empezar', items: [0, 1, 2],
+                { titulo: 'Empezar', items: [0, 1, 2, 3, 4, 5, 6],
                   media: { tipo: 'video', src: '/video/reel-primeros-pasos.mp4', poster: '/video/reel-primeros-pasos.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Primeros pasos en TotalGains', pie: 'Los primeros pasos, en un minuto.' } },
             ],
             items: [
                 { t: 'Asistente «¿cómo hago X?»', d: 'Preguntas dentro de la app y te lleva a la pantalla exacta con los pasos.' },
                 { t: 'Soporte en español', d: 'Contesta una persona, no un formulario que se pierde.' },
                 { t: 'Prueba sin tarjeta', d: 'Plan gratuito permanente hasta 5 atletas, y 14 días de prueba opcional en los planes de pago.' },
+                  { t: 'Tus propias preguntas frecuentes', d: 'Montas el centro de ayuda que ven tus atletas con las dudas que te repiten, partiendo de un set base al que añades las tuyas.' },
+                  { t: 'Frases guardadas', d: 'Los textos que escribes cien veces quedan etiquetados y se insertan de un toque cuando estás contestando.' },
+                  { t: 'Tu biblioteca de recursos', d: 'Tus vídeos y documentos con carpetas, etiquetas y buscador, y te dice quién los ha visto.' },
+                  { t: 'Tutoriales para el atleta', d: 'Cómo tomarse las medidas, cómo va el RIR y qué significan los colores del entreno, explicado dentro de su app.' },
             ],
         },
     ],
