@@ -61,6 +61,54 @@ function topeAltoDeBloque(b) {
     return n <= 3 ? 390 : n === 4 ? 450 : 510;
 }
 
+/* ── El color de cada área, calculado para que se lea ──
+
+   Cada área lleva en sus datos el color que ya tiene en el producto. De ahí
+   salen las cuatro variables que usa el CSS: el hex para bordes y sombras, el
+   triplete para poder darle alfa con rgba(), la tinta del texto cuando la
+   pestaña se rellena de ese color, y el tono del contador sobre el fondo
+   oscuro de la barra.
+
+   Nada de esto se elige a ojo, y un umbral de luminancia tampoco sirve: mi
+   primer intento mandaba tinta blanca a todo lo que estuviera por debajo de
+   0,36 y dejaba cinco de doce colores sin llegar al mínimo de 4,5:1 (el
+   celeste de Seguimiento daba 2,77 en blanco... y 6,69 en oscuro). Así que se
+   prueban las dos tintas y gana la que más contraste da.
+
+   El contador es el caso contrario: el color puro sobre el fondo de la barra
+   se queda corto en los tonos oscuros (el azul de Clases, 3,90:1), así que se
+   aclara mezclándolo con blanco hasta pasar de 4,5. */
+const CANAL_LIN = (v) => { const c = v / 255; return c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4; };
+const luzDe = ([r, g, b]) => 0.2126 * CANAL_LIN(r) + 0.7152 * CANAL_LIN(g) + 0.0722 * CANAL_LIN(b);
+const contrasteDe = (a, b) => { const [alta, baja] = [luzDe(a), luzDe(b)].sort((x, y) => y - x); return (alta + 0.05) / (baja + 0.05); };
+
+const TINTA_CLARA = [255, 255, 255];
+const TINTA_OSCURA = [11, 17, 32];      // #0b1120
+const FONDO_BARRA = [2, 6, 23];         // #020617, el de .fn-tabs-bar
+const MINIMO = 4.5;                     // WCAG AA para texto pequeño
+
+function acentoDeArea(hex) {
+    const h = (hex || "#667eea").replace("#", "");
+    const rgb = [0, 2, 4].map((i) => parseInt(h.slice(i, i + 2), 16));
+
+    const clara = contrasteDe(rgb, TINTA_CLARA);
+    const oscura = contrasteDe(rgb, TINTA_OSCURA);
+    const tinta = clara >= oscura ? "#ffffff" : "#0b1120";
+
+    /* El contador se aclara de 8 % en 8 % hasta que se lee sobre la barra. */
+    let nota = rgb;
+    for (let i = 0; i < 12 && contrasteDe(nota, FONDO_BARRA) < MINIMO; i++) {
+        nota = nota.map((c) => Math.round(c + (255 - c) * 0.08));
+    }
+
+    return {
+        "--fn-acento": `#${h}`,
+        "--fn-acento-rgb": rgb.join(","),
+        "--fn-tinta": tinta,
+        "--fn-nota": `rgb(${nota.join(",")})`,
+    };
+}
+
 export default function FuncionesContent({ data, otro }) {
     const esGym = data.perfil === "gimnasio";
     const badge = esGym ? "Para gimnasios, estudios y boxes" : "Para entrenadores y nutricionistas";
@@ -76,12 +124,26 @@ export default function FuncionesContent({ data, otro }) {
             + (i === 0 ? `,.fn:not(:has(.fn-cat:target)) .fn-tab[href="#${c.id}"]` : "")
         ))
         .join(",")
-        + "{background:var(--primary-gradient);border-color:transparent;color:#fff;box-shadow:0 6px 18px -6px rgba(102,126,234,.7)}"
+        + "{background-color:var(--fn-acento);background-image:linear-gradient(145deg,rgba(255,255,255,.24),rgba(0,0,0,.2));"
+        + "border-color:transparent;color:var(--fn-tinta);transform:translateY(-1px);"
+        + "box-shadow:0 9px 22px -9px rgba(var(--fn-acento-rgb),.95),inset 0 1px 0 rgba(255,255,255,.3)}"
         + data.categorias.map((c, i) => (
             `.fn:has(#${c.id}:target) .fn-tab[href="#${c.id}"] .fn-tab-n`
             + (i === 0 ? `,.fn:not(:has(.fn-cat:target)) .fn-tab[href="#${c.id}"] .fn-tab-n` : "")
         )).join(",")
-        + "{opacity:.8}";
+        /* El contador de la activa lleva su propia pastilla, pintada con un
+           box-shadow del mismo color: así "engorda" sin ocupar layout. La tira
+           mide 1168px de los 1152 útiles, y un padding de verdad la partiría. */
+        + "{color:var(--fn-tinta);opacity:1;background:rgba(var(--fn-acento-rgb),.001);"
+        + "border-radius:8px;box-shadow:0 0 0 4px rgba(255,255,255,.22),inset 0 0 0 99px rgba(255,255,255,.22)}"
+        /* Y la raya de la barra toma el color del área abierta: ata la tira con
+           lo que hay debajo sin mover un píxel (mismo grosor, solo color). */
+        + data.categorias.map((c, i) => {
+            const rgb = acentoDeArea(c.accent)["--fn-acento-rgb"];
+            return `.fn:has(#${c.id}:target) .fn-tabs-bar`
+                + (i === 0 ? `,.fn:not(:has(.fn-cat:target)) .fn-tabs-bar` : "")
+                + `{border-bottom-color:rgba(${rgb},.55)}`;
+        }).join("");
 
     return (
         <main className="fn">
@@ -145,7 +207,7 @@ export default function FuncionesContent({ data, otro }) {
             <nav className="fn-tabs-bar" id="areas" tabIndex={-1} aria-label="Áreas de funciones">
                 <div className="container fn-tabs">
                     {data.categorias.map((c) => (
-                        <a key={c.id} href={`#${c.id}`} className="fn-tab">
+                        <a key={c.id} href={`#${c.id}`} className="fn-tab" style={acentoDeArea(c.accent)}>
                             {c.railNombre || c.nombre}
                             <span className="fn-tab-n">{c.items.length}</span>
                         </a>

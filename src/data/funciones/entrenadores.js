@@ -40,6 +40,7 @@ const entrenadores = {
     categorias: [
         {
             id: 'rutinas',
+            accent: '#f59e0b', // workouts en coachMenuConfig
             nombre: 'Rutinas y entrenamiento',
             railNombre: 'Rutinas',
             resumen: 'Del papel en blanco a la periodización completa, sin salir de tu metodología.',
@@ -81,6 +82,7 @@ const entrenadores = {
         },
         {
             id: 'nutricion',
+            accent: '#22c55e', // nutrition
             nombre: 'Nutrición',
             railNombre: 'Nutrición',
             resumen: 'Dietas que se montan en minutos y se adaptan sin rehacerlas enteras.',
@@ -147,6 +149,7 @@ const entrenadores = {
         },
         {
             id: 'seguimiento',
+            accent: '#0ea5e9', // seguimiento
             nombre: 'Seguimiento y comunicación',
             railNombre: 'Seguimiento',
             resumen: 'Saber cómo va cada atleta sin perseguir a nadie por WhatsApp.',
@@ -185,6 +188,7 @@ const entrenadores = {
         },
         {
             id: 'retencion',
+            accent: '#ef4444', // progress y los avisos de riesgo
             nombre: 'Retención y avisos',
             railNombre: 'Retención',
             resumen: 'La plataforma te levanta la mano antes de que un atleta se caiga.',
@@ -230,6 +234,7 @@ const entrenadores = {
         },
         {
             id: 'ciclo',
+            accent: '#ec4899', // CYCLE_PINK, el rosa de todo el módulo
             nombre: 'Mi Ciclo',
             railNombre: 'Mi Ciclo',
             resumen: 'Ninguna otra plataforma de gestión para entrenadores lleva esto dentro.',
@@ -280,6 +285,7 @@ const entrenadores = {
         },
         {
             id: 'marca',
+            accent: '#7c3aed', // branding (#8b5cf6 en la app; este tono de la misma familia es el que llega a 4,5:1 con texto blanco, el otro se quedaba en 4,38)
             nombre: 'Tu app y tu marca',
             railNombre: 'Tu marca',
             resumen: 'Tus atletas se descargan tu app, no la nuestra.',
@@ -308,6 +314,7 @@ const entrenadores = {
         },
         {
             id: 'marketing',
+            accent: '#f97316', // en la app es rosa, pero ese lo tiene Mi Ciclo
             nombre: 'Contenido para tus redes',
             railNombre: 'Marketing',
             resumen: 'Seis generadores que sacan el contenido de tus propios clientes, con tu marca. Y tú decides cómo queda cada pieza.',
@@ -343,6 +350,7 @@ const entrenadores = {
         },
         {
             id: 'negocio',
+            accent: '#14b8a6', // billing
             nombre: 'Gestión del negocio',
             railNombre: 'Negocio',
             resumen: 'Lo administrativo, en la misma ficha que el entrenamiento.',
@@ -390,6 +398,7 @@ const entrenadores = {
         },
         {
             id: 'adherencia',
+            accent: '#eab308', // el dorado de los logros
             nombre: 'Lo que engancha al atleta',
             railNombre: 'Adherencia',
             resumen: 'Un atleta que abre la app sola es un atleta que renueva.',
@@ -416,6 +425,7 @@ const entrenadores = {
         },
         {
             id: 'ayuda',
+            accent: '#06b6d4', // faqs
             nombre: 'Ayuda y puesta en marcha',
             railNombre: 'Ayuda',
             resumen: 'Empezar no puede ser un problema tuyo.',

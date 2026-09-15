@@ -44,6 +44,7 @@ const gimnasios = {
     categorias: [
         {
             id: 'clases',
+            accent: '#2563eb', // clases en grupo
             nombre: 'Clases y reservas',
             railNombre: 'Clases',
             resumen: 'El aforo cuadra solo y la lista de espera se mueve sin que nadie la mire.',
@@ -88,6 +89,7 @@ const gimnasios = {
         },
         {
             id: 'tienda',
+            accent: '#f97316', // comercio
             nombre: 'Tienda: productos y merchandising',
             railNombre: 'Tienda',
             resumen: 'Camisetas, suplementos y bebidas con su catálogo, su stock, su margen y sus pedidos desde la app del socio.',
@@ -158,6 +160,7 @@ const gimnasios = {
         },
         {
             id: 'socios',
+            accent: '#10b981', // clients
             nombre: 'Socios, altas y documentos',
             railNombre: 'Socios',
             resumen: 'Dar de alta a alguien deja de ser papeleo repartido en cuatro sitios.',
@@ -192,6 +195,7 @@ const gimnasios = {
         },
         {
             id: 'pagos',
+            accent: '#14b8a6', // billing
             nombre: 'Cobros, caja y facturación',
             railNombre: 'Cobros y caja',
             resumen: 'Que el dinero del mes cuadre sin sacar una hoja de cálculo.',
@@ -228,6 +232,7 @@ const gimnasios = {
         },
         {
             id: 'equipo',
+            accent: '#7c3aed', // biblioteca y equipo (#8b5cf6 se queda en 4,45:1, este llega a 5,70)
             nombre: 'Equipo y permisos',
             railNombre: 'Equipo',
             resumen: 'Cada entrenador ve lo suyo, y solo lo suyo.',
@@ -260,6 +265,7 @@ const gimnasios = {
         },
         {
             id: 'retencion',
+            accent: '#ef4444', // riesgo
             nombre: 'Retención y analítica',
             railNombre: 'Retención',
             resumen: 'Enterarte de que alguien se va mientras todavía puedes hacer algo.',
@@ -291,6 +297,7 @@ const gimnasios = {
         },
         {
             id: 'app',
+            accent: '#0ea5e9', // la app del socio
             nombre: 'La app del socio, con tu marca',
             railNombre: 'App del socio',
             resumen: 'Tus socios se descargan la app de tu gimnasio.',
@@ -319,6 +326,7 @@ const gimnasios = {
         },
         {
             id: 'ayuda',
+            accent: '#06b6d4', // faqs
             nombre: 'Puesta en marcha y ayuda',
             railNombre: 'Ayuda',
             resumen: 'No te dejamos el software y adiós.',

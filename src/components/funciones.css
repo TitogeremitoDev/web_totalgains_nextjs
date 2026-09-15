@@ -110,16 +110,23 @@
    scroll: las 9 pestañas envolvían a una segunda fila y la barra pasaba de 66
    a 112px, comiéndose el 30% de una pantalla de portátil.
    El número NO se estima, se MIDE en el navegador barriendo anchos de 1 en 1
-   hasta que `.fn-tabs` deja de desbordar. Con 10 pestañas salen 1168px de
+   hasta que `.fn-tabs` deja de desbordar. Con 10 pestañas salían 1168px de
    ventana (mi cálculo con fontTools decía 1152 y se quedaba 16px corto, que
    es justo el hueco donde las pestañas se salían SIN scroll porque la media
-   query aún no había entrado). Si añades un área o alargas un nombre, vuelve
-   a medirlo así y ajusta este corte. */
+   query aún no había entrado).
+
+   ⚠️ 15-sep-2026, corte 1168 → 1172: un DÍGITO más en un contador mueve esto.
+   Retención pasó de 6 a 12 funciones y la tira creció 4px (1145 → 1149 de los
+   1152 útiles), así que entre 1168 y 1171 las pestañas se salían de la caja
+   sin scroll con el que alcanzarlas. Comparado contra la web publicada para
+   estar seguro de la causa. Vuelve a medirlo si añades un área, alargas un
+   nombre O si un contador gana una cifra, y no con el corte: el test es barrer
+   de 900 a 1400 comprobando que nunca se da «desborda y no hay scroll». */
 .fn-tabs {
     display: flex; flex-wrap: nowrap; gap: 8px;
     padding-top: 13px; padding-bottom: 13px;
 }
-@media (max-width: 1167px) {
+@media (max-width: 1171px) {
     .fn-tabs {
         overflow-x: auto; scrollbar-width: none;
         scroll-snap-type: x proximity;
@@ -140,23 +147,52 @@
    exactamente 1152 px de los 1152 útiles del contenedor. Cero margen, así que
    saltaban a una segunda fila con cualquier redondeo. Quitando la pastilla del
    contador (un pill dentro de otro pill) bajan a 980 y sobran 171, un 14 %. */
+/* Cada área lleva el color que ya tiene en el producto (rutinas ámbar,
+   nutrición verde, Mi Ciclo rosa...). Viene en el atributo style desde
+   FuncionesContent, que además calcula la tinta legible encima.
+   ⛔ Todo el color va en borde, fondo y sombra: nada que ocupe ancho. Diez
+   pestañas piden 1168px de los 1152 útiles, así que un icono o un padding en
+   el contador las manda a una segunda fila. */
 .fn-tab {
+    --fn-acento: #667eea; --fn-acento-rgb: 102, 126, 234; --fn-tinta: #fff; --fn-nota: #99a9f2;
     display: inline-flex; align-items: center; gap: 6px;
     flex-shrink: 0; white-space: nowrap;
     min-height: 38px; padding: 0 14px; border-radius: 19px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(var(--fn-acento-rgb), 0.3);
+    background: linear-gradient(180deg, rgba(var(--fn-acento-rgb), 0.11), rgba(var(--fn-acento-rgb), 0.04));
     color: var(--text-secondary); font-size: 0.85rem; font-weight: 600;
-    text-decoration: none; transition: var(--transition-fast);
+    text-decoration: none;
+    transition: background 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease, color 0.18s ease;
 }
-.fn-tab:hover { border-color: rgba(102, 126, 234, 0.5); color: var(--text-primary); }
+.fn-tab:hover {
+    border-color: rgba(var(--fn-acento-rgb), 0.85);
+    background: linear-gradient(180deg, rgba(var(--fn-acento-rgb), 0.26), rgba(var(--fn-acento-rgb), 0.12));
+    color: var(--text-primary); transform: translateY(-1px);
+    box-shadow: 0 7px 18px -9px rgba(var(--fn-acento-rgb), 0.95);
+}
+/* Quien navega con teclado ve lo mismo que quien pasa el ratón. */
+.fn-tab:focus-visible {
+    border-color: var(--fn-acento);
+    box-shadow: 0 0 0 3px rgba(var(--fn-acento-rgb), 0.45);
+}
+@media (prefers-reduced-motion: reduce) {
+    .fn-tab, .fn-tab:hover { transition: none; transform: none; }
+}
 /* La pastilla se ve de 38px pero el dedo tiene 44: es el único control de la
    página y en móvil está en una tira que además hay que arrastrar. Se amplía
    con un pseudo-elemento para no sumar 6px a una barra que va fija. Con
    inset -3px las zonas de dos pestañas contiguas quedan a 8px, no se solapan. */
 .fn-tab { position: relative; }
 .fn-tab::after { content: ""; position: absolute; inset: -3px 0; }
-.fn-tab-n { font-size: 0.75rem; font-weight: 700; opacity: 0.55; }
+/* El contador en el color del área: el único toque de color en reposo.
+   ⛔ Sin `font-variant-numeric: tabular-nums`. Lo probé y suma 3px a la tira,
+   que pasaba a necesitar 1171px de ventana en vez de 1168: los tres píxeles
+   del hueco donde las pestañas se salen SIN que haya entrado el scroll. Los
+   contadores son fijos, así que la cifra tabular no arreglaba nada. */
+.fn-tab-n {
+    font-size: 0.75rem; font-weight: 700;
+    color: var(--fn-nota, var(--fn-acento));
+}
 
 /* ── Un área ── */
 /* Arriba 24 y no 64 (--spacing-2xl): entre la barra de pestañas y el titular
