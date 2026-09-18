@@ -190,6 +190,20 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/mensajes-para-conseguir-clientes-entrenador
+*Generado 2026-09-18 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `mensajes-captacion-hero.webp` | cenital 90° | sujeto a la derecha | medium | escritorio de nogal a oscuras | móvil boca arriba con la pantalla EN BLANCO + cerco de café | la propia pantalla como única fuente | la pantalla en blanco |
+| `mensajes-quemar.webp` | macro a ras | diagonal, tercio inferior izquierdo | macro extremo | pizarra sobre fondo negro | cerilla quemada con un hilo de humo subiendo | lateral dura, resto a negro | algo que ya no prende |
+| `mensajes-puerta.webp` | eye-level | perspectiva de un punto, centrada | medium wide | pasillo oscuro | puerta entreabierta con cuña de luz cálida | ámbar por la rendija contra navy | invitación, no cierre |
+| `mensajes-conversacion.webp` | 3/4 elevado | tercios | medium close | mesa de café de madera | dos tazas enfrentadas, una humeando y otra intacta | ventana lateral rasante | conversación empezada sin terminar |
+
+**Notas:** el truco de la pantalla en blanco funciona igual de bien que el de los botes sin etiqueta y el de las teclas sin letras: pedir explícitamente **"completamente en blanco, sin texto, sin iconos, sin interfaz"** es lo que evita que el modelo se invente tipografía. Ya van tres artículos seguidos usándolo. La cerilla apagada y la puerta entornada son conceptos nuevos que valen para cualquier pieza sobre oportunidades perdidas o sobre abrir conversación.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -261,6 +275,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-09-18** — Añadido `blog/mensajes-para-conseguir-clientes-entrenador` (4 imágenes, todas conceptos nuevos). El pool original sigue con 4, 7, 10, 11, 13 y 15 sin usar.
 
 **2026-09-11** — Añadido `blog/top-suplementos-evidencia-coach-2026` (4 imágenes). Ningún concepto del pool consumido: las cuatro son nuevas. Siguen sin usar: 4, 7, 10, 11, 13, 15.
 

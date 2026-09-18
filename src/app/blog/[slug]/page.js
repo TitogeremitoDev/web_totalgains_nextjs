@@ -31,6 +31,8 @@ import AIPlanNumberErrors from "@/components/AIPlanNumberErrors";
 import AIEquivalenceTrap from "@/components/AIEquivalenceTrap";
 import SupplementEvidenceGrid from "@/components/SupplementEvidenceGrid";
 import SupplementPurposeSplit from "@/components/SupplementPurposeSplit";
+import ProspectMessageTemplates from "@/components/ProspectMessageTemplates";
+import LeadResponseDecay from "@/components/LeadResponseDecay";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -65,6 +67,8 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__ai_equivalence_trap__"></div>', Component: AIEquivalenceTrap, gate: () => true },
   { marker: '<div class="__supplement_evidence__"></div>', Component: SupplementEvidenceGrid, gate: () => true },
   { marker: '<div class="__supplement_purpose__"></div>', Component: SupplementPurposeSplit, gate: () => true },
+  { marker: '<div class="__prospect_messages__"></div>', Component: ProspectMessageTemplates, gate: () => true },
+  { marker: '<div class="__lead_response_decay__"></div>', Component: LeadResponseDecay, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS
