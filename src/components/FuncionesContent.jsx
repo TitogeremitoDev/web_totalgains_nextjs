@@ -219,14 +219,9 @@ export default function FuncionesContent({ data, otro }) {
                 {data.categorias.map((c) => {
                     return (
                         <section key={c.id} id={c.id} className={`fn-cat ${c.destacado ? "destacado" : ""}`}>
-                            {/* .fn-area es quien maqueta; la sección solo se
-                                muestra u oculta (las reglas de pestañas le ponen
-                                display:block y pisarían un display:grid aquí).
-                                Con media VERTICAL, la captura va en una columna a
-                                la derecha junto a las TARJETAS, no junto al
-                                titular: medido, compartir fila con el titular
-                                dejaba la primera tarjeta a 708-827px porque la
-                                fila medía lo que mide el móvil. */}
+                            {/* .fn-area y .fn-area-head son envoltorios sin estilo propio:
+                                quien maqueta es .fn-area-top. Se quedan porque el HTML ya está
+                                indexado con ellos, pero no busques su CSS: nunca lo tuvieron. */}
                             <div className="fn-area">
                             <div className="fn-area-top">
                                 <div className="fn-area-head">

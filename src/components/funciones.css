@@ -194,6 +194,29 @@
     color: var(--fn-nota, var(--fn-acento));
 }
 
+/* ── El recuadro del hero de /funciones/ (la página índice) ──
+   ⚠️ Estas tres reglas estaban BORRADAS y la página lleva rota desde el commit
+   9943145, que rehízo el catálogo con pestañas y se llevó por delante el CSS
+   de `.fn-todo` sin tocar la página que lo usa. `.glass` le pone el marco y el
+   fondo, así que el recuadro se veía... pero sin padding: el texto pegaba al
+   borde izquierdo y el margen del primer <p> se colapsaba hacia fuera, con el
+   título montado encima de la línea del marco. German, 20-sep: «por dios está
+   rotísimo».
+
+   Si vuelves a rehacer el catálogo, comprueba las clases `fn-*` que usan las
+   OTRAS páginas antes de borrar nada de este fichero: son cuatro ficheros los
+   que lo importan, no solo FuncionesContent. */
+.fn-todo { padding: 26px 28px; border-radius: var(--radius-lg); }
+.fn-todo-t {
+    margin: 0 0 8px;
+    font-size: 1.02rem; font-weight: 700; line-height: 1.35;
+    color: var(--text-primary);
+}
+.fn-todo-d { margin: 0; font-size: 0.9rem; line-height: 1.6; color: var(--text-secondary); }
+@media (max-width: 700px) {
+    .fn-todo { padding: 20px; }
+}
+
 /* ── Un área ── */
 /* Arriba 24 y no 64 (--spacing-2xl): entre la barra de pestañas y el titular
    del área había 160px de negro, el 21% de una pantalla de portátil tirado. */
@@ -329,8 +352,15 @@
 .fn-media-col { display: flex; flex-direction: column; gap: 16px; }
 /* El apaisado a lo grande. A 460px, una grabación de un panel de 1280 se
    queda en un 0,36x y no se lee nada de lo que se está enseñando. */
+/* La variante `ancha` de FeatureMedia: el vídeo del índice. Tiene un tope de
+   880px dentro de un contenedor de 1152 y, pegado a la izquierda, dejaba 272px
+   de aire muerto a la derecha.
+   ⚠️ Hasta el 20-sep-2026 nadie pasaba esa prop y estas reglas no llegaban al
+   DOM (0 apariciones de `fn-media-col ancha` en los tres HTML construidos).
+   Ahora la usa /funciones/. */
 .fn-media-col.ancha { margin-top: 34px; }
-.fn-media-col.ancha .fn-media-cap { max-width: 880px; }
+.fn-media-col.ancha .fn-media-marco { margin-inline: auto; }
+.fn-media-col.ancha .fn-media-cap { max-width: 880px; margin-inline: auto; }
 .fn-media { margin: 0; }
 .fn-media-lazy { display: block; line-height: 0; }
 .fn-media-marco {

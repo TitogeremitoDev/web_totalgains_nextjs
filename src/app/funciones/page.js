@@ -127,6 +127,7 @@ export default function FuncionesHub() {
                         vídeo delante las dos puertas quedaban a 1.158px del inicio:
                         en un portátil no se veía ninguna de las dos al llegar. */}
                     <FeatureMedia
+                        ancha
                         media={[{
                             tipo: "video",
                             src: "/video/coach-asignar-rutina.mp4",
