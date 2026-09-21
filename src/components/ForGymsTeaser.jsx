@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Users, Calendar, BarChart3, ArrowRight, Building2 } from "lucide-react";
+import { Users, Calendar, BarChart3, ArrowRight, Building2, ShoppingBag } from "lucide-react";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -126,13 +126,20 @@ export default function ForGymsTeaser() {
               maxWidth: "44ch",
             }}
           >
+            {/* ⚠️ Esta es la única prosa de la home que habla del vertical
+                gimnasio, así que nombra al SOCIO y la TIENDA a propósito: antes
+                no aparecían en toda la portada y las IAs resumían TotalGains
+                como producto solo de entrenador. "cuotas que se registran y
+                facturan solas" es literal: el cron registra, NO cobra. */}
             TotalGains tiene tarifa propia para centros, con coaches
             ilimitados en todos los planes: multi-coach con permisos
-            granulares, agenda de clases con reservas y waitlist, app marca
-            blanca del centro y panel supervisor con KPIs en tiempo real.
+            granulares, agenda de clases con reservas y lista de espera,
+            tienda del centro con control de stock y pedidos desde la app
+            del socio, caja y cuotas que se registran y facturan solas, y app
+            marca blanca con panel supervisor de KPIs en tiempo real.
           </p>
 
-          {/* 3 mini-features con iconos */}
+          {/* 4 mini-features con iconos */}
           <div
             style={{
               display: "flex",
@@ -151,6 +158,11 @@ export default function ForGymsTeaser() {
                 icon: <Calendar size={18} />,
                 title: "Clases con reserva y waitlist",
                 desc: "Aforo, monitor asignado, lista de espera automática.",
+              },
+              {
+                icon: <ShoppingBag size={18} />,
+                title: "Tienda del centro con stock",
+                desc: "Ropa, suplementos y bonos. El socio pide desde su app.",
               },
               {
                 icon: <BarChart3 size={18} />,
