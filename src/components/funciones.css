@@ -220,7 +220,11 @@
 /* ── Un área ── */
 /* Arriba 24 y no 64 (--spacing-2xl): entre la barra de pestañas y el titular
    del área había 160px de negro, el 21% de una pantalla de portátil tirado. */
-.fn-main { padding: 24px var(--spacing-md) var(--spacing-3xl); }
+/* El padding de abajo era --spacing-3xl (96px) y se SUMABA al de la FAQ y al
+   del cierre: 256px de negro entre la última pregunta y «Todo esto…», medido
+   el 22-sep-2026. El separador visual ya lo pone el border-top de .fn-cierre,
+   así que aquí basta un respiro corto. */
+.fn-main { padding: 24px var(--spacing-md) 32px; }
 /* ⚠️ DOS REGLAS GLOBALES ENTRAN AQUÍ SIN PEDIR PERMISO, medidas en el
    navegador real el 14-sep-2026 tras creer que estaban arregladas:
    1. `section { padding: var(--spacing-3xl) 0 }` (globals.css): cada área es
@@ -402,7 +406,10 @@
 }
 
 /* ── Preguntas ── */
-.fn-faq { margin-top: var(--spacing-3xl); padding-top: var(--spacing-lg); border-top: 1px solid var(--fn-line); }
+/* ⚠️ `padding-bottom: 0` es obligatorio: la regla global `section { padding:
+   var(--spacing-3xl) 0 }` de globals.css le mete 96px abajo que no están
+   escritos aquí. Es la misma trampa documentada arriba en .fn-main. */
+.fn-faq { margin-top: var(--spacing-3xl); padding-top: var(--spacing-lg); padding-bottom: 0; border-top: 1px solid var(--fn-line); }
 .fn-faq .fn-h2 { margin-bottom: var(--spacing-md); }
 .fn-faq-grid { display: grid; gap: 0 44px; }
 @media (min-width: 900px) { .fn-faq-grid { grid-template-columns: 1fr 1fr; } }
@@ -419,7 +426,45 @@
 .fn-cierre-inner { position: relative; z-index: 1; }
 .fn-cierre .fn-intro { margin-left: auto; margin-right: auto; }
 .fn-cierre .fn-ctas { justify-content: center; }
-.fn-cierre-nota { margin: 18px 0 0; font-size: 0.85rem; color: var(--text-muted); }
+/* El enlace cruzado al otro catálogo. Antes era un <a> pelado heredando el
+   estilo de enlace por defecto y quedaba como texto suelto debajo de dos
+   botones; ahora es un botón fantasma, que es lo que es: una tercera salida
+   secundaria, no una nota al pie. */
+.fn-cierre-nota { margin: 26px 0 0; font-size: 0.85rem; }
+
+.fn-cierre-nota a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 18px;
+    border: 1px solid var(--fn-line);
+    border-radius: 999px;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
+}
+
+.fn-cierre-nota a::after {
+    content: "→";
+    font-size: 0.95em;
+    line-height: 1;
+    transition: transform var(--transition-base);
+}
+
+.fn-cierre-nota a:hover,
+.fn-cierre-nota a:focus-visible {
+    color: var(--text-primary);
+    border-color: rgba(var(--fn-acento-rgb), 0.55);
+    background-color: rgba(var(--fn-acento-rgb), 0.10);
+}
+
+.fn-cierre-nota a:hover::after { transform: translateX(3px); }
+
+@media (prefers-reduced-motion: reduce) {
+    .fn-cierre-nota a,
+    .fn-cierre-nota a::after { transition: none; }
+    .fn-cierre-nota a:hover::after { transform: none; }
+}
 
 /* ── Hub ── */
 .fn-hub-grid { display: grid; gap: 20px; padding-bottom: var(--spacing-3xl); }

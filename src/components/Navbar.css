@@ -31,11 +31,27 @@
     padding: var(--spacing-sm) 0;
 }
 
+/* ⚠️ La navbar es CHROME, no contenido: no debe heredar el tope de 1200px de
+   `.container`. Medido el 22-sep-2026 en producción: la barra necesitaba
+   1423 px y el contenedor le daba 1200, así que se salía 223 px EN TODAS LAS
+   ANCHURAS (a 1920 el exceso caía en el margen vacío y no se notaba; a 1275
+   el borde de la ventana lo cortaba y se comía «Ya estoy registrado»).
+   El menú creció a 7 entradas sin que nadie recalculara el ancho. */
+.navbar .container {
+    max-width: 1280px;
+}
+
 .navbar-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-sm);
+    /* sin esto, un hijo flex con texto largo se niega a encogerse y desborda */
+    min-width: 0;
+}
+
+.navbar-container > * {
+    min-width: 0;
 }
 
 .navbar-logo {
@@ -46,32 +62,37 @@
 }
 
 .navbar-logo img {
-    height: 40px;
-    width: 40px;
+    height: 36px;
+    width: 36px;
     object-fit: contain;
     border-radius: 8px;
+    flex-shrink: 0;
 }
 
 .logo-text {
     font-family: var(--font-display);
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 800;
     color: var(--text-primary);
     letter-spacing: -0.5px;
+    white-space: nowrap;
 }
 
+/* El gap era var(--spacing-md) = 1.5rem: con 7 entradas son 144 px solo de
+   huecos. Bajado a 0.25rem; el aire visual lo da el padding de cada enlace. */
 .navbar-links {
     display: flex;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: 0.25rem;
 }
 
 .nav-link {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.875rem;
     font-weight: 500;
     text-decoration: none;
-    padding: var(--spacing-xs) var(--spacing-sm);
+    white-space: nowrap;
+    padding: 0.45rem 0.55rem;
     border-radius: var(--radius-sm);
     transition: all var(--transition-base);
     position: relative;
@@ -230,7 +251,11 @@
     font-size: 1.05rem;
 }
 
-@media (max-width: 992px) {
+/* ⚠️ Estaba en 992px y con 7 entradas la barra necesita ~1081px: entre 993 y
+   ~1140 se enseñaba el menú completo SIN que cupiera, y se cortaba contra el
+   borde de la ventana. Si se añade una entrada al menú, se vuelve a medir
+   `.navbar-container.scrollWidth` y se sube este corte, o vuelve a romperse. */
+@media (max-width: 1140px) {
     .navbar-links {
         display: none;
     }
