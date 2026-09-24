@@ -159,6 +159,49 @@ const gimnasios = {
             ],
         },
         {
+            id: 'servicios',
+            accent: '#ec4899', // servicios — ni azul de clases ni naranja de tienda
+            nombre: 'Servicios: cobrar por sesión, sin bono',
+            railNombre: 'Servicios',
+            resumen: 'Clases de niños, fisioterapia, nutrición o un taller suelto. Se reservan desde la app indicando quién va y se pagan por sesión en el centro, sin gastar bono.',
+            destacado: true,
+            nota: 'Un servicio está entre una clase y un producto: ocupa plaza y pasa lista como una clase, pero se cobra por sesión como una venta.',
+            media: [
+                {
+                    tipo: 'video', src: '/video/gym-servicios.mp4',
+                    poster: '/video/gym-servicios.webp', pw: 1200, ph: 675,
+                    w: 1280, h: 720,
+                    alt: 'Servicios del gimnasio en TotalGains: el socio reserva una sesión desde su app indicando los asistentes y el centro la cobra desde el panel',
+                    pie: 'El socio reserva las plazas desde su móvil; el centro las cobra en recepción y quedan en su ticket.',
+                },
+            ],
+            /* ⚠️ El bloque 2 va SIN imagen a propósito: no hay captura propia
+               de la cola de pendientes de servicios y reutilizar la de Pagos
+               sería repetir una imagen que ya usa la Tienda
+               ([[feedback_web_no_muro_de_tarjetas]]). Pedida a German. */
+            bloques: [
+                { titulo: 'Dos toques en el móvil', items: [0, 1, 2, 3, 4, 5],
+                  media: { tipo: 'video', src: '/video/gym-servicios.mp4', poster: '/video/gym-servicios.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Reserva de un servicio desde la app del socio y su cobro en el panel del gimnasio', pie: 'Elegir cuántos van, poner los nombres y reservar. El cobro ya es cosa del mostrador.' } },
+                { titulo: 'El dinero, como una venta más', items: [6, 7, 8, 9, 10, 11, 12, 13] },
+            ],
+            items: [
+                { t: 'Reserva por sesión, sin bono', d: 'El socio reserva y paga solo esa sesión. No gasta bono ni cupo semanal, no cuenta como mes pagado y no levanta un bloqueo por impago: un servicio es una compra, no una cuota.' },
+                { t: 'El precio va por asistente o por sesión', d: 'Ocho euros por niño, o un precio cerrado por plaza, con su tipo de IVA. Dos niños son dos plazas y dieciséis euros; tres, veinticuatro.' },
+                { t: 'Los nombres, al reservar', d: 'Se piden los nombres de quienes van, con la etiqueta que tú escribas: por defecto «Nombre y edad del niño». La app los recuerda para la próxima vez.' },
+                { t: 'Dos toques desde el móvil del socio', d: 'Abre la clase, pone cuántos van y reserva. Sin llamar al centro ni pasar por recepción solo para apuntarse.' },
+                { t: 'Horario fijo y aforo, como cualquier clase', d: 'Martes y jueves de 17:00 a 18:00 con doce plazas, por ejemplo, generado con el mismo motor de horarios recurrentes que el resto de tus clases.' },
+                { t: 'Está en Reservas y en la Tienda', d: 'El socio lo encuentra en su parrilla de reservas y también en Tienda → Servicios, con su foto y un «Ver horarios» que lleva directo a la semana.' },
+                { t: 'Se cobra en el centro', d: 'Desde la lista de la puerta, con un «Cobrar 16 €» por familia, o desde la cola de pendientes. Genera su ticket y entra en caja igual que cualquier venta.' },
+                { t: 'Cola de pendientes', d: 'Lo de hoy, lo de esta semana y lo atrasado, en la misma pantalla donde llevas los pedidos de la tienda. También aparece en la ficha del socio, dentro de Pagos.' },
+                { t: 'Quien cancela tarde paga, si tú quieres', d: 'Interruptor por servicio. Si lo activas, la deuda se queda cuando cancelan fuera de plazo, y el socio lo lee antes de confirmar la reserva.' },
+                { t: 'Si cancela el centro, no paga nadie', d: 'Cancelar la sesión, mover el horario o cerrar por vacaciones anula todas las deudas abiertas de esa sesión, incluida la de quien ya había cancelado tarde.' },
+                { t: 'Anular, devolver y perdonar', d: 'La venta se anula o se devuelve como cualquier otra y la deuda vuelve a pendientes. También puedes dejarla en cortesía sin cobrar, con su motivo.' },
+                { t: 'Los nombres de menores no salen del staff', d: 'No van en la línea del ticket, ni en los avisos, ni en lo que ven los demás socios. Solo aparecen en la lista de la puerta y en la cola de cobro.' },
+                { t: 'No solo niños', d: 'El mismo motor sirve para fisioterapia, nutrición, masaje o un taller suelto: cambias el precio, el aforo y la etiqueta de quién asiste.' },
+                { t: 'Permiso propio para quien cobra', d: 'Quien lleva la Tienda puede cobrar servicios sin ver el resto de los pagos del centro.' },
+            ],
+        },
+        {
             id: 'socios',
             accent: '#10b981', // clients
             nombre: 'Socios, altas y documentos',

@@ -137,6 +137,18 @@ Para gimnasios: además de lo anterior, planes, bonos y cuotas con cupo semanal 
 
 Módulo de venta al por menor dentro del panel del centro, en producción desde septiembre de 2026. Catálogo de productos con precio con IVA, tipo de IVA por producto, categorías, opciones de talla o sabor, descripción, galería de hasta tres fotos y vídeo. Venta en mostrador desde Pagos, desde la ficha del socio o desde Caja, admitiendo producto suelto, cantidad, precio pactado y método de pago (efectivo, Bizum, transferencia, TPV u otro), con ticket propio y entrada automática en caja cuando es efectivo. Pedidos desde la app del socio sin tarjeta, con aviso al gestor, código de recogida de seis caracteres, reservas que retienen stock y caducan solas, y estados de listo para recoger, cobrar y entregar o rechazar con motivo. Control de stock por variante (talla o sabor) que nunca bloquea la venta en mostrador, mínimo de aviso con notificación de reponer, entradas de proveedor con coste medio ponderado e historial con deshacer. Precio de coste privado, margen calculado sobre la base sin IVA y congelado en cada venta. Devoluciones parciales y totales que reponen stock y sacan el efectivo de la caja, con factura rectificativa cuando procede. Descuentos en porcentaje o euros con motivo obligatorio y tope por gimnasio, cliente de paso sin ser socio, ticket por email o WhatsApp, productos en oferta con fecha de fin, lista de espera de agotados, informe mensual en PDF y CSV con margen y días de stock, copiloto con IA que indica qué reponer y permiso de Tienda independiente del de Pagos. Incluido en los tres planes Gym sin coste adicional.
 
+### Servicios del gimnasio: cobrar por sesión sin bono
+
+Módulo en producción desde septiembre de 2026. Un servicio está entre una clase y un producto: ocupa plaza y pasa lista como una clase, pero se cobra por sesión como una venta. Pensado para clases de niños, fisioterapia, nutrición, masaje o talleres sueltos, es decir, para todo lo que el socio consume de forma puntual y no entra en su cuota ni en su bono.
+
+El socio reserva desde su app en dos toques: elige cuántas personas van y escribe sus nombres, con la etiqueta que haya configurado el centro (por defecto «Nombre y edad del niño»). La app recuerda esos nombres para la próxima vez. El precio se define por asistente o por sesión con su tipo de IVA, de forma que dos niños a 8 € son dos plazas y 16 €. La reserva NO gasta bono ni cupo semanal, no cuenta como mes pagado y no levanta un bloqueo por impago.
+
+Los horarios son los recurrentes de siempre, con aforo obligatorio, y el servicio aparece tanto en la parrilla de Reservas del socio como en Tienda → Servicios, con su foto y acceso directo a los horarios.
+
+El cobro se hace EN EL CENTRO, nunca dentro de la app: desde la lista de asistentes de la puerta, con un botón de cobrar por familia, o desde una cola de pendientes que separa lo de hoy, lo de esta semana y lo atrasado, y que también aparece en la ficha del socio dentro de Pagos. Genera ticket y entra en caja igual que cualquier venta, con anulación, devolución total o parcial y opción de dejarlo en cortesía con su motivo.
+
+La cancelación fuera de plazo puede cobrarse o no según un interruptor por servicio, y el socio lo lee antes de confirmar la reserva. Si quien cancela es el centro (sesión cancelada, horario movido o cierre por vacaciones), se anulan todas las deudas abiertas de esa sesión. Los nombres de menores solo los ve el personal del centro: no aparecen en la línea del ticket, ni en los avisos, ni en lo que ven los demás socios. Cobrar servicios se puede delegar en quien lleva la Tienda sin darle acceso al resto de los pagos del centro.
+
 ### Resistencia, cardio y disciplinas híbridas
 
 Bloques de resistencia dentro de la misma rutina, con kilómetros, minutos, series, descansos, ritmo objetivo y zona de pulsaciones traducida a las pulsaciones reales del atleta. Incluye disciplinas de estilo Hyrox como el empuje de carro y el paseo del granjero, con carga en kilos y récord de carga máxima. El atleta tiene una pantalla propia de resistencia con récords por disciplina (más distancia, mejor ritmo, más tiempo), totales, kilómetros por semana y medias de ritmo y pulsaciones, y el trabajo de cardio cuenta en el resumen al terminar el entreno.
@@ -559,4 +571,4 @@ documentados en el propio sitio; no son concesiones retóricas.
 
 ## Última actualización
 
-Fecha verificada: 2026-08-21. Este archivo se mantiene actualizado tras cada deploy de contenido editorial. Próxima revisión programada: tras la siguiente publicación en el blog o cambio de pricing.
+Fecha verificada: 2026-09-22. Este archivo se mantiene actualizado tras cada deploy de contenido editorial. Próxima revisión programada: tras la siguiente publicación en el blog o cambio de pricing.
