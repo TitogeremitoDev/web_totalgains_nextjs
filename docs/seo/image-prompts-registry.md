@@ -204,6 +204,20 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/gastos-deducibles-entrenador-personal-autonomo
+*Generado 2026-09-25 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `deducciones-hero.webp` | cenital 90° | dos tercios de caos + uno de orden | medium | pizarra oscura | tickets arrugados SIN texto legible + uno alisado bajo la luz | direccional dura sobre el alisado | lo que decides guardar |
+| `deducciones-manutencion.webp` | macro a ras de mesa | tercio derecho | macro | mesa de mármol de cafetería | tarjeta sobre la cuenta en un platillo, taza vacía desenfocada | ventana rasante desde la izquierda | el detalle que decide |
+| `deducciones-ropa.webp` | eye-level bajo | centrada | medium | entrada de una casa | zapatillas usadas y toalla en el suelo de madera | tarde cálida por una puerta lateral | esto es tuyo, no de tu trabajo |
+| `deducciones-serie.webp` | 3/4 mirando dentro del cajón | fila en fuga con un hueco | macro | archivador metálico | carpetas con pestañas EN BLANCO y un vacío en mitad | cenital dura desde la derecha | el agujero que hay que explicar |
+
+**Notas:** cuarta vez que funciona el truco de pedir el soporte **en blanco** (tickets sin texto, pestañas sin rotular). Con documentos es todavía más necesario que con pantallas, porque el modelo tiende a rellenar papeles con números inventados. Los cuatro conceptos son nuevos; el del cajón con un hueco vale para cualquier pieza sobre trazabilidad o registros incompletos.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -275,6 +289,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-09-25** — Añadido `blog/gastos-deducibles-entrenador-personal-autonomo` (4 imágenes, conceptos nuevos).
 
 **2026-09-18** — Añadido `blog/mensajes-para-conseguir-clientes-entrenador` (4 imágenes, todas conceptos nuevos). El pool original sigue con 4, 7, 10, 11, 13 y 15 sin usar.
 
