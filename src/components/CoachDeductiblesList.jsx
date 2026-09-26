@@ -1,4 +1,4 @@
-import { Check, X, FileText } from "lucide-react";
+import { Check, X, FileText, Swords, AlertTriangle } from "lucide-react";
 
 /**
  * CoachDeductiblesList — Lo que un entrenador autonomo SI puede deducir, con lo
@@ -22,12 +22,26 @@ const deducibles = [
   { gasto: "Publicidad y promoción", justifica: "Factura de la plataforma. Los anuncios de redes entran." },
 ];
 
+const ring = [
+  {
+    gasto: "El coche",
+    matiz: "Tu gestora te dirá que depende de la actividad y de que puedas demostrarlo. Es de los gastos que más paralelas provoca, así que aquí no te fíes de ningún blog: métete en el ring con tu asesor y que decida quien firma.",
+  },
+  {
+    gasto: "Ropa deportiva PERSONALIZADA",
+    matiz: "Unas mallas con tu marca sí pueden contar como uniforme de trabajo en determinadas actividades. Las mismas mallas sin personalizar, no. La diferencia es literalmente el logo.",
+  },
+  {
+    gasto: "Suplementos para VENDER",
+    matiz: "Si los compras para revenderlos, no es consumo: es mercancía. Pero implica dar de alta un epígrafe nuevo y ahí aparece la prorrata de IVA. Ver el aviso de abajo antes de hacer nada.",
+  },
+];
+
 const rechazados = [
-  { gasto: "La ropa deportiva que usas a diario", porque: "No es uniforme. Para que cuele tendría que ser ropa con tu marca y no servir para uso particular." },
+  { gasto: "La ropa deportiva SIN personalizar", porque: "Si te la puedes poner el domingo, es tuya y no de tu actividad. Personalizada es otra historia, y está arriba." },
   { gasto: "Tu cuota del gimnasio donde entrenas tú", porque: "Es tu ocio o tu formación personal, no un gasto de tu actividad. Otra cosa es alquilar una sala para atender clientes." },
-  { gasto: "El coche, sin afectación exclusiva", porque: "En IRPF el vehículo solo se deduce si está afecto en exclusiva a la actividad. Usarlo también para lo tuyo lo tumba entero." },
-  { gasto: "Comidas con «clientes potenciales»", porque: "Sin justificar quién, cuándo y para qué, es una comida tuya. Y en efectivo no se sostiene ni justificándola." },
-  { gasto: "Los suplementos que te tomas tú", porque: "Es consumo propio. Que te ayuden a rendir en tu trabajo no los convierte en gasto de la actividad." },
+  { gasto: "Comidas con «clientes potenciales» sin justificar", porque: "Sin quién, cuándo y para qué, es una comida tuya. Y pagada en efectivo no se sostiene ni justificándola." },
+  { gasto: "Los suplementos que te tomas tú", porque: "Consumo propio. Que te ayuden a rendir en tu trabajo no los convierte en gasto de la actividad. Comprarlos para venderlos es otra cosa, y está arriba." },
 ];
 
 export default function CoachDeductiblesList() {
@@ -71,11 +85,50 @@ export default function CoachDeductiblesList() {
         ))}
       </div>
 
-      <h4 style={{ margin: "0 0 4px", fontSize: "1.05rem", fontWeight: 800, color: "#ef4444", textAlign: "center" }}>
-        Y las 5 que te van a tumbar
+      <h4 style={{ margin: "0 0 4px", fontSize: "1.05rem", fontWeight: 800, color: "#eab308", textAlign: "center" }}>
+        🥊 Y las 3 en las que te toca meterte en el ring
       </h4>
       <p style={{ margin: "0 0 16px", textAlign: "center", fontSize: "0.83rem", color: "var(--text-secondary,#aaa)", lineHeight: 1.5 }}>
-        Estas se deducen mucho y se caen en cuanto alguien las mira.
+        Estas no son ni un sí ni un no. Son un «depende», y el depende lo firma tu gestor, no un artículo de internet.
+      </p>
+
+      {ring.map((r, i) => (
+        <div
+          key={i}
+          style={{
+            display: "flex", gap: 11, alignItems: "flex-start",
+            padding: "13px 15px", marginBottom: 8,
+            background: "rgba(234,179,8,0.09)",
+            border: "1px solid rgba(234,179,8,0.32)",
+            borderRadius: 10,
+          }}
+        >
+          <Swords size={16} style={{ color: "#eab308", flexShrink: 0, marginTop: 3 }} />
+          <div style={{ minWidth: 0 }}>
+            <p style={{ margin: 0, fontSize: "0.92rem", fontWeight: 700, color: "var(--text-primary,#e8e8e8)", lineHeight: 1.4 }}>{r.gasto}</p>
+            <p style={{ margin: "3px 0 0", fontSize: "0.82rem", color: "var(--text-secondary,#aaa)", lineHeight: 1.55 }}>{r.matiz}</p>
+          </div>
+        </div>
+      ))}
+
+      <div
+        style={{
+          margin: "16px 0 24px", padding: "14px 16px",
+          background: "rgba(239,68,68,0.10)", border: "1px solid rgba(239,68,68,0.38)", borderRadius: 12,
+          display: "flex", gap: 11, alignItems: "flex-start",
+        }}
+      >
+        <AlertTriangle size={17} style={{ color: "#ef4444", flexShrink: 0, marginTop: 2 }} />
+        <p style={{ margin: 0, fontSize: "0.86rem", color: "var(--text-secondary,#bbb)", lineHeight: 1.6 }}>
+          <strong style={{ color: "#ef4444" }}>Aviso de la prorrata:</strong> vender suplementos te obliga a dar de alta una actividad nueva, y al mezclar una actividad exenta de IVA con otra sujeta puede activarse la <strong style={{ color: "var(--text-primary,#ddd)" }}>regla de prorrata</strong> (artículos 102 a 106 de la Ley del IVA). Eso cambia cuánto IVA puedes deducirte <em>de todo lo demás</em>, no solo de los botes. Es de las decisiones que se consultan ANTES, no después.
+        </p>
+      </div>
+
+      <h4 style={{ margin: "0 0 4px", fontSize: "1.05rem", fontWeight: 800, color: "#ef4444", textAlign: "center" }}>
+        Y las 4 que te van a tumbar
+      </h4>
+      <p style={{ margin: "0 0 16px", textAlign: "center", fontSize: "0.83rem", color: "var(--text-secondary,#aaa)", lineHeight: 1.5 }}>
+        Estas sí se deducen mucho y se caen en cuanto alguien las mira.
       </p>
 
       {rechazados.map((r, i) => (
@@ -98,7 +151,7 @@ export default function CoachDeductiblesList() {
       ))}
 
       <p style={{ marginTop: 18, textAlign: "center", fontSize: "0.8rem", color: "var(--text-secondary,#aaa)", lineHeight: 1.55, fontStyle: "italic" }}>
-        Las cinco de abajo comparten el mismo fallo: son gastos que también te sirven en tu vida privada. Ese es el filtro que aplica Hacienda, y el que conviene aplicarte tú antes.
+        Las cuatro de abajo comparten el mismo fallo: son gastos que también te sirven en tu vida privada. Ese es el filtro que aplica Hacienda, y el que conviene aplicarte tú antes. Las del ring fallan por otro motivo: no están mal, están sin demostrar.
       </p>
     </section>
   );

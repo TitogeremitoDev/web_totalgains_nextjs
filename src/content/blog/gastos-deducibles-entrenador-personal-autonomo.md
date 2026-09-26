@@ -3,7 +3,7 @@ title: "Lo que te puedes desgravar como entrenador personal (y las 5 cosas que H
 seoTitle: "Gastos deducibles entrenador personal autónomo: guía 2026"
 description: "Qué puede desgravar un entrenador personal autónomo en España, cómo justificar cada gasto y los 5 que Hacienda rechaza aunque te los hayan contado."
 date: "2026-09-25"
-lastModified: "2026-09-25"
+lastModified: "2026-09-26"
 category: "negocio"
 author: "Germán Martínez Calvente"
 readTime: 12
@@ -21,7 +21,11 @@ faqs:
   - q: "¿Qué gastos puede desgravar un entrenador personal autónomo?"
     a: "Los que estén vinculados a la actividad, justificados con factura y anotados en tus libros. En este oficio los más habituales son la cuota de autónomos íntegra, el software de gestión de clientes, el seguro de responsabilidad civil, la formación del sector, el material que usas con clientes, la gestoría, el teléfono e Internet, la publicidad, y los suministros de la vivienda si trabajas desde casa y lo has declarado. El requisito que más deducciones tumba no es el derecho a deducir: es no tener la factura a nombre fiscal correcto."
   - q: "¿Puedo desgravar la ropa deportiva que uso para entrenar a mis clientes?"
-    a: "En general no. Hacienda solo admite el vestuario cuando es específico de la actividad y no sirve para uso particular, como un uniforme con la marca del negocio. Unas mallas o unas zapatillas que también puedes usar el domingo se consideran gasto personal, por mucho que las lleves trabajando. Es una de las deducciones que más se aplica y que más se cae en cuanto alguien la revisa."
+    a: "Depende de si está personalizada. La ropa deportiva corriente no se admite, porque también sirve para uso particular. Pero unas mallas o una camiseta con tu marca sí pueden contar como uniforme de trabajo en determinadas actividades, precisamente porque dejan de servirte fuera del trabajo. La diferencia entre deducir y no deducir es literalmente el logo."
+  - q: "¿Puedo deducir el coche como entrenador personal?"
+    a: "Es la pregunta que más discusiones genera y la que más comprobaciones de Hacienda provoca. Depende de la actividad concreta y de que puedas demostrar el uso, así que no es un sí ni un no de manual: es un caso que hay que defender con datos. Lo sensato es hablarlo con tu asesor antes de deducirlo, porque quien firma la declaración es quien responde si llega una paralela."
+  - q: "¿Puedo deducir los suplementos si los vendo a mis clientes?"
+    a: "Si los compras para revenderlos ya no son consumo propio sino mercancía, y ahí el planteamiento cambia. Pero vender implica dar de alta un epígrafe nuevo, y al combinar una actividad exenta de IVA con otra sujeta puede activarse la regla de prorrata que regulan los artículos 102 a 106 de la Ley del IVA. Eso afecta a cuánto IVA puedes deducirte de todo lo demás, no solo de los suplementos. Es una decisión que conviene consultar antes de tomarla."
   - q: "¿Puedo deducir mi cuota del gimnasio si soy entrenador personal?"
     a: "No, si es el gimnasio donde entrenas tú. Se considera gasto personal aunque te sirva profesionalmente, porque el criterio es si el gasto también te beneficia en tu vida privada. Distinto es alquilar una sala o un espacio para atender a clientes: eso sí es un gasto de la actividad y se deduce con su factura."
   - q: "¿Cómo se deducen la luz y el Internet si trabajo desde casa?"
@@ -42,7 +46,7 @@ Lo curioso es que suele fallar en las dos direcciones. Se deduce cosas que no pu
 
 Este artículo es la lista de ambas, con lo que hace falta para justificar cada una. No son trucos ni atajos creativos: **son las reglas, con la norma donde están escritas**, para que puedas comprobarlas tú o llevárselas a tu asesor.
 
-Con una advertencia por delante, que además es el motivo de que esto esté bien hecho: **no soy asesor fiscal y esto no sustituye a uno**. Lo que sí he hecho es ir a la ley en vez de copiar lo que dicen otros blogs.
+Con una advertencia por delante, que además es el motivo de que esto esté bien hecho: **no soy asesor fiscal y esto no sustituye a uno**. Lo que sí he hecho es ir a la ley en vez de copiar lo que dicen otros blogs, y pasarle el borrador a una asesora fiscal en ejercicio, que me corrigió dos cosas que yo daba por cerradas. Están corregidas abajo y son justo las más jugosas.
 
 ## La lista, con lo que hace falta para cada una
 
@@ -80,17 +84,37 @@ Es la regla más fácil de cumplir de todo el artículo y la que más dinero se 
 
 ![Tarjeta bancaria apoyada sobre una cuenta doblada en un platillo de cerámica, junto a una taza de café vacía, en una mesa de mármol](/images/blog/deducciones-manutencion.webp "La diferencia entre deducir la comida y no deducirla cabe en cómo la pagas")
 
-## Las 5 que te van a tumbar
+## Las que te tumban, y las que son una pelea
 
-Están en el bloque rojo de arriba, pero merecen una explicación porque son las que más duelen.
+Aquí hay que distinguir tres cosas, porque meterlas en el mismo saco es lo que hace que la gente o se pase o se quede corta.
 
-Las cinco comparten exactamente el mismo fallo: **son gastos que también te sirven en tu vida privada**. Ese es el filtro que aplica Hacienda y conviene aplicártelo tú antes.
+**Las que se caen solas** comparten todas el mismo fallo: son gastos que **también te sirven en tu vida privada**. Ese es el filtro que aplica Hacienda y conviene aplicártelo tú antes. El gimnasio donde entrenas tú te sirve a ti. Los suplementos te los tomas tú. Las mallas sin personalizar te valen el domingo.
 
-Las mallas que te pones para trabajar te valen el domingo. El gimnasio donde entrenas tú te sirve a ti. El coche te lleva a ver clientes y también a casa de tu madre. Los suplementos te los tomas tú.
+![Zapatillas de correr usadas y una toalla doblada en el suelo de madera de la entrada de una casa, con luz de tarde](/images/blog/deducciones-ropa.webp "Si te las puedes poner el domingo, son tuyas y no de tu actividad. Salvo que lleven tu marca")
 
-Da igual lo relacionadas que estén con tu profesión: si te sirven fuera de ella, no son gasto de la actividad. Y la excepción que confirma la regla es la que te da la pista: la ropa **con tu marca** que no usarías en la calle sí puede colar, porque ya no te vale para uso particular.
+**Y luego están las que son un «depende»**, que no es lo mismo. No están prohibidas: están **sin demostrar**. Y ahí el artículo de internet no decide nada.
 
-![Zapatillas de correr usadas y una toalla doblada en el suelo de madera de la entrada de una casa, con luz de tarde](/images/blog/deducciones-ropa.webp "Si te las puedes poner el domingo, Hacienda las considera tuyas y no de tu actividad")
+### El coche: métete en el ring con tu gestor
+
+Este es el campeón absoluto de las paralelas. Se puede deducir según la actividad y según lo que puedas demostrar, y esa frase tan corta esconde una discusión larga que depende de tu caso concreto.
+
+Así que aquí no te voy a dar una regla, te voy a dar un consejo: **ponte los guantes y métete en el ring con tu asesor**. Que decida quien firma, que es quien responde si llega la carta.
+
+### Las mallas, si llevan tu marca, cambian de bando
+
+Un matiz que importa y que mucha gente no aprovecha: **la ropa personalizada sí puede contar como uniforme de trabajo** en determinadas actividades. Unas mallas con tu logo no son las mismas mallas que unas de tienda.
+
+La diferencia entre deducir y no deducir es, literalmente, el bordado.
+
+### Los suplementos: consumo no, mercancía sí (con aviso)
+
+Los que te tomas tú no se deducen. Pero si los **compras para venderlos**, ya no son consumo: son mercancía, y eso cambia el planteamiento entero.
+
+Ahora bien, vender implica **dar de alta un epígrafe nuevo**, y ahí aparece algo que casi nadie te cuenta antes: al mezclar una actividad exenta de IVA con otra sujeta puede activarse la **regla de prorrata** ([artículos 102 a 106 de la Ley del IVA](https://www.boe.es/buscar/act.php?id=BOE-A-1992-28740)). Eso no afecta solo a los botes: cambia **cuánto IVA puedes deducirte de todo lo demás**.
+
+Es exactamente el tipo de decisión que se consulta antes de tomarla, no después de haberla tomado.
+
+Lo mismo aplica a la publicidad: los anuncios de redes sociales son gasto de la actividad como cualquier otro, y si además vendes producto, entran en el mismo replanteamiento.
 
 ## La otra mitad del asunto, que es la que pilla a la gente
 
@@ -110,7 +134,7 @@ Y sí: **el software de gestión es un gasto deducible más**. Aparece en la lis
 
 Tres cosas concretas, por orden de lo que más dinero te devuelve:
 
-**Primero, revisa el 036.** Si trabajas desde casa y no has declarado la afectación parcial de la vivienda, no estás deduciendo suministros. Es el trámite que más deducción desbloquea de golpe.
+**Primero, revisa el 036.** Dos cosas a la vez: si puedes deducirte la proporción de los gastos de tu casa, y **si deberías dar de alta alguna actividad nueva**. Lo segundo pilla a mucha gente que ya está vendiendo algo sin haberlo declarado.
 
 **Segundo, cambia cómo pagas las comidas de trabajo.** Tarjeta siempre. Es gratis hacerlo bien y es la regla que más se incumple.
 
@@ -126,7 +150,11 @@ Cuota íntegra, software, seguro de responsabilidad civil, formación del sector
 
 ### ¿Puedo desgravar la ropa deportiva?
 
-En general no. Solo el vestuario específico que no sirva para uso particular, como ropa con tu marca. Unas mallas que también usas el domingo son gasto personal.
+Sin personalizar, no. **Con tu marca, sí puede contar como uniforme** en determinadas actividades, porque deja de servirte fuera del trabajo.
+
+### ¿Y el coche?
+
+Depende de la actividad y de que lo demuestres. Es lo que más comprobaciones provoca, así que esa conversación es con tu asesor, no con un artículo.
 
 ### ¿Y mi cuota del gimnasio?
 
