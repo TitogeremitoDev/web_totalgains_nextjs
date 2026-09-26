@@ -253,7 +253,7 @@ const gimnasios = {
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
-                { titulo: 'Cobrar', items: [0, 1, 2, 4, 5, 9, 10, 11],
+                { titulo: 'Cobrar', items: [0, 1, 12, 2, 4, 5, 9, 10, 11],
                   media: { tipo: 'imagen', src: '/images/gym/pagos-1760.webp', w: 1760, h: 995, alt: 'Control de pagos del gimnasio con el estado de cada cuota', pie: 'Quién está al día, quién renueva pronto y quién no.' } },
                 { titulo: 'Facturar', items: [3, 6, 7, 8],
                   media: { tipo: 'imagen', src: '/images/gym/facturacion-1910.webp', w: 1910, h: 956, alt: 'Pantalla de facturación del centro', pie: 'Las facturas emitidas, con su serie, su fecha y su IVA.' } },
@@ -271,6 +271,12 @@ const gimnasios = {
                   { t: 'Suscripciones que pausas y reactivas', d: 'Cada cuota recurrente se puede pausar, reactivar o cancelar, y ves lo previsto del mes antes de que llegue.' },
                   { t: 'Cuotas domiciliadas que se registran solas', d: 'El sistema registra el cobro del mes de las cuotas domiciliadas y tú lo verificas contra tu banco. Si el banco devuelve un recibo lo marcas y la cuota se pausa sola. TotalGains no se conecta a tu banco ni mueve dinero.' },
                   { t: 'Copiloto de caja con IA', d: 'Le preguntas «¿cómo van las domiciliaciones?», «¿qué bonos expiran?» o «¿quién tiene riesgo de baja?» y te contesta con los datos de tu centro.' },
+                /* ⚠️ Índice 12, AÑADIDO AL FINAL (el bloque «Cobrar» apunta por
+                   índice). Verificado el 26-sep-2026 contra gymRenewal.js y la vista
+                   corta de GymPaymentModal: PRICE_CHANGED, «Hoy ya le has cobrado»,
+                   sin botón en domiciliados. «lo registras» es literal: TotalGains
+                   NO mueve dinero, registra la venta que ha cobrado el centro. */
+                { t: 'Renovar un bono en dos toques', d: 'Desde Pagos o desde la ficha del socio, «Renovar bono» te enseña el plan, lo que se va a cobrar y desde qué día vale, y lo registras eligiendo cómo ha pagado. Si el precio del plan ha cambiado te lo avisa, y si hoy ya le habías cobrado te para antes de duplicarlo. No aparece en las cuotas domiciliadas, que ya se registran solas.' },
             ],
         },
         {
@@ -414,6 +420,17 @@ const gimnasios = {
         {
             q: '¿Cuánto se tarda en tener el centro funcionando?',
             a: 'Una configuración base completa, con socios cargados, horarios, planes, documentos y branding, suele estar lista en tres a cinco días. La migración desde tu plataforma actual está incluida.',
+        },
+        /* ⚠️ Salen como schema FAQPage. La de Servicios faltaba desde el 22-sep:
+           el área existía pero ninguna pregunta la nombraba, así que no llegaba
+           al JSON-LD. «Se paga en el centro» es literal: no hay pago in-app. */
+        {
+            q: '¿Se pueden cobrar clases sueltas sin bono, como una clase de niños o una sesión de fisioterapia?',
+            a: 'Sí, con los Servicios. Creas un servicio con su precio (por ejemplo, 8 € por niño), su horario y su aforo, y el socio lo reserva desde su app indicando cuántos van y sus nombres, sin gastar bono. Se paga en el centro: lo cobras desde la lista de la puerta o desde la cola de pendientes, y genera su ticket. Si eres tú quien cancela la sesión, no paga nadie.',
+        },
+        {
+            q: '¿Se puede renovar un bono rápido desde recepción?',
+            a: 'Sí. «Renovar bono» está en Pagos y en la ficha del socio: te enseña el plan, lo que se va a cobrar y desde qué día vale, eliges cómo ha pagado y queda registrado. Te avisa si el precio del plan ha cambiado y te frena si hoy ya le habías cobrado.',
         },
     ],
 };

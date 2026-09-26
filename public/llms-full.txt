@@ -111,6 +111,18 @@ Crea planes nutricionales con macros y kcal calculados automáticamente desde la
 
 El entrenador tiene su propio catálogo de suplementos: cada uno se guarda una vez con su marca, su foto, su dosis y su formato habituales, el enlace donde quiere que lo compren y su código de descuento. Con esos suplementos monta protocolos reutilizables (packs como «Mujer · energía y ciclo» o «Salud articular») que asigna a varios atletas de un toque, y también los coloca dentro del plan de nutrición, en la comida que les toca: no hay un documento de suplementación aparte. El atleta ve en su app la pauta del día ordenada por momentos (desayuno, comida, recena, pre-entreno y post-entreno), los días que le quedan de cada bote calculados con el tamaño del envase y su consumo diario, un aviso antes de quedarse a cero, y una lista de compra donde compra con el enlace y el código de su entrenador. El entrenador ve, producto a producto, cuántas veces se ha abierto su enlace, cuántas se ha copiado su código y cuántas compras se han marcado como hechas, un dato que usa para negociar con las marcas. TotalGains no cobra ni gestiona esas compras: solo registra lo que ocurre con el enlace y el código.
 
+### Dietas para situaciones de salud y tipos de alimentación
+
+Al generar una dieta con IA, el profesional puede marcar la situación de salud de su cliente y la IA la tiene en cuenta. Hay nueve: hipotiroidismo, SOP o resistencia a la insulina, diabetes, amenorrea, hipertensión, colesterol alto, reflujo, embarazo y menopausia. Es ayuda activa para el profesional, no pauta clínica.
+
+Cada situación actúa por tres vías. Lo que no debe llevar el plan se retira, por el mismo mecanismo que las alergias, en lugar de quedarse en un aviso. Lo discutible se señala como aviso para que el profesional decida. Y lo que se puede medir se comprueba en código, como el reparto de hidratos entre comidas o la proteína de cada comida. En cada caso la herramienta explica qué intenta hacer, qué no puede comprobar (por ejemplo, el sodio real del día o la medicación que toma el paciente) y recuerda que la última palabra la tiene su especialista: endocrino, ginecólogo o digestivo, según el caso. Una dieta ya hecha también se puede adaptar a una situación con una frase. El cliente final no ve ninguna de estas indicaciones. Cuando hay una situación de salud marcada, el nombre del plan se sustituye por uno genérico antes de enviarlo a la IA, para no mandar juntos un dato de salud y el nombre de la persona.
+
+El tipo de alimentación se elige aparte: vegana, vegetariana, pescetariana o sin cerdo. Lo que no encaja se retira del plan por el mismo camino que las alergias.
+
+### Recetas ordenadas por la comida en la que se ponen
+
+Al añadir algo a una comida del plan, las recetas salen ordenadas por lo que ese profesional más pone en esa comida, con el número de veces que la ha usado. El orden se aprende de sus propios planes, sin que tenga que etiquetar nada, y el filtro por comida busca en todas sus recetas, no solo en las que ya se habían cargado en pantalla. Cuando la IA rellena una comida con recetas, también elige primero las que ese profesional pone ahí.
+
 ### Base de +240.000 alimentos en español
 
 La base nutricional más completa del mercado hispanohablante. Incluye productos de supermercado, marcas locales españolas y latinoamericanas, ingredientes frescos con macros validados. Cada alimento tiene macros, kcal, fibra, sodio y referencia de fuente cuando aplica.
@@ -161,6 +173,14 @@ Módulo para atletas que menstrúan, integrado con el entrenamiento y la nutrici
 
 Repeticiones en recámara (RIR) por serie integradas en el editor del coach, en la pantalla de entreno del atleta y en sus estadísticas. Biseries y superseries en una sola tarjeta, con el temporizador de descanso corriendo al apuntar las repeticiones. Descansos que impone el entrenador por ejercicio y arrancan solos en el móvil del atleta. Peso orientativo al estrenar un ejercicio, calculado con el historial del propio atleta. Cambio de ejercicio por parte del atleta sin contaminar su histórico, sus récords ni el cómputo de carga alta del ejercicio original.
 
+### Mantener los pesos al cambiar de rutina
+
+Al asignar una rutina nueva, cada ejercicio que el atleta ya hacía arranca con los kilos y las repeticiones de su última sesión de ese ejercicio, serie a serie, venga de la rutina que venga. No hay estimaciones ni subidas automáticas: aparece el número que movió y el entrenador decide si lo sube. Si una serie no existió o se la saltó, se queda vacía. La opción viene marcada de fábrica al asignar, también en la asignación en bloque y en los programas programados; si se desmarca, vuelve el peso orientativo estimado a partir de su historial.
+
+### Fotos propias de los ejercicios
+
+Además del buscador de imágenes, el entrenador puede subir la foto de un ejercicio desde la galería o hacerla con la cámara del móvil, y queda marcada como suya. Acepta las fotos del iPhone tal cual y la app las reduce antes de subirlas.
+
 ### Creación por lenguaje natural y dictado
 
 Rutinas, dietas y programas completos se pueden montar escribiendo una frase o dictándola por voz: el texto rellena el formulario, que el profesional revisa antes de aplicar. También se puede editar una dieta ya asignada con una frase del tipo "mete una comida más manteniendo las calorías", sin rehacer el plan a mano.
@@ -168,6 +188,10 @@ Rutinas, dietas y programas completos se pueden montar escribiendo una frase o d
 ### Sistema de control preventivo con IA (Copiloto de Retención)
 
 Detecta señales tempranas de baja silenciosa: caída de adherencia a entreno, pérdida de check-ins, no respuesta a mensajes, no consumo de clases reservadas. Genera lista priorizada de clientes en riesgo con scoring 0-100, los hechos que lo explican (días sin abrir la app, sin entrenar teniendo rutina, semanal en rojo, ánimo bajo, molestias, mensajes sin responder) y acción sugerida (mensaje, llamada, cambio de plan). Incluido en todos los planes, como el resto de funciones.
+
+### Renovar un bono en dos toques
+
+En gimnasios, «Renovar bono» está en Pagos y en la ficha del socio. Enseña el plan, lo que se va a cobrar y desde qué día vale (desde hoy, o al terminar el bono actual si aún está vigente), y el gestor lo registra eligiendo cómo ha pagado el socio. Si el precio del plan ha cambiado lo avisa, y si ese mismo día ya se le había cobrado, frena antes de duplicarlo. No aparece en las cuotas domiciliadas, que se registran solas. Como el resto de cobros, TotalGains registra la venta que ha cobrado el centro: no mueve dinero.
 
 ### Sistema de control de pagos
 

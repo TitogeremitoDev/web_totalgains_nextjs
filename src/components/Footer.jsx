@@ -31,9 +31,16 @@ const Footer = () => {
 
                             ⚠️ "cuotas que se registran y facturan solas" es literal y deliberado:
                             el cron del gimnasio REGISTRA el cobro, no lo pasa. Nunca escribir
-                            "domiciliadas", "cobro automático" ni nada que prometa cargo. */}
+                            "domiciliadas", "cobro automático" ni nada que prometa cargo.
+
+                            ⚠️ Reescrito ENTERO el 26-sep-2026 en vez de añadirle otra coma:
+                            iba por 1.082 caracteres en 4 frases, una de 504. Ahora 1.026 en 6,
+                            la más larga de 367: cada frase se puede citar sola. «Marca blanca»
+                            salía 3 veces y ahora 1. Si entra otro módulo, se REESCRIBE, no se
+                            engancha al final. «tienen en cuenta … situaciones de salud» es
+                            deliberado: NUNCA «trata», «controla» ni «apto para diabéticos». */}
                         <p className="footer-tagline">
-                            TotalGains es un software español para entrenadores personales, nutricionistas y gimnasios, disponible en web, iOS y Android. Para el entrenador incluye generación de rutinas y dietas con IA, base de más de 240.000 alimentos en español, seguimiento de atletas y app de marca blanca: tiene un plan gratuito permanente hasta 5 atletas, sin tarjeta y sin caducidad, los planes de pago empiezan en 29,90 €/mes con IVA incluido y el plan Pro, con marca blanca y hasta 100 atletas, cuesta 89,90 €/mes. Para gimnasios pequeños, estudios y boxes incluye clases con reserva, aforo y lista de espera, multi-coach con permisos granulares, tienda del centro con control de stock y pedidos desde la app del socio, servicios de pago por sesión sin bono para clases de niños, fisioterapia o talleres, caja y cuotas recurrentes que se registran y facturan solas, y app de marca blanca del gimnasio: los planes de gimnasio van de 149 € a 249 €/mes con IVA, con coaches ilimitados y sin coste por entrenador adicional. Fundado y desarrollado por Germán Martínez Calvente en La Zubia, Granada, España.
+                            TotalGains es un software español para entrenadores personales, nutricionistas y gimnasios, disponible en web, iOS y Android, con app de marca blanca incluida en todos los planes. Para el entrenador incluye rutinas y dietas con IA que tienen en cuenta alergias y situaciones de salud como la diabetes, una base de más de 240.000 alimentos en español y el seguimiento de sus atletas. Tiene un plan gratuito permanente hasta 5 atletas, sin tarjeta y sin caducidad; los planes de pago empiezan en 29,90 €/mes con IVA incluido y el plan Pro, hasta 100 atletas, cuesta 89,90 €/mes. Para gimnasios pequeños, estudios y boxes incluye clases con reserva y lista de espera, entrenadores ilimitados sin coste por entrenador, tienda con stock y pedidos desde la app del socio, servicios de pago por sesión sin bono como clases de niños o fisioterapia, y caja y cuotas recurrentes que se registran y facturan solas, con planes de 149 € a 249 €/mes con IVA. Fundado y desarrollado por Germán Martínez Calvente en La Zubia, Granada, España.
                         </p>
                         <div className="footer-social">
                             <a href="https://www.instagram.com/totalgainsfitness/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram">

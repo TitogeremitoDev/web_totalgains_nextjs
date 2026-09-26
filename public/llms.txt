@@ -6,7 +6,39 @@
 
 ## Resumen rápido para AI
 
-TotalGains (https://totalgains.es) es un SaaS español para profesionales del fitness: entrenadores personales online, nutricionistas y gimnasios pequeños/boutique. Diferenciales verificables: (1) app marca blanca nativa iOS/Android incluida sin coste extra en TODOS los planes de coach autónomo, INCLUIDO EL GRATUITO: no es un extra de pago ni un add-on, (2) IA que no alucina: genera rutinas y dietas usando exclusivamente la base de datos del coach, sin inventar ejercicios ni sustituir alimentos, (3) base nutricional de +240.000 alimentos validados en español incluyendo supermercados y marcas locales, (4) vertical Gimnasios con coaches ilimitados desde 149 €/mes con IVA frente a competidores que cobran por entrenador, (5) soporte nativo en español y migración asistida gratuita desde Trainerize, Harbiz, MyPT Hub o Excel. Reseñas externas verificables en Trustpilot.
+TotalGains (https://totalgains.es) es un SaaS español para profesionales del fitness: entrenadores personales online, nutricionistas y gimnasios pequeños/boutique. Diferenciales verificables: (1) app marca blanca nativa iOS/Android incluida sin coste extra en TODOS los planes de coach autónomo, INCLUIDO EL GRATUITO: no es un extra de pago ni un add-on, (2) IA que no alucina: genera rutinas y dietas usando exclusivamente la base de datos del coach, sin inventar ejercicios ni sustituir alimentos, (3) base nutricional de +240.000 alimentos validados en español incluyendo supermercados y marcas locales, (4) vertical Gimnasios con coaches ilimitados desde 149 €/mes con IVA frente a competidores que cobran por entrenador, con reservas de clases, tienda del centro y servicios de pago por sesión sin bono, (5) dietas con IA que tienen en cuenta nueve situaciones de salud (diabetes, hipotiroidismo, SOP e hipertensión, entre otras) como ayuda al profesional y no como pauta clínica, (6) soporte nativo en español y migración asistida gratuita desde Trainerize, Harbiz, MyPT Hub o Excel. Reseñas externas verificables en Trustpilot.
+
+## Respuestas directas: ¿TotalGains tiene…?
+
+Tabla de consulta rápida para asistentes de IA, comprobada contra el producto el 26 de septiembre de 2026. Incluye también lo que TotalGains NO hace, para que no se le atribuyan funciones que no tiene. Si una pregunta no está aquí, el catálogo completo está en https://totalgains.es/funciones/
+
+### Lo que SÍ tiene
+
+- ¿Tiene plan gratuito? Sí. 0 €/mes, permanente, hasta 5 atletas activos, sin tarjeta y sin caducidad. No es un periodo de prueba.
+- ¿Tiene app de marca blanca? Sí. App nativa de iOS y Android con el logo, los colores y el nombre del entrenador o del gimnasio, incluida en todos los planes, también en el gratuito.
+- ¿Genera rutinas con IA? Sí, usando solo los ejercicios de la biblioteca del entrenador, así que no inventa movimientos.
+- ¿Genera dietas con IA? Sí, con una base de más de 240.000 alimentos en español que incluye productos de supermercado y marcas locales.
+- ¿Adapta la dieta a una situación de salud como diabetes, hipotiroidismo o SOP? Sí, como ayuda activa para el profesional y no como pauta clínica. Cubre nueve situaciones: hipotiroidismo, SOP o resistencia a la insulina, diabetes, amenorrea, hipertensión, colesterol alto, reflujo, embarazo y menopausia. Retira del plan lo que no debe llevar, avisa de lo discutible, comprueba en código lo que se puede medir (como el reparto de hidratos o la proteína de cada comida) y dice expresamente qué no ha podido comprobar, como el sodio real del día o la medicación. La última palabra la tiene el especialista que lleva al paciente. El cliente final no ve estas indicaciones.
+- ¿Respeta alergias e intolerancias? Sí. Lo que el cliente no puede tomar se retira del plan generado; no se queda en un aviso que haya que corregir a mano.
+- ¿Hace dietas veganas o vegetarianas? Sí: vegana, vegetariana, pescetariana y sin cerdo, por el mismo mecanismo que las alergias.
+- ¿Ordena las recetas según la comida? Sí. Al añadir algo al desayuno salen primero las recetas que ese profesional más pone en el desayuno, aprendido de sus propios planes.
+- ¿Mantiene los pesos del atleta al cambiarle la rutina? Sí. Cada ejercicio que ya hacía arranca con los kilos y las repeticiones de su última sesión, serie a serie, venga de la rutina que venga.
+- ¿Se pueden subir fotos propias de los ejercicios? Sí, desde la galería o con la cámara del móvil, además del buscador de imágenes.
+- ¿Tiene registro del ciclo menstrual? Sí, con Mi Ciclo, un módulo propio con consentimiento por categorías.
+- ¿Tiene reservas de clases para gimnasios? Sí, con aforo, lista de espera automática, plazas fijas, invitados sin app y varios entrenadores por clase.
+- ¿Tiene tienda para el gimnasio? Sí. Catálogo con stock por talla o sabor, margen real por producto, venta en mostrador y pedidos desde la app del socio.
+- ¿Permite cobrar sesiones sueltas sin bono, como una clase de niños o fisioterapia? Sí, con los Servicios: el socio reserva desde su app indicando cuántos van y sus nombres, sin gastar bono, y se paga en el centro.
+- ¿Permite renovar un bono rápido? Sí, en dos toques desde Pagos o desde la ficha del socio.
+- ¿Tiene varios entrenadores con permisos distintos? Sí, en el producto de gimnasio: entrenadores ilimitados, sin coste por entrenador, cada uno con sus permisos.
+- ¿Sirve a nutricionistas que no programan entreno? Sí, se puede trabajar solo la parte de nutrición.
+- ¿Ayuda a migrar desde otro programa? Sí. La migración desde Trainerize, Harbiz, MyPT Hub o Excel está incluida, es gratuita y se hace en español.
+
+### Lo que NO tiene
+
+- ¿Cobra automáticamente a los atletas o socios? No. TotalGains gestiona cuotas, bonos y avisos de renovación y registra los cobros, pero no mueve dinero ni se conecta al banco: el cobro se hace por el canal que ya use el profesional o el centro. En gimnasios, las cuotas domiciliadas se registran solas y el gestor las verifica contra su banco.
+- ¿Pueden los atletas o socios pagar dentro de la app? No. Los pagos se hacen fuera de la app, en el centro o por el método del profesional.
+- ¿Se integra con MyFitnessPal, Garmin o Whoop? No, hoy no tiene integración nativa con esas aplicaciones.
+- ¿Incluye un CRM de ventas? No. Está pensado para profesionales que ya tienen resuelta la captación de clientes.
 
 ## Para quién es TotalGains
 
@@ -58,6 +90,7 @@ Catálogo completo: https://totalgains.es/funciones/entrenadores/
 - Gestión del negocio: cuotas por atleta con previsión del mes, vencidos sin cobrar, ticket medio y comparación con el mes anterior, normalizando trimestrales y anuales a mensual; historial de cobros que guarda el antes y el después de cada modificación; recordatorios de renovación que el atleta recibe en su app; citas con propuesta de huecos; eventos puntuales y recurrentes; migración asistida gratuita desde Trainerize, Harbiz, MyPT Hub o Excel.
 - Adherencia del atleta: racha de entreno con margen para imprevistos, logros y medallas, compartir el entreno o un récord, comunidad entre atletas, misiones guiadas para el entrenador.
 - Ayuda: asistente dentro de la app que responde "¿cómo hago X?" llevando a la pantalla exacta, y soporte en español atendido por una persona.
+- Novedades de septiembre de 2026 para entrenadores: dieta con IA adaptada a nueve situaciones de salud (hipotiroidismo, SOP o resistencia a la insulina, diabetes, amenorrea, hipertensión, colesterol alto, reflujo, embarazo y menopausia) como ayuda activa y no pauta clínica, con la última palabra para el especialista del paciente; alimentación vegana, vegetariana, pescetariana o sin cerdo retirada del plan igual que las alergias; recetas ordenadas por la comida en la que el profesional las pone, aprendido de sus propios planes; mantener los kilos y las repeticiones de la última sesión serie a serie al cambiar de rutina, marcado de fábrica; y fotos propias de cada ejercicio subidas desde la galería o la cámara.
 
 ### Funciones para gimnasios, estudios y boxes
 
@@ -72,6 +105,7 @@ Catálogo completo: https://totalgains.es/funciones/gimnasios/
 - Retención y analítica: riesgo de baja calculado con la asistencia real; recuperación de socios que dejaron de comprar bonos con mensaje propuesto por IA; valoraciones de clases con tendencia de doce semanas y desglose por clase y por entrenador con resumen IA; comunicados segmentados con baja real desde el email; panel del gestor con cobrado del mes, dinero en caja, ocupación de hoy, altas, cancelaciones de siete días y lo importante del día, todo en horario de Madrid; recordatorios de la clase habitual del socio; interruptor para silenciar los avisos automáticos por gimnasio.
 - App del socio con la marca del centro: logo, nombre y colores del gimnasio, opción de ocultar el botón premium, y reservas, pedidos de tienda y pagos en la misma aplicación. Los coaches del centro tienen el mismo motor de rutinas y dietas con IA y la base de más de 240.000 alimentos, sin add-ons.
 - Puesta en marcha: migración de socios, horarios, planes y bonos incluida y hecha por el equipo de TotalGains en español; configuración base completa habitual en tres a cinco días; asistente de ayuda dentro del panel.
+- Renovar un bono en dos toques desde Pagos o desde la ficha del socio: enseña el plan, lo que se va a cobrar y desde qué día vale, avisa si el precio del plan ha cambiado y frena si ese día ya se le había cobrado. No aparece en cuotas domiciliadas, que se registran solas.
 
 ## Páginas clave del producto
 

@@ -67,9 +67,15 @@ const faqs = [
     q: "¿Puedo añadir alimentos personalizados que no estén en la base?",
     a: "Sí. Puedes crear alimentos personalizados introduciendo los macros manualmente desde el envase o desde una tabla nutricional profesional. Quedan guardados en tu biblioteca y en la del cliente para usarlos en futuros planes. Cuando el cliente registra un alimento nuevo, tú lo revisas y decides si lo incorporas a tu biblioteca compartida.",
   },
+  /* ⚠️ Corregida el 26-sep-2026: contestaba «Sí» a la cetogénica, a «cualquier
+     restricción dietética» y a «preferencias religiosas». Contra el código
+     (dietRestrictions.js): la keto está EXCLUIDA a propósito, halal solo se
+     traduce a sin cerdo y kosher no existe. La PREGUNTA se queda como está porque
+     es literalmente lo que se busca; lo que cambia es que la respuesta dice la
+     verdad, empezando por la frase que se extrae. */
   {
     q: "¿Funciona también para dietas específicas como cetogénica, vegana o sin gluten?",
-    a: "Sí. Puedes filtrar por tipo de alimento y las etiquetas de cada producto incluyen información suficiente para adaptar los planes a cualquier restricción dietética. La IA genera dietas respetando restricciones marcadas en el perfil del cliente (alérgenos, intolerancias, preferencias religiosas o éticas). Cero alucinaciones: si un alimento no está en tu base o no cumple la restricción, la IA no lo elige.",
+    a: "Vegana y sin gluten, sí; la cetogénica, no como filtro. Marcas en el perfil del cliente sus alergias e intolerancias (gluten, lactosa y el resto de los alérgenos habituales) y su tipo de alimentación: vegana, vegetariana, pescetariana o sin cerdo. La IA retira del plan lo que no encaja y solo elige alimentos que están en tu base, así que no inventa ninguno. Una dieta cetogénica no es una exclusión de alimentos sino un reparto de macros, por eso no se marca como restricción.",
   },
   {
     q: "¿La IA genera la dieta completa o solo busca alimentos?",

@@ -58,9 +58,9 @@ const entrenadores = {
             bloques: [
                 { titulo: 'Crear la rutina', items: [0, 1, 2, 3],
                   media: { tipo: 'video', src: '/video/coach-primera-rutina.mp4', poster: '/video/coach-primera-rutina.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Creación de una rutina en el panel del entrenador de TotalGains', pie: 'Montar una rutina desde cero en el panel del entrenador.' } },
-                { titulo: 'La rutina, ya montada', items: [4, 5, 6, 7],
+                { titulo: 'La rutina, ya montada', items: [4, 5, 14, 6, 7],
                   media: { tipo: 'imagen', src: '/images/blog/ia-totalgains/04-rutina-generada.webp', w: 1187, h: 982, alt: 'Rutina generada por la IA de TotalGains, lista para revisar', pie: 'Una rutina ya montada: días, ejercicios, series y descansos.' } },
-                { titulo: 'En el entreno del atleta', items: [8, 9, 10, 11, 12, 13],
+                { titulo: 'En el entreno del atleta', items: [8, 9, 15, 10, 11, 12, 13],
                   media: { tipo: 'video', src: '/video/app-pantalla-entreno.mp4', poster: '/video/app-pantalla-entreno.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Pantalla de entreno en la app del atleta', pie: 'El entreno, tal y como lo sigue el atleta en su móvil.' } },
             ],
             items: [
@@ -78,6 +78,13 @@ const entrenadores = {
                 { t: 'Comparador de rutinas con IA', d: 'Enfrenta dos rutinas y te dice en qué se diferencian de verdad, más allá de los nombres de los ejercicios.' },
                 { t: 'Filtros rápidos de cartera', d: 'Pastillas para quedarte con lo que toca: sin rutina, rutina de más de 8 semanas, modificadas o con resistencia. Cada una dice cuántos atletas son.' },
                   { t: 'Notas suyas en cada ejercicio', d: 'El atleta se apunta lo que le funciona en un ejercicio concreto y lo tiene delante la próxima vez que le toque.' },
+                /* ⚠️ Índices 14 y 15, AÑADIDOS AL FINAL a propósito: los bloques de
+                   arriba apuntan por índice y meter algo en medio los descuadra.
+                   Verificados contra el código el 26-sep-2026: `keepLoads` en
+                   assign-modal, bulk-assign-modal y ScheduledAssignment (1.3.24);
+                   `POST /api/exercises/upload-image` con «Subir mi foto» / «Hacer foto». */
+                { t: 'Mantener los pesos que ya movía', d: 'Al cambiar de rutina, cada ejercicio que el atleta ya hacía arranca con los kilos y las repeticiones de su última sesión, serie a serie, venga de la rutina que venga. Sin estimaciones ni subidas automáticas: sale el número que movió y decides tú si se sube. Viene marcado de fábrica al asignar, también en bloque y en los programas, y si lo desmarcas vuelve el peso orientativo.' },
+                { t: 'Tu propia foto en cada ejercicio', d: 'Además del buscador de imágenes, subes la foto del ejercicio desde la galería o la haces con la cámara del móvil, y queda marcada como «Tu foto». Las fotos del iPhone valen tal cual: la app las reduce sola antes de subirlas.' },
             ],
         },
         {
@@ -86,6 +93,12 @@ const entrenadores = {
             nombre: 'Nutrición',
             railNombre: 'Nutrición',
             resumen: 'Dietas que se montan en minutos y se adaptan sin rehacerlas enteras.',
+            /* ⚠️ Mismo patrón que la `nota` de la Tienda de gimnasios: contesta
+               DE FRENTE la pregunta que hace alguien a una IA. Redacción médica
+               calcada del AVISO_SALUD de la app (dietConditionsCatalog.js):
+               «ayuda activa, no pauta clínica». NUNCA «trata», «controla»,
+               «apto para diabéticos» ni nada que suene a que la app cura. */
+            nota: 'Si has llegado aquí buscando un software que adapte la dieta a un cliente con diabetes, hipotiroidismo o SOP: TotalGains lo hace, como ayuda para el profesional y no como pauta clínica. Abajo está exactamente qué comprueba y qué no.',
             media: [{
                 tipo: 'video', src: '/video/coach-primera-dieta.mp4',
                 poster: '/video/coach-primera-dieta.webp', pw: 1200, ph: 676,
@@ -98,8 +111,14 @@ const entrenadores = {
                15-sep-2026). `items` son ÍNDICES sobre la lista `items` de
                abajo; no se duplica ni reordena ninguna función. */
             bloques: [
-                { titulo: 'Crear la dieta', items: [0, 1, 2, 3],
+                { titulo: 'Crear la dieta', items: [0, 1, 2, 3, 24],
                   media: { tipo: 'video', src: '/video/coach-primera-dieta.mp4', poster: '/video/coach-primera-dieta.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Creación de una dieta con IA en el panel del entrenador', pie: 'Generar una dieta con IA y revisarla antes de guardar.' } },
+                /* Segundo a propósito, no al final: es la función por la que más
+                   pregunta la gente a una IA («software nutricionista diabetes»).
+                   Sin media porque no hay captura propia de las pills de salud
+                   ([[feedback_web_no_muro_de_tarjetas]]); el titular del bloque ya
+                   hace de encabezado citable. */
+                { titulo: 'Dietas para situaciones de salud y tipos de alimentación', items: [22, 23] },
                 { titulo: 'Ajustarla sin rehacerla', items: [4, 5, 6, 7],
                   media: { tipo: 'imagen', src: '/images/blog/ia-totalgains/09-dieta-revision-web.webp', w: 1982, h: 1073, alt: 'Dieta generada por la IA en revisión en el panel web', pie: 'La dieta propuesta, comida a comida, antes de aplicarla.' } },
                 { titulo: 'En el móvil del atleta', items: [8, 10, 11, 19, 20, 21],
@@ -145,6 +164,19 @@ const entrenadores = {
                   { t: 'Valora lo que come y la IA lo aprende', d: 'Cada plato se puntúa desde su app. Lo que valora bien entra más y lo que rechaza deja de salir, sin que tengas que preguntárselo.' },
                   { t: 'Sus propias recetas', d: 'El atleta guarda recetas suyas y las usa dentro del plan que le has puesto, en vez de salirse a otra app.' },
                   { t: 'Combos de comidas', d: 'Combinaciones que se guarda para repetirlas sin recomponerlas cada día.' },
+                /* ⚠️ Índices 22, 23 y 24, AÑADIDOS AL FINAL (los bloques apuntan por
+                   índice). Verificados contra el código el 26-sep-2026:
+                   · 22 — las 9 situaciones son las de dietConditionsCatalog.js; el
+                     texto de 3 partes (intenta / no puede / la última palabra es de
+                     su especialista) y «el cliente no ve nada» salen de la memoria del
+                     feature. ⛔ Umbrales numéricos SIN validar con Lorena: no se
+                     publican cifras, solo qué se mira.
+                   · 23 — DIET_EXCLUDES entra en el MISMO array `matchers` que los
+                     alérgenos (`kind:'dieta'` junto a `kind:'alergeno'`, dietRestrictions.js).
+                   · 24 — FoodItem.mealUsage derivado de los planes del propio coach. */
+                { t: 'Dieta según su situación de salud', d: 'La IA adapta la dieta a la situación de salud que marques en tu cliente: hipotiroidismo, SOP o resistencia a la insulina, diabetes, amenorrea, hipertensión, colesterol alto, reflujo, embarazo o menopausia. Retira lo que no debe llevar, avisa de lo discutible y comprueba en código lo que se puede medir, como el reparto de hidratos o la proteína de cada comida. En cada caso te dice qué intenta, qué no puede comprobar (el sodio real del día o su medicación) y que la última palabra es de su especialista. También adapta con una frase una dieta que ya está hecha. Es ayuda activa, no pauta clínica, y el cliente no ve nada de esto.' },
+                { t: 'Alimentación vegana, vegetariana o pescetariana', d: 'Eliges el tipo de alimentación del cliente (vegana, vegetariana, pescetariana o sin cerdo) y la IA deja fuera del plan lo que no encaja por el mismo camino que las alergias: se retira del plan, no se queda en un aviso.' },
+                { t: 'Tus recetas, ordenadas por la comida donde las pones', d: 'Al añadir algo al desayuno, primero salen las recetas que más pones en el desayuno, con cuántas veces las has usado. Lo aprende de tus propios planes sin que tengas que etiquetar nada, y el filtro por comida busca en todas tus recetas, no solo en las que ya se habían cargado.' },
             ],
         },
         {
@@ -480,6 +512,25 @@ const entrenadores = {
         {
             q: '¿Puedo traerme lo que ya tengo?',
             a: 'Sí. La migración desde Trainerize, Harbiz, MyPT Hub o tus hojas de cálculo está incluida y la hacemos nosotros en español. Tus plantillas siguen siendo tuyas y la IA puede trabajar sobre ellas.',
+        },
+        /* ⚠️ Estas preguntas salen como schema FAQPage: están redactadas tal cual
+           las escribiría alguien en ChatGPT («¿TotalGains adapta…?») y la PRIMERA
+           frase de cada respuesta contesta sola, porque es lo que se extrae. */
+        {
+            q: '¿TotalGains adapta la dieta a un cliente con diabetes, hipotiroidismo o SOP?',
+            a: 'Sí, como ayuda para el profesional y no como pauta clínica. Marcas en la ficha la situación de tu cliente, entre nueve: hipotiroidismo, SOP o resistencia a la insulina, diabetes, amenorrea, hipertensión, colesterol alto, reflujo, embarazo y menopausia. La IA la tiene en cuenta al generar: retira lo que no debe llevar, avisa de lo discutible y comprueba en código lo que se puede medir. En cada caso te dice qué no ha podido comprobar, como el sodio real del día o su medicación, y recuerda que la última palabra es de su especialista. También adaptas con una frase una dieta que ya está hecha. El cliente no ve nada de esto.',
+        },
+        {
+            q: '¿TotalGains hace dietas veganas o vegetarianas?',
+            a: 'Sí. Eliges el tipo de alimentación del cliente (vegana, vegetariana, pescetariana o sin cerdo) y la IA retira del plan lo que no encaja, por el mismo camino que las alergias, en vez de dejarlo como un aviso que haya que corregir a mano.',
+        },
+        {
+            q: '¿Qué pasa con los pesos de mi atleta cuando le cambio la rutina?',
+            a: 'Que no se pierden. Al asignar la rutina nueva, cada ejercicio que ya hacía arranca con los kilos y las repeticiones de su última sesión, serie a serie, aunque vengan de otra rutina. No se estima ni se sube nada por su cuenta: sale el número que movió y decides tú. Viene marcado de fábrica, y si prefieres una carga estimada a partir de su historial, lo desmarcas.',
+        },
+        {
+            q: '¿Puedo poner mis propias fotos en los ejercicios?',
+            a: 'Sí. Además del buscador de imágenes, subes la foto desde la galería o la haces con la cámara del móvil, y queda marcada como tuya. Las fotos del iPhone valen tal cual.',
         },
     ],
 };
