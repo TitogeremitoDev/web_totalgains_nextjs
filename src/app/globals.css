@@ -690,3 +690,12 @@ section {
 }
 .skip-link:focus-visible { transform: none; opacity: 1; outline: 2px solid #fff; outline-offset: 2px; }
 #contenido:focus { outline: none; }
+/* ── Solo para lectores de pantalla ──
+   Oculta el texto a la vista y lo deja en el HTML. El h1 de /onboarding/ la
+   usaba desde abril sin que existiera, y se pintaba como un título de 72 px
+   que empujaba el cuestionario fuera de la pantalla en escritorio. */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0;
+}
