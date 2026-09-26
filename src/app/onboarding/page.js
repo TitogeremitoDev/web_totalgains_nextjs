@@ -4,10 +4,15 @@ import OnboardingContent from "@/components/OnboardingContent";
    /onboarding — SERVER COMPONENT
    SEO Metadata para conversión de leads
    ────────────────────────────────────────────── */
+/* ⚠️ El título decía «Empieza Gratis 14 Días» hasta el 26-sep-2026: se escapó
+   del cambio de jerarquía de agosto (plan gratuito primero, prueba Pro después)
+   que sí se hizo en la navbar, el hero, el CTA fijo y la plantilla. Es la
+   página a la que llevan TODOS esos botones, y GA4 la registraba con ese
+   título. */
 export const metadata = {
-  title: "Empieza Gratis 14 Días",
+  title: "Empieza gratis · 5 atletas sin tarjeta",
   description:
-    "Crea tu cuenta de TotalGains en menos de 2 minutos. Sin tarjeta. Panel profesional para gestionar atletas, rutinas con IA y seguimiento.",
+    "Crea tu cuenta de TotalGains en menos de 2 minutos. Plan gratuito permanente hasta 5 atletas, sin tarjeta y sin caducidad. Panel profesional para gestionar atletas, rutinas con IA y seguimiento.",
   alternates: {
     canonical: "https://totalgains.es/onboarding/",
   },

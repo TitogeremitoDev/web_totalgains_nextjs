@@ -31,8 +31,9 @@ export default function CookieConsent() {
                     <Cookie size={20} className="cookie-banner-icon" aria-hidden="true" />
                     <p>
                         Usamos cookies propias necesarias para que la web funcione y, solo si lo
-                        autorizas, cookies de analítica (Google Analytics y Microsoft Clarity) para
-                        entender cómo se usa el sitio y mejorarlo. Puedes cambiar de opinión cuando
+                        autorizas, cookies de analítica (Google Analytics y Microsoft Clarity) y de
+                        medición de campañas, para entender cómo se usa el sitio, saber de dónde
+                        llegan las visitas y mejorarlo. Puedes cambiar de opinión cuando
                         quieras desde la{' '}
                         <Link href="/privacy/">Política de Privacidad</Link>.
                     </p>

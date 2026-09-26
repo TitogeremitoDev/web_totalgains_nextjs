@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
 import MetaClickId from "@/components/MetaClickId";
+import AcquisitionSource from "@/components/AcquisitionSource";
 import CookieConsent from "@/components/CookieConsent";
 import ScrollProgress from "@/components/ScrollProgress";
 
@@ -146,6 +147,10 @@ export default function RootLayout({ children }) {
         {/* Guarda el click id de Meta para que el registro (que ocurre en
             /app, mismo dominio) pueda atribuirse al anuncio. No inyecta píxel. */}
         <MetaClickId />
+        {/* Mismo camino que MetaClickId, pero para TODOS los canales: guarda
+            de dónde vino la visita (Google, ChatGPT, un QR…) para que el alta
+            en /app lo lleve al backend. Solo con consentimiento. */}
+        <AcquisitionSource />
         <CookieConsent />
       </body>
     </html>

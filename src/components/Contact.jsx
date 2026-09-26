@@ -82,7 +82,17 @@ const Contact = () => {
                 router.push('/gracias/?de=contacto');
             })
             .catch((err) => {
-                trackEvent('lead_submit_error', { form_name: 'contacto_home' });
+                /* ⚠️ Antes mandaba solo `form_name`: GA4 contaba errores sin decir
+                   de qué. El 26-sep-2026 había `lead_submit_error` en 28 días y NI
+                   UN `lead_submit`, y no había forma de saber la causa. Con esto
+                   GA4 enseña el texto exacto de EmailJS («The template ID not
+                   found», cuota agotada, servicio de correo caído…).
+                   Clave y servicio verificados sanos ese día sin enviar nada. */
+                trackEvent('lead_submit_error', {
+                    form_name: 'contacto_home',
+                    error_status: String(err?.status ?? 'sin_status'),
+                    error_text: String(err?.text || err?.message || 'sin_texto').slice(0, 100),
+                });
                 setStatus('error');
             });
     };

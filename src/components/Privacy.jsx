@@ -207,8 +207,17 @@ const Privacy = () => {
                         <li><strong>Google Analytics 4</strong> (Google Ireland Ltd.) — medición de audiencia: páginas visitadas, origen del tráfico y comportamiento agregado. Conservación máxima: 14 meses.</li>
                         <li><strong>Microsoft Clarity</strong> (Microsoft Ireland Operations Ltd.) — mapas de calor y grabación anónima de la navegación para detectar errores de usabilidad. Conservación máxima: 13 meses.</li>
                     </ul>
+                    {/* ⚠️ Añadido el 26-sep-2026. _fbc/_fbp se escribían desde el
+                        11-ago (MetaClickId.jsx) sin figurar aquí, y tg_acq es nueva
+                        (AcquisitionSource.jsx). Si cambia qué cookie se escribe o a
+                        quién se manda, se actualiza AQUÍ y el texto del banner. */}
+                    <p><strong>Cookies de medición de campañas</strong> (también solo si las aceptas en el banner; son propias de TotalGains y no cargan scripts de terceros):</p>
+                    <ul>
+                        <li><strong>tg_acq</strong> — guarda de qué canal llegaste la primera vez (por ejemplo, un buscador, un anuncio o un asistente de IA) y la página por la que entraste, para saber qué canales traen cuentas nuevas. Si te registras, se asocia a tu cuenta; no se comparte con terceros. Conservación de la cookie: 90 días.</li>
+                        <li><strong>_fbc y _fbp</strong> — indican si llegaste desde un anuncio de Meta e identifican tu navegador. Si creas una cuenta, su valor se envía a Meta (Meta Platforms Ireland Ltd.) para medir qué anuncio funcionó. Conservación: 90 días.</li>
+                    </ul>
                     <p>
-                        Mientras no aceptes, esos scripts no se cargan en tu navegador. Puedes retirar
+                        Mientras no aceptes, esos scripts no se cargan y esas cookies no se escriben en tu navegador. Puedes retirar
                         tu consentimiento en cualquier momento y sin coste: <CookiePreferencesButton />.
                         También puedes bloquear o eliminar cookies desde la configuración de tu navegador.
                     </p>
