@@ -437,7 +437,7 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 - https://totalgains.es/alternativas/dudapp/ — Alternativa a Dudapp. Servidores globales, sistema financiero automático, app marca blanca con branding generado por IA.
 - https://totalgains.es/alternativas/dudyfit/ — Alternativa a Dudyfit. IA basada en tu base de datos, app marca blanca, control de cuotas con avisos, soporte español.
 - https://totalgains.es/alternativas/virtuagym/ — Alternativa a Virtuagym para entrenadores y gimnasios. Producto de entrenador desde 29,90 €/mes y producto de gimnasio de 149 a 249 €/mes, con IVA y entrenadores ilimitados.
-- https://totalgains.es/alternativas/timp/ — Alternativa a Timp para gimnasios, estudios y boxes. Timp cobra por profesional (Starter 50, Basic 85, Pro 130 y Premium 170 €/mes por centro según su web, que no indica IVA; Enterprise a medida) e incluye pagos dentro de la app. TotalGains cobra por socios activos (149, 199 o 249 €/mes con IVA), con entrenadores ilimitados; no cobra dentro de la app. Verificado el 27-sep-2026.
+- https://totalgains.es/alternativas/timp/ — Alternativa a Timp para gimnasios, estudios y boxes. TotalGains: todas las funciones en todos los planes, entrenadores ilimitados, rutinas y dietas con IA para los socios y app con la marca del centro, a 149, 199 o 249 €/mes con IVA según socios activos. Timp cobra por centro según profesionales (Starter 50, Basic 85, Pro 130 y Premium 170 €/mes según su web, que no indica IVA; Enterprise a medida) y reparte funciones por plan: registro horario desde Basic; tienda online, CRM y estadísticas desde Pro. Verificado el 27-sep-2026.
 
 ### Corporate
 

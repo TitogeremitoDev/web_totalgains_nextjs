@@ -1,14 +1,20 @@
 /* ──────────────────────────────────────────────
    Comparativa con Timp (timp.pro), software español de reservas y gestión
-   para centros deportivos. Es la primera alternativa del producto de
-   GIMNASIO: las demás de /alternativas/ comparan producto de entrenador con
-   AlternativaCompetidoresContent, que pinta ✅/❌ en todas las filas. Aquí ese
-   formato mentiría: en cobro dentro de la app gana Timp, y se dice.
+   para centros deportivos. Primera alternativa del producto de GIMNASIO: las
+   demás de /alternativas/ comparan producto de entrenador.
 
-   ⚠️ Publicidad comparativa (LGP): todo lo de Timp sale de su página de
-   precios oficial, consultada el 27-sep-2026. Su web NO indica si los precios
-   llevan IVA, así que se reproducen tal cual y se avisa al lector. Antes de
-   tocar un número, volver a mirar la fuente y cambiar la fecha.
+   ⛔ TOTALGAINS PRIMERO (German, 27-sep-2026). La primera versión abría con
+   las tablas de precios, donde Timp empieza en 50 €, y dedicaba tres tarjetas
+   a «cuándo te encaja mejor Timp»: «les estoy dando más publicidad a Timp que
+   a mí». Orden fijo: qué incluye TotalGains → funciones comparadas → precio al
+   final, comparando el plan de Timp que hace falta para tener lo mismo. Nada
+   de filas ni secciones que vendan al competidor.
+
+   ⚠️ La veracidad no cambia (LGP): todo lo de Timp sale de su página de
+   precios oficial, consultada el 27-sep-2026. Ni esa página ni sus términos
+   (versión 09-07-2026) dicen si los precios llevan IVA, así que se reproducen
+   tal cual y la cuenta con IVA va en condicional. Antes de tocar un número,
+   volver a mirar la fuente y cambiar la fecha.
    Lo de TotalGains sale de productSchema.js (precios) y del inventario de
    public/llms.txt (funciones). Sin cobro dentro de la app: no prometerlo.
    ────────────────────────────────────────────── */
@@ -18,111 +24,89 @@ import { PLANES_GYM } from "@/data/productSchema";
 export const FECHA_VERIFICACION_TIMP = "27 de septiembre de 2026";
 export const FUENTE_TIMP = "https://timp.pro/precios/";
 
-export const PLANES_TIMP = [
-    { nombre: "Starter", precio: "50 €/mes", profesionales: "1 profesional" },
-    { nombre: "Basic", precio: "85 €/mes", profesionales: "Hasta 3" },
-    { nombre: "Pro", precio: "130 €/mes", profesionales: "Hasta 10" },
-    { nombre: "Premium", precio: "170 €/mes", profesionales: "Hasta 15" },
-    { nombre: "Enterprise", precio: "A medida", profesionales: "A medida" },
-];
-
-// Precio: fuente única en PLANES_GYM. Aquí solo se añade el tramo de socios.
-const SOCIOS_GYM = {
-    "gym-starter": "Hasta 100",
-    "gym-pro": "De 100 a 200",
-    "gym-elite": "Más de 200",
-};
-
-export const PLANES_TG_GYM = PLANES_GYM.map((p) => ({
-    nombre: p.name.replace("TotalGains ", ""),
-    precio: `${p.price} €/mes`,
-    socios: SOCIOS_GYM[p.id],
-}));
+// Precio de entrada del producto de gimnasio: fuente única en PLANES_GYM.
+export const DESDE_TG_GYM = PLANES_GYM.find((p) => p.id === "gym-starter").price;
 
 export const COMPARATIVA_TIMP = [
     {
-        aspecto: "Entrenadores o profesionales",
-        tg: "Ilimitados en los tres planes",
-        timp: "1, 3, 10 o 15 según el plan; Enterprise, a medida",
+        aspecto: "Entrenadores",
+        tg: "Ilimitados en todos los planes",
+        timp: "Según el plan: 1, 3, 10 o 15 profesionales; más, con Enterprise a medida",
     },
     {
-        aspecto: "Reservas de clases",
-        tg: "Desde la app del socio, con lista de espera automática y plazo de cancelación configurable",
-        timp: "Desde su app y su web en todos los planes; gestión de colas desde Basic",
-    },
-    {
-        aspecto: "Cobro de cuotas y bonos",
-        tg: "Se registran y se facturan en TotalGains, y el socio paga en el centro o por tu vía habitual (domiciliación, TPV, Bizum, transferencia o efectivo). No hay pago dentro de la app",
-        timp: "Pagos dentro de la app en todos los planes",
-    },
-    {
-        aspecto: "Facturación",
-        tg: "De proforma a factura fiscal, con su numeración",
-        timp: "Facturación electrónica en todos los planes",
+        aspecto: "Funciones",
+        tg: "Todas en todos los planes",
+        timp: "Se suman al subir de plan, y el precio puede variar con módulos extra",
     },
     {
         aspecto: "Tienda",
-        tg: "Catálogo con stock, tallas o sabores, y pedidos desde la app del socio, en los tres planes",
-        timp: "Tienda online desde el plan Pro",
+        tg: "Incluida: catálogo con stock y pedidos desde la app del socio",
+        timp: "Desde el plan Pro (130 €/mes)",
     },
     {
-        aspecto: "Rutinas y dietas para los socios",
-        tg: "Los entrenadores las generan con IA, con la biblioteca de ejercicios del centro y más de 240.000 alimentos en español",
-        timp: "Módulo de entrenamiento desde Basic",
+        aspecto: "Seguimiento de socios y estadísticas",
+        tg: "Incluido: riesgo de baja con la asistencia real, panel del gestor y comunicados segmentados",
+        timp: "CRM y estadísticas desde el plan Pro (130 €/mes)",
     },
     {
         aspecto: "Registro horario del equipo",
-        tg: "Fichajes de los entrenadores del centro",
-        timp: "Registro horario desde Basic",
+        tg: "Incluido",
+        timp: "Desde el plan Basic (85 €/mes)",
     },
     {
-        aspecto: "Streaming y grabaciones",
-        tg: "No incluido",
-        timp: "Streaming desde Pro y grabación de sesiones en Premium",
-    },
-];
-
-/* «Cuándo encaja mejor cada uno»: patrón obligatorio de la norma de
-   competencia (situación, por qué, cuándo no). Los tres de Timp van primero. */
-export const ENCAJA_TIMP = [
-    {
-        titulo: "Timp, si quieres cobrar dentro de la app",
-        situacion: "Quieres que el socio pague con tarjeta desde el móvil al reservar o al renovar.",
-        porque: "Timp incluye pagos dentro de la app en todos sus planes. TotalGains no cobra por ti: registra y factura lo que cobras por tu vía.",
-        cuandoNo: "Si ya cobras por domiciliación o TPV y lo que te falta es tener clases, tienda y entrenamiento en un mismo sitio.",
+        aspecto: "Rutinas y dietas para los socios",
+        tg: "Con IA, a partir de la biblioteca de ejercicios del centro",
+        timp: "Módulo de entrenamiento desde Basic; su página de precios no menciona IA",
     },
     {
-        titulo: "Timp, si sois muy pocos",
-        situacion: "Eres un estudio de uno a tres profesionales y lo que necesitas, sobre todo, es agenda y reservas.",
-        porque: "Su Starter (50 €/mes) y su Basic (85 €/mes) cuestan menos que nuestro Gym Starter (149 €/mes con IVA).",
-        cuandoNo: "Si vais a crecer en entrenadores o quieres dar rutinas y dietas a tus socios desde la misma app.",
+        aspecto: "Base de alimentos",
+        tg: "Más de 240.000 alimentos en español",
+        timp: "No aparece en su página de precios",
     },
     {
-        titulo: "Timp, si das clases en streaming",
-        situacion: "Parte de tus clases se emiten en directo o grabas sesiones para tus socios.",
-        porque: "Timp tiene streaming desde el plan Pro y grabación de sesiones en Premium.",
-        cuandoNo: "TotalGains no lo incluye, así que aquí la decisión es sencilla si el streaming es clave para ti.",
+        aspecto: "App con la marca de tu centro",
+        tg: "Incluida: logo, nombre y colores del centro",
+        timp: "No aparece en su página de precios",
     },
 ];
 
-export const ENCAJA_TG = [
+export const POR_QUE_TG = [
     {
-        titulo: "TotalGains, si tienes varios entrenadores",
-        situacion: "Tienes, o vas a tener, varios monitores, fisios o gente de prácticas.",
-        porque: "Los entrenadores son ilimitados en los tres planes. En Timp cada tramo de profesionales es un plan distinto y, con más de 15, su plan es Enterprise, con precio a medida.",
-        cuandoNo: "Si tu centro es de una o dos personas y no va a crecer.",
+        titulo: "Entrenadores ilimitados",
+        texto: "Da acceso a cada monitor, fisio o entrenador de prácticas sin que cambie la factura: el precio depende de tus socios activos, no del tamaño de tu equipo.",
     },
     {
-        titulo: "TotalGains, si programas entreno y nutrición",
-        situacion: "Tus socios reciben rutina o dieta además de las clases.",
-        porque: "Tus entrenadores generan rutinas y dietas con IA con la biblioteca del centro, y el socio las tiene en la misma app donde reserva, con la marca de tu centro.",
-        cuandoNo: "Si tu centro solo da clases colectivas y nadie programa rutinas, no le vas a sacar partido.",
+        titulo: "Todo incluido desde el primer plan",
+        texto: "Clases con reserva y lista de espera, tienda, servicios de pago por sesión, cuotas que se registran y facturan solas, fichajes y estadísticas. No hay módulos que contratar aparte.",
     },
     {
-        titulo: "TotalGains, si vendes producto o servicios sueltos",
-        situacion: "Vendes ropa o suplementos, o das clases de niños, fisioterapia o talleres sueltos.",
-        porque: "Tienda con stock y pedidos desde la app, y servicios de pago por sesión sin bono, en los tres planes.",
-        cuandoNo: "Si necesitas cobrar esos pedidos con tarjeta dentro de la app: en TotalGains se pagan en el centro.",
+        titulo: "Entreno y nutrición para tus socios",
+        texto: "Tus entrenadores generan rutinas y dietas con IA con la biblioteca del centro y más de 240.000 alimentos en español, y el socio las tiene en la misma app donde reserva.",
+    },
+    {
+        titulo: "Tu marca, no la nuestra",
+        texto: "La app que descargan tus socios lleva el logo, el nombre y los colores de tu centro, en todos los planes.",
+    },
+];
+
+/* El precio, AL FINAL y comparando lo mismo: el plan de Timp que hace falta
+   para tener tienda, CRM y estadísticas, frente a TotalGains, que lo incluye
+   todo. TotalGains cambia de plan por socios activos, no por entrenadores. */
+export const PRECIO_IGUALADO = [
+    {
+        caso: "Tienda, CRM y estadísticas, con hasta 10 entrenadores",
+        timp: "Plan Pro: 130 €/mes",
+        tg: `Gym Starter: ${DESDE_TG_GYM} €/mes con IVA incluido`,
+    },
+    {
+        caso: "Lo mismo, con 11 a 15 entrenadores",
+        timp: "Plan Premium: 170 €/mes",
+        tg: "El mismo plan: los entrenadores no cuentan",
+    },
+    {
+        caso: "Lo mismo, con más de 15 entrenadores",
+        timp: "Enterprise: precio a medida",
+        tg: "El mismo plan: los entrenadores no cuentan",
     },
 ];
 
@@ -130,23 +114,23 @@ export const ENCAJA_TG = [
    declarar preguntas que el visitante no ve. */
 export const TIMP_FAQS = [
     {
-        question: "¿Cuánto cuesta Timp?",
-        answer: "Según su web oficial, consultada el 27 de septiembre de 2026: Starter, 50 €/mes (1 profesional); Basic, 85 €/mes (hasta 3); Pro, 130 €/mes (hasta 10); Premium, 170 €/mes (hasta 15), y Enterprise, a medida. Son precios por centro, un 5 % más baratos con pago semestral y un 10 % con pago anual. Su web no indica si incluyen IVA.",
+        question: "¿Qué diferencia hay entre TotalGains y Timp?",
+        answer: "TotalGains incluye todas sus funciones en todos los planes y no limita los entrenadores: el precio depende de tus socios activos. Timp cobra por centro según cuántos profesionales usan la herramienta (1, 3, 10 o 15) y va sumando funciones al subir de plan: la tienda online, el CRM y las estadísticas están desde su plan Pro. Además, TotalGains incluye rutinas y dietas con IA para tus socios y una app con la marca de tu centro.",
     },
     {
-        question: "¿TotalGains cobra las cuotas dentro de la app, como Timp?",
-        answer: "No. TotalGains registra y factura cuotas, bonos y ventas, y el cobro lo haces por tu vía habitual: domiciliación, TPV, Bizum, transferencia o efectivo. Si necesitas que el socio pague con tarjeta dentro de la app, Timp lo incluye en todos sus planes.",
+        question: "¿Cuánto cuesta TotalGains para un gimnasio?",
+        answer: "149, 199 o 249 €/mes con IVA incluido, según tengas hasta 100 socios activos, de 100 a 200 o más de 200. Todas las funciones y los entrenadores ilimitados están en los tres planes. Con pago anual pagas 10 mensualidades.",
     },
     {
-        question: "¿Cuántos entrenadores puedo tener en cada uno?",
-        answer: "En TotalGains, ilimitados en los tres planes de gimnasio: el precio cambia según los socios activos (hasta 100, de 100 a 200 o más de 200). En Timp depende del plan: 1, 3, 10 o 15 profesionales, y Enterprise a medida.",
+        question: "¿Cuántos entrenadores puedo tener?",
+        answer: "Ilimitados, en los tres planes. En Timp depende del plan: 1, 3, 10 o 15 profesionales, y a partir de ahí el plan Enterprise, con precio a medida.",
     },
     {
         question: "¿Puedo pasar mis socios de Timp a TotalGains?",
         answer: "Sí. La migración de socios, horarios, planes y bonos está incluida y la hace nuestro equipo en español. La configuración base suele quedar lista en tres a cinco días.",
     },
     {
-        question: "¿Qué añade TotalGains para los socios?",
-        answer: "Rutinas y dietas con IA a partir de la biblioteca de ejercicios del centro, una base de más de 240.000 alimentos en español, tienda con pedidos desde la app y servicios de pago por sesión, todo en una app con la marca del centro y en los tres planes.",
+        question: "¿Cómo cobro las cuotas con TotalGains?",
+        answer: "Las cuotas, los bonos y las ventas se registran y se facturan en TotalGains, y cobras con lo que ya usas: domiciliación, TPV, Bizum, transferencia o efectivo. TotalGains no se lleva comisión por cobro.",
     },
 ];

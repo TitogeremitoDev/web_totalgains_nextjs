@@ -23,7 +23,7 @@ const alternativas = [
   { slug: "dudapp", name: "Dudapp", desc: "Herramienta básica sin IA, sin sistema de retención y sin app de marca blanca." },
   { slug: "dudyfit", name: "Dudyfit", desc: "App genérica sin personalización de marca ni generación IA de contenido." },
   { slug: "virtuagym", name: "Virtuagym", desc: "Pensado para gimnasios y clubs. TotalGains tiene producto para el entrenador y otro para centros pequeños." },
-  { slug: "timp", name: "Timp", desc: "Para gimnasios: Timp cobra por profesional e incluye pagos en la app; TotalGains cobra por socios, con entrenadores ilimitados." },
+  { slug: "timp", name: "Timp", desc: "Para gimnasios. Precio por tramos de profesionales y funciones según el plan; en TotalGains, todo incluido y entrenadores ilimitados." },
 ];
 
 export default function AlternativasHub() {
