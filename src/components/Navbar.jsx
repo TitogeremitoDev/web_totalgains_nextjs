@@ -83,6 +83,12 @@ const Navbar = () => {
 
         e.preventDefault();
         setMenuOpen(false);
+        // El menú abierto bloquea el scroll de la página (useEffect de arriba) y
+        // el render que lo libera llega DESPUÉS de este clic: se suelta aquí, antes
+        // del scroll suave, para no depender de cómo trate cada navegador un
+        // scroll programado sobre un <html> con overflow: hidden.
+        document.documentElement.style.overflow = '';
+        document.body.style.overflow = '';
 
         // Si es un anclaje '#', aplicamos lógica de scroll SUAVE y ajuste de Header si estamos en la home
         if (pathname === '/') {
