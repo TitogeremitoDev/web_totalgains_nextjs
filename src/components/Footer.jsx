@@ -128,6 +128,7 @@ const Footer = () => {
                                 <li><Link href="/alternativas/ptminder/" prefetch={false}>vs PTminder</Link></li>
                                 <li><Link href="/alternativas/dudapp/" prefetch={false}>vs Dudapp</Link></li>
                                 <li><Link href="/alternativas/virtuagym/" prefetch={false}>vs Virtuagym</Link></li>
+                                <li><Link href="/alternativas/timp/" prefetch={false}>vs Timp</Link></li>
                                 <li><Link href="/alternativas/dudyfit/" prefetch={false}>vs Dudyfit</Link></li>
                                 <li><Link href="/alternativas/" prefetch={false}>Todas las comparativas</Link></li>
                             </ul>

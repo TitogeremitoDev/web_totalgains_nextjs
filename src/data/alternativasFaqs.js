@@ -138,7 +138,7 @@ const ESPECIFICAS = {
     virtuagym: [
         {
             question: "¿TotalGains está pensado para entrenadores personales o para gimnasios?",
-            answer: "Para el entrenador personal autónomo. Virtuagym está orientado a gimnasios, clubs e instalaciones, así que buena parte de sus funciones (control de accesos, gestión de socios, aforo de sala) no te aportan nada si trabajas online con tu propia cartera. Si además llevas un centro, TotalGains tiene su propia vertical de gimnasios.",
+            answer: "Para los dos, con dos productos: uno para el entrenador personal, desde 29,90 €/mes con IVA y con plan gratuito permanente hasta 5 atletas, y otro para gimnasios pequeños, estudios y boxes, de 149 a 249 €/mes con IVA según socios activos y con entrenadores ilimitados. Virtuagym está orientado sobre todo a gimnasios, clubs e instalaciones: si trabajas online con tu propia cartera, buena parte de sus funciones (control de accesos, gestión de socios, aforo de sala) no te aportan nada.",
         },
         {
             question: "¿Cuál sale más a cuenta para un autónomo?",

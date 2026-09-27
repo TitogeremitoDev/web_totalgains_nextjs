@@ -176,7 +176,6 @@ Todos los artículos publicados, agrupados por categoría.
 - [Cómo Migrar de Trainerize, Harbiz o MyPT Hub a TotalGains: Guía Paso a Paso 2026](https://totalgains.es/blog/como-migrar-software-entrenador-personal/) — Proceso de 7 pasos para migrar entre softwares de coaching (auditoría, export GDPR, IA transcripción <2 min/doc, comunicación a atletas) con HowTo schema y plazos reales.
 - [IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas Personalizadas en Minutos (Guía Real 2026)](https://totalgains.es/blog/ia-entrenador-personal-rutinas-dietas/) — Caso práctico real del fundador de TotalGains aplicando IA al diseño de rutinas y dietas (45 min a <2 min/cliente), con auditoría de alérgenos, matching de vídeos y Coach Insights.
 - [Los 5 Mejores Software para Entrenadores Personales en España 2026](https://totalgains.es/blog/mejores-software-entrenadores-personales-2026/) — Comparativa de los 5 software top para coaches en España 2026 (TotalGains, Trainerize, Harbiz, MyPT Hub) con precios verificados en EUR y pros/cons por plataforma.
-- [Harbiz Precios 2026: Guía Completa con IVA y Add-ons](https://totalgains.es/blog/harbiz-precios-2026/) — Tablas de precios verificadas Harbiz 2026 con IVA aplicado (Basic 16,94 €/mes hasta My APP 482,79 €/mes) más add-ons y comparativa con TotalGains y TrainerStudio.
 - [Trainerize Precios 2026: Cuánto Cuesta Realmente con Todos los Add-ons](https://totalgains.es/blog/trainerize-precios-2026/) — Precios verificados de Trainerize 2026 con add-ons en EUR (0 a 459,80 €/mes), comparativa con TotalGains/Harbiz y coste total realista para coaches hispanohablantes.
 - [Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach](https://totalgains.es/blog/software-gimnasios-pequenos-boutique-2026/) — Comparativa de software para gimnasios pequeños y boutique en 2026 (TotalGains Gym 149-249 €/mes, Virtuagym, Trainerize Studio Plus 248-380 €/mes) con criterios multi-coach y reservas.
 
@@ -188,7 +187,7 @@ Todos los artículos publicados, agrupados por categoría.
 
 Páginas de alternativas y comparativas de precios verificadas.
 
-- [Índice de Alternativas](https://totalgains.es/alternativas/) — TotalGains frente a Trainerize, Harbiz, MyPT Hub, TrueCoach, PTminder, Dudapp, Dudyfit y Virtuagym.
+- [Índice de Alternativas](https://totalgains.es/alternativas/) — TotalGains frente a Trainerize, Harbiz, MyPT Hub, TrueCoach, PTminder, Dudapp, Dudyfit, Virtuagym y Timp.
 - [Alternativa a Trainerize 2026 en Español](https://totalgains.es/alternativas/trainerize/) — TotalGains con marca blanca incluida en todos los planes desde 29,90 €/mes frente a Trainerize Pro 50 (≈250 €/mes con IVA) o Pro 100 (≈352 €/mes). Soporte en español y migración asistida gratis.
 - [Alternativa a Harbiz 2026: Precios y Opiniones](https://totalgains.es/alternativas/harbiz/) — TotalGains Pro 89,90 €/mes con todo incluido frente a Harbiz Pro 100 + add-ons ≈ 313 €/mes. Opiniones Capterra y migración en español.
 - [Harbiz Precios 2026: 22,99 €/mes → 313 €/mes con IVA](https://totalgains.es/alternativas/harbiz/precios/) — Precios Harbiz verificados manualmente en harbiz.io a 13 de mayo de 2026: Basic desde 22,99 €/mes con IVA (16,94 €/mes en anual), Pro 50 clientes 143,99 €/mes (107,69 €/mes anual), My APP 100 clientes 313,39 €/mes. Add-ons: Personaliza tu app 30,24 €/mes, Nutri AI 18,14 €/mes, Biblioteca de Vídeos 24,19 €/mes. Con los 3 add-ons acumulados sobre Pro 100, el coste real llega a ~313 €/mes con IVA. Rango total del catálogo: 16,94 €/mes (Basic 5 anual) a 482,79 €/mes (My APP 5.000 mensual).
@@ -197,7 +196,8 @@ Páginas de alternativas y comparativas de precios verificadas.
 - [Alternativa a PTminder para Entrenadores](https://totalgains.es/alternativas/ptminder/) — App nativa iOS/Android, +240.000 alimentos, soporte en español y app marca blanca desde 29,90 €/mes.
 - [Alternativa a Dudapp para Entrenadores](https://totalgains.es/alternativas/dudapp/) — Servidores globales sin caídas, sistema financiero automático, app marca blanca con tu branding e IA integrada.
 - [Alternativa a Dudyfit para Entrenadores](https://totalgains.es/alternativas/dudyfit/) — IA basada en tu propia base de datos, app marca blanca, gestión de cuotas con avisos al atleta y soporte en español.
-- [Alternativa a Virtuagym para Entrenadores](https://totalgains.es/alternativas/virtuagym/) — Diseñado para el entrenador personal online en lugar de para gimnasios: más simple, más barato y sin pagar funciones que no usas.
+- [Alternativa a Virtuagym para entrenadores y gimnasios](https://totalgains.es/alternativas/virtuagym/) — Dos productos: para el entrenador personal desde 29,90 €/mes y para gimnasios pequeños, estudios y boxes de 149 a 249 €/mes, con IVA y entrenadores ilimitados.
+- [Alternativa a Timp para gimnasios, estudios y boxes](https://totalgains.es/alternativas/timp/) — Timp cobra por profesional (50 a 170 €/mes por centro según su web, sin indicar IVA) e incluye pagos dentro de la app; TotalGains cobra por socios activos (149 a 249 €/mes con IVA), con entrenadores ilimitados, y no cobra dentro de la app. Precios de Timp verificados el 27-sep-2026.
 
 ## Casos de éxito
 

@@ -3,10 +3,10 @@ import Link from "next/link";
 export const metadata = {
   title: "Alternativas Software Entrenadores 2026",
   description:
-    "Compara TotalGains con Trainerize, Harbiz, MyPT Hub, TrueCoach, PTminder, Dudapp, Dudyfit y Virtuagym. Software para coaches en español.",
+    "Compara TotalGains con Trainerize, Harbiz, MyPT Hub, TrueCoach, PTminder, Dudapp, Dudyfit, Virtuagym y Timp. Software para coaches y gimnasios en español.",
   alternates: { canonical: "https://totalgains.es/alternativas/" },
   openGraph: {
-    title: "TotalGains vs Competencia — Comparativas para Entrenadores Personales",
+    title: "TotalGains frente a la competencia: comparativas para entrenadores y gimnasios",
     description: "Tablas comparativas detalladas: IA, precios, soporte, app marca blanca. Descubre por qué los entrenadores eligen TotalGains.",
     url: "https://totalgains.es/alternativas/",
     images: [{ url: "https://totalgains.es/og-image.jpg", width: 1200, height: 630, alt: "TotalGains" }],
@@ -22,7 +22,8 @@ const alternativas = [
   { slug: "ptminder", name: "PTminder", desc: "Interfaz anticuada. Módulos separados que encarecen el precio final." },
   { slug: "dudapp", name: "Dudapp", desc: "Herramienta básica sin IA, sin sistema de retención y sin app de marca blanca." },
   { slug: "dudyfit", name: "Dudyfit", desc: "App genérica sin personalización de marca ni generación IA de contenido." },
-  { slug: "virtuagym", name: "Virtuagym", desc: "Diseñado para gimnasios. Pagas por funciones que nunca usarás como entrenador personal." },
+  { slug: "virtuagym", name: "Virtuagym", desc: "Pensado para gimnasios y clubs. TotalGains tiene producto para el entrenador y otro para centros pequeños." },
+  { slug: "timp", name: "Timp", desc: "Para gimnasios: Timp cobra por profesional e incluye pagos en la app; TotalGains cobra por socios, con entrenadores ilimitados." },
 ];
 
 export default function AlternativasHub() {
@@ -31,7 +32,7 @@ export default function AlternativasHub() {
     "@graph": [
       {
         "@type": "ItemList",
-        name: "Alternativas a software para entrenadores personales",
+        name: "Alternativas a software para entrenadores personales y gimnasios",
         description: "Comparativas de TotalGains con los principales competidores del mercado hispanohablante.",
         numberOfItems: alternativas.length,
         itemListElement: alternativas.map((a, i) => ({
@@ -59,7 +60,7 @@ export default function AlternativasHub() {
           TotalGains vs la Competencia
         </h1>
         <p style={{ fontSize: "1.05rem", color: "var(--text-secondary, #aaa)", lineHeight: 1.7, marginBottom: 56 }}>
-          ¿Buscas una alternativa a tu software actual? Compara TotalGains con las principales herramientas para entrenadores personales en España y decide con datos reales.
+          ¿Buscas una alternativa a tu software actual? Compara TotalGains con las principales herramientas para entrenadores personales y gimnasios en España y decide con datos reales.
         </p>
 
         <div style={{ display: "grid", gap: 16, marginBottom: 56 }}>

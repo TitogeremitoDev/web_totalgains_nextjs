@@ -110,15 +110,19 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
         },
         virtuagym: {
             name: "Virtuagym",
-            h1: "Mejor Alternativa a Virtuagym para Entrenadores Personales",
-            painPoint: "Si Virtuagym está orientado a gimnasios grandes y prefieres una herramienta diseñada para entrenadores personales autónomos.",
+            h1: "Mejor Alternativa a Virtuagym para Entrenadores y Gimnasios",
+            painPoint: "Si buscas una herramienta en español para tu trabajo como entrenador o para tu gimnasio, estudio o box.",
+            // Desde que existe la vertical Gym, a esta página llegan también
+            // centros (en Search Console salen preguntas tipo «tengo Virtuagym,
+            // ¿Timp es una alternativa?»): enseña el enlace a gimnasios.
+            gym: true,
             features: [
-                { feature: "Enfoque del producto", tg: "Diseñado para entrenadores personales autónomos", bg: "Orientado principalmente a gimnasios y clubes deportivos" },
+                { feature: "Enfoque del producto", tg: "Dos productos: entrenador personal y gimnasios pequeños, estudios y boxes", bg: "Orientado principalmente a gimnasios y clubes deportivos" },
                 { feature: "IA integrada", tg: "Rutinas y dietas generadas con IA incluidas", bg: "Funcionalidades enfocadas a gestión de gimnasio" },
-                { feature: "Precio de entrada", tg: "Desde 29,90€/mes (25 clientes)", bg: "Planes enterprise con precios por consulta" },
+                { feature: "Precio de entrada", tg: "Entrenador desde 29,90€/mes (25 clientes); gimnasio desde 149 €/mes, con IVA", bg: "Planes enterprise con precios por consulta" },
                 { feature: "App cliente", tg: "App marca blanca con tu logo y colores", bg: "App con branding de Virtuagym según plan" },
                 { feature: "Soporte en español", tg: "Equipo en España, respuesta rápida", bg: "Soporte internacional" },
-                { feature: "Curva de aprendizaje", tg: "Diseñado para entrenador autónomo — sin funciones de gimnasio innecesarias", bg: "Funciones de gestión de socios y aforo pueden no ser útiles para PT online" }
+                { feature: "Si eres entrenador autónomo", tg: "Producto propio para el coach, sin funciones de centro que no vas a usar", bg: "Funciones de gestión de socios y aforo que no usarás si trabajas online" }
             ]
         }
     };
@@ -181,6 +185,13 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
                     <p className="alt-cta-top-note">
                         Sin tarjeta · Sin permanencia · Migración desde {currentData.name} incluida
                     </p>
+                    {currentData.gym && (
+                        <p className="alt-cta-top-note">
+                            ¿Tienes un gimnasio, estudio o box?{" "}
+                            <Link href="/para-gimnasios/" prefetch={false}>Mira TotalGains para gimnasios</Link> o la{" "}
+                            <Link href="/alternativas/timp/" prefetch={false}>comparativa con Timp</Link>.
+                        </p>
+                    )}
 
                     <div style={{ marginTop: 20 }}>
                         <TrustpilotBadge score={4.6} totalReviews={17} variant="compact" />

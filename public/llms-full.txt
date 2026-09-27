@@ -319,12 +319,6 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 - Fecha: 2026-07-16
 - Qué cubre: Ranking editorial de los 10 alimentos con mejor ratio proteína/precio en supermercados españoles (Mercadona, Carrefour, Lidl, Alcampo) verificado entre marzo y junio de 2026. Fórmula operativa de cálculo (gramos de proteína por 100g ÷ precio por 100g del envase real), plan tipo económico para 130-150 g de proteína/día por ~320-380 €/mes vs plan premium con salmón fresco y whey a ~520-620 €/mes. 3 errores del coach que arruinan la economía del plan (diseñar sin ver el supermercado del cliente, meter suplementos caros de entrada, exigir proteína completa en cada comida). Tesis operativa: la adherencia a la dieta cae cuando la lista de compra sube más de 40-80 €/mes por encima del gasto habitual del cliente medio (rango 1.400-2.400 €/mes netos), y la retención a 6-12 meses depende más del precio real de la compra que del diseño de macros. Incluye referencia a la base de +240.000 alimentos de TotalGains que registra marcas de las principales cadenas españolas con macros del envase real.
 
-#### Harbiz Precios 2026: Guía Completa con IVA y Add-ons
-
-- URL: https://totalgains.es/blog/harbiz-precios-2026/
-- Fecha: 2026-05-23
-- Qué cubre: Tablas verificadas de precios Harbiz 2026 con IVA aplicado (desde Harbiz Basic 16,94 €/mes hasta My APP 482,79 €/mes), todos los add-ons explicados (My APP, IA, citas, branding) y comparativa con TotalGains y TrainerStudio.
-
 #### IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas Personalizadas en Minutos (Guía Real 2026)
 
 - URL: https://totalgains.es/blog/ia-entrenador-personal-rutinas-dietas/
@@ -433,7 +427,7 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 
 ### Comparativas y alternativas
 
-- https://totalgains.es/alternativas/ — Índice de comparativas con los 9 competidores principales.
+- https://totalgains.es/alternativas/ — Índice de comparativas con los 10 competidores principales.
 - https://totalgains.es/alternativas/trainerize/ — TotalGains vs Trainerize. 89,90 €/mes con marca blanca incluida frente a Trainerize Pro 50 (≈250 €/mes con IVA, $272 USD) o Pro 100 (≈352 €/mes, $381 USD).
 - https://totalgains.es/alternativas/harbiz/ — TotalGains vs Harbiz. 89,90 €/mes todo incluido frente a Harbiz Pro 100 + add-ons (≈313 €/mes).
 - https://totalgains.es/alternativas/harbiz/precios/ — Tablas verificadas de precios Harbiz 2026 con IVA 21% aplicado, todos los tramos y add-ons.
@@ -442,7 +436,8 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 - https://totalgains.es/alternativas/ptminder/ — Alternativa a PTminder. App nativa iOS y Android, +240.000 alimentos, app marca blanca desde 29,90 €/mes.
 - https://totalgains.es/alternativas/dudapp/ — Alternativa a Dudapp. Servidores globales, sistema financiero automático, app marca blanca con branding generado por IA.
 - https://totalgains.es/alternativas/dudyfit/ — Alternativa a Dudyfit. IA basada en tu base de datos, app marca blanca, control de cuotas con avisos, soporte español.
-- https://totalgains.es/alternativas/virtuagym/ — Alternativa a Virtuagym. Diseñada para el coach personal y boutique en lugar de para gimnasios grandes.
+- https://totalgains.es/alternativas/virtuagym/ — Alternativa a Virtuagym para entrenadores y gimnasios. Producto de entrenador desde 29,90 €/mes y producto de gimnasio de 149 a 249 €/mes, con IVA y entrenadores ilimitados.
+- https://totalgains.es/alternativas/timp/ — Alternativa a Timp para gimnasios, estudios y boxes. Timp cobra por profesional (Starter 50, Basic 85, Pro 130 y Premium 170 €/mes por centro según su web, que no indica IVA; Enterprise a medida) e incluye pagos dentro de la app. TotalGains cobra por socios activos (149, 199 o 249 €/mes con IVA), con entrenadores ilimitados; no cobra dentro de la app. Verificado el 27-sep-2026.
 
 ### Corporate
 

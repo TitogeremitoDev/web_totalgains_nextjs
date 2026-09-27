@@ -3,16 +3,16 @@ import { getAlternativaFaqs } from "@/data/alternativasFaqs";
 import { softwareApplicationNode , organizationNode } from "@/data/productSchema";
 
 export const metadata = {
-  title: { absolute: "Alternativa a Virtuagym: TotalGains desde 29,90 €/mes" },
+  title: { absolute: "Alternativa a Virtuagym para entrenadores y gimnasios" },
   description:
-    "Virtuagym está diseñado para gimnasios y cobra por atleta. TotalGains es la alternativa para el coach autónomo desde 29,90 €/mes con IVA. Migración en español.",
+    "Alternativa en español a Virtuagym: para entrenadores desde 29,90 €/mes y para gimnasios de 149 a 249 €/mes, con IVA y entrenadores ilimitados.",
   alternates: {
     canonical: "https://totalgains.es/alternativas/virtuagym/",
   },
   openGraph: {
-    title: "Alternativa a Virtuagym: TotalGains desde 29,90 €/mes",
+    title: "Alternativa a Virtuagym para entrenadores y gimnasios",
     description:
-      "Virtuagym cobra por atleta y está pensado para gimnasios. TotalGains es la alternativa para el coach autónomo desde 29,90 €/mes con IVA.",
+      "Para entrenadores desde 29,90 €/mes y para gimnasios de 149 a 249 €/mes, con IVA y entrenadores ilimitados. Alternativa en español a Virtuagym.",
     url: "https://totalgains.es/alternativas/virtuagym/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },
@@ -25,7 +25,7 @@ export default function AlternativaVirtuagym() {
     "@graph": [
       // Valoración real de Trustpilot (la misma que muestra el badge de
       // la página): hace la página elegible para estrellas en la SERP.
-      softwareApplicationNode({ description: "TotalGains, alternativa en español a Virtuagym para entrenadores personales: IA de rutinas y dietas, app marca blanca incluida en todos los planes y soporte en español." }),
+      softwareApplicationNode({ description: "TotalGains, alternativa en español a Virtuagym para entrenadores personales y gimnasios pequeños: IA de rutinas y dietas, app marca blanca incluida en todos los planes y soporte en español." }),
       organizationNode(),
       {
         "@type": "FAQPage",
