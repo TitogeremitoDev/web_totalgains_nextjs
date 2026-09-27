@@ -49,7 +49,10 @@ export default function AppDownload() {
                         aria-label="Descargar TotalGains en Google Play"
                     >
                         <svg viewBox="0 0 24 24" className="store-icon" aria-hidden="true">
-                            <path fill="currentColor" d="M3.609 1.814L13.792 12 3.61 22.186c-.483-.24-.82-.743-.82-1.32V3.134c0-.577.337-1.08.82-1.32zm10.89 10.186l2.728-2.728 2.92 1.686c.91.525.91 1.859 0 2.384l-2.92 1.686-2.728-2.728-2.728 2.728-4.77 2.757L13.79 12 6.001 4.215l4.77 2.757L14.5 12z"/>
+                            <path fill="#4285F4" d="M3.609 1.814L13.792 12 3.61 22.186c-.483-.24-.82-.743-.82-1.32V3.134c0-.577.337-1.08.82-1.32z" />
+                            <path fill="#34A853" d="M13.79 12L6.001 4.215l4.77 2.757L14.5 12z" />
+                            <path fill="#FBBC04" d="M14.499 12l2.728-2.728 2.92 1.686c.91.525.91 1.859 0 2.384l-2.92 1.686-2.728-2.728z" />
+                            <path fill="#EA4335" d="M14.499 12.3l-2.728 2.728-4.77 2.757L13.79 12z" />
                         </svg>
                         <div className="store-badge-text">
                             <span className="store-badge-tiny">DISPONIBLE EN</span>

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useSyncExternalStore } from 'react';
+import React, { useEffect, useState, useSyncExternalStore } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
@@ -55,6 +55,22 @@ const navLinks = [
 const Navbar = () => {
     const scrolled = useSyncExternalStore(suscribirScroll, leerScrolled, leerScrolledEnServidor);
     const [menuOpen, setMenuOpen] = useState(false);
+
+    // iPhone: con el menú abierto, deslizar movía la web de detrás. Mientras
+    // está abierto se bloquea el scroll de la página; el menú desplaza lo
+    // suyo (overflow-y y overscroll-behavior en Navbar.css).
+    useEffect(() => {
+        if (!menuOpen) return undefined;
+        const html = document.documentElement.style;
+        const body = document.body.style;
+        const antes = [html.overflow, body.overflow];
+        html.overflow = 'hidden';
+        body.overflow = 'hidden';
+        return () => {
+            html.overflow = antes[0];
+            body.overflow = antes[1];
+        };
+    }, [menuOpen]);
     const pathname = usePathname();
     const router = useRouter();
 

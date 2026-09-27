@@ -178,10 +178,18 @@
     width: 100vw;
     max-width: 400px;
     height: 100vh;
+    /* iPhone: 100vh incluye lo que tapa la barra de Safari, así que el final
+       del menú («Ya estoy registrado», «Empieza gratis») quedaba escondido y
+       sin forma de llegar. 100dvh es la altura visible de verdad; si aun así
+       no cabe, el que se desplaza es el MENÚ y no la web de detrás. */
+    height: 100dvh;
+    overflow-y: auto;
+    overscroll-behavior: contain;
     background: rgba(15, 23, 42, 0.95);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     padding: 100px var(--spacing-lg) var(--spacing-xl);
+    padding-bottom: calc(var(--spacing-xl) + env(safe-area-inset-bottom, 0px));
     display: flex;
     flex-direction: column;
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);

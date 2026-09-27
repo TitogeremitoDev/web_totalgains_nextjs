@@ -302,13 +302,34 @@ function PricingCard({ plan, isAnnual, delay = 0 }) {
  * pero en /precios/ es el titular de la página y tiene que ser el h1. Se pasa
  * el tag en vez de duplicar un h1 aparte, que competiría con este mismo texto.
  */
+/* Deslizadores de móvil. Las cuatro marcas van a tercios del recorrido y el
+   valor sigue ESOS tramos: 1-25 | 25-100 | más de 100 atletas (gimnasio:
+   10-100 | 100-200 | más de 200 socios). Hasta el 27-sep eran lineales con
+   las marcas repartidas a partes iguales: con el pulgar sobre «100» salía 65. */
+const TRAMO = 100; // pasos por tercio: el input va de 0 a 300
+const coachDesdePos = (p) => (p <= TRAMO ? Math.round(1 + (p * 24) / TRAMO)
+    : p <= 2 * TRAMO ? Math.round(25 + ((p - TRAMO) * 75) / TRAMO) : 101);
+const posDesdeCoach = (n) => (n <= 25 ? Math.round(((n - 1) * TRAMO) / 24)
+    : n <= 100 ? Math.round(TRAMO + ((n - 25) * TRAMO) / 75) : 3 * TRAMO);
+const gymDesdePos = (p) => (p <= TRAMO ? 10 + Math.round((p * 9) / TRAMO) * 10
+    : p <= 2 * TRAMO ? 100 + Math.round(((p - TRAMO) * 10) / TRAMO) * 10 : 250);
+const posDesdeGym = (n) => (n <= 100 ? Math.round(((n - 10) * TRAMO) / 90)
+    : n <= 200 ? Math.round(TRAMO + ((n - 100) * TRAMO) / 100) : 3 * TRAMO);
+// Centro del pulgar (24 px en Pricing.css) cuando está en la fracción f.
+const PULGAR = 24;
+const marcaLeft = (f) => `calc(${f * 100}% + ${(0.5 - f) * PULGAR}px)`;
+
 const Pricing = ({ headingAs: Heading = 'h2' }) => {
     const [isAnnual, setIsAnnual] = useState(true);
     const [isMobile, setIsMobile] = useState(false);
-    const [clientCount, setClientCount] = useState(15);
+    // Los deslizadores guardan la POSICIÓN (0-300, por tercios) y de ahí sale
+    // el número: ver coachDesdePos / gymDesdePos.
+    const [clientPos, setClientPos] = useState(() => posDesdeCoach(15));
+    const clientCount = coachDesdePos(clientPos);
     // Socios va aparte de atletas: los rangos no coinciden y arrastrar el valor
     // de un slider al otro dejaba al gimnasio en un plan que no le tocaba.
-    const [memberCount, setMemberCount] = useState(60);
+    const [memberPos, setMemberPos] = useState(() => posDesdeGym(60));
+    const memberCount = gymDesdePos(memberPos);
     const [audience, setAudience] = useState('coach');
     const isGym = audience === 'gym';
 
@@ -437,12 +458,16 @@ const Pricing = ({ headingAs: Heading = 'h2' }) => {
                             <span className="slider-value">{clientCount >= 101 ? '+100' : clientCount}</span>
                         </div>
                         <input
-                            type="range" min="1" max="101" value={clientCount}
-                            onChange={e => setClientCount(Number(e.target.value))}
+                            type="range" min="0" max={3 * TRAMO} value={clientPos}
+                            onChange={e => setClientPos(Number(e.target.value))}
                             className="client-range"
+                            aria-label="Número de atletas"
+                            aria-valuetext={clientCount >= 101 ? 'Más de 100 atletas' : `${clientCount} atletas`}
                         />
                         <div className="slider-marks">
-                            <span>1</span><span>25</span><span>100</span><span>101+</span>
+                            {['1', '25', '100', '101+'].map((m, i) => (
+                                <span key={m} style={{ left: marcaLeft(i / 3) }}>{m}</span>
+                            ))}
                         </div>
                     </motion.div>
                 )}
@@ -458,12 +483,16 @@ const Pricing = ({ headingAs: Heading = 'h2' }) => {
                             <span className="slider-value">{memberCount >= 250 ? '+200' : memberCount}</span>
                         </div>
                         <input
-                            type="range" min="10" max="250" step="10" value={memberCount}
-                            onChange={e => setMemberCount(Number(e.target.value))}
+                            type="range" min="0" max={3 * TRAMO} value={memberPos}
+                            onChange={e => setMemberPos(Number(e.target.value))}
                             className="client-range"
+                            aria-label="Socios activos"
+                            aria-valuetext={memberCount >= 250 ? 'Más de 200 socios' : `${memberCount} socios`}
                         />
                         <div className="slider-marks">
-                            <span>10</span><span>100</span><span>200</span><span>+200</span>
+                            {['10', '100', '200', '+200'].map((m, i) => (
+                                <span key={m} style={{ left: marcaLeft(i / 3) }}>{m}</span>
+                            ))}
                         </div>
                     </motion.div>
                 )}

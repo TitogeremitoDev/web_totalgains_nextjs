@@ -692,7 +692,11 @@
     background: #FFD700; cursor: pointer;
     box-shadow: 0 0 15px rgba(255,215,0,.4); border: 2px solid white;
 }
-.slider-marks { display: flex; justify-content: space-between; font-size: .8rem; color: var(--text-secondary) }
+/* Cada marca va donde cae el CENTRO del pulgar en su tercio (Pricing.jsx,
+   marcaLeft). Con space-between se repartían por el ancho del texto y el
+   «100» no coincidía con el valor 100. */
+.slider-marks { position: relative; height: 1.2em; font-size: .8rem; color: var(--text-secondary) }
+.slider-marks span { position: absolute; top: 0; transform: translateX(-50%); white-space: nowrap }
 .mobile-pricing-container { max-width: 450px; margin: 0 auto }
 
 /* ── Responsive ── */
