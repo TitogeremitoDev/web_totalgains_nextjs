@@ -96,13 +96,18 @@ const AppShowcase = () => {
               <div
                 className={`phone-screen-showcase interactive-screen ${isTransitioning ? "transitioning" : ""}`}
               >
-                {/* Screen Image */}
+                {/* Screen Image. ⚠️ SIN objectFit en línea: manda el CSS
+                    (.screen-image: cover, arriba). Los hotspots de
+                    appShowcaseScreens.js están medidos así, con la captura a
+                    todo el ancho: en «home», h_mode y h_entreno coinciden con
+                    sus botones a menos del 1 %. Un `contain` aquí (entró el
+                    24-feb-2026) encogía la captura y descuadraba TODOS los
+                    recuadros, también en escritorio. */}
                 <Image
                   src={currentScreen.image}
                   alt={currentScreen.title}
                   className="screen-image"
                   fill
-                  style={{ objectFit: 'contain' }}
                 />
 
                 {/* Hotspots Overlay - Clickable areas */}
