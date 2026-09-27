@@ -19,6 +19,13 @@
     Redirect 301 /blog/gestion-clientes-entrenador-personal /gestion-clientes-fitness/
     Redirect 301 /blog/gestion-clientes-entrenador-personal/ /gestion-clientes-fitness/
 
+    # 301 consolidación de Harbiz (27-sep-2026). El post declaraba canonical a
+    # /alternativas/harbiz/precios/ desde el 11-ago, pero Google lo siguió
+    # indexando por su cuenta (Search Console: «La URL está en Google»).
+    # Reversible: quitar estas dos líneas y volver a publicar el post.
+    Redirect 301 /blog/harbiz-precios-2026 /alternativas/harbiz/precios/
+    Redirect 301 /blog/harbiz-precios-2026/ /alternativas/harbiz/precios/
+
     # Añadir trailing slash a rutas sin extensión
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_URI} !/$

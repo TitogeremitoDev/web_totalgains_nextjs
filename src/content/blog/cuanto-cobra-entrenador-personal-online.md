@@ -1,9 +1,9 @@
 ---
 title: "¿Cuánto Cobra un Entrenador Personal Online? (La Verdad que Nadie te Dice)"
 seoTitle: "Cuánto Cobra un Entrenador Personal Online 2026"
-description: "Tarifas reales en España 2026: de 25-45 € el seguimiento básico a 150-300 € el premium. Rangos por experiencia, formatos comparados y errores de pricing."
+description: "Tarifas reales en España 2026: seguimiento online de 50 a 300 €/mes, sesiones en directo de 25 a 200 € y packs de 200 a 1.500 €. Rangos por experiencia."
 date: "2025-01-20"
-lastModified: "2026-08-11"
+lastModified: "2026-09-27"
 author: "Germán Martínez Calvente"
 category: "negocio"
 readTime: 9
@@ -31,7 +31,18 @@ Hay entrenadores personales online cobrando 60 €/mes. Y hay entrenadores perso
 
 La diferencia no está en la experiencia, ni en los seguidores, ni en las certificaciones. Está en **cómo se posicionan y cómo calculan sus tarifas**.
 
-Si llevas tiempo preguntándote si estás cobrando demasiado poco — spoiler: probablemente sí. Aquí están los datos reales del mercado en España para que dejes de adivinar.
+Si llevas tiempo preguntándote si estás cobrando demasiado poco (spoiler: probablemente sí), aquí están los datos reales del mercado en España para que dejes de adivinar.
+
+<div class="tg-callout tg-callout-panic" role="note">
+<strong>Respuesta rápida.</strong> En España, un entrenador personal online cobra entre 50 y 300 €/mes por el seguimiento sin llamadas y entre 120 y 400 €/mes si incluye videollamadas. Una sesión suelta en directo cuesta de 25 a 200 €, y un pack de transformación de 8 a 12 semanas, de 200 a 1.500 €.
+</div>
+
+| Formato | Precio habitual | Cómo se reparte |
+|---|---|---|
+| Seguimiento mensual sin llamadas | 50-300 €/mes | 50-90 € con menos de 2 años de experiencia, 90-150 € con 2 a 5 años y 150-300 € con especialización o marca consolidada |
+| Seguimiento con videollamadas (1 a 4 al mes) | 120-400 €/mes | 120-200 € en gama media y 200-400 € en gama alta o especialistas |
+| Sesión suelta en directo | 25-200 €/sesión | 25-45 € junior, 50-100 € senior y 100-200 € alto rendimiento o imagen pública |
+| Pack de transformación (8 a 12 semanas) | 200-1.500 € | 200-400 € solo programación, 400-800 € con seguimiento completo y 800-1.500 € premium |
 
 ---
 
@@ -59,32 +70,32 @@ No existe una tarifa universal. El precio depende de varios factores: la modalid
 
 Esta es la modalidad más escalable. El entrenador diseña la [programación personalizada](/blog/como-crear-plan-entrenamiento-personalizado/), revisa el progreso semanalmente y responde por mensajes.
 
-- **Entrenadores con menos de 2 años de experiencia:** 50 € – 90 € / mes
-- **Entrenadores con 2-5 años:** 90 € – 150 € / mes
-- **Entrenadores especializados o con marca consolidada:** 150 € – 300 € / mes
+- **Entrenadores con menos de 2 años de experiencia:** 50-90 €/mes
+- **Entrenadores con 2-5 años:** 90-150 €/mes
+- **Entrenadores especializados o con marca consolidada:** 150-300 €/mes
 
 ### Seguimiento mensual con videollamadas (1-4 al mes)
 
 Añadir llamadas semanales o quincenales de revisión justifica subir el precio considerablemente:
 
-- **Gama media:** 120 € – 200 € / mes
-- **Gama alta / especialistas:** 200 € – 400 € / mes
+- **Gama media:** 120-200 €/mes
+- **Gama alta / especialistas:** 200-400 €/mes
 
 ### Sesiones individuales en directo (Zoom o similar)
 
 Aunque es menos escalable, hay entrenadores que siguen ofreciendo sesiones sueltas:
 
-- **Entrenadores junior:** 25 € – 45 € / sesión
-- **Entrenadores senior:** 50 € – 100 € / sesión
-- **Coaches de alto rendimiento / imagen pública:** 100 € – 200 € / sesión
+- **Entrenadores junior:** 25-45 €/sesión
+- **Entrenadores senior:** 50-100 €/sesión
+- **Coaches de alto rendimiento / imagen pública:** 100-200 €/sesión
 
 ### Packs de transformación (8-12 semanas)
 
 Muy populares porque tienen una promesa concreta (resultado en X semanas). Precios habituales:
 
-- **Pack básico (solo programación):** 200 € – 400 €
-- **Pack con seguimiento completo:** 400 € – 800 €
-- **Pack premium (llamadas + nutrición + comunidad):** 800 € – 1.500 €
+- **Pack básico (solo programación):** 200-400 €
+- **Pack con seguimiento completo:** 400-800 €
+- **Pack premium (llamadas + nutrición + comunidad):** 800-1.500 €
 
 ---
 
@@ -94,12 +105,12 @@ Muy populares porque tienen una promesa concreta (resultado en X semanas). Preci
 
 Muchos entrenadores cometen el error de cobrar poco porque no son conscientes de todo lo que aportan. Un servicio de entrenamiento online de calidad incluye:
 
-1. **Evaluación inicial** — cuestionario de salud, historial deportivo, objetivos
-2. **[Programación personalizada](/blog/como-crear-plan-entrenamiento-personalizado/)** — diseño de rutinas adaptadas a cada cliente
-3. **Plan de alimentación** — aunque no seas nutricionista, orientar la ingesta de macros es habitual
-4. **Revisiones periódicas** — seguimiento semanal o quincenal del progreso
-5. **Soporte por mensajería** — responder dudas, ajustar cargas, motivar
-6. **Ajustes continuos** — modificar la programación según respuesta del cuerpo
+1. **Evaluación inicial**: cuestionario de salud, historial deportivo, objetivos
+2. **[Programación personalizada](/blog/como-crear-plan-entrenamiento-personalizado/)**: diseño de rutinas adaptadas a cada cliente
+3. **Plan de alimentación**: aunque no seas nutricionista, orientar la ingesta de macros es habitual
+4. **Revisiones periódicas**: seguimiento semanal o quincenal del progreso
+5. **Soporte por mensajería**: responder dudas, ajustar cargas, motivar
+6. **Ajustes continuos**: modificar la programación según respuesta del cuerpo
 
 Todo eso tiene un valor real. Si lo calculas en horas, verás que el precio no es tan alto como parece.
 
@@ -113,7 +124,7 @@ Aquí tienes un método sencillo para fijar un precio sostenible:
 
 Un entrenador que trabaja 40 horas semanales y gestiona el seguimiento de forma manual puede manejar 15-25 clientes antes de que la calidad empiece a resentirse.
 
-Con una [herramienta de gestión como TotalGains](/plataforma-entrenamiento-online/) — que automatiza revisiones, envíos de rutinas y recordatorios — ese número puede subir a 40-60 clientes sin perder calidad.
+Con una [herramienta de gestión como TotalGains](/plataforma-entrenamiento-online/), que automatiza revisiones, envíos de rutinas y recordatorios, ese número puede subir a 40-60 clientes sin perder calidad.
 
 ### Paso 2: Calcula tu ingreso objetivo
 
@@ -156,8 +167,8 @@ No es solo una cuestión de cobrar más por cliente. Los entrenadores que supera
 
 1. **Precio medio-alto por cliente** (100-200 €/mes)
 2. **Cartera amplia** (30-50 clientes activos)
-3. **[Sistemas que ahorran tiempo](/gestion-clientes-fitness/)** — herramientas que automatizan el 80% del trabajo administrativo
-4. **Upsells naturales** — suplementación, packs de transformación, mentorías grupales
+3. **[Sistemas que ahorran tiempo](/gestion-clientes-fitness/)**: herramientas que automatizan el 80% del trabajo administrativo
+4. **Upsells naturales**: suplementación, packs de transformación, mentorías grupales
 
 El factor diferenciador suele ser el tercero: cuánto tiempo dedican a generar ingresos vs. cuánto dedican a tareas operativas. Entrenadores como Nacho Pulido (que comparte su historia en [nuestra web](/casos-de-exito/nacho-pulido/)) lograron escalar de 15 a 40 clientes sin aumentar sus horas semanales usando [TotalGains para automatizar revisiones y envíos de rutinas](/ia-entrenador-personal/).
 
@@ -213,13 +224,13 @@ Los que superan 5.000€/mes combinan cuatro factores: precio medio-alto por cli
 
 ## Artículos relacionados que te pueden interesar
 
-- ⚠️ **[Los 7 Errores que Arruinan el Negocio de los Entrenadores Personales Online](/blog/errores-entrenadores-personales-online/)** — Los errores comunes que frenan el crecimiento
-- 🎯 **[Cómo Conseguir Clientes como Entrenador Personal Online](/blog/como-conseguir-clientes-entrenador-personal-online/)** — El método probado para pasar de 0 a 30 clientes sin publicidad
-- 📋 **[Cómo Crear un Plan de Entrenamiento Personalizado que Funcione](/blog/como-crear-plan-entrenamiento-personalizado/)** — El proceso paso a paso desde la evaluación inicial
-- 🛠️ **[Los 5 Mejores Software para Entrenadores Personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)** — Comparativa completa con precios verificados
-- 🚀 **[Cómo Migrar de Trainerize, Harbiz o MyPT Hub a TotalGains: Guía 2026](/blog/como-migrar-software-entrenador-personal/)** — Proceso paso a paso para cambiar de software sin perder clientes ni datos
-- 🤖 **[IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — Guía real con capturas y ejemplos de cómo aprovechar la IA en tu negocio fitness
-- ☀️ **[Tu Primer Verano como Entrenador Personal: Por Qué Empezar con App Desde el Día 1 (Guía 2026)](/blog/primer-verano-entrenador-personal-2026/)** — Guía operativa para coaches juniors arrancando este verano: precios, captación y herramientas mínimas
-- 🌊 **[El Cliente Que Se Va Sin Avisar: Retención en Verano para Coaches Online (Guía 2026)](/blog/retencion-clientes-verano-entrenador-personal-2026/)** — Por qué el coste real de tus tarifas no es lo que cobras sino lo que pierdes cuando un cliente se va en silencio en agosto
-- 🚪 **[Has Tocado Techo de Clientes: Escalar en 2026](/blog/techo-clientes-entrenador-personal-escalar-2026/)** — Por qué subir precios no rompe el techo si tu operativa sigue siendo manual; pasar de 20 a 30 clientes = +14.400 €/año
-- 💵 **[El Precio Real de Tu Tarifa: Calculadora €/hora Real 2026](/blog/precio-real-tarifa-coach-online-2026/)** — Herramienta funcional para calcular cuánto ganas realmente por hora una vez incluidas todas las horas de admin invisibles
+- ⚠️ **[Los 7 Errores que Arruinan el Negocio de los Entrenadores Personales Online](/blog/errores-entrenadores-personales-online/)**: Los errores comunes que frenan el crecimiento
+- 🎯 **[Cómo Conseguir Clientes como Entrenador Personal Online](/blog/como-conseguir-clientes-entrenador-personal-online/)**: El método probado para pasar de 0 a 30 clientes sin publicidad
+- 📋 **[Cómo Crear un Plan de Entrenamiento Personalizado que Funcione](/blog/como-crear-plan-entrenamiento-personalizado/)**: El proceso paso a paso desde la evaluación inicial
+- 🛠️ **[Los 5 Mejores Software para Entrenadores Personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)**: Comparativa completa con precios verificados
+- 🚀 **[Cómo Migrar de Trainerize, Harbiz o MyPT Hub a TotalGains: Guía 2026](/blog/como-migrar-software-entrenador-personal/)**: Proceso paso a paso para cambiar de software sin perder clientes ni datos
+- 🤖 **[IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)**: Guía real con capturas y ejemplos de cómo aprovechar la IA en tu negocio fitness
+- ☀️ **[Tu Primer Verano como Entrenador Personal: Por Qué Empezar con App Desde el Día 1 (Guía 2026)](/blog/primer-verano-entrenador-personal-2026/)**: Guía operativa para coaches juniors arrancando este verano: precios, captación y herramientas mínimas
+- 🌊 **[El Cliente Que Se Va Sin Avisar: Retención en Verano para Coaches Online (Guía 2026)](/blog/retencion-clientes-verano-entrenador-personal-2026/)**: Por qué el coste real de tus tarifas no es lo que cobras sino lo que pierdes cuando un cliente se va en silencio en agosto
+- 🚪 **[Has Tocado Techo de Clientes: Escalar en 2026](/blog/techo-clientes-entrenador-personal-escalar-2026/)**: Por qué subir precios no rompe el techo si tu operativa sigue siendo manual; pasar de 20 a 30 clientes = +14.400 €/año
+- 💵 **[El Precio Real de Tu Tarifa: Calculadora €/hora Real 2026](/blog/precio-real-tarifa-coach-online-2026/)**: Herramienta funcional para calcular cuánto ganas realmente por hora una vez incluidas todas las horas de admin invisibles

@@ -465,7 +465,7 @@ export default async function PostPage({ params }) {
             </div>
             {post.author && (
               <p className="post-author-bio" style={{ marginTop: 14, fontSize: "0.86rem", lineHeight: 1.55, color: "var(--text-secondary,#9aa)", maxWidth: 720 }}>
-                <strong style={{ color: "var(--text-primary,#ddd)" }}>Germán Martínez Calvente</strong> — Fundador y desarrollador de TotalGains. Coach y desarrollador desde La Zubia (Granada). Escribe sobre gestión operativa, IA aplicada al entrenamiento y escala del negocio del entrenador personal online. <Link href="/sobre-nosotros/" style={{ color: "inherit", textDecoration: "underline dotted", textUnderlineOffset: 3 }}>Sobre el autor</Link>.
+                <strong style={{ color: "var(--text-primary,#ddd)" }}>Germán Martínez Calvente</strong>, fundador y desarrollador de TotalGains. Coach y desarrollador desde La Zubia (Granada). Escribe sobre gestión operativa, IA aplicada al entrenamiento y escala del negocio del entrenador personal online. <Link href="/sobre-nosotros/" style={{ color: "inherit", textDecoration: "underline dotted", textUnderlineOffset: 3 }}>Sobre el autor</Link>.
               </p>
             )}
           </div>

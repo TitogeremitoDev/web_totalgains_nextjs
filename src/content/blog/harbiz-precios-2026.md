@@ -8,7 +8,9 @@ lastModified: "2026-08-10"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 16
-published: true
+# 27-sep-2026: sustituido por un 301 a /alternativas/harbiz/precios/ (.htaccess),
+# porque Google ignoró el canonical. Reversible: published: true y quitar el 301.
+published: false
 keywords:
   - "Harbiz precios"
   - "Harbiz precios 2026"
