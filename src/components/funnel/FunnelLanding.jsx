@@ -415,7 +415,16 @@ function DemoForm({ data, srcRef, onSent }) {
                 // gtag envía por sendBeacon, así que el evento sobrevive al push.
                 router.push(`/gracias/?de=demo-${data.perfil}`);
             })
-            .catch(() => setStatus("error"));
+            .catch((err) => {
+                // Mismo evento que el formulario de contacto (comparten EmailJS):
+                // un solo sitio en GA4 para ver por qué fallan los envíos.
+                trackEvent("lead_submit_error", {
+                    form_name: `demo_${data.perfil}`,
+                    error_status: String(err?.status ?? "sin_status"),
+                    error_text: String(err?.text || err?.message || "sin_texto").slice(0, 100),
+                });
+                setStatus("error");
+            });
     };
 
     const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
