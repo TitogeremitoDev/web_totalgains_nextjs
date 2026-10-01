@@ -1,0 +1,26 @@
+/* Marco del vídeo de demo: mismo lenguaje que las capturas de producto
+   (bordes redondeados, sombra y brillo azul suave). */
+.demo-video {
+    max-width: 960px;
+    margin: 0 auto;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #070b16;
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.45),
+        0 0 60px rgba(102, 126, 234, 0.15);
+}
+
+/* width/height del <video> dan la proporción antes de cargar nada (16:9). */
+.demo-video-media {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 640px) {
+    .demo-video {
+        border-radius: 12px;
+    }
+}

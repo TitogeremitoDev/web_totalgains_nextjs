@@ -540,3 +540,8 @@
     .fn-tabs-bar, .fn-media-col, .fn-hero-bg, .fn-ctas, .fn-indice { display: none !important; }
     .fn-cat { break-inside: avoid-page; padding-top: 18px; }
 }
+
+/* Demo en vídeo bajo la cabecera (data.demo; hoy solo gimnasios). */
+.fn-demo { padding: 8px 0 56px; }
+.fn-demo-h { text-align: center; }
+.fn-demo-sub { max-width: 640px; margin: 0 auto 24px; text-align: center; color: var(--text-secondary); line-height: 1.6; }

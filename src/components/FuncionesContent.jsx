@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FeatureMedia from "./FeatureMedia";
+import DemoVideo from "./DemoVideo";
 import "./funciones.css";
 
 /* ──────────────────────────────────────────────
@@ -202,6 +203,22 @@ export default function FuncionesContent({ data, otro }) {
                     </div>
                 </div>
             </section>
+
+            {/* ── Demo en vídeo: solo si el catálogo la trae (gimnasios) ── */}
+            {data.demo && (
+                <section className="fn-demo" aria-labelledby="fn-demo-h">
+                    <div className="container">
+                        <h2 id="fn-demo-h" className="fn-h2 fn-demo-h">{data.demo.h2}</h2>
+                        <p className="fn-demo-sub">{data.demo.sub}</p>
+                        <DemoVideo
+                            src={data.demo.src}
+                            poster={data.demo.poster}
+                            titulo={data.demo.titulo}
+                            ubicacion={`funciones_${data.slug}`}
+                        />
+                    </div>
+                </section>
+            )}
 
             {/* ── Pestañas ── */}
             <nav className="fn-tabs-bar" id="areas" tabIndex={-1} aria-label="Áreas de funciones">

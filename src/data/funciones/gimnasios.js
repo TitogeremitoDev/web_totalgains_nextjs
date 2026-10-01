@@ -39,6 +39,19 @@ const gimnasios = {
         'Migración desde Harbiz o Virtuagym',
     ],
 
+    // Vídeo de producto (1:56, con sonido) bajo la cabecera; el mismo que
+    // /para-gimnasios/. Lo que enseña está en este catálogo: comprobado el
+    // 1-oct-2026 contra el código de la app, y ese día se añadieron las tres
+    // funciones que faltaban (mover clases arrastrando, socios por estado y
+    // análisis con IA en la analítica de cobros).
+    demo: {
+        src: '/video/gym-demo.mp4',
+        poster: '/video/gym-demo.jpg',
+        titulo: 'Demo de TotalGains para gimnasios',
+        h2: 'Míralo por dentro en 2 minutos',
+        sub: 'Un gimnasio de ejemplo de punta a punta: el panel, las clases, los socios, los cobros, los servicios, quién está dejando de venir y la app con tu marca.',
+    },
+
     breadcrumb: 'Gimnasios',
 
     categorias: [
@@ -85,6 +98,7 @@ const gimnasios = {
                   { t: 'El día de hoy, en una pantalla', d: 'Marcar asistencia, cancelar una reserva, quitar a un invitado o liberar una plaza, sin abrir la ficha de nadie.' },
                   { t: 'Las clases en vivo', d: 'Ves las reservas de cada clase al momento y quién ha entrado desde la lista de espera.' },
                   { t: 'Avisos de clase que configuras tú', d: 'Recordar a cada socio sus clases habituales y avisar de la apertura de plazas, y decidir si solo a los que tienen bono activo.' },
+                  { t: 'Mover una clase arrastrándola', d: 'En el horario arrastras una clase a otro día u hora y eliges si mueves solo la próxima sesión o la clase de todas las semanas.' },
             ],
         },
         {
@@ -234,6 +248,7 @@ const gimnasios = {
                 { t: 'Proponer horario en el alta', d: 'Le dejas propuesto el horario que encaja con lo que ha contratado.' },
                   { t: 'A quién atender hoy', d: 'Una bandeja que te dice quién tiene algo pendiente, quién no puede reservar y por qué, con el mensaje ya redactado por IA si quieres.' },
                   { t: 'Documentos firmados con certificado', d: 'Asignas un documento (consentimiento de imagen, normativa) y el socio lo firma desde la app: se genera su certificado. Si lo firmó en papel, lo marcas.' },
+                  { t: 'Socios por estado', d: 'Filtras la lista por activos, pausados o cancelados, o ves primero los más recientes, y abres la ficha de cada socio con un toque.' },
             ],
         },
         {
@@ -277,6 +292,7 @@ const gimnasios = {
                    sin botón en domiciliados. «lo registras» es literal: TotalGains
                    NO mueve dinero, registra la venta que ha cobrado el centro. */
                 { t: 'Renovar un bono en dos toques', d: 'Desde Pagos o desde la ficha del socio, «Renovar bono» te enseña el plan, lo que se va a cobrar y desde qué día vale, y lo registras eligiendo cómo ha pagado. Si el precio del plan ha cambiado te lo avisa, y si hoy ya le habías cobrado te para antes de duplicarlo. No aparece en las cuotas domiciliadas, que ya se registran solas.' },
+                { t: 'Análisis de tus números con IA', d: 'En la analítica de cobros, un botón hace que la IA lea la evolución de tus números y te diga qué va bien, qué vigilar y dónde reforzar el marketing.' },
             ],
         },
         {
