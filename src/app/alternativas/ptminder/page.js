@@ -10,6 +10,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/ptminder/",
   },
   openGraph: {
+    type: "website",
     title: "TotalGains vs PTminder — Alternativa con App Nativa y Soporte en Español",
     description:
       "Migra de PTminder a TotalGains. App nativa, base de alimentos completa y gestión integral de clientes desde 29,90€/mes.",

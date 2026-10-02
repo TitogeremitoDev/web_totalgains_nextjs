@@ -8,6 +8,7 @@ export const metadata = {
     "Coaches reales que escalaron con TotalGains: Nacho Pulido pasó de 15 a 40 clientes y Lorena Eses ahorra 10 h/semana. Entrevistas completas, sin humo.",
   alternates: { canonical: "https://totalgains.es/casos-de-exito/" },
   openGraph: {
+    type: "website",
     title: "Casos de Éxito TotalGains | Coaches y Nutricionistas Reales",
     description:
       "Historias documentadas de entrenadores y nutricionistas que transformaron su gestión con TotalGains. Métricas verificables, no marketing.",

@@ -1,6 +1,7 @@
 import ParaGimnasiosContent from "@/components/ParaGimnasiosContent";
 import "./para-gimnasios.css";
 
+import { ofertasGym, aggregateRatingNode } from "@/data/productSchema";
 export const metadata = {
   title: "Software Gimnasios Pequeños 2026: Multi-Coach",
   description:
@@ -17,6 +18,7 @@ export const metadata = {
   ],
   alternates: { canonical: "https://totalgains.es/para-gimnasios/" },
   openGraph: {
+    type: "website",
     title: "Software para Gimnasios Pequeños — Multi-Coach + Clases | TotalGains",
     description:
       "La plataforma para gimnasios de barrio, estudios de entrenamiento personal y centros con clases colectivas. Multi-coach, permisos granulares, app marca blanca.",
@@ -67,16 +69,8 @@ export default function ParaGimnasios() {
           "Software de gestión integral para gimnasios pequeños y estudios de entrenamiento: clases grupales con waitlist, multi-coach con permisos granulares, app marca blanca, cuotas recurrentes con caja y facturación, y módulos de rutinas y nutrición con IA. Diseñado en español para el mercado hispano.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/para-gimnasios/",
-        offers: {
-          "@type": "AggregateOffer",
-          lowPrice: 149,
-          highPrice: 249,
-          priceCurrency: "EUR",
-          offerCount: 3,
-          availability: "https://schema.org/InStock",
-          url: "https://totalgains.es/para-gimnasios/",
-          image: "https://totalgains.es/og-image.jpg",
-        },
+        offers: ofertasGym(),
+        aggregateRating: aggregateRatingNode(),
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },

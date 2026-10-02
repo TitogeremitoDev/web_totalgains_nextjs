@@ -3,12 +3,14 @@ import LandingExtrasBlock from "@/components/LandingExtrasBlock";
 import Link from "next/link";
 import { Apple, Search, Zap, Globe, Shield, BarChart3 } from "lucide-react";
 
+import { ofertasCoach, aggregateRatingNode } from "@/data/productSchema";
 export const metadata = {
   title: "+240.000 Alimentos para Entrenadores Personales",
   description:
     "La base más completa para coaches: +240.000 alimentos validados en español. Dietas precisas con macros y calorías al instante.",
   alternates: { canonical: "https://totalgains.es/base-datos-alimentos-fitness/" },
   openGraph: {
+    type: "website",
     title: "+240.000 Alimentos para Entrenadores | TotalGains",
     description: "Base de datos nutricional con más de 240.000 alimentos validados en español. Dietas precisas en segundos.",
     url: "https://totalgains.es/base-datos-alimentos-fitness/",
@@ -125,7 +127,8 @@ export default function BaseDatosAlimentos() {
         description: "+240.000 alimentos validados en español con macros y calorías precisos. Base de datos nutricional para entrenadores personales y nutricionistas.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/base-datos-alimentos-fitness/",
-        offers: { "@type": "AggregateOffer", lowPrice: 0, highPrice: 149.90, priceCurrency: "EUR", offerCount: 4, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Gratuito", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=free", description: "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. Incluye las mismas funciones que los planes de pago: app de marca blanca, IA de rutinas y dietas y +240.000 alimentos en español. Lo único que cambia entre planes es el número de atletas." }, { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
+        offers: ofertasCoach(),
+        aggregateRating: aggregateRatingNode(),
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },

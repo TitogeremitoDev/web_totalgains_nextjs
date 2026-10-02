@@ -9,6 +9,7 @@ export const metadata = {
   description: "Artículos sobre negocio fitness, captación de clientes, herramientas y metodología para entrenadores personales online. Aprende a escalar tu negocio.",
   alternates: { canonical: "https://totalgains.es/blog/" },
   openGraph: {
+    type: "website",
     title: "Blog TotalGains | Recursos para Entrenadores Personales",
     description: "Estrategias de negocio, captación de clientes y herramientas para entrenadores personales online.",
     url: "https://totalgains.es/blog/",

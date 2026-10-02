@@ -10,6 +10,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/virtuagym/",
   },
   openGraph: {
+    type: "website",
     title: "Alternativa a Virtuagym para entrenadores y gimnasios",
     description:
       "Para entrenadores desde 29,90 €/mes y para gimnasios de 149 a 249 €/mes, con IVA y entrenadores ilimitados. Alternativa en español a Virtuagym.",

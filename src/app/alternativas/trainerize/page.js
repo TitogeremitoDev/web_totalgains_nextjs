@@ -14,6 +14,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/trainerize/",
   },
   openGraph: {
+    type: "website",
     title: "TotalGains vs Trainerize — ¿Cuál es mejor para entrenadores?",
     description:
       "Tabla comparativa completa: soporte, velocidad, IA, precios y más. Migra gratis en 5 minutos.",

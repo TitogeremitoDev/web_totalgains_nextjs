@@ -23,9 +23,10 @@ const totalGimnasios = gimnasios.categorias.reduce((n, c) => n + c.items.length,
 export const metadata = {
     title: { absolute: "Funciones de TotalGains: todo lo que incluye el plan" },
     description:
-        "Catálogo completo de funciones de TotalGains para entrenadores, nutricionistas y gimnasios. Rutinas y dietas con IA, clases con reserva, tienda con stock y pedidos, caja y facturación. Todo incluido en cualquier plan, sin add-ons.",
+        "Todas las funciones de TotalGains para entrenadores, nutricionistas y gimnasios: rutinas y dietas con IA, clases con reserva, tienda y caja. Sin add-ons.",
     alternates: { canonical: "https://totalgains.es/funciones/" },
     openGraph: {
+        type: "website",
         title: "Funciones de TotalGains: todo lo que incluye el plan",
         description:
             "El catálogo completo, por perfil: entrenadores y nutricionistas, y gimnasios. Sin add-ons ni módulos que se contratan aparte.",

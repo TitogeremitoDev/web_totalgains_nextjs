@@ -17,6 +17,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/mypthub/",
   },
   openGraph: {
+    type: "website",
     title: "TotalGains vs MyPT Hub — ¿Cuál es mejor para entrenadores?",
     description:
       "Tabla comparativa: UX intuitiva, IA integrada, soporte español. Migra gratis.",

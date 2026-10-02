@@ -19,7 +19,7 @@ const gimnasios = {
     meta: {
         title: 'Funciones para gimnasios, estudios y boxes',
         description:
-            'Catálogo completo del módulo de gimnasio de TotalGains: clases con aforo y lista de espera, tienda con stock y pedidos desde la app, caja y facturación, multi-coach y retención. Todo incluido en cualquier plan.',
+            'Funciones de TotalGains para gimnasios: clases con aforo y lista de espera, tienda con stock, caja y facturación, multi-coach y retención. Todo incluido.',
         canonical: 'https://totalgains.es/funciones/gimnasios/',
     },
 

@@ -19,6 +19,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/harbiz/precios/",
   },
   openGraph: {
+    type: "website",
     title: "Harbiz Precios 2026: 22,99 €/mes → 313 €/mes (con IVA)",
     description:
       "Precios Harbiz 2026 verificados con IVA: Basic 22,99 €, Pro 143,99 €, My APP 240,79 €. Al escalar con add-ons llega a 313 €/mes.",

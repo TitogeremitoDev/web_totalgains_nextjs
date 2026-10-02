@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Script from "next/script";
 
+import { softwareApplicationNode } from "@/data/productSchema";
 export const metadata = {
   title: "Opiniones de Clientes TotalGains 2026",
   description:
@@ -17,6 +18,7 @@ export const metadata = {
   ],
   alternates: { canonical: "https://totalgains.es/opiniones-clientes/" },
   openGraph: {
+    type: "website",
     title: "Opiniones de Clientes TotalGains 2026",
     description:
       "Reseñas reales en Trustpilot, casos de éxito de coaches y valoraciones en App Store. Todo verificado externamente.",
@@ -168,13 +170,7 @@ export default function OpinionesClientes() {
                 name: "Trustpilot",
                 url: "https://es.trustpilot.com/review/totalgains.es",
               },
-              itemReviewed: {
-                "@type": "SoftwareApplication",
-                name: "TotalGains",
-                applicationCategory: "HealthApplication",
-                operatingSystem: "iOS, Android, Web",
-                url: "https://totalgains.es/",
-              },
+              itemReviewed: softwareApplicationNode(),
             },
           })),
           ...casosExito.map((c, i) => ({
@@ -188,13 +184,7 @@ export default function OpinionesClientes() {
               datePublished: c.date,
               reviewBody: c.quote,
               publisher: { "@type": "Organization", name: "TotalGains", url: "https://totalgains.es/" },
-              itemReviewed: {
-                "@type": "SoftwareApplication",
-                name: "TotalGains",
-                applicationCategory: "HealthApplication",
-                operatingSystem: "iOS, Android, Web",
-                url: "https://totalgains.es/",
-              },
+              itemReviewed: softwareApplicationNode(),
             },
           })),
         ],

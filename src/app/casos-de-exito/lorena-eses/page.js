@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
 
+import { softwareApplicationNode } from "@/data/productSchema";
 export const metadata = {
   title: "Lorena Eses: Nutricionista que ahorra 10h/sem",
   description:
@@ -10,6 +11,7 @@ export const metadata = {
     canonical: "https://totalgains.es/casos-de-exito/lorena-eses/",
   },
   openGraph: {
+    type: "website",
     title: "Lorena Eses ahorra +10h/semana automatizando con TotalGains",
     description:
       "Caso real de una nutricionista online que pasó de múltiples Excel a gestionar todo desde una sola plataforma.",
@@ -61,13 +63,7 @@ export default function CasoLorenaEses() {
           name: "Lorena Eses",
           sameAs: "https://www.instagram.com/lorenaeses/",
         },
-        itemReviewed: {
-          "@type": "SoftwareApplication",
-          name: "TotalGains",
-          applicationCategory: "HealthApplication",
-          operatingSystem: "iOS, Android, Web",
-          url: "https://totalgains.es/",
-        },
+        itemReviewed: softwareApplicationNode(),
         name: "Caso de éxito: Lorena Eses, +10 horas semanales ahorradas",
         reviewRating: {
           "@type": "Rating",

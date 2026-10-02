@@ -1,5 +1,5 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
-import { aggregateRatingNode } from "@/data/productSchema";
+import { aggregateRatingNode, ofertasCoach } from "@/data/productSchema";
 import Link from "next/link";
 import { Users, LayoutDashboard, Bell, CreditCard, Palette, BarChart3, Check, X, Star } from "lucide-react";
 
@@ -9,6 +9,7 @@ export const metadata = {
     "Rutinas con IA en menos de 2 min, +240.000 alimentos y app marca blanca en todos los planes. Gratis hasta 5 atletas; de pago desde 29,90 €/mes con IVA.",
   alternates: { canonical: "https://totalgains.es/software-entrenador-personal/" },
   openGraph: {
+    type: "website",
     title: "Software Entrenadores Personales · Desde 29,90 €/mes | TotalGains",
     description: "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en todos los planes. Plan Gratuito de por vida para 5 atletas, sin tarjeta. De pago desde 29,90 €/mes con IVA.",
     url: "https://totalgains.es/software-entrenador-personal/",
@@ -85,7 +86,7 @@ export default function SoftwareEntrenadorPersonal() {
         description: "Software de gestión integral para entrenadores personales en español: IA generativa de rutinas y dietas, base de +240.000 alimentos, seguimiento de adherencia, recordatorios de renovación y app marca blanca incluida en todos los planes. Migración asistida gratuita.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/software-entrenador-personal/",
-        offers: { "@type": "AggregateOffer", lowPrice: 0, highPrice: 149.90, priceCurrency: "EUR", offerCount: 4, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Gratuito", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=free", description: "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. Incluye las mismas funciones que los planes de pago: app de marca blanca, IA de rutinas y dietas y +240.000 alimentos en español. Lo único que cambia entre planes es el número de atletas." }, { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
+        offers: ofertasCoach(),
         aggregateRating: aggregateRatingNode(),
         review: [
           { "@type": "Review", author: { "@type": "Person", name: "Nacho Pulido" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" }, reviewBody: "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.", datePublished: "2025-03-01", itemReviewed: { "@id": "https://totalgains.es/#software" } },

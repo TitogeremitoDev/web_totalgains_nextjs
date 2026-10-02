@@ -1,6 +1,6 @@
 import AlternativaTimpContent from "@/components/AlternativaTimpContent";
 import { TIMP_FAQS } from "@/data/alternativaTimp";
-import { PLANES_GYM, aggregateRatingNode, organizationNode } from "@/data/productSchema";
+import { ofertasGym, aggregateRatingNode, organizationNode } from "@/data/productSchema";
 
 export const metadata = {
   title: { absolute: "Alternativa a Timp: TotalGains para gimnasios y estudios" },
@@ -10,6 +10,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/timp/",
   },
   openGraph: {
+    type: "website",
     title: "Alternativa a Timp: TotalGains para gimnasios y estudios",
     description:
       "Timp cobra por profesional y TotalGains por socios activos, con entrenadores ilimitados de 149 a 249 €/mes con IVA.",
@@ -19,7 +20,6 @@ export const metadata = {
 };
 
 export default function AlternativaTimp() {
-  const precios = PLANES_GYM.map((p) => Number(p.price));
   const schema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -37,15 +37,7 @@ export default function AlternativaTimp() {
           "TotalGains para gimnasios, estudios y boxes, alternativa en español a Timp: clases con reserva y lista de espera, entrenadores ilimitados, tienda, servicios de pago por sesión y rutinas y dietas con IA en una app con la marca del centro.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/para-gimnasios/",
-        offers: {
-          "@type": "AggregateOffer",
-          lowPrice: Math.min(...precios),
-          highPrice: Math.max(...precios),
-          priceCurrency: "EUR",
-          offerCount: PLANES_GYM.length,
-          availability: "https://schema.org/InStock",
-          url: "https://totalgains.es/para-gimnasios/",
-        },
+        offers: ofertasGym(),
         aggregateRating: aggregateRatingNode(),
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },

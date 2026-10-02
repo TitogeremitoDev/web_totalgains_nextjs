@@ -67,6 +67,24 @@ export const PLANES_GYM = [
     { id: "gym-elite", name: "TotalGains Gym Elite", price: "249", description: "Más de 200 socios activos, coaches ilimitados y soporte VIP en español" },
 ];
 
+/* Ofertas con PRECIO concreto, una por plan. Google exige `offers.price` en
+   SoftwareApplication y no contempla AggregateOffer (horquilla). Hasta el
+   2-oct-2026 las 24 fichas de la web daban AggregateOffer y Ahrefs lo marcaba
+   como error de datos estructurados en 27 páginas (las 24 + 3 reseñas cuyo
+   itemReviewed era una ficha a medias). Fuente única: usar SIEMPRE estas. */
+const oferta = (p, url) => ({
+    "@type": "Offer",
+    name: p.name,
+    price: p.price,
+    priceCurrency: "EUR",
+    availability: "https://schema.org/InStock",
+    url,
+    description: p.description,
+});
+export const ofertasCoach = () =>
+    [PLAN_FREE, ...PLANES_COACH].map((p) => oferta(p, `https://totalgains.es/onboarding/?plan=${p.id}`));
+export const ofertasGym = () => PLANES_GYM.map((p) => oferta(p, "https://totalgains.es/para-gimnasios/"));
+
 /**
  * Nodo SoftwareApplication con oferta y valoración.
  *
@@ -92,24 +110,7 @@ export function softwareApplicationNode({ description, id = "https://totalgains.
             description ||
             "Software para entrenadores personales en español: gestión de atletas, rutinas y dietas con IA, app marca blanca incluida en todos los planes y base de +240.000 alimentos.",
         ...(featureList && featureList.length ? { featureList } : {}),
-        offers: {
-            "@type": "AggregateOffer",
-            lowPrice: 0,
-            highPrice: 149.9,
-            priceCurrency: "EUR",
-            offerCount: PLANES_COACH.length + 1,
-            availability: "https://schema.org/InStock",
-            url: "https://totalgains.es/onboarding/",
-            offers: [PLAN_FREE, ...PLANES_COACH].map((p) => ({
-                "@type": "Offer",
-                name: p.name,
-                price: p.price,
-                priceCurrency: "EUR",
-                availability: "https://schema.org/InStock",
-                url: `https://totalgains.es/onboarding/?plan=${p.id}`,
-                description: p.description,
-            })),
-        },
+        offers: ofertasCoach(),
         aggregateRating: aggregateRatingNode(),
     };
 }

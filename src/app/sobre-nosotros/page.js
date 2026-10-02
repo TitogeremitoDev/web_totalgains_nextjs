@@ -8,6 +8,7 @@ export const metadata = {
   description: "Construido por un entrenador, para entrenadores. La historia de Germán Martínez Calvente y por qué nació TotalGains. Software fitness en español.",
   alternates: { canonical: "https://totalgains.es/sobre-nosotros/" },
   openGraph: {
+    type: "website",
     title: "Sobre TotalGains — La historia detrás del software",
     description: "Construido por un entrenador, para entrenadores. La historia de cómo nació TotalGains.",
     url: "https://totalgains.es/sobre-nosotros/",

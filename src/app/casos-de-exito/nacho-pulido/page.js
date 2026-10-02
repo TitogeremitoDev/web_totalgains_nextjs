@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
 
+import { softwareApplicationNode } from "@/data/productSchema";
 export const metadata = {
   title: "Caso Nacho Pulido: de 15 a 40 clientes activos",
   description:
@@ -10,6 +11,7 @@ export const metadata = {
     canonical: "https://totalgains.es/casos-de-exito/nacho-pulido/",
   },
   openGraph: {
+    type: "website",
     title: "Nacho Pulido ahorra 10h/semana con TotalGains",
     description:
       "Caso de éxito real de un entrenador personal que dejó Excel y WhatsApp para centralizar todo en TotalGains.",
@@ -73,13 +75,7 @@ export default function CasoNachoPulido() {
           name: "Nacho Pulido",
           sameAs: "https://www.instagram.com/puli.trainer/",
         },
-        itemReviewed: {
-          "@type": "SoftwareApplication",
-          name: "TotalGains",
-          applicationCategory: "HealthApplication",
-          operatingSystem: "iOS, Android, Web",
-          url: "https://totalgains.es/",
-        },
+        itemReviewed: softwareApplicationNode(),
         name: "Caso de éxito: Nacho Pulido, +25 clientes activos con TotalGains",
         reviewRating: {
           "@type": "Rating",

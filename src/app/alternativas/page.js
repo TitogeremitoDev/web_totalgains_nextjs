@@ -6,6 +6,7 @@ export const metadata = {
     "Compara TotalGains con Trainerize, Harbiz, MyPT Hub, TrueCoach, PTminder, Dudapp, Dudyfit, Virtuagym y Timp. Software para coaches y gimnasios en español.",
   alternates: { canonical: "https://totalgains.es/alternativas/" },
   openGraph: {
+    type: "website",
     title: "TotalGains frente a la competencia: comparativas para entrenadores y gimnasios",
     description: "Tablas comparativas detalladas: IA, precios, soporte, app marca blanca. Descubre por qué los entrenadores eligen TotalGains.",
     url: "https://totalgains.es/alternativas/",

@@ -3,12 +3,14 @@ import LandingExtrasBlock from "@/components/LandingExtrasBlock";
 import Link from "next/link";
 import { Utensils, Calendar, Bell, FileText, BarChart3, Shield } from "lucide-react";
 
+import { ofertasCoach, aggregateRatingNode } from "@/data/productSchema";
 export const metadata = {
   title: "Software Nutricionista Online: Dietas con IA",
   description:
     "Software para nutricionistas online: pacientes, planes de dieta con +240.000 alimentos y agenda de citas. Plan Gratuito 5 pacientes, sin tarjeta.",
   alternates: { canonical: "https://totalgains.es/software-nutricionista-online/" },
   openGraph: {
+    type: "website",
     title: "Software para Nutricionista Online | TotalGains",
     description: "+240.000 alimentos, gestión de pacientes y automatización de revisiones para nutricionistas online.",
     url: "https://totalgains.es/software-nutricionista-online/",
@@ -83,7 +85,8 @@ export default function SoftwareNutricionistaOnline() {
         description: "Software para nutricionistas online con +240.000 alimentos, generación IA de dietas, seguimiento de pacientes y automatización de revisiones.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/software-nutricionista-online/",
-        offers: { "@type": "AggregateOffer", lowPrice: 0, highPrice: 149.90, priceCurrency: "EUR", offerCount: 4, availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/", image: "https://totalgains.es/og-image.jpg", offers: [{ "@type": "Offer", name: "TotalGains Gratuito", price: "0", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=free", description: "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. Incluye las mismas funciones que los planes de pago: app de marca blanca, IA de rutinas y dietas y +240.000 alimentos en español. Lo único que cambia entre planes es el número de atletas." }, { "@type": "Offer", name: "TotalGains Starter", price: "29.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=starter", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Pro", price: "89.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=pro", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" }, { "@type": "Offer", name: "TotalGains Unlimited", price: "149.90", priceCurrency: "EUR", availability: "https://schema.org/InStock", url: "https://totalgains.es/onboarding/?plan=unlimited", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" }] },
+        offers: ofertasCoach(),
+        aggregateRating: aggregateRatingNode(),
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },

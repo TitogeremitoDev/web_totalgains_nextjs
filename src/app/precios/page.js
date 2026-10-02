@@ -29,6 +29,7 @@ export const metadata = {
     "Todos los planes con IVA incluido: gratuito de por vida hasta 5 atletas, Starter 29,90 €, Pro 89,90 € y Unlimited. Sin permanencia y sin tarjeta.",
   alternates: { canonical: "https://totalgains.es/precios/" },
   openGraph: {
+    type: "website",
     title: "Precios de TotalGains: planes para entrenadores y gimnasios",
     description:
       "Plan gratuito permanente hasta 5 atletas y planes de pago desde 29,90 €/mes con IVA incluido. Sin permanencia.",

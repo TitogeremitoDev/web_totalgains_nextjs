@@ -10,6 +10,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/truecoach/",
   },
   openGraph: {
+    type: "website",
     title: "TotalGains vs TrueCoach — La Alternativa en Español para Entrenadores",
     description:
       "Compara TrueCoach con TotalGains. Soporte nativo en español, base de alimentos en español y app de marca blanca incluida.",

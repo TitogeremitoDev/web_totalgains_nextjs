@@ -10,6 +10,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/dudyfit/",
   },
   openGraph: {
+    type: "website",
     title: "TotalGains vs Dudyfit — La Mejor Alternativa para Entrenadores",
     description:
       "Tabla comparativa completa: IA integrada, precios, soporte y funcionalidades. Migra desde Dudyfit gratis.",

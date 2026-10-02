@@ -17,6 +17,7 @@ export const metadata = {
     canonical: "https://totalgains.es/alternativas/dudapp/",
   },
   openGraph: {
+    type: "website",
     title: "TotalGains vs Dudapp — ¿Cuál es mejor para entrenadores?",
     description:
       "Tabla comparativa: rendimiento, pagos automáticos, app marca blanca. Migra gratis.",
