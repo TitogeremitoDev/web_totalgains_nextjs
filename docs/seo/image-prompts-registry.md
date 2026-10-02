@@ -218,6 +218,21 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/volumen-optimo-hipertrofia-cuantas-series
+*Generado 2026-10-02 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `volumen-hero.webp` | frontal plano, cámara paralela a la pared | diagonal ascendente de abajo izquierda a arriba derecha | wide | rocódromo interior, pared gris lisa | seis presas lavanda, coral y azul marino, las dos primeras juntas y cada hueco mayor que el anterior | difusa de día desde arriba derecha | cada paso cuesta más |
+| `volumen-respuesta.webp` | eye-level | simetría perfecta de dos sujetos | medium close | alféizar de madera junto a una ventana | dos macetas de barro idénticas, un brote diminuto y una albahaca frondosa, regadera entre ambas | lateral matinal suave por la ventana | misma dosis, distinta respuesta |
+| `volumen-sesion.webp` | a la altura del banco | sujeto en el tercio derecho | close-up | gimnasio en penumbra | reloj de arena de madera sobre banco de cuero negro, mancuernas desenfocadas | contraluz cálido de ventanal con bokeh | el tiempo útil se acaba |
+| `volumen-fuerza.webp` | cenital 90° | simetría perfecta | medium wide | plataforma de halterofilia de madera | barra olímpica vacía con magnesio, sin discos | foco cenital duro, bordes a negro | practicar el gesto |
+| `volumen-exceso.webp` | macro a ras de encimera | centrado | macro | cocina luminosa, encimera de hormigón claro | vaso rebosando con el chorro cayendo y charco alrededor | contraluz frío de ventana | más de lo que cabe |
+
+**Notas:** el hero necesitó **tres intentos**. La primera versión (contrapicado desde el suelo) amontonó decenas de presas en una franja y la perspectiva desde abajo **comprime** las distancias de arriba, justo lo contrario de la idea. La segunda (frontal con ocho presas) dejó los huecos casi iguales. Funcionó pedir **pocas presas (seis), cámara paralela a la pared, sin perspectiva, y describir hueco a hueco** («la uno y la dos se tocan; la tres a un paso; la cuatro al doble...»). Lección general: cuando el concepto depende de distancias o proporciones, la cámara tiene que ir de frente y el prompt tiene que dar la secuencia literal. Las macetas (misma dosis, distinta respuesta) y el vaso que rebosa son conceptos nuevos reutilizables para cualquier pieza sobre respuesta individual o sobre exceso.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -289,6 +304,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-10-02** — Añadido `blog/volumen-optimo-hipertrofia-cuantas-series` (5 imágenes, todas conceptos nuevos; el hero en el tercer intento, ver notas). Siguen sin usar del pool: 4, 7, 10, 11, 13, 15.
 
 **2026-09-25** — Añadido `blog/gastos-deducibles-entrenador-personal-autonomo` (4 imágenes, conceptos nuevos).
 

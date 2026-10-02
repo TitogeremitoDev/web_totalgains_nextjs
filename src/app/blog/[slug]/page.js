@@ -35,6 +35,10 @@ import ProspectMessageTemplates from "@/components/ProspectMessageTemplates";
 import LeadResponseDecay from "@/components/LeadResponseDecay";
 import CoachDeductiblesList from "@/components/CoachDeductiblesList";
 import HomeOfficeRuleSplit from "@/components/HomeOfficeRuleSplit";
+import VolumeEfficiencyLadder from "@/components/VolumeEfficiencyLadder";
+import FractionalSetCount from "@/components/FractionalSetCount";
+import VolumeStartingPoints from "@/components/VolumeStartingPoints";
+import VolumeWorkflowTG from "@/components/VolumeWorkflowTG";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -73,6 +77,10 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__lead_response_decay__"></div>', Component: LeadResponseDecay, gate: () => true },
   { marker: '<div class="__coach_deductibles__"></div>', Component: CoachDeductiblesList, gate: () => true },
   { marker: '<div class="__home_office_rule__"></div>', Component: HomeOfficeRuleSplit, gate: () => true },
+  { marker: '<div class="__volume_efficiency__"></div>', Component: VolumeEfficiencyLadder, gate: () => true },
+  { marker: '<div class="__fractional_sets__"></div>', Component: FractionalSetCount, gate: () => true },
+  { marker: '<div class="__volume_starting_points__"></div>', Component: VolumeStartingPoints, gate: () => true },
+  { marker: '<div class="__volume_workflow__"></div>', Component: VolumeWorkflowTG, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS
