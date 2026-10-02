@@ -94,6 +94,8 @@ La diferencia no es de matiz. En el ejemplo, la misma semana de bíceps son 14, 
 
 En el resumen de cada rutina de TotalGains tienes las series por día y las series por músculo, contadas por el músculo principal de cada ejercicio. Es el recuento de las directas: súmale la mitad de las series donde ese músculo ayuda y tienes la cifra de la escalera. Y si la rutina la ha generado una IA, revisa ese resumen como revisarías cualquier otro número del plan, por lo que contamos en [los errores de la IA que conviene verificar antes de mandar un plan](/blog/errores-ia-plan-cliente-verificar/).
 
+![Resumen de una rutina en la biblioteca de rutinas de TotalGains con el total de 99 series y su reparto por días: 21, 21, 16, 22 y 19 series](/images/blog/volumen-app-resumen.webp "El resumen de cada rutina: el total de series y cuántas caen cada día. Debajo se despliegan las series por músculo | shot | 1220x223")
+
 ## <span id="individual"></span>Por qué el mismo número no vale para tus 25 atletas
 
 Los metaanálisis hablan de medias, y tú no entrenas medias. Entrenas a Laura, que lleva seis años en la sala, y a Javi, que empezó en septiembre. Los estudios que miden a cada persona por separado cuentan una historia que conviene tener presente:
@@ -165,6 +167,8 @@ Antes de tocar el volumen, descarta lo que no es volumen. Un atleta que come poc
 Todo esto es sencillo con un atleta. Con 25, el problema deja de ser saber qué hacer y pasa a ser enterarte de a quién le toca, que es el mismo cuello de botella que describimos en [el techo de clientes de un entrenador personal](/blog/techo-clientes-entrenador-personal-escalar-2026/). En TotalGains, cada número de este artículo tiene un sitio donde verlo:
 
 <div class="__volume_workflow__"></div>
+
+![Generador de rutinas con IA de TotalGains con el nivel del cliente en intermedio, el enfoque en hipertrofia y el volumen de entrenamiento en medio, de 6 a 8 ejercicios por día](/images/blog/volumen-app-generador.webp "Nivel, enfoque y ejercicios por día. Justo debajo eliges las series por ejercicio y ves cuántas suma la semana | shot | 1136x952")
 
 El generador entiende también una frase: escribes «PPL de 5 días, hipertrofia, 4 series de 8 a 12, prioriza pecho y hombro, con RIR» y el formulario sale relleno, listo para revisar antes de generar. Lo explicamos con detalle en [cómo la IA genera rutinas y dietas](/blog/ia-entrenador-personal-rutinas-dietas/) y en la página de la [IA para entrenadores personales](/ia-entrenador-personal/).
 
