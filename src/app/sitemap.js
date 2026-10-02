@@ -9,6 +9,7 @@ export default function sitemap() {
     return [
         { url: `${baseUrl}/`, lastModified: '2026-09-26' },
         { url: `${baseUrl}/precios/`, lastModified: '2026-08-22' },
+        { url: `${baseUrl}/verifactu/`, lastModified: '2026-10-02' },
         { url: `${baseUrl}/funciones/`, lastModified: '2026-09-26' },
         { url: `${baseUrl}/funciones/entrenadores/`, lastModified: '2026-09-26' },
         { url: `${baseUrl}/funciones/gimnasios/`, lastModified: '2026-09-26' },
