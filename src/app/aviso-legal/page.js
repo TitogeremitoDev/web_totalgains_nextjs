@@ -49,6 +49,20 @@ export default function AvisoLegal() {
         </p>
       </section>
 
+      {/* Crédito que piden las licencias de Open Food Facts (de ahí vienen los
+          productos de supermercado del buscador de alimentos de la app) */}
+      <section style={{ marginBottom: 40 }}>
+        <h2 style={{ fontSize: "1.1rem", fontWeight: 600, marginBottom: 12 }}>Datos de alimentos</h2>
+        <p style={{ lineHeight: 1.7, fontSize: "0.9rem", color: "var(--text-secondary, #ccc)" }}>
+          Parte de la información nutricional y de las fotos de productos de alimentación que se usan en la app procede de{" "}
+          <a href="https://es.openfoodfacts.org">Open Food Facts</a>, disponible bajo la licencia{" "}
+          <a href="https://opendatacommons.org/licenses/odbl/1-0/">Open Database License (ODbL)</a>; sus contenidos
+          individuales, bajo la <a href="https://opendatacommons.org/licenses/dbcl/1-0/">Database Contents License (DbCL)</a>.
+          Las fotos de productos son de los colaboradores de Open Food Facts y tienen licencia{" "}
+          <a href="https://creativecommons.org/licenses/by-sa/3.0/deed.es">CC BY-SA 3.0</a>.
+        </p>
+      </section>
+
       <section>
         <h2 style={{ fontSize: "1.1rem", fontWeight: 600, marginBottom: 12 }}>Contacto para consultas legales</h2>
         <p style={{ lineHeight: 1.7, color: "var(--text-secondary, #ccc)" }}>
