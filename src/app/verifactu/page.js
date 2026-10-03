@@ -16,6 +16,9 @@ export default function VerifactuPage() {
       <p style={{ color: 'var(--text-secondary, #888)', marginBottom: 32 }}>
         Registro de facturas en la Agencia Tributaria conforme al Real Decreto 1007/2023 y la Orden HAC/1177/2024
       </p>
+      <p style={{ lineHeight: 1.7, marginBottom: 24, padding: '14px 18px', borderRadius: 12, background: 'rgba(59,91,219,0.14)', border: '1px solid rgba(96,165,250,0.3)' }}>
+        ¿Tienes un gimnasio en TotalGains? Lee la <a href="/verifactu/gimnasios/" style={{ color: '#60a5fa', fontWeight: 700 }}>guía práctica para gimnasios</a>: qué cambia, cuándo te toca y cómo activarlo paso a paso, con dos vídeos cortos.
+      </p>
 
       <H2>Qué es VeriFactu</H2>
       <P>Desde el 1 de enero de 2027 (sociedades) y el 1 de julio de 2027 (resto de empresarios y profesionales), cada factura tiene que emitirse desde un programa adaptado que genere su registro de facturación, lo remita a la Agencia Tributaria en el momento y lo imprima con un código QR. Lo registrado no se puede alterar: los errores se corrigen con una factura rectificativa, una subsanación o una anulación con motivo.</P>

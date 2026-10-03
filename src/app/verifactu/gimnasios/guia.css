@@ -1,0 +1,51 @@
+/* Guía VeriFactu para gimnasios — bloques con su vídeo, alternando lado; en móvil el vídeo primero. */
+.vfg { max-width: 1120px; margin: 0 auto; padding: 72px 24px 120px; color: #e7e9f3; }
+.vfg a { color: #60a5fa; }
+.vfg-eyebrow { font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; color: #60a5fa; font-weight: 700; margin: 0 0 10px; }
+.vfg h1 { font-size: clamp(2rem, 4.2vw, 3.1rem); line-height: 1.08; font-weight: 800; margin: 0 0 16px; color: #fff; }
+.vfg-lead { font-size: 1.2rem; line-height: 1.6; color: #b8bdd1; max-width: 760px; margin: 0 0 22px; }
+.vfg-dates { display: flex; flex-wrap: wrap; gap: 10px; margin: 0 0 28px; }
+.vfg-date { border: 1px solid rgba(96, 165, 250, 0.35); background: rgba(59, 91, 219, 0.14); border-radius: 12px; padding: 10px 14px; font-size: 0.95rem; }
+.vfg-date b { color: #fff; }
+.vfg-ctas { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.vfg-btn { display: inline-block; background: #2563eb; color: #fff !important; font-weight: 700; padding: 12px 20px; border-radius: 12px; text-decoration: none; }
+.vfg-btn.ghost { background: transparent; border: 1px solid rgba(255, 255, 255, 0.22); color: #e7e9f3 !important; }
+.vfg-block { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; margin: 64px 0 0; }
+.vfg-block h2 { font-size: 1.55rem; line-height: 1.2; font-weight: 800; color: #fff; margin: 0 0 12px; }
+.vfg-block p, .vfg-block li { font-size: 1.05rem; line-height: 1.65; color: #c6cadb; }
+.vfg-block ul, .vfg-block ol { padding-left: 22px; margin: 10px 0; }
+.vfg-block li { margin: 6px 0; }
+.vfg-media { order: -1; }
+.vfg-video { width: 100%; aspect-ratio: 16 / 9; border-radius: 16px; background: #0b1020; display: block; box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45); border: 1px solid rgba(255, 255, 255, 0.08); }
+.vfg-caption { font-size: 0.9rem; color: #8f94aa; margin: 10px 2px 0; }
+.vfg-table { width: 100%; border-collapse: collapse; margin: 14px 0 6px; font-size: 1.02rem; }
+.vfg-table th, .vfg-table td { text-align: left; padding: 12px 14px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); }
+.vfg-table th { color: #8f94aa; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; }
+.vfg-table td b { color: #fff; font-size: 1.1rem; }
+.vfg-two { display: grid; grid-template-columns: 1fr; gap: 18px; margin-top: 16px; }
+.vfg-opt { border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 16px; padding: 20px 22px; background: rgba(255, 255, 255, 0.03); }
+.vfg-opt h3 { font-size: 1.1rem; color: #fff; margin: 0 0 8px; }
+.vfg-opt p { margin: 0; font-size: 1rem; }
+.vfg-steps { counter-reset: paso; list-style: none; padding: 0; margin: 14px 0 0; }
+.vfg-steps li { position: relative; padding: 0 0 0 54px; margin: 0 0 18px; }
+.vfg-steps li::before { counter-increment: paso; content: counter(paso); position: absolute; left: 0; top: 2px; width: 38px; height: 38px; border-radius: 50%; background: #2563eb; color: #fff; font-weight: 800; display: grid; place-items: center; }
+.vfg-steps b { color: #fff; }
+.vfg-tip { border-left: 4px solid #22c55e; background: rgba(34, 197, 94, 0.08); border-radius: 0 14px 14px 0; padding: 14px 18px; margin: 18px 0 0; }
+.vfg-faq { margin: 64px 0 0; }
+.vfg-faq h2 { font-size: 1.55rem; color: #fff; margin: 0 0 14px; }
+.vfg-faq details { border-bottom: 1px solid rgba(255, 255, 255, 0.1); padding: 14px 0; }
+.vfg-faq summary { cursor: pointer; font-weight: 700; color: #fff; font-size: 1.05rem; list-style: none; }
+.vfg-faq summary::-webkit-details-marker { display: none; }
+.vfg-faq summary::before { content: "+"; display: inline-block; width: 22px; color: #60a5fa; font-weight: 800; }
+.vfg-faq details[open] summary::before { content: "–"; }
+.vfg-faq p { margin: 10px 0 0 22px; color: #c6cadb; line-height: 1.6; }
+.vfg-contact { margin: 56px 0 0; padding: 26px 28px; border-radius: 18px; background: rgba(59, 91, 219, 0.14); border: 1px solid rgba(96, 165, 250, 0.3); }
+.vfg-contact h2 { color: #fff; font-size: 1.3rem; margin: 0 0 8px; }
+.vfg-contact p { margin: 0; color: #c6cadb; line-height: 1.6; }
+.vfg-foot { margin: 26px 0 0; font-size: 0.85rem; color: #8f94aa; }
+@media (min-width: 900px) {
+  .vfg-block { grid-template-columns: 1fr 1fr; gap: 44px; }
+  .vfg-media { order: 0; }
+  .vfg-block.media-right .vfg-media { order: 2; }
+  .vfg-two { grid-template-columns: 1fr 1fr; }
+}
