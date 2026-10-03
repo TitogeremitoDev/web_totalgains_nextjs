@@ -13,6 +13,7 @@ const GUIDE_URL = 'https://totalgains.es/verifactu/gimnasios/';
 const PDF_URL = '/verifactu/guia-verifactu-totalgains.pdf';
 
 const faqs = [
+  { q: '¿Por qué ya no puedo borrar ni editar una factura?', a: 'Porque lo exige la ley (Real Decreto 1007/2023): lo registrado en Hacienda no se puede alterar ni borrar, y así es en todos los programas de facturación de España. No es una decisión de TotalGains. Se corrige con una rectificativa o se anula indicando el motivo.' },
   { q: '¿Tengo que hacer algo con las facturas antiguas?', a: 'No. Lo anterior a la activación se queda como está.' },
   { q: '¿Puedo desactivarlo si cambio de opinión?', a: 'Una vez activado, la ley no permite volver atrás hasta el 31 de diciembre de ese año; y desde tu fecha legal es obligatorio. Por eso te pedimos el NIF y un código al confirmar.' },
   { q: '¿Qué datos van a Hacienda?', a: 'Los de cada factura: importes, IVA, fecha y, en las facturas completas, nombre y NIF del socio. Van a través de Verifacti (Bilbabit, S.L.), componente certificado y colaborador social de la AEAT, con servidores en la Unión Europea.' },
@@ -70,13 +71,14 @@ export default function VerifactuGimnasiosPage() {
         <span className="vfg-date">Autónomos y comunidades de bienes: <b>1 de julio de 2027</b></span>
       </div>
       <div className="vfg-ctas">
-        <a className="vfg-btn" href="#video-que-es">Ver el vídeo (1 min 30 s)</a>
+        <a className="vfg-btn" href="#video-que-es">Ver el vídeo (1 min 36 s)</a>
         <a className="vfg-btn ghost" href="#activar">Cómo se activa</a>
+        <a className="vfg-btn ghost" href="#ya-no">Lo que ya no se podrá hacer</a>
         <a href={PDF_URL}>Descargar la guía en PDF</a>
       </div>
 
       <section className="vfg-block">
-        <Video id="video-que-es" name="gym-verifactu-que-es" title="Qué es VeriFactu y qué cambia en tu gimnasio" caption="Vídeo 1 · Qué es VeriFactu, cuándo le toca a tu gimnasio y qué cambia (poco)." />
+        <Video id="video-que-es" name="gym-verifactu-que-es" title="Qué es VeriFactu y qué cambia en tu gimnasio" caption="Vídeo 1 · Qué es VeriFactu, cuándo le toca a tu gimnasio, qué cambia y lo que ya no se podrá hacer (1 min 36 s)." />
         <div>
           <h2>Qué es VeriFactu, en una frase</h2>
           <p>
@@ -128,6 +130,35 @@ export default function VerifactuGimnasiosPage() {
         </div>
       </section>
 
+      <section className="vfg-important" id="ya-no">
+        <p className="vfg-eyebrow">Lo más importante</p>
+        <h2>Lo que ya no se podrá hacer con VeriFactu activo, y por qué</h2>
+        <p>
+          Conviene saberlo antes, para que no te pille de sorpresa el día que busques el botón. Sobre las facturas ya emitidas, en TotalGains desaparecen o se bloquean estas acciones:
+        </p>
+        <table className="vfg-table">
+          <thead><tr><th>Ya no se puede…</th><th>En su lugar…</th></tr></thead>
+          <tbody>
+            <tr><td><b>Borrar una factura emitida</b></td><td>Si se emitió por equivocación, se anula indicando el motivo. Su número no se reutiliza.</td></tr>
+            <tr><td><b>Editar una factura</b> (importes, IVA, fecha, datos del socio)</td><td>Se emite una factura rectificativa que corrige la original.</td></tr>
+            <tr><td><b>Devolver una factura a ticket</b></td><td>La factura queda registrada; si hace falta, rectificativa o anulación.</td></tr>
+            <tr><td><b>Cambiar o reorganizar la numeración</b></td><td>La numeración va seguida y en orden, siempre.</td></tr>
+            <tr><td><b>Ponerle a una factura la fecha de otro día</b></td><td>La factura lleva la fecha del día en que se emite; la fecha del cobro va impresa como «fecha de operación».</td></tr>
+            <tr><td><b>Desactivar VeriFactu</b> una vez activado</td><td>La ley no permite volver atrás hasta el 31 de diciembre de ese año; desde tu fecha legal es obligatorio.</td></tr>
+          </tbody>
+        </table>
+        <p>Los tickets y justificantes siguen funcionando como siempre, y las facturas que Hacienda devuelva se arreglan con «Corregir y reenviar».</p>
+        <div className="vfg-why">
+          <h3>Por qué: lo manda la ley, no TotalGains</h3>
+          <p>
+            El Real Decreto 1007/2023 obliga a que cada factura genere un registro encadenado al anterior y enviado a Hacienda en el momento, y a que el programa garantice que lo registrado no se puede
+            alterar ni borrar (en palabras de la norma: integridad, inalterabilidad y trazabilidad). Un programa que permita borrar o modificar facturas no puede cumplir el reglamento, y la Ley General
+            Tributaria (artículo 201 bis) sanciona tanto a quien lo fabrica como a quien lo usa, con hasta 50.000 € por ejercicio para el usuario. Por eso estas reglas son las mismas en todos los
+            programas de facturación de España: TotalGains las aplica tal y como las exige la norma.
+          </p>
+        </div>
+      </section>
+
       <section className="vfg-block" style={{ display: 'block' }}>
         <h2>Elige cómo quieres trabajar</h2>
         <p>Al activar VeriFactu eliges entre dos formas de trabajar. Puedes cambiar después desde la misma pantalla.</p>
@@ -144,7 +175,7 @@ export default function VerifactuGimnasiosPage() {
       </section>
 
       <section className="vfg-block" id="activar">
-        <Video id="video-activar" name="gym-verifactu-activar" title="Cómo activar VeriFactu paso a paso" caption="Vídeo 2 · Cómo se activa, paso a paso: requisitos, lo que aceptas y la confirmación." />
+        <Video id="video-activar" name="gym-verifactu-activar" title="Cómo activar VeriFactu paso a paso" caption="Vídeo 2 · Cómo se activa, paso a paso: requisitos, lo que aceptas y la confirmación (1 min 52 s)." />
         <div>
           <h2>Cómo se activa, paso a paso</h2>
           <p>Solo puede hacerlo el titular del gimnasio (la cuenta principal), desde el panel web o la app: <b>Configuración → VeriFactu · Agencia Tributaria → «Activar VeriFactu»</b>.</p>

@@ -49,3 +49,12 @@
   .vfg-block.media-right .vfg-media { order: 2; }
   .vfg-two { grid-template-columns: 1fr 1fr; }
 }
+.vfg-important { margin: 64px 0 0; padding: 28px 30px 24px; border-radius: 20px; border: 2px solid #f59e0b; background: rgba(245, 158, 11, 0.08); }
+.vfg-important .vfg-eyebrow { color: #fbbf24; }
+.vfg-important h2 { font-size: 1.7rem; line-height: 1.2; font-weight: 800; color: #fff; margin: 0 0 12px; }
+.vfg-important p { font-size: 1.05rem; line-height: 1.65; color: #e3e6f0; margin: 0 0 10px; }
+.vfg-important .vfg-table td, .vfg-important .vfg-table th { border-bottom-color: rgba(245, 158, 11, 0.25); }
+.vfg-important .vfg-table td b { font-size: 1.05rem; }
+.vfg-why { margin-top: 18px; padding: 18px 20px; border-radius: 14px; background: rgba(8, 13, 26, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); }
+.vfg-why h3 { font-size: 1.15rem; color: #fff; margin: 0 0 8px; }
+.vfg-why p { margin: 0; color: #c6cadb; }
