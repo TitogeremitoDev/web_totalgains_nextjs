@@ -20,6 +20,7 @@ const faqs = [
   { q: '¿Quién es el responsable de las facturas?', a: 'Tu gimnasio sigue siendo quien emite y quien responde de que los datos sean correctos. TotalGains genera la factura, la registra y lo guarda todo.' },
   { q: '¿Y si Hacienda no está disponible en ese momento?', a: 'La factura se registra en cuanto vuelve a estarlo, sin que hagas nada. La ley lo contempla.' },
   { q: '¿Qué ve el socio?', a: 'Su factura con un código QR. Si lo escanea, la sede de la AEAT le confirma que está registrada.' },
+  { q: '¿Qué datos del socio hacen falta para la factura?', a: 'Para la completa: nombre, NIF y dirección (calle, código postal y ciudad); si falta algo, la app te pide completar su ficha y volver a generar. Para la simplificada, ninguno.' },
   { q: '¿Necesito certificado digital?', a: 'Si eres autónomo, no: la representación se firma por vídeo con tu DNI. Si eres sociedad, se firma con el certificado de la empresa.' },
   { q: '¿Cuánto cuesta?', a: 'Nada aparte de tu cuota de TotalGains.' },
   { q: '¿Dónde está la declaración responsable del programa?', a: 'En totalgains.es/verifactu y dentro de la app (Configuración → VeriFactu → Declaración responsable).' },
@@ -196,9 +197,10 @@ export default function VerifactuGimnasiosPage() {
             </li>
           </ol>
           <div className="vfg-tip">
-            <b>Antes de activar, comprueba los DNI de tus socios.</b> En la misma tarjeta de VeriFactu, el botón «Comprobar los DNI de los socios» revisa a todos
-            tus socios activos y te dice quién consta bien en Hacienda, a quién le falta el DNI y cuál no coincide. Se corrige en la ficha de cada socio, y así
-            las facturas completas salen aceptadas a la primera.
+            <b>Antes de activar, comprueba los datos de tus socios.</b> Una factura completa lleva el nombre, el NIF y la dirección del socio (lo exige el reglamento
+            de facturación); una simplificada no necesita ningún dato. En la misma tarjeta de VeriFactu, el botón «Comprobar los DNI de los socios» revisa a todos
+            tus socios activos y te dice quién consta bien en Hacienda, a quién le falta el DNI, cuál no coincide y quién no tiene dirección. Se corrige en la ficha
+            de cada socio. Si falta algo, la app no genera la factura completa: te pide completar la ficha y volver a generar.
           </div>
         </div>
       </section>
