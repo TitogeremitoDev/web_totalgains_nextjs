@@ -91,3 +91,11 @@
     font-size: 0.8rem;
     color: var(--text-muted);
 }
+
+/* Vídeo de bienvenida del paso 3: horizontal en pantallas anchas, vertical en el móvil */
+.ob-video { margin: 0 auto var(--spacing-md); width: 100%; }
+.ob-video--tall { display: none; max-width: 300px; }
+@media (max-width: 600px) {
+    .ob-video--wide { display: none; }
+    .ob-video--tall { display: block; }
+}
