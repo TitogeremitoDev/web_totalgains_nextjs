@@ -361,6 +361,8 @@ const entrenadores = {
             bloques: [
                 { titulo: 'Seis piezas, y cómo salen', items: [0, 1, 2, 3, 4, 5, 6, 7],
                   media: { tipo: 'video', src: '/video/coach-marketing.mp4', poster: '/video/coach-marketing.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Estudio de marketing del entrenador: testimonios, collage de dieta, ficha de plato e informe de mediciones, todo con su marca', pie: 'Las seis piezas del estudio, con la marca del entrenador. Se descargan y las sube él donde quiera.' } },
+                { titulo: 'Sus transformaciones, en vídeo', items: [8, 9, 10, 11],
+                  media: { tipo: 'video', src: '/video/coach-transformaciones.mp4', poster: '/video/coach-transformaciones.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Transformaciones en vídeo: elegir el antes y el después, barrido en story o reel, «Cuadrar» con IA y descarga con el logo del entrenador' } },
             ],
             items: [
                   { t: 'El plato que todos repiten', d: 'Coge el plato mejor valorado por tus clientes y saca la imagen con tu marca. El contenido sale de lo que ya comen, no de un banco de fotos.' },
@@ -378,6 +380,16 @@ const entrenadores = {
                      marco y qué datos salen en la imagen. */
                   { t: 'La tarjeta, a tu gusto', d: 'Diez controles: formato (cuadrado, vertical, story, horizontal o tira), plantilla, tipografía, fondo, bordes, marco y qué datos salen. También se abre desde la ficha del atleta, sin pasar por Marketing.' },
                   { t: 'Se descargan y las subes tú', d: 'TotalGains no publica en tu nombre. Te da la imagen, con fondo transparente si la quieres para montar varias en una story, y la subes donde te interese.' },
+                  /* Transformaciones en vídeo (4-oct-2026). Verificado contra el código
+                     de la app (CoachStudioModal y marketing/MarketingControls y
+                     MarketingCanvas): barrido, «Story · 6 s» y «Reel · 10 s», GIF o vídeo,
+                     «Cuadrar», logo, el cambio (calculado o escrito a mano) y el aviso de
+                     «Compartible». Interruptor videoTransformaciones ENCENDIDO en
+                     producción (GET /api/app-version). Índices 8 a 11: ver `bloques`. */
+                  { t: 'Transformaciones en vídeo', d: 'El antes y el después de un cliente en un vídeo con barrido: story de 6 s o reel de 10 s para Instagram, o GIF para WhatsApp o la web.' },
+                  { t: 'Encuadre automático con IA', d: 'Si las dos fotos están hechas a distinta distancia, «Cuadrar» iguala el tamaño y la posición del cuerpo para que el barrido case.' },
+                  { t: 'Con tu logo, sus fechas y lo que ha cambiado', d: 'El vídeo sale con tu marca, la fecha de cada foto y el cambio, calculado solo o escrito por ti.' },
+                  { t: 'Solo con su permiso', d: 'Si las fotos del cliente no están marcadas como compartibles, te avisa antes de descargarlo.' },
             ],
         },
         {
