@@ -63,7 +63,7 @@ export default function OnboardingContent() {
                         <div className="animate-fadeInUp step-container text-center">
                             <span className="celebration-emoji">🎉</span>
                             <h2 className="step-title gradient-text">¡Todo listo!</h2>
-                            <p className="step-subtitle mx-auto">Así arranca tu panel en 45 segundos: tus misiones, lo que ganas y dónde pedir ayuda.</p>
+                            <p className="step-subtitle mx-auto">Así arrancas en 45 segundos: tu tarjeta de coach, tus misiones y dónde pedir ayuda.</p>
                             {/* El mismo vídeo de bienvenida que ve el coach al activar su prueba
                                 (PLAN_entrada-coach.md R6): horizontal en el ordenador y vertical
                                 en el móvil. preload="none": no se baja nada hasta pulsar play. */}
