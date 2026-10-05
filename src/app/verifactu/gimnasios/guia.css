@@ -58,3 +58,5 @@
 .vfg-why { margin-top: 18px; padding: 18px 20px; border-radius: 14px; background: rgba(8, 13, 26, 0.5); border: 1px solid rgba(255, 255, 255, 0.1); }
 .vfg-why h3 { font-size: 1.15rem; color: #fff; margin: 0 0 8px; }
 .vfg-why p { margin: 0; color: #c6cadb; }
+.vfg-update { margin: 0 0 28px; padding: 16px 20px; border-radius: 14px; border: 1px solid rgba(96, 165, 250, 0.45); background: rgba(59, 91, 219, 0.18); font-size: 1.02rem; line-height: 1.6; color: #e7e9f3; }
+.vfg-update b { color: #fff; }
