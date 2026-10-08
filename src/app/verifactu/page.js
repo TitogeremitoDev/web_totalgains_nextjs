@@ -16,6 +16,9 @@ export default function VerifactuPage() {
       <p style={{ color: 'var(--text-secondary, #888)', marginBottom: 32 }}>
         Registro de facturas en la Agencia Tributaria conforme al Real Decreto 1007/2023 y la Orden HAC/1177/2024
       </p>
+      <p style={{ lineHeight: 1.7, marginBottom: 16, padding: '14px 18px', borderRadius: 12, background: 'rgba(59,91,219,0.18)', border: '1px solid rgba(96,165,250,0.45)' }}>
+        <strong style={{ color: '#fff' }}>Actualización del 5 de octubre de 2026.</strong> El Ministerio de Hacienda ha anunciado que la obligación de VeriFactu se aplaza a octubre de 2028. La norma todavía no está publicada; cuando lo esté, actualizaremos esta página con las fechas definitivas. Las fechas de 2027 que figuran más abajo son las vigentes hasta entonces.
+      </p>
       <p style={{ lineHeight: 1.7, marginBottom: 24, padding: '14px 18px', borderRadius: 12, background: 'rgba(59,91,219,0.14)', border: '1px solid rgba(96,165,250,0.3)' }}>
         ¿Tienes un gimnasio en TotalGains? Lee la <a href="/verifactu/gimnasios/" style={{ color: '#60a5fa', fontWeight: 700 }}>guía práctica para gimnasios</a>: qué cambia, cuándo te toca y cómo activarlo paso a paso, con dos vídeos cortos.
       </p>

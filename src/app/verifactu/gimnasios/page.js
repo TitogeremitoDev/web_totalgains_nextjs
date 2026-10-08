@@ -61,6 +61,12 @@ export default function VerifactuGimnasiosPage() {
     <main className="vfg">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
+      <div className="vfg-update">
+        <b>Actualización del 5 de octubre de 2026.</b> El Ministerio de Hacienda ha anunciado que la obligación de VeriFactu se aplaza a octubre de 2028, para
+        hacerla coincidir con la factura electrónica. La norma todavía no está publicada; cuando lo esté, actualizaremos esta guía y los vídeos con las fechas
+        definitivas. Las fechas de 2027 que ves aquí son las que siguen figurando en la ley hasta entonces. En tu gimnasio no cambia nada: todo sigue como hasta ahora.
+      </div>
+
       <p className="vfg-eyebrow">Guía para gimnasios</p>
       <h1>VeriFactu en tu gimnasio: qué es, qué cambia y cómo activarlo</h1>
       <p className="vfg-lead">
