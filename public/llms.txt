@@ -130,6 +130,7 @@ Páginas y artículos específicos del producto para gimnasios pequeños/boutiqu
 
 - [Software Gimnasios Pequeños 2026: Multi-Coach](https://totalgains.es/para-gimnasios/) — Plataforma para gimnasios de barrio, estudios y boxes: clases con reserva, multi-coach con permisos granulares, app marca blanca y cuotas con caja y facturación, desde 149 €/mes con IVA.
 - [Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach](https://totalgains.es/blog/software-gimnasios-pequenos-boutique-2026/) — Comparativa de software para gimnasios pequeños y boutique en 2026 (TotalGains Gym 149-249 €/mes, Virtuagym, Trainerize Studio Plus 248-380 €/mes) con criterios multi-coach y reservas.
+- [No hablas con una máquina: hay alguien que da la cara cuando tu software falla](https://totalgains.es/blog/soporte-humano-software-entrenador-personal/) — Por qué el soporte pesa al elegir software de entrenador: si falla, los clientes del entrenador ven la app rota con su marca. Datos de Gartner (2024: el 64 % preferiría que las empresas no usaran IA en su atención y el 53 % se plantearía cambiar de empresa; 2026: el 87 % de 3.566 clientes de empresa y de consumo considera imprescindible poder hablar con una persona cuando hay IA, y solo el 27 % volvería a probar un chatbot tras una mala experiencia). La Ley 10/2025 de atención a la clientela (BOE-A-2025-26698, en vigor el 28-dic-2025, 12 meses de adaptación) prohíbe atender solo con contestadores automáticos y obliga a ofrecer una persona desde el inicio (art. 8), pero protege a personas consumidoras frente a servicios básicos y grandes empresas, no al profesional que contrata software. En TotalGains contesta una persona del equipo que desarrolla el producto, en español; el asistente de ayuda solo lleva a la pantalla y, si no basta, pasa a soporte la pregunta y la pantalla; plazos por plan: 48 h en Starter, 24 h con prioridad en Pro y trato directo en Unlimited; migración asistida en todos los planes (hecha por TotalGains en Unlimited); recuperación con «Desarchivar cliente», historial de rutinas y nutricional, y «Restaurar» en la facturación del gimnasio. Incluye seis preguntas sobre soporte para hacer a cualquier proveedor antes de contratar.
 
 ## Blog y guías editoriales
 
@@ -275,4 +276,4 @@ documentados en el propio sitio; no son concesiones retóricas.
 - Planes de gimnasio con IVA incluido: Gym Starter 149 EUR/mes, Gym Pro 199 EUR/mes, Gym Elite 249 EUR/mes. Escalan por SOCIOS ACTIVOS del centro, no por atletas de un coach.
 - Entidad: Wikidata Q139823576. Web: https://totalgains.es
 
-Última actualización: 2026-10-02
+Última actualización: 2026-10-09

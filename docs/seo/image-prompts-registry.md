@@ -237,6 +237,21 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/soporte-humano-software-entrenador-personal
+*Generado 2026-10-09 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `soporte-hero.webp` | contrapicado suave desde la calle | ventanas encendidas en el tercio superior derecho | wide | fachada urbana de noche | rejilla de ventanas apagadas con tres encendidas y una lámpara de mesa | hora azul fría contra la luz cálida de dentro | alguien sigue ahí |
+| `soporte-timbre.webp` | 3/4 elevado | sujeto algo a la derecha del centro | medium close | mostrador de recepción de nogal, vestíbulo de hotel | timbre de recepción de latón | ambiente cálido de lámparas colgantes con bokeh | alguien saldrá a atenderte |
+| `soporte-mudanza.webp` | 3/4 elevado | diagonal de cajas hacia la ventana | wide | piso vacío y luminoso, suelo de roble | cajas de mudanza cerradas y SIN rotular + planta | tarde suave por un ventanal | una mudanza que salió bien |
+| `soporte-medida.webp` | 3/4 bajo | diagonal, tijeras a la derecha | macro | mesa de sastre | patrones de papel EN BLANCO con alfileres sobre lana azul marino | rasante cálida desde la izquierda | hecho a medida |
+| `soporte-llave.webp` | eye-level | sujeto en el tercio derecho | close-up | pared blanca de un recibidor | tres colgadores, dos vacíos y uno con una llave de repuesto | fría y suave de mañana por una ventana lateral | la copia que está cuando hace falta |
+
+**Notas:** el hero pedía una sola ventana encendida y el modelo encendió tres juntas; se dejó así porque la idea (de noche hay alguien) se lee igual y encaja con un equipo pequeño. Quinta vez que funciona pedir los soportes **en blanco** (cajas sin rotular, patrones de papel sin líneas ni números). Los cinco conceptos son nuevos: el timbre de recepción vale para cualquier pieza sobre servicio o atención, la llave de repuesto para copias de seguridad y recuperación.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -308,6 +323,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-10-09** — Añadido `blog/soporte-humano-software-entrenador-personal` (5 imágenes, todas conceptos nuevos).
 
 **2026-10-02** — Añadido `blog/volumen-optimo-hipertrofia-cuantas-series` (5 imágenes, todas conceptos nuevos; el hero en el tercer intento, ver notas). Siguen sin usar del pool: 4, 7, 10, 11, 13, 15.
 

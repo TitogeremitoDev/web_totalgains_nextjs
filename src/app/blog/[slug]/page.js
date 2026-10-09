@@ -39,6 +39,10 @@ import VolumeEfficiencyLadder from "@/components/VolumeEfficiencyLadder";
 import FractionalSetCount from "@/components/FractionalSetCount";
 import VolumeStartingPoints from "@/components/VolumeStartingPoints";
 import VolumeWorkflowTG from "@/components/VolumeWorkflowTG";
+import SupportStatsPanel from "@/components/SupportStatsPanel";
+import CustomerServiceLawScope from "@/components/CustomerServiceLawScope";
+import HumanSupportMoments from "@/components/HumanSupportMoments";
+import SupportQuestionsChecklist from "@/components/SupportQuestionsChecklist";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -81,6 +85,10 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__fractional_sets__"></div>', Component: FractionalSetCount, gate: () => true },
   { marker: '<div class="__volume_starting_points__"></div>', Component: VolumeStartingPoints, gate: () => true },
   { marker: '<div class="__volume_workflow__"></div>', Component: VolumeWorkflowTG, gate: () => true },
+  { marker: '<div class="__support_stats__"></div>', Component: SupportStatsPanel, gate: () => true },
+  { marker: '<div class="__customer_service_law__"></div>', Component: CustomerServiceLawScope, gate: () => true },
+  { marker: '<div class="__support_moments__"></div>', Component: HumanSupportMoments, gate: () => true },
+  { marker: '<div class="__support_questions__"></div>', Component: SupportQuestionsChecklist, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS
