@@ -121,13 +121,17 @@ const entrenadores = {
                 { titulo: 'Dietas para situaciones de salud y tipos de alimentación', items: [22, 23] },
                 { titulo: 'Ajustarla sin rehacerla', items: [4, 5, 6, 7],
                   media: { tipo: 'imagen', src: '/images/blog/ia-totalgains/09-dieta-revision-web.webp', w: 1982, h: 1073, alt: 'Dieta generada por la IA en revisión en el panel web', pie: 'La dieta propuesta, comida a comida, antes de aplicarla.' } },
-                { titulo: 'En el móvil del atleta', items: [8, 10, 11, 19, 20, 21],
+                { titulo: 'En el móvil del atleta', items: [8, 10, 11, 19, 21],
                   media: { tipo: 'video', src: '/video/app-tu-dieta.mp4', poster: '/video/app-tu-dieta.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'La dieta en la app del atleta', pie: 'Lo que ve el atleta: su dieta del día en el móvil.' } },
                 /* La suplementación era UNA línea perdida en el bloque del móvil y
                    el sistema da para dos: el reel «de punta a punta» (33 s) cuenta
                    la parte del entrenador, y la captura de «Mi pauta de hoy» la del
                    atleta. Nada de esto estaba publicado, que es justo el agujero
                    por el que las IAs decían que faltaban módulos. */
+                /* Las recetas del atleta (14-oct-2026): el 20 sale de «En el móvil» a su
+                   bloque, con el vídeo de los dos lados (capturas reales, datos inventados). */
+                { titulo: 'Las recetas de tu atleta', items: [20, 25, 26, 27, 28],
+                  media: { tipo: 'video', src: '/video/coach-mis-recetas.mp4', poster: '/video/coach-mis-recetas.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Las recetas del atleta en TotalGains: se le guardan solas, modo cocina, compartir con el logo del entrenador y la receta top que pasa a su biblioteca', pie: 'Se le guardan solas, las cocina paso a paso y las que más repite pasan a tu biblioteca.' } },
                 { titulo: 'Suplementación, de punta a punta', items: [12, 13, 14, 9],
                   media: { tipo: 'video', src: '/video/coach-suplementacion.mp4', poster: '/video/coach-suplementacion.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'El sistema de suplementación de TotalGains: catálogo del entrenador, protocolos, pauta del atleta y compra guiada', pie: 'Del catálogo del entrenador a la pauta del atleta, sin salir del plan.' } },
                 { titulo: 'Su pauta y su lista de compra', items: [15, 16, 17, 18],
@@ -177,6 +181,22 @@ const entrenadores = {
                 { t: 'Dieta según su situación de salud', d: 'La IA adapta la dieta a la situación de salud que marques en tu cliente: hipotiroidismo, SOP o resistencia a la insulina, diabetes, amenorrea, hipertensión, colesterol alto, reflujo, embarazo o menopausia. Retira lo que no debe llevar, avisa de lo discutible y comprueba en código lo que se puede medir, como el reparto de hidratos o la proteína de cada comida. En cada caso te dice qué intenta, qué no puede comprobar (el sodio real del día o su medicación) y que la última palabra es de su especialista. También adapta con una frase una dieta que ya está hecha. Es ayuda activa, no pauta clínica, y el cliente no ve nada de esto.' },
                 { t: 'Alimentación vegana, vegetariana o pescetariana', d: 'Eliges el tipo de alimentación del cliente (vegana, vegetariana, pescetariana o sin cerdo) y la IA deja fuera del plan lo que no encaja por el mismo camino que las alergias: se retira del plan, no se queda en un aviso.' },
                 { t: 'Tus recetas, ordenadas por la comida donde las pones', d: 'Al añadir algo al desayuno, primero salen las recetas que más pones en el desayuno, con cuántas veces las has usado. Lo aprende de tus propios planes sin que tengas que etiquetar nada, y el filtro por comida busca en todas tus recetas, no solo en las que ya se habían cargado.' },
+                /* ⚠️ Índices 25-28, AÑADIDOS AL FINAL (los bloques apuntan por índice).
+                   Verificados contra el código el 14-oct-2026 (be f1c2efc · app 768871eb):
+                   · 25 — services/clientRecipeStore.js (autoSaveGeneratedRecipes +
+                     isSameRecipe), orden y filtros de ClientRecipesScreen, foto con IA
+                     solo al pasar a ⭐ (services/recipePhotoAiService.js).
+                   · 26 — components/nutricion/RecipeCookMode.jsx (keep-awake,
+                     stepTimerSeconds, «¿Qué tal te ha salido?»).
+                   · 27 — RecipeShareCard (logo y color del coach, stripAllAmounts) y
+                     src/services/recipePdf.js (con gramos).
+                   · 28 — TOP_COOKED = 3 (topCooks, 1 por día) + services/
+                     clientRecipeToLibrary.js; la nota y el nombre que pone el atleta
+                     no salen de su app (clientRecipeRoutes, GET del coach). */
+                { t: 'Sus recetas se guardan solas', d: 'Cada receta que la app le propone para cocinar su comida queda guardada en su pestaña Recetas, sin repetidas. Las ordena por las que más cocina, las que más le gustan o las más rápidas, les pone su nombre y su nota, y las favoritas llevan una foto del plato hecha con IA.' },
+                { t: 'Modo cocina paso a paso', d: 'Letra grande, la pantalla no se apaga y, si un paso dice «12 minutos», temporizador con un toque. Al terminar le pregunta qué tal le ha salido, y lo que le gusta sube en su lista.' },
+                { t: 'Recetas para compartir con tu logo', d: 'La receta sale en una imagen con tu logo y sin gramos, lista para enviar, o en un PDF con todas sus cantidades.' },
+                { t: 'Sus recetas top, a tu biblioteca', d: 'Cuando cocina la misma receta tres días distintos, te avisa, y con un toque la tienes en tu biblioteca con los mismos alimentos y gramos. Su nota y el nombre que le pone son solo suyos.' },
             ],
         },
         {
