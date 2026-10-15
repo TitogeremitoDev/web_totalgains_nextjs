@@ -43,6 +43,11 @@ import SupportStatsPanel from "@/components/SupportStatsPanel";
 import CustomerServiceLawScope from "@/components/CustomerServiceLawScope";
 import HumanSupportMoments from "@/components/HumanSupportMoments";
 import SupportQuestionsChecklist from "@/components/SupportQuestionsChecklist";
+import DiscountCustomerValue from "@/components/DiscountCustomerValue";
+import BlackFridayOfferFormats from "@/components/BlackFridayOfferFormats";
+import BlackFridayFunnelTimeline from "@/components/BlackFridayFunnelTimeline";
+import HonestHypeRules from "@/components/HonestHypeRules";
+import BlackFridayMessages from "@/components/BlackFridayMessages";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -89,6 +94,11 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__customer_service_law__"></div>', Component: CustomerServiceLawScope, gate: () => true },
   { marker: '<div class="__support_moments__"></div>', Component: HumanSupportMoments, gate: () => true },
   { marker: '<div class="__support_questions__"></div>', Component: SupportQuestionsChecklist, gate: () => true },
+  { marker: '<div class="__discount_value__"></div>', Component: DiscountCustomerValue, gate: () => true },
+  { marker: '<div class="__bf_offers__"></div>', Component: BlackFridayOfferFormats, gate: () => true },
+  { marker: '<div class="__bf_funnel__"></div>', Component: BlackFridayFunnelTimeline, gate: () => true },
+  { marker: '<div class="__honest_hype__"></div>', Component: HonestHypeRules, gate: () => true },
+  { marker: '<div class="__bf_messages__"></div>', Component: BlackFridayMessages, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS

@@ -252,6 +252,21 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/black-friday-entrenador-personal-oferta-enero
+*Generado 2026-10-15 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `blackfriday-hero.webp` | picado desde el palco | diagonal de butacas hacia el escenario arriba a la derecha | wide | teatro vacío | butacas rojas vacías y telón cerrado con un foco redondo | foco frío sobre el telón, sala en penumbra con bruma | la función está a punto de empezar |
+| `blackfriday-etiqueta.webp` | 3/4 bajo | centrada | close-up | mesa de roble claro junto a una ventana | etiqueta de precio de kraft EN BLANCO rota en dos | contraluz cálido de ventana | partir tu propio precio |
+| `blackfriday-embudo.webp` | eye-level | sujeto en el tercio derecho | medium | mesa de nogal en estudio oscuro | embudo de cristal lleno de esferas lavanda, coral y azul marino, unas pocas fuera en fila | foco cenital cálido, fondo a negro | muchos entran, pocos salen |
+| `blackfriday-regalo.webp` | eye-level | sujeto en el tercio izquierdo | close-up | alféizar blanco junto a una ventana con escarcha | caja de regalo de kraft con lazo lavanda y etiqueta EN BLANCO | luces de Navidad cálidas desenfocadas | diciembre, calentar antes de enero |
+| `blackfriday-enero.webp` | 3/4 algo elevado | zapatillas en el centro, caja detrás a la izquierda | medium | suelo de madera de un dormitorio junto a la ventana | zapatillas blancas nuevas SIN marca junto a su caja abierta | fría y azul de mañana de invierno | estreno de año |
+
+**Notas:** `blackfriday-enero` necesitó dos intentos: en el primero el papel de seda tapaba las zapatillas y parecía ropa; se arregló pidiendo las zapatillas fuera de la caja, «fully visible and clearly recognisable». El hero se pensó primero como telón con una rendija de luz y se descartó antes de generarlo porque compartía cuatro dimensiones con `mensajes-puerta` (luz cálida colándose por un hueco en penumbra); se cambió a teatro visto desde el palco con foco frío. La etiqueta se movió de fondo negro a mesa clara por el mismo motivo frente a `mensajes-quemar`. Conceptos nuevos reutilizables: el embudo de cristal con esferas (cualquier pieza de captación o filtrado) y el teatro con el foco (expectación, lanzamientos).
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -323,6 +338,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-10-15** — Añadido `blog/black-friday-entrenador-personal-oferta-enero` (5 imágenes, todas conceptos nuevos; dos ideas cambiadas antes de generar para no repetir dimensiones).
 
 **2026-10-09** — Añadido `blog/soporte-humano-software-entrenador-personal` (5 imágenes, todas conceptos nuevos).
 
