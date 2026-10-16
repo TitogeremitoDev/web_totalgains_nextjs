@@ -93,6 +93,11 @@ export const ofertasGym = () => PLANES_GYM.map((p) => oferta(p, "https://totalga
  * de TotalGains lo que cuenta el texto comercial de cada landing, que es la
  * razón por la que llegaron a afirmar que faltaban módulos que sí existen.
  *
+ * ⚠️ UNA sola vez por página. Las reseñas lo señalan con
+ * `itemReviewed: { "@id": "https://totalgains.es/#software" }`, nunca con una
+ * copia cada una: Google junta los nodos con el mismo @id y la ficha sale con
+ * varias valoraciones, sin estrellas (pasó en /opiniones-clientes/, 16-oct-2026).
+ *
  * @param {{description?: string, id?: string, featureList?: string[]}} opts
  */
 export function softwareApplicationNode({ description, id = "https://totalgains.es/#software", featureList } = {}) {

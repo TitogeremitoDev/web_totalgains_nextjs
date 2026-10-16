@@ -148,6 +148,11 @@ export default function OpinionesClientes() {
           { "@type": "ListItem", position: 2, name: "Opiniones de clientes", item: "https://totalgains.es/opiniones-clientes/" },
         ],
       },
+      // La ficha del producto va UNA vez y las reseñas la señalan por su @id.
+      // Con una copia en cada reseña, Google las junta (mismo @id) en una ficha
+      // con 6 valoraciones y la página pierde las estrellas: «La reseña tiene
+      // varias puntuaciones agregadas» en Search Console, 16-oct-2026.
+      softwareApplicationNode(),
       {
         "@type": "ItemList",
         "@id": "https://totalgains.es/opiniones-clientes/#reviews-list",
@@ -170,7 +175,7 @@ export default function OpinionesClientes() {
                 name: "Trustpilot",
                 url: "https://es.trustpilot.com/review/totalgains.es",
               },
-              itemReviewed: softwareApplicationNode(),
+              itemReviewed: { "@id": "https://totalgains.es/#software" },
             },
           })),
           ...casosExito.map((c, i) => ({
@@ -184,7 +189,7 @@ export default function OpinionesClientes() {
               datePublished: c.date,
               reviewBody: c.quote,
               publisher: { "@type": "Organization", name: "TotalGains", url: "https://totalgains.es/" },
-              itemReviewed: softwareApplicationNode(),
+              itemReviewed: { "@id": "https://totalgains.es/#software" },
             },
           })),
         ],
