@@ -267,6 +267,25 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/corregir-tecnica-cliente-online-video
+*Generado 2026-10-23 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `tecnica-hero.webp` | a ras de suelo, 3/4 por detrás del móvil | móvil en el tercio izquierdo, racks al fondo | medium | gimnasio luminoso de mañana | móvil de pie apoyado en una mancuerna hexagonal, con la pantalla enseñando solo el rack desenfocado | lateral suave de ventanal | listo para grabar la serie |
+| `tecnica-sitio.webp` | cenital 90° | cruz en el tercio derecho, metro en diagonal abajo a la izquierda | close-up | suelo de caucho de gimnasio | cruz de cinta coral y un metro de cinta con la hoja SIN números | cenital suave y uniforme | el sitio exacto del móvil |
+| `tecnica-ajuste.webp` | contrapicado desde debajo del sillín | sillín en los dos tercios derechos | macro | taller de bicicletas con panel de herramientas | una llave Allen metida en el tornillo del sillín | rasante cálida de tarde desde la izquierda | un ajuste cada vez |
+| `tecnica-cintas.webp` | 3/4 elevado | caja en el tercio derecho, flexo a la izquierda | close-up | estantería de madera de un trastero en penumbra | caja de cartón con cintas VHS con etiquetas EN BLANCO y una a medio sacar | flexo cálido lateral, resto a azul marino | lo grabado que nadie vuelve a mirar |
+| `tecnica-app-por-corregir.webp` | captura de app | franja horizontal | UI escritorio | inicio del coach | tarjeta «1 vídeo por corregir» con la clienta, el ejercicio y el botón Corregir | n/a (captura real) | producto real |
+| `tecnica-app-responder.webp` | captura de app | pantalla completa | UI escritorio | Progreso › Multimedia + «Responder vídeo» | vídeo y nota de la clienta, campo de respuesta y «Tu vídeo de corrección» (Mis vídeos, Subir vídeo, Grabar) | n/a (captura real) | producto real |
+| `tecnica-app-clienta.webp` | captura de app | dos pantallas de móvil lado a lado sobre fondo azul marino | UI móvil | chat y visor de la clienta | tarjeta «Tu técnica» y visor «Ver los dos a la vez» con Pausa, ½ velocidad y Repetir | n/a (captura real) | producto real |
+
+**Origen de las 3 capturas reales:** la prueba de punta a punta de «Corrección en vídeo» del 19-oct-2026 (`~/.cache/tg-e2e/correccion-e2e/shots/`, `01-coach-inicio`, `02-coach-panel`, `06-clienta-chat` y `07-clienta-visor`), hecha con el servidor y la web reales sobre una base de datos de usar y tirar; las personas son inventadas (Sara Molina, Lucía Romero) y sus fotos, de IA. La función salió con la OTA 1.3.38 y la web del 23-oct. Se **recortó fuera** el texto de la coach de prueba («Mira: talones abajo y pecho arriba») porque son dos correcciones sobre el cuerpo, justo lo que el artículo desaconseja.
+
+**Notas:** las cuatro salieron bien al primer intento. Sexta vez que funciona pedir los soportes **en blanco** (etiquetas de las cintas, hoja del metro sin números). El sillín lleva una microrrotulación ilegible en el raíl que no se lee ni a tamaño completo. Conceptos nuevos reutilizables: la cruz de cinta en el suelo (cualquier pieza sobre repetir una medida en las mismas condiciones), la llave Allen en el sillín (un solo ajuste) y la caja de cintas sin rotular (archivo que nadie consulta).
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -338,6 +357,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-10-23** — Añadido `blog/corregir-tecnica-cliente-online-video` (4 imágenes generadas, conceptos nuevos, y 3 capturas reales de «Corrección en vídeo»).
 
 **2026-10-15** — Añadido `blog/black-friday-entrenador-personal-oferta-enero` (5 imágenes, todas conceptos nuevos; dos ideas cambiadas antes de generar para no repetir dimensiones).
 
