@@ -52,6 +52,11 @@ import CameraAngleGuide from "@/components/CameraAngleGuide";
 import VideoRequestMoments from "@/components/VideoRequestMoments";
 import CorrectionReplyComparison from "@/components/CorrectionReplyComparison";
 import TechniqueFeedbackMistakes from "@/components/TechniqueFeedbackMistakes";
+import FindabilityChannels from "@/components/FindabilityChannels";
+import LocalRankingFactors from "@/components/LocalRankingFactors";
+import ReviewHabitsBars from "@/components/ReviewHabitsBars";
+import CitableBioComparison from "@/components/CitableBioComparison";
+import FourWeekFindabilityPlan from "@/components/FourWeekFindabilityPlan";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -107,6 +112,11 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__video_request_moments__"></div>', Component: VideoRequestMoments, gate: () => true },
   { marker: '<div class="__correction_reply__"></div>', Component: CorrectionReplyComparison, gate: () => true },
   { marker: '<div class="__technique_feedback_mistakes__"></div>', Component: TechniqueFeedbackMistakes, gate: () => true },
+  { marker: '<div class="__findability_channels__"></div>', Component: FindabilityChannels, gate: () => true },
+  { marker: '<div class="__local_ranking_factors__"></div>', Component: LocalRankingFactors, gate: () => true },
+  { marker: '<div class="__review_habits__"></div>', Component: ReviewHabitsBars, gate: () => true },
+  { marker: '<div class="__citable_bio__"></div>', Component: CitableBioComparison, gate: () => true },
+  { marker: '<div class="__four_week_findability__"></div>', Component: FourWeekFindabilityPlan, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS

@@ -286,6 +286,20 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/seo-geo-entrenador-personal-conseguir-clientes
+*Generado 2026-10-30 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `seo-geo-hero.webp` | contrapicado desde las rocas | faro en el tercio izquierdo, haz hacia la derecha | wide | cabo rocoso en la costa | faro blanco con el haz de luz sobre el mar con bruma | hora azul, último resplandor lavanda y coral en el horizonte | que te vean desde lejos |
+| `seo-geo-mapa.webp` | 3/4 bajo | chincheta en el centro, dos grises al fondo | macro | mesa de roble claro | mapa de papel de una ciudad SIN nombres con una chincheta coral clavada | rasante cálida de tarde desde la derecha | tu sitio en el mapa |
+| `seo-geo-resenas.webp` | eye-level | cordel en la mitad superior | medium | estudio de entrenamiento con pared azul marino | ocho tarjetas EN BLANCO colgadas con pinzas, mancuernas y esterilla lavanda al fondo | fría y suave de mañana por un ventanal a la izquierda | reseñas que aún no has pedido |
+| `seo-geo-fichero.webp` | eye-level | cajón abierto en el tercio derecho | close-up | biblioteca pública con ventanales altos | fichero de madera con tiradores de latón y una ficha EN BLANCO que sobresale | luz de día desde ventanales altos, cálida en la ficha | la IA abre el cajón y encuentra tu ficha |
+
+**Notas:** las cuatro salieron bien al primer intento (generadas con `~/.cache/tg-blog/seo-geo/gen.py`, clave en la cabecera). Séptima vez que funciona pedir los soportes **en blanco** (tarjetas, fichas y portaetiquetas). El mapa pidió «abstract lines and pale shapes, with absolutely no legible names» y no salió ni una letra. Los tiradores del fichero tienen una forma rara de gancho que solo se nota a tamaño completo. Conceptos nuevos reutilizables: el faro con el haz (visibilidad, que te encuentren), la chincheta en el mapa (SEO local, ubicación), el cordel con tarjetas en blanco (opiniones, testimonios) y el fichero de biblioteca (fuentes, citas, lo que se consulta).
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -357,6 +371,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-10-30** — Añadido `blog/seo-geo-entrenador-personal-conseguir-clientes` (4 imágenes generadas, todas conceptos nuevos).
 
 **2026-10-23** — Añadido `blog/corregir-tecnica-cliente-online-video` (4 imágenes generadas, conceptos nuevos, y 3 capturas reales de «Corrección en vídeo»).
 
