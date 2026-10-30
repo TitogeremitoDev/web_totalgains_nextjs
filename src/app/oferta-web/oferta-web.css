@@ -2633,3 +2633,62 @@
     display: none;
   }
 }
+
+/* ── Barra fija «Reservar mi plaza» (solo móvil) ── */
+.owm-barra {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .owm-barra {
+    display: block;
+    position: fixed;
+    left: 50%;
+    bottom: calc(16px + env(safe-area-inset-bottom));
+    z-index: 999;
+    width: calc(100% - 32px);
+    max-width: 380px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(calc(100% + 24px));
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 0.3s ease;
+  }
+  .owm-barra.es-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+  .owm-btn,
+  .owm-btn:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 12px 20px;
+    border-radius: 18px;
+    color: #1a0b00;
+    text-decoration: none;
+    background: linear-gradient(135deg, #ffd08a, #ff8a2a);
+    box-shadow: 0 10px 30px rgba(255, 122, 26, 0.45), 0 2px 8px rgba(0, 0, 0, 0.35);
+  }
+  .owm-texto {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+  }
+  .owm-texto strong {
+    font-size: 1.02rem;
+    font-weight: 900;
+  }
+  .owm-texto small {
+    font-size: 0.74rem;
+    font-weight: 700;
+    opacity: 0.8;
+  }
+}
+
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .owm-barra {
+    transition: none;
+  }
+}

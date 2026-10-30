@@ -9,6 +9,7 @@ import { IconoOferta, CuentaAtras, Plazas, SoloConOferta } from "@/components/Of
 import OfertaWebCta from "./OfertaWebCta";
 import OfertaWebPrueba from "./OfertaWebPrueba";
 import OfertaWebReserva from "./OfertaWebReserva";
+import OfertaWebBarraMovil from "./OfertaWebBarraMovil";
 import "./oferta-web.css";
 
 /* ──────────────────────────────────────────────
@@ -459,6 +460,8 @@ export default function OfertaWebPage() {
           </details>
         </div>
       </section>
+
+      <OfertaWebBarraMovil />
     </main>
   );
 }
