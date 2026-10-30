@@ -1,0 +1,122 @@
+/* «Gracias» de la reserva de la oferta de noviembre (GraciasOferta.jsx). */
+.gof {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.gof-h1 {
+  margin: 18px 0 12px;
+  font-size: clamp(1.9rem, 5vw, 2.6rem);
+  font-weight: 800;
+}
+
+.gof-entrada {
+  margin: 0 0 28px;
+  font-size: 1.08rem;
+  color: var(--text-secondary);
+}
+
+.gof-pasos {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+  text-align: left;
+}
+
+.gof-pasos li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 14px 16px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.gof-pasos strong {
+  display: block;
+  color: #fff;
+}
+
+.gof-num {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-weight: 900;
+  color: #1a0b00;
+  background: linear-gradient(135deg, #ffd08a, #ff8a2a);
+}
+
+.gof-caja {
+  margin: 0 0 28px;
+  padding: 20px 22px;
+  border-radius: 16px;
+  text-align: left;
+  background: rgba(34, 197, 94, 0.07);
+  border: 1px solid rgba(34, 197, 94, 0.2);
+}
+
+.gof-caja h2 {
+  margin: 0 0 12px;
+  font-size: 1.1rem;
+}
+
+.gof-caja ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.gof-caja li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--text-secondary);
+}
+
+.gof-caja li svg {
+  flex-shrink: 0;
+  color: #34d399;
+}
+
+.gof-botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.gof-wa,
+.gof-wa:hover {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 20px;
+  border-radius: 12px;
+  font-weight: 800;
+  color: #fff;
+  text-decoration: none;
+  background: #25d366;
+}
+
+.gof-cuenta,
+.gof-cuenta:hover {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 20px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
