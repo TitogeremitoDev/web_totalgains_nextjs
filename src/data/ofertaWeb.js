@@ -25,8 +25,14 @@ export const OFERTA_WEB = {
   agotada: false,
   // Cambios pequeños al mes incluidos en la web de Pro y Unlimited.
   cambiosAlMes: 2,
+  // Plazo que da German (30-oct): una semana desde que el entrenador manda
+  // todo su material y cómo la quiere.
+  entrega: "1 semana",
   email: "soporte@totalgains.es",
   asunto: "Quiero mi web (oferta de noviembre)",
+  // WhatsApp de TotalGains (lo dio German el 30-oct para esta oferta).
+  whatsapp: "34687065772",
+  whatsappVisible: "687 06 57 72",
   articulo: "/blog/seo-geo-entrenador-personal-conseguir-clientes/",
 };
 
@@ -42,6 +48,11 @@ export const textoPlazas = () =>
   OFERTA_WEB.plazasCogidas > 0
     ? `Quedan ${plazasLibres()} de ${OFERTA_WEB.plazas} plazas`
     : `Solo ${OFERTA_WEB.plazas} plazas`;
+
+export const whatsappOfertaWeb = (nombre = "") =>
+  `https://wa.me/${OFERTA_WEB.whatsapp}?text=${encodeURIComponent(
+    `Hola, quiero mi web con la oferta de noviembre${nombre.trim() ? `. Soy ${nombre.trim()}` : ""}.`
+  )}`;
 
 export const mailtoOfertaWeb = () =>
   `mailto:${OFERTA_WEB.email}?subject=${encodeURIComponent(OFERTA_WEB.asunto)}`;

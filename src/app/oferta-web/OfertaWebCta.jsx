@@ -1,14 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { Mail, ArrowRight } from "lucide-react";
+import { Send, Sparkles } from "lucide-react";
 import { trackEvent } from "@/components/Analytics";
-import { OFERTA_WEB, mailtoOfertaWeb } from "@/data/ofertaWeb";
+import { OFERTA_WEB } from "@/data/ofertaWeb";
 import { useOfertaWeb } from "@/components/useOfertaWeb";
 
-/* Botones de la página de la oferta (héroe y cierre). Pasado el 30 de
-   noviembre (o con la oferta agotada) cambian solos a «terminó» + precios,
-   por si alguien llega con un enlace viejo antes de que se quite la página. */
+/* Botones del héroe de la oferta: bajan al formulario de reserva y a «Pon tu
+   nombre y mira tu web». Pasado el 30 de noviembre (o con la oferta agotada)
+   cambian solos a «terminó» + precios, por si alguien llega con un enlace
+   viejo antes de que se quite la página (también lo usa OfertaWebReserva). */
 export default function OfertaWebCta() {
   const { activa } = useOfertaWeb();
 
@@ -30,20 +31,19 @@ export default function OfertaWebCta() {
   return (
     <div className="ow-cta">
       <a
-        href={mailtoOfertaWeb()}
+        href="#reservar"
         className="ow-btn ow-btn--fuego"
-        onClick={() => trackEvent("cta_click", { cta_text: "oferta_web_reservar", cta_location: "oferta_web" })}
+        onClick={() => trackEvent("cta_click", { cta_text: "oferta_web_reservar", cta_location: "oferta_web_heroe" })}
       >
-        <Mail size={20} aria-hidden="true" /> Reservar mi plaza
+        <Send size={19} aria-hidden="true" /> Reservar mi plaza
       </a>
-      <Link
-        href="/precios/"
+      <a
+        href="#prueba"
         className="ow-btn ow-btn--cristal"
-        prefetch={false}
-        onClick={() => trackEvent("cta_click", { cta_text: "oferta_web_planes", cta_location: "oferta_web" })}
+        onClick={() => trackEvent("cta_click", { cta_text: "oferta_web_probar", cta_location: "oferta_web_heroe" })}
       >
-        Ver los planes anuales <ArrowRight size={18} aria-hidden="true" />
-      </Link>
+        <Sparkles size={19} aria-hidden="true" /> Mira cómo quedaría la tuya
+      </a>
     </div>
   );
 }

@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  LayoutTemplate, Globe, CalendarCheck, Mail, ClipboardList, Check, Lock,
+  LayoutTemplate, Globe, CalendarCheck, Send, ClipboardList, Rocket, Check, Lock,
   Smartphone, Search, MapPin, Sparkles, ArrowRight, Star,
 } from "lucide-react";
 import { OFERTA_WEB, textoPlazas } from "@/data/ofertaWeb";
 import { IconoOferta, CuentaAtras, Plazas } from "@/components/OfertaWebPiezas";
 import OfertaWebCta from "./OfertaWebCta";
+import OfertaWebPrueba from "./OfertaWebPrueba";
+import OfertaWebReserva from "./OfertaWebReserva";
 import "./oferta-web.css";
 
 /* ──────────────────────────────────────────────
@@ -27,6 +29,22 @@ export const metadata = {
   description: `Oferta de noviembre para entrenadores: pásate al plan anual de TotalGains y te hacemos tu web. ${OFERTA_WEB.plazas} plazas, hasta el ${OFERTA_WEB.finTexto}.`,
   robots: { index: false, follow: true },
   alternates: { canonical: `https://totalgains.es${OFERTA_WEB.ruta}` },
+  // Imagen propia para cuando se comparte el enlace (WhatsApp, Instagram…).
+  openGraph: {
+    title: "Una oferta que da miedo… a tu competencia",
+    description: `Tu web incluida al pasarte al plan anual de TotalGains. ${OFERTA_WEB.plazas} plazas, hasta el ${OFERTA_WEB.finTexto}.`,
+    url: `https://totalgains.es${OFERTA_WEB.ruta}`,
+    type: "website",
+    locale: "es_ES",
+    siteName: "TotalGains",
+    images: [{ url: "https://totalgains.es/images/oferta-web/og-oferta-web.jpg", width: 1200, height: 630, alt: "Una oferta que da miedo… a tu competencia: tu web incluida con el plan anual de TotalGains" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Una oferta que da miedo… a tu competencia",
+    description: `Tu web incluida al pasarte al plan anual de TotalGains. ${OFERTA_WEB.plazas} plazas, hasta el ${OFERTA_WEB.finTexto}.`,
+    images: ["https://totalgains.es/images/oferta-web/og-oferta-web.jpg"],
+  },
 };
 
 const recibo = [
@@ -35,6 +53,7 @@ const recibo = [
   { que: "Alojamiento", detalle: "Mientras sigas en TotalGains", valor: "Incluido", fuerte: true },
   { que: "Mantenimiento", detalle: `Pro y Unlimited: ${OFERTA_WEB.cambiosAlMes} cambios pequeños al mes`, valor: "Gratis", fuerte: true },
   { que: "Lo básico para Google y las IAs", detalle: "Tus servicios, tu zona y tu contacto, bien escritos", valor: "Incluido", fuerte: true },
+  { que: "Entrega", detalle: "Desde que nos mandas tu material y cómo la quieres", valor: OFERTA_WEB.entrega, fuerte: true },
 ];
 
 const planes = [
@@ -75,14 +94,46 @@ const pasos = [
     texto: "Starter, Pro o Unlimited. Pagas 10 mensualidades y tienes el año entero.",
   },
   {
-    icono: Mail,
-    titulo: "Escríbenos",
-    texto: `Un correo a ${OFERTA_WEB.email} con el asunto «Quiero mi web» y tu plaza queda reservada.`,
+    icono: Send,
+    titulo: "Reserva tu plaza",
+    texto: "Con el formulario de abajo o por WhatsApp. Las plazas van por orden de llegada.",
   },
   {
     icono: ClipboardList,
-    titulo: "Nos pasas tus datos",
-    texto: "Te mandamos un formulario corto (logo, colores, servicios, fotos y contacto) y con eso montamos tu web.",
+    titulo: "Nos pasas tu material",
+    texto: "Te mandamos un formulario corto: logo, colores, servicios, fotos, contacto y cómo la quieres.",
+  },
+  {
+    icono: Rocket,
+    titulo: `En ${OFERTA_WEB.entrega}, publicada`,
+    texto: `Desde que nos llega todo tu material, en ${OFERTA_WEB.entrega} tienes tu web en internet.`,
+  },
+];
+
+const preguntas = [
+  {
+    p: "¿Cuánto tarda en estar lista?",
+    r: `${OFERTA_WEB.entrega[0].toUpperCase()}${OFERTA_WEB.entrega.slice(1)} desde que nos mandas todo el material (logo, fotos, servicios y contacto) y nos cuentas cómo la quieres.`,
+  },
+  {
+    p: "¿Tengo que tener dominio?",
+    r: "No. En Starter puede ir en tunombre.totalgains.es. Si quieres tu propio dominio (tunombre.es), lo contratas tú y la ponemos ahí. En Pro y Unlimited va en tu dominio.",
+  },
+  {
+    p: "¿Qué es un «cambio pequeño»?",
+    r: `Cosas como cambiar un precio, un horario, una foto o un texto. En Pro y Unlimited tienes ${OFERTA_WEB.cambiosAlMes} al mes gratis.`,
+  },
+  {
+    p: "Ya tengo web. ¿Me sirve la oferta?",
+    r: "Escríbenos y lo vemos contigo: cada caso es distinto.",
+  },
+  {
+    p: "¿Me pone primero en Google?",
+    r: "Lleva lo básico bien hecho: tus servicios, tu zona y tu contacto escritos para que Google y las IAs entiendan quién eres. Un trabajo continuado de posicionamiento (SEO y GEO) es un servicio aparte.",
+  },
+  {
+    p: "¿Y si me doy de baja de TotalGains?",
+    r: "Te llevas tu web, o mantienes el alojamiento pagándolo aparte.",
   },
 ];
 
@@ -91,6 +142,8 @@ const letraPequena = [
   `La oferta acaba el ${OFERTA_WEB.finTexto} de 2026 a las 23:59 (hora peninsular) o cuando se cubran las plazas, lo que pase antes.`,
   "Es para los planes anuales de entrenador (Starter, Pro y Unlimited) contratados durante la oferta.",
   "El dominio propio, si quieres uno, lo contratas tú. En Starter, sin dominio, la web va en tunombre.totalgains.es.",
+  `El plazo de ${OFERTA_WEB.entrega} cuenta desde que nos llega todo el material y sabemos cómo quieres la web.`,
+  "La prueba «Pon tu nombre y mira tu web» es una muestra: tu web de verdad se diseña con tu material.",
   "La web incluye lo básico para que Google la entienda. Un trabajo continuado de posicionamiento (SEO y GEO) es un servicio aparte.",
   "Si te das de baja de TotalGains, te llevas tu web o mantienes el alojamiento pagándolo aparte.",
 ];
@@ -152,6 +205,9 @@ export default function OfertaWebPage() {
             </div>
 
             <OfertaWebCta />
+            <p className="ow-heroe-nota">
+              <Rocket size={17} aria-hidden="true" /> Lista en {OFERTA_WEB.entrega} desde que nos mandas tu material.
+            </p>
           </div>
 
           <div className="ow-escaparate" aria-hidden="true">
@@ -199,6 +255,9 @@ export default function OfertaWebPage() {
           </div>
         </div>
       </section>
+
+      {/* ── PRUEBA: PON TU NOMBRE ── */}
+      <OfertaWebPrueba />
 
       {/* ── RECIBO ── */}
       <section className="ow-sec" aria-labelledby="ow-recibo-t">
@@ -257,7 +316,7 @@ export default function OfertaWebPage() {
       <section className="ow-sec" aria-labelledby="ow-pasos-t">
         <div className="container ow-ancho">
           <p className="ow-antetitulo">Cómo conseguirla</p>
-          <h2 id="ow-pasos-t" className="ow-h2">Tres pasos y es tuya</h2>
+          <h2 id="ow-pasos-t" className="ow-h2">Cuatro pasos y es tuya</h2>
           <ol className="ow-pasos">
             {pasos.map(({ icono: Icono, titulo, texto }, i) => (
               <li key={titulo}>
@@ -298,6 +357,22 @@ export default function OfertaWebPage() {
         </div>
       </section>
 
+      {/* ── PREGUNTAS ── */}
+      <section className="ow-sec" aria-labelledby="ow-faq-t">
+        <div className="container ow-estrecho">
+          <p className="ow-antetitulo">Preguntas frecuentes</p>
+          <h2 id="ow-faq-t" className="ow-h2">Lo que te estarás preguntando</h2>
+          <div className="ow-faq">
+            {preguntas.map(({ p, r }) => (
+              <details key={p} className="ow-letra">
+                <summary>{p}</summary>
+                <p>{r}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── CIERRE ── */}
       <section className="ow-final" aria-labelledby="ow-final-t">
         <div className="ow-final-luz" aria-hidden="true" />
@@ -309,7 +384,9 @@ export default function OfertaWebPage() {
             <CuentaAtras tam="grande" />
             <Plazas tam="grande" />
           </div>
-          <OfertaWebCta />
+          <div id="reservar" className="ow-reservar">
+            <OfertaWebReserva />
+          </div>
         </div>
       </section>
 
