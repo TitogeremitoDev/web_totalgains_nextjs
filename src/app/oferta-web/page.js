@@ -5,7 +5,7 @@ import {
   Smartphone, Search, MapPin, Sparkles, ArrowRight, Star,
 } from "lucide-react";
 import { OFERTA_WEB, textoPlazas } from "@/data/ofertaWeb";
-import { IconoOferta, CuentaAtras, Plazas } from "@/components/OfertaWebPiezas";
+import { IconoOferta, CuentaAtras, Plazas, SoloConOferta } from "@/components/OfertaWebPiezas";
 import OfertaWebCta from "./OfertaWebCta";
 import OfertaWebPrueba from "./OfertaWebPrueba";
 import OfertaWebReserva from "./OfertaWebReserva";
@@ -188,7 +188,7 @@ export default function OfertaWebPage() {
         <div className="container ow-heroe-grid">
           <div className="ow-heroe-texto">
             <p className="ow-pill">
-              <IconoOferta /> Oferta de noviembre · {textoPlazas()}
+              <IconoOferta /> Oferta de noviembre<SoloConOferta> · {textoPlazas()}</SoloConOferta>
             </p>
             <h1 id="ow-h1" className="ow-h1">
               Una oferta que da <span className="ow-miedo">miedo</span>…
@@ -198,11 +198,13 @@ export default function OfertaWebPage() {
               Pásate al plan anual de TotalGains y <strong>te hacemos tu web</strong>. Con tu nombre, tus servicios y tu contacto, para que quien te busque en Google o le pregunte a una IA te encuentre a ti.
             </p>
 
-            <div className="ow-reloj">
-              <p className="ow-reloj-titulo">Se acaba en</p>
-              <CuentaAtras tam="grande" />
-              <Plazas tam="grande" />
-            </div>
+            <SoloConOferta>
+              <div className="ow-reloj">
+                <p className="ow-reloj-titulo">Se acaba en</p>
+                <CuentaAtras tam="grande" />
+                <Plazas tam="grande" />
+              </div>
+            </SoloConOferta>
 
             <OfertaWebCta />
             <p className="ow-heroe-nota">
@@ -378,12 +380,14 @@ export default function OfertaWebPage() {
         <div className="ow-final-luz" aria-hidden="true" />
         <div className="container ow-estrecho">
           <span className="ow-final-icono"><IconoOferta /></span>
-          <h2 id="ow-final-t" className="ow-h2">Cuando se acaben las {OFERTA_WEB.plazas}, se acabó.</h2>
-          <p className="ow-final-texto">Hasta el {OFERTA_WEB.finTexto} a las 23:59 o hasta que se cubran las plazas.</p>
-          <div className="ow-final-reloj">
-            <CuentaAtras tam="grande" />
-            <Plazas tam="grande" />
-          </div>
+          <SoloConOferta>
+            <h2 id="ow-final-t" className="ow-h2">Cuando se acaben las {OFERTA_WEB.plazas}, se acabó.</h2>
+            <p className="ow-final-texto">Hasta el {OFERTA_WEB.finTexto} a las 23:59 o hasta que se cubran las plazas.</p>
+            <div className="ow-final-reloj">
+              <CuentaAtras tam="grande" />
+              <Plazas tam="grande" />
+            </div>
+          </SoloConOferta>
           <div id="reservar" className="ow-reservar">
             <OfertaWebReserva />
           </div>

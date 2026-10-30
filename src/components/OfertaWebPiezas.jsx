@@ -8,6 +8,13 @@ import "./ofertaWeb.css";
    cliente): el icono de temporada, la cuenta atrás y las plazas. Las usan el
    ticket (portada, precios y artículo) y la página /oferta-web/. */
 
+/* Lo que solo tiene sentido con la oferta abierta (plazas, «Se acaba en»…):
+   desde la página de servidor se envuelve aquí y se esconde solo al acabar. */
+export function SoloConOferta({ children }) {
+  const { activa } = useOfertaWeb();
+  return activa ? children : null;
+}
+
 export function IconoOferta() {
   const { halloween } = useOfertaWeb();
   return <span aria-hidden="true">{halloween ? "🎃" : "🎁"}</span>;

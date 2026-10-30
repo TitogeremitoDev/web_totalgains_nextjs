@@ -1,19 +1,26 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { OFERTA_WEB, ofertaWebActiva, esFinDeSemanaHalloween } from "@/data/ofertaWeb";
+import { OFERTA_WEB, ofertaWebActiva, esFinDeSemanaHalloween, plazasLibres } from "@/data/ofertaWeb";
 
 /* La fecha solo se sabe en el navegador. En el HTML estático la oferta sale
    puesta (con calabaza), que es lo que toca el día que se publica; al
    hidratar, useSyncExternalStore lee la fecha real y la esconde a partir del
    30-nov (y cambia la calabaza por un regalo desde el 2-nov) sin avisos de
-   hidratación. Mismo patrón que el scroll de Navbar. */
-const sinSuscripcion = () => () => {};
-const enServidor = () => true;
+   hidratación. Mismo patrón que el scroll de Navbar.
+   Se vuelve a mirar cada 5 s para que a las 23:59:59 del 30-nov se cierre
+   también con la página abierta (React solo repinta si cambia el valor). */
+const suscribirCada5s = (avisar) => {
+  const id = setInterval(avisar, 5000);
+  return () => clearInterval(id);
+};
+// Sin fecha, lo único que se sabe al compilar es si se marcó agotada.
+const activaEnServidor = () => !OFERTA_WEB.agotada && plazasLibres() > 0;
+const conCalabaza = () => true;
 
 export function useOfertaWeb() {
-  const activa = useSyncExternalStore(sinSuscripcion, ofertaWebActiva, enServidor);
-  const halloween = useSyncExternalStore(sinSuscripcion, esFinDeSemanaHalloween, enServidor);
+  const activa = useSyncExternalStore(suscribirCada5s, ofertaWebActiva, activaEnServidor);
+  const halloween = useSyncExternalStore(suscribirCada5s, esFinDeSemanaHalloween, conCalabaza);
   return { activa, halloween };
 }
 

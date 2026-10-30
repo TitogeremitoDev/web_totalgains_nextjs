@@ -52,6 +52,10 @@ export default function OfertaWebReserva() {
   const enviar = (e) => {
     e.preventDefault();
     if (!privacidad) return;
+    if (!datos.nombre.trim()) {
+      setEstado("nombre");
+      return;
+    }
     if (!EMAIL_OK.test(datos.email.trim())) {
       setEstado("email");
       return;
@@ -72,19 +76,27 @@ export default function OfertaWebReserva() {
     if (datos.mensaje.trim()) lineas.push("", `Mensaje: ${datos.mensaje.trim()}`);
     if (url.get("utm_source")) lineas.push("", `Llega desde: ${url.get("utm_source")} / ${url.get("utm_medium") || "sin medio"}`);
 
-    emailjs
-      .send(
-        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
-        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
-        {
-          from_name: datos.nombre.trim(),
-          from_email: datos.email.trim(),
-          subject: OFERTA_WEB.asunto,
-          message: lineas.join("\n"),
-          to_email: OFERTA_WEB.email,
-        },
-        process.env.NEXT_PUBLIC_EMAILJS_USER_ID
-      )
+    // Si falta una clave de EmailJS, send() lanza el error al momento en vez de
+    // devolverlo en la promesa y el botón se quedaba en «Reservando…» para
+    // siempre. Dentro del then() también acaba en «No ha podido salir».
+    // Si EmailJS no contesta en 20 s, también se ofrece WhatsApp.
+    const sinRespuesta = new Promise((_, rechazar) => setTimeout(() => rechazar({ text: "sin respuesta en 20 s" }), 20000));
+    Promise.resolve()
+      .then(() => Promise.race([
+        emailjs.send(
+          process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+          process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+          {
+            from_name: datos.nombre.trim(),
+            from_email: datos.email.trim(),
+            subject: OFERTA_WEB.asunto,
+            message: lineas.join("\n"),
+            to_email: OFERTA_WEB.email,
+          },
+          process.env.NEXT_PUBLIC_EMAILJS_USER_ID
+        ),
+        sinRespuesta,
+      ]))
       .then(() => {
         trackEvent("lead_submit", { form_name: "oferta_web", form_subject: datos.plan });
         router.push("/gracias/?de=oferta-web");
@@ -156,9 +168,10 @@ export default function OfertaWebReserva() {
           </label>
         </div>
 
-        {estado === "email" && <p className="owr-nota">Revisa el correo: parece que le falta algo.</p>}
+        {estado === "nombre" && <p className="owr-nota" role="alert">Escribe tu nombre para guardarte la plaza.</p>}
+        {estado === "email" && <p className="owr-nota" role="alert">Revisa el correo: parece que le falta algo.</p>}
         {estado === "no-salio" && (
-          <p className="owr-nota">
+          <p className="owr-nota" role="alert">
             No ha podido salir. Escríbenos por WhatsApp o a {OFERTA_WEB.email} y te guardamos la plaza igual.
           </p>
         )}

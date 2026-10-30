@@ -40,14 +40,26 @@ const CHISPAS = Array.from({ length: 34 }, (_, i) => {
 });
 
 const sinAcentos = (t) => t.normalize("NFD").replace(/[̀-ͯ]/g, "");
-const dominioDe = (nombre) => (sinAcentos(nombre).toLowerCase().replace(/[^a-z0-9]+/g, "").slice(0, 22) || "tunombre") + ".es";
+// Palabras enteras hasta 22 letras: «Laura Ruiz Entrenadora Personal» → lauraruizentrenadora.es
+const dominioDe = (nombre) => {
+  let dominio = "";
+  for (const palabra of sinAcentos(nombre).toLowerCase().split(/[^a-z0-9]+/).filter(Boolean)) {
+    if (dominio && (dominio + palabra).length > 22) break;
+    dominio = (dominio + palabra).slice(0, 22);
+  }
+  return (dominio || "tunombre") + ".es";
+};
+// Primera letra o número de cada palabra (un emoji no cuenta como inicial).
 const inicialesDe = (nombre) =>
   sinAcentos(nombre.trim())
     .split(/\s+/)
+    .map((p) => p.match(/[\p{L}\p{N}]/u)?.[0])
     .filter(Boolean)
     .slice(0, 2)
-    .map((p) => p[0].toUpperCase())
-    .join("") || "TU";
+    .join("")
+    .toUpperCase() || "TU";
+const TIPOS_LOGO = ["image/png", "image/jpeg", "image/webp", "image/svg+xml", "image/gif"];
+const suave = () => (window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth");
 
 /* Texto oscuro sobre colores claros (amarillo, verde lima…), blanco sobre el resto. */
 const textoSobre = (hex) => {
@@ -101,18 +113,28 @@ export default function OfertaWebPrueba() {
     const archivo = e.target.files?.[0];
     e.target.value = "";
     if (!archivo) return;
-    if (!archivo.type.startsWith("image/")) {
-      setAvisoLogo("Sube una imagen (PNG, JPG o SVG).");
+    if (!TIPOS_LOGO.includes(archivo.type)) {
+      setAvisoLogo("Sube tu logo en PNG, JPG, SVG o WebP.");
       return;
     }
     if (archivo.size > 8 * 1024 * 1024) {
       setAvisoLogo("Esa imagen pesa mucho: prueba con una de menos de 8 MB.");
       return;
     }
-    if (logoActual.current) URL.revokeObjectURL(logoActual.current);
-    logoActual.current = URL.createObjectURL(archivo);
-    setLogo(logoActual.current);
-    setAvisoLogo("");
+    // Se prueba a abrirla antes de ponerla, para no enseñar una imagen rota.
+    const url = URL.createObjectURL(archivo);
+    const prueba = new window.Image();
+    prueba.onload = () => {
+      if (logoActual.current) URL.revokeObjectURL(logoActual.current);
+      logoActual.current = url;
+      setLogo(url);
+      setAvisoLogo("");
+    };
+    prueba.onerror = () => {
+      URL.revokeObjectURL(url);
+      setAvisoLogo("Esa imagen no se puede ver aquí: prueba con tu logo en PNG o JPG.");
+    };
+    prueba.src = url;
   };
 
   const quitarLogo = () => {
@@ -128,7 +150,7 @@ export default function OfertaWebPrueba() {
     trackEvent("oferta_web_prueba", { con_logo: Boolean(logo), con_nombre: Boolean(nombre.trim()) });
     // En el móvil la web de ejemplo queda debajo del formulario: bajamos a verla.
     if (window.matchMedia("(max-width: 980px)").matches) {
-      document.querySelector(".owb-escena")?.scrollIntoView({ behavior: "smooth", block: "center" });
+      document.querySelector(".owb-escena")?.scrollIntoView({ behavior: suave(), block: "center" });
     }
 
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
@@ -152,7 +174,7 @@ export default function OfertaWebPrueba() {
   const laQuiero = () => {
     trackEvent("cta_click", { cta_text: "oferta_web_la_quiero", cta_location: "oferta_web_prueba" });
     window.dispatchEvent(new CustomEvent("ow:reservar", { detail: { nombre: nombre.trim(), color } }));
-    document.getElementById("reservar")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    document.getElementById("reservar")?.scrollIntoView({ behavior: suave(), block: "start" });
   };
 
   const vars = {
@@ -214,7 +236,7 @@ export default function OfertaWebPrueba() {
                 <label className="owb-subir">
                   <Upload size={18} aria-hidden="true" />
                   <span>Sube tu logo</span>
-                  <input type="file" accept="image/*" onChange={cambiarLogo} />
+                  <input type="file" accept={TIPOS_LOGO.join(",")} onChange={cambiarLogo} />
                 </label>
               )}
               {avisoLogo && <small className="owb-aviso">{avisoLogo}</small>}

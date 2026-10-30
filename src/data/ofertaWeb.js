@@ -36,13 +36,14 @@ export const OFERTA_WEB = {
   articulo: "/blog/seo-geo-entrenador-personal-conseguir-clientes/",
 };
 
+export const plazasLibres = () => Math.max(0, OFERTA_WEB.plazas - OFERTA_WEB.plazasCogidas);
+
+// Con las 10 plazas cogidas se cierra aunque no se haya marcado `agotada`.
 export const ofertaWebActiva = (ahora = Date.now()) =>
-  !OFERTA_WEB.agotada && ahora <= Date.parse(OFERTA_WEB.fin);
+  !OFERTA_WEB.agotada && plazasLibres() > 0 && ahora <= Date.parse(OFERTA_WEB.fin);
 
 export const esFinDeSemanaHalloween = (ahora = Date.now()) =>
   ahora <= Date.parse(OFERTA_WEB.halloweenHasta);
-
-export const plazasLibres = () => Math.max(0, OFERTA_WEB.plazas - OFERTA_WEB.plazasCogidas);
 
 export const textoPlazas = () =>
   OFERTA_WEB.plazasCogidas > 0

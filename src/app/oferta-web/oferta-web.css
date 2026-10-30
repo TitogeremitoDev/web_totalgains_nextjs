@@ -1532,6 +1532,13 @@
   cursor: pointer;
 }
 
+/* Sus inputs son invisibles: con teclado, el aro de foco va en la caja. */
+.owb-color-libre:has(input:focus-visible),
+.owb-subir:has(input:focus-visible) {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
 .owb-logo-subido {
   display: flex;
   align-items: center;
