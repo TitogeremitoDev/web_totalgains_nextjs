@@ -62,6 +62,8 @@ const entrenadores = {
                   media: { tipo: 'imagen', src: '/images/blog/ia-totalgains/04-rutina-generada.webp', w: 1187, h: 982, alt: 'Rutina generada por la IA de TotalGains, lista para revisar', pie: 'Una rutina ya montada: días, ejercicios, series y descansos.' } },
                 { titulo: 'En el entreno del atleta', items: [8, 9, 15, 10, 11, 12, 13],
                   media: { tipo: 'video', src: '/video/app-pantalla-entreno.mp4', poster: '/video/app-pantalla-entreno.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Pantalla de entreno en la app del atleta', pie: 'El entreno, tal y como lo sigue el atleta en su móvil.' } },
+                { titulo: 'Semana de descarga', items: [16, 17],
+                  media: { tipo: 'video', src: '/video/coach-semana-descarga.mp4', poster: '/video/coach-semana-descarga.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Semana de descarga en TotalGains: el botón «Descarga» en la tarjeta de la rutina, la ventana ya rellena con «Solo peso», la semana en el programa del atleta y la vuelta a su rutina', pie: 'Una semana suave y vuelve sola a su rutina, por donde iba.' } },
             ],
             items: [
                 { t: 'Generador de rutinas con IA', d: 'Periodizaciones completas en segundos usando solo los ejercicios de tu biblioteca. Antes de aplicar nada ves exactamente qué cambia respecto a la rutina actual, y si no te convence pides otra propuesta.' },
@@ -85,6 +87,13 @@ const entrenadores = {
                    `POST /api/exercises/upload-image` con «Subir mi foto» / «Hacer foto». */
                 { t: 'Mantener los pesos que ya movía', d: 'Al cambiar de rutina, cada ejercicio que el atleta ya hacía arranca con los kilos y las repeticiones de su última sesión, serie a serie, venga de la rutina que venga. Sin estimaciones ni subidas automáticas: sale el número que movió y decides tú si se sube. Viene marcado de fábrica al asignar, también en bloque y en los programas, y si lo desmarcas vuelve el peso orientativo.' },
                 { t: 'Tu propia foto en cada ejercicio', d: 'Además del buscador de imágenes, subes la foto del ejercicio desde la galería o la haces con la cámara del móvil, y queda marcada como «Tu foto». Las fotos del iPhone valen tal cual: la app las reduce sola antes de subirlas.' },
+                /* ⚠️ Índices 16 y 17, también AL FINAL (bloque «Semana de descarga»).
+                   Verificados contra el código el 30-oct-2026 (OTA 1.3.41): «Descarga»
+                   en workouts/index.jsx, DescargaModal.jsx (REGLA_DE_FABRICA «Solo peso»),
+                   ProgramPlannerModal.jsx (`descargaDespues`), DescargaAviso.jsx y
+                   descargaService.terminarDescarga en el servidor. */
+                { t: 'Semana de descarga en un toque', d: 'Pulsas «Descarga» en la tarjeta de su rutina o en su Programa y la semana sale ya preparada: de fábrica, las mismas series con el 90 % de su última marca y dos repeticiones más en recámara. Si lo prefieres, bajas series, peso o repeticiones a tu manera, y antes de programarla ves cómo queda cada ejercicio con sus números. Al planificar un programa por bloques, la puedes meter entre un bloque y el siguiente.' },
+                { t: 'Vuelve sola a su rutina, por donde iba', d: 'El lunes siguiente el atleta recupera su misma rutina, en la semana que le tocaba y con los kilos de antes de la descarga, sin reasignar nada. Durante la descarga ve en su entreno qué cambia y hasta qué día, la descarga no cuenta como su última marca y en su Progreso sale en una tabla aparte.' },
             ],
         },
         {

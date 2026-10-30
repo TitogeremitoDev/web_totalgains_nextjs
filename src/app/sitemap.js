@@ -12,7 +12,7 @@ export default function sitemap() {
         { url: `${baseUrl}/verifactu/`, lastModified: '2026-10-02' },
         { url: `${baseUrl}/verifactu/gimnasios/`, lastModified: '2026-10-03' },
         { url: `${baseUrl}/funciones/`, lastModified: '2026-09-26' },
-        { url: `${baseUrl}/funciones/entrenadores/`, lastModified: '2026-09-26' },
+        { url: `${baseUrl}/funciones/entrenadores/`, lastModified: '2026-10-30' },
         { url: `${baseUrl}/funciones/gimnasios/`, lastModified: '2026-09-26' },
         { url: `${baseUrl}/alternativas/`, lastModified: '2026-09-27' },
         { url: `${baseUrl}/alternativas/trainerize/`, lastModified: '2026-08-22' },
