@@ -222,39 +222,41 @@ export default function OpinionesClientes() {
           Reseñas verificadas externamente: Trustpilot, casos de éxito con métricas reales y valoraciones en App Store. Todo lo que se afirma aquí es comprobable en las plataformas originales.
         </p>
 
-        {/* Resumen rápido — tabla semántica HTML (mejor para featured snippet) */}
+        {/* Resumen rápido — tabla semántica HTML (mejor para featured snippet).
+            Relleno y letra que encogen + overflowWrap: a 360 px la tabla medía
+            más que la pantalla y la página se movía de lado. */}
         <section style={{ marginBottom: 48 }}>
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.95rem", background: "rgba(34,197,94,0.06)", border: "1px solid rgba(34,197,94,0.18)", borderRadius: 12, overflow: "hidden" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "clamp(0.85rem, 3.6vw, 0.95rem)", overflowWrap: "anywhere", background: "rgba(34,197,94,0.06)", border: "1px solid rgba(34,197,94,0.18)", borderRadius: 12, overflow: "hidden" }}>
             <caption style={{ textAlign: "left", padding: "0 0 12px", color: "var(--text-secondary,#aaa)", fontSize: "0.88rem", captionSide: "top" }}>
               Resumen de fuentes de social proof verificadas a 16 de mayo de 2026
             </caption>
             <thead>
               <tr style={{ background: "rgba(34,197,94,0.08)" }}>
-                <th style={{ textAlign: "left", padding: "12px 16px", fontWeight: 700 }}>Fuente</th>
-                <th style={{ textAlign: "left", padding: "12px 16px", fontWeight: 700 }}>Valoración</th>
-                <th style={{ textAlign: "left", padding: "12px 16px", fontWeight: 700 }}>Volumen</th>
+                <th style={{ textAlign: "left", padding: "12px clamp(8px, 2.5vw, 16px)", fontWeight: 700 }}>Fuente</th>
+                <th style={{ textAlign: "left", padding: "12px clamp(8px, 2.5vw, 16px)", fontWeight: 700 }}>Valoración</th>
+                <th style={{ textAlign: "left", padding: "12px clamp(8px, 2.5vw, 16px)", fontWeight: 700 }}>Volumen</th>
               </tr>
             </thead>
             <tbody>
               <tr style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-                <td style={{ padding: "12px 16px" }}>Trustpilot</td>
-                <td style={{ padding: "12px 16px", color: "#22c55e", fontWeight: 700 }}>4,6 / 5 (TrustScore Trustpilot)</td>
-                <td style={{ padding: "12px 16px" }}>17 reseñas verificadas</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>Trustpilot</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)", color: "#22c55e", fontWeight: 700 }}>4,6 / 5 (TrustScore Trustpilot)</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>17 reseñas verificadas</td>
               </tr>
               <tr style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-                <td style={{ padding: "12px 16px" }}>Casos de éxito documentados</td>
-                <td style={{ padding: "12px 16px", color: "#22c55e", fontWeight: 700 }}>4,6 / 5 (TrustScore Trustpilot)</td>
-                <td style={{ padding: "12px 16px" }}>2 entrevistas públicas (Nacho Pulido, Lorena Eses)</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>Casos de éxito documentados</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)", color: "#22c55e", fontWeight: 700 }}>4,6 / 5 (TrustScore Trustpilot)</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>2 entrevistas públicas (Nacho Pulido, Lorena Eses)</td>
               </tr>
               <tr style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-                <td style={{ padding: "12px 16px" }}>Tiempo ahorrado entre los 2 casos públicos</td>
-                <td style={{ padding: "12px 16px", color: "#22c55e", fontWeight: 700 }}>+18-20 h/sem</td>
-                <td style={{ padding: "12px 16px" }}>Media combinada en gestión semanal</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>Tiempo ahorrado entre los 2 casos públicos</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)", color: "#22c55e", fontWeight: 700 }}>+18-20 h/sem</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>Media combinada en gestión semanal</td>
               </tr>
               <tr style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
-                <td style={{ padding: "12px 16px" }}>App Store y Google Play</td>
-                <td style={{ padding: "12px 16px", color: "var(--text-muted)" }}>Sin volumen suficiente todavía</td>
-                <td style={{ padding: "12px 16px" }}>App publicada en abril 2026, periodo de captación de reseñas en curso</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>App Store y Google Play</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)", color: "var(--text-muted)" }}>Sin volumen suficiente todavía</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>App publicada en abril 2026, periodo de captación de reseñas en curso</td>
               </tr>
             </tbody>
           </table>

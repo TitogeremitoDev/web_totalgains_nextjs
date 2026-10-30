@@ -127,15 +127,17 @@ export default function CasoNachoPulido() {
           </div>
         </div>
 
-        {/* Key results */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 16, marginBottom: 40 }}>
+        {/* Key results — minmax(0, 1fr) y cifra con clamp: con 1fr a secas y
+            1.8rem, a 360 px de ancho las tres cajas no cabían y la página se
+            movía de lado. */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "clamp(8px, 3vw, 16px)", marginBottom: 40 }}>
           {[
             { value: "8–10h", label: "ahorradas cada semana" },
             { value: "15→40", label: "clientes antes y ahora" },
             { value: "1 día", label: "para completar la migración" },
           ].map(({ value, label }) => (
-            <div key={label} style={{ padding: "20px 16px", background: "rgba(102,126,234,0.08)", border: "1px solid rgba(102,126,234,0.2)", borderRadius: 16, textAlign: "center" }}>
-              <p style={{ fontSize: "1.8rem", fontWeight: 800, margin: 0, background: "var(--primary-gradient)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{value}</p>
+            <div key={label} style={{ padding: "20px clamp(6px, 2.5vw, 16px)", background: "rgba(102,126,234,0.08)", border: "1px solid rgba(102,126,234,0.2)", borderRadius: 16, textAlign: "center" }}>
+              <p style={{ fontSize: "clamp(1.25rem, 6vw, 1.8rem)", fontWeight: 800, margin: 0, whiteSpace: "nowrap", background: "var(--primary-gradient)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>{value}</p>
               <p style={{ margin: 0, color: "var(--text-secondary)", fontSize: "0.82rem", marginTop: 4 }}>{label}</p>
             </div>
           ))}
