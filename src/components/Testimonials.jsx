@@ -60,7 +60,7 @@ const testimonials = [
     followers: "28.2K",
     instagram: "https://www.instagram.com/lorenaeses/",
     handle: "@lorenaeses",
-    avatar: "/testimonials/lorena.webp",
+    avatar: "/testimonials/lorena-eses.webp",
     accentClass: "accent-lorena",
     resultClass: "result-lorena",
     keyResult: "+10h",

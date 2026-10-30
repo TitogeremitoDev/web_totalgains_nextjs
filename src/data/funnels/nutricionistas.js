@@ -168,7 +168,7 @@ const nutricionistas = {
     testimonial: {
         name: 'Lorena Eses',
         role: 'Nutricionista Online · 28,2K seguidores',
-        avatar: '/testimonials/lorena.webp',
+        avatar: '/testimonials/lorena-eses.webp',
         handle: '@lorenaeses',
         instagram: 'https://www.instagram.com/lorenaeses/',
         result: '+10 h',

@@ -20,11 +20,11 @@ export const metadata = {
        queda por debajo del mínimo de 200x200 de Facebook: la preview salía
        rota o vacía. El twitter block va explícito porque si no, hereda la
        og-image genérica del layout raíz y no esta. */
-    images: [{ url: "https://totalgains.es/testimonials/og-caso-lorena-eses.jpg", width: 1200, height: 630, alt: "Caso de éxito: Lorena Eses, nutricionista, ahorra más de 10 horas semanales con TotalGains" }],
+    images: [{ url: "https://totalgains.es/testimonials/og-caso-lorena-eses-2.jpg", width: 1200, height: 630, alt: "Caso de éxito: Lorena Eses, nutricionista, ahorra más de 10 horas semanales con TotalGains" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://totalgains.es/testimonials/og-caso-lorena-eses.jpg"],
+    images: ["https://totalgains.es/testimonials/og-caso-lorena-eses-2.jpg"],
   },
 };
 
@@ -104,7 +104,7 @@ export default function CasoLorenaEses() {
 
         {/* Header Profile */}
         <div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 32 }}>
-          <Image src="/testimonials/lorena.webp" alt="Lorena Eses" width={80} height={80} style={{ borderRadius: "50%", border: "2px solid rgba(250,112,154,0.4)" }} />
+          <Image src="/testimonials/lorena-eses.webp" alt="Lorena Eses" width={80} height={80} style={{ borderRadius: "50%", border: "2px solid rgba(250,112,154,0.4)" }} />
           <div>
             <h2 style={{ fontSize: "1.5rem", fontWeight: 800, margin: 0, color: "var(--text-primary)" }}>Lorena Eses</h2>
             <p style={{ color: "var(--text-secondary)", margin: "4px 0 8px", fontSize: "0.95rem" }}>Nutricionista Online</p>

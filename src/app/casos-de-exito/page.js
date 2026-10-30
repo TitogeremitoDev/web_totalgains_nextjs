@@ -36,7 +36,7 @@ const cases = [
     name: "Lorena Eses",
     handle: "@lorenaeses",
     role: "Nutricionista Online · 28K seguidores",
-    avatar: "/testimonials/lorena.webp",
+    avatar: "/testimonials/lorena-eses.webp",
     quote:
       "La tranquilidad de saber que está todo automatizado y la ganancia de tiempo al poder delegar en la app la agenda, las citas y las revisiones quincenales. Más de 10 horas semanales ahorradas.",
     keyResult: "+10 h/sem ahorradas",

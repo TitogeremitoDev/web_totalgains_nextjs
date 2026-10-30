@@ -79,7 +79,7 @@ const casosExito = [
   {
     name: "Lorena Eses",
     role: "Nutricionista online (28K seguidores Instagram)",
-    photo: "/testimonials/lorena.webp",
+    photo: "/testimonials/lorena-eses.webp",
     quote:
       "La tranquilidad de saber que está todo automatizado y la ganancia de tiempo al poder delegar en la app la agenda, las citas y las revisiones quincenales. Más de 10 horas semanales ahorradas.",
     metric: "+10 h/sem ahorradas en seguimientos manuales",
