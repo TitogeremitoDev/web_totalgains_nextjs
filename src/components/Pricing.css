@@ -83,6 +83,12 @@
 @media (max-width: 480px) {
     .audience-btn { padding: 10px 14px; font-size: .82rem; gap: 6px }
 }
+/* A 360 px «Soy entrenador» + «Tengo un gimnasio» medían 4 px más que la
+   pantalla y la portada y Precios se movían de lado. */
+@media (max-width: 380px) {
+    .audience-toggle { gap: 4px; padding: 4px }
+    .audience-btn { padding: 10px 11px; white-space: nowrap }
+}
 
 /* Unidad del precio — sin esto, 149,90 € (atletas) y 149 € (socios) se leen igual */
 .price-unit {
