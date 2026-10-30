@@ -29,8 +29,8 @@ export default function OfertaWebBanner() {
         color: "var(--text-primary,#fff)",
       }}
     >
-      <span style={{ fontSize: "1.35rem", lineHeight: 1 }} aria-hidden="true">{halloween ? "🎃" : "🎁"}</span>
       <span style={{ fontSize: "0.98rem", lineHeight: 1.45 }}>
+        <span style={{ fontSize: "1.2rem", marginRight: 8, verticalAlign: "-2px" }} aria-hidden="true">{halloween ? "🎃" : "🎁"}</span>
         <strong>Una oferta que da miedo… a tu competencia:</strong>{" "}
         tu web incluida al pasarte al plan anual.{" "}
         <span style={{ color: "var(--text-secondary,#b8b8d1)" }}>

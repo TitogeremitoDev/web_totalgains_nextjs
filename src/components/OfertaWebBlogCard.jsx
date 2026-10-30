@@ -56,7 +56,7 @@ export default function OfertaWebBlogCard() {
       </div>
 
       <p style={{ margin: "22px 0 0", textAlign: "center" }}>
-        <Link href={OFERTA_WEB.ruta} prefetch={false} className="btn btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 8 }}>
+        <Link href={OFERTA_WEB.ruta} prefetch={false} className="btn btn-primary" style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#fff", textDecoration: "none" }}>
           Ver la oferta <ArrowRight size={16} aria-hidden="true" />
         </Link>
       </p>
