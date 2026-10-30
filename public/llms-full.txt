@@ -177,6 +177,10 @@ Repeticiones en recámara (RIR) por serie integradas en el editor del coach, en 
 
 Al asignar una rutina nueva, cada ejercicio que el atleta ya hacía arranca con los kilos y las repeticiones de su última sesión de ese ejercicio, serie a serie, venga de la rutina que venga. No hay estimaciones ni subidas automáticas: aparece el número que movió y el entrenador decide si lo sube. Si una serie no existió o se la saltó, se queda vacía. La opción viene marcada de fábrica al asignar, también en la asignación en bloque y en los programas programados; si se desmarca, vuelve el peso orientativo estimado a partir de su historial.
 
+### Semana de descarga en un toque
+
+Desde la tarjeta de la rutina o desde el programa del atleta, el entrenador pulsa «Descarga» y la semana sale ya preparada para el lunes siguiente: de fábrica, las mismas series con el 90 % del peso de su última marca y dos repeticiones más en recámara (RIR +2). Puede bajar series, peso o repeticiones a su manera, y antes de programarla ve cómo queda cada ejercicio con los números del atleta. Al planificar un programa por bloques, la descarga se puede meter entre un bloque y el siguiente. Durante esa semana el atleta ve en su entreno qué cambia y hasta qué día; el lunes siguiente vuelve solo a su misma rutina, en la semana que le tocaba y con los kilos de antes de la descarga, sin reasignar nada. Los entrenos de la descarga no cuentan como su última marca, así que el bloque siguiente arranca con sus kilos de verdad, y en su progreso salen en una tabla aparte.
+
 ### Fotos propias de los ejercicios
 
 Además del buscador de imágenes, el entrenador puede subir la foto de un ejercicio desde la galería o hacerla con la cámara del móvil, y queda marcada como suya. Acepta las fotos del iPhone tal cual y la app las reduce antes de subirlas.
