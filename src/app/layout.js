@@ -6,6 +6,7 @@ import Analytics from "@/components/Analytics";
 import MetaClickId from "@/components/MetaClickId";
 import AcquisitionSource from "@/components/AcquisitionSource";
 import CookieConsent from "@/components/CookieConsent";
+import WhatsAppFlotante from "@/components/WhatsAppFlotante";
 import ScrollProgress from "@/components/ScrollProgress";
 
 const dmSans = DM_Sans({
@@ -151,6 +152,7 @@ export default function RootLayout({ children }) {
             de dónde vino la visita (Google, ChatGPT, un QR…) para que el alta
             en /app lo lleve al backend. Solo con consentimiento. */}
         <AcquisitionSource />
+        <WhatsAppFlotante />
         <CookieConsent />
       </body>
     </html>
