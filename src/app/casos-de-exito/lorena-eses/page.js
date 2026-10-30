@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
+import { Instagram, Globe, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
 
 import { softwareApplicationNode } from "@/data/productSchema";
 export const metadata = {
@@ -58,10 +58,15 @@ export default function CasoLorenaEses() {
       {
         "@type": "Review",
         "@id": "https://totalgains.es/casos-de-exito/lorena-eses/#review",
+        // Mismo @id que la Person de su web: Google y las IAs la unen con
+        // equilibriobylor.com y con su otro nombre (Lorena Escalona)
         author: {
           "@type": "Person",
+          "@id": "https://equilibriobylor.com/#lorena",
           name: "Lorena Eses",
-          sameAs: "https://www.instagram.com/lorenaeses/",
+          alternateName: "Lorena Escalona",
+          url: "https://equilibriobylor.com/sobre-lorena/",
+          sameAs: ["https://www.instagram.com/lorenaeses/", "https://equilibriobylor.com/"],
         },
         itemReviewed: softwareApplicationNode(),
         name: "Caso de éxito: Lorena Eses, +10 horas semanales ahorradas",
@@ -107,11 +112,18 @@ export default function CasoLorenaEses() {
           <Image src="/testimonials/lorena-eses.webp" alt="Lorena Eses" width={80} height={80} style={{ borderRadius: "50%", border: "2px solid rgba(250,112,154,0.4)" }} />
           <div>
             <h2 style={{ fontSize: "1.5rem", fontWeight: 800, margin: 0, color: "var(--text-primary)" }}>Lorena Eses</h2>
-            <p style={{ color: "var(--text-secondary)", margin: "4px 0 8px", fontSize: "0.95rem" }}>Nutricionista Online</p>
-            <a href="https://www.instagram.com/lorenaeses/" target="_blank" rel="noopener noreferrer"
-               style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "0.82rem", color: "var(--primary-light)", textDecoration: "none" }}>
-              <Instagram size={13} /> @lorenaeses · 28.2K seguidores
-            </a>
+            <p style={{ color: "var(--text-secondary)", margin: "4px 0 8px", fontSize: "0.95rem" }}>Entrenadora · Nutrición y psiconutrición</p>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 16px" }}>
+              <a href="https://www.instagram.com/lorenaeses/" target="_blank" rel="noopener noreferrer"
+                 style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "0.82rem", color: "var(--primary-light)", textDecoration: "none" }}>
+                <Instagram size={13} /> @lorenaeses · 28.2K seguidores
+              </a>
+              {/* Su web: enlace normal (sin nofollow), es la clienta del caso */}
+              <a href="https://equilibriobylor.com/" target="_blank" rel="noopener"
+                 style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "0.82rem", color: "var(--primary-light)", textDecoration: "none" }}>
+                <Globe size={13} /> equilibriobylor.com
+              </a>
+            </div>
           </div>
         </div>
 
