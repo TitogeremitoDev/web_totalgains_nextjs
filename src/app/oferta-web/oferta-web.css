@@ -786,6 +786,62 @@
   color: #34d399;
 }
 
+/* La tarjeta entera es el enlace a los precios: el ::after la cubre. */
+.ow-plan {
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.ow-plan:has(.ow-plan-enlace:hover) {
+  transform: translateY(-4px);
+  border-color: rgba(255, 140, 40, 0.7);
+}
+
+.ow-plan:has(.ow-plan-enlace:focus-visible) {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.ow-plan-enlace {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  padding-top: 20px;
+  font-weight: 800;
+  color: #ffb347;
+  text-decoration: none;
+}
+
+.ow-plan-enlace:focus-visible {
+  outline: none;
+}
+
+.ow-plan-enlace::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+}
+
+.ow-plan-enlace svg {
+  transition: transform 0.2s ease;
+}
+
+.ow-plan:has(.ow-plan-enlace:hover) .ow-plan-enlace svg {
+  transform: translateX(3px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ow-plan,
+  .ow-plan-enlace svg {
+    transition: none;
+  }
+  .ow-plan:has(.ow-plan-enlace:hover),
+  .ow-plan:has(.ow-plan-enlace:hover) .ow-plan-enlace svg {
+    transform: none;
+  }
+}
+
 /* Miniatura de la web de cada plan */
 .ow-mini {
   overflow: hidden;

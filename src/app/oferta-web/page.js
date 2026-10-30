@@ -308,6 +308,11 @@ export default function OfertaWebPage() {
                 <ul>
                   {puntos.map((p) => <li key={p}><Check size={16} aria-hidden="true" />{p}</li>)}
                 </ul>
+                {/* Toda la tarjeta lleva a los precios (el ::after del enlace la
+                    cubre entera); /precios/ abre ya en «Soy entrenador» y anual. */}
+                <Link href="/precios/#pricing" prefetch={false} className="ow-plan-enlace" aria-label={`Ver los precios del plan ${nombre}`}>
+                  Ver los precios <ArrowRight size={16} aria-hidden="true" />
+                </Link>
               </article>
             ))}
           </div>
