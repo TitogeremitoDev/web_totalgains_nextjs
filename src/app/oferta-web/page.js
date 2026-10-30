@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   LayoutTemplate, Globe, CalendarCheck, Send, ClipboardList, Rocket, Check, Lock,
-  Smartphone, Search, MapPin, Sparkles, ArrowRight, Star,
+  Smartphone, Search, MapPin, Sparkles, ArrowRight, Star, ExternalLink,
 } from "lucide-react";
 import { OFERTA_WEB, textoPlazas } from "@/data/ofertaWeb";
 import { IconoOferta, CuentaAtras, Plazas, SoloConOferta } from "@/components/OfertaWebPiezas";
@@ -315,6 +315,55 @@ export default function OfertaWebPage() {
                 </Link>
               </article>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── EJEMPLO REAL: LA WEB DE LORENA ──
+          Capturas de equilibriobylor.com del 30-oct-2026 (1440 y 390 de ancho).
+          Lorena ya es caso de éxito en /casos-de-exito/lorena-eses/. */}
+      <section className="ow-sec" aria-labelledby="ow-lorena-t">
+        <div className="container ow-ancho">
+          <p className="ow-antetitulo">Un ejemplo real</p>
+          <h2 id="ow-lorena-t" className="ow-h2">Así es la web que le hicimos a Lorena</h2>
+          <div className="ow-lorena">
+            <a
+              href="https://equilibriobylor.com/"
+              target="_blank"
+              rel="noopener"
+              className="ow-lorena-capturas"
+              aria-label="Abrir la web de Lorena, equilibriobylor.com (se abre en otra pestaña)"
+            >
+              <span className="ow-lorena-navegador">
+                <span className="ow-nav-barra">
+                  <span className="ow-punto r" /><span className="ow-punto a" /><span className="ow-punto v" />
+                  <span className="ow-url"><Lock size={11} aria-hidden="true" /> equilibriobylor.com</span>
+                </span>
+                <Image src="/images/oferta-web/web-lorena-ordenador.webp" alt="Portada de la web de Lorena en el ordenador" width={1440} height={900} sizes="(max-width: 980px) 92vw, 620px" />
+              </span>
+              <span className="ow-lorena-movil">
+                <Image src="/images/oferta-web/web-lorena-movil.webp" alt="La misma web en el móvil" width={585} height={1266} sizes="160px" />
+              </span>
+            </a>
+            <div className="ow-lorena-texto">
+              <p>
+                Lorena es nutricionista online y lleva a sus clientas con TotalGains. Su web, «Equilibrio», es suya de arriba abajo:
+              </p>
+              <ul>
+                <li><Check size={16} aria-hidden="true" />En su propio dominio: equilibriobylor.com.</li>
+                <li><Check size={16} aria-hidden="true" />Con su marca, sus colores y sus fotos.</li>
+                <li><Check size={16} aria-hidden="true" />Un cuestionario de 2 minutos para que cada clienta vea si su método es para ella.</li>
+                <li><Check size={16} aria-hidden="true" />Igual de bien en el móvil que en el ordenador.</li>
+              </ul>
+              <div className="ow-lorena-enlaces">
+                <a href="https://equilibriobylor.com/" target="_blank" rel="noopener" className="ow-lorena-ver">
+                  Ver su web <ExternalLink size={16} aria-hidden="true" />
+                </a>
+                <Link href="/casos-de-exito/lorena-eses/" prefetch={false} className="ow-lorena-caso">
+                  Su caso con TotalGains <ArrowRight size={16} aria-hidden="true" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
       </section>
