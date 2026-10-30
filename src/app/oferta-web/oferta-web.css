@@ -812,6 +812,11 @@
   text-decoration: none;
 }
 
+/* Sin esto, el a:hover de globals.css lo pinta de morado. */
+.ow-plan-enlace:hover {
+  color: #ffb347;
+}
+
 .ow-plan-enlace:focus-visible {
   outline: none;
 }
