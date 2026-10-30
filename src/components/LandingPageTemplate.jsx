@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Check, Rocket, Star } from "lucide-react";
 import { trackEvent } from "@/components/Analytics";
 import StickyCTA from "@/components/StickyCTA";
+import OfertaWebTicket from "@/components/OfertaWebTicket";
 import "./LandingPageTemplate.css";
 
 /**
@@ -83,6 +84,12 @@ const LandingPageTemplate = ({
                 </motion.div>
             </div>
         </section>
+
+        {/* Oferta de noviembre de 2026: estas landings son todas de entrenador o
+            nutricionista. Se esconde sola el 30-nov. */}
+        <div className="container">
+            <OfertaWebTicket donde="landing" />
+        </div>
 
         {/* ── Features ── */}
         {features?.length > 0 && (

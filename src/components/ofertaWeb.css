@@ -140,7 +140,13 @@
   margin: 0;
 }
 
-/* Arriba en el artículo de SEO y GEO: debajo de «← Blog» y antes del título. */
+/* Debajo del héroe de las landings de entrenador. */
+.owt--landing {
+  max-width: 980px;
+  margin: 8px auto 48px;
+}
+
+/* Arriba en los artículos: debajo de «← Blog» y antes del título. */
 .owt--articulo-arriba {
   max-width: 980px;
   margin: 18px auto 0;

@@ -59,6 +59,9 @@ import CitableBioComparison from "@/components/CitableBioComparison";
 import FourWeekFindabilityPlan from "@/components/FourWeekFindabilityPlan";
 import OfertaWebBlogCard from "@/components/OfertaWebBlogCard";
 import OfertaWebTicket from "@/components/OfertaWebTicket";
+
+// Artículos para gimnasios: el ticket de la oferta (plan de entrenador) no pinta nada ahí.
+const SIN_TICKET_OFERTA = ["software-gimnasios-pequenos-boutique-2026"];
 import { OFERTA_WEB } from "@/data/ofertaWeb";
 import "./post.css";
 
@@ -474,9 +477,10 @@ export default async function PostPage({ params }) {
           <Link href="/blog/" className="post-back">
             <ArrowLeft size={15} /> Blog
           </Link>
-          {/* Oferta de noviembre de 2026: también arriba, antes del título, en su
-              artículo (src/data/ofertaWeb.js). Se esconde sola el 30-nov. */}
-          {OFERTA_WEB.articulo === `/blog/${slug}/` && <OfertaWebTicket donde="articulo-arriba" />}
+          {/* Oferta de noviembre de 2026: arriba, antes del título, en todos los
+              artículos menos los de gimnasios (la oferta es del plan de
+              entrenador). Se esconde sola el 30-nov (src/data/ofertaWeb.js). */}
+          {!SIN_TICKET_OFERTA.includes(slug) && <OfertaWebTicket donde="articulo-arriba" />}
         </div>
 
         {/* Header */}
