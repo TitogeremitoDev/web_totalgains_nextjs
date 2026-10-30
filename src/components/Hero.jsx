@@ -9,6 +9,7 @@ import {
   Users, TrendingUp
 } from 'lucide-react';
 import { trackEvent } from '@/components/Analytics';
+import OfertaWebTicket from '@/components/OfertaWebTicket';
 import './Hero.css';
 
 const SLIDES = [
@@ -123,6 +124,11 @@ const Hero = () => {
         <div className="orb orb-b"></div>
         <div className="orb orb-c"></div>
         <div className="grid-pattern"></div>
+      </div>
+
+      {/* Oferta de noviembre de 2026: se esconde sola el 30-nov */}
+      <div className="hero-oferta">
+        <OfertaWebTicket donde="portada" />
       </div>
 
       <div className="container hero-container">

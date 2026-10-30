@@ -1,24 +1,41 @@
+import Image from "next/image";
 import Link from "next/link";
-import { LayoutTemplate, Globe, CalendarCheck, Mail, ClipboardList, Users } from "lucide-react";
-import { OFERTA_WEB } from "@/data/ofertaWeb";
+import {
+  LayoutTemplate, Globe, CalendarCheck, Mail, ClipboardList, Check, Lock,
+  Smartphone, Search, MapPin, Sparkles, ArrowRight, Star,
+} from "lucide-react";
+import { OFERTA_WEB, textoPlazas } from "@/data/ofertaWeb";
+import { IconoOferta, CuentaAtras, Plazas } from "@/components/OfertaWebPiezas";
 import OfertaWebCta from "./OfertaWebCta";
+import "./oferta-web.css";
 
 /* ──────────────────────────────────────────────
    /oferta-web — SERVER COMPONENT
 
    Oferta de noviembre de 2026 («Tu web incluida al pasarte al plan anual»).
    Datos en src/data/ofertaWeb.js. Página de un mes: noindex y FUERA del
-   sitemap, para que no quede en Google cuando se quite. Se llega desde la
-   franja del bloque de precios, el artículo de SEO y GEO, redes y el stand
-   del Campeonato PCA (7 de noviembre).
+   sitemap, para que no quede en Google cuando se quite. Se llega desde el
+   ticket del héroe de la portada y del bloque de precios, el artículo de SEO
+   y GEO, redes y el stand del Campeonato PCA (7 de noviembre).
+
+   La web de ejemplo del héroe es una maqueta hecha con HTML (no una imagen),
+   con la misma entrenadora inventada que el artículo: Laura Ruiz.
    ────────────────────────────────────────────── */
 
 export const metadata = {
-  title: "Tu web incluida al pasarte al plan anual",
+  title: "Una oferta que da miedo… a tu competencia: tu web incluida",
   description: `Oferta de noviembre para entrenadores: pásate al plan anual de TotalGains y te hacemos tu web. ${OFERTA_WEB.plazas} plazas, hasta el ${OFERTA_WEB.finTexto}.`,
   robots: { index: false, follow: true },
   alternates: { canonical: `https://totalgains.es${OFERTA_WEB.ruta}` },
 };
+
+const recibo = [
+  { que: "Plan anual de TotalGains", detalle: "12 meses pagando 10 mensualidades", valor: "Tu plan", fuerte: false },
+  { que: "Tu web profesional", detalle: "Diseño y montaje con tu logo, tus colores y tus servicios", valor: "Incluida", fuerte: true },
+  { que: "Alojamiento", detalle: "Mientras sigas en TotalGains", valor: "Incluido", fuerte: true },
+  { que: "Mantenimiento", detalle: `Pro y Unlimited: ${OFERTA_WEB.cambiosAlMes} cambios pequeños al mes`, valor: "Gratis", fuerte: true },
+  { que: "Lo básico para Google y las IAs", detalle: "Tus servicios, tu zona y tu contacto, bien escritos", valor: "Incluido", fuerte: true },
+];
 
 const planes = [
   {
@@ -26,6 +43,8 @@ const planes = [
     nombre: "Starter",
     precio: "299 €/año",
     para: "Hasta 25 atletas",
+    url: "tunombre.totalgains.es",
+    paginas: 1,
     puntos: [
       "Web de una página con tu logo, tus colores, tus servicios y tu contacto.",
       "En tunombre.totalgains.es, o en tu dominio si ya tienes uno.",
@@ -36,12 +55,15 @@ const planes = [
   {
     icono: Globe,
     nombre: "Pro y Unlimited",
-    precio: "899 €/año y 1.499 €/año",
+    precio: "899 €/año · 1.499 €/año",
     para: "Hasta 100 atletas o sin límite",
+    url: "tudominio.es",
+    paginas: 4,
+    destacado: true,
     puntos: [
       "Web completa: tus servicios, tus resultados y tu contacto.",
       "En tu dominio y sin rastro de TotalGains, igual que tu app con marca blanca.",
-      `Mantenimiento incluido: alojamiento y ${OFERTA_WEB.cambiosAlMes} cambios pequeños al mes.`,
+      `Mantenimiento gratis: alojamiento y ${OFERTA_WEB.cambiosAlMes} cambios pequeños al mes.`,
     ],
   },
 ];
@@ -55,7 +77,7 @@ const pasos = [
   {
     icono: Mail,
     titulo: "Escríbenos",
-    texto: `Un correo a ${OFERTA_WEB.email} con el asunto «Quiero mi web» y te reservamos la plaza.`,
+    texto: `Un correo a ${OFERTA_WEB.email} con el asunto «Quiero mi web» y tu plaza queda reservada.`,
   },
   {
     icono: ClipboardList,
@@ -73,88 +95,235 @@ const letraPequena = [
   "Si te das de baja de TotalGains, te llevas tu web o mantienes el alojamiento pagándolo aparte.",
 ];
 
-const caja = { padding: "28px 24px", borderRadius: 20 };
+/* Miniatura de la web de cada plan: una página (Starter) o varias (Pro). */
+function MiniWeb({ url, paginas }) {
+  return (
+    <div className="ow-mini" aria-hidden="true">
+      <div className="ow-mini-barra">
+        <span /><span /><span />
+        <em><Lock size={9} /> {url}</em>
+      </div>
+      {paginas > 1 && (
+        <div className="ow-mini-pestanas">
+          <b>Inicio</b><i>Servicios</i><i>Resultados</i><i>Contacto</i>
+        </div>
+      )}
+      <div className="ow-mini-cuerpo">
+        <div className="ow-mini-heroe" />
+        <div className="ow-mini-linea" />
+        <div className="ow-mini-linea corta" />
+        <div className="ow-mini-tarjetas"><span /><span /><span /></div>
+      </div>
+    </div>
+  );
+}
+
+const CHISPAS = Array.from({ length: 14 }, (_, i) => i);
 
 export default function OfertaWebPage() {
   return (
-    <main style={{ padding: "clamp(96px, 12vw, 150px) 0 96px" }}>
-      <div className="container" style={{ maxWidth: 960 }}>
-        <header style={{ textAlign: "center", marginBottom: 48 }}>
-          <p style={{ display: "inline-flex", alignItems: "center", gap: 8, margin: "0 0 18px", padding: "6px 14px", borderRadius: 999, fontSize: "0.85rem", fontWeight: 700, color: "#fa709a", background: "rgba(250,112,154,0.12)", border: "1px solid rgba(250,112,154,0.4)" }}>
-            <Users size={15} aria-hidden="true" /> Oferta de noviembre · {OFERTA_WEB.plazas} plazas
-          </p>
-          <h1 className="gradient-text" style={{ fontSize: "clamp(2rem, 5vw, 3.1rem)", fontWeight: 800, lineHeight: 1.15, margin: "0 0 18px" }}>
-            Una oferta que da miedo… a tu competencia
-          </h1>
-          <p style={{ fontSize: "clamp(1.05rem, 2.2vw, 1.25rem)", color: "var(--text-secondary)", lineHeight: 1.6, maxWidth: 700, margin: "0 auto 28px" }}>
-            Pásate al plan anual de TotalGains y <strong style={{ color: "var(--text-primary)" }}>te hacemos tu web</strong>: con tu nombre, tus servicios y tu contacto, para que quien te busque en Google o en una IA encuentre algo que contar de ti.
-          </p>
-          <OfertaWebCta />
-          <p style={{ margin: "18px 0 0", fontSize: "0.9rem", color: "var(--text-muted)" }}>
-            Hasta el {OFERTA_WEB.finTexto} o hasta que se acaben las plazas.
-          </p>
-        </header>
+    <main className="ow">
+      {/* ── HÉROE ── */}
+      <section className="ow-heroe" aria-labelledby="ow-h1">
+        <div className="ow-fondo" aria-hidden="true">
+          <div className="ow-niebla ow-niebla-a" />
+          <div className="ow-niebla ow-niebla-b" />
+          <div className="ow-rejilla" />
+          {CHISPAS.map((i) => <span key={i} className="ow-chispa" />)}
+        </div>
 
-        <section aria-labelledby="que-web" style={{ marginBottom: 56 }}>
-          <h2 id="que-web" style={{ fontSize: "1.6rem", fontWeight: 800, textAlign: "center", margin: "0 0 24px" }}>
-            Qué web te llevas
-          </h2>
-          <div style={{ display: "flex", gap: 18, flexWrap: "wrap" }}>
-            {planes.map(({ icono: Icono, nombre, precio, para, puntos }) => (
-              <article key={nombre} className="glass" style={{ ...caja, flex: "1 1 340px", minWidth: 0 }}>
-                <p style={{ display: "flex", alignItems: "center", gap: 10, margin: "0 0 6px", fontSize: "1.25rem", fontWeight: 800 }}>
-                  <Icono size={22} color="#667eea" aria-hidden="true" /> {nombre}
-                </p>
-                <p style={{ margin: "0 0 18px", fontSize: "0.95rem", color: "var(--text-secondary)" }}>
-                  <strong style={{ color: "var(--text-primary)", whiteSpace: "nowrap" }}>{precio}</strong> · {para}
-                </p>
-                <ul style={{ margin: 0, paddingLeft: 20, color: "var(--text-secondary)", lineHeight: 1.65, fontSize: "0.97rem" }}>
-                  {puntos.map((p) => <li key={p} style={{ marginBottom: 6 }}>{p}</li>)}
+        <div className="container ow-heroe-grid">
+          <div className="ow-heroe-texto">
+            <p className="ow-pill">
+              <IconoOferta /> Oferta de noviembre · {textoPlazas()}
+            </p>
+            <h1 id="ow-h1" className="ow-h1">
+              Una oferta que da <span className="ow-miedo">miedo</span>…
+              <span className="ow-h1-b">a tu competencia.</span>
+            </h1>
+            <p className="ow-entradilla">
+              Pásate al plan anual de TotalGains y <strong>te hacemos tu web</strong>. Con tu nombre, tus servicios y tu contacto, para que quien te busque en Google o le pregunte a una IA te encuentre a ti.
+            </p>
+
+            <div className="ow-reloj">
+              <p className="ow-reloj-titulo">Se acaba en</p>
+              <CuentaAtras tam="grande" />
+              <Plazas tam="grande" />
+            </div>
+
+            <OfertaWebCta />
+          </div>
+
+          <div className="ow-escaparate" aria-hidden="true">
+            <div className="ow-navegador">
+              <div className="ow-nav-barra">
+                <span className="ow-punto r" /><span className="ow-punto a" /><span className="ow-punto v" />
+                <span className="ow-url"><Lock size={11} /> tudominio.es</span>
+              </div>
+              <div className="ow-sitio">
+                <div className="ow-sitio-menu">
+                  <span className="ow-sitio-logo">LR</span>
+                  <span className="ow-sitio-marca">Laura Ruiz</span>
+                  <span className="ow-sitio-links">Servicios · Resultados · Contacto</span>
+                </div>
+                <div className="ow-sitio-heroe">
+                  <span className="ow-sitio-kicker"><MapPin size={12} /> Entrenadora personal en Granada</span>
+                  <span className="ow-sitio-titulo">Fuerza y pérdida de grasa para mujeres de más de 40</span>
+                  <span className="ow-sitio-btn">Reserva tu primera sesión</span>
+                </div>
+                <div className="ow-sitio-servicios">
+                  <span><b>Presencial</b>En el Zaidín</span>
+                  <span><b>Online</b>En toda España</span>
+                  <span><b>Desde 79 €/mes</b>Plan online</span>
+                </div>
+                <div className="ow-sitio-resenas">
+                  <span className="ow-estrellas"><Star size={12} /><Star size={12} /><Star size={12} /><Star size={12} /><Star size={12} /></span>
+                  Opiniones de sus clientas
+                </div>
+              </div>
+            </div>
+
+            <div className="ow-movil">
+              <Image src="/screenshots/home_coach.webp" alt="" width={220} height={476} sizes="200px" />
+            </div>
+
+            <div className="ow-sello">
+              <span>Tu web</span>
+              <strong>incluida</strong>
+            </div>
+
+            <span className="ow-flota ow-flota-a"><Check size={14} /> En tu dominio</span>
+            <span className="ow-flota ow-flota-b"><Sparkles size={14} /> Lista para Google y las IAs</span>
+            <span className="ow-flota ow-flota-c"><Check size={14} /> Y tu app con tu marca</span>
+            <span className="ow-ejemplo">Ejemplo</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ── RECIBO ── */}
+      <section className="ow-sec" aria-labelledby="ow-recibo-t">
+        <div className="container ow-estrecho">
+          <p className="ow-antetitulo">Lo que te llevas</p>
+          <h2 id="ow-recibo-t" className="ow-h2">Tu web, por lo que ya cuesta tu plan</h2>
+          <div className="ow-recibo">
+            <div className="ow-recibo-cab">
+              <span>TotalGains</span>
+              <span>Oferta de noviembre · 2026</span>
+            </div>
+            <ul>
+              {recibo.map(({ que, detalle, valor, fuerte }) => (
+                <li key={que}>
+                  <span className="ow-recibo-que">
+                    {fuerte && <Check size={18} aria-hidden="true" />}
+                    <span><b>{que}</b><small>{detalle}</small></span>
+                  </span>
+                  <span className={`ow-recibo-valor${fuerte ? " es-gratis" : ""}`}>{valor}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="ow-recibo-total">
+              <span>Lo que pagas de más por la web</span>
+              <strong>0 €</strong>
+            </div>
+            <p className="ow-recibo-pie">
+              Precios con IVA. El plan anual son 10 mensualidades por 12 meses: <Link href="/precios/" prefetch={false}>ver los planes</Link>.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── PLANES ── */}
+      <section className="ow-sec" aria-labelledby="ow-planes-t">
+        <div className="container ow-ancho">
+          <p className="ow-antetitulo">Qué web te llevas</p>
+          <h2 id="ow-planes-t" className="ow-h2">Según tu plan anual</h2>
+          <div className="ow-planes">
+            {planes.map(({ icono: Icono, nombre, precio, para, url, paginas, destacado, puntos }) => (
+              <article key={nombre} className={`ow-plan${destacado ? " es-destacado" : ""}`}>
+                {destacado && <span className="ow-plan-badge">La más completa</span>}
+                <MiniWeb url={url} paginas={paginas} />
+                <h3 className="ow-plan-nombre"><Icono size={22} aria-hidden="true" /> {nombre}</h3>
+                <p className="ow-plan-precio"><strong>{precio}</strong> · {para}</p>
+                <ul>
+                  {puntos.map((p) => <li key={p}><Check size={16} aria-hidden="true" />{p}</li>)}
                 </ul>
               </article>
             ))}
           </div>
-          <p style={{ margin: "18px 0 0", textAlign: "center", fontSize: "0.9rem", color: "var(--text-muted)" }}>
-            Precios con IVA. El plan anual son 10 mensualidades: <Link href="/precios/" style={{ color: "var(--text-secondary)", textDecoration: "underline" }}>ver los planes</Link>.
-          </p>
-        </section>
+        </div>
+      </section>
 
-        <section aria-labelledby="como" style={{ marginBottom: 56 }}>
-          <h2 id="como" style={{ fontSize: "1.6rem", fontWeight: 800, textAlign: "center", margin: "0 0 24px" }}>
-            Cómo conseguirla
-          </h2>
-          <ol style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", gap: 18, flexWrap: "wrap" }}>
+      {/* ── PASOS ── */}
+      <section className="ow-sec" aria-labelledby="ow-pasos-t">
+        <div className="container ow-ancho">
+          <p className="ow-antetitulo">Cómo conseguirla</p>
+          <h2 id="ow-pasos-t" className="ow-h2">Tres pasos y es tuya</h2>
+          <ol className="ow-pasos">
             {pasos.map(({ icono: Icono, titulo, texto }, i) => (
-              <li key={titulo} className="glass" style={{ ...caja, flex: "1 1 260px", minWidth: 0 }}>
-                <p style={{ display: "flex", alignItems: "center", gap: 10, margin: "0 0 10px", fontWeight: 800, fontSize: "1.05rem" }}>
-                  <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", width: 30, height: 30, borderRadius: 999, background: "rgba(102,126,234,0.18)", color: "#8b9df8", fontSize: "0.95rem" }}>{i + 1}</span>
-                  <Icono size={18} color="#667eea" aria-hidden="true" /> {titulo}
-                </p>
-                <p style={{ margin: 0, color: "var(--text-secondary)", lineHeight: 1.6, fontSize: "0.95rem" }}>{texto}</p>
+              <li key={titulo}>
+                <span className="ow-paso-num">{String(i + 1).padStart(2, "0")}</span>
+                <span className="ow-paso-icono"><Icono size={22} aria-hidden="true" /></span>
+                <h3>{titulo}</h3>
+                <p>{texto}</p>
               </li>
             ))}
           </ol>
-        </section>
+        </div>
+      </section>
 
-        <section aria-labelledby="por-que" className="glass" style={{ ...caja, marginBottom: 56, textAlign: "center" }}>
-          <h2 id="por-que" style={{ fontSize: "1.3rem", fontWeight: 800, margin: "0 0 10px" }}>
-            ¿Para qué quiero una web si ya tengo Instagram?
-          </h2>
-          <p style={{ margin: "0 auto", maxWidth: 680, color: "var(--text-secondary)", lineHeight: 1.65 }}>
-            Instagram te sirve con quien ya te sigue. Quien todavía no te conoce te busca en Google o se lo pregunta a ChatGPT, y ahí lo que cuenta es lo que esté escrito sobre ti. Te lo explicamos paso a paso en{" "}
-            <Link href={OFERTA_WEB.articulo} style={{ color: "#fa709a", fontWeight: 700 }}>SEO y GEO para entrenadores: cómo te encuentran tus próximos clientes</Link>.
+      {/* ── INSTAGRAM O WEB ── */}
+      <section className="ow-sec" aria-labelledby="ow-insta-t">
+        <div className="container ow-ancho">
+          <p className="ow-antetitulo">¿Y para qué, si ya tengo Instagram?</p>
+          <h2 id="ow-insta-t" className="ow-h2">Instagram te enseña. La web hace que te encuentren.</h2>
+          <div className="ow-versus">
+            <div className="ow-versus-col">
+              <span className="ow-versus-icono insta"><Smartphone size={26} aria-hidden="true" /></span>
+              <h3>Instagram</h3>
+              <p className="ow-versus-frase">Te ve quien ya te sigue.</p>
+              <p>Perfecto para cuidar a tu comunidad y enseñar tu día a día.</p>
+            </div>
+            <span className="ow-versus-y" aria-hidden="true">+</span>
+            <div className="ow-versus-col es-web">
+              <span className="ow-versus-icono web"><Search size={26} aria-hidden="true" /></span>
+              <h3>Tu web</h3>
+              <p className="ow-versus-frase">Te encuentra quien todavía no te conoce.</p>
+              <p>En Google, en el mapa y en lo que contestan las IAs, que leen lo que hay escrito sobre ti.</p>
+            </div>
+          </div>
+          <p className="ow-dato">
+            <strong>58 %</strong> de los internautas españoles ya usa IA generativa (GfK DAM, 2026). Te lo contamos paso a paso en{" "}
+            <Link href={OFERTA_WEB.articulo} prefetch={false}>SEO y GEO para entrenadores <ArrowRight size={14} aria-hidden="true" /></Link>
           </p>
-        </section>
+        </div>
+      </section>
 
-        <section aria-labelledby="letra">
-          <h2 id="letra" style={{ fontSize: "1.1rem", fontWeight: 800, margin: "0 0 12px" }}>
-            Letra pequeña (que también se lee)
-          </h2>
-          <ul style={{ margin: 0, paddingLeft: 20, color: "var(--text-muted)", lineHeight: 1.65, fontSize: "0.92rem" }}>
-            {letraPequena.map((t) => <li key={t} style={{ marginBottom: 6 }}>{t}</li>)}
-          </ul>
-        </section>
-      </div>
+      {/* ── CIERRE ── */}
+      <section className="ow-final" aria-labelledby="ow-final-t">
+        <div className="ow-final-luz" aria-hidden="true" />
+        <div className="container ow-estrecho">
+          <span className="ow-final-icono"><IconoOferta /></span>
+          <h2 id="ow-final-t" className="ow-h2">Cuando se acaben las {OFERTA_WEB.plazas}, se acabó.</h2>
+          <p className="ow-final-texto">Hasta el {OFERTA_WEB.finTexto} a las 23:59 o hasta que se cubran las plazas.</p>
+          <div className="ow-final-reloj">
+            <CuentaAtras tam="grande" />
+            <Plazas tam="grande" />
+          </div>
+          <OfertaWebCta />
+        </div>
+      </section>
+
+      {/* ── LETRA PEQUEÑA ── */}
+      <section className="ow-sec ow-sec-letra" aria-label="Letra pequeña">
+        <div className="container ow-estrecho">
+          <details className="ow-letra">
+            <summary>Letra pequeña (que también se lee)</summary>
+            <ul>
+              {letraPequena.map((t) => <li key={t}>{t}</li>)}
+            </ul>
+          </details>
+        </div>
+      </section>
     </main>
   );
 }
