@@ -140,10 +140,10 @@
   margin: 0;
 }
 
-/* Arriba del todo en el artículo de SEO y GEO, antes de la miga de pan. */
+/* Arriba en el artículo de SEO y GEO: debajo de «← Blog» y antes del título. */
 .owt--articulo-arriba {
   max-width: 980px;
-  margin: 0 auto 22px;
+  margin: 18px auto 0;
 }
 
 /* En el artículo la columna es estrecha (unos 790 px): cuenta atrás y botón

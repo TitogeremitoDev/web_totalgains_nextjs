@@ -460,13 +460,6 @@ export default async function PostPage({ params }) {
       />
 
       <article className="post-article">
-        {/* Oferta de noviembre de 2026: también arriba del todo en su artículo
-            (src/data/ofertaWeb.js). Se esconde sola el 30-nov. */}
-        {OFERTA_WEB.articulo === `/blog/${slug}/` && (
-          <div className="container">
-            <OfertaWebTicket donde="articulo-arriba" />
-          </div>
-        )}
         {/* Breadcrumb visible (paralelo al BreadcrumbList schema) */}
         <div className="container">
           <nav aria-label="Breadcrumb" style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: "0 0 12px" }}>
@@ -481,6 +474,9 @@ export default async function PostPage({ params }) {
           <Link href="/blog/" className="post-back">
             <ArrowLeft size={15} /> Blog
           </Link>
+          {/* Oferta de noviembre de 2026: también arriba, antes del título, en su
+              artículo (src/data/ofertaWeb.js). Se esconde sola el 30-nov. */}
+          {OFERTA_WEB.articulo === `/blog/${slug}/` && <OfertaWebTicket donde="articulo-arriba" />}
         </div>
 
         {/* Header */}
