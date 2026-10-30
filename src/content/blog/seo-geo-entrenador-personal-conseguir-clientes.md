@@ -146,6 +146,8 @@ Si tienes que elegir una sola cosa de la lista, que sean las reseñas. Mueven la
 
 Vamos a ser claros: TotalGains no te sube en Google. Eso lo hacen tu ficha, tus reseñas y tu web. Lo que sí hace es la otra mitad, que es que lo que prometes se cumpla en cuanto alguien empieza contigo: tu [app con tu logo y tus colores](/app-marca-blanca-entrenador-personal/), rutinas y dietas hechas con tu método y un seguimiento que no depende de tu memoria. Si tu web dice «seguimiento semanal», que lo haya de verdad. Es lo que acaba convirtiéndose en la reseña de la semana 3.
 
+<div class="__web_offer__"></div>
+
 Si todavía no lo has probado, puedes [empezar gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta, con todas las funciones incluidas. Y si ya lo usas, en [precios](/precios/) tienes los planes.
 
 ## Que te encuentren es la mitad

@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Trophy, Gift, Check, CreditCard, Lock, Users, Info, Building2, Dumbbell } from 'lucide-react';
 import { trackEvent } from "@/components/Analytics";
 import { PLANES_GYM } from '@/data/productSchema';
+import OfertaWebBanner from '@/components/OfertaWebBanner';
 import './Pricing.css';
 
 /* ──────────────────────────────────────────────
@@ -446,6 +447,10 @@ const Pricing = ({ headingAs: Heading = 'h2' }) => {
                         </span>
                     </div>
                 </motion.div>
+
+                {/* Oferta de noviembre de 2026 (src/data/ofertaWeb.js): solo
+                    planes de entrenador; se esconde sola el 30-nov. */}
+                {!isGym && <OfertaWebBanner />}
 
                 {isMobile && !isGym && (
                     <motion.div

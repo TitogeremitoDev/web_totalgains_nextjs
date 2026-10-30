@@ -57,6 +57,7 @@ import LocalRankingFactors from "@/components/LocalRankingFactors";
 import ReviewHabitsBars from "@/components/ReviewHabitsBars";
 import CitableBioComparison from "@/components/CitableBioComparison";
 import FourWeekFindabilityPlan from "@/components/FourWeekFindabilityPlan";
+import OfertaWebBlogCard from "@/components/OfertaWebBlogCard";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -117,6 +118,8 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__review_habits__"></div>', Component: ReviewHabitsBars, gate: () => true },
   { marker: '<div class="__citable_bio__"></div>', Component: CitableBioComparison, gate: () => true },
   { marker: '<div class="__four_week_findability__"></div>', Component: FourWeekFindabilityPlan, gate: () => true },
+  // Oferta de noviembre de 2026 (src/data/ofertaWeb.js): se esconde sola el 30-nov.
+  { marker: '<div class="__web_offer__"></div>', Component: OfertaWebBlogCard, gate: () => true },
 ];
 
 // Renderer personalizado: lazy loading + width/height por defecto para evitar CLS
