@@ -58,6 +58,8 @@ import ReviewHabitsBars from "@/components/ReviewHabitsBars";
 import CitableBioComparison from "@/components/CitableBioComparison";
 import FourWeekFindabilityPlan from "@/components/FourWeekFindabilityPlan";
 import OfertaWebBlogCard from "@/components/OfertaWebBlogCard";
+import OfertaWebTicket from "@/components/OfertaWebTicket";
+import { OFERTA_WEB } from "@/data/ofertaWeb";
 import "./post.css";
 
 // Markers inline en el markdown que el template reemplaza por componentes React.
@@ -458,6 +460,13 @@ export default async function PostPage({ params }) {
       />
 
       <article className="post-article">
+        {/* Oferta de noviembre de 2026: también arriba del todo en su artículo
+            (src/data/ofertaWeb.js). Se esconde sola el 30-nov. */}
+        {OFERTA_WEB.articulo === `/blog/${slug}/` && (
+          <div className="container">
+            <OfertaWebTicket donde="articulo-arriba" />
+          </div>
+        )}
         {/* Breadcrumb visible (paralelo al BreadcrumbList schema) */}
         <div className="container">
           <nav aria-label="Breadcrumb" style={{ fontSize: "0.82rem", color: "var(--text-muted)", margin: "0 0 12px" }}>

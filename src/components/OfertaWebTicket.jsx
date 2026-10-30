@@ -11,7 +11,8 @@ import { IconoOferta, CuentaAtras, Plazas } from "@/components/OfertaWebPiezas";
  * OfertaWebTicket — el «ofertón» de noviembre: icono de temporada, titular,
  * plazas, cuenta atrás y botón, con un borde de luz que gira. Mismo ticket en
  * el héroe de la portada (`donde="portada"`), en el bloque de precios
- * (`"precios"`) y en el artículo de SEO y GEO (`"articulo"`). A partir del 30
+ * (`"precios"`) y en el artículo de SEO y GEO, arriba del todo
+ * (`"articulo-arriba"`) y a mitad del texto (`"articulo"`). A partir del 30
  * de noviembre no pinta nada (useOfertaWeb).
  *
  * Color y subrayado van en línea: dentro del artículo `.post-body a` pinta
