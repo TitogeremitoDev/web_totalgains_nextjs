@@ -19,6 +19,11 @@ import OfertaWebCta from "./OfertaWebCta";
    Si el visitante ha probado «Pon tu nombre y mira tu web», el botón «¡La
    quiero!» manda aquí su nombre y su color (evento `ow:reservar`).
    Pasada la oferta enseña el «terminó» de OfertaWebCta.
+
+   Después de EmailJS avisa también al servidor (OFERTA_WEB.reservaApi): guarda
+   la reserva y le manda al entrenador un correo de confirmación con los mismos
+   4 pasos de «gracias». Si tarda más de 3 s o no contesta, se sigue igual: la
+   reserva ya está en soporte@. El campo `web` es una trampa para robots.
    ────────────────────────────────────────────── */
 
 const PLANES = ["Starter · 299 €/año", "Pro · 899 €/año", "Unlimited · 1.499 €/año", "Aún no lo sé"];
@@ -31,6 +36,7 @@ export default function OfertaWebReserva() {
   const [datos, setDatos] = useState({ nombre: "", email: "", telefono: "", plan: "", dominio: "", mensaje: "" });
   const [colorPrueba, setColorPrueba] = useState("");
   const [privacidad, setPrivacidad] = useState(false);
+  const [trampa, setTrampa] = useState("");
   const [estado, setEstado] = useState("listo");
   const emailRef = useRef(null);
 
@@ -97,8 +103,17 @@ export default function OfertaWebReserva() {
         ),
         sinRespuesta,
       ]))
-      .then(() => {
+      .then(async () => {
         trackEvent("lead_submit", { form_name: "oferta_web", form_subject: datos.plan });
+        const origen = url.get("utm_source") ? `${url.get("utm_source")} / ${url.get("utm_medium") || "sin medio"}` : "";
+        await Promise.race([
+          fetch(OFERTA_WEB.reservaApi, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nombre: datos.nombre.trim(), email: datos.email.trim(), plan: datos.plan, origen, web: trampa }),
+          }),
+          new Promise((listo) => setTimeout(listo, 3000)),
+        ]).catch(() => {});
         router.push("/gracias/?de=oferta-web");
       })
       .catch((err) => {
@@ -162,7 +177,8 @@ export default function OfertaWebReserva() {
             He leído y acepto la{" "}
             <Link href="/privacy/" target="_blank" rel="noopener noreferrer">Política de Privacidad</Link>.
             Responsable: Germán Martínez Calvente (NIF 77137460Z). Finalidad: gestionar tu reserva y responderte.
-            Legitimación: tu consentimiento. El envío se procesa a través de EmailJS como encargado de tratamiento;
+            Legitimación: tu consentimiento. El envío se procesa a través de EmailJS y el correo de confirmación sale
+            por Resend, los dos como encargados de tratamiento; tu reserva se guarda como mucho 120 días y
             no se ceden datos a terceros para sus propios fines. Puedes ejercer tus derechos de acceso,
             rectificación y supresión en soporte@totalgains.es.
           </label>
@@ -175,6 +191,9 @@ export default function OfertaWebReserva() {
             No ha podido salir. Escríbenos por WhatsApp o a {OFERTA_WEB.email} y te guardamos la plaza igual.
           </p>
         )}
+
+        {/* Trampa para robots: no se ve ni se llega con el tabulador; si viene rellena, el servidor no manda nada. */}
+        <input type="text" name="web" value={trampa} onChange={(e) => setTrampa(e.target.value)} tabIndex={-1} autoComplete="off" aria-hidden="true" className="owr-trampa" />
 
         <button type="submit" className="ow-btn ow-btn--fuego owr-enviar" disabled={estado === "enviando"}>
           <Send size={19} aria-hidden="true" /> {estado === "enviando" ? "Reservando…" : "Reservar mi plaza"}

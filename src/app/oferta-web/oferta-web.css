@@ -2692,3 +2692,13 @@
     transition: none;
   }
 }
+
+/* Campo trampa del formulario (robots): fuera de la vista, sin tamaño. */
+.owr-trampa {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}

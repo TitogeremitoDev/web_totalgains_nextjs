@@ -34,6 +34,9 @@ export const OFERTA_WEB = {
   whatsapp: "34687065772",
   whatsappVisible: "687 06 57 72",
   articulo: "/blog/seo-geo-entrenador-personal-conseguir-clientes/",
+  // Servidor: guarda la reserva y manda el correo de confirmación
+  // (TotalGains_Backend/routes/ofertaWebRoutes.js; solo hasta el 30-nov).
+  reservaApi: "https://api.totalgains.es/api/public/oferta-web/reserva",
 };
 
 export const plazasLibres = () => Math.max(0, OFERTA_WEB.plazas - OFERTA_WEB.plazasCogidas);
