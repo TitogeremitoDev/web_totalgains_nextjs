@@ -1,14 +1,16 @@
 /* Vídeo de presentación de la portada (VideoPresentacion.jsx). */
+/* Compacta: abajo sin relleno porque la sección siguiente (Stats) ya trae el
+   suyo; German, 31-oct: «se te ha ido muchísimo la mano con el espacio». */
 .vp {
-  padding: clamp(56px, 8vw, 96px) 0;
+  padding: clamp(28px, 4vw, 48px) 0 0;
 }
 
 .vp-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
-  gap: clamp(32px, 6vw, 72px);
+  grid-template-columns: minmax(0, 540px) auto;
+  justify-content: center;
+  gap: clamp(28px, 5vw, 64px);
   align-items: center;
-  max-width: 1040px;
 }
 
 .vp-antetitulo {
@@ -58,7 +60,7 @@
 
 .vp-movil {
   justify-self: center;
-  width: min(300px, 100%);
+  width: min(250px, 100%);
   padding: 8px;
   border-radius: 38px;
   background: linear-gradient(145deg, #1d1b33, #0a0918);
@@ -76,7 +78,8 @@
 
 @media (max-width: 860px) {
   .vp-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
   }
   .vp-texto {
     text-align: center;
@@ -89,6 +92,6 @@
   }
   .vp-movil {
     order: -1;
-    width: min(270px, 80%);
+    width: min(220px, 62%);
   }
 }
