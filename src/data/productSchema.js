@@ -26,8 +26,9 @@ export const TRUSTPILOT = {
  *  31-oct-2026). Wikidata va PRIMERO: es el ancla que desambigua la marca.
  *  La ficha Q139823576 la borró Wikidata el 17-may-2026 por relevancia; la
  *  actual, Q141952566, se creó el 31-oct-2026 con fuentes de fuera (Capterra,
- *  GetApp, Kaizer). Si la borran, quitarla de aquí y de los dos llms. El canal
- *  de YouTube @totalgainsfitness no existe (404) y salió de la lista. */
+ *  GetApp, Kaizer). Si la borran, quitarla de aquí y de los dos llms.
+ *  YouTube es @TotalGains-Fitness (canal UCOJehcX1G6jABjONKmXCmbQ): la web
+ *  enlazaba @totalgainsfitness, que no existe. */
 export const SAME_AS = [
     "https://www.wikidata.org/wiki/Q141952566",
     "https://apps.apple.com/es/app/totalgains/id6756856683",
@@ -35,6 +36,9 @@ export const SAME_AS = [
     "https://es.trustpilot.com/review/totalgains.es",
     "https://www.instagram.com/totalgainsfitness/",
     "https://www.tiktok.com/@totalgainsfitness",
+    "https://www.youtube.com/@TotalGains-Fitness",
+    "https://www.capterra.com/p/10041248/TotalGains/",
+    "https://www.getapp.com/recreation-wellness-software/a/totalgains/",
 ];
 
 /** Plan gratuito permanente. Va SIEMPRE en el AggregateOffer aunque no se
