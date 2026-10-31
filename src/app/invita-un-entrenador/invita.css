@@ -444,6 +444,7 @@
 
 .inv-final h2 {
   margin-bottom: 18px;
+  font-size: clamp(1.6rem, 3.4vw, 2.1rem);
   text-align: left;
 }
 
