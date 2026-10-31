@@ -173,14 +173,7 @@ export default function Home() {
         url: "https://totalgains.es",
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
-        potentialAction: {
-          "@type": "SearchAction",
-          target: {
-            "@type": "EntryPoint",
-            urlTemplate: "https://totalgains.es/blog/?q={search_term_string}",
-          },
-          "query-input": "required name=search_term_string",
-        },
+        // Sin SearchAction (31-oct-2026): apuntaba a /blog/?q=, que no busca nada.
       },
     ],
   };

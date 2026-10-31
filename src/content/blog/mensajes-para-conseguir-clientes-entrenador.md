@@ -1,6 +1,6 @@
 ---
 title: "Qué escribir exactamente: 10 mensajes que te traen clientes (y 4 que te queman el contacto)"
-seoTitle: "Qué mensajes enviar para conseguir clientes como entrenador (2026)"
+seoTitle: "Mensajes para conseguir clientes de entrenador"
 description: "Los 10 mensajes literales para captar clientes como entrenador personal, listos para copiar, y los 4 errores que hacen que no te contesten nunca."
 date: "2026-09-18"
 lastModified: "2026-09-18"

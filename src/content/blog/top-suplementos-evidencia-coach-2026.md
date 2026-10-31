@@ -1,6 +1,6 @@
 ---
 title: "Top 8 suplementos que tus clientes te van a preguntar (y qué contestar a cada uno)"
-seoTitle: "Suplementos con evidencia: los 8 más preguntados (guía coach 2026)"
+seoTitle: "Suplementos con evidencia: guía para coaches"
 description: "Creatina, cafeína, omega 3, proteína, vitamina D3, ZMA, melatonina y BCAA clasificados por evidencia real, con la respuesta corta para cada cliente."
 date: "2026-09-11"
 lastModified: "2026-09-11"

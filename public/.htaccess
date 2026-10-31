@@ -31,6 +31,11 @@
     # /contacto/ (Redirect compara por el principio de la ruta).
     RewriteRule ^contact/?$ /contacto/ [R=301,L]
 
+    # El post viejo de Harbiz con barra final respondía 200 (31-oct-2026): su
+    # carpeta sigue existiendo en el servidor y el «Redirect 301» de arriba no
+    # saltaba. El RewriteRule sí, con y sin barra.
+    RewriteRule ^blog/harbiz-precios-2026(/.*)?$ /alternativas/harbiz/precios/ [R=301,L]
+
     # Markdown para agentes de IA (31-oct-2026): si piden «Accept: text/markdown»
     # se les da el index.md de la misma página, que crea scripts/markdown-agentes.mjs
     # tras el build. La respuesta va con no-store (ver «Markdown para agentes» más

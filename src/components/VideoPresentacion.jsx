@@ -11,9 +11,25 @@ const puntos = [
   "Tu app con tu marca y tus colores.",
 ];
 
+/* Ficha del vídeo para Google y las IAs (VideoObject, auditoría 31-oct-2026).
+   Duración real del mp4: 92 s. Si se cambia el vídeo, cambiar aquí la fecha. */
+const videoSchema = {
+  "@context": "https://schema.org",
+  "@type": "VideoObject",
+  name: "Mira cómo trabajas con TotalGains",
+  description: "Presentación de TotalGains en 90 segundos: rutinas y dietas con IA revisadas por el entrenador, el seguimiento de los clientes en un solo sitio y la app con tu marca.",
+  thumbnailUrl: "https://totalgains.es/video/presentacion-totalgains.webp",
+  contentUrl: "https://totalgains.es/video/presentacion-totalgains.mp4",
+  uploadDate: "2026-10-31",
+  duration: "PT1M32S",
+  inLanguage: "es",
+  publisher: { "@id": "https://totalgains.es/#organization" },
+};
+
 export default function VideoPresentacion() {
   return (
     <section className="vp" aria-labelledby="vp-titulo">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <div className="container vp-grid">
         <div className="vp-texto">
           <p className="vp-antetitulo">En 90 segundos</p>

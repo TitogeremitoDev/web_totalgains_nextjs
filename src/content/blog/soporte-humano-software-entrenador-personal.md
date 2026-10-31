@@ -1,6 +1,6 @@
 ---
 title: "No hablas con una máquina: hay alguien que da la cara cuando tu software falla"
-seoTitle: "Software de entrenador con soporte humano: por qué importa"
+seoTitle: "Software de entrenador con soporte humano"
 description: "El 87 % de los clientes quiere poder hablar con una persona aunque haya IA. Por qué el soporte pesa al elegir software y qué preguntar antes de firmar."
 date: "2026-10-09"
 lastModified: "2026-10-09"

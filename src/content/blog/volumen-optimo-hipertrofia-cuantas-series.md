@@ -1,6 +1,6 @@
 ---
 title: "Volumen óptimo para la máxima ganancia muscular de tus atletas: cuántas series dice la ciencia"
-seoTitle: "Volumen óptimo para ganar músculo: cuántas series (2026)"
+seoTitle: "Volumen óptimo: cuántas series para hipertrofia"
 description: "Con 4 series por músculo a la semana ya se crece, y de 10 en adelante cada mejora cuesta más. Lo que dicen 67 estudios y cómo dosificarlo atleta a atleta."
 date: "2026-10-02"
 lastModified: "2026-10-02"

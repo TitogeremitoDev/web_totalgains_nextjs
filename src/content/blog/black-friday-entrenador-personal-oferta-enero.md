@@ -1,6 +1,6 @@
 ---
 title: "Black Friday para entrenadores: no vendas noviembre, vende enero"
-seoTitle: "Black Friday para entrenadores personales: oferta y embudo"
+seoTitle: "Black Friday para entrenadores: oferta y embudo"
 description: "Cómo usar Black Friday para llenar enero sin rebajar tu precio: la oferta que conviene, el embudo con lista de espera y cómo crear expectación sin trampas."
 date: "2026-10-15"
 lastModified: "2026-10-15"

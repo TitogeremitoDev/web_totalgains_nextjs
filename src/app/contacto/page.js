@@ -10,7 +10,7 @@ import { WHATSAPP_VISIBLE, TELEFONO, whatsappUrl } from "@/data/contacto";
 
 export const metadata = {
   title: "Contacto",
-  description: `Contacta con TotalGains por WhatsApp (${WHATSAPP_VISIBLE}) o por correo (soporte@totalgains.es). Software para entrenadores, nutricionistas y gimnasios, hecho en Granada.`,
+  description: `Contacta con TotalGains por WhatsApp (${WHATSAPP_VISIBLE}) o por correo (soporte@totalgains.es). Software para entrenadores y gimnasios, hecho en Granada.`,
   alternates: { canonical: "https://totalgains.es/contacto/" },
   robots: { index: true, follow: true },
 };

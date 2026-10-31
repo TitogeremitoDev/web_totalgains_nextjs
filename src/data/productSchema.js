@@ -1,10 +1,10 @@
 /* ──────────────────────────────────────────────────────────────
    Nodo SoftwareApplication reutilizable para el schema de páginas.
 
-   ⚠️ La valoración marcada aquí DEBE ser la misma que ve el usuario
-   en la página (badge de TrustpilotBadge). Google exige que el
-   aggregateRating marcado sea visible; si dejan de coincidir, se
-   pierde el rich result. Por eso ambos leen de TRUSTPILOT.
+   ⚠️ Sin aggregateRating desde el 31-oct-2026 (auditoría SEO+GEO): la
+   nota de Trustpilot es de un tercero y Google pide que las valoraciones
+   marcadas se recojan en tu propia web; marcarla como propia puede acabar
+   en acción manual. El badge de Trustpilot SIGUE visible en la página.
    ────────────────────────────────────────────────────────────── */
 
 import { TELEFONO } from "./contacto";
@@ -129,16 +129,12 @@ export function softwareApplicationNode({ description, id = "https://totalgains.
     };
 }
 
-/** AggregateRating derivado de TRUSTPILOT. Nunca escribir el número a mano:
- *  el rating marcado debe coincidir con el visible o se pierde el rich result. */
+/** Antes, AggregateRating derivado de TRUSTPILOT (4,6 con 17 reseñas) en el
+ *  SoftwareApplication de 23 páginas. Devuelve undefined a propósito, así que la
+ *  clave desaparece del JSON-LD sin tocar cada página (31-oct-2026): ver la
+ *  nota de arriba. Si algún día hay reseñas recogidas en totalgains.es, aquí. */
 export function aggregateRatingNode() {
-    return {
-        "@type": "AggregateRating",
-        ratingValue: String(TRUSTPILOT.score),
-        bestRating: "5",
-        worstRating: "1",
-        reviewCount: String(TRUSTPILOT.reviews),
-    };
+    return undefined;
 }
 
 /**

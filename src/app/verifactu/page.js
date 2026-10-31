@@ -2,7 +2,7 @@ import VerifactuDeclaracion from '../../components/VerifactuDeclaracion';
 
 export const metadata = {
   title: 'VeriFactu en TotalGains',
-  description: 'Cómo TotalGains cumple VeriFactu (RD 1007/2023): registro de cada factura en la Agencia Tributaria con código QR, inalterabilidad, dos modos de trabajo para gimnasios y la declaración responsable del sistema.',
+  description: 'Cómo cumple TotalGains con VeriFactu (RD 1007/2023): cada factura queda registrada en la Agencia Tributaria con código QR y ya no se puede alterar.',
   alternates: { canonical: 'https://totalgains.es/verifactu/' },
 };
 

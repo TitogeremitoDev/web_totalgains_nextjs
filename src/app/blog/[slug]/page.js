@@ -326,99 +326,25 @@ export default async function PostPage({ params }) {
     },
   ];
 
-  // ItemList schema for product roundup posts (comparison.reviewedProducts).
-  // Only emit ItemList when there are ≥2 products (Google List rich results
-  // require a real list). With 1 product, promote the Product directly to
-  // the graph to avoid a semantically empty ItemList with numberOfItems=1.
+  // ItemList de las herramientas comparadas (comparison.reviewedProducts): solo
+  // nombre y enlace. ⛔ Sin `Product` + `Review` con «valoración editorial»
+  // firmada por el fundador (quitado el 31-oct-2026, auditoría SEO+GEO): Google
+  // trata las reseñas autopublicadas como spam de datos estructurados y un
+  // Product sin reseña ni precio da error en Search Console. La nota que ve el
+  // lector sigue en el artículo; solo sale del schema.
   const reviewedProducts = post.comparison?.reviewedProducts || [];
   if (reviewedProducts.length >= 2) {
     graph.push({
       "@type": "ItemList",
       itemListOrder: "https://schema.org/ItemListOrderAscending",
       numberOfItems: reviewedProducts.length,
-      itemListElement: reviewedProducts.map((product, i) => {
-        const productNode = {
-          "@type": "Product",
-          name: product.name,
-          description: product.pros || `${product.name} — software para entrenadores personales`,
-          image: product.image || "https://totalgains.es/og-image.jpg",
-          brand: { "@type": "Brand", name: product.name },
-          ...(product.url ? { url: product.url } : {}),
-          review: {
-            "@type": "Review",
-            name: `Valoración editorial de ${product.name}`,
-            reviewRating: {
-              "@type": "Rating",
-              ratingValue: product.rating,
-              bestRating: 5,
-              worstRating: 1,
-            },
-            author: {
-              "@type": "Person",
-              "@id": "https://totalgains.es/#founder",
-              name: "Germán Martínez Calvente",
-            },
-            datePublished: post.date,
-            reviewBody: product.pros || "",
-            positiveNotes: { "@type": "ItemList", itemListElement: [{ "@type": "ListItem", position: 1, name: product.pros }] },
-            negativeNotes: { "@type": "ItemList", itemListElement: [{ "@type": "ListItem", position: 1, name: product.cons }] },
-          },
-        };
-        // Only emit offers if we have a numeric lowPrice (Google requires a valid float, not a range string)
-        if (typeof product.lowPrice === "number" && typeof product.highPrice === "number") {
-          productNode.offers = {
-            "@type": "AggregateOffer",
-            lowPrice: product.lowPrice,
-            highPrice: product.highPrice,
-            priceCurrency: product.priceCurrency || "EUR",
-            offerCount: product.offerCount || 1,
-            availability: "https://schema.org/InStock",
-            ...(product.url ? { url: product.url } : {}),
-          };
-        } else if (typeof product.lowPrice === "number") {
-          productNode.offers = {
-            "@type": "Offer",
-            price: product.lowPrice,
-            priceCurrency: product.priceCurrency || "EUR",
-            availability: "https://schema.org/InStock",
-            ...(product.url ? { url: product.url } : {}),
-          };
-        }
-        return {
-          "@type": "ListItem",
-          position: i + 1,
-          item: productNode,
-        };
-      }),
+      itemListElement: reviewedProducts.map((product, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: product.name,
+        ...(product.url ? { url: product.url } : {}),
+      })),
     });
-  } else if (reviewedProducts.length === 1) {
-    // Single product: emit the Product directly (no ItemList wrapper) to avoid
-    // exposing numberOfItems=1 which Google flags as misleading list markup.
-    const product = reviewedProducts[0];
-    const productNode = {
-      "@type": "Product",
-      name: product.name,
-      description: product.pros || `${product.name} — software para entrenadores personales`,
-      image: product.image || "https://totalgains.es/og-image.jpg",
-      brand: { "@type": "Brand", name: product.name },
-      ...(product.url ? { url: product.url } : {}),
-      review: {
-        "@type": "Review",
-        name: `Valoración editorial de ${product.name}`,
-        reviewRating: { "@type": "Rating", ratingValue: product.rating, bestRating: 5, worstRating: 1 },
-        author: { "@type": "Person", "@id": "https://totalgains.es/#founder", name: "Germán Martínez Calvente" },
-        datePublished: post.date,
-        reviewBody: product.pros || "",
-        positiveNotes: { "@type": "ItemList", itemListElement: [{ "@type": "ListItem", position: 1, name: product.pros }] },
-        negativeNotes: { "@type": "ItemList", itemListElement: [{ "@type": "ListItem", position: 1, name: product.cons }] },
-      },
-    };
-    if (typeof product.lowPrice === "number" && typeof product.highPrice === "number") {
-      productNode.offers = { "@type": "AggregateOffer", lowPrice: product.lowPrice, highPrice: product.highPrice, priceCurrency: product.priceCurrency || "EUR", offerCount: product.offerCount || 1, availability: "https://schema.org/InStock", ...(product.url ? { url: product.url } : {}) };
-    } else if (typeof product.lowPrice === "number") {
-      productNode.offers = { "@type": "Offer", price: product.lowPrice, priceCurrency: product.priceCurrency || "EUR", availability: "https://schema.org/InStock", ...(product.url ? { url: product.url } : {}) };
-    }
-    graph.push(productNode);
   }
 
   // FAQPage schema if faqs provided

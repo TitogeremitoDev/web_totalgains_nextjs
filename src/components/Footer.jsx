@@ -115,6 +115,9 @@ const Footer = () => {
                                 <li><Link href="/software-nutricionista-online/" prefetch={false}>Software nutricionista</Link></li>
                                 <li><Link href="/para-gimnasios/" prefetch={false}>Software para gimnasios</Link></li>
                                 <li><Link href="/blog/software-gimnasios-pequenos-boutique-2026/" prefetch={false}>Guía: gimnasios boutique</Link></li>
+                                {/* VeriFactu estaba en el sitemap pero solo se enlazaba entre sus dos páginas (auditoría 31-oct-2026) */}
+                                <li><Link href="/verifactu/" prefetch={false}>VeriFactu</Link></li>
+                                <li><Link href="/verifactu/gimnasios/" prefetch={false}>VeriFactu para gimnasios</Link></li>
                             </ul>
                         </div>
 

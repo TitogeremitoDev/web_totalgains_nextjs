@@ -21,7 +21,7 @@ const items = [
                 ))}
             </span>
         ),
-        text: '4.8 en App Store',
+        text: '5,0 en App Store', // nota real (API de Apple, 31-oct-2026: 5,0 con 4 valoraciones); antes ponía 4.8
     },
     {
         icon: <Smartphone size={16} color="#4facfe" />,

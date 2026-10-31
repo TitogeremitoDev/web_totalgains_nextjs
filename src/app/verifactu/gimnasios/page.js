@@ -27,8 +27,8 @@ const faqs = [
 ];
 
 export const metadata = {
-  title: 'VeriFactu para gimnasios: qué cambia y cómo activarlo',
-  description: 'Guía para los gimnasios que usan TotalGains: qué es VeriFactu, cuándo es obligatorio (1 de enero de 2027 para sociedades, 1 de julio de 2027 para autónomos), qué cambia, qué no, y cómo activarlo paso a paso. Con dos vídeos cortos.',
+  title: 'VeriFactu para gimnasios: cómo activarlo',
+  description: 'Qué es VeriFactu, cuándo es obligatorio (2027), qué cambia en tu gimnasio y cómo activarlo en TotalGains paso a paso, con dos vídeos cortos.',
   alternates: { canonical: GUIDE_URL },
   openGraph: {
     title: 'VeriFactu en tu gimnasio: qué es, qué cambia y cómo activarlo | TotalGains',

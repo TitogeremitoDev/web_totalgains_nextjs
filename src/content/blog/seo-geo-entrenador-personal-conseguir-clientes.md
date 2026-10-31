@@ -1,6 +1,6 @@
 ---
 title: "¿Te recomendaría ChatGPT? SEO y GEO para que tus próximos clientes te encuentren (2026)"
-seoTitle: "SEO y GEO para entrenadores personales: cómo te encuentran"
+seoTitle: "SEO y GEO para entrenadores personales"
 description: "Cómo salir en el mapa de Google, en sus resultados y en ChatGPT: tu ficha, tus reseñas y una web que la IA pueda citar. Plan de 4 semanas, sin trucos."
 date: "2026-10-30"
 lastModified: "2026-10-30"

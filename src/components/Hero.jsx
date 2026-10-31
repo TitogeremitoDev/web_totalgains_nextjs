@@ -233,7 +233,7 @@ const Hero = () => {
             <div className="f-card f-a" data-depth="20">
               <div className="ic"><Users size={18} color="#fff" /></div>
               <div>
-                <div className="lbl">Atletas activos</div>
+                <div className="lbl">Ejemplo · atletas activos</div>
                 <div className="val">+37 este mes</div>
               </div>
             </div>
@@ -241,7 +241,7 @@ const Hero = () => {
             <div className="f-card f-b" data-depth="30">
               <div className="ic"><TrendingUp size={18} color="#fff" /></div>
               <div>
-                <div className="lbl">Ingresos recurrentes</div>
+                <div className="lbl">Ejemplo · ingresos al mes</div>
                 <div className="val">€4.820 / mes</div>
               </div>
             </div>

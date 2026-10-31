@@ -17,7 +17,7 @@ const entrenadores = {
     accent: '#2563EB',
 
     meta: {
-        title: 'Funciones para entrenadores personales y nutricionistas',
+        title: 'Funciones para entrenadores y nutricionistas',
         description:
             'Lo que hace TotalGains para entrenadores y nutricionistas: rutinas y dietas con IA, resistencia, seguimiento, app con tu marca y Mi Ciclo. Todo incluido.',
         canonical: 'https://totalgains.es/funciones/entrenadores/',

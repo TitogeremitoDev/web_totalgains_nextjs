@@ -1,6 +1,6 @@
 ---
 title: "Corregir la técnica de un cliente online: qué vídeo pedirle y cómo contestarle (sin pasarte la tarde en WhatsApp)"
-seoTitle: "Corregir la técnica de un cliente online por vídeo"
+seoTitle: "Corregir la técnica de un cliente por vídeo"
 description: "Desde dónde grabar cada ejercicio, cuándo pedir el vídeo y cómo contestar con una sola corrección y tu propio vídeo. Con lo que dicen los estudios."
 date: "2026-10-23"
 lastModified: "2026-10-23"

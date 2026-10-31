@@ -15,7 +15,7 @@ export const features = {
         id: "board",
         icon: <LayoutDashboard size={28} color="#3b82f6" strokeWidth={2} />,
         title: "Panel de Gestión de Atletas Online",
-        subtitle: "Command Center",
+        subtitle: "Centro de mando",
         image: "/carrousel/BOARD.webp",
         description: "El software para entrenadores definitivo. Gestiona atletas online, tareas pendientes, finanzas y alertas desde un único dashboard centralizado.",
         highlight: "Control total de tu negocio fitness sin caos.",

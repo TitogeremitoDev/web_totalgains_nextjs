@@ -1,6 +1,6 @@
 ---
 title: "Lo que te puedes desgravar como entrenador personal (y las 5 cosas que Hacienda te va a tumbar)"
-seoTitle: "Gastos deducibles entrenador personal autónomo: guía 2026"
+seoTitle: "Gastos deducibles del entrenador personal 2026"
 description: "Qué puede desgravar un entrenador personal autónomo en España, cómo justificar cada gasto y los 5 que Hacienda rechaza aunque te los hayan contado."
 date: "2026-09-25"
 lastModified: "2026-09-26"

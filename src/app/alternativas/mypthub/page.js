@@ -5,7 +5,7 @@ import { softwareApplicationNode , organizationNode } from "@/data/productSchema
 export const metadata = {
   title: "Alternativa a MyPT Hub para Entrenadores",
   description:
-    "Compara TotalGains con MyPT Hub. Interfaz intuitiva sin curva de aprendizaje, IA para rutinas y dietas, app marca blanca nativa. Migra gratis en 5 minutos.",
+    "Compara TotalGains con MyPT Hub. Interfaz intuitiva sin curva de aprendizaje, IA para rutinas y dietas, app marca blanca nativa. Migración gratis y asistida.",
   keywords: [
     "alternativa a MyPT Hub",
     "MyPT Hub alternativa",
