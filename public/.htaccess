@@ -127,8 +127,8 @@ ErrorDocument 404 /404.html
     SetEnvIf Request_URI "^/(index\.html)?$" PORTADA=1
 </IfModule>
 <IfModule mod_headers.c>
-    Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\"" env=PORTADA
-    Header add Link "</index.md>; rel=\"alternate\"; type=\"text/markdown\"" env=PORTADA
+    Header add Link '</llms.txt>; rel="describedby"; type="text/plain"' env=PORTADA
+    Header add Link '</index.md>; rel="alternate"; type="text/markdown"' env=PORTADA
 </IfModule>
 
 # ── Tipos MIME correctos ─────────────────────────────────────────────────────
