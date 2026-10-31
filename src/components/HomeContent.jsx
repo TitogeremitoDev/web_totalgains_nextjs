@@ -2,6 +2,7 @@
 
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import VideoPresentacion from "@/components/VideoPresentacion";
 import Stats from "@/components/Stats";
 import BeforeAfter from "@/components/BeforeAfter";
 import Features from "@/components/Features";
@@ -29,6 +30,7 @@ export default function HomeContent() {
       <ScrollInitializer />
       <Hero />
       <TrustBar />
+      <VideoPresentacion />
       <Stats />
       <BeforeAfter />
       <Features />

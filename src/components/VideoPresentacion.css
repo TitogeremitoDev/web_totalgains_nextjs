@@ -1,0 +1,94 @@
+/* Vídeo de presentación de la portada (VideoPresentacion.jsx). */
+.vp {
+  padding: clamp(56px, 8vw, 96px) 0;
+}
+
+.vp-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(32px, 6vw, 72px);
+  align-items: center;
+  max-width: 1040px;
+}
+
+.vp-antetitulo {
+  margin: 0 0 10px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--primary-light);
+}
+
+.vp-h2 {
+  margin: 0 0 22px;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+}
+
+.vp-texto ul {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.vp-texto li {
+  display: flex;
+  gap: 10px;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.vp-texto li svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #34d399;
+}
+
+.vp-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vp-movil {
+  justify-self: center;
+  width: min(300px, 100%);
+  padding: 8px;
+  border-radius: 38px;
+  background: linear-gradient(145deg, #1d1b33, #0a0918);
+  box-shadow: 0 50px 100px -30px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.08) inset, 0 0 90px -20px rgba(102, 126, 234, 0.55);
+}
+
+.vp-movil video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16;
+  border-radius: 30px;
+  background: #0b1020;
+}
+
+@media (max-width: 860px) {
+  .vp-grid {
+    grid-template-columns: 1fr;
+  }
+  .vp-texto {
+    text-align: center;
+  }
+  .vp-texto ul {
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+  .vp-movil {
+    order: -1;
+    width: min(270px, 80%);
+  }
+}
