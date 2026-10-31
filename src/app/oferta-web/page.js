@@ -121,6 +121,10 @@ const preguntas = [
     r: "No. En Starter puede ir en tunombre.totalgains.es. Si quieres tu propio dominio (tunombre.es), lo contratas tú y la ponemos ahí. En Pro y Unlimited va en tu dominio.",
   },
   {
+    p: "¿Quién conecta mi dominio con la web?",
+    r: "Nosotros te mandamos los datos exactos que hay que poner donde compraste tu dominio. Si lo prefieres, lo hacemos contigo en una videollamada de 10 minutos. El dominio sigue a tu nombre y nunca te pedimos tu contraseña.",
+  },
+  {
     p: "¿Qué es un «cambio pequeño»?",
     r: `Cosas como cambiar un precio, un horario, una foto o un texto. En Pro y Unlimited tienes ${OFERTA_WEB.cambiosAlMes} al mes gratis.`,
   },
