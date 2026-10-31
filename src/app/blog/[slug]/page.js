@@ -4,6 +4,7 @@ import { getAllSlugs, getPostBySlug, getAllPosts } from "@/lib/blog";
 import { marked } from "marked";
 import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import BlogCTAButton from "@/components/BlogCTAButton";
+import GuiasGratis from "@/components/GuiasGratis";
 import PriceCalculatorCoach from "@/components/PriceCalculatorCoach";
 import LTVCACVisualizer from "@/components/LTVCACVisualizer";
 import CoachTiersVisualizer from "@/components/CoachTiersVisualizer";
@@ -62,6 +63,8 @@ import OfertaWebTicket from "@/components/OfertaWebTicket";
 
 // Artículos para gimnasios: el ticket de la oferta (plan de entrenador) no pinta nada ahí.
 const SIN_TICKET_OFERTA = ["software-gimnasios-pequenos-boutique-2026"];
+// Las guías son para entrenadores: fuera del artículo para gimnasios.
+const SIN_GUIAS = ["software-gimnasios-pequenos-boutique-2026"];
 import { OFERTA_WEB } from "@/data/ofertaWeb";
 import "./post.css";
 
@@ -537,6 +540,7 @@ export default async function PostPage({ params }) {
               }
               return <div key={`seg-${i}`} dangerouslySetInnerHTML={{ __html: seg.html }} />;
             })}
+            {!SIN_GUIAS.includes(slug) && <GuiasGratis donde={`blog_${slug}`} />}
           </div>
 
           {/* Sidebar CTA */}

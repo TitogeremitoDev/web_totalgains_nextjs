@@ -1,0 +1,8 @@
+# Guías en PDF del blog: se mandan por correo (bloque GuiasGratis). Que Google
+# no las indexe: competirían con los artículos de los que salen.
+<IfModule mod_headers.c>
+    <FilesMatch "\.pdf$">
+        Header set X-Robots-Tag "noindex"
+        Header set Cache-Control "public, max-age=86400"
+    </FilesMatch>
+</IfModule>

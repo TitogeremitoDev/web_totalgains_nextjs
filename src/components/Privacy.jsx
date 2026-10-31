@@ -17,7 +17,7 @@ const Privacy = () => {
         <div className="legal-page">
             <div className="container">
                 <h1>Política de Privacidad</h1>
-                <p className="last-updated">Última actualización: 23 de agosto de 2026</p>
+                <p className="last-updated">Última actualización: 31 de octubre de 2026</p>
 
                 <section className="legal-section">
                     <h2>1. Quién es el responsable de tus datos</h2>
@@ -63,6 +63,7 @@ const Privacy = () => {
                         <li><strong>Comunicaciones:</strong> mensajes intercambiados con tu profesional dentro de la aplicación y correos de soporte</li>
                         <li><strong>Datos de facturación:</strong> los pagos se procesan a través de proveedores externos (Stripe, PayPal, Apple App Store, Google Play). TotalGains no almacena números de tarjeta ni datos bancarios completos</li>
                         <li><strong>Formulario de contacto de la web:</strong> nombre, email, asunto y mensaje</li>
+                        <li><strong>Guías gratis del blog y reservas de ofertas de la web:</strong> email, las guías que eliges y el artículo desde el que las pides (en las reservas, también tu nombre y el plan), cuándo diste tu permiso y qué correos te hemos enviado</li>
                     </ul>
                 </section>
 
@@ -96,6 +97,11 @@ const Privacy = () => {
                             <em>consentimiento</em> (art. 6.1.a) y, si ya eres cliente, la relación contractual.
                         </li>
                         <li>
+                            <strong>Enviarte las guías que pides y, como mucho, 3 correos con consejos</strong> — base legal:{' '}
+                            <em>consentimiento</em> (art. 6.1.a), que das al marcar la casilla y retiras cuando quieras con
+                            el enlace de baja de cualquiera de esos correos. Si no abres ninguna guía, no te mandamos los consejos.
+                        </li>
+                        <li>
                             <strong>Seguridad, prevención de fraude y mejora del producto</strong> con datos agregados
                             o seudonimizados — base legal: <em>interés legítimo</em> (art. 6.1.f), ponderado para no
                             afectar a tus derechos.
@@ -119,7 +125,7 @@ const Privacy = () => {
                         <li><strong>Tu profesional</strong> (entrenador, nutricionista o gimnasio): ve tu progreso, fotos, vídeos y mensajes — es la esencia del servicio</li>
                         <li><strong>Pagos y tiendas:</strong> Stripe, PayPal, Apple App Store, Google Play</li>
                         <li><strong>Infraestructura:</strong> proveedores de alojamiento y base de datos gestionada (Koyeb, MongoDB Atlas) y red de entrega y almacenamiento de archivos (Cloudflare)</li>
-                        <li><strong>Correo transaccional:</strong> Resend (emails de la app, como recuperación de contraseña) y EmailJS (envío del formulario de contacto de esta web)</li>
+                        <li><strong>Correo transaccional:</strong> Resend (emails de la app, como recuperación de contraseña, y los correos de las guías y de las reservas de esta web) y EmailJS (envío del formulario de contacto de esta web)</li>
                         <li><strong>IA generativa:</strong> Google (modelos Gemini), para las funciones de generación de rutinas y dietas</li>
                         <li><strong>Notificaciones push:</strong> Expo, Firebase Cloud Messaging (Google) y APNs (Apple)</li>
                         <li><strong>Inicio de sesión:</strong> Google Sign-In y Apple Sign-In, solo si eliges usarlos</li>
@@ -147,6 +153,7 @@ const Privacy = () => {
                         <li><strong>Al darte de baja o eliminar la cuenta:</strong> tus datos personales se eliminan en un plazo máximo de <strong>30 días</strong></li>
                         <li><strong>Facturación:</strong> los datos fiscales se conservan bloqueados los años que exige la normativa tributaria y mercantil española (con carácter general, entre 4 y 6 años), solo a disposición de las administraciones competentes</li>
                         <li><strong>Soporte:</strong> la correspondencia se conserva mientras sea necesaria para atender y acreditar la consulta</li>
+                        <li><strong>Guías y reservas de la web:</strong> se borran solas a los <strong>120 días</strong>; las guías, al momento si te das de baja con el enlace de sus correos</li>
                     </ul>
                 </section>
 

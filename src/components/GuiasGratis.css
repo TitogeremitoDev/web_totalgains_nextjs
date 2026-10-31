@@ -1,0 +1,256 @@
+/* «Llévate las guías en PDF» (GuiasGratis.jsx). */
+.gg {
+  margin: 48px 0 0;
+  padding: 26px clamp(18px, 3vw, 30px);
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(102, 126, 234, 0.1), rgba(102, 126, 234, 0.03));
+  border: 1px solid rgba(102, 126, 234, 0.25);
+}
+
+.gg-cab {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.gg-icono {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  color: #fff;
+  background: var(--primary-gradient, #667eea);
+}
+
+.gg-cab h2 {
+  margin: 0 0 4px;
+  font-size: 1.3rem;
+  color: #fff;
+}
+
+.gg-cab p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.gg-lista {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.gg-guia {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  padding: 12px 14px;
+  border-radius: 12px;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.gg-guia.es-elegida {
+  border-color: rgba(102, 126, 234, 0.6);
+  background: rgba(102, 126, 234, 0.1);
+}
+
+.gg-guia input {
+  margin-top: 4px;
+  accent-color: #667eea;
+}
+
+/* Portada real de la guía (página 1 del PDF, con la foto de su artículo). */
+.gg-portada {
+  flex-shrink: 0;
+  width: 56px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+}
+
+.gg-guia span {
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--text-secondary);
+}
+
+.gg-guia strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #fff;
+}
+
+.gg-todas {
+  margin: 10px 0 16px;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-weight: 700;
+  color: var(--primary-light);
+  cursor: pointer;
+}
+
+.gg-fila {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.gg-email {
+  flex: 1;
+  display: grid;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.gg-email input {
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(0, 0, 0, 0.25);
+  color: #fff;
+  font-size: 1rem;
+}
+
+.gg-enviar {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 18px;
+  border: 0;
+  border-radius: 12px;
+  font-weight: 800;
+  font-size: 0.98rem;
+  color: #fff;
+  background: var(--primary-gradient, #667eea);
+  cursor: pointer;
+}
+
+.gg-acepto {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.gg-aviso {
+  margin: 10px 0 0;
+  color: #fca5a5;
+  font-size: 0.88rem;
+}
+
+.gg--hecho {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  color: #34d399;
+}
+
+.gg--hecho p {
+  margin: 0;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .gg-cab {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .gg-lista {
+    grid-template-columns: 1fr;
+  }
+  .gg-fila {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .gg-enviar {
+    justify-content: center;
+  }
+}
+
+/* Campo trampa para robots: los humanos no lo ven. */
+.gg-trampa {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.gg-enviar:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+/* Dentro del artículo, las reglas de .post-body (img con 2rem de margen y en
+   bloque, h2 con 2,5rem arriba, p con 1,2rem abajo) ganaban a las del bloque y
+   lo llenaban de huecos. Aquí, con más peso, mandan las del bloque. */
+.gg .gg-portada {
+  display: block;
+  max-width: none;
+  margin: 0;
+  border-radius: 6px;
+}
+
+.gg .gg-cab h2 {
+  margin: 0 0 4px;
+  font-size: 1.3rem;
+  line-height: 1.3;
+}
+
+.gg .gg-cab p,
+.gg.gg--hecho p {
+  margin: 0;
+}
+
+.gg .gg-guia strong {
+  font-weight: 700;
+  color: #fff;
+}
+
+.gg .gg-acepto {
+  align-items: flex-start;
+}
+
+.gg .gg-acepto input {
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+/* En el móvil, solo portada y título: con la frase, las 6 tarjetas ocupaban
+   casi dos pantallas. */
+@media (max-width: 640px) {
+  .gg .gg-guia {
+    align-items: center;
+    padding: 10px 12px;
+  }
+  .gg .gg-portada {
+    width: 40px;
+  }
+  .gg .gg-texto {
+    display: none;
+  }
+  .gg .gg-cab {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+  .gg .gg-icono {
+    width: 38px;
+    height: 38px;
+  }
+  .gg .gg-cab h2 {
+    font-size: 1.15rem;
+  }
+  .gg .gg-cab p {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+}
