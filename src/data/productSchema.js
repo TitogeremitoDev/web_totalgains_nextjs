@@ -22,17 +22,19 @@ export const TRUSTPILOT = {
 /** Perfiles oficiales de la entidad TotalGains.
  *
  *  Fuente única del `sameAs`: antes estaba copiado a mano en 5 sitios y se
- *  desincronizaba. ⚠️ Aquí solo perfiles que EXISTEN: la ficha de Wikidata
- *  Q139823576 nunca existió (la API responde «missing», comprobado el
- *  31-oct-2026) y se quitó. Si algún día se crea una ficha real, va PRIMERA:
- *  es el ancla que desambigua la marca. */
+ *  desincronizaba. ⚠️ Aquí solo perfiles que EXISTEN (comprobados el
+ *  31-oct-2026). Wikidata va PRIMERO: es el ancla que desambigua la marca.
+ *  La ficha Q139823576 la borró Wikidata el 17-may-2026 por relevancia; la
+ *  actual, Q141952566, se creó el 31-oct-2026 con fuentes de fuera (Capterra,
+ *  GetApp, Kaizer). Si la borran, quitarla de aquí y de los dos llms. El canal
+ *  de YouTube @totalgainsfitness no existe (404) y salió de la lista. */
 export const SAME_AS = [
+    "https://www.wikidata.org/wiki/Q141952566",
     "https://apps.apple.com/es/app/totalgains/id6756856683",
     "https://play.google.com/store/apps/details?id=com.german92.titofitapp",
     "https://es.trustpilot.com/review/totalgains.es",
     "https://www.instagram.com/totalgainsfitness/",
     "https://www.tiktok.com/@totalgainsfitness",
-    "https://www.youtube.com/@totalgainsfitness",
 ];
 
 /** Plan gratuito permanente. Va SIEMPRE en el AggregateOffer aunque no se

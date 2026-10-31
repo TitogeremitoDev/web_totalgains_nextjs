@@ -304,7 +304,6 @@ export default async function PostPage({ params }) {
         url: "https://totalgains.es/sobre-nosotros/",
         sameAs: [
           "https://www.instagram.com/totalgainsfitness/",
-          "https://www.youtube.com/@totalgainsfitness",
           "https://www.tiktok.com/@totalgainsfitness",
         ],
       },

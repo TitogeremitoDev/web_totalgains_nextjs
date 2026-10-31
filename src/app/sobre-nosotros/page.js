@@ -65,7 +65,6 @@ export default function SobreNosotros() {
         sameAs: [
           "https://www.instagram.com/totalgainsfitness/",
           "https://www.tiktok.com/@totalgainsfitness",
-          "https://www.youtube.com/@totalgainsfitness",
         ],
       },
       {
