@@ -21,7 +21,7 @@ export const OFERTA_WEB = {
   plazas: 10,
   // Cuando alguien reserve, súbelo y publica: los puntos de las plazas se
   // apagan y el texto pasa de «Solo 10 plazas» a «Quedan 7 de 10».
-  plazasCogidas: 0,
+  plazasCogidas: 1,
   agotada: false,
   // Cambios pequeños al mes incluidos en la web de Pro y Unlimited.
   cambiosAlMes: 2,
