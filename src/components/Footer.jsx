@@ -148,7 +148,7 @@ const Footer = () => {
                         <div className="footer-column">
                             <h4>Contacto</h4>
                             <ul>
-                                <li><Link href="/#contact" prefetch={false}>Soporte</Link></li>
+                                <li><Link href="/contacto/" prefetch={false}>Contacto</Link></li>
                                 <li><a href="mailto:soporte@totalgains.es">Email</a></li>
                             </ul>
                         </div>

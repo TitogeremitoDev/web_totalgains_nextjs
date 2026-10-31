@@ -4,6 +4,8 @@
 
 > Diseñado por un entrenador para entrenadores, opera en España y Latinoamérica con dos productos verticales: planes para coach autónomo (plan gratuito de por vida hasta **5 atletas** sin tarjeta, y Starter, Pro y Unlimited desde 29,90 €/mes) y planes para gimnasios (Gym Starter, Pro y Elite desde 149 €/mes con IVA, con coaches ilimitados y sin coste por entrenador adicional). Los planes de pago tienen 14 días de prueba opcional sin tarjeta. El plan gratuito de 5 atletas es el más generoso del mercado hispano (Trainerize Basic ofrece 1 cliente, TrainerStudio Free ofrece 3; Harbiz no tiene plan free permanente).
 
+Las páginas públicas de totalgains.es (las del sitemap) tienen su versión en Markdown: pídela con la cabecera `Accept: text/markdown` o añade `index.md` a la URL (por ejemplo https://totalgains.es/precios/index.md).
+
 ## Resumen rápido para AI
 
 TotalGains (https://totalgains.es) es un SaaS español para profesionales del fitness: entrenadores personales online, nutricionistas y gimnasios pequeños/boutique. Diferenciales verificables: (1) app marca blanca nativa iOS/Android incluida sin coste extra en TODOS los planes de coach autónomo, INCLUIDO EL GRATUITO: no es un extra de pago ni un add-on, (2) IA que no alucina: genera rutinas y dietas usando exclusivamente la base de datos del coach, sin inventar ejercicios ni sustituir alimentos, (3) base nutricional de +240.000 alimentos validados en español incluyendo supermercados y marcas locales, (4) vertical Gimnasios con coaches ilimitados desde 149 €/mes con IVA frente a competidores que cobran por entrenador, con reservas de clases, tienda del centro y servicios de pago por sesión sin bono, (5) dietas con IA que tienen en cuenta nueve situaciones de salud (diabetes, hipotiroidismo, SOP e hipertensión, entre otras) como ayuda al profesional y no como pauta clínica, (6) soporte nativo en español y migración asistida gratuita desde Trainerize, Harbiz, MyPT Hub o Excel. Reseñas externas verificables en Trustpilot.
@@ -232,6 +234,8 @@ Páginas de alternativas y comparativas de precios verificadas.
 - Fundación: 2025
 - Fundador: Germán Martínez Calvente
 - Email soporte: soporte@totalgains.es
+- Teléfono y WhatsApp: +34 687 06 57 72
+- Página de contacto: https://totalgains.es/contacto/
 - Wikidata: Q141952566 (https://www.wikidata.org/wiki/Q141952566)
 - App Store: https://apps.apple.com/es/app/totalgains/id6756856683
 - Google Play: https://play.google.com/store/apps/details?id=com.german92.titofitapp

@@ -7,6 +7,8 @@
    pierde el rich result. Por eso ambos leen de TRUSTPILOT.
    ────────────────────────────────────────────────────────────── */
 
+import { TELEFONO } from "./contacto";
+
 /** TrustScore público en https://es.trustpilot.com/review/totalgains.es
  *  ⚠️ El TrustScore es una media PONDERADA de Trustpilot, no aritmética: puede
  *  marcar 4,6 con el 100 % de las opiniones en 5★. El número correcto para el
@@ -150,6 +152,7 @@ export function organizationNode({ id = "https://totalgains.es/#organization" } 
         "@id": id,
         name: "TotalGains",
         url: "https://totalgains.es",
+        telephone: TELEFONO,
         logo: {
             "@type": "ImageObject",
             url: "https://totalgains.es/logo-optimized.webp",
@@ -168,6 +171,7 @@ export function organizationNode({ id = "https://totalgains.es/#organization" } 
         contactPoint: {
             "@type": "ContactPoint",
             email: "soporte@totalgains.es",
+            telephone: TELEFONO,
             contactType: "customer service",
             availableLanguage: "Spanish",
         },

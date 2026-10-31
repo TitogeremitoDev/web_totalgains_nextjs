@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import TrustpilotBadge from "@/components/TrustpilotBadge";
 import { SAME_AS } from "@/data/productSchema";
+import { TELEFONO } from "@/data/contacto";
 
 export const metadata = {
   title: { absolute: "Sobre TotalGains: quién hay detrás del software" },
@@ -31,6 +32,7 @@ export default function SobreNosotros() {
         logo: { "@type": "ImageObject", url: "https://totalgains.es/logo-optimized.webp" },
         foundingDate: "2025",
         email: "soporte@totalgains.es",
+        telephone: TELEFONO,
         address: {
           "@type": "PostalAddress",
           streetAddress: "C/Sur Nº9 1ª",

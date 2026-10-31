@@ -1,6 +1,7 @@
 import HomeContent from "@/components/HomeContent";
 import { SAME_AS, aggregateRatingNode, ofertasCoach } from "@/data/productSchema";
 import { HOME_FAQS } from "@/data/homeFaqs";
+import { TELEFONO } from "@/data/contacto";
 
 /* ──────────────────────────────────────────────
    HOME PAGE — SERVER COMPONENT
@@ -131,6 +132,7 @@ export default function Home() {
         legalName: "Germán Martínez Calvente",
         vatID: "77137460Z",
         url: "https://totalgains.es",
+        telephone: TELEFONO,
         logo: { "@type": "ImageObject", url: "https://totalgains.es/logo-optimized.webp", width: 140, height: 140 },
         address: {
           "@type": "PostalAddress",
@@ -144,6 +146,7 @@ export default function Home() {
         contactPoint: {
           "@type": "ContactPoint",
           email: "soporte@totalgains.es",
+          telephone: TELEFONO,
           contactType: "customer service",
           availableLanguage: "Spanish",
         },

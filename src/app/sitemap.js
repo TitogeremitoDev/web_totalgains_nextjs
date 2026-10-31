@@ -39,6 +39,7 @@ export default function sitemap() {
         { url: `${baseUrl}/casos-de-exito/nacho-pulido/`, lastModified: '2026-08-22' },
         { url: `${baseUrl}/casos-de-exito/lorena-eses/`, lastModified: '2026-08-22' },
         { url: `${baseUrl}/sobre-nosotros/`, lastModified: '2026-08-22' },
+        { url: `${baseUrl}/contacto/`, lastModified: '2026-10-31' },
         { url: `${baseUrl}/opiniones-clientes/`, lastModified: '2026-08-22' },
         // /onboarding/ y /aviso-legal/ NO van aquí: ambas emiten `noindex`, y
         // listarlas hacía que Search Console las marcara como "Enviada: la URL

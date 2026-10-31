@@ -26,6 +26,21 @@
     Redirect 301 /blog/harbiz-precios-2026 /alternativas/harbiz/precios/
     Redirect 301 /blog/harbiz-precios-2026/ /alternativas/harbiz/precios/
 
+    # Página de contacto con la ruta en inglés que prueban los agentes. Con
+    # RewriteRule y no con Redirect: «Redirect /contact» también cazaría
+    # /contacto/ (Redirect compara por el principio de la ruta).
+    RewriteRule ^contact/?$ /contacto/ [R=301,L]
+
+    # Markdown para agentes de IA (31-oct-2026): si piden «Accept: text/markdown»
+    # se les da el index.md de la misma página, que crea scripts/markdown-agentes.mjs
+    # tras el build. La respuesta va con no-store (ver «Markdown para agentes» más
+    # abajo): Cloudflare no separa las copias por Accept y una copia en Markdown
+    # nunca puede acabar sirviéndose a una persona.
+    RewriteCond %{HTTP_ACCEPT} text/markdown [NC]
+    RewriteCond %{REQUEST_URI} /$
+    RewriteCond %{REQUEST_FILENAME}/index.md -f
+    RewriteRule ^(.*)$ /$1index.md [L]
+
     # Añadir trailing slash a rutas sin extensión
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_URI} !/$
@@ -88,6 +103,32 @@ ErrorDocument 404 /404.html
         Header set Access-Control-Allow-Origin "*"
         Header set Cache-Control "public, max-age=300"
     </Files>
+</IfModule>
+
+# ── Markdown para agentes ────────────────────────────────────────────────────
+# Las versiones .md de cada página (ver el RewriteRule de arriba): nunca en caché
+# compartida, fuera de Google (el original es el HTML) y avisando de que la
+# respuesta cambia según lo que pida el cliente.
+<IfModule mod_mime.c>
+    AddType text/markdown .md
+    AddCharset utf-8 .md
+</IfModule>
+<IfModule mod_headers.c>
+    <FilesMatch "\.md$">
+        Header set Cache-Control "no-store, private"
+        Header set X-Robots-Tag "noindex"
+        Header set Vary "Accept"
+    </FilesMatch>
+</IfModule>
+
+# ── La portada anuncia a los agentes lo que tienen hecho para ellos (RFC 8288) ─
+# El fichero para IAs y la versión en Markdown de la portada.
+<IfModule mod_setenvif.c>
+    SetEnvIf Request_URI "^/(index\.html)?$" PORTADA=1
+</IfModule>
+<IfModule mod_headers.c>
+    Header add Link "</llms.txt>; rel=\"describedby\"; type=\"text/plain\"" env=PORTADA
+    Header add Link "</index.md>; rel=\"alternate\"; type=\"text/markdown\"" env=PORTADA
 </IfModule>
 
 # ── Tipos MIME correctos ─────────────────────────────────────────────────────
