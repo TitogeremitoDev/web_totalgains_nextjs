@@ -4,9 +4,9 @@ import { Instagram, Globe, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
 
 import { softwareApplicationNode } from "@/data/productSchema";
 export const metadata = {
-  title: "Lorena Eses: Nutricionista que ahorra 10h/sem",
+  title: "Lorena Eses: Psiconutricionista que ahorra 10h/sem",
   description:
-    "Lorena Eses, nutricionista online con 36K seguidores, automatizó revisiones y citas con TotalGains. Ahorra más de 10 horas semanales en gestión.",
+    "Lorena Eses, psiconutricionista online con 36K seguidores, automatizó revisiones y citas con TotalGains. Ahorra más de 10 horas semanales en gestión.",
   alternates: {
     canonical: "https://totalgains.es/casos-de-exito/lorena-eses/",
   },
@@ -14,13 +14,13 @@ export const metadata = {
     type: "website",
     title: "Lorena Eses ahorra +10h/semana automatizando con TotalGains",
     description:
-      "Caso real de una nutricionista online que pasó de múltiples Excel a gestionar todo desde una sola plataforma.",
+      "Caso real de una psiconutricionista online que pasó de múltiples Excel a gestionar todo desde una sola plataforma.",
     url: "https://totalgains.es/casos-de-exito/lorena-eses/",
     /* Tarjeta 1200x630 generada para compartir; el avatar real mide 120x120 y
        queda por debajo del mínimo de 200x200 de Facebook: la preview salía
        rota o vacía. El twitter block va explícito porque si no, hereda la
        og-image genérica del layout raíz y no esta. */
-    images: [{ url: "https://totalgains.es/testimonials/og-caso-lorena-eses-2.jpg", width: 1200, height: 630, alt: "Caso de éxito: Lorena Eses, nutricionista, ahorra más de 10 horas semanales con TotalGains" }],
+    images: [{ url: "https://totalgains.es/testimonials/og-caso-lorena-eses-2.jpg", width: 1200, height: 630, alt: "Caso de éxito: Lorena Eses, psiconutricionista, ahorra más de 10 horas semanales con TotalGains" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -112,7 +112,7 @@ export default function CasoLorenaEses() {
           <Image src="/testimonials/lorena-eses.webp" alt="Lorena Eses" width={80} height={80} style={{ borderRadius: "50%", border: "2px solid rgba(250,112,154,0.4)" }} />
           <div>
             <h2 style={{ fontSize: "1.5rem", fontWeight: 800, margin: 0, color: "var(--text-primary)" }}>Lorena Eses</h2>
-            <p style={{ color: "var(--text-secondary)", margin: "4px 0 8px", fontSize: "0.95rem" }}>Entrenadora · Técnica superior en Dietética</p>
+            <p style={{ color: "var(--text-secondary)", margin: "4px 0 8px", fontSize: "0.95rem" }}>Psiconutricionista y entrenadora</p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "6px 16px" }}>
               <a href="https://www.instagram.com/lorenaeses/" target="_blank" rel="noopener noreferrer"
                  style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "0.82rem", color: "var(--primary-light)", textDecoration: "none" }}>
