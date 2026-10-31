@@ -79,6 +79,17 @@ ErrorDocument 404 /404.html
     </FilesMatch>
 </IfModule>
 
+# ── Estado de la oferta para la app (src/app/oferta-web.json) ────────────────
+# La app la lee desde el móvil y desde su web; en desarrollo (localhost) el
+# navegador necesita este permiso. Caché corta: si se cierra la oferta, la app
+# tiene que enterarse enseguida.
+<IfModule mod_headers.c>
+    <Files "oferta-web.json">
+        Header set Access-Control-Allow-Origin "*"
+        Header set Cache-Control "public, max-age=300"
+    </Files>
+</IfModule>
+
 # ── Tipos MIME correctos ─────────────────────────────────────────────────────
 <IfModule mod_mime.c>
     AddType image/webp .webp
