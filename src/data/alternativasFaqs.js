@@ -66,7 +66,7 @@ const ESPECIFICAS = {
         },
         {
             question: "¿TotalGains avisa a mis clientes cuando toca renovar?",
-            answer: "Sí. El sistema avisa al cliente dentro de su app cuando se acerca la renovación, con una segunda vuelta de win-back si no responde. El cobro efectivo lo sigues haciendo por tu canal habitual (transferencia, Bizum, TPV o tu propia cuenta de Stripe): TotalGains no toca tu dinero ni cobra comisión.",
+            answer: "Sí. El sistema avisa al cliente dentro de su app cuando se acerca la renovación, con una segunda vuelta de win-back si no responde. Y puede pagar ahí mismo: conectas tu propia cuenta de Stripe, el dinero va directo a ti y TotalGains no cobra comisión.",
         },
         {
             question: "¿Qué diferencias hay entre TotalGains y Dudapp para escalar?",
@@ -123,7 +123,7 @@ const ESPECIFICAS = {
         },
         {
             question: "¿TotalGains avisa a mis clientes de la renovación?",
-            answer: "Sí. Aviso dentro de la app del cliente cuando toca renovar y segunda vuelta de win-back si no responde en 48 horas. El cobro efectivo lo mantienes por tu canal habitual: TotalGains no cobra comisión sobre tus ventas.",
+            answer: "Sí. Aviso dentro de la app del cliente cuando toca renovar y segunda vuelta de win-back si no responde en 48 horas. El cliente puede pagar desde la app con tu cuenta de Stripe, y TotalGains no cobra comisión sobre tus ventas.",
         },
         {
             question: "¿Qué aporta TotalGains frente a Dudyfit para escalar la cartera?",
@@ -168,7 +168,7 @@ function genericas(name) {
         },
         {
             question: "¿Cobráis comisiones extra por mis ventas?",
-            answer: "No aplicamos comisiones sobre tus ventas. Usas tu propia cuenta de Stripe para los cobros de tus clientes; TotalGains es únicamente la tecnología SaaS que tú contratas.",
+            answer: "No aplicamos comisiones sobre tus ventas. Conectas tu propia cuenta de Stripe y tus clientes te pagan desde la app; el dinero va directo a ti y solo se aplica la tarifa de Stripe.",
         },
         {
             question: `Mis clientes están acostumbrados a ${name}, ¿les costará el cambio?`,

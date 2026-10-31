@@ -206,8 +206,8 @@ const gimnasios = {
             a: 'La de tu centro: logo, nombre y colores, incluso en el email de bienvenida al socio. Puedes ocultar el botón premium en el móvil para que la experiencia sea 100 % tuya.',
         },
         {
-            q: '¿Esto cobra a mis socios automáticamente?',
-            a: 'El sistema gestiona bonos, cuotas y facturación (proforma a factura fiscal, caja y Excel), y avisa al socio en su app cuando le toca renovar, insistiendo si no se registra el pago. El cobro efectivo sigue haciéndose por el canal que ya uses en tu centro.',
+            q: '¿Mis socios pueden pagar desde la app?',
+            a: 'Sí. Conectas la cuenta de Stripe del centro y el socio paga su cuota, su bono o sus pedidos de la tienda desde la app, y cada pago entra como una venta más, con su ticket. El sistema también gestiona bonos, cuotas y facturación (proforma a factura fiscal, caja y Excel) y avisa al socio cuando le toca renovar. Si prefieres cobrar en recepción, lo registras como siempre.',
         },
     ],
 

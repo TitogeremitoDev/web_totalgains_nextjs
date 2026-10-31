@@ -4,8 +4,8 @@
    Tráfico dirigido (QR, bio de Instagram, lead frío). `noindex`: no compite
    con /software-entrenador-personal/, que es la que sí trabaja el buscador.
 
-   ⚠️ Features verificadas contra CHANGELOG.md. Prohibido vender cobros
-   in-app: no existen para el coach autónomo (memoria `no-marketing-cobros`).
+   ⚠️ Features verificadas contra CHANGELOG.md. Cobro dentro de la app: sí,
+   desde el 31-oct-2026, con la cuenta de Stripe del propio entrenador.
    ────────────────────────────────────────────── */
 
 const entrenadores = {

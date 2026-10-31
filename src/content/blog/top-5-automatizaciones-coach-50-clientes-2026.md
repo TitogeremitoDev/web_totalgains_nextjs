@@ -53,7 +53,7 @@ Trabajas 12 horas al día. Tienes 50 clientes activos, tal vez 60 con los interm
 
 ![Coach personal online consolidado de más de 50 clientes trabajando desde su ordenador con las 5 automatizaciones activas](/images/blog/top-5-automatizaciones-hero.webp)
 
-> **Transparencia**: soy Germán Martínez Calvente, fundador de [TotalGains](/sobre-nosotros/). Este artículo describe automatizaciones que **existen y funcionan hoy** en la plataforma. Todo lo que aquí menciono está publicado, activo y usado por coaches reales — nada de promesas de roadmap. Y una regla que aplico siempre: si un coach me pregunta por una automatización específica que TG **aún no tiene resuelta al 100%**, se lo digo abiertamente para que valore otras opciones. En cobros in-app end-to-end, por ejemplo, TG no compite hoy con soluciones especializadas en facturación recurrente automática — así que ese punto no aparece en este top 5. Prefiero un top corto y honesto que un top largo lleno de humo.
+> **Transparencia**: soy Germán Martínez Calvente, fundador de [TotalGains](/sobre-nosotros/). Este artículo describe automatizaciones que **existen y funcionan hoy** en la plataforma. Todo lo que aquí menciono está publicado, activo y usado por coaches reales — nada de promesas de roadmap. Y una regla que aplico siempre: si un coach me pregunta por una automatización específica que TG **aún no tiene resuelta al 100%**, se lo digo abiertamente para que valore otras opciones. Prefiero un top corto y honesto que un top largo lleno de humo.
 
 ---
 
@@ -151,7 +151,7 @@ Con 50 clientes en manual, la comunicación de seguimiento se convierte en tu se
 - El cliente hace su **check-in semanal estructurado** desde un formulario (peso, medidas, fotos, sensaciones, adherencia dieta) que llega ordenado al coach
 - El sistema calcula automáticamente **streaks de asistencia** (rachas de entrenos consecutivos)
 - Alertas al coach cuando un cliente lleva **3+ días sin subir datos** de entreno (no 30 días, no un mes: 3 días) o cuando cae la adherencia a la dieta por debajo de un umbral
-- Sistema de recordatorios de renovación con **win-back automático al cliente** cuando toca renovar y no responde en 48h — el cobro efectivo lo mantienes por tu canal habitual (transferencia, Bizum, TPV o Stripe fuera de la app)
+- Sistema de recordatorios de renovación con **win-back automático al cliente** cuando toca renovar y no responde en 48h — y el cliente paga desde la app con tu cuenta de Stripe
 
 ### Tiempo recuperado
 - Persecución de datos: de **5-7 h/semana** a **0-1 h/semana**

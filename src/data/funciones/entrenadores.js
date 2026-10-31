@@ -7,8 +7,8 @@
    comercial no arregla eso; un catálogo completo y citable, sí.
 
    ⚠️ REGLA DE ESTE FICHERO: cada línea sale de CHANGELOG.md o del código. Si
-   algo no se puede verificar, no se escribe. Nada de cobros automáticos: el
-   sistema AVISA de que toca pagar, el cobro va por el canal del profesional.
+   algo no se puede verificar, no se escribe. Cobro dentro de la app: sí, desde
+   el 31-oct-2026, con la cuenta de Stripe del propio entrenador.
    ────────────────────────────────────────────── */
 
 const entrenadores = {
@@ -446,19 +446,21 @@ const entrenadores = {
                      cuando le toca renovar». Doble error: no es del atleta, y con precios y un
                      plan marcado parece un checkout dentro de la app. German, 15-sep-2026:
                      «ESTO ES UN FALLO GRAVE, RECUERDA QUE AÚN NO TENEMOS PAGOS IN-APP».
-                     Lo que hay es FACTURACIÓN MANUAL: tú registras el pago.
+                     Lo que había entonces era FACTURACIÓN MANUAL. Desde el 31-oct-2026 el
+                     atleta paga en la app (German): los textos ya lo dicen y la captura sigue
+                     siendo la del panel de Facturación, no un checkout.
                      Va sin imagen hasta que llegue la captura del panel de Facturación del
                      entrenador (Suscripciones · Historial de pagos · Actividad, con el botón
                      «Registrar Pago» y los filtros de «Falta este mes» / «Por verificar»).
                      Ver feedback_no_marketing_cobros. */
-                  media: { tipo: 'imagen', src: '/screenshots/coach-facturacion-1760.webp', w: 1760, h: 892, alt: 'Panel de facturación del entrenador en TotalGains, con el botón Registrar Pago en cada cuota y los filtros de quién falta este mes', pie: 'Facturación del entrenador: tú registras cada pago. El filtro te dice quién falta este mes.' } },
+                  media: { tipo: 'imagen', src: '/screenshots/coach-facturacion-1760.webp', w: 1760, h: 892, alt: 'Panel de facturación del entrenador en TotalGains, con el botón Registrar Pago en cada cuota y los filtros de quién falta este mes', pie: 'Facturación del entrenador: los pagos desde la app se apuntan solos y los demás los registras tú. El filtro te dice quién falta este mes.' } },
                 { titulo: 'Altas, citas y avisos', items: [3, 4, 5, 6, 7, 8, 9, 10],
                   media: { tipo: 'video', src: '/video/coach-invita-escritorio.mp4', poster: '/video/coach-invita-escritorio.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Alta de un cliente nuevo desde el panel web del entrenador', pie: 'Dar de alta a un atleta desde el panel.' } },
             ],
             items: [
-                { t: 'Facturación manual, no pasarela', d: 'Tú registras cada pago cuando lo cobras, y la pantalla te da la previsión del mes, lo vencido sin cobrar, el ticket medio y la comparación con el mes anterior, con las cuotas trimestrales y anuales normalizadas a mensual. TotalGains NO cobra a tus atletas: no hay pasarela ni pago dentro de la app.' },
+                { t: 'Cobro dentro de la app', d: 'Conectas tu propia cuenta de Stripe y tus atletas pagan su cuota o su bono desde la app con «Pagar ahora», o activan la cuota automática para que se cobre sola. El dinero va directo a tu cuenta, sin comisión de TotalGains, y cada pago lleva su justificante con tu marca. Lo que cobres por otro canal lo registras tú. La pantalla te da la previsión del mes, lo vencido sin cobrar, el ticket medio y la comparación con el mes anterior, con las cuotas trimestrales y anuales normalizadas a mensual.' },
                 { t: 'Historial de pagos y actividad', d: 'Quién hizo qué y cuándo, guardando el antes y el después de cada modificación. Es lo que resuelve un «a mí me dijiste otro precio». Con filtros de quién falta este mes y qué queda por verificar.' },
-                { t: 'Recordatorios de renovación', d: 'El atleta recibe el aviso en su app cuando le toca renovar, e insiste si el pago no se registra. Cobras por el canal que ya uses (transferencia, Bizum, TPV o lo que tengas montado por tu cuenta) y lo apuntas aquí.' },
+                { t: 'Recordatorios de renovación', d: 'El atleta recibe el aviso en su app cuando le toca renovar, con «Pagar ahora» si cobras por la app, e insiste si el pago no llega. Lo que cobres por Bizum, transferencia o efectivo lo apuntas aquí.' },
                 { t: 'Citas con el atleta', d: 'Propones huecos, el atleta elige y la cita queda en su agenda y en la tuya.' },
                 { t: 'Eventos y avisos programados', d: 'Eventos puntuales o recurrentes con notificación al atleta.' },
                 { t: 'Migración asistida', d: 'Traemos tus atletas, plantillas y planes desde Trainerize, Harbiz, MyPT Hub o tus propios Excel. Lo hacemos nosotros, en español y sin coste.' },
@@ -539,8 +541,8 @@ const entrenadores = {
             a: 'No lo está. El plan gratuito es de 0 euros al mes, permanente, sin tarjeta y sin caducidad, para hasta 5 atletas activos, y lleva las mismas funciones que el plan mayor. No es un periodo de prueba: la prueba de 14 días es opcional y solo aplica a los planes de pago.',
         },
         {
-            q: '¿TotalGains cobra a mis atletas automáticamente?',
-            a: 'TotalGains gestiona tus cuotas y avisa al atleta en su app cuando le toca renovar, e insiste si no se registra el pago. El cobro efectivo se hace por el canal que ya uses en tu negocio. Es una diferencia importante y preferimos decirla claro antes de que contrates.',
+            q: '¿Mis atletas pueden pagarme desde la app?',
+            a: 'Sí. Conectas tu propia cuenta de Stripe y tus atletas pagan su cuota o su bono desde la app con tarjeta, o activan la cuota automática para que se cobre sola cada vez. El dinero va directo a tu cuenta y TotalGains no se queda comisión: solo pagas la tarifa de Stripe. Cada pago genera un justificante con tu marca, y si un atleta prefiere Bizum o transferencia, lo registras a mano como siempre.',
         },
         {
             q: '¿Funciona también para nutricionistas que no programan entreno?',

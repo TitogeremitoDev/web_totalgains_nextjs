@@ -155,7 +155,7 @@ const gimnasios = {
             items: [
                 { t: 'Catálogo de productos', d: 'Nombre, precio con IVA, tipo de IVA por producto, categoría, opciones de talla o sabor, descripción, galería de hasta tres fotos y vídeo.' },
                 { t: 'Venta en mostrador', d: 'Desde Pagos, desde la ficha del socio o desde Caja. Producto del catálogo o producto suelto, cantidad, precio pactado si hace falta y método de pago: efectivo, Bizum, transferencia, TPV u otro. Genera su ticket y entra en caja si fue en efectivo.' },
-                { t: 'Pedidos desde la app del socio', d: 'El socio ve los productos de tu gimnasio, elige talla y cantidad y pide sin tarjeta. A ti te llega un aviso y el pedido aparece en su pestaña, con «listo para recoger», «cobrar y entregar» o rechazar con motivo.' },
+                { t: 'Pedidos desde la app del socio', d: 'El socio ve los productos de tu gimnasio, elige talla y cantidad, pide y lo paga desde la app o al recogerlo. A ti te llega un aviso y el pedido aparece en su pestaña, con «listo para recoger», «cobrar y entregar» o rechazar con motivo.' },
                 { t: 'Código de recogida', d: 'Cada pedido lleva un código de seis caracteres que el socio dice en recepción, con buscador en el panel.' },
                 { t: 'Reservas de stock que caducan solas', d: 'Un pedido retiene su stock durante las horas que configures, avisa al socio y libera el producto si no se recoge.' },
                 { t: 'Stock por talla o sabor', d: 'El stock se lleva por variante y la venta descuenta la talla exacta. El mostrador nunca se bloquea aunque el sistema diga que no queda.' },
@@ -278,7 +278,7 @@ const gimnasios = {
                 { t: 'Cobro manual y retroactivo', d: 'Precio y duración pactados al momento, y cobro de clases ya dadas que no tenían bono.' },
                 { t: 'Caja y arqueo', d: 'Cada movimiento enlazado a su socio, filtros por forma de pago y cuadre de caja.' },
                 { t: 'Facturación', d: 'De proforma a factura fiscal, fecha de emisión elegible, numeración reiniciable y exportación a Excel con numeración correlativa.' },
-                { t: 'Recordatorios de pago', d: 'El socio ve el aviso en su app cuando le toca renovar, el sistema insiste si no se registra el cobro y el socio puede avisar de que ya ha pagado.' },
+                { t: 'Recordatorios de pago', d: 'El socio ve el aviso en su app cuando le toca renovar y, si el centro cobra por la app, paga ahí mismo con «Pagar ahora». El sistema insiste si no llega el pago y el socio puede avisar de que ya ha pagado.' },
                 { t: 'Recordatorio en bloque', d: 'Seleccionas a todos los que deben el mes y mandas el aviso de una vez, en vez de uno por uno.' },
                 { t: 'Pagos adelantados a la vista', d: 'Lo que alguien ha pagado por adelantado cuenta donde tiene que contar y no descuadra el mes.' },
                 { t: 'Devolución distinta de corrección', d: 'Una devolución real y un arreglo de un apunte equivocado no ensucian los mismos números.' },
@@ -426,8 +426,8 @@ const gimnasios = {
             a: 'Sí. Los permisos son por persona: ver todos los clientes, gestionar clientes, gestionar clases, gestionar facturación y gestionar la tienda. Quien lleva la tienda puede vender y reponer sin ver los pagos del centro, y para ese perfil el coste y el margen quedan ocultos.',
         },
         {
-            q: '¿El sistema cobra solo a mis socios?',
-            a: 'El sistema gestiona planes, bonos, cuotas, caja y facturación, y avisa al socio en su app cuando le toca renovar, insistiendo si el pago no se registra. Las cuotas domiciliadas las REGISTRA solas cada mes y tú las verificas contra tu banco, marcando las que te devuelvan. Pero TotalGains no se conecta a tu banco ni mueve dinero: el cobro efectivo se sigue haciendo por los canales que ya usa tu centro.',
+            q: '¿Mis socios pueden pagar desde la app?',
+            a: 'Sí. Conectas la cuenta de Stripe del centro y el socio paga su cuota, su bono o un plan nuevo desde la app, y también sus pedidos de la tienda; cada pago entra como una venta más, con su ticket y en tus números. Tú eliges si el pago en la app es opcional u obligatorio, o si cobras solo en recepción. Las cuotas domiciliadas en tu banco se siguen registrando solas cada mes y las verificas contra tu banco, marcando las que te devuelvan.',
         },
         {
             q: '¿Mis socios mayores van a saber reservar?',
@@ -439,7 +439,8 @@ const gimnasios = {
         },
         /* ⚠️ Salen como schema FAQPage. La de Servicios faltaba desde el 22-sep:
            el área existía pero ninguna pregunta la nombraba, así que no llegaba
-           al JSON-LD. «Se paga en el centro» es literal: no hay pago in-app. */
+           al JSON-LD. «Se paga en el centro» es literal: los Servicios no se pagan en la app
+           (las cuotas, los bonos y los pedidos sí, desde el 31-oct-2026). */
         {
             q: '¿Se pueden cobrar clases sueltas sin bono, como una clase de niños o una sesión de fisioterapia?',
             a: 'Sí, con los Servicios. Creas un servicio con su precio (por ejemplo, 8 € por niño), su horario y su aforo, y el socio lo reserva desde su app indicando cuántos van y sus nombres, sin gastar bono. Se paga en el centro: lo cobras desde la lista de la puerta o desde la cola de pendientes, y genera su ticket. Si eres tú quien cancela la sesión, no paga nadie.',

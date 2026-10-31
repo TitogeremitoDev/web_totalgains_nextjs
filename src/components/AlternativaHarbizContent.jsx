@@ -19,7 +19,7 @@ const faqs = [
     },
     {
         question: "¿Cobráis comisiones por las ventas que hago a mis clientes?",
-        answer: "Cero comisiones: TotalGains no toca tus ingresos ni se mete entre tú y tu cliente. El cobro lo haces por tu canal de siempre (transferencia, Bizum, TPV o tu propio enlace de pago, fuera de la app) y lo registras en la ficha del atleta, que guarda el historial y te avisa de las renovaciones. Dentro de la aplicación todavía no hay pasarela de pago. En Harbiz la integración de pagos está disponible, pero el coste total con marca blanca + nutrición IA + vídeos supera 3× el precio de TotalGains Pro.",
+        answer: "Cero comisiones de TotalGains. Tus atletas te pagan desde la app con tu propia cuenta de Stripe y el dinero va directo a ti; solo se aplica la tarifa de Stripe. Si alguien te paga por Bizum o transferencia, lo registras en su ficha, que guarda el historial y te avisa de las renovaciones. En Harbiz la integración de pagos está disponible, pero el coste total con marca blanca + nutrición IA + vídeos supera 3× el precio de TotalGains Pro.",
     },
     {
         question: "¿Vale la pena Harbiz frente a alternativas en español? Qué dicen las opiniones",

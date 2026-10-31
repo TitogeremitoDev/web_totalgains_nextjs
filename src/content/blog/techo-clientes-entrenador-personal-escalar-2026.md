@@ -112,7 +112,7 @@ Cada pregunta abre una conversación que ocupa contexto mental. Cada respuesta t
 
 ### Techo #3 — Persigues cobros manualmente cada mes
 
-Bizum manual a fin de mes es el techo que menos coach reconoce y el que más quiebra escalabilidad. Perseguir cobros de 20 clientes te lleva entre 3 y 5 horas mensuales entre recordatorios, verificaciones, gestión de retrasos y respuestas a "se me olvidó, ¿me lo mandas otra vez?". Con un sistema de recordatorios automáticos al cliente esas horas bajan drásticamente: **el sistema avisa por ti, tú dejas de perseguir**. El cobro efectivo sigue haciéndose por tu canal habitual (transferencia, Bizum, TPV), pero el "oye ¿me pagaste?" desaparece del día a día.
+Bizum manual a fin de mes es el techo que menos coach reconoce y el que más quiebra escalabilidad. Perseguir cobros de 20 clientes te lleva entre 3 y 5 horas mensuales entre recordatorios, verificaciones, gestión de retrasos y respuestas a "se me olvidó, ¿me lo mandas otra vez?". Con un sistema de recordatorios automáticos al cliente esas horas bajan drásticamente: **el sistema avisa por ti, tú dejas de perseguir**. Y si conectas tu cuenta de Stripe, el cliente paga desde la app en el mismo aviso: el "oye ¿me pagaste?" desaparece del día a día.
 
 Además el churn silencioso es más alto en cobro manual: el cliente que "se olvida" de pagar dos meses seguidos suele estar a punto de irse sin avisar. Sin sistema de recordatorios con win-back, no te enteras hasta que has perdido dos cuotas.
 
@@ -181,7 +181,7 @@ Tiempo semanal recuperado con 25 clientes: **4-6 horas**.
 - **Aviso automático al cliente en su app** cuando toca renovar/cobrar, sin que tú levantes un dedo
 - **Segunda vuelta con mensaje de reengagement** si no responde en 48h — recuperas al que "se olvida" sin sonar pesado
 - **Alerta al coach en el panel** si un cliente supera N días sin pagar → conversación proactiva antes de la baja
-- El **cobro efectivo lo mantienes por tu canal actual** (transferencia, Bizum, TPV o Stripe fuera de la app) — no cambias tu operativa, solo delegas el "chase"
+- El **cliente paga desde la app** con tu cuenta de Stripe (o activa la cuota automática), y lo que te pague por Bizum o transferencia lo sigues apuntando
 
 Bonus: churn silencioso baja de forma significativa porque el cliente que "se olvida" ya no depende de tu memoria; el sistema le pincha por ti, y si aun así no reacciona, tú te enteras en el panel el día 3, no el día 60.
 
@@ -264,7 +264,7 @@ Plan operativo semana a semana:
 
 ### Semana 2 — Automatización de operativa
 
-- Activa los recordatorios de cobro para los 20 clientes actuales (comunicación clara, cero fricción — sigues cobrando por tu canal habitual)
+- Activa los recordatorios de cobro para los 20 clientes actuales y conecta tu cuenta de Stripe para que paguen desde la app
 - Configura la app marca blanca (incluida en tu plan) con tu logo y colores
 - Activa el sistema de check-ins automáticos semanales
 - Cierra los canales de WhatsApp para admin (mantén solo para urgencia real)

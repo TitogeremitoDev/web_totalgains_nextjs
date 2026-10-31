@@ -21,7 +21,7 @@ const features = [
   { icon: <Users size={22} />, title: "Gestión de clientes centralizada", desc: "Todos tus atletas, su historial, objetivos y progreso en un solo lugar. Sin Excel, sin WhatsApp, sin PDFs sueltos por Google Drive." },
   { icon: <LayoutDashboard size={22} />, title: "Panel Coach Insights", desc: "Dashboard con métricas clave: adherencia semanal, progresión de cargas, renovaciones próximas y alertas tempranas de riesgo de baja." },
   { icon: <Bell size={22} />, title: "Seguimiento automatizado", desc: "El cliente registra entreno en 30 segundos, hace check-in semanal estructurado y el sistema te avisa cuando algo se desvía. Cero persecución por WhatsApp." },
-  { icon: <CreditCard size={22} />, title: "Recordatorios de renovación", desc: "El sistema avisa al cliente en su app cuando toca renovar, con win-back automático si no responde en 48h. El cobro efectivo sigue por tu canal habitual." },
+  { icon: <CreditCard size={22} />, title: "Cobros y renovaciones en la app", desc: "El sistema avisa al cliente en su app cuando toca renovar y paga ahí mismo con tu cuenta de Stripe, con win-back automático si no responde en 48h." },
   { icon: <Palette size={22} />, title: "App marca blanca incluida en todos los planes", desc: "Tus clientes descargan una app con tu logo, tus colores y tu nombre. Incluida en todos los planes desde 29,90 €/mes con IVA, sin add-on ni pago único." },
   { icon: <BarChart3 size={22} />, title: "IA generativa de rutinas y dietas", desc: "Menos de 2 minutos por cliente. La IA usa tu propia biblioteca de ejercicios y +240.000 alimentos validados en español. Cero alucinaciones." },
 ];

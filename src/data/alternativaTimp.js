@@ -16,7 +16,7 @@
    tal cual y la cuenta con IVA va en condicional. Antes de tocar un número,
    volver a mirar la fuente y cambiar la fecha.
    Lo de TotalGains sale de productSchema.js (precios) y del inventario de
-   public/llms.txt (funciones). Sin cobro dentro de la app: no prometerlo.
+   public/llms.txt (funciones). Cobro dentro de la app: sí, desde el 31-oct-2026.
    ────────────────────────────────────────────── */
 
 import { PLANES_GYM } from "@/data/productSchema";
@@ -131,6 +131,6 @@ export const TIMP_FAQS = [
     },
     {
         question: "¿Cómo cobro las cuotas con TotalGains?",
-        answer: "Las cuotas, los bonos y las ventas se registran y se facturan en TotalGains, y cobras con lo que ya usas: domiciliación, TPV, Bizum, transferencia o efectivo. TotalGains no se lleva comisión por cobro.",
+        answer: "Tus socios pagan cuotas, bonos y pedidos desde la app con la cuenta de Stripe del centro, y lo que cobres en recepción (domiciliación, TPV, Bizum, transferencia o efectivo) se registra igual. Todo se factura en TotalGains, que no se lleva comisión por cobro.",
     },
 ];

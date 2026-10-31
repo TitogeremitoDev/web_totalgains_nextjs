@@ -7,8 +7,8 @@
    sirve. Un solo objetivo: empezar la prueba.
 
    ⚠️ Todas las features de este fichero están verificadas contra CHANGELOG.md.
-   Nada de cobros in-app (no existen): el sistema AVISA, el cobro va por el
-   canal del profesional. Ver memoria `no-marketing-cobros`.
+   Cobro dentro de la app: sí, desde el 31-oct-2026, con la cuenta de Stripe
+   del propio profesional.
    ────────────────────────────────────────────── */
 
 const nutricionistas = {

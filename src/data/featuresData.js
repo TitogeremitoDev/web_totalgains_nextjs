@@ -63,19 +63,18 @@ export const features = {
         highlight: "Un atleta guiado de forma inmersiva es un atleta que renueva su suscripción mensual.",
         keywords: ["retiene clientes", "feedback motivacional"],
     },
-    /* ⚠️ NO devolver a "Cobros Automáticos". El entrenador autónomo NO tiene
-       cobro in-app: el sistema avisa al atleta y lleva las cuentas, pero el
-       dinero se mueve por el canal del profesional (transferencia, Bizum, TPV).
-       Prometer lo contrario en la home es vender algo que no se puede activar.
-       El cobro domiciliado existe, pero es del vertical GIMNASIO. */
+    /* Cobro dentro de la app: desde el 31-oct-2026 (German) el atleta paga su
+       cuota o su bono en la app con la cuenta de Stripe del propio entrenador,
+       sin comisión de TotalGains. Antes no existía y esta tarjeta solo hablaba
+       de avisos. */
     facturacion: {
         id: "facturacion",
         icon: <CreditCard size={28} color="#4ade80" strokeWidth={2} />,
-        title: "Gestión de pagos y avisos de renovación",
+        title: "Cobros en la app y avisos de renovación",
         subtitle: "Sin perseguir a nadie",
         image: "/carrousel/FACTURACION.webp",
-        description: "Cuotas de cada atleta, previsión del mes, vencidos sin cobrar y ticket medio en un panel, con el historial de cada cambio guardado. Cuando a un atleta le toca renovar, recibe el aviso en su app.",
-        highlight: "TotalGains avisa y lleva la cuenta. El cobro lo sigues haciendo por donde ya cobras.",
+        description: "Cuotas de cada atleta, previsión del mes, vencidos sin cobrar y ticket medio en un panel, con el historial de cada cambio guardado. Cuando a un atleta le toca renovar, recibe el aviso en su app y paga ahí mismo.",
+        highlight: "El atleta paga desde la app y el dinero va directo a tu cuenta de Stripe, sin comisión de TotalGains.",
         keywords: ["gestión de pagos", "avisos de renovación", "control de cuotas"],
     },
     progresion: {
