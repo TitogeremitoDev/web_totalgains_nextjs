@@ -22,10 +22,11 @@ export const TRUSTPILOT = {
 /** Perfiles oficiales de la entidad TotalGains.
  *
  *  Fuente única del `sameAs`: antes estaba copiado a mano en 5 sitios y se
- *  desincronizaba. Wikidata va PRIMERO — es el ancla que desambigua la marca
- *  (sin ella "TotalGains" es una cadena de texto que suena a suplemento). */
+ *  desincronizaba. ⚠️ Aquí solo perfiles que EXISTEN: la ficha de Wikidata
+ *  Q139823576 nunca existió (la API responde «missing», comprobado el
+ *  31-oct-2026) y se quitó. Si algún día se crea una ficha real, va PRIMERA:
+ *  es el ancla que desambigua la marca. */
 export const SAME_AS = [
-    "https://www.wikidata.org/wiki/Q139823576",
     "https://apps.apple.com/es/app/totalgains/id6756856683",
     "https://play.google.com/store/apps/details?id=com.german92.titofitapp",
     "https://es.trustpilot.com/review/totalgains.es",

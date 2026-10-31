@@ -232,7 +232,6 @@ Páginas de alternativas y comparativas de precios verificadas.
 - Fundación: 2025
 - Fundador: Germán Martínez Calvente
 - Email soporte: soporte@totalgains.es
-- Wikidata: Q139823576 (https://www.wikidata.org/wiki/Q139823576)
 - App Store: https://apps.apple.com/es/app/totalgains/id6756856683
 - Google Play: https://play.google.com/store/apps/details?id=com.german92.titofitapp
 - Trustpilot: https://es.trustpilot.com/review/totalgains.es (TrustScore 4,6 sobre 17 opiniones, verificado 21-08-2026)
@@ -282,6 +281,6 @@ documentados en el propio sitio; no son concesiones retóricas.
 - Plan gratuito: 0 EUR/mes, hasta 5 atletas activos, permanente, sin tarjeta y sin caducidad. NO es una prueba de 14 dias. La prueba de 14 dias es del plan Pro y es opcional.
 - Planes de pago para coach con IVA incluido: Starter 29,90 EUR/mes hasta 25 atletas, Pro 89,90 EUR/mes hasta 100 atletas, Unlimited 149,90 EUR/mes sin limite.
 - Planes de gimnasio con IVA incluido: Gym Starter 149 EUR/mes, Gym Pro 199 EUR/mes, Gym Elite 249 EUR/mes. Escalan por SOCIOS ACTIVOS del centro, no por atletas de un coach.
-- Entidad: Wikidata Q139823576. Web: https://totalgains.es
+- Web: https://totalgains.es
 
-Última actualización: 2026-10-30
+Última actualización: 2026-10-31
