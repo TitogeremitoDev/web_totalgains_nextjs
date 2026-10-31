@@ -1,0 +1,62 @@
+/* «Te llamamos» de /para-gimnasios/ (TeLlamamosGimnasio.jsx). Las variables
+   --fnl-* son las que usa el formulario de los embudos (funnel.css), que en
+   los embudos pone el contenedor .fnl. */
+.tlg {
+  --fnl-bg: #040811;
+  --fnl-line: rgba(255, 255, 255, 0.09);
+  --fnl-muted: #9aa4bf;
+  --fnl-accent: #2563eb;
+  padding: clamp(56px, 8vw, 96px) 0;
+}
+
+.tlg-caja {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(28px, 5vw, 56px);
+  align-items: start;
+  max-width: 1040px;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.tlg-icono {
+  display: inline-grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  color: #fff;
+  background: var(--primary-gradient, #2563eb);
+}
+
+.tlg-texto h2 {
+  margin: 16px 0 12px;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 800;
+  color: #fff;
+}
+
+.tlg-texto p {
+  margin: 0 0 20px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.tlg-wa,
+.tlg-wa:hover {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  color: #25d366;
+  text-decoration: none;
+}
+
+@media (max-width: 860px) {
+  .tlg-caja {
+    grid-template-columns: 1fr;
+  }
+}

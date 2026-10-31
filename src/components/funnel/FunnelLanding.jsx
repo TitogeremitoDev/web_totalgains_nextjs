@@ -354,7 +354,7 @@ function Faq({ items, onOpen }) {
    web. Si falla, NO se traga el lead en silencio: se enseña el email para que
    la persona pueda escribir igualmente.
    ────────────────────────────────────────────── */
-function DemoForm({ data, srcRef, onSent }) {
+export function DemoForm({ data, srcRef, onSent }) {
     const [form, setForm] = useState({ nombre: "", email: "", telefono: "", negocio: "", volumen: "", mensaje: "" });
     const [consent, setConsent] = useState(false);
     const [status, setStatus] = useState("idle");
@@ -489,7 +489,7 @@ function DemoForm({ data, srcRef, onSent }) {
             <button type="submit" className="fnl-btn fnl-btn-primary fnl-btn-lg fnl-btn-block" disabled={status === "sending"}>
                 {status === "sending"
                     ? <><Loader2 size={19} className="fnl-spin" /> Enviando…</>
-                    : <><Send size={18} /> {data.isDemo ? "Pedir mi demo" : "Que me lo enseñen"}</>}
+                    : <><Send size={18} /> {data.textoBoton || (data.isDemo ? "Pedir mi demo" : "Que me lo enseñen")}</>}
             </button>
         </form>
     );
