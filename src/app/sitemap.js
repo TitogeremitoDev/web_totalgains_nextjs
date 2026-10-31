@@ -7,7 +7,7 @@ export default function sitemap() {
     const posts = getAllPosts();
 
     return [
-        { url: `${baseUrl}/`, lastModified: '2026-09-26' },
+        { url: `${baseUrl}/`, lastModified: '2026-10-31' },
         { url: `${baseUrl}/precios/`, lastModified: '2026-08-22' },
         { url: `${baseUrl}/verifactu/`, lastModified: '2026-10-02' },
         { url: `${baseUrl}/verifactu/gimnasios/`, lastModified: '2026-10-03' },
@@ -26,7 +26,8 @@ export default function sitemap() {
         { url: `${baseUrl}/alternativas/virtuagym/`, lastModified: '2026-09-27' },
         { url: `${baseUrl}/alternativas/timp/`, lastModified: '2026-09-27' },
         { url: `${baseUrl}/software-entrenador-personal/`, lastModified: '2026-08-22' },
-        { url: `${baseUrl}/para-gimnasios/`, lastModified: '2026-08-22' },
+        { url: `${baseUrl}/para-gimnasios/`, lastModified: '2026-10-31' },
+        { url: `${baseUrl}/invita-un-entrenador/`, lastModified: '2026-10-31' },
         { url: `${baseUrl}/ia-entrenador-personal/`, lastModified: '2026-08-22' },
         { url: `${baseUrl}/app-marca-blanca-entrenador-personal/`, lastModified: '2026-08-22' },
         { url: `${baseUrl}/base-datos-alimentos-fitness/`, lastModified: '2026-09-26' },

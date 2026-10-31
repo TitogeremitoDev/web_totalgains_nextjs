@@ -78,6 +78,7 @@ const Footer = () => {
                                 <li><Link href="/#app-showcase" prefetch={false}>Ver App</Link></li>
                                 <li><Link href="/precios/" prefetch={false}>Precios</Link></li>
                                 <li><Link href="/para-gimnasios/" prefetch={false}>Para gimnasios</Link></li>
+                                <li><Link href="/invita-un-entrenador/" prefetch={false}>Invita a un entrenador</Link></li>
                             </ul>
                         </div>
 

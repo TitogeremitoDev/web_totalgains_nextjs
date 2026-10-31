@@ -1,0 +1,516 @@
+/* /invita-un-entrenador/ */
+.inv {
+  padding: clamp(104px, 12vw, 140px) 0 96px;
+  display: grid;
+  gap: clamp(56px, 8vw, 96px);
+}
+
+.inv-cejilla {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 14px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--primary-light);
+}
+
+.inv-centro {
+  display: flex;
+  justify-content: center;
+}
+
+/* ── Héroe ── */
+.inv-heroe {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(32px, 5vw, 64px);
+  align-items: center;
+  max-width: 1120px;
+}
+
+.inv-heroe h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.2rem, 5vw, 3.4rem);
+  font-weight: 800;
+  line-height: 1.05;
+}
+
+.inv-entrada {
+  margin: 0 0 26px;
+  font-size: 1.12rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.inv-premios {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 26px;
+}
+
+.inv-premios div {
+  display: grid;
+  gap: 2px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: rgba(102, 126, 234, 0.1);
+  border: 1px solid rgba(102, 126, 234, 0.28);
+}
+
+.inv-premios strong {
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  font-weight: 800;
+  color: #fff;
+}
+
+.inv-premios div:first-child strong {
+  color: #34d399;
+}
+
+.inv-premios span {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.inv-botones {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 20px;
+}
+
+.inv-secundario,
+.inv-secundario:hover {
+  font-weight: 700;
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.inv-heroe-video {
+  justify-self: center;
+  width: min(420px, 100%);
+  border-radius: 28px;
+  overflow: hidden;
+  background: #080d1a;
+  box-shadow: 0 50px 100px -30px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.08), 0 0 90px -20px rgba(59, 91, 219, 0.6);
+}
+
+.inv-heroe-video .fn-media-lazy,
+.inv-video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+}
+
+/* ── Calculadora ── */
+.inv-calc-zona {
+  max-width: 920px;
+}
+
+.calc {
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: 22px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  gap: 22px;
+}
+
+.calc-cab {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.calc-cab h3 {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.calc-icono {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  color: #fff;
+  background: var(--primary-gradient, #667eea);
+}
+
+.calc-cuerpo {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.calc-columna {
+  display: grid;
+  gap: 14px;
+  align-content: start;
+}
+
+.calc-quien {
+  margin: 0;
+  font-weight: 800;
+  color: #fff;
+}
+
+.calc-grupo {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.calc-grupo legend {
+  margin-bottom: 8px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.calc-opciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.calc-op {
+  position: relative;
+  padding: 9px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.calc-op input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.calc-op.es-activa {
+  color: #fff;
+  border-color: transparent;
+  background: var(--primary-gradient, #667eea);
+}
+
+.calc-op:has(input:focus-visible) {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+
+.calc-resultado {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.calc-resultado div {
+  display: grid;
+  gap: 2px;
+  padding: 18px;
+  border-radius: 16px;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.calc-resultado strong {
+  font-size: clamp(1.8rem, 5vw, 2.4rem);
+  font-weight: 800;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+}
+
+.calc-resultado div:last-child strong {
+  color: #34d399;
+}
+
+.calc-resultado span {
+  color: var(--text-secondary);
+}
+
+.calc-nota {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ── Foto «Entre entrenadores» (IA) ── */
+.inv-foto {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  gap: clamp(28px, 5vw, 56px);
+  align-items: center;
+  max-width: 1120px;
+}
+
+.inv-foto-img,
+.inv-final-img {
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.inv-foto-img img,
+.inv-final-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.inv-foto-texto h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.6rem, 3.6vw, 2.2rem);
+  line-height: 1.15;
+}
+
+.inv-foto-texto > p:not(.inv-cejilla) {
+  margin: 0 0 18px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.inv-foto-texto ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.inv-foto-texto li {
+  display: flex;
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.inv-foto-texto li svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: #34d399;
+}
+
+/* ── Pasos ── */
+.inv-pasos {
+  max-width: 1000px;
+}
+
+.inv-pasos h2,
+.inv-faq h2,
+.inv-final h2 {
+  margin: 0 0 32px;
+  text-align: center;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+
+.inv-pasos ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(28px, 5vw, 48px);
+}
+
+.inv-paso {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 300px);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: center;
+}
+
+.inv-paso:nth-child(even) .inv-paso-texto {
+  order: 2;
+}
+
+.inv-num {
+  display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 12px;
+  border-radius: 50%;
+  font-weight: 900;
+  color: #fff;
+  background: var(--primary-gradient, #667eea);
+}
+
+.inv-paso h3 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.inv-paso h3 svg {
+  color: var(--primary-light);
+}
+
+.inv-paso p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.inv-paso-movil {
+  justify-self: center;
+  width: min(300px, 100%);
+  padding: 8px;
+  border-radius: 36px;
+  background: linear-gradient(145deg, #1d1b33, #0a0918);
+  box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.85), 0 0 0 1px rgba(255, 255, 255, 0.08) inset;
+}
+
+.inv-paso-movil img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+}
+
+.inv-sello {
+  margin: 28px 0 0;
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+/* ── Preguntas ── */
+.inv-faq {
+  max-width: 760px;
+}
+
+.inv-faq-lista {
+  display: grid;
+  gap: 10px;
+}
+
+.inv-faq details {
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.inv-faq summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  font-weight: 700;
+  cursor: pointer;
+  list-style: none;
+}
+
+.inv-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.inv-faq details[open] summary svg {
+  transform: rotate(180deg);
+}
+
+.inv-faq details p {
+  margin: 0;
+  padding: 0 18px 18px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+/* ── Cierre ── */
+.inv-final {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(28px, 5vw, 56px);
+  align-items: center;
+  max-width: 1040px;
+}
+
+.inv-final h2 {
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.inv-final ul {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.inv-final li {
+  display: flex;
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.inv-final li svg {
+  flex-shrink: 0;
+  margin-top: 4px;
+  color: #34d399;
+}
+
+@media (max-width: 860px) {
+  .inv-heroe {
+    grid-template-columns: 1fr;
+  }
+  .inv-heroe-video {
+    order: -1;
+    width: min(360px, 90%);
+  }
+  .inv-calc-zona .calc-cuerpo {
+    grid-template-columns: 1fr;
+  }
+  .inv-paso {
+    grid-template-columns: 1fr;
+  }
+  .inv-paso:nth-child(even) .inv-paso-texto {
+    order: 0;
+  }
+  .inv-paso-movil {
+    width: min(280px, 80%);
+  }
+  .inv-foto,
+  .inv-final {
+    grid-template-columns: 1fr;
+  }
+  .inv-final-texto {
+    text-align: center;
+  }
+  .inv-final h2 {
+    text-align: center;
+  }
+  .inv-final ul {
+    justify-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .inv-premios,
+  .calc-resultado {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inv-faq details[open] summary svg {
+    transform: none;
+  }
+}
