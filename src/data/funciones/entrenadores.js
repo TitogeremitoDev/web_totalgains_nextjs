@@ -452,8 +452,10 @@ const entrenadores = {
                      Va sin imagen hasta que llegue la captura del panel de Facturación del
                      entrenador (Suscripciones · Historial de pagos · Actividad, con el botón
                      «Registrar Pago» y los filtros de «Falta este mes» / «Por verificar»).
-                     Ver feedback_no_marketing_cobros. */
-                  media: { tipo: 'imagen', src: '/screenshots/coach-facturacion-1760.webp', w: 1760, h: 892, alt: 'Panel de facturación del entrenador en TotalGains, con el botón Registrar Pago en cada cuota y los filtros de quién falta este mes', pie: 'Facturación del entrenador: los pagos desde la app se apuntan solos y los demás los registras tú. El filtro te dice quién falta este mes.' } },
+                     Ver feedback_no_marketing_cobros.
+                     1-nov-2026: lleva el vídeo del lanzamiento «Cobros» (capturas reales con datos
+                     inventados y Stripe de prueba; es el mismo que ve el entrenador en la app). */
+                  media: { tipo: 'video', src: '/video/coach-cobros.mp4', poster: '/video/coach-cobros.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Cobrar a los clientes desde la app en TotalGains: el entrenador conecta su cuenta de Stripe en Facturación › Cobros, enciende el pago, el cliente paga desde el móvil y el cobro entra solo en Facturación con su justificante', pie: 'Conectas tu cuenta de Stripe, tus clientes pagan desde el móvil y cada pago entra solo en tu Facturación.' } },
                 { titulo: 'Altas, citas y avisos', items: [3, 4, 5, 6, 7, 8, 9, 10],
                   media: { tipo: 'video', src: '/video/coach-invita-escritorio.mp4', poster: '/video/coach-invita-escritorio.webp', pw: 1200, ph: 676, w: 1280, h: 720, alt: 'Alta de un cliente nuevo desde el panel web del entrenador', pie: 'Dar de alta a un atleta desde el panel.' } },
             ],
