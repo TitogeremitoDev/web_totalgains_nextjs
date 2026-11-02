@@ -153,47 +153,11 @@ export default function OpinionesClientes() {
       // con 6 valoraciones y la página pierde las estrellas: «La reseña tiene
       // varias puntuaciones agregadas» en Search Console, 16-oct-2026.
       softwareApplicationNode(),
-      {
-        "@type": "ItemList",
-        "@id": "https://totalgains.es/opiniones-clientes/#reviews-list",
-        name: "Reseñas verificadas de TotalGains",
-        numberOfItems: trustpilotReviews.length + casosExito.length,
-        itemListOrder: "https://schema.org/ItemListUnordered",
-        itemListElement: [
-          ...trustpilotReviews.map((r, i) => ({
-            "@type": "ListItem",
-            position: i + 1,
-            item: {
-              "@type": "Review",
-              author: { "@type": "Person", name: r.author },
-              name: r.title,
-              reviewRating: { "@type": "Rating", ratingValue: r.rating.toString(), bestRating: "5", worstRating: "1" },
-              datePublished: r.date,
-              reviewBody: r.excerpt,
-              publisher: {
-                "@type": "Organization",
-                name: "Trustpilot",
-                url: "https://es.trustpilot.com/review/totalgains.es",
-              },
-              itemReviewed: { "@id": "https://totalgains.es/#software" },
-            },
-          })),
-          ...casosExito.map((c, i) => ({
-            "@type": "ListItem",
-            position: trustpilotReviews.length + i + 1,
-            item: {
-              "@type": "Review",
-              author: { "@type": "Person", name: c.name },
-              name: `Caso de éxito: ${c.name}`,
-              reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-              datePublished: c.date,
-              reviewBody: c.quote,
-              publisher: { "@type": "Organization", name: "TotalGains", url: "https://totalgains.es/" },
-              itemReviewed: { "@id": "https://totalgains.es/#software" },
-            },
-          })),
-        ],
-      },
+      /* Sin la lista de 6 `Review` (2-nov-2026). Al quitar la nota media de
+         Trustpilot del producto (31-oct), las 6 reseñas apuntando al mismo
+         #software se quedaron sin aggregateRating y Search Console dio error
+         crítico «Varias reseñas sin el objeto aggregateRating». Son opiniones
+         de Trustpilot y de casos de éxito: se siguen viendo en la página. */
       {
         "@type": "FAQPage",
         "@id": "https://totalgains.es/opiniones-clientes/#faqs",
