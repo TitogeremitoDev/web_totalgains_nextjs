@@ -20,7 +20,7 @@ const videoSchema = {
   description: "Presentación de TotalGains en 90 segundos: rutinas y dietas con IA revisadas por el entrenador, el seguimiento de los clientes en un solo sitio y la app con tu marca.",
   thumbnailUrl: "https://totalgains.es/video/presentacion-totalgains.webp",
   contentUrl: "https://totalgains.es/video/presentacion-totalgains.mp4",
-  uploadDate: "2026-10-31",
+  uploadDate: "2026-10-31T00:00:00+01:00", // con hora y zona: Search Console avisó (2-nov) de que sin ellas no vale
   duration: "PT1M32S",
   inLanguage: "es",
   publisher: { "@id": "https://totalgains.es/#organization" },

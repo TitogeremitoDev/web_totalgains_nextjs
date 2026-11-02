@@ -88,10 +88,11 @@ export default function SoftwareEntrenadorPersonal() {
         url: "https://totalgains.es/software-entrenador-personal/",
         offers: ofertasCoach(),
         aggregateRating: aggregateRatingNode(),
-        review: [
-          { "@type": "Review", author: { "@type": "Person", name: "Nacho Pulido" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" }, reviewBody: "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.", datePublished: "2025-03-01", itemReviewed: { "@id": "https://totalgains.es/#software" } },
-          { "@type": "Review", author: { "@type": "Person", name: "Lorena Eses" }, reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" }, reviewBody: "He automatizado revisiones, citas y seguimiento. Ahorro más de 10 horas semanales de gestión.", datePublished: "2025-01-01", itemReviewed: { "@id": "https://totalgains.es/#software" } },
-        ],
+        /* Sin `review` (2-nov-2026): Search Console dio error crítico «Varias
+           reseñas sin el objeto aggregateRating» al quitar la nota media de
+           Trustpilot (31-oct). Son opiniones de Trustpilot o de clientes: se
+           siguen viendo en la página, pero marcarlas como reseñas propias es
+           lo que Google no admite. */
         inLanguage: "es",
         publisher: { "@id": "https://totalgains.es/#organization" },
       },

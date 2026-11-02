@@ -62,64 +62,11 @@ export default function Home() {
            /para-gimnasios/, donde sí son visibles en el HTML estático. */
         offers: ofertasCoach(),
         aggregateRating: aggregateRatingNode(),
-        review: [
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "RJ Trainer" },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-            datePublished: "2026-08-12",
-            name: "Una app excelente para entrenadores",
-            reviewBody:
-              "Una app excelente para dar nuestro servicio. Ofrece todo lo que un entrenador puede necesitar para tener en una sola aplicación todos los datos de tus clientes, alimentación, entrenamientos, seguimiento, control del ciclo menstrual para las propias clientas, formularios de valoración... Hemos probado varias y sin duda esta es la mejor y la más completa. Añadir que Germán, desarrollador de la app, siempre está atento y dispuesto a solucionar cualquier mínimo error que pueda surgir muy rápido y adaptar tu experiencia con la app al máximo. De nuevo, muy recomendable.",
-            publisher: {
-              "@type": "Organization",
-              name: "Trustpilot",
-              url: "https://es.trustpilot.com/review/totalgains.es",
-            },
-          },
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "Alosquita" },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-            datePublished: "2026-05-12",
-            name: "Aplicación profesional, mis entrenamientos ahora son una fantasía",
-            reviewBody:
-              "Me encanta usar esta aplicación es súper intuitiva, fácil de usar y ahorro un montón de tiempo en mis entrenamientos es una fantasía. Mi entrenadora puede gestionarme mis entrenamientos, cambiar ejercicios, mi dieta, consultar mi progreso de forma automática. Estoy encantadísima!",
-            publisher: {
-              "@type": "Organization",
-              name: "Trustpilot",
-              url: "https://es.trustpilot.com/review/totalgains.es",
-            },
-          },
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "Macarena H" },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-            datePublished: "2026-05-12",
-            name: "Ha conseguido que adelgace",
-            reviewBody:
-              "Ha conseguido que adelgace progresivamente he pasado de 120kg a 100 en menos de 3 meses. Con una buena alimentación y esta aplicación maravillosa puedes conseguir unos resultados inmejorables.",
-            publisher: {
-              "@type": "Organization",
-              name: "Trustpilot",
-              url: "https://es.trustpilot.com/review/totalgains.es",
-            },
-          },
-          {
-            "@type": "Review",
-            author: { "@type": "Person", name: "Ana García Carrero" },
-            reviewRating: { "@type": "Rating", ratingValue: "5", bestRating: "5", worstRating: "1" },
-            datePublished: "2026-05-12",
-            name: "Esta aplicación me ha cambiado la vida",
-            reviewBody:
-              "Esta aplicación me ha cambiado la vida. He cogido hábitos increíbles que no tenía y una disciplina que me faltaba. Lo recomendaría a todo el mundo independientemente de su edad y situación personal.",
-            publisher: {
-              "@type": "Organization",
-              name: "Trustpilot",
-              url: "https://es.trustpilot.com/review/totalgains.es",
-            },
-          },
-        ],
+        /* Sin `review` (2-nov-2026): Search Console dio error crítico «Varias
+           reseñas sin el objeto aggregateRating» al quitar la nota media de
+           Trustpilot (31-oct). Son opiniones de Trustpilot o de clientes: se
+           siguen viendo en la página, pero marcarlas como reseñas propias es
+           lo que Google no admite. */
         publisher: {
           "@id": "https://totalgains.es/#organization",
         },
