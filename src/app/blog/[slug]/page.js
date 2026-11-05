@@ -58,6 +58,11 @@ import LocalRankingFactors from "@/components/LocalRankingFactors";
 import ReviewHabitsBars from "@/components/ReviewHabitsBars";
 import CitableBioComparison from "@/components/CitableBioComparison";
 import FourWeekFindabilityPlan from "@/components/FourWeekFindabilityPlan";
+import ContestPrepTimeline from "@/components/ContestPrepTimeline";
+import ContestPrepRateScale from "@/components/ContestPrepRateScale";
+import ContestPrepMacros from "@/components/ContestPrepMacros";
+import PeakWeekEvidence from "@/components/PeakWeekEvidence";
+import EliteGoalsMap from "@/components/EliteGoalsMap";
 import OfertaWebBlogCard from "@/components/OfertaWebBlogCard";
 import OfertaWebTicket from "@/components/OfertaWebTicket";
 
@@ -126,6 +131,11 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__review_habits__"></div>', Component: ReviewHabitsBars, gate: () => true },
   { marker: '<div class="__citable_bio__"></div>', Component: CitableBioComparison, gate: () => true },
   { marker: '<div class="__four_week_findability__"></div>', Component: FourWeekFindabilityPlan, gate: () => true },
+  { marker: '<div class="__contest_prep_timeline__"></div>', Component: ContestPrepTimeline, gate: () => true },
+  { marker: '<div class="__contest_prep_rate__"></div>', Component: ContestPrepRateScale, gate: () => true },
+  { marker: '<div class="__contest_prep_macros__"></div>', Component: ContestPrepMacros, gate: () => true },
+  { marker: '<div class="__peak_week_evidence__"></div>', Component: PeakWeekEvidence, gate: () => true },
+  { marker: '<div class="__elite_goals_map__"></div>', Component: EliteGoalsMap, gate: () => true },
   // Oferta de noviembre de 2026 (src/data/ofertaWeb.js): se esconde sola el 30-nov.
   { marker: '<div class="__web_offer__"></div>', Component: OfertaWebBlogCard, gate: () => true },
 ];

@@ -300,6 +300,31 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/preparacion-culturismo-natural-atleta-competicion
+*Generado 2026-11-05 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `preparacion-natural-hero.webp` | eye-level por detrás | atleta en el tercio izquierdo, tarima al fondo a la derecha | medium | entre bastidores de un teatro | culturista de espaldas de cintura para arriba, cabeza baja, telones negros y tarima vacía | contraluz cálido de focos con borde coral y bruma | los segundos antes de salir |
+| `preparacion-natural-entreno.webp` | a ras de suelo | barra en el tercio derecho, sala vacía al fondo a la izquierda | wide | gimnasio vacío | barra olímpica cargada con discos negros SIN números | fría y azul de amanecer por ventanas altas, tinte lavanda | disciplina en silencio |
+| `preparacion-natural-peak.webp` | frontal a altura de mesa | tres objetos en fila, casi simétrica | close-up | mesa de roble claro en una cocina blanca | cuenco de arroz, vaso de agua y platillo de sal | lateral suave de mañana, sombras lavanda | lo que no hay que tocar |
+| `preparacion-natural-despues.webp` | 3/4 elevado | plato en el tercio izquierdo, trofeo detrás a la derecha | medium | cocina con encimera oscura | plato casero de arroz, pollo y ensalada, trofeo dorado SIN grabar y paño coral | cálida de atardecer por la ventana | el día después |
+| `preparacion-natural-app-temporada.webp` | captura de app | ventana vertical | UI escritorio | Programa › Planificar la temporada | línea de fases y rutina y dieta por fase | n/a (captura real) | producto real |
+| `preparacion-natural-app-corte-peso.webp` | captura de app | recorte horizontal | UI escritorio | Elite › Corte de peso | último peso, objetivo, lo que falta y aviso «Ritmo cómodo» | n/a (captura real) | producto real |
+| `preparacion-natural-app-peso.webp` | captura de app | tarjeta | UI escritorio | Elite › Resumen | gráfica «Peso hacia la tarima» con la media de 7 días | n/a (captura real) | producto real |
+| `preparacion-natural-app-vitales.webp` | captura de app | recorte horizontal | UI escritorio | Elite › Vitales | pulso, tensión y glucosa con dos gráficas | n/a (captura real) | producto real |
+| `preparacion-natural-app-citas.webp` | captura de app | tarjeta | UI escritorio | Elite › Resumen | próximas citas de la preparación | n/a (captura real) | producto real |
+| `preparacion-natural-app-checklist.webp` | captura de app | tarjeta | UI escritorio | Elite › Competición | checklist con el contador de sesiones de posing | n/a (captura real) | producto real |
+| `preparacion-natural-app-resumen.webp` | captura de app | recorte horizontal | UI escritorio | Elite › Resumen | cuenta atrás, fase, línea de temporada y cuatro tarjetas | n/a (captura real) | producto real |
+| `preparacion-natural-app-tablero.webp` | captura de app | pantalla sin barra lateral | UI escritorio | menú Competición | tablero de atletas y temporada por meses | n/a (captura real) | producto real |
+| `preparacion-natural-app-mi-preparacion.webp` | captura de app | vertical de móvil | UI móvil | Mi preparación del atleta | cuenta atrás, fase y citas de la semana | n/a (captura real) | producto real |
+
+**Origen de las 9 capturas reales:** `~/Escritorio/hyperframes-test/totalgains-stand-pca/media/e4-*.png` (las del stand de la PCA, sin federación) y `~/.cache/tg-e2e/elite-hoy/kit/shots/` (temporada y vitales), recortadas con `~/.cache/tg-blog/preparacion-natural/recortes.py`. Todos los nombres son inventados. ⛔ Se corta siempre la tira de pestañas del panel Elite, para que no se vea «Ayudas»; `s1-coach-resumen` y `s1-coach-competicion` no se usan porque salen «IFBB España» y el bloque de ayudas.
+
+**Notas:** el hero necesitó dos intentos: en el primero salió un hombre con sudadera que no parecía culturista; se arregló pidiendo «shirtless, seen only from the waist up» y la espalda definida. Las otras tres salieron al primer intento, generadas con `~/.cache/tg-blog/preparacion-natural/gen.py`. Octava vez que funciona pedir los soportes **en blanco** (trofeo sin grabar, discos sin números). Conceptos nuevos reutilizables: entre bastidores, trío de arroz, agua y sal, trofeo en la cocina.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -371,6 +396,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-11-05** — Añadido `blog/preparacion-culturismo-natural-atleta-competicion` (4 imágenes generadas, conceptos nuevos, y 9 capturas reales del Modo Elite).
 
 **2026-10-30** — Añadido `blog/seo-geo-entrenador-personal-conseguir-clientes` (4 imágenes generadas, todas conceptos nuevos).
 
