@@ -345,6 +345,50 @@ const entrenadores = {
             ],
         },
         {
+            id: 'medico',
+            accent: '#0e7490', // MEDICO.azul, el azul clínico de toda la sección en la app
+            nombre: 'Sección médica',
+            railNombre: 'Médico',
+            resumen: 'Para quien trabaja la salud de sus clientes: consultas, analíticas e indicaciones, dentro de la misma app.',
+            nota: 'TotalGains no diagnostica ni receta: ordena la información y te avisa. La decisión es siempre del profesional.',
+            /* Área creada el 9-nov-2026 (German: «mete este vídeo en una nueva
+               sección médica para entrenadores»). Comprobada contra GitHub main
+               (app 02f2a674, servidor 3dcd8122) para el entrenador SIN gimnasio:
+               se activa en Ajustes (trainerProfile.seccionMedica), las alertas le
+               llegan a él (medicoAlertService) y lo médico solo lo abre el titular
+               del cliente (puedeVerMedico). Sin límite por plan.
+
+               ⛔ FUERA a propósito: la lectura de analíticas y el «Resumen de 30
+               segundos» con IA, aunque salgan en el vídeo. Exigen
+               info_user.aiMedicalAnalysisConsent y hoy solo lo pone el alta de un
+               gimnasio (gymClientController): un cliente personal no puede darlo.
+               Si se añade esa pantalla, sumarlas aquí. Fuera también las notas
+               por semana, que piden gymId.
+
+               El vídeo está hecho para gimnasios y lo dice en todas las escenas:
+               de ahí el pie. Fichero propio porque gym-medico.mp4 es el tutorial
+               del gimnasio dentro de la app (HelpVideoModal). */
+            bloques: [
+                { titulo: 'La consulta y su historia de salud', items: [0, 1, 2, 3, 4, 5],
+                  media: { tipo: 'video', src: '/video/coach-medico.mp4', poster: '/video/coach-medico.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Sección médica de TotalGains: la consulta por secciones, la pestaña Médico con vitales, los nueve pilares de salud, las analíticas, las indicaciones y las alertas', pie: 'Grabado en un gimnasio con médico. Si trabajas por tu cuenta, la activas en Ajustes y la llevas tú.' } },
+                { titulo: 'Lo que le pides, y lo que te avisa', items: [6, 7, 8, 9, 10, 11], media: null },
+            ],
+            items: [
+                { t: 'La consulta, por teléfono o en persona', d: 'Marcas un formulario como médico y lo rellenas tú con el cliente desde su ficha, sección a sección.' },
+                { t: 'Sus respuestas, a su ficha si lo confirmas', d: 'Te enseña qué cambiaría (altura, alergias, medicación…) y lo aplicas solo si estás de acuerdo.' },
+                { t: 'Una pestaña «Médico» en su seguimiento', d: 'Vitales, analíticas, medicación, indicaciones, historia clínica y consultas, en el mismo sitio.' },
+                { t: 'Nueve pilares de salud, con nota y tendencia', d: 'Digestión, sueño, energía, hormonas, estrés y cuatro más. Salen de la consulta y de lo que apunta en la app; sin datos, no se pone nota.' },
+                { t: 'Vitales con el umbral de cada cliente', d: 'Tensión, glucosa y pulso con sus propios límites. Los apunta él en su check-in o tú en la consulta.' },
+                { t: 'Historia clínica y línea de tiempo', d: 'Antecedentes y hábitos, quién cambió qué, y consultas, indicaciones y analíticas en orden.' },
+                { t: 'Indicaciones con recordatorio', d: 'Un suplemento, una prueba, un hábito o apuntarse la tensión. Se lo recuerda con el ritmo que marques, y nunca de noche.' },
+                { t: 'Analíticas en PDF, privadas', d: 'Las subes tú, o tu cliente cuando se las pides. Solo se abren con un enlace que caduca a los 10 minutos.' },
+                { t: 'Tu cliente solo ve lo que le pides', d: 'Lo marca con «Ya lo hice» en su seguimiento. La tensión o la glucosa salen en su check-in solo si se las pides, y tus notas y consultas no las ve.' },
+                { t: 'Las alertas te llegan a ti', d: 'Una tensión fuera de su umbral o una indicación que pasa de fecha saltan en tu centro de alertas. Lo más serio, además, como notificación.' },
+                { t: 'Lo pendiente, de un vistazo', d: 'Un panel con los clientes que tienen algo que mirar, las alertas abiertas y las consultas de la semana.' },
+                { t: 'La enciendes tú, y solo la abres tú', d: 'Viene apagada y tus clientes no notan nada hasta que la activas en Ajustes. Ningún otro entrenador puede abrir lo médico de tu cliente.' },
+            ],
+        },
+        {
             id: 'marca',
             accent: '#7c3aed', // branding (#8b5cf6 en la app; este tono de la misma familia es el que llega a 4,5:1 con texto blanco, el otro se quedaba en 4,38)
             nombre: 'Tu app y tu marca',
@@ -576,6 +620,10 @@ const entrenadores = {
         {
             q: '¿Puedo poner mis propias fotos en los ejercicios?',
             a: 'Sí. Además del buscador de imágenes, subes la foto desde la galería o la haces con la cámara del móvil, y queda marcada como tuya. Las fotos del iPhone valen tal cual.',
+        },
+        {
+            q: '¿TotalGains tiene una sección médica para llevar la salud de mis clientes?',
+            a: 'Sí, y se activa en Ajustes, porque viene apagada. Incluye consultas con formulario médico, una pestaña «Médico» con vitales, analíticas en PDF, medicación, indicaciones con recordatorio e historia clínica, y las alertas te llegan a ti. No diagnostica ni receta: ordena la información y la decisión es del profesional.',
         },
     ],
 };
