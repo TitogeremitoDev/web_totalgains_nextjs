@@ -367,17 +367,23 @@ const entrenadores = {
 
                El vídeo está hecho para gimnasios y lo dice en todas las escenas:
                de ahí el pie. Fichero propio porque gym-medico.mp4 es el tutorial
-               del gimnasio dentro de la app (HelpVideoModal). */
+               del gimnasio dentro de la app (HelpVideoModal).
+
+               ⛔ Los 9 PILARES de salud NO se nombran aquí, ni en el texto ni en
+               el vídeo ni en su portada (German, 9-nov-2026: «es una cosa ÚNICA de
+               Líderes, no pueden aparecerle a NADIE más»). En la app solo los ve
+               el gimnasio que está en la lista del servidor (MedicoRollout.
+               pilaresGymIds); un entrenador por su cuenta no los tiene. El vídeo
+               es la versión sin pilares del 9-nov (escena 05 = Vitales). */
             bloques: [
-                { titulo: 'La consulta y su historia de salud', items: [0, 1, 2, 3, 4, 5],
-                  media: { tipo: 'video', src: '/video/coach-medico.mp4', poster: '/video/coach-medico.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Sección médica de TotalGains: la consulta por secciones, la pestaña Médico con vitales, los nueve pilares de salud, las analíticas, las indicaciones y las alertas', pie: 'Grabado en un gimnasio con médico. Si trabajas por tu cuenta, la activas en Ajustes y la llevas tú.' } },
-                { titulo: 'Lo que le pides, y lo que te avisa', items: [6, 7, 8, 9, 10, 11], media: null },
+                { titulo: 'La consulta y su historia de salud', items: [0, 1, 2, 3, 4],
+                  media: { tipo: 'video', src: '/video/coach-medico.mp4', poster: '/video/coach-medico.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Sección médica de TotalGains: la consulta por secciones, la pestaña Médico con vitales, las analíticas, las indicaciones y las alertas', pie: 'Grabado en un gimnasio con médico. Si trabajas por tu cuenta, la activas en Ajustes y la llevas tú.' } },
+                { titulo: 'Lo que le pides, y lo que te avisa', items: [5, 6, 7, 8, 9, 10], media: null },
             ],
             items: [
                 { t: 'La consulta, por teléfono o en persona', d: 'Marcas un formulario como médico y lo rellenas tú con el cliente desde su ficha, sección a sección.' },
                 { t: 'Sus respuestas, a su ficha si lo confirmas', d: 'Te enseña qué cambiaría (altura, alergias, medicación…) y lo aplicas solo si estás de acuerdo.' },
                 { t: 'Una pestaña «Médico» en su seguimiento', d: 'Vitales, analíticas, medicación, indicaciones, historia clínica y consultas, en el mismo sitio.' },
-                { t: 'Nueve pilares de salud, con nota y tendencia', d: 'Digestión, sueño, energía, hormonas, estrés y cuatro más. Salen de la consulta y de lo que apunta en la app; sin datos, no se pone nota.' },
                 { t: 'Vitales con el umbral de cada cliente', d: 'Tensión, glucosa y pulso con sus propios límites. Los apunta él en su check-in o tú en la consulta.' },
                 { t: 'Historia clínica y línea de tiempo', d: 'Antecedentes y hábitos, quién cambió qué, y consultas, indicaciones y analíticas en orden.' },
                 { t: 'Indicaciones con recordatorio', d: 'Un suplemento, una prueba, un hábito o apuntarse la tensión. Se lo recuerda con el ritmo que marques, y nunca de noche.' },
