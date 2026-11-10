@@ -10,6 +10,11 @@ import './Privacy.css';
  * (art. 9) — y esta app trata peso, lesiones, alergias, fotos corporales y
  * ciclo menstrual. Redactada por IA sobre los hechos reales del producto;
  * pendiente de revisión por asesor si German quiere el sello profesional.
+ *
+ * 10-11-2026: la IA usa también Anthropic (Claude) desde el 30-oct; se añaden
+ * Upstash y Sentry (los dos en la UE) y que servidores y base de datos están en
+ * Fráncfort. Misma lista que el Anexo II del contrato de encargo para centros
+ * (PLANES/proteccion-datos-mr). Si cambia un proveedor, cambiar los dos.
  */
 
 const Privacy = () => {
@@ -17,7 +22,7 @@ const Privacy = () => {
         <div className="legal-page">
             <div className="container">
                 <h1>Política de Privacidad</h1>
-                <p className="last-updated">Última actualización: 31 de octubre de 2026</p>
+                <p className="last-updated">Última actualización: 10 de noviembre de 2026</p>
 
                 <section className="legal-section">
                     <h2>1. Quién es el responsable de tus datos</h2>
@@ -82,11 +87,13 @@ const Privacy = () => {
                             la función correspondiente, y que puedes retirar en cualquier momento borrando esos datos o tu cuenta.
                         </li>
                         <li>
-                            <strong>Generar rutinas y dietas con IA:</strong> cuando tu profesional (o tú) usa el generador,
-                            los datos necesarios del perfil se envían al proveedor de IA (Google, modelos Gemini), que actúa
-                            como encargado conforme a sus condiciones de servicio empresariales y no los utiliza para
-                            entrenar sus modelos generales — base legal: la misma del servicio (contrato + consentimiento
-                            explícito para los datos de salud implicados).
+                            <strong>Funciones de inteligencia artificial</strong> (por ejemplo, generar una rutina o una dieta,
+                            redactar un texto o resumir un seguimiento): cuando tu profesional (o tú) usa una de estas funciones,
+                            los datos necesarios se envían al proveedor de IA (Google, modelos Gemini, o Anthropic, modelos
+                            Claude), que actúa como encargado conforme a sus condiciones de servicio para empresas y no los
+                            utiliza para entrenar sus modelos. Los datos médicos solo se envían si has dado tu consentimiento
+                            expreso — base legal: la misma del servicio (contrato + consentimiento explícito para los datos
+                            de salud implicados).
                         </li>
                         <li>
                             <strong>Facturar y cumplir obligaciones fiscales</strong> — base legal: <em>obligación legal</em>
@@ -124,9 +131,9 @@ const Privacy = () => {
                     <ul>
                         <li><strong>Tu profesional</strong> (entrenador, nutricionista o gimnasio): ve tu progreso, fotos, vídeos y mensajes — es la esencia del servicio</li>
                         <li><strong>Pagos y tiendas:</strong> Stripe, PayPal, Apple App Store, Google Play</li>
-                        <li><strong>Infraestructura:</strong> proveedores de alojamiento y base de datos gestionada (Koyeb, MongoDB Atlas) y red de entrega y almacenamiento de archivos (Cloudflare)</li>
+                        <li><strong>Infraestructura:</strong> alojamiento y base de datos gestionada (Koyeb y MongoDB Atlas, en la Unión Europea, Fráncfort), memoria temporal de apoyo (Upstash, en la Unión Europea), registro de errores técnicos (Sentry, en la Unión Europea) y red de entrega y almacenamiento de archivos (Cloudflare)</li>
                         <li><strong>Correo transaccional:</strong> Resend (emails de la app, como recuperación de contraseña, y los correos de las guías y de las reservas de esta web) y EmailJS (envío del formulario de contacto de esta web)</li>
-                        <li><strong>IA generativa:</strong> Google (modelos Gemini), para las funciones de generación de rutinas y dietas</li>
+                        <li><strong>IA generativa:</strong> Google (modelos Gemini) y Anthropic (modelos Claude), para las funciones de inteligencia artificial</li>
                         <li><strong>Notificaciones push:</strong> Expo, Firebase Cloud Messaging (Google) y APNs (Apple)</li>
                         <li><strong>Inicio de sesión:</strong> Google Sign-In y Apple Sign-In, solo si eliges usarlos</li>
                         <li><strong>Analítica web con consentimiento:</strong> Google Analytics 4 y Microsoft Clarity (ver sección de cookies)</li>
@@ -137,7 +144,7 @@ const Privacy = () => {
                 <section className="legal-section">
                     <h2>6. Transferencias internacionales</h2>
                     <p>
-                        Algunos de estos proveedores (por ejemplo Stripe, Google, Apple, Cloudflare, Resend o EmailJS)
+                        Algunos de estos proveedores (por ejemplo Stripe, Google, Anthropic, Apple, Cloudflare, Resend o EmailJS)
                         pueden tratar datos en Estados Unidos u otros países fuera del Espacio Económico Europeo.
                         Cuando eso ocurre, la transferencia se ampara en el <strong>Marco de Privacidad de Datos
                         UE-EE.&nbsp;UU. (Data Privacy Framework)</strong> si el proveedor está adherido o, en su defecto,
