@@ -374,10 +374,17 @@ const entrenadores = {
                Líderes, no pueden aparecerle a NADIE más»). En la app solo los ve
                el gimnasio que está en la lista del servidor (MedicoRollout.
                pilaresGymIds); un entrenador por su cuenta no los tiene. El vídeo
-               es la versión sin pilares del 9-nov (escena 05 = Vitales). */
+               es la versión sin pilares del 9-nov (escena 05 = Vitales).
+
+               🧭 10-nov-2026 (German: «el vídeo de marketing para la web»): el
+               vídeo pasa a ser el reel de la Sección médica 2 (vertical, 30 s,
+               proyecto hyperframes totalgains-medico2-marketing, sin pilares). Sale
+               con el «sube» de la Sección médica 2: enseña pantallas de la 1.4.4.
+               Enseña el informe del periodo con IA, que pide el permiso del
+               paciente (hoy solo lo da el alta de un gimnasio): de ahí el pie. */
             bloques: [
                 { titulo: 'La consulta y su historia de salud', items: [0, 1, 2, 3, 4],
-                  media: { tipo: 'video', src: '/video/coach-medico.mp4', poster: '/video/coach-medico.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Sección médica de TotalGains: la consulta por secciones, la pestaña Médico con vitales, las analíticas, las indicaciones y las alertas', pie: 'Grabado en un gimnasio con médico. Si trabajas por tu cuenta, la activas en Ajustes y la llevas tú.' } },
+                  media: { tipo: 'video', src: '/video/coach-medico-reel.mp4', poster: '/video/coach-medico-reel.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Sección médica de TotalGains: un aviso de tensión con su gráfica y su rango, resuelto con una nota, el control del periodo en semáforo y el informe del periodo', pie: 'Grabado en un gimnasio con médico. Si trabajas por tu cuenta, la activas en Ajustes y la llevas tú; el informe con IA, de momento, solo en gimnasios.' } },
                 { titulo: 'Lo que le pides, y lo que te avisa', items: [5, 6, 7, 8, 9, 10], media: null },
             ],
             items: [
