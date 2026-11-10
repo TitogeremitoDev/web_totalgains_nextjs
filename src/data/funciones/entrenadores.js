@@ -248,6 +248,38 @@ const entrenadores = {
             ],
         },
         {
+            id: 'elite',
+            accent: '#a16207', // el dorado de Elite (menú «Competición», #D4AF37) oscurecido para que el texto blanco llegue a 4,5:1
+            nombre: 'Competición · Modo Elite',
+            railNombre: 'Competición',
+            resumen: 'Para quien prepara atletas para competir: toda su preparación a la vista, y a pantalla grande en el ordenador.',
+            nota: 'Las analíticas las lee la IA cuando pulsas «Analizar»: es información, no un diagnóstico.',
+            /* Área creada el 10-nov-2026 (German: «uno más tutorial para los tutoriales y otro más animado y conciso para la
+               web»). Cada línea sale de las novedades publicadas del Modo Elite (CHANGELOG / src/data/changelog.js de la app:
+               «Modo Elite renovado» 1.4.1 y «Modo Elite a pantalla grande» 1.4.2) y de las pantallas de la app (capturas reales
+               del vídeo, kit ~/.cache/tg-e2e/elite-video). Vídeo: reel vertical de 28,5 s, proyecto hyperframes
+               totalgains-elite-marketing; el tutorial largo (coach-elite.mp4) es el de la app.
+
+               ⛔ FUERA a propósito: las ayudas (la pestaña «Ayudas» y su porcentaje de tomas). Tampoco salen en los vídeos. */
+            bloques: [
+                { titulo: 'Tus atletas y su temporada', items: [0, 1, 6],
+                  media: { tipo: 'video', src: '/video/coach-elite-reel.mp4', poster: '/video/coach-elite-reel.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Modo Elite de TotalGains en el ordenador: la temporada de todos los atletas, su peso hacia la tarima, el mapa de vitales, las analíticas por sistemas y las citas y la checklist hasta el stage', pie: 'El Modo Elite en el ordenador, con capturas reales de la app y atletas de ejemplo.' } },
+                { titulo: 'Cada parte de su preparación', items: [2, 3, 4, 5], media: null },
+                { titulo: 'Y tu atleta, en su móvil', items: [7, 8], media: null },
+            ],
+            items: [
+                { t: 'Todos tus atletas en una mesa', d: 'En el menú Competición: cuántos compiten, la próxima competición, quién está en peak week y las analíticas por analizar. Debajo, la temporada con las fases de cada uno hasta su stage y la agenda de los próximos 14 días.' },
+                { t: 'Su preparación, en una pantalla', d: 'Su panel Elite abre en el Resumen: la competición y la cuenta atrás, la fase, su peso hacia la tarima con el ritmo que necesita, su salud de los últimos 14 días, sus próximas citas, sus analíticas y su checklist.' },
+                { t: 'Citas, checklist y corte de peso', d: 'Las citas en un calendario, la checklist de lo que tiene que tener listo y el corte de peso con su ritmo. Cuando pasa el campeonato, lo cierras con su puesto y tus notas, y se queda en su historial.' },
+                { t: 'Vitales y glucosa, día a día', d: 'Pulso, tensión, glucosa, sueño, energía, ánimo y hambre en un mapa de casillas, un día por casilla. Y la glucosa en ayunas y después de comer, juntas, con la respuesta a cada comida.' },
+                { t: 'Sus analíticas, de tres formas', d: 'Por sistemas del cuerpo, en un informe entero con la lectura de la IA y lo que ha cambiado al lado, o la evolución de cada marcador en todas sus fechas.' },
+                { t: 'Electrolitos con seis medidores', d: 'Sodio, potasio, magnesio, calcio, fósforo y zinc, cada uno con su rango y su evolución.' },
+                { t: 'La temporada en tu planificación', d: 'Sus fases y su campeonato salen en su Programa. Con «Planificar la temporada» dejas puesta de una vez la rutina y la dieta de cada fase: acumulación, definición y peak week.' },
+                { t: '«Mi preparación» en su móvil', d: 'Tu atleta ve la cuenta atrás hasta su competición y su fase, sus citas de la semana, lo que tiene que tener listo y su peso hacia la tarima.' },
+                { t: 'Avisos de sus citas, a su hora', d: 'Le avisamos de las citas que le pones, la víspera y, las que tienen hora, dos horas antes. Nunca de madrugada. Lo activas por atleta desde Clientes, en el ⋮ › «Convertir a Elite».' },
+            ],
+        },
+        {
             id: 'retencion',
             accent: '#ef4444', // progress y los avisos de riesgo
             nombre: 'Retención y avisos',
