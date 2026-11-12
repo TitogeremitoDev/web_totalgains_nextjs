@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Apple, Search, Zap, Globe, Shield, BarChart3 } from "lucide-react";
 
 import { ofertasCoach, aggregateRatingNode } from "@/data/productSchema";
+import { planesResumen } from "@/data/planesCoach";
 export const metadata = {
   title: "+240.000 Alimentos para Entrenadores Personales",
   description:
@@ -97,11 +98,7 @@ const faqs = [
   },
 ];
 
-const pricingPlans = [
-  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["App marca blanca incluida", "Base de +240.000 alimentos", "IA generativa incluida", "Migración asistida"] },
-  { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 clientes activos", extras: ["Todo lo del Starter", "App marca blanca incluida", "Coach Insights + retención IA"], highlight: true },
-  { name: "Unlimited", price: "149,90 €/mes", incl: "Clientes ilimitados", extras: ["Todo lo del Pro", "Multi-coach", "Prioridad soporte"] },
-];
+const pricingPlans = planesResumen("clientes");
 
 const testimonials = [
   { name: "Lorena Eses", handle: "@lorenaeses", role: "Nutricionista Online", quote: "La tranquilidad de saber que está todo automatizado y la ganancia de tiempo al poder delegar en la app la agenda, las citas y las revisiones quincenales. Más de 10 horas semanales ahorradas.", result: "10+ h/sem ahorradas, 28K seguidores", href: "/casos-de-exito/lorena-eses/" },

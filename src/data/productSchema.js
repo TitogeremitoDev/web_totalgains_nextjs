@@ -51,14 +51,14 @@ export const PLAN_FREE = {
     name: "TotalGains Gratuito",
     price: "0",
     description:
-        "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. Incluye las mismas funciones que los planes de pago: app de marca blanca, IA de rutinas y dietas y +240.000 alimentos en español. Lo único que cambia entre planes es el número de atletas.",
+        "Hasta 5 atletas activos de por vida, sin tarjeta de crédito ni caducidad. Incluye las mismas funciones que los planes de pago: app de marca blanca, cobros dentro de la app, IA de rutinas y dietas y +240.000 alimentos en español. Lo único que cambia entre planes es el número de atletas.",
 };
 
 /** Planes de coach autónomo. Precios con IVA incluido. Escalan por ATLETAS. */
 export const PLANES_COACH = [
-    { id: "starter", name: "TotalGains Starter", price: "29.90", description: "Hasta 25 clientes activos, IA generativa y app marca blanca incluidas" },
-    { id: "pro", name: "TotalGains Pro", price: "89.90", description: "Hasta 100 clientes activos, IA generativa y app marca blanca incluidas" },
-    { id: "unlimited", name: "TotalGains Unlimited", price: "149.90", description: "Clientes ilimitados, IA generativa y app marca blanca incluidas" },
+    { id: "starter", name: "TotalGains Starter", price: "29.90", description: "Hasta 25 clientes activos. IA generativa, app marca blanca y cobros dentro de la app incluidos, como en todos los planes" },
+    { id: "pro", name: "TotalGains Pro", price: "89.90", description: "Hasta 100 clientes activos. IA generativa, app marca blanca y cobros dentro de la app incluidos, como en todos los planes" },
+    { id: "unlimited", name: "TotalGains Unlimited", price: "149.90", description: "Clientes ilimitados. IA generativa, app marca blanca y cobros dentro de la app incluidos, como en todos los planes" },
 ];
 
 /* ⚠️ 149,90 € (coach Unlimited) y 149 € (Gym Starter) se parecen pero NO son lo
@@ -122,7 +122,7 @@ export function softwareApplicationNode({ description, id = "https://totalgains.
         image: "https://totalgains.es/og-image.jpg",
         description:
             description ||
-            "Software para entrenadores personales en español: gestión de atletas, rutinas y dietas con IA, app marca blanca incluida en todos los planes y base de +240.000 alimentos.",
+            "Software para entrenadores personales en español: gestión de atletas, rutinas y dietas con IA, app marca blanca y cobros dentro de la app incluidos en todos los planes, también en el gratuito, y base de +240.000 alimentos.",
         ...(featureList && featureList.length ? { featureList } : {}),
         offers: ofertasCoach(),
         aggregateRating: aggregateRatingNode(),

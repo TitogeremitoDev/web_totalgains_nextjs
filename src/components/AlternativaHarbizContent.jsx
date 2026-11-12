@@ -16,7 +16,7 @@ const faqs = [
     },
     {
         question: "¿Por qué TotalGains es mejor alternativa a Harbiz para entrenadores en España?",
-        answer: "TotalGains incluye IA que genera rutinas y dietas con tu propia base de datos, app marca blanca incluida en todos los planes (desde 29,90 €/mes), sistema de retención asistida con recordatorios de renovación al cliente y soporte en español. Harbiz cobra Personaliza tu app, Nutri AI y Biblioteca de Vídeos como add-ons separados, lo que para funcionalidad equivalente eleva el coste a ~313 €/mes con IVA (verificado mayo 2026).",
+        answer: "TotalGains incluye IA que genera rutinas y dietas con tu propia base de datos, app marca blanca incluida en todos los planes (también en el gratuito), cobros dentro de la app con recordatorios de renovación al cliente y soporte en español. Harbiz cobra Personaliza tu app, Nutri AI y Biblioteca de Vídeos como add-ons separados, lo que para funcionalidad equivalente eleva el coste a ~313 €/mes con IVA (verificado mayo 2026).",
     },
     {
         question: "¿Cobráis comisiones por las ventas que hago a mis clientes?",

@@ -104,7 +104,7 @@ const ESPECIFICAS = {
         },
         {
             question: "¿Necesito contratar módulos aparte?",
-            answer: "No. Gestión de clientes, rutinas, nutrición, seguimiento, app marca blanca y recordatorios de renovación entran en el plan, sin módulos sueltos. PTminder comercializa parte de su funcionalidad como add-ons y factura en dólares, lo que hace menos predecible el coste final para un autónomo en España.",
+            answer: "No. Gestión de clientes, rutinas, nutrición, seguimiento, app marca blanca y cobros dentro de la app con recordatorios de renovación entran en todos los planes, también en el gratuito, sin módulos sueltos. PTminder comercializa parte de su funcionalidad como add-ons y factura en dólares, lo que hace menos predecible el coste final para un autónomo en España.",
         },
         {
             question: "¿Qué diferencias objetivas hay entre ambas?",

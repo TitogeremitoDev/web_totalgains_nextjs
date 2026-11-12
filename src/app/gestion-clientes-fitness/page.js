@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Users, FileText, CreditCard, Bell, BarChart3, Shield } from "lucide-react";
 
 import { ofertasCoach, aggregateRatingNode } from "@/data/productSchema";
+import { planesResumen } from "@/data/planesCoach";
 export const metadata = {
   title: "Gestión de Clientes Fitness para Entrenadores",
   description:
@@ -46,11 +47,7 @@ const faqs = [
   { q: "¿Puedo probar TotalGains sin compromiso?", a: "Sí. 14 días de prueba gratuita sin tarjeta de crédito. Configuras tu cuenta, migras a 3-5 clientes de muestra, generas rutinas con IA y decides si el flujo te encaja. Sin permanencia ni cláusulas de mínima duración; puedes cancelar desde el panel en cualquier momento." },
 ];
 
-const pricingPlans = [
-  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["App marca blanca incluida", "IA generativa incluida", "+240.000 alimentos", "Migración asistida"] },
-  { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 clientes activos", extras: ["Todo lo del Starter", "App marca blanca incluida", "Coach Insights + retención IA"], highlight: true },
-  { name: "Unlimited", price: "149,90 €/mes", incl: "Clientes ilimitados", extras: ["Todo lo del Pro", "Multi-coach", "Prioridad soporte"] },
-];
+const pricingPlans = planesResumen("clientes");
 
 const testimonials = [
   { name: "Nacho Pulido", handle: "@puli.trainer", role: "Entrenador de Fuerza & Resistencia", quote: "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.", result: "15 → 40+ clientes, 8-10h/sem ahorradas", href: "/casos-de-exito/nacho-pulido/" },

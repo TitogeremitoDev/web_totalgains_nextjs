@@ -17,7 +17,7 @@ export const HOME_FAQS = [
     },
     {
         question: '¿Qué es TotalGains y cómo funciona como software para entrenadores personales?',
-        answer: 'TotalGains es una plataforma de gestión deportiva todo-en-uno. Centraliza la gestión de atletas, creación de rutinas con IA, planes nutricionales, seguimiento de progreso y recordatorios de renovación al cliente. Funciona en Android, iOS y Web, y cada entrenador obtiene su propia app de fitness personalizada para sus clientes.'
+        answer: 'TotalGains es una plataforma de gestión deportiva todo-en-uno. Centraliza la gestión de atletas, creación de rutinas con IA, planes nutricionales, seguimiento de progreso y cobros dentro de la app con recordatorios de renovación al cliente. Funciona en Android, iOS y Web, y cada entrenador obtiene su propia app de fitness personalizada para sus clientes.'
     },
     {
         question: '¿Cuánto cuesta el software de entrenamiento TotalGains?',
@@ -58,5 +58,13 @@ export const HOME_FAQS = [
     {
         question: '¿Cómo contacto con el soporte técnico de TotalGains?',
         answer: 'Puedes contactarnos a través del formulario en esta página, por email a soporte@totalgains.es o desde la app. Los planes Pro y Unlimited tienen soporte prioritario con respuesta en menos de 24 horas.'
+    },
+    {
+        question: '¿La app con mi marca va incluida en todos los planes?',
+        answer: 'Sí. La app con tu logo, tus colores y tu nombre va incluida en todos los planes de entrenador, también en el gratuito (hasta 5 atletas). No es un extra de los planes Pro o Unlimited ni un add-on: entre planes solo cambian el número de atletas y el soporte.'
+    },
+    {
+        question: '¿Puedo cobrar a mis clientes dentro de la app?',
+        answer: 'Sí. Conectas tu propia cuenta de Stripe y tu atleta paga su cuota o su bono desde la app con «Pagar ahora», o activa la cuota automática. El dinero va directo a tu cuenta y TotalGains no se queda comisión (solo la tarifa de Stripe). Lo que cobres por Bizum, transferencia o efectivo lo apuntas tú. Va en todos los planes, también en el gratuito.'
     }
 ];

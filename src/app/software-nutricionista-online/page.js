@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Utensils, Calendar, Bell, FileText, BarChart3, Shield } from "lucide-react";
 
 import { ofertasCoach, aggregateRatingNode } from "@/data/productSchema";
+import { planesResumen } from "@/data/planesCoach";
 export const metadata = {
   title: { absolute: "Software para Nutricionistas: programa de dietas con IA" },
   description:
@@ -55,11 +56,7 @@ const faqs = [
   { q: "¿Cómo ha ido con Lorena Eses, la nutricionista del caso de éxito?", a: "Lorena Eses (@lorenaeses, más de 28K seguidores) documenta el proceso completo. Antes gestionaba con diferentes Excel incompatibles entre sí. Con TotalGains automatizó revisiones quincenales, agenda de citas y seguimiento de progreso. El ROI fue inmediato: el coste mensual de la herramienta se recupera en horas ahorradas la primera semana. Ahora dedica ese tiempo a mejorar la calidad de sus planes en vez de a admin operativo." },
 ];
 
-const pricingPlans = [
-  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 pacientes activos", extras: ["App marca blanca incluida", "+240.000 alimentos", "IA generativa de dietas", "Migración asistida"] },
-  { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 pacientes activos", extras: ["Todo lo del Starter", "App marca blanca incluida", "Coach Insights + retención IA"], highlight: true },
-  { name: "Unlimited", price: "149,90 €/mes", incl: "Pacientes ilimitados", extras: ["Todo lo del Pro", "Multi-equipo", "Prioridad soporte"] },
-];
+const pricingPlans = planesResumen("pacientes");
 
 const testimonials = [
   { name: "Lorena Eses", handle: "@lorenaeses", role: "Nutricionista Online", quote: "La tranquilidad de saber que está todo automatizado y la ganancia de tiempo al poder delegar en la app la agenda, las citas y las revisiones quincenales. Más de 10 horas semanales ahorradas.", result: "10+ h/sem ahorradas, 28K seguidores", href: "/casos-de-exito/lorena-eses/" },

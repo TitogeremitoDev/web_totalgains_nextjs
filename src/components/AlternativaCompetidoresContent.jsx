@@ -64,7 +64,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
             features: [
                 { feature: "IA integrada", tg: "Rutinas y dietas generadas con IA", bg: "IA no promocionada en su oferta pública" },
                 { feature: "Base de alimentos", tg: "Base personalizable con +240.000 alimentos", bg: "Base estándar" },
-                { feature: "Recordatorios de renovación", tg: "Avisos automáticos al cliente + win-back", bg: "Seguimiento básico" },
+                { feature: "Recordatorios de renovación", tg: "Avisos automáticos al cliente + win-back; paga dentro de la app", bg: "Seguimiento básico" },
                 { feature: "App marca blanca", tg: "App con tu logo y colores (todos los planes)", bg: "App con branding del proveedor" },
                 { feature: "Módulo resistencia/cardio", tg: "Integrado con fuerza — carrera, bici, natación", bg: "Enfoque principal en fuerza" },
                 { feature: "Migración asistida", tg: "Incluida por soporte humano en español", bg: "Onboarding disponible" }
@@ -103,7 +103,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
             features: [
                 { feature: "IA integrada", tg: "Rutinas y dietas generadas con IA avanzada", bg: "IA no promocionada en su oferta pública" },
                 { feature: "App marca blanca", tg: "App con tu logo y colores en iOS y Android (todos los planes)", bg: "Opciones de personalización variables" },
-                { feature: "Recordatorios de renovación", tg: "Avisos automáticos al cliente en su app + win-back", bg: "Seguimiento básico" },
+                { feature: "Recordatorios de renovación", tg: "Avisos automáticos al cliente en su app + win-back; paga dentro de la app", bg: "Seguimiento básico" },
                 { feature: "Base de alimentos", tg: "Base propia con +240.000 alimentos validados en español", bg: "Base estándar" },
                 { feature: "Soporte en español", tg: "Equipo en España, respuesta en menos de 24h", bg: "Soporte disponible" },
                 { feature: "Migración asistida", tg: "Incluida por soporte humano en todos los planes", bg: "Onboarding básico" }

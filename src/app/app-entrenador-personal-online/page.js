@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Smartphone, Apple, Globe, Bell, MessageSquare, TrendingUp } from "lucide-react";
 
 import { ofertasCoach, aggregateRatingNode } from "@/data/productSchema";
+import { planesResumen } from "@/data/planesCoach";
 export const metadata = {
   title: { absolute: "App para Entrenadores Personales Online: 5 atletas gratis" },
   description:
@@ -41,15 +42,11 @@ const faqs = [
   { q: "¿Funciona sin conexión?", a: "Las rutinas del día se pueden consultar sin conexión desde la app móvil. Los datos se sincronizan al recuperar la conexión. La app está diseñada para uso en el gimnasio con conectividad limitada: el cliente puede completar el entrenamiento offline y los datos se suben automáticamente cuando vuelve a tener red." },
   { q: "¿Cómo interactúan mi app y el panel web?", a: "El coach usa el panel web (https://totalgains.es/app/login) desde cualquier navegador para gestionar la cartera, generar rutinas con IA, revisar check-ins semanales y responder mensajes. El cliente usa la app móvil (iOS/Android) para consultar rutina del día, registrar entreno en 30 segundos, subir fotos de progreso y chatear con el coach. Todo se sincroniza en tiempo real. También hay app coach nativa iOS/Android para gestión desde el móvil sin necesidad de ordenador." },
   { q: "¿Qué diferencia esta app de una web app disfrazada de app?", a: "Es app nativa real, no una PWA ni un WebView disfrazado. Publicada en App Store y Google Play con tu identidad, con notificaciones push nativas, gestos táctiles nativos y rendimiento comparable al de una app propia. Los coaches que vienen de Trainerize o Harbiz reportan una fluidez notablemente superior, especialmente en dispositivos Android antiguos donde las PWAs suelen renquear." },
-  { q: "¿La app marca blanca va incluida en mi plan o se paga aparte?", a: "Va incluida en todos los planes, también en el Starter de 29,90 €/mes con IVA. No hay add-ons ni pago único de publicación: la app que llega a App Store y Google Play con tu logo, tus colores y tu nombre es la misma en Starter, Pro y Unlimited. Lo único que cambia entre planes es el número de atletas activos (25, 100 o ilimitados) y el nivel de soporte — nunca las funciones." },
+  { q: "¿La app marca blanca va incluida en mi plan o se paga aparte?", a: "Va incluida en todos los planes, también en el gratuito (hasta 5 atletas) y en el Starter de 29,90 €/mes con IVA. No hay add-ons ni pago único de publicación: la app que llega a App Store y Google Play con tu logo, tus colores y tu nombre es la misma en el plan gratuito, Starter, Pro y Unlimited. Lo único que cambia entre planes es el número de atletas activos (5, 25, 100 o ilimitados) y el nivel de soporte — nunca las funciones." },
   { q: "¿Puedo probar la app sin compromiso?", a: "Sí. 14 días de prueba gratuita sin tarjeta de crédito. Puedes descargarte la app cliente, invitar a 3-5 clientes de prueba y ver el flujo completo. Sin permanencia ni cláusulas de mínima duración. Si al final del período no te convence, no se cobra nada." },
 ];
 
-const pricingPlans = [
-  { name: "Starter", price: "29,90 €/mes", incl: "Hasta 25 clientes activos", extras: ["App marca blanca incluida", "IA generativa incluida", "+240.000 alimentos"] },
-  { name: "Pro", price: "89,90 €/mes", incl: "Hasta 100 clientes activos", extras: ["Todo lo del Starter", "App marca blanca incluida", "Publicación en App Store y Google Play"], highlight: true },
-  { name: "Unlimited", price: "149,90 €/mes", incl: "Clientes ilimitados", extras: ["Todo lo del Pro", "Multi-coach", "Prioridad soporte"] },
-];
+const pricingPlans = planesResumen("clientes");
 
 const testimonials = [
   { name: "Nacho Pulido", handle: "@puli.trainer", role: "Entrenador de Fuerza & Resistencia", quote: "Tener todo centralizado — clientes, entrenamientos, seguimiento y comunicación — en un solo sitio ha cambiado mi forma de trabajar. Ahorro entre 8 y 10 horas a la semana y he pasado de 15 a 40 clientes activos.", result: "15 → 40+ clientes, 8-10h/sem ahorradas", href: "/casos-de-exito/nacho-pulido/" },
