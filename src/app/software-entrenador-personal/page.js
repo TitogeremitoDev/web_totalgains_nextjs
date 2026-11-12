@@ -125,7 +125,7 @@ export default function SoftwareEntrenadorPersonal() {
         <p style={{ textAlign: "center", color: "var(--text-secondary,#aaa)", marginBottom: 32, lineHeight: 1.6 }}>
           Plan Gratuito 5 atletas · o 14 días de prueba Pro sin tarjeta. Cancela cuando quieras.
         </p>
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(300px, 100%), 1fr))", gap: 16 }}>
           {planesResumen("clientes").map((plan) => (
             <div key={plan.name} style={{ padding: "24px", border: plan.highlight ? "2px solid var(--primary,#667eea)" : "1px solid rgba(255,255,255,0.08)", borderRadius: 16, background: plan.highlight ? "rgba(102,126,234,0.06)" : "rgba(255,255,255,0.02)" }}>
               {plan.highlight && (
