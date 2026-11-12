@@ -5,9 +5,9 @@ import { Smartphone, Apple, Globe, Bell, MessageSquare, TrendingUp } from "lucid
 
 import { ofertasCoach, aggregateRatingNode } from "@/data/productSchema";
 export const metadata = {
-  title: "App Entrenador Personal Online 2026",
+  title: { absolute: "App para Entrenadores Personales Online: 5 atletas gratis" },
   description:
-    "App para entrenadores personales online en iOS, Android y web. Tus clientes entrenan con tu propia app de marca blanca. Plan Gratuito 5 atletas, sin tarjeta.",
+    "La app para entrenadores personales: rutinas, dietas con IA y seguimiento en iOS, Android y web, con tu marca. Plan gratuito hasta 5 atletas, sin tarjeta.",
   alternates: { canonical: "https://totalgains.es/app-entrenador-personal-online/" },
   openGraph: {
     type: "website",

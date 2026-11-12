@@ -6,7 +6,7 @@ import { softwareApplicationNode , organizationNode } from "@/data/productSchema
 export const metadata = {
   title: "Harbiz Precios 2026: de 22,99 € a 313 €/mes",
   description:
-    "Precios Harbiz 2026 con IVA: Basic 22,99 €/mes, Pro 143,99 €/mes, My APP 240,79 €/mes. Con marca blanca y add-ons llega a 313 €/mes. Verificado mayo 2026.",
+    "¿Cuánto cuesta Harbiz al mes? Con IVA: Basic desde 22,99 €, Pro desde 143,99 € y My APP desde 240,79 €. Tabla por clientes y add-ons (noviembre de 2026).",
   keywords: [
     "Harbiz precios",
     "Harbiz precios 2026",
@@ -312,11 +312,11 @@ export default function HarbizPreciosPage() {
         <div className="container alternativas-container">
           <div className="alternativas-header" id="alt-hero">
             <span style={{ fontSize: "0.78rem", color: "var(--text-secondary,#aaa)", display: "block", marginBottom: 4 }}>
-              Actualizado: 13 de mayo de 2026 · Verificado manualmente en harbiz.io
+              Actualizado: 12 de noviembre de 2026 · Precios comprobados de nuevo en harbiz.io, sin cambios desde mayo
             </span>
             <h1 className="alternativas-title gradient-text">Harbiz Precios 2026: desde 22,99 €/mes hasta 313 €/mes</h1>
             <p className="alternativas-subtitle mt-4">
-              Todas las tarifas de Harbiz en 2026 con IVA 21 % aplicado, planes Basic, Pro y My APP, mensual y anual (-25 %), y los 3 add-ons opcionales. Verificado a mano en la web oficial el 13 de mayo de 2026.
+              Todas las tarifas de Harbiz en 2026 con IVA 21 % aplicado, planes Basic, Pro y My APP, mensual y anual (-25 %), y los 3 add-ons opcionales. Verificado a mano en la web oficial el 13 de mayo de 2026 y comprobado de nuevo, sin cambios, el 12 de noviembre de 2026.
             </p>
           </div>
 
@@ -514,7 +514,7 @@ export default function HarbizPreciosPage() {
           </section>
 
           <p style={{ fontSize: "0.8rem", color: "var(--text-secondary,#aaa)", borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 16, marginTop: 48 }}>
-            <strong>Fuente y disclaimer.</strong> Precios verificados manualmente en <a href="https://www.harbiz.io/" rel="nofollow" target="_blank">harbiz.io</a> el 13 de mayo de 2026. La web oficial de Harbiz muestra precios sin IVA. Aquí se aplica el IVA 21 % estándar de España; para México (16 %), Colombia (19 %) o Argentina (21 %) el cálculo varía. Recomendamos confirmar el precio final con Harbiz antes de tomar decisiones. Esta página es informativa y no está afiliada a Harbiz.
+            <strong>Fuente y disclaimer.</strong> Precios verificados manualmente en <a href="https://www.harbiz.io/" rel="nofollow" target="_blank">harbiz.io</a> el 13 de mayo de 2026 y comprobados de nuevo, sin cambios, el 12 de noviembre de 2026. La web oficial de Harbiz muestra precios sin IVA. Aquí se aplica el IVA 21 % estándar de España; para México (16 %), Colombia (19 %) o Argentina (21 %) el cálculo varía. Recomendamos confirmar el precio final con Harbiz antes de tomar decisiones. Esta página es informativa y no está afiliada a Harbiz.
           </p>
         </div>
 

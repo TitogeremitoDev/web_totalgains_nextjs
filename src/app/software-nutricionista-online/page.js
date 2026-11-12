@@ -5,9 +5,9 @@ import { Utensils, Calendar, Bell, FileText, BarChart3, Shield } from "lucide-re
 
 import { ofertasCoach, aggregateRatingNode } from "@/data/productSchema";
 export const metadata = {
-  title: "Software Nutricionista Online: Dietas con IA",
+  title: { absolute: "Software para Nutricionistas: programa de dietas con IA" },
   description:
-    "Software para nutricionistas online: pacientes, planes de dieta con +240.000 alimentos y agenda de citas. Plan Gratuito 5 pacientes, sin tarjeta.",
+    "Programa de dietas para nutricionistas: planes con IA y +240.000 alimentos, pacientes, seguimiento y agenda de citas, con tu marca. Gratis hasta 5 pacientes.",
   alternates: { canonical: "https://totalgains.es/software-nutricionista-online/" },
   openGraph: {
     type: "website",
