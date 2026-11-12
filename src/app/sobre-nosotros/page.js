@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import TrustpilotBadge from "@/components/TrustpilotBadge";
-import { SAME_AS } from "@/data/productSchema";
+import { SAME_AS, TRUSTPILOT } from "@/data/productSchema";
 import { TELEFONO } from "@/data/contacto";
 
 export const metadata = {
@@ -131,7 +131,7 @@ export default function SobreNosotros() {
                   </span>
                 </div>
               </div>
-              <TrustpilotBadge score={4.6} totalReviews={17} variant="compact" />
+              <TrustpilotBadge score={TRUSTPILOT.score} totalReviews={TRUSTPILOT.reviews} variant="compact" />
             </div>
           </header>
 

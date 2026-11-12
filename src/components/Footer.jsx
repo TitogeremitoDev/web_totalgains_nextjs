@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Heart } from 'lucide-react';
 import Link from 'next/link';
 import TrustpilotBadge from '@/components/TrustpilotBadge';
+import { TRUSTPILOT } from '@/data/productSchema';
 import './Footer.css';
 
 const Footer = () => {
@@ -60,7 +61,7 @@ const Footer = () => {
                             </a>
                         </div>
                         <div style={{ marginTop: 20 }}>
-                            <TrustpilotBadge score={4.6} totalReviews={17} variant="compact" />
+                            <TrustpilotBadge score={TRUSTPILOT.score} totalReviews={TRUSTPILOT.reviews} variant="compact" />
                         </div>
                     </div>
 

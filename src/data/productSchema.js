@@ -16,9 +16,9 @@ import { TELEFONO } from "./contacto";
  *  promediar las estrellas a mano. */
 export const TRUSTPILOT = {
     score: 4.6,
-    reviews: 17,
+    reviews: 21,
     url: "https://es.trustpilot.com/review/totalgains.es",
-    verificado: "2026-08-21",
+    verificado: "2026-11-12",
 };
 
 /** Perfiles oficiales de la entidad TotalGains.

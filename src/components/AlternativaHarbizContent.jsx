@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import TrustpilotBadge from '@/components/TrustpilotBadge';
+import { TRUSTPILOT } from '@/data/productSchema';
 import StickyCTA from '@/components/StickyCTA';
 import '@/app/alternativas/trainerize/Alternativas.css';
 
@@ -41,7 +42,7 @@ export default function AlternativaHarbizContent() {
                         Si quieres IA y marca blanca incluidas en el plan base, sin add-ons acumulables, y con capacidad para más de 50 clientes. TotalGains es la alternativa en español con todo incluido (IA y marca blanca) desde 29,90 €/mes.
                     </p>
                     <div style={{ marginTop: 20 }}>
-                        <TrustpilotBadge score={4.6} totalReviews={17} variant="compact" />
+                        <TrustpilotBadge score={TRUSTPILOT.score} totalReviews={TRUSTPILOT.reviews} variant="compact" />
                     </div>
                 </div>
 

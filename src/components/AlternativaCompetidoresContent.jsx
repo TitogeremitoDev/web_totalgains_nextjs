@@ -5,6 +5,7 @@ import { useHydrated } from '@/hooks/useHydrated';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import TrustpilotBadge from '@/components/TrustpilotBadge';
+import { TRUSTPILOT } from '@/data/productSchema';
 import StickyCTA from '@/components/StickyCTA';
 import { getAlternativaFaqs, FECHA_VERIFICACION } from '@/data/alternativasFaqs';
 import { getAlternativaIntro } from '@/data/alternativasIntros';
@@ -194,7 +195,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
                     )}
 
                     <div style={{ marginTop: 20 }}>
-                        <TrustpilotBadge score={4.6} totalReviews={17} variant="compact" />
+                        <TrustpilotBadge score={TRUSTPILOT.score} totalReviews={TRUSTPILOT.reviews} variant="compact" />
                     </div>
                 </motion.div>
 

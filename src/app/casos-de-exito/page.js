@@ -250,7 +250,7 @@ export default function CasosDeExitoHubPage() {
                 </defs>
               </svg>
               <span style={{ marginLeft: 8, fontSize: "0.86rem", color: "var(--text-secondary,#aaa)" }}>
-                4,6/5 en Trustpilot · 17 reseñas verificadas
+                4,6/5 en Trustpilot · 21 reseñas verificadas
               </span>
             </div>
             <h2 style={{ fontSize: "1.4rem", fontWeight: 800, marginBottom: 12 }}>

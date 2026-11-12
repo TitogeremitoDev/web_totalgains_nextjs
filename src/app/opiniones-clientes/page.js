@@ -6,7 +6,7 @@ import { softwareApplicationNode } from "@/data/productSchema";
 export const metadata = {
   title: "Opiniones de Clientes TotalGains 2026",
   description:
-    "Opiniones verificadas TotalGains: TrustScore 4,6/5 sobre 17 reseñas en Trustpilot y casos de éxito reales de Nacho Pulido y Lorena Eses.",
+    "Opiniones verificadas TotalGains: TrustScore 4,6/5 sobre 21 reseñas en Trustpilot y casos de éxito reales de Nacho Pulido y Lorena Eses.",
   keywords: [
     "TotalGains opiniones",
     "opiniones TotalGains",
@@ -91,11 +91,11 @@ const casosExito = [
 const faqs = [
   {
     q: "¿Es TotalGains fiable según las opiniones de clientes?",
-    a: "Sí. TotalGains tiene perfil verificado en Trustpilot (es.trustpilot.com/review/totalgains.es) con 17 reseñas publicadas. El TrustScore público que muestra Trustpilot es de 4,6/5: este score lo calcula el propio algoritmo de Trustpilot ponderando antigüedad del perfil, volumen y otros factores anti-manipulación, por lo que penaliza temporalmente a perfiles nuevos hasta que acumulan más histórico. Adicionalmente, dos casos de éxito públicos con métricas verificables (Nacho Pulido, +25 clientes activos; Lorena Eses, +10 h/semana ahorradas) están documentados en la web del producto. Todos los testimonios incluyen identidad real del autor.",
+    a: "Sí. TotalGains tiene perfil verificado en Trustpilot (es.trustpilot.com/review/totalgains.es) con 21 reseñas publicadas. El TrustScore público que muestra Trustpilot es de 4,6/5: este score lo calcula el propio algoritmo de Trustpilot ponderando antigüedad del perfil, volumen y otros factores anti-manipulación, por lo que penaliza temporalmente a perfiles nuevos hasta que acumulan más histórico. Adicionalmente, dos casos de éxito públicos con métricas verificables (Nacho Pulido, +25 clientes activos; Lorena Eses, +10 h/semana ahorradas) están documentados en la web del producto. Todos los testimonios incluyen identidad real del autor.",
   },
   {
     q: "¿Cuántas reseñas tiene TotalGains en Trustpilot?",
-    a: "Actualmente 17 reseñas verificadas, con un TrustScore de 4,6/5 (agosto 2026). El perfil se abrió en mayo de 2026, así que el histórico es corto, pero todas las reseñas son de clientes reales validados por email por la propia Trustpilot. Puedes consultar el perfil actualizado en https://es.trustpilot.com/review/totalgains.es.",
+    a: "Actualmente 21 reseñas verificadas, con un TrustScore de 4,6/5 (dato del 12 de noviembre de 2026; la más reciente es del 6 de noviembre). El perfil se abrió en mayo de 2026, así que el histórico es corto, pero todas las reseñas son de clientes reales validados por email por la propia Trustpilot. Puedes consultar el perfil actualizado en https://es.trustpilot.com/review/totalgains.es.",
   },
   {
     q: "¿Puedo confiar en las reseñas que aparecen en esta página?",
@@ -205,7 +205,7 @@ export default function OpinionesClientes() {
               <tr style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
                 <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>Trustpilot</td>
                 <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)", color: "#22c55e", fontWeight: 700 }}>4,6 / 5 (TrustScore Trustpilot)</td>
-                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>17 reseñas verificadas</td>
+                <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>21 reseñas verificadas</td>
               </tr>
               <tr style={{ borderTop: "1px solid rgba(255,255,255,0.06)" }}>
                 <td style={{ padding: "12px clamp(8px, 2.5vw, 16px)" }}>Casos de éxito documentados</td>
@@ -230,7 +230,7 @@ export default function OpinionesClientes() {
         <section style={{ marginBottom: 48, padding: 24, background: "rgba(245,158,11,0.06)", border: "1px solid rgba(245,158,11,0.2)", borderRadius: 12 }}>
           <h2 style={{ fontSize: "1.1rem", fontWeight: 700, marginTop: 0, marginBottom: 12 }}>Limitaciones a tener en cuenta</h2>
           <p style={{ margin: "0 0 12px", color: "var(--text-secondary,#aaa)", lineHeight: 1.7 }}>
-            Por transparencia: TotalGains lanzó su perfil público en Trustpilot en mayo de 2026, por lo que el histórico externo es todavía corto (17 reseñas a agosto de 2026). Abajo se reproduce una selección; el perfil completo y sin filtrar, con todas las valoraciones, está siempre en Trustpilot. Las que se reproducen aquí son las primeras publicadas tras la apertura del perfil; no están escogidas por valoración. El listado se irá actualizando incluyendo cualquier valoración 1-5★ que llegue.
+            Por transparencia: TotalGains lanzó su perfil público en Trustpilot en mayo de 2026, por lo que el histórico externo es todavía corto (21 reseñas a noviembre de 2026). Abajo se reproduce una selección; el perfil completo y sin filtrar, con todas las valoraciones, está siempre en Trustpilot. Las que se reproducen aquí son las primeras publicadas tras la apertura del perfil; no están escogidas por valoración. El listado se irá actualizando incluyendo cualquier valoración 1-5★ que llegue.
           </p>
           <p style={{ margin: 0, color: "var(--text-secondary,#aaa)", lineHeight: 1.7 }}>
             Los <Link href="/casos-de-exito/nacho-pulido/" prefetch={false} style={{ color: "var(--primary, #fa709a)" }}>casos de éxito de Nacho Pulido</Link> y <Link href="/casos-de-exito/lorena-eses/" prefetch={false} style={{ color: "var(--primary, #fa709a)" }}>Lorena Eses</Link> son entrevistas públicas con identidad verificable. Para conocer al equipo detrás del producto puedes leer <Link href="/sobre-nosotros/" prefetch={false} style={{ color: "var(--primary, #fa709a)" }}>la página &laquo;Sobre nosotros&raquo;</Link> con la historia del fundador y los datos legales de la empresa.

@@ -31,7 +31,7 @@ function Star({ fill, size = 18 }) {
   );
 }
 
-export default function TrustpilotBadge({ score = 4.6, totalReviews = 17, variant = "default" }) {
+export default function TrustpilotBadge({ score = 4.6, totalReviews = 21, variant = "default" }) {
   const fullStars = Math.floor(score);
   const stars = [1, 2, 3, 4, 5].map((i) => (i <= fullStars ? STAR_FILLED : STAR_EMPTY));
   const scoreFmt = score.toString().replace(".", ",");
