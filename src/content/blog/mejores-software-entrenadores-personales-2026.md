@@ -153,7 +153,7 @@ Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
 - Generador de rutinas con [IA que usa tu propia base de datos de ejercicios](/ia-entrenador-personal/)
 - Generador de dietas con [librería personalizada de más de 240.000 alimentos](/base-datos-alimentos-fitness/) y cálculo automático de macros
 - Check-ins semanales automatizados estructurados
-- [App de marca blanca](/app-marca-blanca-entrenador-personal/) **incluida en todos los planes** — tus clientes descargan una app con tu logo, tus colores y tu identidad visual
+- [App de marca blanca](/app-marca-blanca-entrenador-personal/) **incluida en todos los planes** — tus clientes descargan la app de TotalGains y, al entrar, la ven con tu logo, tus colores y tu identidad visual
 - Pagos recurrentes con Stripe integrados de forma nativa, sin comisiones adicionales
 - Módulo completo de entrenamiento de resistencia y endurance (carrera, bicicleta, natación) integrado con el entrenamiento de fuerza
 - [Seguimiento centralizado de clientes](/gestion-clientes-fitness/): peso, medidas, progresión de cargas, adherencia, feedback

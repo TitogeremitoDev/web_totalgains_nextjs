@@ -30,7 +30,7 @@ const beforeItems = [
 
 const afterItems = [
     { icon: <LayoutDashboard size={16} />, text: 'Dashboard unificado: clientes, métricas y rutinas' },
-    { icon: <Zap size={16} />, text: 'App propia de marca blanca para tus atletas' },
+    { icon: <Zap size={16} />, text: 'Tu marca en la app de tus atletas' },
     { icon: <CreditCard size={16} />, text: 'Registro de pagos centralizado por cliente' },
     { icon: <Clock size={16} />, text: 'Recuperas +10h semanales para entrenar y crecer' },
     { icon: <Zap size={16} />, text: 'Dietas estructuradas con plantillas profesionales' },

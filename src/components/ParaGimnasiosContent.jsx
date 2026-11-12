@@ -637,7 +637,7 @@ function SolutionSection() {
     {
       icon: <Palette size={22} />,
       title: "App marca blanca del gimnasio",
-      desc: "Tus socios descargan una app con tu nombre, logo y colores. Reservas, rutinas, dietas y mensajes en un solo entorno.",
+      desc: "Tus socios descargan la app de TotalGains y, al entrar, la ven con el nombre, el logo y los colores de tu centro. Reservas, rutinas, dietas y mensajes en un solo entorno.",
     },
     {
       icon: <CreditCard size={22} />,

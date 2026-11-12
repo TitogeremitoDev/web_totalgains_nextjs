@@ -100,7 +100,7 @@ Un gimnasio pequeño o boutique en 2026 necesita 6 capas operativas mínimas que
 
 1. **Multi-coach con permisos granulares** — qué puede ver/editar cada entrenador del equipo
 2. **Agenda compartida con reservas de clases y waitlist** — el calendario es del gimnasio, no de cada coach
-3. **App marca blanca del gimnasio** — los socios descargan UNA app con la identidad del gimnasio, no la de cada coach individual
+3. **App marca blanca del gimnasio** — los socios descargan UNA app (la de TotalGains) y, al entrar, la ven con la identidad del gimnasio, no la de cada coach individual
 4. **Cobros recurrentes domiciliados** — Stripe SEPA o equivalente, cobros automáticos mensuales sin chasing manual
 5. **Panel supervisor para el dueño** — KPIs agregados de retención, adherencia, ingresos por coach
 6. **Onboarding asistido** — migración desde Excel/Sheets/Software anterior sin que el equipo se desincronice

@@ -194,11 +194,11 @@ La automatización **más infravalorada** hasta que la usas. Diferenciador claro
 Con 50 clientes activos, el cliente que abre su app fitness **NO ve tu nombre**. Ve "Trainerize", "Harbiz", "MyPT Hub" o el genérico que estés usando. Cada apertura de la app **refuerza la marca del proveedor**, no la tuya. Y cuando el cliente refiere a un amigo, dice "yo uso Harbiz con Mi Coach" en vez de "yo uso la app de Mi Coach". Estás construyendo la marca de otros por 89-352 €/mes.
 
 ### Qué automatiza el sistema
-[TotalGains Pro incluye app marca blanca nativa](/blog/app-marca-blanca-entrenadores-personales/) en el plan base:
-- El cliente descarga una app **con tu logo, tus colores y tu nombre** en iOS y Android
-- Cero mención "TotalGains" visible en la experiencia del cliente
+[TotalGains incluye app marca blanca nativa](/blog/app-marca-blanca-entrenadores-personales/) en todos los planes:
+- El cliente descarga la app de TotalGains en iOS y Android y, al entrar, la ve **con tu logo, tus colores y tu nombre**
+- Dentro de la app todo lleva tu marca; en la tienda y en el icono pone TotalGains
 - Branding generado por IA en un clic (colores extraídos del logo, gradientes, iconos)
-- Publicación en App Store y Google Play sin coste adicional
+- Sin publicar nada en las tiendas ni pagar cuenta de desarrollador
 
 ### Tiempo recuperado
 Esta automatización no recupera horas — **sube la percepción del servicio y refuerza tu marca personal**. El impacto no es en tiempo semanal sino en:
@@ -245,7 +245,7 @@ Orden probado con coaches consolidados que han cruzado los 50 clientes activos:
 
 ### Día 15+ — Marca blanca
 - Solicitud de branding con tu logo y colores (IA genera propuestas visuales)
-- Publicación en App Store y Google Play
+- Tus clientes ya la ven con tu marca al entrar, sin publicar nada en las tiendas
 
 **Objetivo realista a 60 días**: tu cartera de 50 clientes atendida en **12-15 h semanales** en vez de 40-50, con calidad de servicio **superior** a la manual, y capacidad operativa real para captar hasta 80-100 sin doblar horas.
 

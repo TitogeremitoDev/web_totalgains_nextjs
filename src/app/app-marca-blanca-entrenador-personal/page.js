@@ -13,7 +13,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     title: "App Marca Blanca para Entrenadores Personales | TotalGains",
-    description: "Tu propia app de fitness con tu branding. Colores, logo y temas visuales generados por IA en un clic.",
+    description: "Tu marca en la app de tus clientes: colores, logo y temas visuales generados por IA en un clic. Incluida en todos los planes.",
     url: "https://totalgains.es/app-marca-blanca-entrenador-personal/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },
@@ -28,7 +28,7 @@ const features = [
   {
     icon: <Smartphone size={22} />,
     title: "App nativa iOS y Android con tu marca",
-    desc: "Tus clientes descargan una app con tu identidad en App Store y Google Play. Experiencia 100% profesional desde el primer día.",
+    desc: "Tus clientes descargan la app de TotalGains en App Store o Google Play y, al entrar, la ven con tu logo, tus colores y tu nombre. Experiencia profesional desde el primer día.",
   },
   {
     icon: <Star size={22} />,
@@ -64,7 +64,7 @@ const faqs = [
   { q: "¿Qué tiene el plan gratuito de TotalGains y en qué se diferencia de la competencia?", a: "TotalGains tiene el plan gratuito más generoso del mercado hispano: 5 atletas de por vida, sin tarjeta de crédito y sin caducidad. Trainerize Basic ofrece 1 cliente; TrainerStudio Free ofrece 3; Harbiz no tiene plan gratuito permanente (arranca a 22,99 €/mes con IVA para el mismo tramo de 5 clientes). Puedes empezar en https://totalgains.es/onboarding/ sin coste." },
   {
     q: "¿Mi app aparece en App Store y Google Play con mi nombre?",
-    a: "Sí. La app que descargan tus clientes lleva tu marca. No aparece el nombre de TotalGains en ningún lugar visible para el cliente. Publicación en App Store y Google Play incluida en el plan Pro (89,90 €/mes con IVA) sin coste adicional ni proceso técnico por tu parte: el equipo de TotalGains hace la publicación con tus credenciales corporativas.",
+    a: "No como una app aparte. Es una sola app, TotalGains, publicada en App Store y Google Play bajo nuestra cuenta. Tus clientes la descargan (o entran por la web) y, al entrar, la ven con tu logo, tus colores y tu nombre. En la tienda y en el icono del móvil pone TotalGains; dentro de la app, todo lleva tu marca. A cambio no tienes que publicar nada, ni pagar la cuenta de desarrollador de Apple (99 USD al año), ni esperar aprobaciones, y va incluida en todos los planes, también en el gratuito.",
   },
   {
     q: "¿Necesito contratar a un diseñador para configurar el branding?",
@@ -80,7 +80,7 @@ const faqs = [
   },
   {
     q: "¿Qué diferencia hay entre una app marca blanca y una PWA con mi logo?",
-    a: "La app marca blanca de TotalGains es app nativa real, no PWA (Progressive Web App). Se publica en App Store y Google Play con tu identidad, tiene notificaciones push nativas, gestos táctiles nativos y rendimiento comparable al de una app propia desarrollada desde cero. Las PWAs con logo suelen renquear en dispositivos Android antiguos, no aparecen en las tiendas (solo por URL) y no aprovechan las capacidades nativas del móvil.",
+    a: "La app marca blanca de TotalGains es app nativa real, no PWA (Progressive Web App). Tus clientes la descargan de App Store o Google Play y, al entrar, la ven con tu marca; tiene notificaciones push nativas, gestos táctiles nativos y rendimiento comparable al de una app propia desarrollada desde cero. Las PWAs con logo suelen renquear en dispositivos Android antiguos, no aparecen en las tiendas (solo por URL) y no aprovechan las capacidades nativas del móvil.",
   },
   {
     q: "¿Los clientes tienen que descargar la app de nuevo si cambio mi logo o mis colores?",
@@ -115,7 +115,7 @@ export default function AppMarcaBlanca() {
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web, iOS, Android",
         "@id": "https://totalgains.es/#software",
-        description: "App de marca blanca para entrenadores personales: tus clientes descargan una app con tu nombre, logo y colores en iOS y Android sin coste extra.",
+        description: "App de marca blanca para entrenadores personales: tus clientes descargan la app de TotalGains en iOS y Android y, al entrar, la ven con tu nombre, tu logo y tus colores sin coste extra.",
         image: "https://totalgains.es/og-image.jpg",
         url: "https://totalgains.es/app-marca-blanca-entrenador-personal/",
         offers: ofertasCoach(),
@@ -137,8 +137,8 @@ export default function AppMarcaBlanca() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       <LandingPageTemplate
       badge="App Marca Blanca"
-      h1="Tu Propia App de Fitness con tu Marca y Branding IA"
-      subtitle="Ofrece a tus clientes una experiencia 100% tuya: tu nombre, tus colores, tu logo. La IA genera el branding completo en un clic — sin programar, sin diseñador, sin coste extra."
+      h1="App Marca Blanca para Entrenadores: tu Marca en la App de tus Clientes"
+      subtitle="Tus clientes abren la app y ven tu nombre, tus colores y tu logo. Es la app de TotalGains vestida con tu marca: no publicas nada en las tiendas ni pagas cuenta de desarrollador. La IA genera el branding completo en un clic, sin programar, sin diseñador y sin coste extra."
       features={features}
       useCases={useCases}
       ctaText="Empieza gratis · 5 atletas"

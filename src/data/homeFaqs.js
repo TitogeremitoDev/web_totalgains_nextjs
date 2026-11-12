@@ -17,7 +17,7 @@ export const HOME_FAQS = [
     },
     {
         question: '¿Qué es TotalGains y cómo funciona como software para entrenadores personales?',
-        answer: 'TotalGains es una plataforma de gestión deportiva todo-en-uno. Centraliza la gestión de atletas, creación de rutinas con IA, planes nutricionales, seguimiento de progreso y cobros dentro de la app con recordatorios de renovación al cliente. Funciona en Android, iOS y Web, y cada entrenador obtiene su propia app de fitness personalizada para sus clientes.'
+        answer: 'TotalGains es una plataforma de gestión deportiva todo-en-uno. Centraliza la gestión de atletas, creación de rutinas con IA, planes nutricionales, seguimiento de progreso y cobros dentro de la app con recordatorios de renovación al cliente. Funciona en Android, iOS y Web, y los clientes de cada entrenador ven la app con la marca de su entrenador: su logo, sus colores y su nombre.'
     },
     {
         question: '¿Cuánto cuesta el software de entrenamiento TotalGains?',
@@ -61,7 +61,7 @@ export const HOME_FAQS = [
     },
     {
         question: '¿La app con mi marca va incluida en todos los planes?',
-        answer: 'Sí. La app con tu logo, tus colores y tu nombre va incluida en todos los planes de entrenador, también en el gratuito (hasta 5 atletas). No es un extra de los planes Pro o Unlimited ni un add-on: entre planes solo cambian el número de atletas y el soporte.'
+        answer: 'Sí. La app con tu logo, tus colores y tu nombre va incluida en todos los planes de entrenador, también en el gratuito (hasta 5 atletas). Es la app de TotalGains: tus clientes la descargan y, al entrar, la ven con tu marca. No es un extra de los planes Pro o Unlimited ni un add-on: entre planes solo cambian el número de atletas y el soporte.'
     },
     {
         question: '¿Puedo cobrar a mis clientes dentro de la app?',

@@ -189,7 +189,7 @@ const nutricionistas = {
         },
         {
             q: '¿Mis pacientes tienen que aprender a usar una app nueva?',
-            a: 'Descargan una app con tu logo y tus colores y ven una sola cosa: su plan del día. Abren, tocan la comida y listo. El resto (recordatorios, seguimiento, fotos) va solo.',
+            a: 'Descargan la app de TotalGains, la ven con tu logo y tus colores, y encuentran una sola cosa: su plan del día. Abren, tocan la comida y listo. El resto (recordatorios, seguimiento, fotos) va solo.',
         },
         {
             q: '¿Y si trabajo también con entrenamiento?',

@@ -118,7 +118,7 @@ const gimnasios = {
         {
             tag: 'Marca blanca',
             title: 'La app es del centro, no nuestra',
-            desc: 'Tus socios descargan una app con el logo, el nombre y los colores del gimnasio. Puedes incluso ocultar el botón premium para que nada recuerde que hay un proveedor detrás.',
+            desc: 'Tus socios descargan la app de TotalGains y, al entrar, la ven con el logo, el nombre y los colores del gimnasio. Puedes incluso ocultar el botón premium para que nada recuerde que hay un proveedor detrás.',
             bullets: [
                 'Rutinas y nutrición con IA incluidas para tus coaches, sin add-ons',
                 'Base de +240.000 alimentos en español',
