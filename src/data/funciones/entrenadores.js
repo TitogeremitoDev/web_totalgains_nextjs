@@ -563,6 +563,39 @@ const entrenadores = {
             ],
         },
         {
+            id: 'contratos',
+            accent: '#4f46e5', // índigo: el violeta de los botones de Contratos ya lo usa «Tu marca»; este llega a 6,3:1 con texto blanco
+            nombre: 'Contratos que se firman en la app',
+            railNombre: 'Contratos',
+            resumen: 'Tus clientes firman tus contratos con el dedo, dentro de la app, y los dos os quedáis el PDF firmado con su certificado.',
+            nota: 'Los modelos y la IA son un punto de partida: revisa tus contratos con tu asesoría. No es asesoramiento legal.',
+            /* Área creada el 13-nov-2026 (German: «haz el vídeo tutorial con hyperframe del sistema de contratos y súbelo
+               a la web como feature»). Cada línea sale de PLAN_firma-coach.md y de CHANGELOG.md (contratos que se firman
+               en la app para entrenadores, publicados con la OTA 1.4.4 y el interruptor firmaCoach ENCENDIDO el 13-nov).
+               Vídeo: tutorial de 67,5 s, proyecto hyperframes totalgains-tutorial-contratos-coach, con capturas reales de
+               la app y datos inventados (entrenadora «Laura Fit», clientes Marta, Javier, Elena…; kit
+               ~/.cache/tg-e2e/firma-coach/video). La imagen del móvil es la ventana de firma real.
+
+               ⛔ Sin prometer validez legal ni «firma avanzada»: el certificado es de firma electrónica simple.
+               ⛔ Sin hablar de lo firmado por ex-clientes (no tiene pantalla todavía). */
+            bloques: [
+                { titulo: 'Crearlo, firmarlo y enviarlo', items: [0, 1, 3, 4],
+                  media: { tipo: 'video', src: '/video/coach-contratos.mp4', poster: '/video/coach-contratos.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'Contratos en TotalGains: el entrenador escribe su contrato o parte de un modelo, los datos de cada cliente se rellenan solos, marca «Se firma al entrar», dibuja su firma una vez, lo envía a sus clientes y el cliente lo firma con el dedo en el móvil; el PDF sale con las dos firmas y su certificado', pie: 'De escribir el contrato al PDF firmado por los dos, con capturas reales de la app.' } },
+                { titulo: 'Para tus clientes nuevos', items: [2, 6],
+                  media: { tipo: 'imagen', src: '/screenshots/contrato-al-entrar.webp', w: 600, h: 1298, vertical: true, alt: 'Ventana de firma al abrir la app: «Laura Fit necesita tu firma», con el contrato y el botón Firmar', pie: 'Lo primero que ve tu cliente nuevo al abrir la app.' } },
+                { titulo: 'Con la IA, solo si la pides', items: [5], media: null },
+            ],
+            items: [
+                { t: 'Escríbelo, sube tu PDF o parte de un modelo', d: 'Escribes tu contrato como un texto normal, subes tu PDF tal cual o partes de uno de los cinco modelos ya escritos: servicios de entrenamiento, protección de datos, exención de responsabilidad, fotos de progreso y uso de tu imagen en redes. Lo que falte por completar va entre corchetes y la app te lo recuerda antes de enviarlo.' },
+                { t: 'Los datos de cada cliente, solos', d: 'Con un toque pones su nombre, su DNI, su dirección o la fecha, y se rellenan con los de cada cliente al enviárselo. Si a tu cliente le falta alguno, se lo pedimos justo antes de firmar y se le queda guardado.' },
+                { t: '«Se firma al entrar»', d: 'Marca un contrato y cada cliente nuevo lo firma la primera vez que abre la app, antes de empezar. Si le falta un dato que no tiene a mano, puede dejarlo para el día siguiente. A los clientes que ya tienes se lo envías tú, cuando quieras. Antes, ves «Así lo verá tu cliente».' },
+                { t: 'Tu firma, una sola vez', d: 'La dibujas con el dedo o con el ratón y sale en los contratos que envías, junto a la de tu cliente. Si un día la cambias, lo ya enviado conserva la de entonces.' },
+                { t: 'Enviar a firmar y ver quién falta', d: 'Lo envías a uno o a varios clientes a la vez, con un aviso a su móvil, y si no lo firman se lo recordamos. En Clientes ves quién lo tiene «Sin firmar» y en cada contrato, cuántos lo han firmado ya.' },
+                { t: 'La IA, tras un botón', d: '«Escríbeme el contrato» te deja un borrador con lo que le cuentes, «Pasar mi PDF a texto» convierte tu contrato en PDF en uno que se rellena solo y «Revisa mi contrato» te dice qué suele faltar. Ninguna guarda nada por su cuenta.' },
+                { t: 'Firmado con el dedo, con su certificado', d: 'Tu cliente lee el contrato, lo acepta y lo firma con el dedo en su móvil. El PDF lleva las dos firmas y una hoja de certificado con la fecha y la huella del documento, y los dos lo tenéis siempre a mano. Un contrato firmado no se puede borrar.' },
+            ],
+        },
+        {
             id: 'adherencia',
             accent: '#eab308', // el dorado de los logros
             nombre: 'Lo que engancha al atleta',
@@ -669,6 +702,10 @@ const entrenadores = {
         {
             q: '¿TotalGains tiene una sección médica para llevar la salud de mis clientes?',
             a: 'Sí, y se activa en Ajustes, porque viene apagada. Incluye consultas con formulario médico, una pestaña «Médico» con vitales, analíticas en PDF, medicación, indicaciones con recordatorio e historia clínica, y las alertas te llegan a ti. No diagnostica ni receta: ordena la información y la decisión es del profesional.',
+        },
+        {
+            q: '¿Mis clientes pueden firmar un contrato dentro de la app?',
+            a: 'Sí. Escribes tu contrato, subes tu PDF o partes de un modelo ya escrito, y tu cliente lo firma con el dedo en su móvil; los dos os quedáis el PDF firmado con su certificado. Puedes hacer que cada cliente nuevo lo firme al entrar en la app, antes de empezar, y su nombre, DNI y dirección se rellenan solos.',
         },
     ],
 };
