@@ -63,6 +63,11 @@ import ContestPrepRateScale from "@/components/ContestPrepRateScale";
 import ContestPrepMacros from "@/components/ContestPrepMacros";
 import PeakWeekEvidence from "@/components/PeakWeekEvidence";
 import EliteGoalsMap from "@/components/EliteGoalsMap";
+import CheckinQuestionSet from "@/components/CheckinQuestionSet";
+import CheckinReviewTimer from "@/components/CheckinReviewTimer";
+import CheckinReplyTemplate from "@/components/CheckinReplyTemplate";
+import CheckinWorkflowTG from "@/components/CheckinWorkflowTG";
+import CheckinTutorialVideo from "@/components/CheckinTutorialVideo";
 import OfertaWebBlogCard from "@/components/OfertaWebBlogCard";
 import OfertaWebTicket from "@/components/OfertaWebTicket";
 
@@ -136,6 +141,11 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__contest_prep_macros__"></div>', Component: ContestPrepMacros, gate: () => true },
   { marker: '<div class="__peak_week_evidence__"></div>', Component: PeakWeekEvidence, gate: () => true },
   { marker: '<div class="__elite_goals_map__"></div>', Component: EliteGoalsMap, gate: () => true },
+  { marker: '<div class="__checkin_questions__"></div>', Component: CheckinQuestionSet, gate: () => true },
+  { marker: '<div class="__checkin_review_timer__"></div>', Component: CheckinReviewTimer, gate: () => true },
+  { marker: '<div class="__checkin_reply__"></div>', Component: CheckinReplyTemplate, gate: () => true },
+  { marker: '<div class="__checkin_workflow__"></div>', Component: CheckinWorkflowTG, gate: () => true },
+  { marker: '<div class="__checkin_tutorial_video__"></div>', Component: CheckinTutorialVideo, gate: () => true },
   // Oferta de noviembre de 2026 (src/data/ofertaWeb.js): se esconde sola el 30-nov.
   { marker: '<div class="__web_offer__"></div>', Component: OfertaWebBlogCard, gate: () => true },
 ];

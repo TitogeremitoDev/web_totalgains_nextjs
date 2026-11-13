@@ -325,6 +325,29 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/check-in-semanal-clientes-que-preguntar
+*Generado 2026-11-13 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `checkin-hero.webp` | por encima del hombro, eye-level | persona en primer término a la izquierda, mesa en los dos tercios derechos | medium | cafetería junto a un ventanal | móvil con la pantalla EN BLANCO, temporizador de cocina SIN números y café | fría y suave de mañana por el ventanal | diez minutos con calma |
+| `checkin-calendario.webp` | frontal centrado | calendario en el centro, estantería al borde derecho | close-up | estudio de entrenamiento con pared lavanda grisácea | calendario de pared SIN números con una pegatina coral por semana y una lavanda | luz de día suave desde la derecha | el ritmo de cada semana |
+| `checkin-sobre.webp` | eye-level | ranura y sobre en el tercio izquierdo | close-up | puerta de entrada verde | sobre EN BLANCO a medio meter en una ranura de latón | rasante cálida de tarde desde la izquierda | un mensaje que espera |
+| `checkin-app-movil-cliente.webp` | captura de app | pantalla entera de móvil | UI móvil | Seguimiento del cliente | revisión quincenal, peso y sueño de hoy, check-in diario y el semanal sustituido | n/a (captura real) | producto real |
+| `checkin-app-formulario.webp` | captura de app | ventana entera | UI escritorio | Formularios › Editar formulario | casilla «Sustituye al check-in semanal» y «Datos que usa la app» con estrellas | n/a (captura real) | producto real |
+| `checkin-app-semanas.webp` | captura de app | ventana entera | UI escritorio | Formularios › Ver semanas y preguntas | tabla de clientes por semana: semanal, revisión o quitada | n/a (captura real) | producto real |
+| `checkin-app-por-revisar.webp` | captura de app | ventana entera | UI escritorio | Seguimiento › Por revisar | seis clientes con sueño, energía, ánimo y peso | n/a (captura real) | producto real |
+| `checkin-app-ficha.webp` | captura de app | ventana entera | UI escritorio | Seguimiento › ficha › Gráficos | Resumen IA, peso con media de 7 días, sensaciones, sueño, medidas y dieta | n/a (captura real) | producto real |
+| `checkin-app-informe.webp` | captura de app | ventana entera | UI escritorio | Feedback › informe | gráficas y apartados Logros, Análisis técnico y Plan de acción | n/a (captura real) | producto real |
+| `checkin-app-movil-coach.webp` | captura de app | pantalla entera de móvil | UI móvil | Feedback › informe en el móvil del entrenador | métricas de la clienta y «Enviar reporte» | n/a (captura real) | producto real |
+| `checkin-app-movil-informe.webp` | captura de app | pantalla entera de móvil | UI móvil | Feedback de tu entrenador (cliente) | titular de la semana y gráficas de progreso | n/a (captura real) | producto real |
+
+**Origen de las 8 capturas reales (pantallas ENTERAS, sin recortar):** `~/.cache/tg-e2e/seguimiento-control/shots-tut/` (las limpias del 10-nov para el tutorial: `r5-casilla`, `r5-semanas`, `r6-con`, `r4-marta-revision`) y `~/Escritorio/PLANES/centro-feedback/img/hoy-*` (estado publicado del 5-nov: ficha, informe y la vista del cliente). Las dos de móvil llevan arriba una tira de 80 px (la primera fila estirada) para que la isla del marco no tape el título. Nombres inventados. ⛔ Las `nuevo-*` de centro-feedback son maquetas de algo que NO existe: no usar.
+
+**Notas:** las tres salieron al primer intento (`~/.cache/tg-blog/seguimiento-semanal/gen.py`). Novena vez que funciona pedir los soportes **en blanco** (calendario sin números, sobre sin escribir, pantalla en blanco). El temporizador sustituye al reloj de arena para no repetir `volumen-sesion`. En el hero se ve algo de perfil y una mano en la barbilla: aceptable porque solo sale en el listado y al compartir.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -396,6 +419,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-11-13** — Añadido `blog/check-in-semanal-clientes-que-preguntar` (3 imágenes generadas, conceptos nuevos, y 8 capturas reales enteras del seguimiento).
 
 **2026-11-05** — Añadido `blog/preparacion-culturismo-natural-atleta-competicion` (4 imágenes generadas, conceptos nuevos, y 9 capturas reales del Modo Elite).
 
