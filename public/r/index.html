@@ -36,6 +36,13 @@
     .dia b { color: #0f172a; flex: 1; }
     .btn { margin-top: 18px; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 16px; border-radius: 14px; background: var(--marca); color: var(--sobre-marca); font-size: 17px; font-weight: 800; border: 0; cursor: pointer; text-decoration: none; font-family: inherit; }
     .btn.sec { background: #fff; color: #0f172a; border: 1.5px solid #cbd5e1; margin-top: 10px; font-size: 15px; padding: 13px; }
+    .completa { margin-top: 6px; }
+    .completa h3 { margin-top: 16px; font-size: 15px; font-weight: 800; padding: 6px 10px; background: #f1f5f9; border-left: 4px solid var(--marca); border-radius: 4px; }
+    .ej { display: flex; gap: 10px; align-items: baseline; padding: 8px 2px; border-bottom: 1px solid #e2e8f0; font-size: 14.5px; }
+    .ej b { flex: 1; font-weight: 600; color: #0f172a; }
+    .ej span { flex: none; color: #475569; white-space: nowrap; }
+    .ej small { display: block; font-size: 12px; color: #94a3b8; font-weight: 400; }
+    .descansa { padding: 8px 2px; color: #64748b; font-style: italic; font-size: 14px; }
     .nota { margin-top: 10px; font-size: 13.5px; color: #64748b; text-align: center; line-height: 1.45; }
     .aviso { margin-top: 12px; font-size: 14px; line-height: 1.45; color: #1e293b; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px; display: none; }
     .sin { margin: 16px 16px 0; background: #fff; border-radius: 20px; padding: 18px 20px; }
@@ -77,6 +84,8 @@
         <div class="chips" id="chips"></div>
         <p class="frase oculto" id="frase"></p>
         <div class="dias" id="dias"></div>
+        <button class="btn sec oculto" id="completa-btn" type="button">Ver la rutina completa</button>
+        <div class="completa oculto" id="completa"></div>
         <a class="btn" id="abrir" href="#" rel="nofollow">Abrir en la app y empezar</a>
         <div class="nota" id="nota">Se pone en tu app al momento y la tienes en «Empezar entreno».</div>
         <div class="aviso" id="vieja">¿Se abrió la app pero no la rutina? Ciérrala del todo, ábrela otra vez y vuelve a escanear el cartel: así coge su última actualización.</div>
@@ -165,6 +174,8 @@
         fila.appendChild(b); fila.appendChild(n); caja.appendChild(fila);
       }
       caja.classList.toggle('oculto', porDia.length === 0);
+      // «Ver la rutina completa» (R8): quien no usa la app la ve entera aquí mismo.
+      $('completa-btn').classList.toggle('oculto', porDia.length === 0);
       // Si este cartel también da de alta (lo decide el gimnasio), se dice: quien aún no es socio
       // entra en el gimnasio al abrirla. Si lo escaneó sin sesión, la app se acuerda al entrar.
       if (d.signup === true) {
@@ -201,6 +212,46 @@
       });
     }
 
+    function descanso(seg) {
+      var n = Number(seg) || 0; if (!n) return '';
+      var m = Math.floor(n / 60), r = n % 60;
+      return m && r ? m + ' min ' + r + ' s' : m ? m + ' min' : r + ' s';
+    }
+
+    // La rutina entera, día a día: series × repeticiones y el descanso si lo lleva. Todo como texto.
+    function pintarCompleta(dias) {
+      var caja = $('completa'); caja.textContent = '';
+      dias.forEach(function (d) {
+        var h = document.createElement('h3'); h.textContent = d.nombre || ''; caja.appendChild(h);
+        var ejercicios = Array.isArray(d.ejercicios) ? d.ejercicios : [];
+        if (!ejercicios.length) { var p = document.createElement('div'); p.className = 'descansa'; p.textContent = 'Descanso'; caja.appendChild(p); return; }
+        ejercicios.forEach(function (e) {
+          var fila = document.createElement('div'); fila.className = 'ej';
+          var b = document.createElement('b'); b.textContent = e.nombre || '';
+          var des = descanso(e.descanso);
+          if (des) { var sm = document.createElement('small'); sm.textContent = 'Descanso: ' + des; b.appendChild(sm); }
+          var sp = document.createElement('span');
+          sp.textContent = e.series && e.reps ? e.series + ' × ' + e.reps : e.series ? e.series + (e.series === 1 ? ' serie' : ' series') : (e.reps || '');
+          fila.appendChild(b); fila.appendChild(sp); caja.appendChild(fila);
+        });
+      });
+      $('dias').classList.add('oculto');
+      $('completa-btn').classList.add('oculto');
+      caja.classList.remove('oculto');
+    }
+
+    function verCompleta() {
+      var btn = $('completa-btn');
+      btn.disabled = true; btn.textContent = 'Abriendo…';
+      fetch(API + '/api/public/qr/' + encodeURIComponent(code) + '?full=1', { headers: { Accept: 'application/json' } })
+        .then(function (res) { return res.json().catch(function () { return {}; }).then(function (body) { return { status: res.status, body: body }; }); })
+        .then(function (x) {
+          if (x.status === 200 && x.body && Array.isArray(x.body.completa)) { pintarCompleta(x.body.completa); return; }
+          btn.disabled = false; btn.textContent = 'Ahora no se puede abrir. Tócalo otra vez';
+        })
+        .catch(function () { btn.disabled = false; btn.textContent = 'Ahora no se puede abrir. Tócalo otra vez'; });
+    }
+
     function cargar() {
       if (!code) { aviso('Escanea el cartel de tu gimnasio', 'Apunta con la cámara de tu móvil al código QR del cartel y aquí verás su rutina.', false); return; }
       ver('v-cargando');
@@ -216,6 +267,7 @@
     }
 
     $('reintentar').addEventListener('click', cargar);
+    $('completa-btn').addEventListener('click', verCompleta);
     cargar();
   })();
   </script>
