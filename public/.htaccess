@@ -46,6 +46,15 @@
     RewriteCond %{REQUEST_FILENAME}/index.md -f
     RewriteRule ^(.*)$ /$1index.md [L]
 
+    # 📱 Carteles con QR de los gimnasios (14-nov-2026, PLAN_rutinas-gym-qr.md).
+    # ⛔ CONTRATO — NO QUITAR NI CAMBIAR: los carteles impresos apuntan a
+    # https://totalgains.es/r/<código> y duran años. Cualquier código, con o sin
+    # barra final, sirve la misma página fija (public/r/index.html), sin redirigir.
+    # Va ANTES de la regla de la barra final: si no, /r/ABC saltaría a /r/ABC/ y
+    # acabaría en el 404. Comprobar tras cada subida:
+    #   curl -sI https://totalgains.es/r/PRUEBA12345/   → 200
+    RewriteRule ^r/[A-Za-z0-9]{6,40}/?$ /r/index.html [L]
+
     # Añadir trailing slash a rutas sin extensión
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_URI} !/$
