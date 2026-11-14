@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rutina de tu gimnasio · TotalGains</title>
+  <title>Tu gimnasio · TotalGains</title>
   <meta name="description" content="La rutina de tu gimnasio, en tu móvil. Ábrela en la app y empieza hoy.">
   <meta name="robots" content="noindex, nofollow">
   <link rel="icon" href="/logo.png">
@@ -36,6 +36,11 @@
     .dia b { color: #0f172a; flex: 1; }
     .btn { margin-top: 18px; display: flex; align-items: center; justify-content: center; gap: 8px; width: 100%; padding: 16px; border-radius: 14px; background: var(--marca); color: var(--sobre-marca); font-size: 17px; font-weight: 800; border: 0; cursor: pointer; text-decoration: none; font-family: inherit; }
     .btn.sec { background: #fff; color: #0f172a; border: 1.5px solid #cbd5e1; margin-top: 10px; font-size: 15px; padding: 13px; }
+    .video { margin-top: 14px; position: relative; width: 100%; padding-top: 56.25%; border-radius: 14px; overflow: hidden; background: #0f172a; }
+    .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+    .gif { margin-top: 14px; width: 100%; max-height: 320px; object-fit: contain; border-radius: 14px; background: #f8fafc; }
+    .pasos { margin: 14px 0 0 22px; font-size: 15px; line-height: 1.5; color: #1e293b; }
+    .pasos li { padding: 3px 0; }
     .completa { margin-top: 6px; }
     .completa h3 { margin-top: 16px; font-size: 15px; font-weight: 800; padding: 6px 10px; background: #f1f5f9; border-left: 4px solid var(--marca); border-radius: 4px; }
     .ej { display: flex; gap: 10px; align-items: baseline; padding: 8px 2px; border-bottom: 1px solid #e2e8f0; font-size: 14.5px; }
@@ -102,6 +107,27 @@
       </div>
     </div>
 
+    <!-- La pegatina de una máquina (R13): cómo se hace el ejercicio -->
+    <div id="v-maquina" class="oculto">
+      <div class="card">
+        <div class="etq">Cómo se usa</div>
+        <h1 id="m-nombre"></h1>
+        <p class="frase oculto" id="m-ejercicio"></p>
+        <div class="video oculto" id="m-video"></div>
+        <img class="gif oculto" id="m-imagen" alt="">
+        <p class="aviso" id="m-nota"></p>
+        <ol class="pasos oculto" id="m-pasos"></ol>
+      </div>
+      <div class="sin">
+        <h2>Lleva tu rutina en la app</h2>
+        <p>Con la app de <b id="m-gym">tu gimnasio</b> tienes tu rutina con el vídeo de cada ejercicio, apuntas lo que haces y ves cómo avanzas.</p>
+        <div class="tiendas">
+          <a class="tienda" id="m-ios" href="https://apps.apple.com/es/app/totalgains/id6756856683" rel="noopener"><small>Descárgala en</small><span>App Store</span></a>
+          <a class="tienda" id="m-android" href="https://play.google.com/store/apps/details?id=com.german92.titofitapp" rel="noopener"><small>Disponible en</small><span>Google Play</span></a>
+        </div>
+      </div>
+    </div>
+
     <div class="pie"><span id="pie-gym"></span>con <a href="https://totalgains.es/" rel="noopener">TotalGains</a></div>
   </div>
 
@@ -116,7 +142,7 @@
     var APP_WEB = 'https://totalgains.es/app/r/';
 
     var $ = function (id) { return document.getElementById(id); };
-    var ver = function (id) { ['v-cargando', 'v-aviso', 'v-rutina'].forEach(function (v) { $(v).classList.toggle('oculto', v !== id); }); };
+    var ver = function (id) { ['v-cargando', 'v-aviso', 'v-rutina', 'v-maquina'].forEach(function (v) { $(v).classList.toggle('oculto', v !== id); }); };
 
     // El código va en la ruta: /r/<código>/ (con o sin barra). `?c=` solo para probar en local.
     var m = /\/r\/([A-Za-z0-9]{6,40})\/?$/.exec(location.pathname);
@@ -212,6 +238,45 @@
       });
     }
 
+    // 🏷️ La pegatina de una máquina: vídeo (YouTube sin cookies), imagen, pasos y la frase del gimnasio.
+    function pintarMaquina(d) {
+      var m = d.machine || {};
+      ponerMarca(d.gym || {});
+      var gymName = (d.gym && d.gym.name) || 'tu gimnasio';
+      document.title = (m.name || 'Máquina') + ' · ' + gymName;
+      $('m-nombre').textContent = m.name || '';
+      $('m-gym').textContent = gymName;
+      if (m.exerciseName && m.exerciseName !== m.name) { $('m-ejercicio').textContent = m.exerciseName; $('m-ejercicio').classList.remove('oculto'); }
+      // Solo un id de YouTube con forma de serlo (11 caracteres): nada que venga del servidor se mete como HTML.
+      if (/^[A-Za-z0-9_-]{11}$/.test(m.videoId || '')) {
+        var f = document.createElement('iframe');
+        f.src = 'https://www.youtube-nocookie.com/embed/' + m.videoId + '?rel=0&playsinline=1';
+        f.title = 'Vídeo: ' + (m.exerciseName || m.name || '');
+        f.setAttribute('allow', 'accelerometer; encrypted-media; gyroscope; picture-in-picture; fullscreen');
+        f.setAttribute('allowfullscreen', '');
+        f.setAttribute('loading', 'lazy');
+        f.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+        $('m-video').appendChild(f);
+        $('m-video').classList.remove('oculto');
+      }
+      if (/^https:\/\//.test(m.imagen || '')) {
+        var img = $('m-imagen');
+        img.onerror = function () { img.classList.add('oculto'); };
+        img.alt = m.exerciseName || m.name || '';
+        img.src = m.imagen;
+        img.classList.remove('oculto');
+      }
+      if (m.note) { $('m-nota').textContent = m.note; $('m-nota').style.display = 'block'; }
+      var pasos = Array.isArray(m.instructions) ? m.instructions : [];
+      var lista = $('m-pasos'); lista.textContent = '';
+      pasos.forEach(function (p) { var li = document.createElement('li'); li.textContent = p; lista.appendChild(li); });
+      lista.classList.toggle('oculto', pasos.length === 0);
+      var ua = navigator.userAgent || '';
+      if (/iPhone|iPad|iPod/i.test(ua)) $('m-android').classList.add('oculto');
+      else if (/Android/i.test(ua)) $('m-ios').classList.add('oculto');
+      ver('v-maquina');
+    }
+
     function descanso(seg) {
       var n = Number(seg) || 0; if (!n) return '';
       var m = Math.floor(n / 60), r = n % 60;
@@ -253,12 +318,13 @@
     }
 
     function cargar() {
-      if (!code) { aviso('Escanea el cartel de tu gimnasio', 'Apunta con la cámara de tu móvil al código QR del cartel y aquí verás su rutina.', false); return; }
+      if (!code) { aviso('Escanea el cartel de tu gimnasio', 'Apunta con la cámara de tu móvil al código QR del cartel o de la máquina y lo verás aquí.', false); return; }
       ver('v-cargando');
       fetch(API + '/api/public/qr/' + encodeURIComponent(code), { headers: { Accept: 'application/json' } })
         .then(function (res) { return res.json().catch(function () { return {}; }).then(function (body) { return { status: res.status, body: body }; }); })
         .then(function (x) {
           if (x.status === 200 && x.body && x.body.success && x.body.kind === 'routine') { pintarRutina(x.body); return; }
+          if (x.status === 200 && x.body && x.body.success && x.body.kind === 'machine') { pintarMaquina(x.body); return; }
           if (x.status === 404) { aviso('Este cartel ya no está activo', 'Pide el nuevo en tu gimnasio y vuelve a escanear.', false); return; }
           if (x.status === 429) { aviso('Un momento', 'Hay muchas consultas seguidas desde esta conexión. Espera unos minutos y vuelve a escanear.', true); return; }
           aviso('Ahora mismo no podemos enseñarte esta página', 'Prueba otra vez en un momento.', true);
