@@ -84,7 +84,7 @@
 
       <div class="sin">
         <h2>¿Aún no tienes la app?</h2>
-        <p>Instálala, entra con tu cuenta (o créala en un minuto) y <b>vuelve a escanear este cartel</b>.</p>
+        <p id="sin-texto">Instálala, entra con tu cuenta (o créala en un minuto) y <b>vuelve a escanear este cartel</b>.</p>
         <div class="tiendas">
           <a class="tienda" id="ios" href="https://apps.apple.com/es/app/totalgains/id6756856683" rel="noopener"><small>Descárgala en</small><span>App Store</span></a>
           <a class="tienda" id="android" href="https://play.google.com/store/apps/details?id=com.german92.titofitapp" rel="noopener"><small>Disponible en</small><span>Google Play</span></a>
@@ -165,6 +165,13 @@
         fila.appendChild(b); fila.appendChild(n); caja.appendChild(fila);
       }
       caja.classList.toggle('oculto', porDia.length === 0);
+      // Si este cartel también da de alta (lo decide el gimnasio), se dice: quien aún no es socio
+      // entra en el gimnasio al abrirla. Si lo escaneó sin sesión, la app se acuerda al entrar.
+      if (d.signup === true) {
+        var nombreGym = (d.gym && d.gym.name) || 'el gimnasio';
+        $('nota').textContent = 'Se pone en tu app al momento. ¿Aún no eres socio? Al abrirla te das de alta en ' + nombreGym + '.';
+        $('sin-texto').textContent = 'Instálala y entra con tu cuenta (o créala en un minuto): al entrar se abre esta rutina sola. Si no, vuelve a escanear este cartel.';
+      }
       prepararBoton();
       ver('v-rutina');
     }
