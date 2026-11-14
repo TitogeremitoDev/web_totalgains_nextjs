@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Instagram, Globe, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
+import { Instagram, Globe, Brain, Clock, Star, ArrowLeft, Rocket } from "lucide-react";
 
 import { softwareApplicationNode } from "@/data/productSchema";
 export const metadata = {
@@ -122,6 +122,10 @@ export default function CasoLorenaEses() {
               <a href="https://equilibriobylor.com/" target="_blank" rel="noopener"
                  style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "0.82rem", color: "var(--primary-light)", textDecoration: "none" }}>
                 <Globe size={13} /> equilibriobylor.com
+              </a>
+              <a href="https://equilibriobylor.com/psiconutricion/" target="_blank" rel="noopener"
+                 style={{ display: "inline-flex", alignItems: "center", gap: 5, fontSize: "0.82rem", color: "var(--primary-light)", textDecoration: "none" }}>
+                <Brain size={13} /> Psiconutrición online
               </a>
             </div>
           </div>
