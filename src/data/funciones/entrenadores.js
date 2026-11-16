@@ -230,6 +230,13 @@ const entrenadores = {
                   media: { tipo: 'video', src: '/video/app-seguimiento.mp4', poster: '/video/app-seguimiento.webp', pw: 720, ph: 1280, w: 720, h: 1280, vertical: true, alt: 'Pantalla de seguimiento del atleta en la app de TotalGains', pie: 'El seguimiento, tal y como lo ve el atleta en su móvil.' } },
                 { titulo: 'Lo que tú ves', items: [4, 5, 6, 7, 8, 9, 10, 11, 12],
                   media: { tipo: 'imagen', src: '/screenshots/perfil-videos.webp', w: 600, h: 1339, alt: 'Vídeos de técnica del atleta en la app', pie: 'Los vídeos de técnica del atleta, con tus anotaciones.', vertical: true } },
+                /* Bloque del 16-nov-2026 (German: «1 para la web y otro para los tutoriales de entrenadores»): el «Centro de
+                   mando del seguimiento» de la 1.4.5. Cada línea sale de CHANGELOG.md («El seguimiento de un cliente, en menos
+                   de 10 minutos», 2026-11-15) y de las pantallas de la app. Vídeo: pieza corta de 35 s, proyecto hyperframes
+                   totalgains-web-centro-mando (capturas reales con datos inventados); el paso a paso largo
+                   (coach-centro-mando.mp4) es el de la app. */
+                { titulo: 'Su informe, en menos de 10 minutos', items: [13, 14, 15, 16, 17],
+                  media: { tipo: 'video', src: '/video/coach-centro-mando-presentacion.mp4', poster: '/video/coach-centro-mando-presentacion.webp', pw: 1200, ph: 675, w: 1280, h: 720, alt: 'El centro de mando del seguimiento en TotalGains: todo lo del atleta al lado de su informe de feedback, cada dato entra como una frase, la gráfica de peso, la figura y el vídeo de técnica dentro del informe, y cómo le llega al atleta en su móvil', pie: 'El informe de feedback con todo lo del atleta al lado: pantallas reales de la app, con datos de ejemplo.' } },
             ],
             items: [
                 { t: 'Check-in diario y semanal', d: 'El atleta registra su día y su semana desde la app, con recordatorios en su franja horaria.' },
@@ -245,6 +252,11 @@ const entrenadores = {
                   { t: 'Récords de resistencia', d: 'Su tirada más larga y su sesión más larga, para el que corre o entrena híbrido.' },
                   { t: 'Analíticas de sangre con lectura por IA', d: 'Sube el PDF de su analítica (panel completo, glucosa, electrolitos u hormonas) y la IA te la resume. Es información, no un diagnóstico.' },
                   { t: 'Calendario de competición', d: 'Las fechas a las que va el atleta, para planificar hacia ellas.' },
+                  { t: 'El seguimiento de un atleta, con todo lo suyo al lado', d: 'Al hacer su informe de feedback tienes al lado, en pestañas, lo que ha llegado desde el último, su peso, sus medidas, su semanal, sus entrenos, sus fotos y sus formularios. También en el móvil.' },
+                  { t: 'Cada dato, al informe con un toque', d: 'Entra como una frase completa que puedes retocar. Y el botón «Hacer el seguimiento» de su ficha te dice cuántas cosas han llegado.' },
+                  { t: 'Su gráfica, su figura y tu vídeo, dentro del informe', d: 'Su peso semana a semana, la figura con los centímetros que ha cambiado y un vídeo tuyo de técnica. Tu atleta lo ve en grande en su móvil.' },
+                  { t: 'La IA le da forma, solo si la pulsas', d: '«Redactar con lo añadido» reescribe lo que has metido desde el panel. Lo que escribes a mano no se toca, y se puede deshacer.' },
+                  { t: 'Le llega al chat y marca su plan', d: 'Recibe un aviso y un mensaje con el botón «Ver mi feedback». Dentro marca las tareas de su plan, y en su siguiente informe ves cuáles ha cumplido.' },
             ],
         },
         {
