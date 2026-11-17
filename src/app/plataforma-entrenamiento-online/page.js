@@ -57,7 +57,7 @@ const testimonials = [
 
 const competencia = [
   { tool: "TotalGains Pro", precio: "89,90 €/mes", ia: true, marca: true, esp: true },
-  { tool: "Trainerize Pro 100", precio: "≈352 €/mes", ia: false, marca: false, esp: false },
+  { tool: "Trainerize Pro 100", precio: "≈352 €/mes", ia: false, marca: "Pago único de 169 $", esp: false },
   { tool: "TrueCoach Pro", precio: "≈145 €/mes", ia: false, marca: false, esp: false },
 ];
 

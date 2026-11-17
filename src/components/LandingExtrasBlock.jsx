@@ -8,9 +8,17 @@ import { Check, X, Star } from "lucide-react";
  * Props:
  *   plans:        [{ name, price, incl, extras[], highlight? }] — 3 tarjetas de precios
  *   testimonials: [{ name, handle, role, quote, result, href }] — cards de testimonio
- *   competencia:  [{ tool, precio, ia:boolean, marca:boolean, esp:boolean }] — filas comparativa
+ *   competencia:  [{ tool, precio, ia, marca, esp }] — filas comparativa. Cada celda: true (✓), false (✗)
+ *                 o un texto corto cuando no es ni sí ni no (p. ej. «Pago único de 169 $»): un ✗ donde el
+ *                 rival lo tiene de pago aparte sería falso.
  *   pageContext:  string — descripción corta del contexto de la página (para el <h2> comparativa)
  */
+/* Celda de la comparativa: ✓, ✗ o un texto corto cuando no es ni sí ni no. */
+function Celda({ v }) {
+  if (typeof v === "string") return <span style={{ fontSize: "0.78rem", color: "var(--text-secondary,#aaa)" }}>{v}</span>;
+  return v ? <Check size={16} color="#22c55e" style={{ display: "inline" }} /> : <X size={16} color="#ef4444" style={{ display: "inline" }} />;
+}
+
 export default function LandingExtrasBlock({ plans = [], testimonials = [], competencia = [], pageContext = "" }) {
   return (
     <>
@@ -91,9 +99,9 @@ export default function LandingExtrasBlock({ plans = [], testimonials = [], comp
                   <tr key={row.tool} style={{ background: i === 0 ? "rgba(34,197,94,0.06)" : undefined }}>
                     <td style={{ padding: 12, fontWeight: i === 0 ? 700 : 400 }}>{row.tool}</td>
                     <td style={{ padding: 12 }}>{row.precio}</td>
-                    <td style={{ padding: 12, textAlign: "center" }}>{row.ia ? <Check size={16} color="#22c55e" style={{ display: "inline" }} /> : <X size={16} color="#ef4444" style={{ display: "inline" }} />}</td>
-                    <td style={{ padding: 12, textAlign: "center" }}>{row.marca ? <Check size={16} color="#22c55e" style={{ display: "inline" }} /> : <X size={16} color="#ef4444" style={{ display: "inline" }} />}</td>
-                    <td style={{ padding: 12, textAlign: "center" }}>{row.esp ? <Check size={16} color="#22c55e" style={{ display: "inline" }} /> : <X size={16} color="#ef4444" style={{ display: "inline" }} />}</td>
+                    <td style={{ padding: 12, textAlign: "center" }}><Celda v={row.ia} /></td>
+                    <td style={{ padding: 12, textAlign: "center" }}><Celda v={row.marca} /></td>
+                    <td style={{ padding: 12, textAlign: "center" }}><Celda v={row.esp} /></td>
                   </tr>
                 ))}
               </tbody>
