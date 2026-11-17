@@ -33,7 +33,7 @@ export default function sitemap() {
         { url: `${baseUrl}/base-datos-alimentos-fitness/`, lastModified: '2026-09-26' },
         { url: `${baseUrl}/app-entrenador-personal-online/`, lastModified: '2026-08-22' },
         { url: `${baseUrl}/gestion-clientes-fitness/`, lastModified: '2026-08-22' },
-        { url: `${baseUrl}/plataforma-entrenamiento-online/`, lastModified: '2026-08-22' },
+        { url: `${baseUrl}/plataforma-entrenamiento-online/`, lastModified: '2026-11-17' },
         { url: `${baseUrl}/software-nutricionista-online/`, lastModified: '2026-09-26' },
         { url: `${baseUrl}/casos-de-exito/`, lastModified: '2026-08-22' },
         { url: `${baseUrl}/casos-de-exito/nacho-pulido/`, lastModified: '2026-08-22' },

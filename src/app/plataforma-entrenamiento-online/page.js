@@ -23,7 +23,7 @@ const features = [
   { icon: <Globe size={22} />, title: "Trabaja desde cualquier lugar", desc: "Tu panel de control accesible desde cualquier navegador. Gestiona tus clientes desde casa, el gimnasio o de viaje." },
   { icon: <Video size={22} />, title: "Feedback en vídeo", desc: "Envía y recibe vídeos de análisis técnico directamente en la plataforma. Sin Wetransfer ni Dropbox." },
   { icon: <LayoutDashboard size={22} />, title: "Panel de control completo", desc: "Una vista global de todos tus clientes: quién entrena, quién no, quién renueva pronto y quién necesita atención." },
-  { icon: <Zap size={22} />, title: "Creación rápida de rutinas", desc: "Diseña periodizaciones completas en minutos con el constructor de rutinas. Semanas, días y ejercicios con progresión automática." },
+  { icon: <Zap size={22} />, title: "Creación rápida de rutinas", desc: "Periodizaciones completas con IA usando solo los ejercicios de tu biblioteca. Y al cambiar de rutina, cada ejercicio arranca con los kilos de su última sesión." },
   { icon: <Users size={22} />, title: "Onboarding de clientes", desc: "Incorpora nuevos clientes con un formulario inicial que recoge toda su información antes de la primera sesión." },
   { icon: <TrendingUp size={22} />, title: "Escalable sin límites", desc: "Pasa de 5 a 50 clientes sin necesidad de contratar ayuda administrativa. La plataforma crece contigo." },
 ];
@@ -36,6 +36,7 @@ const useCases = [
 ];
 
 const faqs = [
+  { q: "¿Qué es una plataforma de entrenamiento online y qué debe incluir?", a: "Es el software con el que un entrenador lleva a sus clientes a distancia: les manda la rutina y la dieta, recoge cómo entrenan y cómo se sienten, revisa su progreso y habla con ellos en un solo sitio. Lo mínimo es una app para el cliente, un creador de rutinas, seguimiento con check-ins y chat. TotalGains añade IA de rutinas y dietas, cobros dentro de la app y una app con la marca del entrenador, y es gratis hasta 5 atletas." },
   { q: "¿Qué tiene el plan gratuito de TotalGains y en qué se diferencia de la competencia?", a: "TotalGains tiene el plan gratuito más generoso del mercado hispano: 5 atletas de por vida, sin tarjeta de crédito y sin caducidad. Trainerize Basic ofrece 1 cliente; TrainerStudio Free ofrece 3; Harbiz no tiene plan gratuito permanente (arranca a 22,99 €/mes con IVA para el mismo tramo de 5 clientes). Puedes empezar en https://totalgains.es/onboarding/ sin coste." },
   { q: "¿Necesito conocimientos técnicos para usar la plataforma?", a: "No. TotalGains está diseñado para que un entrenador, no un programador, lo configure y use desde el primer día. El equipo de soporte te acompaña en la configuración inicial. En 15-30 minutos de exploración ya puedes crear tu primer cliente, generar una rutina con IA en menos de 2 minutos y programar el primer check-in semanal estructurado." },
   { q: "¿Puedo usar TotalGains si también doy clases presenciales?", a: "Perfectamente. TotalGains funciona igual para entrenamiento online y presencial. Muchos entrenadores lo usan simultáneamente: clientes online con seguimiento estructurado en la app y clientes presenciales con la misma ficha de progreso, revisiones semanales y comunicación centralizada. La plataforma transversal facilita el paso de un modelo al otro sin cambiar de herramienta." },
@@ -43,7 +44,8 @@ const faqs = [
   { q: "¿Qué diferencia a TotalGains de plataformas anglosajonas como Trainerize o TrueCoach?", a: "Cuatro diferencias verificables: (1) soporte nativo en español, no traducción automática; (2) base de +240.000 alimentos españoles con marcas de supermercado real, no USDA en inglés; (3) IA generativa de rutinas y dietas que trabaja con tu biblioteca propia (cero alucinaciones), no ChatGPT genérico; (4) precios con funcionalidad completa Pro a 89,90 €/mes con IVA, incluidos app marca blanca y coach insights (Trainerize Pro 50 completo ≈250 €/mes con IVA)." },
   { q: "¿Cuánto tiempo lleva la migración desde otra plataforma?", a: "Menos de 5 días para carteras de 30-60 clientes. La IA de TotalGains transcribe rutinas y dietas antiguas en menos de 2 minutos por documento, ya vengas de Trainerize, Harbiz, MyPT Hub, Excel, PDFs o WhatsApp. El equipo hace la importación estructurada, el coach hace la comunicación al cliente con plantillas preparadas. Sin coste extra y sin cláusulas de mínima duración: puedes cancelar en cualquier momento." },
   { q: "¿La plataforma escala si paso de 20 a 100 clientes?", a: "Sí. El plan Pro (89,90 €/mes con IVA) da soporte hasta 100 clientes activos. La app marca blanca va incluida en todos los planes, también en el Starter. Por encima de 100, el plan Unlimited (149,90 €/mes con IVA) elimina el tope y añade multi-coach para equipos. Coaches como Nacho Pulido documentan el paso de 15 a 40+ clientes con la misma plataforma y sin cambiar de plan hasta cruzar los umbrales." },
-  { q: "¿Puedo probar TotalGains sin compromiso?", a: "Sí. 14 días de prueba gratuita sin tarjeta de crédito. Configuras tu plataforma, migras 3-5 clientes de muestra, generas rutinas con IA y decides si el flujo te encaja. Sin permanencia ni cláusulas de mínima duración; puedes cancelar desde el panel en cualquier momento." },
+  { q: "¿Puedo cobrar a mis clientes desde la plataforma?", a: "Sí. Conectas tu propia cuenta de Stripe y tus atletas pagan su cuota o su bono desde la app, o activan la cuota automática para que se cobre sola. El dinero va directo a tu cuenta y TotalGains no se queda comisión: solo se aplica la tarifa de Stripe." },
+  { q: "¿Puedo probar TotalGains sin compromiso?", a: "Sí, de dos formas: con el plan gratuito de 5 atletas, sin tarjeta y sin caducidad, o con 14 días de prueba de los planes de pago, también sin tarjeta. Configuras tu plataforma, migras 3-5 clientes de muestra, generas rutinas con IA y decides si el flujo te encaja. Sin permanencia ni cláusulas de mínima duración; puedes cancelar desde el panel en cualquier momento." },
 ];
 
 const pricingPlans = planesResumen("clientes");
@@ -92,7 +94,7 @@ export default function PlataformaEntrenamientoOnline() {
       <LandingPageTemplate
       badge="Plataforma de entrenamiento online"
       h1="La Plataforma de Entrenamiento Online para Coaches Profesionales"
-      subtitle="Todo lo que necesitas para ofrecer entrenamiento online de alto nivel: gestión de atletas, rutinas, seguimiento y comunicación desde una sola plataforma accesible en todo el mundo."
+      subtitle="Una sola plataforma en español para entrenar online: rutinas con IA a partir de tu biblioteca, dietas, seguimiento semanal, cobros dentro de la app y una app con tu marca para tus clientes. Gratis hasta 5 atletas."
       features={features}
       useCases={useCases}
       ctaText="Empieza tu plataforma gratis"

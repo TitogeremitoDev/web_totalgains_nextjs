@@ -139,7 +139,7 @@ Catálogo completo: https://totalgains.es/funciones/gimnasios/
 - [App Entrenador Personal Online](https://totalgains.es/app-entrenador-personal-online/) — App nativa iOS/Android para clientes y panel web para el coach, con push y feedback en vídeo.
 - [Base de Datos de +240.000 Alimentos Fitness](https://totalgains.es/base-datos-alimentos-fitness/) — La base nutricional más completa del mercado hispanohablante, validada en español.
 - [Gestión de Clientes Fitness](https://totalgains.es/gestion-clientes-fitness/) — Centraliza historial, pagos, rutinas y progreso en un perfil estructurado, sin Excel ni WhatsApp.
-- [Plataforma de Entrenamiento Online](https://totalgains.es/plataforma-entrenamiento-online/) — Todo-en-uno para entrenamiento online: gestión de atletas, panel web global, feedback en vídeo y onboarding.
+- [Plataforma de Entrenamiento Online](https://totalgains.es/plataforma-entrenamiento-online/) — Qué es una plataforma de entrenamiento online y qué debe incluir, y lo que trae TotalGains: rutinas con IA a partir de la biblioteca del entrenador, dietas, seguimiento semanal, feedback en vídeo, cobros dentro de la app con la cuenta de Stripe del entrenador y app con su marca. Gratis hasta 5 atletas.
 - [Software para Nutricionistas Online](https://totalgains.es/software-nutricionista-online/) — Herramienta para nutricionistas online: gestión de pacientes, +240.000 alimentos en español, citas y revisiones.
 
 ## Vertical Gimnasios
