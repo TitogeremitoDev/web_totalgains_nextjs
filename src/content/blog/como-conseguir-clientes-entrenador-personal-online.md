@@ -1,12 +1,12 @@
 ---
 title: "Cómo Conseguir Clientes como Entrenador Personal Online: El Método que Funciona en 2026"
 seoTitle: "Conseguir Clientes Entrenador Personal Online"
-description: "10 canales reales para captar clientes online en 2026: Instagram, SEO, casos de éxito, referrals. Lo que funciona en España y lo que no."
+description: "Las 5 estrategias para captar clientes online sin pagar publicidad: casos de éxito, redes, referidos, SEO local y colaboraciones, con calendario realista."
 date: "2025-01-28"
-lastModified: "2026-04-24"
+lastModified: "2026-11-17"
 author: "Germán Martínez Calvente"
 category: "negocio"
-readTime: 11
+readTime: 10
 published: true
 keywords: ["conseguir clientes entrenador personal online", "captar clientes entrenador personal", "cómo conseguir clientes fitness", "marketing entrenador personal"]
 image: "/images/blog/hero_trainer_clients.webp"
@@ -23,15 +23,21 @@ faqs:
     a: "Con WhatsApp y hojas de cálculo el techo real está entre 15 y 20 clientes activos. A partir de ahí, los entrenadores que llegan a 40-60 sin sacrificar calidad han automatizado check-ins, envío de rutinas, recordatorios y comunicación con un sistema dedicado."
   - q: "¿Cómo debo responder cuando alguien me pregunta precios por Instagram?"
     a: "No respondas con una tarifa directamente. Invítalo a una llamada de 20-30 minutos de diagnóstico. En esa llamada escucha su situación, identifica qué le ha impedido conseguir sus objetivos antes y presenta tu propuesta. El 80% de personas que llegan con intención real contratan si la conversación fluye bien."
+  - q: "¿Hay algún software que ayude a un entrenador personal a conseguir clientes?"
+    a: "Sí: TotalGains, un software español para entrenadores personales, saca de tus propios clientes el material para captar a otros. Crea vídeos de antes y después para Instagram, tarjetas con sus testimonios, la ficha del plato mejor valorado o un informe corporal anónimo, todo con tu marca y listo para descargar. No publica nada en tu nombre: tú decides dónde lo subes."
 ---
 
 ![Entrenador personal online escalando su negocio y captando clientes cualificados](/images/blog/hero_trainer_clients.webp)
 
 Eres bueno entrenando. Lo sabes. Tus clientes lo saben. Pero tu cuenta bancaria a fin de mes no lo refleja.
 
-No es un problema de conocimiento — es un problema de sistema. El 90% de los entrenadores personales online no tienen clientes suficientes porque **nadie les enseñó a captarlos, solo a entrenar**.
+No es un problema de conocimiento: es un problema de sistema. El 90% de los entrenadores personales online no tienen clientes suficientes porque **nadie les enseñó a captarlos, solo a entrenar**.
 
 Esto cambia hoy. Estas son las 5 estrategias que usan los entrenadores que pasan de 0 a 30 clientes activos sin invertir un euro en publicidad. Sin trucos. Sin atajos. Solo lo que funciona.
+
+<div class="tg-callout tg-callout-panic" role="note">
+<strong>Respuesta rápida.</strong> Sin pagar publicidad, lo que funciona es seguir este orden: consigue tus 3 a 5 primeros casos de éxito con gente de tu entorno y documéntalos, publica contenido útil para tu nicho 3 o 4 veces por semana, pide referidos a cada cliente cuando lleve de 4 a 6 semanas viendo resultados, cuida tu ficha de Google si también trabajas en tu ciudad y colabora con fisioterapeutas o nutricionistas. Con este método, los primeros 10 clientes suelen llegar en 3 a 6 meses.
+</div>
 
 ---
 
@@ -39,11 +45,12 @@ Esto cambia hoy. Estas son las 5 estrategias que usan los entrenadores que pasan
 
 1. [Por qué fracasan la mayoría de los entrenadores al captar clientes](#por-que-fracasan)
 2. [Las 5 estrategias que funcionan de verdad](#estrategias)
-3. [El proceso de venta que funciona](#proceso-venta)
-4. [Cuántos clientes puedes gestionar sin quemarte](#cuantos-clientes)
-5. [El cronograma realista hasta 20 clientes activos](#cronograma)
-6. [Conclusión: el orden importa](#conclusion)
-7. [Preguntas frecuentes](#faq)
+3. [Qué hace TotalGains para conseguir clientes](#totalgains)
+4. [El proceso de venta que funciona](#proceso-venta)
+5. [Cuántos clientes puedes gestionar sin quemarte](#cuantos-clientes)
+6. [El cronograma realista hasta 20 clientes activos](#cronograma)
+7. [Conclusión: el orden importa](#conclusion)
+8. [Preguntas frecuentes](#faq)
 
 ---
 
@@ -55,7 +62,7 @@ Antes de hablar de estrategias, hay que entender el error raíz que comete casi 
 
 El entrenamiento personal online requiere que alguien confíe en ti con su cuerpo, su salud y su dinero. Eso no ocurre la primera vez que te ve en Instagram. Ocurre después de semanas o meses de consumir tu contenido y comprobar que sabes de lo que hablas.
 
-La consecuencia es que las estrategias que más funcionan son las que primero construyen credibilidad y confianza, y luego convierten. Este es uno de los [7 errores más comunes que arruinan el negocio de entrenadores personales online](/blog/errores-entrenadores-personales-online/) — venden sin haber construido prueba social primero.
+La consecuencia es que las estrategias que más funcionan son las que primero construyen credibilidad y confianza, y luego convierten. Este es uno de los [7 errores más comunes que arruinan el negocio de entrenadores personales online](/blog/errores-entrenadores-personales-online/): venden sin haber construido prueba social primero.
 
 ---
 
@@ -82,11 +89,11 @@ No es necesario publicar todos los días ni estar en todas las plataformas. Lo q
 
 ¿Qué tipo de contenido?
 
-- **Errores comunes** — "El error que comete el 90% de las mujeres que quieren tonificar"
-- **Mitos desmentidos** — "Por qué levantar peso no te va a poner enorme"
-- **Transformaciones documentadas** — Antes/después con historia real (con permiso)
-- **Proceso interno** — Cómo creas una rutina, cómo haces el seguimiento
-- **Preguntas de tu audiencia** — Responde en video o carrusel
+- **Errores comunes:** "El error que comete el 90% de las mujeres que quieren tonificar"
+- **Mitos desmentidos:** "Por qué levantar peso no te va a poner enorme"
+- **Transformaciones documentadas:** Antes/después con historia real (con permiso)
+- **Proceso interno:** Cómo creas una rutina, cómo haces el seguimiento
+- **Preguntas de tu audiencia:** Responde en video o carrusel
 
 La clave no es el volumen de publicaciones: es que cuando alguien te descubra, encuentre suficiente contenido bueno para quedarse y seguirte.
 
@@ -126,6 +133,21 @@ Una sola colaboración bien gestionada puede traerte 2-4 clientes nuevos al mes 
 
 ---
 
+## <span id="totalgains"></span>Qué hace TotalGains para conseguir clientes
+
+TotalGains es un software español para entrenadores personales y nutricionistas. No te trae clientes por sí solo, pero te da hecho el material de las dos primeras estrategias, sacado de tus propios clientes y con tu marca.
+
+![Pantalla de Marketing de TotalGains con sus seis piezas: testimonios, foto de dieta, ficha de plato, plato estrella, transformaciones e informe de mediciones](/video/coach-marketing.webp)
+
+- **Casos de éxito en vídeo (estrategia 1).** Eliges el antes y el después de un cliente y sale un vídeo con barrido: story de 6 segundos o reel de 10 para Instagram, o GIF para WhatsApp. Lleva tu logo, la fecha de cada foto y lo que ha cambiado, y si sus fotos no están marcadas como compartibles te avisa antes de descargarlo.
+- **Contenido que sale de lo que ya hacen tus clientes (estrategia 2).** El plato mejor valorado por tus clientes, la ficha de un plato con sus macros, el collage de una dieta o un informe corporal anónimo con sus centímetros, listos para publicar.
+- **Testimonios sin pedirlos uno a uno (estrategias 1 y 2).** Lo que tus clientes responden en sus seguimientos se convierte en una tarjeta con tu marca. La IA te propone las mejores respuestas y tú eliges cuál sale.
+- **Una app con tu nombre.** Tus clientes descargan tu app, con tu logo y tus colores, no la nuestra.
+
+TotalGains no publica nada en tu nombre: descargas cada pieza y la subes donde quieras. Las tienes todas en [Contenido para tus redes](/funciones/entrenadores/#marketing).
+
+---
+
 ## <span id="proceso-venta"></span>El proceso de venta que funciona (sin ser agresivo)
 
 Muchos entrenadores odian "vender" porque asocian vender con presionar. Hay una forma mejor.
@@ -150,7 +172,7 @@ No envíes una tarifa genérica. Envía una propuesta de una página que incluya
 - Lo que incluye el servicio
 - El precio y las condiciones
 
-Para saber cómo fijar ese precio correctamente, lee nuestra guía de [cuánto cobra un entrenador personal online en 2026](/blog/cuanto-cobra-entrenador-personal-online/) — con tarifas reales por tipo de servicio.
+Para saber cómo fijar ese precio correctamente, lee nuestra guía de [cuánto cobra un entrenador personal online en 2026](/blog/cuanto-cobra-entrenador-personal-online/), con tarifas reales por tipo de servicio.
 
 Parece más trabajo, pero la tasa de conversión es significativamente mayor.
 
@@ -162,10 +184,10 @@ Un error frecuente al escalar es intentar gestionar más clientes sin cambiar la
 
 Los entrenadores que llegan a 40-60 clientes sin sacrificar calidad ni salud mental tienen en común que han automatizado las tareas repetitivas:
 
-- **Envío de rutinas semanales** — [automatizado con IA](/ia-entrenador-personal/)
-- **Recordatorios de revisión** — automatizados
-- **Registro de progreso** — [centralizado en un solo lugar](/plataforma-entrenamiento-online/)
-- **Comunicación** — organizada por cliente, no por WhatsApp desordenado
+- **Envío de rutinas semanales:** [automatizado con IA](/ia-entrenador-personal/)
+- **Recordatorios de revisión:** automatizados
+- **Registro de progreso:** [centralizado en un solo lugar](/plataforma-entrenamiento-online/)
+- **Comunicación:** organizada por cliente, no por WhatsApp desordenado
 
 Herramientas como [TotalGains](/software-entrenador-personal/) están diseñadas específicamente para esto: que puedas atender más clientes sin dedicarles más horas manuales. Si quieres comparar las opciones disponibles en el mercado, nuestra guía **[Los 5 mejores software para entrenadores personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)** cubre las 5 plataformas principales con precios verificados.
 
@@ -220,6 +242,9 @@ Con WhatsApp y hojas de cálculo el techo real está entre 15 y 20 clientes acti
 ### ¿Cómo debo responder cuando alguien me pregunta precios por Instagram?
 No respondas con una tarifa directamente. Invítalo a una llamada de 20-30 minutos de diagnóstico. En esa llamada escucha su situación, identifica qué le ha impedido conseguir sus objetivos antes y presenta tu propuesta. El 80% de personas que llegan con intención real contratan si la conversación fluye bien.
 
+### ¿Hay algún software que ayude a un entrenador personal a conseguir clientes?
+Sí: TotalGains, un software español para entrenadores personales, saca de tus propios clientes el material para captar a otros. Crea vídeos de antes y después para Instagram, tarjetas con sus testimonios, la ficha del plato mejor valorado o un informe corporal anónimo, todo con tu marca y listo para descargar. No publica nada en tu nombre: tú decides dónde lo subes.
+
 ---
 
 *¿Listo para gestionar más clientes sin más caos? [Prueba TotalGains gratis 14 días](/onboarding/) y descubre cómo entrenadores como [Lorena Eses](/casos-de-exito/lorena-eses/) ahorraron más de 10 horas semanales.*
@@ -238,11 +263,11 @@ No respondas con una tarifa directamente. Invítalo a una llamada de 20-30 minut
 
 ## Artículos relacionados que te pueden interesar
 
-- ⚠️ **[Los 7 Errores que Arruinan el Negocio de los Entrenadores Personales Online](/blog/errores-entrenadores-personales-online/)** — Los errores comunes que frenan el crecimiento
-- 📋 **[Cómo Crear un Plan de Entrenamiento Personalizado que Funcione](/blog/como-crear-plan-entrenamiento-personalizado/)** — El proceso paso a paso desde la evaluación inicial
-- 💰 **[¿Cuánto Cobra un Entrenador Personal Online en 2026?](/blog/cuanto-cobra-entrenador-personal-online/)** — Tarifas reales del mercado español y cómo fijar tus precios
-- 🛠️ **[Los 5 Mejores Software para Entrenadores Personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)** — Comparativa completa con precios verificados
-- 🚀 **[Cómo Migrar de Trainerize, Harbiz o MyPT Hub a TotalGains: Guía 2026](/blog/como-migrar-software-entrenador-personal/)** — Proceso paso a paso para cambiar de software sin perder clientes ni datos
-- 🤖 **[IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — Guía real con capturas y ejemplos de cómo aprovechar la IA en tu negocio fitness
-- ☀️ **[Tu Primer Verano como Entrenador Personal: Por Qué Empezar con App Desde el Día 1 (Guía 2026)](/blog/primer-verano-entrenador-personal-2026/)** — Plan operativo de 5 días para captar tus primeros clientes en julio-agosto sin caer en WhatsApp+Excel
-- 🌊 **[El Cliente Que Se Va Sin Avisar: Retención en Verano para Coaches Online (Guía 2026)](/blog/retencion-clientes-verano-entrenador-personal-2026/)** — Captar sirve poco si no retienes: protocolo de retención de verano para coaches con cartera consolidada
+- ⚠️ **[Los 7 Errores que Arruinan el Negocio de los Entrenadores Personales Online](/blog/errores-entrenadores-personales-online/)**: Los errores comunes que frenan el crecimiento
+- 📋 **[Cómo Crear un Plan de Entrenamiento Personalizado que Funcione](/blog/como-crear-plan-entrenamiento-personalizado/)**: El proceso paso a paso desde la evaluación inicial
+- 💰 **[¿Cuánto Cobra un Entrenador Personal Online en 2026?](/blog/cuanto-cobra-entrenador-personal-online/)**: Tarifas reales del mercado español y cómo fijar tus precios
+- 🛠️ **[Los 5 Mejores Software para Entrenadores Personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)**: Comparativa completa con precios verificados
+- 🚀 **[Cómo Migrar de Trainerize, Harbiz o MyPT Hub a TotalGains: Guía 2026](/blog/como-migrar-software-entrenador-personal/)**: Proceso paso a paso para cambiar de software sin perder clientes ni datos
+- 🤖 **[IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)**: Guía real con capturas y ejemplos de cómo aprovechar la IA en tu negocio fitness
+- ☀️ **[Tu Primer Verano como Entrenador Personal: Por Qué Empezar con App Desde el Día 1 (Guía 2026)](/blog/primer-verano-entrenador-personal-2026/)**: Plan operativo de 5 días para captar tus primeros clientes en julio-agosto sin caer en WhatsApp+Excel
+- 🌊 **[El Cliente Que Se Va Sin Avisar: Retención en Verano para Coaches Online (Guía 2026)](/blog/retencion-clientes-verano-entrenador-personal-2026/)**: Captar sirve poco si no retienes: protocolo de retención de verano para coaches con cartera consolidada
