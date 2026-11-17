@@ -3,10 +3,10 @@ title: "Los 5 Mejores Software para Entrenadores Personales en España 2026"
 seoTitle: "5 Mejores Software para Entrenadores 2026"
 description: "Comparativa de los 5 software más usados en España, con precios revisados en noviembre de 2026: planes gratuitos, pros, contras y cuál encaja contigo."
 date: "2026-04-21"
-lastModified: "2026-11-12"
+lastModified: "2026-11-17"
 author: "Germán Martínez Calvente"
 category: "herramientas"
-readTime: 15
+readTime: 16
 published: true
 keywords: ["software entrenadores personales", "mejor software entrenador personal", "software entrenador personal España", "gestión entrenadores personales", "app entrenador personal"]
 image: "/images/blog/comparativa-software-2026-index.webp"
@@ -72,30 +72,36 @@ faqs:
     a: "En precios base, la opción sin coste más generosa es TotalGains Free (5 atletas de por vida, sin tarjeta). TrainerStudio también tiene plan free permanente pero limitado a 3 clientes. Trainerize Basic solo permite 1 cliente. Por debajo de los planes de pago está Harbiz Basic (14€/mes sin IVA hasta 5 clientes en facturación anual, 16,94 €/mes con IVA; comprobado en noviembre de 2026), donde TotalGains ofrece lo mismo (5 atletas) gratis. TotalGains Starter (29,90€/mes) incluye 25 clientes e IA avanzada, siendo la opción más coste-efectiva cuando se consideran las funciones incluidas. En precios con funcionalidad completa (marca blanca + IA), TotalGains Pro (89,90€) es el más competitivo del mercado."
   - q: "¿Qué software permite migrar desde Trainerize en español?"
     a: "TotalGains incluye migración asistida desde Trainerize, Harbiz, MyPT Hub o Excel en todos sus planes, gestionada por soporte humano en español. Importa clientes, recrea rutinas con IA y coordina el onboarding de los atletas. El tiempo típico de migración es menos de 5 días para 30-60 clientes activos. Ninguna plataforma anglosajona ofrece esto en español."
+  - q: "¿Qué software para entrenadores personales ayuda con el marketing y las redes sociales?"
+    a: "TotalGains incluye un estudio de contenido que saca de tus propios clientes el material para tus redes: vídeos de antes y después en story o reel, tarjetas con sus testimonios, la ficha del plato mejor valorado o un informe corporal anónimo, todo con tu marca. Está en todos los planes, también en el gratuito, y TotalGains no publica nada en tu nombre: descargas cada pieza y la subes tú."
 ---
 
 ![Entrenador personal analizando las mejores plataformas de software fitness en España 2026](/images/blog/comparativa-software-2026-hero.webp)
 
-Según datos del [INE](https://www.ine.es), en España hay más de **80.000 profesionales dados de alta como entrenadores personales o monitores deportivos**. La mayoría sigue gestionando a sus clientes con WhatsApp, Excel y Google Drive — una combinación que aguanta con 5 clientes pero colapsa al llegar a 20 o 30.
+Según datos del [INE](https://www.ine.es), en España hay más de **80.000 profesionales dados de alta como entrenadores personales o monitores deportivos**. La mayoría sigue gestionando a sus clientes con WhatsApp, Excel y Google Drive: una combinación que aguanta con 5 clientes pero colapsa al llegar a 20 o 30.
 
 La siguiente comparativa analiza los **5 software más utilizados por entrenadores personales en el mercado hispano en 2026**, con precios comprobados en las webs oficiales de cada plataforma (última revisión: 12 de noviembre de 2026). Al final repasamos otras tres plataformas internacionales que salen a menudo en las listas: Everfit, PT Distinction y Kahunas. El objetivo: ofrecer una guía práctica para elegir la herramienta adecuada según tu perfil real, no la que más publicidad haga.
 
 > **Transparencia**: soy Germán Martínez Calvente, fundador de TotalGains. Este artículo incluye a TotalGains en la comparativa y, evidentemente, tengo interés en mostrar sus ventajas. He verificado los precios y características de todos los competidores directamente en sus webs oficiales el **21 de abril de 2026** para que puedas comprobar cualquier dato tú mismo, y los precios se revisaron de nuevo en esas mismas webs el **12 de noviembre de 2026**. Si ves algo desactualizado, [escríbeme](/sobre-nosotros/) y lo corrijo.
+
+<div class="tg-callout tg-callout-panic" role="note">
+<strong>Respuesta rápida.</strong> Para un entrenador autónomo en España con 10 a 100 clientes, la opción con mejor relación entre precio y funciones es TotalGains Pro: 89,90 €/mes con IVA, hasta 100 clientes, IA de rutinas y dietas, app con tu marca, soporte en español y migración asistida, sin add-ons. Para empezar sin pagar, TotalGains Free da 5 atletas de por vida y sin tarjeta. Si tus clientes son anglosajones, Trainerize tiene integraciones más maduras con MyFitnessPal y wearables, y si llevas un gimnasio, TotalGains tiene un producto para centros desde 149 €/mes con IVA. Lo escribe el fundador de TotalGains, con los precios de cada plataforma comprobados en su web oficial el 12 de noviembre de 2026.
+</div>
 
 ---
 
 ## Índice del artículo
 
 1. [Los 4 criterios que importan al elegir software](#los-4-criterios)
-2. [Tabla comparativa — 12 criterios verificados](#tabla-comparativa)
-3. [#1 — TotalGains](#totalgains)
-4. [#2 — Trainerize](#trainerize)
-5. [#3 — Harbiz](#harbiz)
-6. [#4 — MyPT Hub](#mypthub)
-7. [#5 — TrainerStudio](#trainerstudio)
+2. [Tabla comparativa: 12 criterios verificados](#tabla-comparativa)
+3. [#1. TotalGains](#totalgains)
+4. [#2. Trainerize](#trainerize)
+5. [#3. Harbiz](#harbiz)
+6. [#4. MyPT Hub](#mypthub)
+7. [#5. TrainerStudio](#trainerstudio)
 8. [Otras tres que verás en las listas: Everfit, PT Distinction y Kahunas](#otras)
 9. [Comparativa de coste con funcionalidad equivalente](#comparativa-coste)
-10. [Migración asistida — una ventaja práctica exclusiva](#migracion)
+10. [Migración asistida: una ventaja práctica exclusiva](#migracion)
 11. [Qué software elegir según tu perfil](#elegir)
 12. [Los 3 errores más caros al elegir software](#errores)
 13. [Preguntas frecuentes](#faq)
@@ -113,7 +119,7 @@ En mi experiencia hablando con cientos de entrenadores que han probado 3-4 plata
 
 ---
 
-## <span id="tabla-comparativa"></span>Tabla comparativa — 12 criterios verificados
+## <span id="tabla-comparativa"></span>Tabla comparativa: 12 criterios verificados
 
 | Característica | TotalGains | Trainerize | Harbiz | MyPT Hub | TrainerStudio |
 |---|:---:|:---:|:---:|:---:|:---:|
@@ -134,40 +140,42 @@ En mi experiencia hablando con cientos de entrenadores que han probado 3-4 plata
 
 ---
 
-## <span id="totalgains"></span>#1 — TotalGains
+## <span id="totalgains"></span>#1. TotalGains
 
 ![Logo TotalGains](/images/blog/logos/logo-totalgains.webp)
 
-![Dashboard de TotalGains — software para entrenadores personales con IA y marca blanca en español](/images/blog/comparativa-software-2026-dashboard.webp)
+![Dashboard de TotalGains: software para entrenadores personales con IA y marca blanca en español](/images/blog/comparativa-software-2026-dashboard.webp)
 
 **Para quién**: entrenadores personales autónomos en España y Latinoamérica que quieren escalar de 10 a 100 clientes sin multiplicar las horas de trabajo administrativo.
 
-**Precios 2026** (verificados en totalgains.es, IVA no incluido):
-- **Starter** — 29,90 €/mes · hasta 25 clientes
-- **Pro** — 89,90 €/mes · **hasta 100 clientes**, app marca blanca incluida
-- **Unlimited** — 149,90 €/mes · **clientes ilimitados + soporte VIP + migración asistida completa**
+**Precios 2026** (verificados en totalgains.es, con IVA incluido):
+- **Free:** 0 €/mes · hasta 5 atletas de por vida, sin tarjeta y sin caducidad
+- **Starter:** 29,90 €/mes · hasta 25 clientes
+- **Pro:** 89,90 €/mes · **hasta 100 clientes**, app marca blanca incluida
+- **Unlimited:** 149,90 €/mes · **clientes ilimitados + soporte VIP + migración asistida completa**
 
-Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
+Los tres planes de pago incluyen 14 días de prueba gratis sin tarjeta de crédito, y todos, también el gratuito, traen las mismas funciones: solo cambia cuántos clientes activos puedes llevar.
 
 **Todo incluido desde el plan base, sin add-ons de pago**:
 - Generador de rutinas con [IA que usa tu propia base de datos de ejercicios](/ia-entrenador-personal/)
 - Generador de dietas con [librería personalizada de más de 240.000 alimentos](/base-datos-alimentos-fitness/) y cálculo automático de macros
 - Check-ins semanales automatizados estructurados
-- [App de marca blanca](/app-marca-blanca-entrenador-personal/) **incluida en todos los planes** — tus clientes descargan la app de TotalGains y, al entrar, la ven con tu logo, tus colores y tu identidad visual
-- Pagos recurrentes con Stripe integrados de forma nativa, sin comisiones adicionales
+- [App de marca blanca](/app-marca-blanca-entrenador-personal/) **incluida en todos los planes**: tus clientes descargan la app de TotalGains y, al entrar, la ven con tu logo, tus colores y tu identidad visual
+- Cobros dentro de la app: tus atletas te pagan la cuota o el bono con tu propia cuenta de Stripe, también con cuota automática, y TotalGains no se queda comisión
+- [Contenido para tus redes con tu marca](/funciones/entrenadores/#marketing): vídeos de antes y después en story o reel, tarjetas con los testimonios de tus clientes y piezas con sus platos y sus medidas, sacadas de tus propios clientes
 - Módulo completo de entrenamiento de resistencia y endurance (carrera, bicicleta, natación) integrado con el entrenamiento de fuerza
 - [Seguimiento centralizado de clientes](/gestion-clientes-fitness/): peso, medidas, progresión de cargas, adherencia, feedback
 - Soporte en español por email y chat, con respuesta en menos de 24 horas
 
 **Ventajas diferenciales frente al resto**:
-- **Marca blanca incluida en todos los planes, desde 29,90 €** — el precio más bajo del mercado con app marca blanca integrada sin add-ons
-- **IA avanzada tanto en rutinas como en dietas** incluida en el plan base — Harbiz, Trainerize y MyPT Hub cobran la IA de dietas como add-on adicional
-- **Límite de 100 clientes en el plan Pro** — el doble que Harbiz Pro (50) o Trainerize Pro 50
-- **Migración asistida por soporte humano en español, incluida en todos los planes** — ninguna plataforma anglosajona lo ofrece
+- **Marca blanca incluida en todos los planes, desde 29,90 €:** el precio más bajo del mercado con app marca blanca integrada sin add-ons
+- **IA avanzada tanto en rutinas como en dietas** incluida en el plan base: Harbiz, Trainerize y MyPT Hub cobran la IA de dietas como add-on adicional
+- **Límite de 100 clientes en el plan Pro:** el doble que Harbiz Pro (50) o Trainerize Pro 50
+- **Migración asistida por soporte humano en español, incluida en todos los planes:** ninguna plataforma anglosajona lo ofrece
 - Módulo de resistencia/cardio completo e integrado para entrenadores que programan también carrera, bici o nado
 
 **Limitaciones honestas**:
-- Plataforma fundada en 2025 — la base de reseñas acumuladas es menor que la de competidores con 10 años de historia. El contrapunto: la interfaz está completamente al día con los estándares de diseño y usabilidad de 2026
+- Plataforma fundada en 2025: la base de reseñas acumuladas es menor que la de competidores con 10 años de historia. El contrapunto: la interfaz está completamente al día con los estándares de diseño y usabilidad de 2026
 - Sin integración nativa con MyFitnessPal (tiene base de datos propia con más de 240.000 alimentos, suficiente para la mayoría de entrenadores del mercado hispano)
 
 **Enlaces útiles**:
@@ -179,7 +187,7 @@ Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
 
 ---
 
-## <span id="trainerize"></span>#2 — Trainerize
+## <span id="trainerize"></span>#2. Trainerize
 
 ![Logo Trainerize](/images/blog/logos/logo-trainerize.svg)
 
@@ -201,8 +209,8 @@ Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
 
 **Limitaciones para el mercado español**:
 - Interfaz principal en inglés sin localización completa al español
-- Soporte con franjas horarias de EE. UU. y Canadá — las 9:00 del equipo de soporte son las 18:00 en España
-- Modelo de precios por tramos con add-ons acumulables — la funcionalidad completa queda entre las opciones más caras de la comparativa
+- Soporte con franjas horarias de EE. UU. y Canadá: las 9:00 del equipo de soporte son las 18:00 en España
+- Modelo de precios por tramos con add-ons acumulables: la funcionalidad completa queda entre las opciones más caras de la comparativa
 - La opción de marca blanca requiere configuración adicional (pago único de 169 $ + cuota anual de Apple Developer 99 $/año según fuentes públicas)
 
 **En pocas palabras**: [Trainerize](/alternativas/trainerize/) es una opción sólida si trabajas principalmente con clientes del mercado anglosajón y ya usas MyFitnessPal y wearables americanos. Para un entrenador autónomo en España pagas más por funciones que no aprovechas y en un idioma que no es el tuyo.
@@ -211,21 +219,21 @@ Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
 
 ---
 
-## <span id="harbiz"></span>#3 — Harbiz
+## <span id="harbiz"></span>#3. Harbiz
 
 ![Logo Harbiz](/images/blog/logos/logo-harbiz.webp)
 
 **Para quién**: entrenadores personales, gimnasios y estudios deportivos en España y Latinoamérica.
 
 **Precios 2026** (comprobados de nuevo en harbiz.io el 12 de noviembre de 2026 y siguen igual que en mayo; facturación anual con descuento -25% sobre precio mensual base, sin IVA):
-- **Basic** — 14 €/mes · hasta 5 clientes (16,94 €/mes con IVA 21%)
-- **Pro** — 89 €/mes · hasta 50 clientes (107,69 €/mes con IVA)
-- **My APP** — 149 €/mes · hasta 50 clientes con marca blanca incluida (180,29 €/mes con IVA)
+- **Basic:** 14 €/mes · hasta 5 clientes (16,94 €/mes con IVA 21%)
+- **Pro:** 89 €/mes · hasta 50 clientes (107,69 €/mes con IVA)
+- **My APP:** 149 €/mes · hasta 50 clientes con marca blanca incluida (180,29 €/mes con IVA)
 
 **Add-ons publicados (precios mensuales adicionales, con IVA 21%)**:
-- **Personaliza tu app** — 30,24 €/mes (sin IVA: 24,99 €)
-- **Nutri AI** — 18,14 €/mes (sin IVA: 14,99 €)
-- **Biblioteca de Vídeos** — 24,19 €/mes (sin IVA: 19,99 €)
+- **Personaliza tu app:** 30,24 €/mes (sin IVA: 24,99 €)
+- **Nutri AI:** 18,14 €/mes (sin IVA: 14,99 €)
+- **Biblioteca de Vídeos:** 24,19 €/mes (sin IVA: 19,99 €)
 
 **Coste real con marca propia y Nutri AI** (Plan Pro 50 + Personaliza tu app + Nutri AI, mensual con IVA): aproximadamente **192,37 €/mes** (143,99 € Pro 50 + 30,24 € + 18,14 €), todavía con el límite de 50 clientes. Para 100 clientes y funcionalidad completa, [ver tabla detallada en `/alternativas/harbiz/precios/`](/alternativas/harbiz/precios/).
 
@@ -235,7 +243,7 @@ Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
 - Funcionalidades útiles para gestión de clases grupales si también llevas entrenamiento colectivo
 
 **Limitaciones a considerar**:
-- Los límites de cliente son bajos — el plan Pro se satura a 50 atletas
+- Los límites de cliente son bajos: el plan Pro se satura a 50 atletas
 - Las funcionalidades diferenciales (marca blanca, Nutri AI, biblioteca de vídeos) son **add-ons acumulativos** que suman al precio base
 - El plan My APP con app marca blanca tiene el mismo límite de 50 clientes
 
@@ -245,7 +253,7 @@ Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
 
 ---
 
-## <span id="mypthub"></span>#4 — MyPT Hub
+## <span id="mypthub"></span>#4. MyPT Hub
 
 ![Logo MyPT Hub](/images/blog/logos/logo-mypthub.svg)
 
@@ -266,13 +274,13 @@ Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
 **Coste con app de marca blanca y check-ins con IA**: Premium + White Label + Check-Ins AI suman **214 €/mes** (59 + 145 + 10); el plan Ultimate los incluye por **215 €/mes**.
 
 **Dónde destaca**:
-- Plan Premium base con clientes ilimitados a 59 €/mes — atractivo si la marca blanca no es prioritaria
+- Plan Premium base con clientes ilimitados a 59 €/mes: atractivo si la marca blanca no es prioritaria
 - Integración con el ecosistema británico de wearables
 
 **Limitaciones para el mercado español**:
 - Interfaz exclusivamente en inglés
 - Soporte con franjas horarias UK/AU
-- La app marca blanca requiere un add-on de **145 €/mes adicionales** — es el add-on de marca blanca más caro de la comparativa
+- La app marca blanca requiere un add-on de **145 €/mes adicionales**: es el add-on de marca blanca más caro de la comparativa
 - El generador de entrenamientos y la nutrición con IA entran a partir del plan Premium; los check-ins con IA son un extra aparte
 
 **Comparativa directa**: un entrenador que quiere marca blanca y check-ins con IA paga 214 €/mes en [MyPT Hub](/alternativas/mypthub/) (Premium + White Label + Check-Ins AI). En TotalGains Pro paga 89,90 €/mes con todo incluido: una diferencia de unos **124 € al mes**, cerca de **1.490 € al año**.
@@ -281,7 +289,7 @@ Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
 
 ---
 
-## <span id="trainerstudio"></span>#5 — TrainerStudio
+## <span id="trainerstudio"></span>#5. TrainerStudio
 
 ![Logo TrainerStudio](/images/blog/logos/logo-trainerstudio.svg)
 
@@ -294,14 +302,14 @@ Los tres planes incluyen 14 días de prueba gratis sin tarjeta de crédito.
 **Lo que incluye según su web oficial**: app marca blanca con nombre y colores del entrenador, chat con clientes, planificación de entrenamientos, seguimiento nutricional, métricas, biblioteca de ejercicios, vídeos de demostración y notificaciones push.
 
 **Dónde destaca**:
-- Plan gratuito permanente con 3 clientes — de las opciones más accesibles para empezar sin presupuesto
+- Plan gratuito permanente con 3 clientes: de las opciones más accesibles para empezar sin presupuesto
 - App con tu marca incluida en todos los planes, también en el gratuito, según su web
 - Interfaz en español y soporte nacional
 
 **Limitaciones a considerar**:
-- En mi experiencia probando la plataforma, la profundidad de personalización de la IA es menor que en TotalGains — particularmente para entrenamiento avanzado
+- En mi experiencia probando la plataforma, la profundidad de personalización de la IA es menor que en TotalGains, sobre todo en entrenamiento avanzado
 - Las funciones de seguimiento de nutrición están más enfocadas a lo básico
-- Módulo de resistencia/cardio más limitado — si programas entrenamiento de fuerza **y** resistencia de forma integrada, puede quedarse corto
+- Módulo de resistencia/cardio más limitado: si programas entrenamiento de fuerza **y** resistencia de forma integrada, puede quedarse corto
 
 **Comparativa directa**: el plan sin tope de clientes de TrainerStudio (149 €/mes) está en la misma franja que TotalGains Pro (89,90 €/mes hasta 100 clientes). Para quien ya supera los 100 clientes, TotalGains Unlimited a 149,90 €/mes incluye **soporte VIP y migración asistida completa** que no están en el plan de TrainerStudio.
 
@@ -355,9 +363,9 @@ Ese ahorro mensual compuesto a lo largo de 2-3 años es suficiente para financia
 
 ---
 
-![Migración asistida de datos entre software para entrenadores personales — Trainerize a TotalGains](/images/blog/comparativa-software-2026-migracion.webp)
+![Migración asistida de datos entre software para entrenadores personales: Trainerize a TotalGains](/images/blog/comparativa-software-2026-migracion.webp)
 
-## <span id="migracion"></span>Migración asistida — una ventaja práctica exclusiva
+## <span id="migracion"></span>Migración asistida: una ventaja práctica exclusiva
 
 El coste mayor al cambiar de software no es el precio del nuevo plan. Es el **tiempo que inviertes en migrar tus datos**. Con 25, 40 o 60 clientes activos, migrar manualmente puede llevarte entre **15 y 40 horas** entre mover datos, reconfigurar rutinas y avisar a clientes.
 
@@ -365,7 +373,7 @@ El coste mayor al cambiar de software no es el precio del nuevo plan. Es el **ti
 
 - **Importación automática de clientes** desde cualquier exportación (CSV, Excel, PDF)
 - **Recreación de tus rutinas y dietas** con nuestra [IA](/ia-entrenador-personal/) a partir de los documentos que ya tengas
-- **Onboarding coordinado** de tus clientes — reciben la nueva app con una invitación clara para que el cambio sea invisible
+- **Onboarding coordinado** de tus clientes: reciben la nueva app con una invitación clara para que el cambio sea invisible
 - **Soporte directo en español** durante todo el proceso (email y videollamada si hace falta)
 - **Plan Unlimited**: soporte VIP con respuesta garantizada en menos de 4 horas y un **gestor de cuenta dedicado**
 
@@ -377,13 +385,13 @@ En mi experiencia atendiendo a entrenadores que han migrado desde [Trainerize](/
 
 ## <span id="elegir"></span>Qué software elegir según tu perfil
 
-**Entrenador autónomo con 10–100 clientes activos en España o Latinoamérica** → **TotalGains Pro** (89,90 €). Es el tramo donde gana claramente: precio plano, [marca blanca incluida](/app-marca-blanca-entrenador-personal/), [IA avanzada](/ia-entrenador-personal/) de rutinas y dietas, soporte nativo en español y migración asistida. La opción más coste-efectiva del mercado con funcionalidad completa.
+**Entrenador autónomo con 10 a 100 clientes activos en España o Latinoamérica** → **TotalGains Pro** (89,90 €). Es el tramo donde gana claramente: precio plano, [marca blanca incluida](/app-marca-blanca-entrenador-personal/), [IA avanzada](/ia-entrenador-personal/) de rutinas y dietas, soporte nativo en español y migración asistida. La opción más coste-efectiva del mercado con funcionalidad completa.
 
 **Entrenador empezando con 1-5 clientes y presupuesto cero** → **TotalGains Free** (5 atletas de por vida, el plan gratuito más generoso del mercado hispano; TrainerStudio Free es alternativa a 3 clientes; Trainerize Basic a 1). Si ya quieres el plan profesional completo desde el primer día, **TotalGains Starter** (29,90 €) sube el tope a 25 clientes con las mismas funciones.
 
-**Entrenador que trabaja principalmente con clientes anglosajones** → [Trainerize](/alternativas/trainerize/) sigue teniendo el ecosistema de integraciones más maduro con MyFitnessPal y wearables americanos — si ese es tu mercado, la diferencia de precio compensa.
+**Entrenador que trabaja principalmente con clientes anglosajones** → [Trainerize](/alternativas/trainerize/) sigue teniendo el ecosistema de integraciones más maduro con MyFitnessPal y wearables americanos: si ese es tu mercado, la diferencia de precio compensa.
 
-**Gimnasio o centro con gran volumen de clases grupales** → [Harbiz](/alternativas/harbiz/) tiene funcionalidades de reservas y clases colectivas más desarrolladas.
+**Gimnasio o centro con clases en grupo** → [TotalGains para gimnasios](/para-gimnasios/): clases con reserva y lista de espera, entrenadores ilimitados y app con la marca del centro, de 149 a 249 €/mes con IVA según los socios activos. [Harbiz](/alternativas/harbiz/) también trabaja con reservas y clases colectivas.
 
 **Entrenador que ya trabaja en inglés y quiere mirar más opciones internacionales** → Everfit (plan gratuito hasta 5 clientes), PT Distinction o Kahunas publican sus precios en dólares; las repasamos [más arriba](#otras).
 
@@ -393,15 +401,15 @@ En mi experiencia atendiendo a entrenadores que han migrado desde [Trainerize](/
 
 ## <span id="errores"></span>Los 3 errores más caros al elegir software
 
-**Error 1 — Elegir por el precio base sin sumar add-ons**
+**Error 1: Elegir por el precio base sin sumar add-ons**
 
 El precio del plan más bajo es engañoso si luego tienes que sumar add-ons para funciones básicas: marca blanca, IA de dietas, integración de pagos. En TotalGains todo eso está incluido en el plan Pro a 89,90 €. En MyPT Hub el equivalente son 214 €/mes. **La diferencia a 12 meses ronda los 1.490 €.**
 
-**Error 2 — Subestimar el coste del cambio cuando ya tienes clientes**
+**Error 2: Subestimar el coste del cambio cuando ya tienes clientes**
 
-Migrar cuando ya gestionas 20+ clientes sin ayuda es fricción real. Elegir bien desde el principio — o elegir una [plataforma con migración asistida incluida como TotalGains](/plataforma-entrenamiento-online/) — ahorra meses de estrés y posibles pérdidas de clientes en el proceso.
+Migrar cuando ya gestionas 20+ clientes sin ayuda es fricción real. Elegir bien desde el principio (o elegir una [plataforma con migración asistida incluida como TotalGains](/plataforma-entrenamiento-online/)) ahorra meses de estrés y posibles pérdidas de clientes en el proceso.
 
-**Error 3 — Elegir un software pensado para gimnasios cuando eres autónomo**
+**Error 3: Elegir un software pensado para gimnasios cuando eres autónomo**
 
 Si eres entrenador autónomo, las funciones de gestión de socios, reservas de sala y control de aforo no te aportan valor. Pagas por algo que no usas y la interfaz se vuelve más compleja.
 
@@ -412,8 +420,8 @@ Si eres entrenador autónomo, las funciones de gestión de socios, reservas de s
 Como fundador de TotalGains, hablo a diario con entrenadores personales que prueban la plataforma, se quedan o se van a otra. Los patrones son claros:
 
 - **Los entrenadores que más crecen** son los que tienen procesos repetibles y un sistema único, en vez de 4 herramientas desconectadas
-- **La IA no sustituye al conocimiento del entrenador** — lo acelera. El que lo entiende lo aprovecha para generar rutinas en 5 minutos en lugar de 45
-- **La adherencia del cliente depende más de la consistencia del seguimiento** que de la calidad técnica del plan — los check-ins automáticos y la comunicación estructurada marcan la diferencia
+- **La IA no sustituye al conocimiento del entrenador:** lo acelera. El que lo entiende lo aprovecha para generar rutinas en 5 minutos en lugar de 45
+- **La adherencia del cliente depende más de la consistencia del seguimiento** que de la calidad técnica del plan: los check-ins automáticos y la comunicación estructurada marcan la diferencia
 
 Si estás eligiendo software por primera vez, mi consejo práctico: aprovecha los 14 días de prueba gratuita y hazlo con un cliente real. Mide cuánto tiempo dedicas a tareas administrativas en cada plataforma. Ese dato te dice inequívocamente cuál funciona para tu caso.
 
@@ -445,6 +453,10 @@ En precios base, la opción sin coste más generosa es **TotalGains Free (5 atle
 
 **TotalGains** incluye migración asistida desde Trainerize, Harbiz, MyPT Hub o Excel en todos sus planes, gestionada por soporte humano en español. Importa clientes, recrea rutinas con IA y coordina el onboarding de los atletas. El tiempo típico de migración es menos de 5 días para 30-60 clientes activos. Ninguna plataforma anglosajona ofrece esto en español.
 
+### ¿Qué software para entrenadores personales ayuda con el marketing y las redes sociales?
+
+TotalGains incluye un estudio de contenido que saca de tus propios clientes el material para tus redes: vídeos de antes y después en story o reel, tarjetas con sus testimonios, la ficha del plato mejor valorado o un informe corporal anónimo, todo con tu marca. Está en todos los planes, también en el gratuito, y TotalGains no publica nada en tu nombre: descargas cada pieza y la subes tú.
+
 ---
 
 ## Conclusión
@@ -453,7 +465,7 @@ El mercado de software para entrenadores personales en España en 2026 tiene opc
 
 Entre las opciones diseñadas para el mercado hispano, **TotalGains es la plataforma con mejor relación precio-funcionalidad en el tramo donde escalan la mayoría de entrenadores profesionales**: 89,90 €/mes con app marca blanca incluida, IA avanzada de rutinas y dietas sin add-ons de pago, hasta 100 clientes, soporte en español y migración asistida.
 
-Si quieres probarlo sin compromiso, [prueba TotalGains gratis durante 14 días](/onboarding/) — sin tarjeta ni permanencia. La migración desde cualquier otra plataforma está incluida.
+Si quieres probarlo sin compromiso, [prueba TotalGains gratis durante 14 días](/onboarding/), sin tarjeta ni permanencia. La migración desde cualquier otra plataforma está incluida.
 
 ---
 
@@ -462,11 +474,11 @@ Si quieres probarlo sin compromiso, [prueba TotalGains gratis durante 14 días](
 Los precios y características citadas en este artículo han sido verificados en las webs oficiales de cada plataforma el **21 de abril de 2026**, y los precios se revisaron de nuevo el **12 de noviembre de 2026**. Los precios pueden variar con el tiempo, especialmente con ofertas promocionales o facturación anual. Las valoraciones sobre profundidad de IA, calidad del soporte y profundidad de módulos representan mi experiencia personal probando cada plataforma; otros usuarios pueden tener experiencias diferentes.
 
 **Para información actualizada, consulta siempre el sitio oficial de cada producto:**
-- TotalGains — [totalgains.es](https://totalgains.es)
-- Trainerize — web oficial del producto
-- Harbiz — web oficial del producto
-- MyPT Hub — web oficial del producto
-- TrainerStudio — web oficial del producto
+- TotalGains: [totalgains.es](https://totalgains.es)
+- Trainerize: web oficial del producto
+- Harbiz: web oficial del producto
+- MyPT Hub: web oficial del producto
+- TrainerStudio: web oficial del producto
 - Everfit, PT Distinction y Kahunas: web oficial de cada producto
 
 Si detectas algún dato obsoleto o incorrecto, [escríbeme](/sobre-nosotros/) y corregiré el artículo.
@@ -486,20 +498,20 @@ Si detectas algún dato obsoleto o incorrecto, [escríbeme](/sobre-nosotros/) y 
 
 ## Artículos relacionados que te pueden interesar
 
-- 🎯 **[Cómo Conseguir Clientes como Entrenador Personal Online](/blog/como-conseguir-clientes-entrenador-personal-online/)** — El método probado para pasar de 0 a 30 clientes sin publicidad
-- 💰 **[Cuánto Cobra un Entrenador Personal Online en 2026](/blog/cuanto-cobra-entrenador-personal-online/)** — Tarifas reales del mercado español y cómo fijar tus precios
-- ⚠️ **[Los 7 Errores que Arruinan el Negocio de los Entrenadores Personales Online](/blog/errores-entrenadores-personales-online/)** — Los errores comunes que frenan el crecimiento
-- 📋 **[Cómo Crear un Plan de Entrenamiento Personalizado que Funciona](/blog/como-crear-plan-entrenamiento-personalizado/)** — El proceso paso a paso desde la evaluación inicial
-- 🚀 **[Cómo Migrar de Trainerize, Harbiz o MyPT Hub a TotalGains: Guía 2026](/blog/como-migrar-software-entrenador-personal/)** — Proceso paso a paso para cambiar de software sin perder clientes ni datos
-- 🤖 **[IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)** — Guía real con capturas y ejemplos de cómo aprovechar la IA en tu negocio fitness
-- 💵 **[Trainerize Precios 2026: Cuánto Cuesta Realmente con Todos los Add-ons](/blog/trainerize-precios-2026/)** — La tabla real de Trainerize con IVA aplicado y add-ons obligatorios
-- 💶 **[Harbiz Precios 2026: La Tabla Real con IVA y Add-ons](/alternativas/harbiz/precios/)** — Desglose Basic, Pro y My APP con los 3 add-ons que disparan el precio funcional
-- 📱 **[App de Marca Blanca para Entrenadores: Guía Completa 2026](/blog/app-marca-blanca-entrenadores-personales/)** — Cómo funciona, dos modelos técnicos, qué cuesta en cada plataforma y cuándo te conviene
-- 🥗 **[Cómo Crear Planes Nutricionales para Clientes: Guía 2026](/blog/crear-planes-nutricionales-clientes-entrenador-personal/)** — Componentes de un plan nutricional profesional, cálculo de macros, base de alimentos y workflow operativo del nutricionista online.
-- 🏋️ **[Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach](/blog/software-gimnasios-pequenos-boutique-2026/)** — Comparativa para gimnasios de 2-15 coaches: multi-coach, reservas, marca blanca del gym y panel supervisor.
-- ☀️ **[Tu Primer Verano como Entrenador Personal: Por Qué Empezar con App Desde el Día 1 (Guía 2026)](/blog/primer-verano-entrenador-personal-2026/)** — Para coaches juniors que arrancan en verano: software mínimo viable, captación y plan de 5 días.
-- 🚪 **[Has Tocado Techo de Clientes y No es Por Falta de Horas](/blog/techo-clientes-entrenador-personal-escalar-2026/)** — Para coaches consolidados atascados en 15-25 clientes activos: 4 techos operativos y cómo romperlos con sistema.
-- ⚙️ **[Top 5 Cosas que Automatiza el Entrenador de +50 Clientes](/blog/top-5-automatizaciones-coach-50-clientes-2026/)** — Las 5 automatizaciones evaluadas por cada software: centralización, IA, adherencia, alimentos y marca blanca.
+- 🎯 **[Cómo Conseguir Clientes como Entrenador Personal Online](/blog/como-conseguir-clientes-entrenador-personal-online/)**: El método probado para pasar de 0 a 30 clientes sin publicidad
+- 💰 **[Cuánto Cobra un Entrenador Personal Online en 2026](/blog/cuanto-cobra-entrenador-personal-online/)**: Tarifas reales del mercado español y cómo fijar tus precios
+- ⚠️ **[Los 7 Errores que Arruinan el Negocio de los Entrenadores Personales Online](/blog/errores-entrenadores-personales-online/)**: Los errores comunes que frenan el crecimiento
+- 📋 **[Cómo Crear un Plan de Entrenamiento Personalizado que Funciona](/blog/como-crear-plan-entrenamiento-personalizado/)**: El proceso paso a paso desde la evaluación inicial
+- 🚀 **[Cómo Migrar de Trainerize, Harbiz o MyPT Hub a TotalGains: Guía 2026](/blog/como-migrar-software-entrenador-personal/)**: Proceso paso a paso para cambiar de software sin perder clientes ni datos
+- 🤖 **[IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas en Minutos](/blog/ia-entrenador-personal-rutinas-dietas/)**: Guía real con capturas y ejemplos de cómo aprovechar la IA en tu negocio fitness
+- 💵 **[Trainerize Precios 2026: Cuánto Cuesta Realmente con Todos los Add-ons](/blog/trainerize-precios-2026/)**: La tabla real de Trainerize con IVA aplicado y add-ons obligatorios
+- 💶 **[Harbiz Precios 2026: La Tabla Real con IVA y Add-ons](/alternativas/harbiz/precios/)**: Desglose Basic, Pro y My APP con los 3 add-ons que disparan el precio funcional
+- 📱 **[App de Marca Blanca para Entrenadores: Guía Completa 2026](/blog/app-marca-blanca-entrenadores-personales/)**: Cómo funciona, dos modelos técnicos, qué cuesta en cada plataforma y cuándo te conviene
+- 🥗 **[Cómo Crear Planes Nutricionales para Clientes: Guía 2026](/blog/crear-planes-nutricionales-clientes-entrenador-personal/)**: Componentes de un plan nutricional profesional, cálculo de macros, base de alimentos y workflow operativo del nutricionista online.
+- 🏋️ **[Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach](/blog/software-gimnasios-pequenos-boutique-2026/)**: Comparativa para gimnasios de 2-15 coaches: multi-coach, reservas, marca blanca del gym y panel supervisor.
+- ☀️ **[Tu Primer Verano como Entrenador Personal: Por Qué Empezar con App Desde el Día 1 (Guía 2026)](/blog/primer-verano-entrenador-personal-2026/)**: Para coaches juniors que arrancan en verano: software mínimo viable, captación y plan de 5 días.
+- 🚪 **[Has Tocado Techo de Clientes y No es Por Falta de Horas](/blog/techo-clientes-entrenador-personal-escalar-2026/)**: Para coaches consolidados atascados en 15-25 clientes activos: 4 techos operativos y cómo romperlos con sistema.
+- ⚙️ **[Top 5 Cosas que Automatiza el Entrenador de +50 Clientes](/blog/top-5-automatizaciones-coach-50-clientes-2026/)**: Las 5 automatizaciones evaluadas por cada software: centralización, IA, adherencia, alimentos y marca blanca.
 
 ---
 
