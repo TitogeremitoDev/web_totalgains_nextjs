@@ -9,6 +9,7 @@
     "lint": "eslint",
     "optimize-images": "node scripts/optimize-images.mjs",
     "generate-blog": "node scripts/generate-blog-post.mjs",
+    "generate-blog:creditos": "node scripts/generate-blog-post.mjs --creditos",
     "ping-indexnow": "node scripts/ping-indexnow.mjs",
     "check-images": "node scripts/check-image-registry.mjs"
   },
