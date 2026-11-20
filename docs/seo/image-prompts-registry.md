@@ -348,6 +348,20 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/black-friday-entrenador-personal-en-que-invertir-2026
+*Generado 2026-11-20 con `gemini-3-pro-image`*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `bf-invertir-hero.webp` | eye-level por detrás | persona en el tercio izquierdo, escaparate en los dos tercios derechos | wide | calle comercial de noche | persona de espaldas mirando un escaparate lleno de carteles EN BLANCO | ambiente nocturno, neón lavanda y coral reflejado en la acera mojada | pensarlo antes de comprar |
+| `bf-invertir-cuenta.webp` | 3/4 bajo | diagonal | close-up | escritorio de roble claro junto a una ventana | sumadora antigua con el rollo de papel EN BLANCO, teclas sin números, lápiz y nota coral | lateral fría de mañana, sombras lavanda | hacer la cuenta |
+| `bf-invertir-grabar.webp` | eye-level | móvil y luz en el tercio derecho, rack al fondo a la izquierda | medium | estudio de entrenamiento con pared azul marino | móvil con la pantalla en negro en un trípode pequeño, micro de solapa y panel LED | cálida del LED mezclada con luz de ventana | montaje de vídeo sencillo |
+| `bf-invertir-cajas.webp` | picado | cajas a la izquierda, alfombra en diagonal a la derecha | medium | recibidor de casa | cajas de envío SIN etiquetas ni logos apiladas y sin abrir, bufanda coral, alfombra azul marino | gris y plana de tarde | compras por impulso |
+
+**Notas:** las cuatro salieron bien al primer intento (`~/.cache/tg-blog/black-friday-invertir/gen.py`, clave en la cabecera). Décima vez que funciona pedir los soportes **en blanco** (carteles, rollo de papel, pantalla, cajas sin etiquetas). En la del vídeo, Gemini puso el micro sobre el taburete y un rodillo en lugar de la esterilla: el alt lo dice así. Texto del artículo escrito con el generador nuevo (Claude Opus 5.5) y retocado a mano.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -419,6 +433,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-11-20** — Añadido `blog/black-friday-entrenador-personal-en-que-invertir-2026` (4 imágenes generadas, conceptos nuevos: escaparate nocturno, sumadora, montaje de vídeo con móvil y cajas sin abrir).
 
 **2026-11-13** — Añadido `blog/check-in-semanal-clientes-que-preguntar` (3 imágenes generadas, conceptos nuevos, y 8 capturas reales enteras del seguimiento).
 

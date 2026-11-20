@@ -7,7 +7,7 @@ lastModified: "2026-11-20"
 category: "negocio"
 author: "Germán Martínez Calvente"
 readTime: 11
-published: false
+published: true
 keywords:
   - "black friday entrenador personal en qué invertir"
   - "en qué invertir como entrenador personal online"
@@ -16,7 +16,9 @@ keywords:
   - "web propia entrenador personal"
   - "micrófono para vídeos de técnica entrenador"
   - "cursos para entrenadores personales merecen la pena"
-image: "/images/blog/black-friday-entrenador-personal-en-que-invertir-2026-hero.webp"
+image: "/images/blog/bf-invertir-hero.webp"
+imageWidth: 1344
+imageHeight: 768
 faqs:
   - q: "¿En qué debería invertir un entrenador personal en Black Friday?"
     a: "En lo que le ahorre horas o le traiga clientes durante todo el año: un software que centralice a sus atletas, una web propia, sonido y luz decentes para los vídeos de técnica y formación que vaya a aplicar ya. Todo lo demás puede esperar a enero. Un descuento no convierte en inversión algo que no mueve tu negocio."
@@ -52,8 +54,6 @@ Esto no va de qué venderles a tus clientes. Para eso tienes la guía para [usar
 6. [Tu lista de Black Friday en 20 minutos](#lista)
 7. [El descuento que de verdad cuenta](#cierre)
 
-<!-- IMAGEN: un entrenador frente al portátil con una libreta, haciendo cuentas antes de comprar, con banners de Black Friday desenfocados en la pantalla -->
-
 ## <span id="criterio"></span>La única pregunta que importa antes de pagar
 
 El [Black Friday](https://es.wikipedia.org/wiki/Black_Friday) existe para vender, no para que tú compres bien. Para tu negocio, un gasto solo se paga de tres maneras:
@@ -80,16 +80,18 @@ Mi regla, que es criterio propio y no ciencia: si el valor anual multiplica por 
 
 Un ejemplo con números redondos, **inventados solo para ver el cálculo** (pon los tuyos):
 
-| Compra | Lo que mueve al año | Valor | Coste | Veredicto |
-|---|---|---|---|---|
-| Software de gestión | 2 h/semana × 45 semanas × 25 €/h | 2.250 € | 300 € | Adelante (×7,5) |
-| Web propia | 2 clientes × 600 € (100 €/mes durante 6 meses) | 1.200 € | 400 € | Adelante (×3) |
-| Curso «escala a 10.000 €/mes» | Nada concreto | 0 € | 500 € | Fuera |
-| Reloj inteligente nuevo | 0 horas, 0 clientes | 0 € | 300 € | Fuera |
+| Compra | Valor / coste | Veredicto |
+|---|---|---|
+| Software de gestión | 2.250 € / 300 € | Adelante (×7,5) |
+| Web propia | 1.200 € / 400 € | Adelante (×3) |
+| Curso milagro | 0 € / 500 € | Fuera |
+| Reloj nuevo | 0 € / 300 € | Fuera |
+
+De dónde sale cada valor: el software ahorra 2 horas a la semana durante 45 semanas a 25 € la hora; la web trae 2 clientes que pagan 100 € al mes durante 6 meses; el curso promete «escalar a 10.000 € al mes» sin nada concreto que aplicar, y el reloj no ahorra horas ni trae clientes.
 
 El reloj puede ser un reloj estupendo. Lo que pasa es que no es una inversión para tu negocio.
 
-<!-- IMAGEN: una hoja de cálculo sencilla con la fórmula de valor anual aplicada a cuatro compras, dos marcadas en verde y dos en rojo -->
+![Sumadora antigua con el rollo de papel en blanco y un lápiz sobre un escritorio de roble junto a una ventana, para hacer la cuenta antes de comprar en Black Friday](/images/blog/bf-invertir-cuenta.webp "La cuenta de un minuto: horas y clientes frente a lo que cuesta. | 1344x768")
 
 ## <span id="si-merece"></span>Dónde sí merece la pena gastar
 
@@ -99,6 +101,8 @@ Si aún llevas rutinas en Excel, dietas en PDF y check-ins por WhatsApp, ahí ti
 
 Antes de pagar, mira qué entra en cada plan. En TotalGains todas las funciones (la IA para rutinas y dietas, la marca blanca, los check-ins) están en todos los planes, también en el gratuito: lo único que cambia es cuántos atletas activos caben y el soporte. Lo tienes en la página de [precios](/precios/). Y si te frena el cambio, sigue la guía para [migrar tus clientes sin perder datos](/blog/como-migrar-software-entrenador-personal/).
 
+Sobre el pago anual, con honestidad: en TotalGains pagas el equivalente a 10 meses y usas 12 (Starter 299 € al año frente a 358,80 € mes a mes, Pro 899 € frente a 1.078,80 € y Unlimited 1.499 € frente a 1.798,80 €, IVA incluido). Pero solo tiene sentido si ya sabes que vas a seguir todo el año. Si estás empezando, no adelantes dinero: el plan gratuito de 5 atletas, de por vida y sin tarjeta, basta para probar con clientes reales.
+
 ### Sonido, luz y trípode para tus vídeos
 
 Tu móvil graba mejor de lo que necesitas. En un vídeo de técnica lo que se nota es que se oiga bien y haya luz. Un micrófono de solapa, una luz sencilla y un trípode resuelven casi todo, y corregir a un atleta pasa a ser un vídeo de un minuto en vez de cinco audios. Tienes el método en cómo [corregir la técnica de un cliente online con vídeo](/blog/corregir-tecnica-cliente-online-video/).
@@ -107,7 +111,7 @@ Tu móvil graba mejor de lo que necesitas. En un vídeo de técnica lo que se no
 
 Un curso merece la pena si sabes qué vas a cambiar en tus planes la semana siguiente. Busca temario cerrado, docentes con nombre y trayectoria comprobable, y bibliografía.
 
-<!-- IMAGEN: un móvil en un trípode con un micrófono de solapa y una luz pequeña, grabando a un atleta haciendo sentadilla -->
+![Móvil en un trípode pequeño con un micrófono de solapa y un panel de luz LED en un estudio de entrenamiento con pared azul marino, rack, rodillo lavanda y mancuernas al fondo](/images/blog/bf-invertir-grabar.webp "Trípode, micro y luz: lo que más se nota en un vídeo de técnica. | 1344x768")
 
 ## <span id="web-propia"></span>Web propia: lo único que es tuyo de verdad
 
@@ -115,16 +119,9 @@ Las redes son un local alquilado: el dueño cambia las reglas cuando quiere y tu
 
 No necesitas una web enorme. Necesitas una página que diga quién eres, qué ofreces, para quién y cómo contactarte.
 
-En TotalGains, cuando el plan anual de entrenador lleva la web incluida, esto es lo que entra:
-
-- **Starter (299 €/año)**: web de una página con tu logo, tus colores, tus servicios y tu contacto, en tunombre.totalgains.es o en tu dominio, con el alojamiento incluido.
-- **Pro (899 €/año) y Unlimited (1.499 €/año)**: web completa en tu dominio sin rastro de TotalGains, con alojamiento y cambios pequeños cada mes incluidos.
+Y que tu web y tu app digan lo mismo: con TotalGains, la [app con tu marca](/app-marca-blanca-entrenador-personal/) va en todos los planes, también en el gratuito, así que tus clientes te ven a ti de principio a fin.
 
 <div class="__web_offer__"></div>
-
-Sobre el pago anual, con honestidad: pagas el equivalente a 10 meses y usas 12 (mes a mes, Starter sale a 358,80 € al año, Pro a 1.078,80 € y Unlimited a 1.798,80 €). Pero solo tiene sentido si ya sabes que vas a seguir todo el año. Si estás empezando, no adelantes dinero: el plan gratuito de 5 atletas, de por vida y sin tarjeta, basta para probar con clientes reales. Y la [app con tu marca](/app-marca-blanca-entrenador-personal/) ya va en todos los planes, también en ese.
-
-<!-- IMAGEN: la web de una página de un entrenador vista en un móvil, con su logo, sus servicios y un botón de contacto -->
 
 ## <span id="no-merece"></span>Lo que no mueve nada (aunque esté al 70 %)
 
@@ -136,7 +133,7 @@ Sobre el pago anual, con honestidad: pagas el equivalente a 10 meses y usas 12 (
 
 Ojo con el «total, es deducible». Deducir un gasto rebaja tus impuestos, pero no lo hace gratis: el grueso lo sigues pagando tú. Repasa [qué puedes desgravar como entrenador personal autónomo](/blog/gastos-deducibles-entrenador-personal-autonomo/) y, ante la duda, consulta la [Agencia Tributaria](https://sede.agenciatributaria.gob.es/).
 
-<!-- IMAGEN: un montón de cajas de gadgets y un certificado de curso milagro junto a un extracto bancario con suscripciones tachadas -->
+![Cajas de cartón de envío sin abrir y con polvo apiladas en el rincón de un recibidor, con una bufanda coral colgada y una alfombra azul marino](/images/blog/bf-invertir-cajas.webp "Lo que se compra por impulso suele acabar en una esquina. | 1344x768")
 
 ## <span id="lista"></span>Tu lista de Black Friday en 20 minutos
 
