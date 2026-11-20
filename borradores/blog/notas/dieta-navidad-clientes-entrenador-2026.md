@@ -1,0 +1,9 @@
+Enfoque: el entrenador o nutricionista que lleva clientes online y tiene que plantearles diciembre. Las fiestas en España: comidas y cenas de empresa, Nochebuena, Navidad, Nochevieja, Año Nuevo y Reyes (la vuelta real a la rutina suele ser el 7 de enero). Qué funciona: no prohibir, marcar con el cliente sus días fuertes y dejarlos flexibles, sostener el resto de días con una dieta más sencilla, entrenos más cortos si hace falta, y preparar la vuelta en enero sin castigos ni dietas de choque.
+
+Que el artículo dé al entrenador algo concreto: cómo preguntar al cliente por su calendario de fiestas, cómo montar la «dieta de fiestas» (ejemplo de semana con los días fuertes), qué mensaje mandarle (en positivo, sin culpa), cómo leer el peso de enero (agua, sal y glucógeno: no es grasa de golpe) y cómo es la dieta de vuelta.
+
+Cuidado con los datos: el «se engordan 3 a 5 kg en Navidad» es un mito; los estudios con peso medido encuentran de media bastante menos (por ejemplo, Yanovski y colaboradores, 2000, en el New England Journal of Medicine). Si citas una cifra o un estudio, márcalo con [VERIFICAR].
+
+De TotalGains menciona solo esto (existe y está en todos los planes): puedes dejarle asignadas al cliente, cada una con su fecha, la dieta de las fiestas y la de vuelta (dietas programadas), y el cliente ve cambiar su dieta sola el día que toca, sin que tú tengas que acordarte el 24 de diciembre o el 7 de enero. Y que en el check-in semanal puedes quitarle una semana si está de viaje. No menciones otras funciones.
+
+No repitas estos artículos, enlázalos donde venga a cuento: /blog/cliente-no-sigue-la-dieta-motivos-coach-2026/, /blog/crear-planes-nutricionales-clientes-entrenador-personal/, /blog/check-in-semanal-clientes-que-preguntar/, /blog/frases-matan-confianza-cliente-whatsapp-coach-online/.
