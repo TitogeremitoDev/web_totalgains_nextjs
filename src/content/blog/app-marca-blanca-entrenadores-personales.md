@@ -3,7 +3,7 @@ title: "App de Marca Blanca para Entrenadores: Guía Completa 2026"
 seoTitle: "App Marca Blanca Entrenadores: Guía 2026"
 description: "Guía completa de la app marca blanca para entrenadores en 2026: cómo funciona, qué cuesta en cada plataforma y cuándo te conviene."
 date: "2026-05-24"
-lastModified: "2026-08-15"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 15
@@ -390,4 +390,4 @@ Estrictamente gratuitas en plataformas profesionales, prácticamente no. Algunas
 
 ---
 
-La app marca blanca no es ni un capricho ni una obligación universal. Es una decisión operativa que depende de **cuánto pesa tu marca personal en cómo captas clientes** y de **qué modelo técnico encaja con tu capacidad de gestión**. Si tu marca es el activo principal de tu marketing y prefieres simplicidad operativa, [puedes probar TotalGains 14 días gratis](/onboarding/) y tener marca blanca configurada esta semana. Si necesitas listing autónomo en App Store con ASO independiente, Trainerize Custom Branded App o MyPT Hub White Label encajan mejor con ese perfil. La elección correcta es la que encaja con tu modelo concreto, no la que más promociona nadie.
+La app marca blanca no es ni un capricho ni una obligación universal. Es una decisión operativa que depende de **cuánto pesa tu marca personal en cómo captas clientes** y de **qué modelo técnico encaja con tu capacidad de gestión**. Si tu marca es el activo principal de tu marketing y prefieres simplicidad operativa, [puedes empezar gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta, y tener la marca blanca configurada esta semana. Si necesitas listing autónomo en App Store con ASO independiente, Trainerize Custom Branded App o MyPT Hub White Label encajan mejor con ese perfil. La elección correcta es la que encaja con tu modelo concreto, no la que más promociona nadie.

@@ -3,7 +3,7 @@ title: "¿Cuánto Cobra un Entrenador Personal Online? (La Verdad que Nadie te D
 seoTitle: "Cuánto Cobra un Entrenador Personal Online 2026"
 description: "Tarifas reales en España 2026: seguimiento online de 50 a 300 €/mes, sesiones en directo de 25 a 200 € y packs de 200 a 1.500 €. Rangos por experiencia."
 date: "2025-01-20"
-lastModified: "2026-09-27"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "negocio"
 readTime: 9
@@ -208,7 +208,7 @@ Los que superan 5.000€/mes combinan cuatro factores: precio medio-alto por cli
 
 ---
 
-*¿Quieres ver cómo TotalGains ayuda a entrenadores como tú a gestionar más clientes sin trabajar más horas? [Empieza gratis durante 14 días](/onboarding/).*
+*¿Quieres ver cómo TotalGains ayuda a entrenadores como tú a gestionar más clientes sin trabajar más horas? [Empieza gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta.*
 
 ---
 

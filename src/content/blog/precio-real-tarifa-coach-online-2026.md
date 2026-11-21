@@ -3,7 +3,7 @@ title: "El Precio Real de Tu Tarifa: Por Qué Cobras 100 €/mes y Ganas 14 €/
 seoTitle: "Precio Real Tarifa Coach: Calculadora €/hora"
 description: "Calculadora real €/hora del coach online que descuenta IVA 21 %: introduce clientes, precio y horas y ve por qué muchos cobran menos que un dependiente."
 date: "2026-07-17"
-lastModified: "2026-07-17"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "negocio"
 readTime: 13
@@ -25,7 +25,7 @@ comparison:
   reviewedProducts:
     - name: "TotalGains Pro"
       rating: 4.8
-      pros: "El plan pensado para el coach que quiere subir su €/hora efectivo sin subir tarifa: **89,90 €/mes con IVA hasta 100 clientes activos**. IA generativa de rutinas en menos de 2 minutos por cliente (recupera 25-40 min por cliente frente al diseño manual), base de +240.000 alimentos que elimina consultas nutricionales manuales (4-8 h/mes con 50 clientes), Coach Insights para revisar la cartera en 5 minutos por la mañana en vez de perseguir datos, sistema de recordatorios de renovación al cliente que baja el churn silencioso, y app marca blanca incluida que justifica tarifas 20-40 % superiores. Cada palanca sube tu €/hora efectivo por lados distintos: menos horas por cliente + más retención + tarifa premium justificada. 14 días gratis sin tarjeta."
+      pros: "El plan pensado para el coach que quiere subir su €/hora efectivo sin subir tarifa: **89,90 €/mes con IVA hasta 100 clientes activos**. IA generativa de rutinas en menos de 2 minutos por cliente (recupera 25-40 min por cliente frente al diseño manual), base de +240.000 alimentos que elimina consultas nutricionales manuales (4-8 h/mes con 50 clientes), Coach Insights para revisar la cartera en 5 minutos por la mañana en vez de perseguir datos, sistema de recordatorios de renovación al cliente que baja el churn silencioso, y app marca blanca incluida que justifica tarifas 20-40 % superiores. Cada palanca sube tu €/hora efectivo por lados distintos: menos horas por cliente + más retención + tarifa premium justificada. Plan gratuito de 5 atletas de por vida, o 14 días de prueba de Pro sin tarjeta."
       cons: "Subir el €/hora efectivo requiere que el coach cambie su operativa manual real, no solo que compre software. Si sigues con 20 clientes y no quieres profesionalizar el flujo, la calculadora te va a decir lo mismo pagues TG o no. La palanca operativa está condicionada al cambio de hábito del coach; la herramienta lo acelera pero no lo sustituye. Valoración autodeclarada del propio fundador."
       lowPrice: 0
       highPrice: 149.90
@@ -235,4 +235,4 @@ La diferencia real no está en la facturación — es idéntica. Está en las ho
 
 ---
 
-Si al mover los sliders de la calculadora tu tarifa real ha salido en amarillo o rojo, el problema no es tu precio: es tu operativa. Puedes seguir empujando con Excel + WhatsApp durante 12 meses más y llegar al mismo desgaste, o puedes [probar TotalGains 14 días gratis sin tarjeta](/onboarding/) y ver en una semana cuánto suben tus horas recuperadas cuando la IA genera tus rutinas, la app recoge la adherencia sola y los recordatorios de renovación llegan al cliente sin que tú persigas nada. **El precio de tu tarifa no es lo que factura tu factura; es lo que ganas por hora cuando divides todo por todo**. Empieza a medirlo. Todo lo demás cambia después.
+Si al mover los sliders de la calculadora tu tarifa real ha salido en amarillo o rojo, el problema no es tu precio: es tu operativa. Puedes seguir empujando con Excel + WhatsApp durante 12 meses más y llegar al mismo desgaste, o puedes [empezar gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta, y ver en una semana cuánto suben tus horas recuperadas cuando la IA genera tus rutinas, la app recoge la adherencia sola y los recordatorios de renovación llegan al cliente sin que tú persigas nada. **El precio de tu tarifa no es lo que factura tu factura; es lo que ganas por hora cuando divides todo por todo**. Empieza a medirlo. Todo lo demás cambia después.

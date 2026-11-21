@@ -3,7 +3,7 @@ title: "Entrenamiento híbrido en 2026: cómo programarlo (guía coach)"
 seoTitle: "Entrenamiento híbrido 2026: cómo programarlo"
 description: "Entrenamiento híbrido en 2026: 3 estructuras que sí funcionan, 4 errores a evitar y la IA que te lo monta en 30 min. Guía para coaches online."
 date: "2026-07-26"
-lastModified: "2026-07-26"
+lastModified: "2026-11-21"
 category: "metodologia"
 author: "Germán Martínez Calvente"
 readTime: 13
@@ -114,4 +114,4 @@ La primera es decirle que no, que tú programas fuerza. Ese lead se va a otro co
 
 La brecha entre las tres respuestas es la brecha que se está abriendo ahora mismo en el mercado. Y no es una brecha de conocimiento (los principios se explican en este artículo), es una brecha de herramientas. El coach que tiene un sistema para diseñar, monitorizar y ajustar planes híbridos puede aceptar el flujo, cobrar [la tarifa que le corresponde por ese trabajo](/blog/precio-real-tarifa-coach-online-2026/) y no rechazar leads. El coach que no lo tiene se queda con los clientes que solo quieren fuerza, un segmento cada vez más reducido.
 
-[TotalGains se puede probar gratis 14 días](https://totalgains.es/onboarding/), sin tarjeta ni permanencia. La IA de rutinas con entrenamiento híbrido, los módulos de resistencia por bloques, el dictado en lenguaje natural y la vista integrada del atleta están activos desde el primer minuto, sin coste extra ni versión premium. Si vienes de [Trainerize, Harbiz o MyPT Hub, la migración es asistida y gratuita](/blog/como-migrar-software-entrenador-personal/). El próximo lead que te pregunte por Hyrox merece la respuesta correcta.
+[TotalGains se puede usar gratis con 5 atletas](https://totalgains.es/onboarding/), de por vida y sin tarjeta. La IA de rutinas con entrenamiento híbrido, los módulos de resistencia por bloques, el dictado en lenguaje natural y la vista integrada del atleta están activos desde el primer minuto, sin coste extra ni versión premium. Si vienes de [Trainerize, Harbiz o MyPT Hub, la migración es asistida y gratuita](/blog/como-migrar-software-entrenador-personal/). El próximo lead que te pregunte por Hyrox merece la respuesta correcta.

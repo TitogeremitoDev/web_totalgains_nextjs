@@ -3,7 +3,7 @@ title: "Cómo Migrar de Trainerize, Harbiz o MyPT Hub a TotalGains: Guía Paso a
 seoTitle: "Cómo Migrar de Trainerize a TotalGains 2026"
 description: "Guía completa para migrar tus clientes desde Trainerize, Harbiz, MyPT Hub o Excel a un nuevo software sin perder datos ni atletas. Proceso de 5 días."
 date: "2026-04-27"
-lastModified: "2026-08-10"
+lastModified: "2026-11-21"
 howto:
   name: "Cómo migrar de Trainerize, Harbiz o MyPT Hub a TotalGains"
   description: "Proceso paso a paso para migrar clientes, rutinas y datos desde otro software de entrenamiento personal a TotalGains sin perder información ni atletas."
@@ -185,7 +185,7 @@ Si vienes de WhatsApp, exporta la conversación de cada cliente activo (Configur
 
 Antes de importar nada, configura tu nuevo entorno. En TotalGains el flujo es:
 
-1. **Crear cuenta** desde [/onboarding/](/onboarding/) — 14 días gratis sin tarjeta
+1. **Crear cuenta** desde [/onboarding/](/onboarding/): gratis con 5 atletas, de por vida y sin tarjeta
 2. **Configurar tu marca**: logo, colores, nombre comercial (estos datos van a la app marca blanca incluida en todos sus planes)
 3. **Crear tu base de ejercicios** o importarla con IA desde un PDF si la tienes en Excel/Word
 4. **Configurar tu base de alimentos personalizable** si vienes de software anglosajón con base limitada
@@ -350,7 +350,7 @@ Los entrenadores que más éxito tienen no son los que evitan el cambio — son 
 
 Si estás evaluando opciones para migrar, la guía más completa con precios verificados está aquí: **[Los 5 mejores software para entrenadores personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)**.
 
-Si ya has decidido que TotalGains es tu opción, [empieza la prueba gratis de 14 días](/onboarding/) y yo personalmente te acompaño en la migración: subo tus clientes, transcribo tus rutinas y dietas con la [IA integrada de la plataforma](/ia-entrenador-personal/) y reviso plantilla por plantilla para garantizar que no haya roturas. Sin coste extra.
+Si ya has decidido que TotalGains es tu opción, [empieza gratis con 5 atletas](/onboarding/) y yo personalmente te acompaño en la migración: subo tus clientes, transcribo tus rutinas y dietas con la [IA integrada de la plataforma](/ia-entrenador-personal/) y reviso plantilla por plantilla para garantizar que no haya roturas. Sin coste extra.
 
 ---
 
@@ -382,4 +382,4 @@ Las recomendaciones de esta guía están basadas en mi experiencia personal coor
 
 ---
 
-*¿Listo para migrar sin perder clientes ni datos? [Empieza con TotalGains gratis 14 días](/onboarding/) — la migración asistida desde Trainerize, Harbiz, MyPT Hub o Excel está incluida en todos los planes, en español. Sin tarjeta. Sin permanencia.*
+*¿Listo para migrar sin perder clientes ni datos? [Empieza gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta: la migración asistida desde Trainerize, Harbiz, MyPT Hub o Excel está incluida en todos los planes, en español. Sin tarjeta. Sin permanencia.*

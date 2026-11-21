@@ -3,7 +3,7 @@ title: "Cómo Crear Planes Nutricionales para Clientes: Guía Completa para Entr
 seoTitle: "Cómo Crear Planes Nutricionales: Guía 2026"
 description: "Guía 2026 para entrenadores: crea un plan nutricional profesional paso a paso. Macros, base de alimentos, plantillas y software comparado para coaches online."
 date: "2026-05-30"
-lastModified: "2026-08-10"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "nutricion"
 readTime: 16
@@ -393,6 +393,6 @@ Las plantillas son éticas siempre que se usen como punto de partida sobre el qu
 
 ## Conclusión
 
-La pregunta correcta al elegir software para crear planes nutricionales no es "¿cuál es la mejor plataforma?", sino "¿qué filosofía encaja con mi modelo de negocio?". Si tu producto principal es el plan nutricional online en español, con cartera de 20-100 clientes, y necesitas base de alimentos local + IA generativa para acelerar la creación, **TotalGains está construida específicamente para ese caso** y puedes probarla con [14 días en el onboarding](/onboarding/). Si trabajas en mercado anglosajón con clientes ya enganchados a MyFitnessPal, Trainerize es la opción razonable. Si tu cuello de botella es CRM, agenda y ventas más que la creación del plan en sí, Harbiz encaja mejor.
+La pregunta correcta al elegir software para crear planes nutricionales no es "¿cuál es la mejor plataforma?", sino "¿qué filosofía encaja con mi modelo de negocio?". Si tu producto principal es el plan nutricional online en español, con cartera de 20-100 clientes, y necesitas base de alimentos local + IA generativa para acelerar la creación, **TotalGains está construida específicamente para ese caso** y puedes [empezar gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta. Si trabajas en mercado anglosajón con clientes ya enganchados a MyFitnessPal, Trainerize es la opción razonable. Si tu cuello de botella es CRM, agenda y ventas más que la creación del plan en sí, Harbiz encaja mejor.
 
 Esta guía te da el marco para decidir con criterio. El plan nutricional perfecto no existe; existe el plan que el cliente cumple durante 12 semanas y el sistema operativo que te permite producirlo en 30 minutos sin sacrificar calidad. Construye tu librería de plantillas, elige una herramienta que no te haga perder tiempo en correcciones manuales y diseña tu workflow de seguimiento antes de captar al cliente número 25. Lo demás — IA, integraciones, dashboards — son aceleradores, no sustitutos del criterio profesional.

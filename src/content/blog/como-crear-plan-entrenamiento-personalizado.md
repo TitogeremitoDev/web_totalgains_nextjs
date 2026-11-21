@@ -3,7 +3,7 @@ title: "Cómo Crear un Plan de Entrenamiento Personalizado que Realmente Funcion
 seoTitle: "Crear Plan de Entrenamiento Personalizado 2026"
 description: "Método paso a paso para crear planes de entrenamiento personalizados: evaluación, periodización, progresión de cargas y herramientas que ahorran horas."
 date: "2025-02-05"
-lastModified: "2026-04-24"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "metodologia"
 readTime: 10
@@ -273,7 +273,7 @@ Hay 4 señales claras: sin progresión en 2-3 semanas (revisar volumen, descanso
 
 ---
 
-*¿Quieres centralizar la programación, el seguimiento y los check-ins de todos tus clientes en un solo lugar? [Prueba TotalGains gratis durante 14 días](/onboarding/) — sin tarjeta ni permanencia.*
+*¿Quieres centralizar la programación, el seguimiento y los check-ins de todos tus clientes en un solo lugar? [Empieza gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta, con todas las funciones incluidas.*
 
 ---
 

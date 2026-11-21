@@ -3,7 +3,7 @@ title: "Tu Primer Verano como Entrenador Personal: Por Qué Empezar con App Desd
 seoTitle: "Primer Verano Entrenador Personal: Guía 2026"
 description: "Guía 2026 para coaches que arrancan este verano: por qué empezar con app desde el día 1, qué te da que WhatsApp+Excel no te da, y cómo captar clientes."
 date: "2026-06-12"
-lastModified: "2026-08-10"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "negocio"
 readTime: 14
@@ -24,7 +24,7 @@ comparison:
   reviewedProducts:
     - name: "TotalGains Starter"
       rating: 4.7
-      pros: "Plan de entrada (29,90 €/mes con IVA, hasta 25 clientes activos) con IA rutinas, IA dietas, base de +240.000 alimentos en español, cobros Stripe y app marca blanca incluidos sin add-ons. 14 días gratis sin tarjeta para probar antes de pagar. Migración asistida si arrancas con datos en Excel o WhatsApp."
+      pros: "Plan de entrada (29,90 €/mes con IVA, hasta 25 clientes activos) con IA rutinas, IA dietas, base de +240.000 alimentos en español, cobros Stripe y app marca blanca incluidos sin add-ons. Plan gratuito de 5 atletas de por vida, sin tarjeta, para empezar antes de pagar. Migración asistida si arrancas con datos en Excel o WhatsApp."
       cons: "Plataforma joven (fundada en 2025). Sin integración nativa con MyFitnessPal o wearables americanos (Whoop, Garmin pro). Valoración del propio fundador — autodeclarada, no auditada por tercero."
       lowPrice: 0
       highPrice: 149.90
@@ -38,7 +38,7 @@ comparison:
       cons: "Cliente percibe servicio amateur. Imposible escalar más allá de 5-8 clientes sin caos operativo. Sin marca propia visible en la app que abre el cliente. Tiempo perdido en admin que deberías dedicar a captación. Migrar después cuesta 5-10× más que arrancar bien."
 faqs:
   - q: "¿Es rentable empezar con app de pago cuando todavía tengo 0 clientes?"
-    a: "Sí, si tu plan a 2-3 meses pasa de 0 a 5+ clientes. TotalGains Starter cuesta 29,90 €/mes con IVA hasta 25 clientes activos. Con un solo cliente que te pague 50-80 €/mes (tarifa baja para un coach junior), ya cubres el coste de la app y te queda margen. La pregunta correcta no es cuánto cuesta sino cuánto te ahorra: el tiempo administrativo de gestionar 5 clientes con Excel y WhatsApp son fácilmente 8-10 horas semanales que pierdes para captación. La app reduce eso a 1-2 horas/semana automatizando seguimientos, cobros y entrega de planes. Si tu plan a 3 meses no es captar al menos 3-5 clientes, probablemente no es momento de pagar app: empieza con la prueba gratuita de 14 días y decide al final del trial."
+    a: "Sí, si tu plan a 2-3 meses pasa de 0 a 5+ clientes. TotalGains Starter cuesta 29,90 €/mes con IVA hasta 25 clientes activos. Con un solo cliente que te pague 50-80 €/mes (tarifa baja para un coach junior), ya cubres el coste de la app y te queda margen. La pregunta correcta no es cuánto cuesta sino cuánto te ahorra: el tiempo administrativo de gestionar 5 clientes con Excel y WhatsApp son fácilmente 8-10 horas semanales que pierdes para captación. La app reduce eso a 1-2 horas/semana automatizando seguimientos, cobros y entrega de planes. Si tu plan a 3 meses no es captar al menos 3-5 clientes, probablemente no es momento de pagar app: empieza con el plan gratuito de 5 atletas, que no caduca, y paga solo cuando lo necesites."
   - q: "¿Por qué empezar con app es mejor que arrancar con WhatsApp y migrar después?"
     a: "Por tres razones operativas. Primera: el cliente que entra con WhatsApp+Excel te percibe como amigo que entrena, no como servicio profesional, y eso afecta a cuánto te paga y a cuánto te respeta los precios. Segunda: migrar 10-15 clientes de WhatsApp a una app cuando tu cartera ya está formada es entre 5 y 10 veces más caro en tiempo que arrancar directamente con app desde el día uno, porque tienes que avisar uno a uno, reconfigurar planes, repetir explicaciones y recuperar conversaciones perdidas. Tercera: los hábitos operativos que construyes al inicio se quedan: si los primeros 6 meses son caos, ese caos es tu nuevo normal y cuesta romperlo. Empezar con app desde el día uno te obliga a profesionalizarte desde el principio."
   - q: "¿Qué necesito tener listo antes de captar mi primer cliente?"
@@ -48,7 +48,7 @@ faqs:
   - q: "¿Familia y amigos cuentan como primeros clientes?"
     a: "Sí, pero con condiciones. Sirven para validar tu método y conseguir testimonios reales con foto si están dispuestos. Pero deben pagar precio reducido pactado (no gratis) y entrar con el mismo proceso que un cliente externo: contrato firmado, app activada, cobro mensual recurrente. Si los tratas como excepción operativa terminas con un caos de gestión y un mensaje confuso ('a unos cobro 80 €, a otros nada'). Una regla simple: a familia y amigos cercanos, descuento del 50 % los primeros 3 meses pactado por escrito a cambio de testimonio público con foto al final del ciclo. Profesional para ti, generoso para ellos."
   - q: "¿Y si después del verano no consigo suficientes clientes? ¿Me ato a la app?"
-    a: "No. En TotalGains no hay permanencia. Si después de probar la prueba gratuita de 14 días y un mes Starter de pago decides que prefieres esperar y no continuar, cancelas y mantienes tu acceso hasta el fin del ciclo facturado sin nada más. El verano funciona como validador real de tu propuesta: si captas 3-5 clientes en julio y agosto, sabes que tienes producto y arrancas septiembre con base. Si no captas a nadie, ajustas oferta o canal de captación antes de septiembre. Pagar 30 €/mes durante 2-3 meses es coste de aprendizaje muy bajo frente al coste de oportunidad de empezar a operar caóticamente y arrastrar esos hábitos seis meses."
+    a: "No. En TotalGains no hay permanencia. Si después de un mes de Starter decides que prefieres esperar y no continuar, cancelas y mantienes tu acceso hasta el fin del ciclo facturado sin nada más. El verano funciona como validador real de tu propuesta: si captas 3-5 clientes en julio y agosto, sabes que tienes producto y arrancas septiembre con base. Si no captas a nadie, ajustas oferta o canal de captación antes de septiembre. Pagar 30 €/mes durante 2-3 meses es coste de aprendizaje muy bajo frente al coste de oportunidad de empezar a operar caóticamente y arrastrar esos hábitos seis meses."
   - q: "¿Qué es la app marca blanca y para qué la quiero como coach principiante?"
     a: "La app marca blanca es una aplicación móvil que tu cliente descarga con tu nombre, tu logo y tus colores en lugar del nombre de la plataforma que la genera por dentro. Para un coach principiante el impacto operativo es real: tu cliente abre la app y ve TU marca, no Trainerize o Harbiz; eso refuerza la percepción de servicio profesional construido por ti. En TotalGains la app marca blanca está incluida en el plan Pro (89,90 €/mes con IVA hasta 100 clientes), no en Starter; si tu plan a 6 meses es cruzar los 20-25 clientes y quieres marca propia desde antes, salta a Pro directamente. Más sobre el modelo en la guía [App de marca blanca para entrenadores 2026](/blog/app-marca-blanca-entrenadores-personales/)."
   - q: "¿Qué riesgos reales tiene empezar como coach autónomo en verano?"
@@ -177,15 +177,15 @@ Cubre hasta 25 clientes activos. Sin coste por entrenador adicional. Sin add-ons
 
 **Equivalencia de un cliente**: con un solo cliente pagando 60 €/mes ya cubres el coste de la app y te queda margen (30 €). El **segundo cliente cubre tu beneficio neto desde el primer mes**. Esto es matemática básica, no marketing.
 
-### 14 días de prueba gratuita sin tarjeta
+### Plan gratuito de 5 atletas, de por vida
 
-Antes de pagar nada, puedes probar la plataforma completa durante 14 días sin meter tarjeta de crédito. Tiempo suficiente para:
+Antes de pagar nada, puedes usar la plataforma completa con hasta 5 atletas, sin tarjeta y sin fecha de fin. Tiempo de sobra para:
 - Configurar tu cuenta y subir tu marca/colores
 - Generar tu primer plan con IA y validar si la calidad cumple tu criterio
 - Captar tu primer cliente y dárselo de alta como prueba
 - Decidir si la herramienta cumple lo que esperas
 
-Si al final del trial decides que no, cancelas sin coste. Si decides que sí, el primer pago de 29,90 € es el día 15.
+Cuando pases de 5 atletas, el plan Starter cuesta 29,90 € al mes con IVA. Y si quieres probar Pro antes de pagarlo, tiene 14 días de prueba sin tarjeta.
 
 ### Sin permanencia ni penalización por cancelar
 
@@ -254,7 +254,7 @@ Plan operativo de 5 días para arrancar bien sin dilatarlo semanas:
 
 ### Día 1 (Lunes) — Setup técnico
 
-- Date de alta en TotalGains (prueba 14 días sin tarjeta)
+- Date de alta en TotalGains (gratis con 5 atletas, sin tarjeta)
 - Sube tu logo/foto profesional y configura colores básicos
 - Conecta tu cuenta Stripe (necesario para cobrar a clientes)
 - Diseña tu paquete-base de servicio: precio, duración, qué incluye
@@ -356,7 +356,7 @@ Tienes feedback antes del rush. Ajustas precio, propuesta, canal de captación o
 
 ### ¿Es rentable empezar con app de pago cuando todavía tengo 0 clientes?
 
-Sí, si tu plan a 2-3 meses pasa de 0 a 5+ clientes. TotalGains Starter cuesta 29,90 €/mes con IVA hasta 25 clientes activos. Con un solo cliente que te pague 50-80 €/mes (tarifa baja para un coach junior), ya cubres el coste de la app y te queda margen. La pregunta correcta no es cuánto cuesta sino cuánto te ahorra: el tiempo administrativo de gestionar 5 clientes con Excel y WhatsApp son fácilmente 8-10 horas semanales que pierdes para captación. La app reduce eso a 1-2 horas/semana automatizando seguimientos, cobros y entrega de planes. Si tu plan a 3 meses no es captar al menos 3-5 clientes, probablemente no es momento de pagar app: empieza con la prueba gratuita de 14 días y decide al final del trial.
+Sí, si tu plan a 2-3 meses pasa de 0 a 5+ clientes. TotalGains Starter cuesta 29,90 €/mes con IVA hasta 25 clientes activos. Con un solo cliente que te pague 50-80 €/mes (tarifa baja para un coach junior), ya cubres el coste de la app y te queda margen. La pregunta correcta no es cuánto cuesta sino cuánto te ahorra: el tiempo administrativo de gestionar 5 clientes con Excel y WhatsApp son fácilmente 8-10 horas semanales que pierdes para captación. La app reduce eso a 1-2 horas/semana automatizando seguimientos, cobros y entrega de planes. Si tu plan a 3 meses no es captar al menos 3-5 clientes, probablemente no es momento de pagar app: empieza con el plan gratuito de 5 atletas, que no caduca, y paga solo cuando lo necesites.
 
 ### ¿Por qué empezar con app es mejor que arrancar con WhatsApp y migrar después?
 
@@ -376,7 +376,7 @@ Sí, pero con condiciones. Sirven para validar tu método y conseguir testimonio
 
 ### ¿Y si después del verano no consigo suficientes clientes? ¿Me ato a la app?
 
-No. En TotalGains no hay permanencia. Si después de probar la prueba gratuita de 14 días y un mes Starter de pago decides que prefieres esperar y no continuar, cancelas y mantienes tu acceso hasta el fin del ciclo facturado sin nada más. El verano funciona como validador real de tu propuesta: si captas 3-5 clientes en julio y agosto, sabes que tienes producto y arrancas septiembre con base. Si no captas a nadie, ajustas oferta o canal de captación antes de septiembre. Pagar 30 €/mes durante 2-3 meses es coste de aprendizaje muy bajo frente al coste de oportunidad de empezar a operar caóticamente y arrastrar esos hábitos seis meses.
+No. En TotalGains no hay permanencia. Si después de un mes de Starter decides que prefieres esperar y no continuar, cancelas y mantienes tu acceso hasta el fin del ciclo facturado sin nada más. El verano funciona como validador real de tu propuesta: si captas 3-5 clientes en julio y agosto, sabes que tienes producto y arrancas septiembre con base. Si no captas a nadie, ajustas oferta o canal de captación antes de septiembre. Pagar 30 €/mes durante 2-3 meses es coste de aprendizaje muy bajo frente al coste de oportunidad de empezar a operar caóticamente y arrastrar esos hábitos seis meses.
 
 ### ¿Qué es la app marca blanca y para qué la quiero como coach principiante?
 
@@ -388,7 +388,7 @@ Cuatro a vigilar. 1) Subestimar el coste de tu tiempo: 8 sesiones presenciales p
 
 ---
 
-> **Disclaimer**: precios TotalGains Starter 29,90 €/mes con IVA verificados a junio de 2026 en totalgains.es. Sin permanencia. 14 días de prueba sin tarjeta. Los rangos de precios de mercado para coaches juniors (60-120 €/mes) son aproximaciones orientativas basadas en observación del mercado español, no en estudio estadístico riguroso. Los porcentajes y proporciones cualitativos mencionados en este artículo son experiencia personal del autor hablando con coaches del sector, no datos auditados.
+> **Disclaimer**: precios TotalGains Starter 29,90 €/mes con IVA verificados a junio de 2026 en totalgains.es. Sin permanencia. Plan gratuito de 5 atletas de por vida, sin tarjeta. Los rangos de precios de mercado para coaches juniors (60-120 €/mes) son aproximaciones orientativas basadas en observación del mercado español, no en estudio estadístico riguroso. Los porcentajes y proporciones cualitativos mencionados en este artículo son experiencia personal del autor hablando con coaches del sector, no datos auditados.
 
 ---
 
@@ -414,4 +414,4 @@ Cuatro a vigilar. 1) Subestimar el coste de tu tiempo: 8 sesiones presenciales p
 
 ---
 
-Empezar como coach autónomo es un reto operativo y mental real. Hacerlo en verano tiene ventajas claras pero requiere arrancar con sistema desde el día uno: comunicación centralizada, cobros automatizados, IA para no perder horas en admin y una propuesta clara que respetes desde el primer cliente. Si tu plan a 6 meses es cruzar los 5-10 clientes activos, [puedes probar TotalGains 14 días gratis sin tarjeta](/onboarding/) y empezar a captar a tus primeros clientes con sistema desde la primera semana. Si tu plan es más conservador, empieza con WhatsApp y aprende lo que aprendas; lo importante es que decidas con criterio cuál es tu objetivo real este verano y arranques con coherencia desde el día uno.
+Empezar como coach autónomo es un reto operativo y mental real. Hacerlo en verano tiene ventajas claras pero requiere arrancar con sistema desde el día uno: comunicación centralizada, cobros automatizados, IA para no perder horas en admin y una propuesta clara que respetes desde el primer cliente. Si tu plan a 6 meses es cruzar los 5-10 clientes activos, [puedes empezar gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta, y empezar a captar a tus primeros clientes con sistema desde la primera semana. Si tu plan es más conservador, empieza con WhatsApp y aprende lo que aprendas; lo importante es que decidas con criterio cuál es tu objetivo real este verano y arranques con coherencia desde el día uno.

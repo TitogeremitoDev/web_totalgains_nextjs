@@ -3,7 +3,7 @@ title: "Has Tocado Techo de Clientes y No es Por Falta de Horas: Por Qué Tu Neg
 seoTitle: "Has Tocado Techo de Clientes: Escalar 2026"
 description: "Guía 2026 para coaches atascados en 15-25 clientes: los 4 techos operativos que te frenan, cómo estudiar a tus clientes de un vistazo y usar IA con cabeza."
 date: "2026-07-04"
-lastModified: "2026-08-10"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "negocio"
 readTime: 15
@@ -24,7 +24,7 @@ comparison:
   reviewedProducts:
     - name: "TotalGains Pro"
       rating: 4.7
-      pros: "Plan pensado para el coach que rompe el techo (89,90 €/mes con IVA, hasta 100 clientes activos) con IA generativa de rutinas <2 min por cliente, IA nutricional con base de +240.000 alimentos, app marca blanca incluida, sistema de recordatorios automáticos de cobro con win-back al cliente, panel Coach Insights para estudiar a tus clientes de un vistazo, sistema de retención asistida con IA y priorización de contactos en riesgo. 14 días gratis sin tarjeta. Sin permanencia."
+      pros: "Plan pensado para el coach que rompe el techo (89,90 €/mes con IVA, hasta 100 clientes activos) con IA generativa de rutinas <2 min por cliente, IA nutricional con base de +240.000 alimentos, app marca blanca incluida, sistema de recordatorios automáticos de cobro con win-back al cliente, panel Coach Insights para estudiar a tus clientes de un vistazo, sistema de retención asistida con IA y priorización de contactos en riesgo. Plan gratuito de 5 atletas de por vida, o 14 días de prueba de Pro sin tarjeta. Sin permanencia."
       cons: "El plan Pro requiere que el coach venga de una operativa profesionalizable: si no quieres dejar de gestionar el seguimiento manual del cobro cliente a cliente, la app te sobra. La capa de retención asistida con IA es uno de los pilares activos del roadmap, lo que significa que sigue evolucionando por releases mensuales. Valoración del propio fundador, autodeclarada."
       lowPrice: 0
       highPrice: 149.90
@@ -257,7 +257,7 @@ Plan operativo semana a semana:
 
 ### Semana 1 — Migración asistida
 
-- Alta en TotalGains (14 días gratis sin tarjeta)
+- Alta en TotalGains (14 días de prueba de Pro, sin tarjeta)
 - Migración de los 20 clientes actuales con soporte humano en español
 - Configura tu biblioteca de ejercicios y plantillas base
 - Configura los recordatorios automáticos de cobro con win-back al cliente
@@ -360,4 +360,4 @@ Es la trampa clásica del coach que ha tocado techo y prefiere gastar 500-800 �
 
 ---
 
-Si trabajas 12 horas al día en 22 clientes y llevas 6 meses igual, no es que trabajes poco: es que tu operativa no escala. Puedes seguir empujando con Excel + WhatsApp durante 12 meses más y llegarás al mismo punto; o puedes [probar TotalGains 14 días gratis sin tarjeta](/onboarding/) y ver en menos de una semana cuánto tiempo real recuperas cuando la IA genera tus rutinas, el dashboard te dice a quién priorizar y los recordatorios de cobro llegan al cliente sin que tú persigas nada. Los primeros 10 clientes extra pagan 130 veces el coste del plan Pro. La cuenta es matemática, no marketing. El techo no lo rompes trabajando más: lo rompes cambiando el sistema.
+Si trabajas 12 horas al día en 22 clientes y llevas 6 meses igual, no es que trabajes poco: es que tu operativa no escala. Puedes seguir empujando con Excel + WhatsApp durante 12 meses más y llegarás al mismo punto; o puedes [empezar gratis con 5 atletas o probar Pro 14 días](/onboarding/), sin tarjeta, y ver en menos de una semana cuánto tiempo real recuperas cuando la IA genera tus rutinas, el dashboard te dice a quién priorizar y los recordatorios de cobro llegan al cliente sin que tú persigas nada. Los primeros 10 clientes extra pagan 130 veces el coste del plan Pro. La cuenta es matemática, no marketing. El techo no lo rompes trabajando más: lo rompes cambiando el sistema.

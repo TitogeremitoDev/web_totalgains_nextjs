@@ -3,7 +3,7 @@ title: "Top 10 Frases que Matan la Confianza del Cliente por WhatsApp"
 seoTitle: "10 Frases que Matan la Confianza del Cliente"
 description: "Las 10 frases que dice sin darse cuenta un coach online por WhatsApp y hunden la confianza del cliente, con la alternativa profesional para cada una."
 date: "2026-07-26"
-lastModified: "2026-07-26"
+lastModified: "2026-11-21"
 category: "negocio"
 author: "Germán Martínez Calvente"
 readTime: 8
@@ -125,4 +125,4 @@ De las 10 frases anteriores, la que más caro sale no es la más dañina, es la 
 
 El servicio que vendes no es solo el plan. Es también cómo se siente el atleta cuando te escribe una duda a las 22:47.
 
-TotalGains se puede probar gratis 14 días, con chat integrado y ficha del cliente delante desde el primer minuto.
+TotalGains se puede usar gratis con 5 atletas, de por vida y sin tarjeta, con chat integrado y ficha del cliente delante desde el primer minuto.

@@ -3,7 +3,7 @@ title: "Cómo Conseguir Clientes como Entrenador Personal Online: El Método que
 seoTitle: "Conseguir Clientes Entrenador Personal Online"
 description: "Las 5 estrategias para captar clientes online sin pagar publicidad: casos de éxito, redes, referidos, SEO local y colaboraciones, con calendario realista."
 date: "2025-01-28"
-lastModified: "2026-11-17"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "negocio"
 readTime: 10
@@ -247,7 +247,7 @@ Sí: TotalGains, un software español para entrenadores personales, saca de tus 
 
 ---
 
-*¿Listo para gestionar más clientes sin más caos? [Prueba TotalGains gratis 14 días](/onboarding/) y descubre cómo entrenadores como [Lorena Eses](/casos-de-exito/lorena-eses/) ahorraron más de 10 horas semanales.*
+*¿Listo para gestionar más clientes sin más caos? [Empieza gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta, y descubre cómo entrenadores como [Lorena Eses](/casos-de-exito/lorena-eses/) ahorraron más de 10 horas semanales.*
 
 ---
 

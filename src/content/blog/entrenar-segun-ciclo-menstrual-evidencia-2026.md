@@ -3,7 +3,7 @@ title: "Entrenar y comer según el ciclo menstrual: qué funciona (2026)"
 seoTitle: "Ciclo menstrual, entreno y dieta: qué funciona"
 description: "El ciclo sabotea la dieta y el entreno de tus clientas de 3 formas medibles. Las plantillas de 28 días no valen; la individualización con datos, sí."
 date: "2026-07-26"
-lastModified: "2026-09-11"
+lastModified: "2026-11-21"
 category: "metodologia"
 author: "Germán Martínez Calvente"
 readTime: 12
@@ -148,4 +148,4 @@ El ciclo menstrual afecta al entreno y a la dieta de tus clientas de forma medib
 
 Mi Ciclo está incluido en TotalGains desde julio de 2026, sin coste extra, sin versión premium, sin muros de pago sobre datos de salud. Tu clienta lo activa desde Perfil → Mi Ciclo. Tú lo ves desde su ficha, siempre que ella te lo comparta, dato a dato.
 
-Prueba TotalGains gratis 14 días en `https://totalgains.es/onboarding/`, sin tarjeta ni permanencia. Y si ya usas la app, avisa a tus clientas de que Mi Ciclo está dentro: es el ajuste que llevabas queriendo hacer sin tener herramienta.
+Puedes [empezar gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta. Y si ya usas la app, avisa a tus clientas de que Mi Ciclo está dentro: es el ajuste que llevabas queriendo hacer sin tener herramienta.

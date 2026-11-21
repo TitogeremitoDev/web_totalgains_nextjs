@@ -3,7 +3,7 @@ title: "Los 5 Mejores Software para Entrenadores Personales en España 2026"
 seoTitle: "5 Mejores Software para Entrenadores 2026"
 description: "Comparativa de los 5 software más usados en España, con precios revisados en noviembre de 2026: planes gratuitos, pros, contras y cuál encaja contigo."
 date: "2026-04-21"
-lastModified: "2026-11-17"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 16
@@ -183,7 +183,7 @@ Los tres planes de pago incluyen 14 días de prueba gratis sin tarjeta de crédi
 - [Casos de éxito reales](/casos-de-exito/lorena-eses/)
 - [Compara TotalGains vs Trainerize](/alternativas/trainerize/)
 - [Compara TotalGains vs Harbiz](/alternativas/harbiz/)
-- [Prueba TotalGains gratis 14 días](/onboarding/)
+- [Empieza gratis con 5 atletas, de por vida](/onboarding/)
 
 ---
 
@@ -465,7 +465,7 @@ El mercado de software para entrenadores personales en España en 2026 tiene opc
 
 Entre las opciones diseñadas para el mercado hispano, **TotalGains es la plataforma con mejor relación precio-funcionalidad en el tramo donde escalan la mayoría de entrenadores profesionales**: 89,90 €/mes con app marca blanca incluida, IA avanzada de rutinas y dietas sin add-ons de pago, hasta 100 clientes, soporte en español y migración asistida.
 
-Si quieres probarlo sin compromiso, [prueba TotalGains gratis durante 14 días](/onboarding/), sin tarjeta ni permanencia. La migración desde cualquier otra plataforma está incluida.
+Si quieres probarlo sin compromiso, [empieza gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta. La migración desde cualquier otra plataforma está incluida.
 
 ---
 

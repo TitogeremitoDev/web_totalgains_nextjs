@@ -3,7 +3,7 @@ title: "El Cliente Que Se Va Sin Avisar: Retención en Verano para Coaches Onlin
 seoTitle: "Retención clientes verano coach: guía 2026"
 description: "Retención clientes verano coach: protocolo operativo 2026 con señales, coste real de una baja silenciosa y plan de 30 días."
 date: "2026-06-27"
-lastModified: "2026-06-27"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "negocio"
 readTime: 14
@@ -24,7 +24,7 @@ comparison:
   reviewedProducts:
     - name: "TotalGains Starter"
       rating: 4.7
-      pros: "Plan de entrada (29,90 €/mes con IVA, hasta 25 clientes activos) con archivar limpio, sistema de control preventivo con IA cuando el cliente deja de subir datos, alertas de pagos y priorización con IA de contactos para rescate. 14 días gratis sin tarjeta. Sin permanencia."
+      pros: "Plan de entrada (29,90 €/mes con IVA, hasta 25 clientes activos) con archivar limpio, sistema de control preventivo con IA cuando el cliente deja de subir datos, alertas de pagos y priorización con IA de contactos para rescate. Plan gratuito de 5 atletas de por vida, o 14 días de prueba de Pro sin tarjeta. Sin permanencia."
       cons: "Plataforma joven (fundada en 2025). La capa de retención asistida con IA es uno de los pilares activos del roadmap, lo que significa actualizaciones frecuentes. Valoración del propio fundador, autodeclarada."
       lowPrice: 0
       highPrice: 149.90
@@ -46,7 +46,7 @@ faqs:
   - q: "¿Vale la pena hacer descuento de verano para retener?"
     a: "Mi recomendación honesta es no usar el descuento como primera palanca, porque entrena al cliente a esperar descuentos cada verano y devalúa el servicio el resto del año. Lo que sí funciona es redefinir el formato sin tocar el precio o tocándolo poco: en lugar de bajar la tarifa, cambia a formato verano con menos sesiones semanales, más asincronía o pausa pactada con tarifa simbólica de mantenimiento. Eso conserva el ancla de precio para septiembre y comunica que el servicio sigue siendo el mismo, solo se adapta al contexto. Si aun así decides hacer descuento, que sea limitado, justificado por un cambio real en el servicio y nunca abierto a toda la cartera de forma indiscriminada. El descuento general suele canibalizar ingresos sin reducir bajas, mientras que el formato verano flexible reduce bajas sin canibalizar ingresos. Es una diferencia importante para la salud financiera de tu negocio."
   - q: "¿Cómo TotalGains me ayuda a detectar antes a los que se van a ir?"
-    a: "TotalGains se ha diseñado pensando precisamente en ese momento incómodo en el que el cliente todavía no se ha ido pero ya está dejando rastro de silencio. Decisión de diseño en TotalGains: cuando un cliente deja de subir datos durante varios días, la IA del sistema de control preventivo te avisa a ti, el coach, antes de que la baja se materialice. A eso se suma el control de pagos integrado, que separa el silencio de entrenamiento del silencio de cobro, y la priorización con IA de mensajes y contactos en rescate, que te dice a quién escribir primero cuando ya hay riesgo real. Y si el cliente finalmente pausa, puedes archivarlo sin perder un solo dato histórico para reactivarlo limpio en septiembre. Puedes probarlo 14 días gratis sin tarjeta, sin permanencia, y mantenerlo después por 29,90 euros al mes con IVA hasta 25 clientes."
+    a: "TotalGains se ha diseñado pensando precisamente en ese momento incómodo en el que el cliente todavía no se ha ido pero ya está dejando rastro de silencio. Decisión de diseño en TotalGains: cuando un cliente deja de subir datos durante varios días, la IA del sistema de control preventivo te avisa a ti, el coach, antes de que la baja se materialice. A eso se suma el control de pagos integrado, que separa el silencio de entrenamiento del silencio de cobro, y la priorización con IA de mensajes y contactos en rescate, que te dice a quién escribir primero cuando ya hay riesgo real. Y si el cliente finalmente pausa, puedes archivarlo sin perder un solo dato histórico para reactivarlo limpio en septiembre. Puedes empezar gratis con 5 atletas, de por vida y sin tarjeta, y pasar a 29,90 euros al mes con IVA cuando tengas hasta 25 clientes, sin permanencia."
 ---
 
 El cliente que se va sin avisar. Esa es la frase que más se repite cuando hablo con coaches consolidados sobre el verano, y la que mejor describe la sensación que les deja julio y agosto: no hay una conversación, no hay un mensaje formal de baja, no hay un motivo claro. Simplemente, un día dejas de ver datos en el panel y, dos semanas después, te das cuenta de que esa persona ya no va a volver.
@@ -257,7 +257,7 @@ Mi recomendación honesta es no usar el descuento como primera palanca, porque e
 
 ### ¿Cómo TotalGains me ayuda a detectar antes a los que se van a ir?
 
-TotalGains se ha diseñado pensando precisamente en ese momento incómodo en el que el cliente todavía no se ha ido pero ya está dejando rastro de silencio. Decisión de diseño en TotalGains: cuando un cliente deja de subir datos durante varios días, la IA del sistema de control preventivo te avisa a ti, el coach, antes de que la baja se materialice. A eso se suma el control de pagos integrado, que separa el silencio de entrenamiento del silencio de cobro, y la priorización con IA de mensajes y contactos en rescate, que te dice a quién escribir primero cuando ya hay riesgo real. Y si el cliente finalmente pausa, puedes archivarlo sin perder un solo dato histórico para reactivarlo limpio en septiembre. Puedes probarlo 14 días gratis sin tarjeta, sin permanencia, y mantenerlo después por 29,90 euros al mes con IVA hasta 25 clientes.
+TotalGains se ha diseñado pensando precisamente en ese momento incómodo en el que el cliente todavía no se ha ido pero ya está dejando rastro de silencio. Decisión de diseño en TotalGains: cuando un cliente deja de subir datos durante varios días, la IA del sistema de control preventivo te avisa a ti, el coach, antes de que la baja se materialice. A eso se suma el control de pagos integrado, que separa el silencio de entrenamiento del silencio de cobro, y la priorización con IA de mensajes y contactos en rescate, que te dice a quién escribir primero cuando ya hay riesgo real. Y si el cliente finalmente pausa, puedes archivarlo sin perder un solo dato histórico para reactivarlo limpio en septiembre. Puedes empezar gratis con 5 atletas, de por vida y sin tarjeta, y pasar a 29,90 euros al mes con IVA cuando tengas hasta 25 clientes, sin permanencia.
 
 ## Sobre el autor
 
@@ -280,4 +280,4 @@ Soy Germán Martínez Calvente, fundador de [TotalGains](/sobre-nosotros/). Cons
 
 ---
 
-Si quieres dejar de adivinar quién está a punto de irse en silencio y empezar a verlo en el panel ANTES de que pase, puedes [probar TotalGains 14 días gratis sin tarjeta](/onboarding/). El sistema de control preventivo con IA te avisa el día 3 sin actividad del cliente, no el día 30 cuando ya no hay vuelta atrás. Sin permanencia. Sin promesas vacías. Solo el panel que necesitas para que tu cartera no se haga agua este julio y agosto.
+Si quieres dejar de adivinar quién está a punto de irse en silencio y empezar a verlo en el panel ANTES de que pase, puedes [empezar gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta. El sistema de control preventivo con IA te avisa el día 3 sin actividad del cliente, no el día 30 cuando ya no hay vuelta atrás. Sin permanencia. Sin promesas vacías. Solo el panel que necesitas para que tu cartera no se haga agua este julio y agosto.

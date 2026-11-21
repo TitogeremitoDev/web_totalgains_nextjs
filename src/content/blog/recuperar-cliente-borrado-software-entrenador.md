@@ -3,7 +3,7 @@ title: "He borrado a un cliente sin querer: cómo recuperar sus datos en tu soft
 seoTitle: "Recuperar un Cliente Borrado por Error 2026"
 description: "Borraste un cliente por error. Qué se puede recuperar, qué se pierde para siempre y cómo montar un flujo de archivado que evite el desastre."
 date: "2026-07-26"
-lastModified: "2026-08-10"
+lastModified: "2026-11-21"
 category: "herramientas"
 author: "Germán Martínez Calvente"
 readTime: 8
@@ -115,4 +115,4 @@ Cuando compares plataformas de entrenamiento (y hay muchas: puedes ver esta comp
 
 Las tres cosas se prueban en 15 minutos con una cuenta de prueba: crea un cliente ficticio, asígnale un plan, modifícalo, bórralo y mira qué pasa. Si todo se puede deshacer, tienes un candidato. Si algo no vuelve, sabes lo que puedes perder si te confundes un martes por la tarde.
 
-TotalGains se puede probar gratis 14 días, sin tarjeta ni permanencia. Los tres mecanismos que has visto arriba están activos desde el primer minuto.
+TotalGains se puede usar gratis con 5 atletas, de por vida y sin tarjeta. Los tres mecanismos que has visto arriba están activos desde el primer minuto.

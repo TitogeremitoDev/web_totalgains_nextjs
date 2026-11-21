@@ -4,7 +4,7 @@ seoTitle: "Harbiz Precios 2026: de 22,99 € a 313 €/mes"
 description: "Precios Harbiz 2026 con IVA: Basic 22,99 €, Pro 143,99 €, My APP 240,79 €. Con marca blanca y add-ons llega a 313 €/mes. Verificado mayo 2026."
 date: "2026-05-23"
 canonical: "https://totalgains.es/alternativas/harbiz/precios/"
-lastModified: "2026-08-10"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 16
@@ -400,7 +400,7 @@ Si prefieres pagar solo por las funciones que usas (filosofía modular), Harbiz 
 
 **Por qué el plan Free encaja aquí**: **TotalGains Free ofrece 5 atletas de por vida sin tarjeta**, el plan gratuito más generoso del mercado hispano. TrainerStudio tiene plan gratuito permanente pero limitado a 3 clientes. Trainerize Basic solo da 1 cliente gratis. Y Harbiz no tiene plan free permanente (sus 22,99 €/mes con IVA por 5 clientes son de pago). Si estás validando el modelo, empezar en TotalGains Free te da margen para probar con 5 personas antes de pagar nada.
 
-**Cómo lo aborda TotalGains**: ofrecemos 14 días de prueba gratis sin tarjeta de crédito, pero después el plan Starter es de pago (29,90 €/mes). Es una elección consciente de modelo: preferimos coaches que validan rápido y se comprometen, en lugar de mantener cuentas free indefinidas. Si tu perfil es validar sin compromiso económico durante meses, TrainerStudio te ofrece eso y TG no.
+**Cómo lo aborda TotalGains**: el plan gratuito no caduca. Tienes hasta 5 atletas de por vida, sin tarjeta y con todas las funciones, así que puedes validar tu modelo durante meses sin pagar. Cuando pases de 5, el plan Starter cuesta 29,90 €/mes con IVA, y si quieres probar Pro antes de pagarlo tiene 14 días de prueba sin tarjeta.
 
 ### Comparativa funcional equivalente
 
@@ -517,4 +517,4 @@ Las alternativas en español más consolidadas en 2026 son [TotalGains](/alterna
 
 Esta guía está pensada para que tomes la mejor decisión para tu negocio, sea Harbiz, TotalGains, TrainerStudio o cualquier otra. La pregunta que importa no es **qué plataforma es objetivamente mejor** (no existe esa respuesta universal), sino **qué filosofía de producto encaja con tu modelo**: catálogo modular pagando solo lo que usas, plan plano todo incluido sin sumar add-ons o plan gratuito permanente para validar sin compromiso.
 
-Si tras leer esta guía tu situación encaja con la filosofía de TG (factura única, todo incluido, plan plano hasta 100 clientes), puedes [probarlo gratis 14 días sin tarjeta](/onboarding/) o ver la [comparativa directa TotalGains vs Harbiz](/alternativas/harbiz/). Si encajas mejor con el modelo modular, Harbiz es una opción sólida del mercado hispano y esta guía debería darte el detalle suficiente para configurarlo de forma eficiente.
+Si tras leer esta guía tu situación encaja con la filosofía de TG (factura única, todo incluido, plan plano hasta 100 clientes), puedes [empezar gratis con 5 atletas](/onboarding/), de por vida y sin tarjeta, o ver la [comparativa directa TotalGains vs Harbiz](/alternativas/harbiz/). Si encajas mejor con el modelo modular, Harbiz es una opción sólida del mercado hispano y esta guía debería darte el detalle suficiente para configurarlo de forma eficiente.

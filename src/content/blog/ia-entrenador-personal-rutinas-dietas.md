@@ -3,7 +3,7 @@ title: "IA para Entrenadores Personales: Cómo Crear Rutinas y Dietas Personaliz
 seoTitle: "IA para Crear Rutinas y Dietas Gratis 2026"
 description: "Cómo generar rutinas y dietas con IA en menos de 2 minutos por cliente, usando tu propia biblioteca de ejercicios. Gratis hasta 5 atletas, sin tarjeta."
 date: "2026-05-04"
-lastModified: "2026-08-28"
+lastModified: "2026-11-21"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 14
@@ -339,7 +339,7 @@ La IA en 2026 ya no es opcional para un entrenador personal que quiere escalar m
 
 TotalGains está construido sobre esa filosofía: la IA hace lo automático, tú haces lo humano. **Personalización al 100% con tu base de ejercicios y tu base de alimentos. Nada de rutinas genéricas. Nada de planes copiados de internet con el nombre cambiado.**
 
-Si quieres probarlo, [empieza la prueba de 14 días gratis](/onboarding/) y genera tu primera rutina con IA en los primeros 5 minutos de uso.
+Si quieres probarlo, [empieza gratis con 5 atletas](/onboarding/) y genera tu primera rutina con IA en los primeros 5 minutos de uso.
 
 ---
 
@@ -373,4 +373,4 @@ Las funcionalidades descritas en este artículo corresponden a la versión de To
 
 ---
 
-*¿Listo para empezar a usar IA en tu día a día como entrenador? [Prueba TotalGains gratis 14 días](/onboarding/) — todas las funciones de IA descritas están disponibles desde el primer minuto. Sin tarjeta. Sin permanencia.*
+*¿Listo para empezar a usar IA en tu día a día como entrenador? [Empieza gratis con 5 atletas](/onboarding/), de por vida: todas las funciones de IA descritas están disponibles desde el primer minuto. Sin tarjeta. Sin permanencia.*
