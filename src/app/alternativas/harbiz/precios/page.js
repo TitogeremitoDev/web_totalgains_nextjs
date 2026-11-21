@@ -486,7 +486,7 @@ export default function HarbizPreciosPage() {
                 Ver comparativa completa TotalGains vs Harbiz →
               </Link>{" "}
               <Link href="/onboarding/" className="btn btn-primary" prefetch={false}>
-                Probar TotalGains gratis 14 días 🚀
+                Empieza gratis con 5 atletas 🚀
               </Link>
             </p>
             <p style={{ marginTop: 24, fontSize: "0.92rem", color: "var(--text-secondary,#aaa)" }}>

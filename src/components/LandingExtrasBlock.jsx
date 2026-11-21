@@ -46,7 +46,7 @@ export default function LandingExtrasBlock({ plans = [], testimonials = [], comp
                   ))}
                 </ul>
                 <Link href="/onboarding/" style={{ display: "block", padding: "10px 16px", textAlign: "center", background: plan.highlight ? "var(--primary,#667eea)" : "rgba(255,255,255,0.06)", color: plan.highlight ? "#fff" : "var(--text-primary,#ddd)", borderRadius: 100, textDecoration: "none", fontWeight: 600, fontSize: "0.9rem" }}>
-                  Empieza gratis 14 días
+                  Empieza gratis con 5 atletas
                 </Link>
               </div>
             ))}

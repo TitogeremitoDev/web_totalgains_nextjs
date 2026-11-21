@@ -348,7 +348,7 @@ const Testimonials = () => {
         >
           <p className="cta-text">
             ¿Listo para ser el próximo caso de éxito?{" "}
-            <strong>Únete gratis 14 días.</strong>
+            <strong>Empieza gratis con 5 atletas, de por vida.</strong>
           </p>
           <a href="/onboarding/" className="btn btn-gold btn-lg">
             <Zap size={20} />

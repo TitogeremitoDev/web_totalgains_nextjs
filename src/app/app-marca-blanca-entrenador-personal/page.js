@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: "¿Puedo probar la marca blanca sin compromiso?",
-    a: "Sí. 14 días de prueba gratuita sin tarjeta de crédito en el plan Pro. Puedes generar tu branding con IA a partir de tu logo, ver la app cliente con tu marca en cuestión de minutos y decidir si el resultado te encaja. Sin permanencia, sin cláusulas de mínima duración; cancelas desde el panel cuando quieras.",
+    a: "Sí. El plan gratuito de 5 atletas, de por vida y sin tarjeta, ya incluye la marca blanca, y el plan Pro se puede probar 14 días, también sin tarjeta. Puedes generar tu branding con IA a partir de tu logo, ver la app cliente con tu marca en cuestión de minutos y decidir si el resultado te encaja. Sin permanencia, sin cláusulas de mínima duración; cancelas desde el panel cuando quieras.",
   },
 ];
 

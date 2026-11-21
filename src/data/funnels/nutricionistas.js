@@ -201,7 +201,7 @@ const nutricionistas = {
         },
         {
             q: '¿Cuánto cuesta y hay permanencia?',
-            a: 'Desde 29,90 €/mes con IVA incluido, con la app marca blanca ya dentro. Sin permanencia y sin coste por función: los planes solo cambian en número de pacientes activos y nivel de soporte. Puedes probarlo 14 días sin tarjeta.',
+            a: 'Desde 29,90 €/mes con IVA incluido, con la app marca blanca ya dentro. Sin permanencia y sin coste por función: los planes solo cambian en número de pacientes activos y nivel de soporte. Puedes empezar gratis con 5 pacientes, de por vida y sin tarjeta, o probar Pro 14 días.',
         },
     ],
 

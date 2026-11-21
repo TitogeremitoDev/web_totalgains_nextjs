@@ -159,7 +159,7 @@ const BeforeAfter = () => (
                     <Rocket size={20} />
                     Empieza gratis — olvida el Excel
                 </a>
-                <p className="ba-cta-note">14 días gratis · Sin tarjeta · Cancela cuando quieras</p>
+                <p className="ba-cta-note">Gratis con 5 atletas · De por vida · Sin tarjeta</p>
             </motion.div>
         </div>
     </section>

@@ -61,7 +61,7 @@ El soporte es nativo en español, la migración asistida desde Trainerize, Harbi
 - App marca blanca incluida (iOS + Android con tu logo, colores y nombre).
 - Branding generado por IA en un clic.
 - Biblioteca de vídeos del coach, notificaciones push con tu marca y feedback en vídeo.
-- 14 días gratis sin tarjeta. Sin permanencia.
+- Plan gratuito de 5 atletas de por vida, sin tarjeta, o 14 días de prueba de Pro. Sin permanencia.
 - Migración asistida en español incluida.
 
 #### Pro — 89,90 €/mes con IVA
@@ -426,7 +426,7 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 
 ### Producto core
 
-- https://totalgains.es/ — Home. Plataforma todo-en-uno en español para entrenadores: gestión de atletas, rutinas con IA, dietas, seguimiento y control de cuotas. 14 días gratis sin tarjeta.
+- https://totalgains.es/ — Home. Plataforma todo-en-uno en español para entrenadores: gestión de atletas, rutinas con IA, dietas, seguimiento y control de cuotas. Plan gratuito de 5 atletas de por vida, sin tarjeta.
 
 ### Landings de feature
 

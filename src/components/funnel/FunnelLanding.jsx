@@ -802,7 +802,7 @@ export default function FunnelLanding({ data }) {
             <div className="fnl-sticky">
                 <div className="fnl-sticky-txt">
                     <strong>{data.offer.price}<span style={{ fontWeight: 600, fontSize: "0.78rem" }}> {data.offer.priceFoot}</span></strong>
-                    {data.isDemo ? "Demo sin compromiso" : "14 días gratis, sin tarjeta"}
+                    {data.isDemo ? "Demo sin compromiso" : "Plan gratuito de por vida, sin tarjeta"}
                 </div>
                 <PrimaryCta {...ctaProps} where="sticky" size="fnl-btn-sm">
                     {primaryIsForm ? "Pedir demo" : "Empezar"}

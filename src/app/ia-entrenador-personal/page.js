@@ -88,7 +88,7 @@ const faqs = [
   },
   {
     q: "¿Puedo probar la IA sin compromiso?",
-    a: "Sí. 14 días de prueba gratuita sin tarjeta de crédito. En la primera hora ya generas tu primera rutina personalizada y tu primer plan nutricional con IA sobre tu propia biblioteca. Sin permanencia, sin cláusulas de mínima duración; cancelas desde el panel cuando quieras.",
+    a: "Sí. Con el plan gratuito de 5 atletas, de por vida y sin tarjeta, o con 14 días de prueba del plan Pro, también sin tarjeta. En la primera hora ya generas tu primera rutina personalizada y tu primer plan nutricional con IA sobre tu propia biblioteca. Sin permanencia, sin cláusulas de mínima duración; cancelas desde el panel cuando quieras.",
   },
 ];
 

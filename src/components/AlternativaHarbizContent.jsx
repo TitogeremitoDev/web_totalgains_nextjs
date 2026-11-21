@@ -255,7 +255,7 @@ export default function AlternativaHarbizContent() {
 
                 <div className="cta-wrapper">
                     <Link href="/onboarding/" className="btn btn-primary btn-lg cta-migrar" prefetch={false}>
-                        Probar TotalGains gratis 14 días 🚀
+                        Empieza gratis con 5 atletas 🚀
                     </Link>
                     <p className="microcopy-secure mt-2">Sin tarjeta. Sin permanencia. Migración asistida incluida si vienes de Harbiz.</p>
                 </div>

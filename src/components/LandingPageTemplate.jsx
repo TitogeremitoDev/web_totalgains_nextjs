@@ -20,7 +20,7 @@ import "./LandingPageTemplate.css";
  *   ctaText      string  — texto del botón principal
  *   ctaLocation  string  — para analytics
  *   ctaHref      string  — destino del CTA principal (default "/onboarding/")
- *   ctaNote      string  — texto pequeño junto al CTA (default "14 días gratis · Sin tarjeta")
+ *   ctaNote      string  — texto pequeño junto al CTA (default "Plan gratuito 5 atletas · Sin tarjeta")
  *   bottomCtaHeadline   string — H2 del bloque CTA inferior
  *   bottomCtaSubtitle   string — párrafo del bloque CTA inferior
  *   bottomCtaText       string — texto del botón del bloque CTA inferior
