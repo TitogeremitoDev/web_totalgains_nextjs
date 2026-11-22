@@ -641,6 +641,34 @@ section {
   transform: translateY(0);
 }
 
+/* ── .aparece: fundido al entrar en pantalla, SIN JavaScript ──
+   Lo dibuja el propio navegador con una animación ligada al scroll
+   (animation-timeline: view()). Sustituye a los motion.div con whileInView de
+   framer-motion, que obligaban a cargar y arrancar la librería en el móvil
+   para algo que el CSS hace solo (revisión de la web 21-nov, mejoras 3B7C y
+   2236).
+
+   Por defecto el elemento se VE: solo se anima donde el navegador lo sabe
+   hacer y si la persona no ha pedido menos movimiento. Así no hay forma de
+   que una sección se quede invisible (con whileInView, sin JavaScript o si
+   el script fallaba, se quedaban a opacidad 0). */
+@keyframes aparece {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .aparece {
+      animation: aparece linear both;
+      animation-timeline: view();
+      /* Distancia FIJA, no porcentaje: con «entry 55%» un bloque alto (la
+         galería, una tarjeta larga) seguía medio transparente con su
+         cabecera ya a media pantalla. Así queda opaco en cuanto asoma 140px. */
+      animation-range: entry 0% entry 140px;
+    }
+  }
+}
+
 .delay-100 {
   transition-delay: 0.1s;
 }

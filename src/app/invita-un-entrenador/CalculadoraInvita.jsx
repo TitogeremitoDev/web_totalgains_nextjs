@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Calculator } from "lucide-react";
+import { PLANES_COACH } from "@/data/planesCoach";
 
 /* ¿Cuántos días ganas? La MISMA cuenta que hace el servidor al primer pago del
    invitado (webhook de Stripe en TotalGains_Backend/index.js) y la tabla de la
@@ -9,11 +10,7 @@ import { Calculator } from "lucide-react";
    × 60 si él paga al año, entre 1 y ese máximo. Si tú aún no pagas (gratis o en
    prueba): 10, 20 o 30 días según su plan, el doble si paga al año. Él gana 30
    días siempre. Si cambia la regla en el servidor, cambia aquí. */
-const PLANES = [
-  { id: "starter", nombre: "Starter", mes: 29.9, anio: 299 },
-  { id: "pro", nombre: "Pro", mes: 89.9, anio: 899 },
-  { id: "unlimited", nombre: "Unlimited", mes: 149.9, anio: 1499 },
-];
+const PLANES = [PLANES_COACH.starter, PLANES_COACH.pro, PLANES_COACH.unlimited];
 
 export function diasParaTi({ tuPlan, tuPago, suPlan, suPago }) {
   const su = PLANES.find((p) => p.id === suPlan);

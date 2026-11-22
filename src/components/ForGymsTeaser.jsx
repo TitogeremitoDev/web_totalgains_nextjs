@@ -1,8 +1,10 @@
 "use client";
 
+/* Sigue siendo de cliente SOLO por su <style jsx> (styled-jsx no funciona en
+   componentes de servidor). Ya no usa framer-motion: la entrada al bajar es la
+   clase .aparece de globals.css (revisión de la web 21-nov, mejora 3B7C). */
 import Link from "next/link";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import { Users, Calendar, BarChart3, ArrowRight, Building2, ShoppingBag } from "lucide-react";
 
 const fadeUp = {
@@ -74,7 +76,7 @@ export default function ForGymsTeaser() {
         className="fgt-grid"
       >
         {/* Columna texto */}
-        <motion.div {...fadeUp}>
+        <div className="aparece">
           <span
             style={{
               display: "inline-flex",
@@ -261,16 +263,13 @@ export default function ForGymsTeaser() {
           >
             Desde <strong style={{ color: "var(--text-secondary, #b8b8d1)" }}>149 €/mes con IVA</strong> · Coaches ilimitados · Sin permanencia
           </p>
-        </motion.div>
+        </div>
 
         {/* Columna imagen del dashboard real */}
-        <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.7, delay: 0.15 }}
+        <div
+          className="aparece"
           style={{ position: "relative" }}
-        >
+      >
           <div
             style={{
               position: "relative",
@@ -313,7 +312,7 @@ export default function ForGymsTeaser() {
           >
             <Building2 size={13} /> Panel supervisor real
           </div>
-        </motion.div>
+        </div>
       </div>
 
       <style jsx>{`

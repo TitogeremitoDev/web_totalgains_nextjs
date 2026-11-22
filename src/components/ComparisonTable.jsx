@@ -1,7 +1,6 @@
 "use client";
 
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Check, X, ArrowRight } from 'lucide-react';
 import { trackEvent } from '@/components/Analytics';
 import './ComparisonTable.css';
@@ -28,13 +27,7 @@ const ComparisonTable = () => (
     <section className="comparison-section" id="comparativa">
         <div className="ct-bg-glow" />
         <div className="container">
-            <motion.div
-                className="section-header"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
-            >
+            <div className="aparece section-header">
                 <div className="section-badge">
                     <ArrowRight size={14} />
                     Comparativa directa
@@ -43,15 +36,9 @@ const ComparisonTable = () => (
                 <p className="section-subtitle">
                     Compara en 30 segundos. Sin letra pequeña.
                 </p>
-            </motion.div>
+            </div>
 
-            <motion.div
-                className="ct-wrapper"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-            >
+            <div className="aparece ct-wrapper">
                 <div className="ct-scroll">
                     <table className="ct-table">
                         <thead>
@@ -109,7 +96,7 @@ const ComparisonTable = () => (
                         Ver comparativa completa →
                     </a>
                 </div>
-            </motion.div>
+            </div>
         </div>
     </section>
 );

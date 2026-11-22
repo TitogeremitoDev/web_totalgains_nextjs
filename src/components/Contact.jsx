@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import emailjs from 'emailjs-com';
-import { motion } from 'framer-motion';
 import { Mail, Phone, XCircle } from 'lucide-react';
 import { trackEvent } from '@/components/Analytics';
 import './Contact.css';

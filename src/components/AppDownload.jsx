@@ -1,8 +1,6 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
 import { Smartphone, Star, Sparkles } from "lucide-react";
 import { trackEvent } from "@/components/Analytics";
 import "./AppDownload.css";
@@ -15,13 +13,7 @@ export default function AppDownload() {
         <section className="app-download-section" id="descargar">
             <div className="app-download-bg" aria-hidden="true" />
             <div className="container app-download-container">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.6 }}
-                    className="app-download-header"
-                >
+                <div className="aparece app-download-header">
                     <span className="app-download-eyebrow">
                         <Smartphone size={14} /> Descarga la app
                     </span>
@@ -31,15 +23,9 @@ export default function AppDownload() {
                     <p className="app-download-subtitle">
                         Gestiona tus atletas, diseña rutinas con IA y controla tu negocio fitness desde cualquier dispositivo. Descarga la app gratis en tu tienda favorita.
                     </p>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.6, delay: 0.15 }}
-                    className="app-download-buttons"
-                >
+                <div className="aparece app-download-buttons">
                     <a
                         href={PLAY_STORE_URL}
                         target="_blank"
@@ -76,15 +62,9 @@ export default function AppDownload() {
                             <span className="store-badge-name">App Store</span>
                         </div>
                     </a>
-                </motion.div>
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.6, delay: 0.3 }}
-                    className="app-rating-block glass"
-                >
+                <div className="aparece app-rating-block glass">
                     <div className="rating-icon-wrap">
                         <Sparkles size={24} />
                     </div>
@@ -121,7 +101,7 @@ export default function AppDownload() {
                             Valorar en App Store
                         </a>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

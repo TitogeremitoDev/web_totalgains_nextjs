@@ -1,9 +1,8 @@
 "use client";
 
 import { Phone, MessageCircle } from "lucide-react";
-import { DemoForm } from "@/components/funnel/FunnelLanding";
+import DemoForm from "@/components/funnel/DemoForm";
 import { whatsappUrl } from "@/data/contacto";
-import "@/components/funnel/funnel.css";
 import "./TeLlamamosGimnasio.css";
 
 /* «Te llamamos» de /para-gimnasios/. Antes el único botón de la página era

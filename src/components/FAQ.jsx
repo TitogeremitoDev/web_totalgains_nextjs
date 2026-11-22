@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
 import { HOME_FAQS } from '@/data/homeFaqs';
 import './FAQ.css';
 
@@ -18,28 +17,18 @@ const FAQ = () => {
     return (
         <section className="faq" id="faq">
             <div className="container">
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, margin: "-100px" }}
-                    transition={{ duration: 0.6 }}
-                    className="section-header"
-                >
+                <div className="aparece section-header">
                     <h2 className="gradient-text">Preguntas frecuentes sobre TotalGains</h2>
                     <p>Todo lo que necesitas saber sobre nuestro software para entrenadores</p>
-                </motion.div>
+                </div>
 
                 <div className="faq-container">
                     {HOME_FAQS.map((faq, index) => {
                         const isOpen = activeIndex === index;
                         return (
-                            <motion.div
+                            <div
+                                className={`aparece ${`faq-item glass ${isOpen ? 'active' : ''}`}`}
                                 key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true, margin: "-50px" }}
-                                transition={{ duration: 0.5, delay: index * 0.05 }}
-                                className={`faq-item glass ${isOpen ? 'active' : ''}`}
                             >
                                 {/*
                                   Usamos <button> para accesibilidad: aria-expanded y
@@ -69,7 +58,7 @@ const FAQ = () => {
                                 >
                                     <p>{faq.answer}</p>
                                 </div>
-                            </motion.div>
+                            </div>
                         );
                     })}
                 </div>

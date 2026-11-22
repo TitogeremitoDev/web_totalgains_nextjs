@@ -9,6 +9,7 @@ import { trackEvent } from "@/components/Analytics";
 import { OFERTA_WEB, whatsappOfertaWeb } from "@/data/ofertaWeb";
 import { useOfertaWeb } from "@/components/useOfertaWeb";
 import OfertaWebCta from "./OfertaWebCta";
+import { PLANES_COACH, euros } from "@/data/planesCoach";
 
 /* ──────────────────────────────────────────────
    Formulario de reserva de la oferta de noviembre. Sale por EmailJS con la
@@ -26,7 +27,10 @@ import OfertaWebCta from "./OfertaWebCta";
    reserva ya está en soporte@. El campo `web` es una trampa para robots.
    ────────────────────────────────────────────── */
 
-const PLANES = ["Starter · 299 €/año", "Pro · 899 €/año", "Unlimited · 1.499 €/año", "Aún no lo sé"];
+const PLANES = [
+  ...[PLANES_COACH.starter, PLANES_COACH.pro, PLANES_COACH.unlimited].map((p) => `${p.nombre} · ${euros(p.anio)}/año`),
+  "Aún no lo sé",
+];
 const DOMINIO = ["Sí, ya tengo", "No", "No lo sé"];
 const EMAIL_OK = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

@@ -5,6 +5,7 @@ import { Sparkles, Dumbbell, Apple, Clock, Shield, Zap } from "lucide-react";
 
 import { ofertasCoach, aggregateRatingNode } from "@/data/productSchema";
 import { planesResumen } from "@/data/planesCoach";
+import { PLANES_COACH, euros } from "@/data/planesCoach";
 export const metadata = {
   title: "IA para Entrenadores: Rutinas en 2 Minutos",
   description:
@@ -100,7 +101,7 @@ const testimonials = [
 ];
 
 const competencia = [
-  { tool: "TotalGains Pro (IA propia)", precio: "89,90 €/mes", ia: true, marca: true, esp: true },
+  { tool: "TotalGains Pro (IA propia)", precio: `${euros(PLANES_COACH.pro.mes)}/mes`, ia: true, marca: true, esp: true },
   { tool: "Trainerize + IA add-on", precio: "≈300 €/mes con IVA", ia: false, marca: false, esp: false },
   { tool: "Harbiz + Nutri AI", precio: "≈259 €/mes con IVA", ia: false, marca: false, esp: true },
 ];

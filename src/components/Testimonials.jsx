@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import {
   Star,
   ChevronDown,
@@ -138,13 +137,7 @@ const TestimonialCard = ({ data, index }) => {
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.6, delay: index * 0.15, ease: "easeOut" }}
-      className="testimonial-card"
-    >
+    <div className="aparece testimonial-card">
       {/* Accent Glow Line */}
       <div className={`card-accent-line ${data.accentClass}`} />
 
@@ -204,7 +197,6 @@ const TestimonialCard = ({ data, index }) => {
           <div className={`key-result-icon ${data.resultClass}`}>
             {data.id === "nacho" && <Timer size={22} />}
             {data.id === "lorena" && <Clock size={22} />}
-            {data.id === "german" && <Zap size={22} />}
             {data.id === "rjtrainer" && <Star size={22} />}
           </div>
           <div>
@@ -271,7 +263,7 @@ const TestimonialCard = ({ data, index }) => {
           </span>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };
 
@@ -339,13 +331,7 @@ const Testimonials = () => {
         </div>
 
         {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="testimonials-cta"
-        >
+        <div className="aparece testimonials-cta">
           <p className="cta-text">
             ¿Listo para ser el próximo caso de éxito?{" "}
             <strong>Empieza gratis con 5 atletas, de por vida.</strong>
@@ -367,7 +353,7 @@ const Testimonials = () => {
             </a>
             .
           </p>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
