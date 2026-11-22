@@ -79,12 +79,13 @@ export default function BlogPage() {
                     <div className="blog-card-image">
                       <Link href={`/blog/${post.slug}/`}>
                         {/* La primera foto es lo más grande que se ve al entrar desde el
-                            móvil (el LCP): se pide desde el principio y con prioridad.
-                            Diferida, el navegador no la pedía hasta terminar de colocar
-                            la página (revisión de la web 21-nov, mejora F1BB). */}
+                            móvil (el LCP): se pide desde el principio. Diferida, el
+                            navegador no la pedía hasta terminar de colocar la página
+                            (revisión de la web 21-nov, mejora F1BB). Sin prioridad alta
+                            a propósito: ver `inmediata` en ImagenAdaptable. */}
                         <ImagenAdaptable src={post.image} alt={post.title} width={640} height={366}
                           sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 900px) 46vw, 370px"
-                          priority={i === 0} />
+                          inmediata={i === 0} />
                       </Link>
                     </div>
                   )}

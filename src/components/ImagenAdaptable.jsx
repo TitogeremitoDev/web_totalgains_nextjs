@@ -13,13 +13,21 @@ import variantes from "@/data/variantesImagenes.json";
 
    Revisión de la web 21-nov-2026, mejora CD79: /para-gimnasios/ mandaba cinco
    capturas de 1837 px a un móvil que las enseña a ~380. */
-export default function ImagenAdaptable({ src, alt, width, height, sizes, priority = false, style, className }) {
+/* `priority`: se pide al momento y con prioridad alta (la foto principal de la
+   página, p. ej. la cabecera de /para-gimnasios/).
+   `inmediata`: se pide al momento pero SIN prioridad alta. Para la primera
+   foto de una lista enlazada desde el menú: React convierte cada <img> con
+   fetchPriority="high" en un aviso de precarga dentro de los datos de la
+   página, y como el menú de TODAS las páginas enlaza a /blog/, cada página
+   que lo precargaba se bajaba también esa foto (26 KB). Medido en vivo el
+   22-nov: los artículos pasaron de 411 a 455 KB por esto. */
+export default function ImagenAdaptable({ src, alt, width, height, sizes, priority = false, inmediata = false, style, className }) {
   const v = variantes[src];
   const base = src.replace(/\.webp$/, "");
   const srcSet = v
     ? [...v.copias.map((a) => `${base}-w${a}.webp ${a}w`), `${src} ${v.w}w`].join(", ")
     : undefined;
-  return (
+  const img = (
     <img
       src={src}
       srcSet={srcSet}
@@ -27,11 +35,17 @@ export default function ImagenAdaptable({ src, alt, width, height, sizes, priori
       alt={alt}
       width={width}
       height={height}
-      loading={priority ? "eager" : "lazy"}
+      loading={priority || inmediata ? "eager" : "lazy"}
       fetchPriority={priority ? "high" : undefined}
       decoding="async"
       style={style}
       className={className}
     />
   );
+  /* React precarga toda <img> que no sea diferida, y ese aviso viaja en los
+     datos de la página: el menú de cada página precarga /blog/ y con él la
+     foto. Dentro de <picture> React no la precarga, pero al estar en el HTML el
+     navegador la pide igual al instante. `display: contents` para que el
+     <picture> no altere la maqueta. */
+  return inmediata && !priority ? <picture style={{ display: "contents" }}>{img}</picture> : img;
 }
