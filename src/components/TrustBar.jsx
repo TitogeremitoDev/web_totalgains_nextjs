@@ -1,5 +1,3 @@
-"use client";
-
 import React from 'react';
 import { ShieldCheck, Star, CreditCard, Lock, Smartphone } from 'lucide-react';
 import './TrustBar.css';

@@ -374,9 +374,11 @@ const Pricing = ({ headingAs: Heading = 'h2' }) => {
     return (
         <section className="pricing" id="pricing">
             <div className="container">
+                {/* En /precios/ esta cabecera ES el titular (h1): visible desde el
+                    HTML. En la portada es una sección más y conserva su entrada. */}
                 <motion.div
                     className="section-header"
-                    initial={{ opacity: 0, y: 24 }}
+                    initial={Heading === 'h1' ? false : { opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.9 }}

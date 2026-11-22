@@ -1,0 +1,157 @@
+{
+ "/images/gym/dashboard.webp": {
+  "w": 1837,
+  "h": 916,
+  "copias": [
+   800,
+   1280
+  ]
+ },
+ "/images/gym/clientes.webp": {
+  "w": 1837,
+  "h": 916,
+  "copias": [
+   800,
+   1280
+  ]
+ },
+ "/images/gym/clases.webp": {
+  "w": 1837,
+  "h": 916,
+  "copias": [
+   800,
+   1280
+  ]
+ },
+ "/images/gym/pagos.webp": {
+  "w": 1837,
+  "h": 916,
+  "copias": [
+   800,
+   1280
+  ]
+ },
+ "/images/gimnasios/method-results.webp": {
+  "w": 1000,
+  "h": 1000,
+  "copias": [
+   480,
+   720
+  ]
+ },
+ "/images/blog/bf-invertir-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/checkin-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/preparacion-natural-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/seo-geo-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/tecnica-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/volumen-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480
+  ]
+ },
+ "/images/blog/recuperar-cliente-borrado-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/trainerize-precios-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/ia-totalgains/card-ia-entrenador-index.webp": {
+  "w": 1024,
+  "h": 1024,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/comparativa-software-2026-migracion.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/comparativa-software-2026-index.webp": {
+  "w": 1024,
+  "h": 1024,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/errores-entrenadores-hero.webp": {
+  "w": 800,
+  "h": 800,
+  "copias": [
+   480
+  ]
+ },
+ "/images/blog/plan-entrenamiento-hero.webp": {
+  "w": 800,
+  "h": 800,
+  "copias": [
+   480
+  ]
+ },
+ "/images/blog/hero_trainer_clients.webp": {
+  "w": 800,
+  "h": 800,
+  "copias": [
+   480
+  ]
+ },
+ "/images/blog/cuanto_cobra_hero.webp": {
+  "w": 800,
+  "h": 800,
+  "copias": [
+   480
+  ]
+ }
+}

@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import ImagenAdaptable from "@/components/ImagenAdaptable";
 import { motion } from "framer-motion";
 import DemoVideo from "@/components/DemoVideo";
 import CasoGimnasio from "@/components/CasoGimnasio";
@@ -235,7 +236,11 @@ function HeroSection() {
         }}
         className="hero-grid"
       >
-        <motion.div {...fadeUp}>
+        {/* Columna del titular SIN animación de entrada: con fadeUp el h1 nacía
+            con opacidad 0 y no se pintaba hasta que llegaba framer-motion.
+            Lighthouse: 1,7 s de los 4,75 s de LCP eran esa espera
+            (revisión de la web 21-nov, mejora AB2D). */}
+        <div>
           <span
             style={{
               display: "inline-flex",
@@ -344,21 +349,21 @@ function HeroSection() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
         <motion.div
           ref={mediaRef}
-          initial={{ opacity: 0, x: 30 }}
+          initial={false}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
           style={{ position: "relative" }}
         >
           <div ref={shotRef} className="pg-hero-shot">
-            <Image
+            <ImagenAdaptable
               src="/images/gym/dashboard.webp"
               alt="Dashboard supervisor real de TotalGains para gimnasios: ingresos del mes, miembros activos, asistencia, riesgo de baja, cobros pendientes y top coaches en tiempo real"
               width={1837}
               height={916}
+              sizes="(max-width: 880px) calc(100vw - 40px), 576px"
               priority
               style={{ width: "100%", height: "auto", display: "block" }}
             />
@@ -999,11 +1004,12 @@ function ProductGallerySection() {
                 "0 30px 70px rgba(102,126,234,0.20), 0 0 0 1px rgba(255,255,255,0.04) inset",
             }}
           >
-            <Image
+            <ImagenAdaptable
               src={current.img}
               alt={current.alt}
               width={1837}
               height={916}
+              sizes="(max-width: 900px) calc(100vw - 32px), 1100px"
               style={{ width: "100%", height: "auto", display: "block" }}
             />
           </div>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ImagenAdaptable from "@/components/ImagenAdaptable";
 import { Quote } from "lucide-react";
 import "./CasoGimnasio.css";
 
@@ -18,7 +18,7 @@ export default function CasoGimnasio({ casos, fecha }) {
           {casos.map(({ id, nombre, lugar, foto, cifras, frase, autor }) => (
             <article key={id} className="cgym-caso">
               <div className="cgym-foto">
-                <Image src={foto.src} alt={foto.alt} width={foto.ancho} height={foto.alto} sizes="(max-width: 760px) 100vw, 340px" style={{ objectPosition: foto.posicion }} />
+                <ImagenAdaptable src={foto.src} alt={foto.alt} width={foto.ancho} height={foto.alto} sizes="(max-width: 760px) 100vw, 340px" style={{ objectPosition: foto.posicion }} />
               </div>
               <div className="cgym-cuerpo">
                 <h3>{nombre}{lugar && <span>{lugar}</span>}</h3>

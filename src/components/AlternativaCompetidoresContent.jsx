@@ -137,10 +137,12 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
     return (
         <main className="alternativas-page">
             <div className="container alternativas-container">
+                {/* Visible desde el HTML: con opacidad 0 de entrada el titular no se
+                    pintaba hasta que llegaba framer-motion, y eso es justo lo que mide el
+                    LCP (revisión de la web 21-nov, mejora AB2D). */}
                 <motion.div
-                    initial={{ opacity: 0, y: -20 }}
+                    initial={false}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6 }}
                     className="alternativas-header"
                     id="alt-hero"
                 >

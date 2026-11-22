@@ -1,5 +1,7 @@
-"use client";
-
+/* Sin "use client": este fichero solo coloca secciones. Con la marca, todo lo
+   que cuelga de él viajaba al navegador como código aunque no tuviera estado
+   (TrustBar, VideoPresentacion). Cada sección que sí lo necesita lleva su
+   propio "use client" (revisión de la web 21-nov, mejora 5EC6). */
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import VideoPresentacion from "@/components/VideoPresentacion";
@@ -11,12 +13,8 @@ import HowItWorks from "@/components/HowItWorks";
 import Pricing from "@/components/Pricing";
 import AppDownload from "@/components/AppDownload";
 import ForGymsTeaser from "@/components/ForGymsTeaser";
-import LeadMagnet from "@/components/LeadMagnet";
 import dynamic from "next/dynamic";
-const RoiCalculator = dynamic(() => import("@/components/RoiCalculator"), {
-  ssr: false,
-  loading: () => <div style={{ height: "400px" }} />,
-});
+import RoiCalculatorLazy from "@/components/RoiCalculatorLazy";
 import ScrollInitializer from "@/components/ScrollInitializer";
 import StickyCTA from "@/components/StickyCTA";
 const Testimonials = dynamic(() => import("@/components/Testimonials"));
@@ -36,9 +34,8 @@ export default function HomeContent() {
       <Features />
       <AppShowcase />
       <HowItWorks />
-      {/* <LeadMagnet /> */}
       <div className="hide-on-mobile">
-        <RoiCalculator />
+        <RoiCalculatorLazy />
       </div>
       <Testimonials />
       <AppDownload />

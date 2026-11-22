@@ -545,7 +545,10 @@ export default function FunnelLanding({ data }) {
             <header className="fnl-hero">
                 <div className="fnl-hero-glow" aria-hidden="true"><span /><span /></div>
                 <div className="fnl-wrap fnl-hero-grid">
-                    <motion.div initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+                    {/* Visible desde el HTML: con opacidad 0 de entrada el titular no se
+                        pintaba hasta que llegaba framer-motion, y eso es justo lo que mide el
+                        LCP (revisión de la web 21-nov, mejora AB2D). */}
+                    <motion.div initial={false} animate={{ opacity: 1, y: 0 }}>
                         <span className="fnl-eyebrow"><Sparkles size={13} /> {data.hero.eyebrow}</span>
                         <h1 className="fnl-h1">
                             {data.hero.title}<br />
@@ -565,7 +568,7 @@ export default function FunnelLanding({ data }) {
                         <p className="fnl-microcopy">{data.cta.microcopy}</p>
                     </motion.div>
 
-                    <motion.div initial={{ opacity: 0, scale: 0.96 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: 0.12 }}>
+                    <motion.div initial={false} animate={{ opacity: 1, scale: 1 }}>
                         <VideoDemo
                             videoId={data.videoId || YT_VIDEO_ID}
                             label="Ver la demo en 2 minutos"

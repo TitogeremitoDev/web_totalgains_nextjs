@@ -68,7 +68,7 @@ De perfil se ven bien la profundidad, la inclinación del tronco y el camino de 
 
 Pásale esta guía antes del primer vídeo, no después del tercero mal grabado. Y si entrena siempre en el mismo sitio, que marque con cinta dónde deja el móvil: con el mismo ángulo y la misma distancia, puedes poner el vídeo de hoy al lado del de hace un mes y comparar de verdad.
 
-![Cruz de cinta coral pegada en el suelo de caucho de un gimnasio junto a un metro de cinta, para marcar dónde colocar el móvil al grabar la técnica de un ejercicio](/images/blog/tecnica-sitio.webp "Una marca en el suelo y el móvil siempre en el mismo sitio: así un vídeo se puede comparar con el siguiente")
+![Cruz de cinta coral pegada en el suelo de caucho de un gimnasio junto a un metro de cinta, para marcar dónde colocar el móvil al grabar la técnica de un ejercicio](/images/blog/tecnica-sitio-1100.webp "Una marca en el suelo y el móvil siempre en el mismo sitio: así un vídeo se puede comparar con el siguiente")
 
 ## <span id="cuando"></span>Cuándo pedirlo (y cuándo no)
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import ImagenAdaptable from "@/components/ImagenAdaptable";
 import { getAllPosts } from "@/lib/blog";
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react";
 import "./blog.css";
@@ -73,12 +73,18 @@ export default function BlogPage() {
             <p className="blog-empty">Próximamente...</p>
           ) : (
             <div className="blog-grid">
-              {posts.map((post) => (
+              {posts.map((post, i) => (
                 <article key={post.slug} className="blog-card glass">
                   {post.image && (
                     <div className="blog-card-image">
                       <Link href={`/blog/${post.slug}/`}>
-                        <Image src={post.image} alt={post.title} width={640} height={366} loading="lazy" />
+                        {/* La primera foto es lo más grande que se ve al entrar desde el
+                            móvil (el LCP): se pide desde el principio y con prioridad.
+                            Diferida, el navegador no la pedía hasta terminar de colocar
+                            la página (revisión de la web 21-nov, mejora F1BB). */}
+                        <ImagenAdaptable src={post.image} alt={post.title} width={640} height={366}
+                          sizes="(max-width: 600px) calc(100vw - 32px), (max-width: 900px) 46vw, 370px"
+                          priority={i === 0} />
                       </Link>
                     </div>
                   )}

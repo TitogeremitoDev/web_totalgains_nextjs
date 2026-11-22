@@ -42,9 +42,11 @@ export function getPostBySlug(slug) {
   return { slug, ...data, content };
 }
 
+/* Solo los publicados: antes salían TODOS los .md, así que un artículo con
+   `published: false` desaparecía del listado pero su página se seguía
+   generando. Hoy el único caso (harbiz-precios-2026) ya tenía un 301 en el
+   .htaccess y no se veía, pero el siguiente borrador no lo tendría
+   (revisión de la web 21-nov, mejora 4191). */
 export function getAllSlugs() {
-  if (!fs.existsSync(BLOG_DIR)) return [];
-  return fs.readdirSync(BLOG_DIR)
-    .filter(f => f.endsWith('.md'))
-    .map(f => f.replace(/\.md$/, ''));
+  return getAllPosts().map(p => p.slug);
 }

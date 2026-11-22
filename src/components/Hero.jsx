@@ -1,39 +1,34 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import {
   Rocket, Play, Trophy, Palette, Sparkles,
   Users, TrendingUp
 } from 'lucide-react';
 import { trackEvent } from '@/components/Analytics';
 import OfertaWebTicket from '@/components/OfertaWebTicket';
+import HeroSlideshow from '@/components/HeroSlideshow';
 import './Hero.css';
 
-const SLIDES = [
-  { src: '/screenshots/home_coach.webp',        alt: 'Home del coach' },
-  { src: '/screenshots/coach_clientes.webp',    alt: 'Gestión de clientes' },
-  { src: '/screenshots/coach_rutinas.webp',     alt: 'Rutinas' },
-  { src: '/screenshots/coach_seguimiento.webp', alt: 'Seguimiento' },
-  { src: '/screenshots/coach_nutricion.webp',   alt: 'Nutrición' },
-];
+/* Los efectos de ratón (inclinar el escenario, botones «magnéticos») y el
+   paralaje al bajar solo existen en un ordenador. En el móvil se preparaban
+   igual: el de scroll leía las medidas de la cabecera en cada movimiento y
+   Lighthouse lo marcaba como «Forced reflow» en la página con más móvil
+   bloqueado de la web (revisión de la web 21-nov, mejora 702F). */
+const ES_ESCRITORIO = '(min-width: 980px)';
+const CON_RATON = '(min-width: 980px) and (hover: hover)';
+const pantallaCumple = (q) => typeof window !== 'undefined' && window.matchMedia(q).matches;
 
 const Hero = () => {
   const stageRef     = useRef(null);
   const stageInnerRef = useRef(null);
   const heroRef      = useRef(null);
-  const [slide, setSlide] = useState(0);
 
-  // Auto-slideshow
+  // Scroll parallax (solo pantallas anchas)
   useEffect(() => {
-    const id = setInterval(() => setSlide(s => (s + 1) % SLIDES.length), 4000);
-    return () => clearInterval(id);
-  }, []);
-
-  // Scroll parallax
-  useEffect(() => {
+    if (!pantallaCumple(ES_ESCRITORIO)) return;
     let raf = null;
     const handle = () => {
       const isMobile = window.innerWidth < 980;
@@ -69,8 +64,9 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Tilt 3D on stage
+  // Tilt 3D on stage (solo con ratón)
   useEffect(() => {
+    if (!pantallaCumple(CON_RATON)) return;
     const s = stageRef.current;
     const inner = stageInnerRef.current;
     if (!s || !inner) return;
@@ -95,8 +91,9 @@ const Hero = () => {
     };
   }, []);
 
-  // Magnetic buttons
+  // Magnetic buttons (solo con ratón)
   useEffect(() => {
+    if (!pantallaCumple(CON_RATON)) return;
     const els = document.querySelectorAll('.magnetic');
     const handlers = [];
     els.forEach(el => {
@@ -154,21 +151,21 @@ const Hero = () => {
           </p>
 
           <div className="hero-cta">
-            <motion.a
-              whileTap={{ scale: 0.97 }}
+            {/* El encogido al pulsar va en Hero.css (`scale` en :active): antes
+                se cargaba framer-motion solo para esto. */}
+            <a
               href="/onboarding/"
               className="btn-gold-lg magnetic"
               onClick={() => trackEvent('cta_click', { cta_text: 'Empieza gratis', cta_location: 'hero' })}
             >
               <Rocket size={20} /> Empieza gratis
-            </motion.a>
-            <motion.a
-              whileTap={{ scale: 0.97 }}
+            </a>
+            <a
               href="#app-showcase"
               className="btn-outline-lg magnetic"
             >
               <Play size={18} /> Ver en acción
-            </motion.a>
+            </a>
           </div>
           {/* ⚠️ Jerarquía deliberada: el plan gratuito va PRIMERO y la prueba Pro
               después. Antes era al revés y las IAs citaban "prueba de 14 días"
@@ -262,20 +259,7 @@ const Hero = () => {
             </div>
 
             <div className="phone" data-depth="5">
-              <div className="screen">
-                <div className="progress-bars">
-                  {SLIDES.map((_, i) => (
-                    <div key={i} className={`pb ${i === slide ? 'active' : i < slide ? 'done' : ''}`}>
-                      <span key={`${i}-${slide}`}></span>
-                    </div>
-                  ))}
-                </div>
-                {SLIDES.map((s, i) => (
-                  <div key={i} className={`slide ${i === slide ? 'active' : ''}`}>
-                    <Image src={s.src} alt={s.alt} fill priority={i === 0} fetchPriority={i === 0 ? "high" : "auto"} sizes="330px" />
-                  </div>
-                ))}
-              </div>
+              <HeroSlideshow />
             </div>
 
             <div className="phone-glow"></div>

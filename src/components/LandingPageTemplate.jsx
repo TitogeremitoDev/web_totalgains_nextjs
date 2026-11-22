@@ -44,10 +44,12 @@ const LandingPageTemplate = ({
         <section className="lp-hero" id="lp-hero">
             <div className="lp-hero-bg" />
             <div className="container lp-hero-inner">
+                {/* Visible desde el HTML: con opacidad 0 de entrada el titular no se
+                    pintaba hasta que llegaba framer-motion, y eso es justo lo que mide el
+                    LCP (revisión de la web 21-nov, mejora AB2D). */}
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={false}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7 }}
                     className="lp-hero-content"
                 >
                     {badge && <span className="lp-badge">{badge}</span>}
