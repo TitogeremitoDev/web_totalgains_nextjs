@@ -414,6 +414,10 @@ const gimnasios = {
 
     faq: [
         {
+            q: '¿Hay una app para que los socios de un estudio reserven clases y vean su rutina?',
+            a: 'Sí: con TotalGains tus socios reservan sus clases con aforo y lista de espera y, en la misma app con la marca de tu centro, tienen su rutina y el WOD del día. Pueden coger una rutina escaneando el cartel con QR que cuelgas en la sala. Desde 149 euros al mes con IVA, con entrenadores ilimitados.',
+        },
+        {
             q: '¿TotalGains tiene tienda para vender productos en el gimnasio?',
             a: 'Sí. El módulo Tienda lleva catálogo con opciones de talla o sabor, control de stock por variante, venta en mostrador con ticket, pedidos desde la app del socio con código de recogida, devoluciones y rectificativas, descuentos con motivo, precio de coste privado con margen sobre la base sin IVA, entradas de proveedor con coste medio ponderado, informe mensual en PDF o CSV y un copiloto con IA que dice qué reponer. Está incluido en los tres planes de gimnasio, sin coste adicional.',
         },

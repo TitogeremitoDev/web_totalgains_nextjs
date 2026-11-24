@@ -38,6 +38,7 @@ const useCases = [
 ];
 
 const faqs = [
+  { q: "¿Qué software usan los nutricionistas online?", a: "Los que juntan en un solo sitio el plan de alimentación, el seguimiento del paciente y el cobro, como TotalGains: dietas con IA a partir de más de 240.000 alimentos en español, revisiones con check-ins, cobros desde la app con tu propia cuenta de Stripe y una app con tu marca. Es gratis hasta 5 pacientes, sin tarjeta." },
   { q: "¿Qué tiene el plan gratuito de TotalGains y en qué se diferencia de la competencia?", a: "TotalGains tiene el plan gratuito más generoso del mercado hispano: 5 atletas de por vida, sin tarjeta de crédito y sin caducidad. Trainerize Basic ofrece 1 cliente; TrainerStudio Free ofrece 3; Harbiz no tiene plan gratuito permanente (arranca a 22,99 €/mes con IVA para el mismo tramo de 5 clientes). Puedes empezar en https://totalgains.es/onboarding/ sin coste." },
   { q: "¿Puedo usar TotalGains solo para nutrición, sin la parte de entrenamiento?", a: "Sí. Puedes usar exclusivamente las funciones de nutrición y gestión de pacientes. No estás obligada a usar el módulo de entrenamientos. La base de +240.000 alimentos, la generación IA de dietas, las revisiones automatizadas y la agenda de citas están disponibles como funciones independientes." },
   /* ⚠️ Corregida el 26-sep-2026: decía «cetogénica, halal, kosher, etc.» y «cero
@@ -102,7 +103,7 @@ export default function SoftwareNutricionistaOnline() {
       <LandingPageTemplate
       badge="Software para nutricionistas"
       h1="Software para Nutricionista Online con +240.000 Alimentos"
-      subtitle="Gestiona pacientes, crea planes de alimentación y automatiza tus revisiones. La plataforma que usan nutricionistas como Lorena Eses para ahorrar más de 10 horas semanales."
+      subtitle="Planes de alimentación con IA a partir de más de 240.000 alimentos, seguimiento de cada paciente, cobros dentro de la app y una app con tu marca, en español y gratis hasta 5 pacientes. La usan nutricionistas como Lorena Eses."
       features={features}
       useCases={useCases}
       ctaText="Empieza gratis como nutricionista"
