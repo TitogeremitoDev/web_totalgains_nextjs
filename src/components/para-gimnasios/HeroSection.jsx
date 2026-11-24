@@ -106,7 +106,7 @@ export default function HeroSection() {
               marginBottom: 32,
             }}
           >
-            Clases con reserva, multi-coach con permisos granulares, app marca blanca del gimnasio y cobros recurrentes en una sola plataforma. Diseñada en español para boxes, estudios y gimnasios boutique de 2 a 15 coaches.
+            149, 199 o 249 € al mes con IVA, entrenadores ilimitados y todo incluido: clases con reserva, cuotas y facturación, app con la marca de tu centro y rutinas y dietas con IA. Sin coste por entrenador, sin módulos aparte y sin permanencia. Para gimnasios pequeños, estudios y boxes.
           </p>
 
           <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginBottom: 24 }}>

@@ -1,21 +1,36 @@
 import Link from "next/link";
 
 /* ───────────────────────────────────────────────────────────
-   6. COMPARATIVA con competidores
+   6. COMPARATIVA: lo que pagas de verdad
+   Rivales que citan ChatGPT y Gemini para gimnasios en España.
+   Cada dato sale de la web oficial de cada programa, leída el
+   24-nov-2026 (fichero de fuentes con URL y cita literal:
+   ~/.cache/tg-seo-nov/rivales-gimnasios-2026-11-24.md).
+   Decisiones de German (propuesta gimnasios-chatgpt-gemini, 24-nov):
+   con nombre y fuente, sin enlazarles; «trae / no trae / aparte»
+   sin adjetivos; y los que no publican precio, también.
+   Al cambiar un dato: volver a mirar su web y cambiar FECHA_DATOS.
    ─────────────────────────────────────────────────────────── */
-export default function ComparisonSection() {
-  const rows = [
-    { feature: "Idioma e interfaz", tg: "Español nativo", harbiz: "Español", virtuagym: "Multiidioma", trainerize: "Inglés" },
-    { feature: "Multi-coach permisos granulares", tg: "✅ 4 booleanos", harbiz: "⚠️ Roles fijos", virtuagym: "⚠️ Roles fijos", trainerize: "⚠️ Roles fijos" },
-    { feature: "Marca blanca del gimnasio", tg: "✅ Incluida", harbiz: "Add-on 30,24 €/mes", virtuagym: "✅ Incluida", trainerize: "✅ en Studio" },
-    { feature: "Reservas + waitlist", tg: "✅ Incluido", harbiz: "✅", virtuagym: "✅", trainerize: "✅" },
-    { feature: "IA rutinas + nutrición", tg: "✅ Sin add-on", harbiz: "Add-on Nutri AI 18,14 €/mes", virtuagym: "Limitada", trainerize: "Add-on $45/mes" },
-    { feature: "Base +240.000 alimentos ES", tg: "✅ Incluida", harbiz: "❌", virtuagym: "Base genérica", trainerize: "MyFitnessPal USA" },
-    { feature: "Cuotas y bonos recurrentes", tg: "✅ 0% comisión", harbiz: "✅", virtuagym: "Pasarela propia", trainerize: "Add-on $10/mes" },
-    { feature: "Soporte en español", tg: "✅ < 24h", harbiz: "✅", virtuagym: "Multiidioma", trainerize: "❌ Inglés" },
-    { feature: "Coste hasta 100 socios funcional", tg: "149 €/mes con IVA", harbiz: "~313 €/mes", virtuagym: "Bajo demanda", trainerize: "~352 €/mes" },
-  ];
+const FECHA_DATOS = "24 de noviembre de 2026";
 
+const COLUMNAS = ["Precio al mes", "IVA", "Entrenadores", "App con tu marca", "Facturación", "Rutinas"];
+
+const FILAS = [
+  { nombre: "TotalGains", tg: true, datos: ["149, 199 o 249 €", "Incluido", "Ilimitados", "Incluida", "Incluida", "Incluidas, con IA"] },
+  { nombre: "Gestión Gym", datos: ["29, 49 o 99 €", "Sin IVA", "1, 5 o ilimitados", "Sin app de tienda", "Sí", "No aparece"] },
+  { nombre: "TIMP", datos: ["50 a 170 €", "No lo dice", "1, 3, 10 o 15", "Solo web", "Sí", "Desde 85 €"] },
+  { nombre: "WodBuster", datos: ["34, 44 o 54 €", "No lo dice", "No lo publica", "No lo publica", "Aparte", "En otra app"] },
+  { nombre: "Trainingym", datos: ["99 a 319 € + alta", "Sin IVA", "No lo publica", "Solo plan Pro", "Servicio externo", "Sí"] },
+  { nombre: "GestionaTuBox", datos: ["34,95 € (oferta)", "Sin IVA", "Módulo +10 €", "Aparte", "+15 €", "+15 €"] },
+  { nombre: "Trainin", datos: ["29 o 49 €", "Sin IVA", "+5 € cada uno", "+29 €", "Sí", "+24 €"] },
+  { nombre: "GymGym", datos: ["Desde 47,50 €", "Sin IVA", "No lo publica", "A la carta", "No lo dice", "Solo Premium"] },
+  { nombre: "Mindbody", datos: ["Desde 99 €", "Sin IVA", "Ilimitados", "Complemento", "No lo dice", "No aparece"] },
+  { nombre: "Bsport", datos: ["Desde 139 €", "En presupuesto", "No lo publica", "Plan Engage", "Plan Engage", "No aparece"] },
+];
+
+const SIN_PRECIO = "Virtuagym, Resasports, AimHarder y Glofox no publican su precio: hay que pedir una demo.";
+
+export default function ComparisonSection() {
   return (
     <section style={{ padding: "100px 24px", background: "var(--bg-darker)" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
@@ -30,13 +45,14 @@ export default function ComparisonSection() {
               marginBottom: 12,
             }}
           >
-            Comparativa
+            Lo que pagas de verdad
           </p>
           <h2 style={{ fontSize: "clamp(1.6rem, 3.5vw, 2.4rem)", fontWeight: 800, lineHeight: 1.2, marginBottom: 12 }}>
-            TotalGains Gym vs el resto
+            Con IVA, sin coste por entrenador y sin módulos aparte
           </h2>
-          <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)" }}>
-            Datos verificados manualmente en webs oficiales a mayo de 2026.
+          <p style={{ fontSize: "0.95rem", color: "var(--text-secondary)", maxWidth: 760, margin: "0 auto" }}>
+            El precio que anuncian casi nunca es el que se paga: suele ir sin IVA, limita los entrenadores y deja
+            fuera la app, la facturación o las rutinas. Esto publica cada programa en su web oficial, a {FECHA_DATOS}.
           </p>
         </div>
 
@@ -48,56 +64,72 @@ export default function ComparisonSection() {
             borderRadius: 20,
             background: "rgba(255,255,255,0.02)",
           }}
-      >
-          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.88rem", minWidth: 720 }}>
+        >
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.86rem", minWidth: 900 }}>
             <thead>
               <tr style={{ background: "rgba(102,126,234,0.08)" }}>
                 <th style={{ padding: 14, textAlign: "left", color: "var(--text-secondary)", fontWeight: 600 }}>
-                  Función
+                  Programa
                 </th>
-                <th style={{ padding: 14, textAlign: "left" }}>
-                  <span
-                    style={{
-                      background: "var(--primary-gradient)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      fontWeight: 800,
-                    }}
-                  >
-                    TotalGains
-                  </span>
-                </th>
-                <th style={{ padding: 14, textAlign: "left", color: "var(--text-secondary)", fontWeight: 600 }}>
-                  Harbiz
-                </th>
-                <th style={{ padding: 14, textAlign: "left", color: "var(--text-secondary)", fontWeight: 600 }}>
-                  Virtuagym
-                </th>
-                <th style={{ padding: 14, textAlign: "left", color: "var(--text-secondary)", fontWeight: 600 }}>
-                  Trainerize
-                </th>
+                {COLUMNAS.map((c) => (
+                  <th key={c} style={{ padding: 14, textAlign: "left", color: "var(--text-secondary)", fontWeight: 600 }}>
+                    {c}
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody>
-              {rows.map((r, i) => (
-                <tr key={i} style={{ borderTop: "1px solid rgba(255,255,255,0.05)" }}>
-                  <td style={{ padding: 14, fontWeight: 600 }}>{r.feature}</td>
-                  <td style={{ padding: 14, color: "var(--primary-light)" }}>{r.tg}</td>
-                  <td style={{ padding: 14, color: "var(--text-secondary)" }}>{r.harbiz}</td>
-                  <td style={{ padding: 14, color: "var(--text-secondary)" }}>{r.virtuagym}</td>
-                  <td style={{ padding: 14, color: "var(--text-secondary)" }}>{r.trainerize}</td>
+              {FILAS.map((f) => (
+                <tr
+                  key={f.nombre}
+                  style={{
+                    borderTop: "1px solid rgba(255,255,255,0.05)",
+                    background: f.tg ? "rgba(102,126,234,0.07)" : undefined,
+                  }}
+                >
+                  <td style={{ padding: 14, fontWeight: 700, whiteSpace: "nowrap" }}>
+                    {f.tg ? (
+                      <span
+                        style={{
+                          background: "var(--primary-gradient)",
+                          WebkitBackgroundClip: "text",
+                          WebkitTextFillColor: "transparent",
+                          fontWeight: 800,
+                        }}
+                      >
+                        {f.nombre}
+                      </span>
+                    ) : (
+                      f.nombre
+                    )}
+                  </td>
+                  {f.datos.map((d, i) => (
+                    <td
+                      key={i}
+                      style={{
+                        padding: 14,
+                        color: f.tg ? "var(--text-primary)" : "var(--text-secondary)",
+                        fontWeight: f.tg ? 700 : 400,
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {d}
+                    </td>
+                  ))}
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
 
-        <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginTop: 14, textAlign: "center" }}>
-          Comparativa editorial. Cada plataforma encaja con perfiles distintos. Ver{" "}
-          <Link href="/blog/software-gimnasios-pequenos-boutique-2026/" prefetch={false} style={{ color: "var(--primary-light)" }}>
-            análisis completo
-          </Link>{" "}
-          con trade-offs honestos.
+        <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginTop: 14, textAlign: "center", lineHeight: 1.6 }}>
+          {SIN_PRECIO} Precios en € al mes, tal como los publica cada uno. «Aparte», «a la carta» o «complemento»: se
+          contrata como extra. «No aparece»: su web no lo ofrece. Si algún dato ha cambiado, escríbenos y lo corregimos.
+          Fuentes y detalle en{" "}
+          <Link href="/blog/cuanto-cuesta-software-gimnasio-2026/" prefetch={false} style={{ color: "var(--primary-light)" }}>
+            cuánto cuesta de verdad un software para gimnasio
+          </Link>
+          .
         </p>
       </div>
     </section>

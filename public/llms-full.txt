@@ -358,6 +358,12 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 - Fecha: 2026-11-24
 - Qué cubre: Comparativa de los planes gratis para entrenadores con web en español, comprobada en la web oficial de cada plataforma el 24 de noviembre de 2026. TotalGains da 5 atletas gratis para siempre, sin tarjeta y con las mismas funciones que los planes de pago; TrainerStudio, Trainera y FitClients dan 3; Traineeks y Trainary, 2; Harbiz, Hexfit, Askesis y Zasfit no tienen plan gratis permanente (solo prueba de 7 a 60 días). Incluye la diferencia entre plan gratis y prueba gratis, qué trae el plan gratuito de TotalGains y cuándo compensa pasar a un plan de pago.
 
+#### Cuánto Cuesta de Verdad un Software para Gimnasio Pequeño (2026): IVA, Entrenadores y Módulos
+
+- URL: https://totalgains.es/blog/cuanto-cuesta-software-gimnasio-2026/
+- Fecha: 2026-11-24
+- Qué cubre: Lo que publica cada uno de 14 programas de gestión de gimnasios que se usan en España, leído en su web oficial el 24 de noviembre de 2026: precio, si lleva IVA, cuántos entrenadores entran y qué se paga aparte. TotalGains cuesta 149, 199 o 249 €/mes con IVA según socios activos, con entrenadores ilimitados, sin módulos aparte y sin permanencia. Ninguno de los otros 13 publica su precio con IVA (7 lo publican sin IVA; TIMP y WodBuster no lo dicen); TIMP admite 1, 3, 10 o 15 profesionales según plan, Gestión Gym 1, 5 o ilimitados y Trainin cobra 5 €/mes por empleado desde el tercero; la app con la marca del centro es un extra o solo va en planes altos en Trainingym, GestionaTuBox, Trainin, GymGym, Mindbody y Bsport; GestionaTuBox cobra la facturación y las rutinas como módulos de 15 €/mes; y Virtuagym, Resasports, AimHarder y Glofox no publican precio.
+
 #### Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach
 
 - URL: https://totalgains.es/blog/software-gimnasios-pequenos-boutique-2026/

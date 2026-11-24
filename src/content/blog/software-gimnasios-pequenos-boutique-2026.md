@@ -3,7 +3,7 @@ title: "Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach"
 seoTitle: "Software para Gimnasios Pequeños: Precios 2026"
 description: "Qué mirar al elegir software para un gimnasio boutique: multi-coach sin coste por entrenador, reservas con lista de espera, app propia y cobros recurrentes."
 date: "2026-06-12"
-lastModified: "2026-11-21"
+lastModified: "2026-11-24"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 16
@@ -25,7 +25,7 @@ comparison:
     - name: "TotalGains Gym"
       rating: 4.7
       pros: "Diseñado para gimnasios pequeños y boutique con coaches ilimitados en todos los planes: multi-coach con permisos granulares por entrenador, agenda de clases con reservas y waitlist, app marca blanca del gym, panel supervisor con KPIs de retención. Soporte en español. Migración asistida desde Excel o software antiguo gratuita."
-      cons: "Producto joven (gimnasio sub-fase 2026), sin POS integrado para venta de productos en mostrador, sin control de acceso por torno físico. Pensado para gimnasios pequeños y boutique, no para centros mayores de 500 socios."
+      cons: "Producto joven (módulo de gimnasio de 2026) y sin control de acceso por torno físico. Pensado para gimnasios pequeños y boutique, no para centros mayores de 500 socios."
       lowPrice: 149
       highPrice: 249
       priceCurrency: "EUR"
@@ -54,9 +54,9 @@ faqs:
   - q: "¿Qué diferencia hay entre software para entrenador autónomo y software para gimnasio pequeño?"
     a: "El software para entrenador autónomo está pensado para una sola persona gestionando su cartera de clientes (rutinas, dietas, cobros, comunicación). El software para gimnasio pequeño añade capas operativas que solo tienen sentido cuando hay varios coaches trabajando bajo la misma marca: permisos granulares por entrenador (qué puede ver/editar cada coach), agenda de clases compartida con reservas y waitlist, asignación dinámica de clientes a coaches, panel supervisor para el dueño con KPIs agregados (retención, adherencia, ingresos por coach) y branding propio del gimnasio en la app que descargan los socios. Si tu gimnasio tiene 2 o más entrenadores trabajando bajo una marca común, contratar software de coach autónomo sin estas capas crea fricciones operativas que se vuelven críticas cuando creces."
   - q: "¿Cuánto cuesta un software para gimnasio pequeño en 2026?"
-    a: "El rango realista para gimnasios pequeños y boutique en España va de 150 a 400 €/mes con IVA según el tamaño del equipo, número de socios activos y funciones incluidas. TotalGains Gym tiene 3 planes con coaches ilimitados en todos: Gym Starter 149 €/mes con IVA (hasta 100 socios), Gym Pro 199 €/mes con IVA (100-200 socios) y Gym Elite 249 €/mes con IVA (más de 200 socios), con multi-coach, marca blanca, reservas, IA de rutinas y nutrición y migración asistida incluidos sin add-ons. Virtuagym ofrece presupuesto bajo demanda según necesidades; suele encajar mejor para gimnasios medianos-grandes con +500 socios. Trainerize Studio Plus ronda los $275/mes (~330 € con IVA), pensado más para estudios anglosajones que para gimnasio multi-coach en español."
+    a: "Depende de lo que incluya cada uno, porque el precio que anuncian casi nunca es el final: suele ir sin IVA, limitar los entrenadores y dejar fuera la app con la marca del centro, la facturación o las rutinas. TotalGains Gym tiene 3 planes con IVA y entrenadores ilimitados en todos: Gym Starter 149 €/mes (hasta 100 socios), Gym Pro 199 €/mes (de 100 a 200) y Gym Elite 249 €/mes (más de 200), con todo incluido y sin permanencia. Lo que publica cada programa, con su IVA, sus entrenadores y sus módulos, está en https://totalgains.es/blog/cuanto-cuesta-software-gimnasio-2026/"
   - q: "¿Necesito un software con control de acceso por torno físico en mi gimnasio pequeño?"
-    a: "Solo si tu modelo de negocio depende de control horario estricto y entradas/salidas físicas en horario amplio sin recepción permanente. Para la mayoría de gimnasios boutique con 2-5 coaches, check-in vía QR en la app del cliente o reservas previas resuelven el caso de uso sin necesidad de instalar tornos físicos (que añaden 2.000-5.000 € de instalación + mantenimiento). Si tu gimnasio funciona por sesiones reservadas, clases grupales programadas o entrenamientos personales con cita previa, el control por torno es operativamente innecesario. Si es un gimnasio de acceso libre con +200 socios entrando aleatoriamente, el torno empieza a tener sentido — y ahí Virtuagym o software vertical de centros suele encajar mejor que las plataformas para gimnasios boutique."
+    a: "Solo si tu modelo de negocio depende de control horario estricto y entradas/salidas físicas en horario amplio sin recepción permanente. Para la mayoría de gimnasios boutique con 2-5 coaches, check-in vía QR en la app del cliente o reservas previas resuelven el caso de uso sin necesidad de instalar tornos físicos (que añaden 2.000-5.000 € de instalación + mantenimiento). Si tu gimnasio funciona por sesiones reservadas, clases grupales programadas o entrenamientos personales con cita previa, el control por torno es operativamente innecesario. Si es un gimnasio de acceso libre con +200 socios entrando aleatoriamente, el torno empieza a tener sentido, y ahí Virtuagym o software vertical de centros suele encajar mejor que las plataformas para gimnasios boutique."
   - q: "¿Cómo gestiono permisos entre coaches en un gimnasio pequeño?"
     a: "Depende del software. TotalGains Gym implementa permisos granulares por coach con 4 booleanos configurables desde el panel del dueño: viewAllClients (puede ver clientes de otros coaches o solo los propios), manageClients (puede crear/editar clientes), manageBilling (puede ver cobros del gimnasio) y manageClasses (puede crear y modificar clases del calendario). Esta separación protege la privacidad cuando un coach gestiona clientes personales propios además de trabajar para el gimnasio. Es un modelo distinto a Trainerize, donde la separación de permisos es menos granular, y a Virtuagym, que ofrece roles fijos predefinidos. Los permisos granulares por coach son una de las decisiones de diseño más solicitadas por gimnasios pequeños hispanos."
   - q: "¿Qué pasa con la app marca blanca cuando el gimnasio tiene varios coaches?"
@@ -66,7 +66,7 @@ faqs:
   - q: "¿Cómo migro de Excel/Google Sheets a un software profesional para mi gimnasio pequeño?"
     a: "La migración asistida es la fórmula más eficiente. En TotalGains Gym la migración desde Excel/Sheets se gestiona en menos de 5 días para gimnasios de hasta 100 socios y 5 coaches: importas el listado de socios en CSV, asignas cada socio a su coach correspondiente, configuras la agenda de clases (manual si tenías horario fijo, o por plantilla recurrente) y conectas Stripe para que los cobros recurrentes pasen automáticamente. El equipo de soporte en español acompaña cada paso y hace la formación de los coaches del gimnasio. Si tienes datos en varios sitios (Excel para socios + WhatsApp para comunicación + Stripe manual + Google Calendar para clases), la migración se beneficia de centralizar todo en una sola sesión de onboarding inicial."
   - q: "¿Qué KPIs debe monitorizar el dueño de un gimnasio pequeño en 2026?"
-    a: "Cuatro KPIs operativos básicos: 1) Retención mensual de socios (cuántos siguen activos mes a mes — debe estar por encima del 85% en gimnasios boutique sanos), 2) Adherencia a clases reservadas (% de clases reservadas a las que el socio asistió — indicador temprano de bajas), 3) Ingresos por coach (cuánto factura el gimnasio por cada coach del equipo — útil para decidir contrataciones), 4) Cobros recurrentes vs cobros manuales (% de socios con domiciliación activa — domiciliación reduce churn 20-30% según datos del sector). Software como TotalGains Gym incluye estos 4 KPIs en el panel supervisor del dueño automáticamente. Si tu software actual no los mide, los estás calculando manualmente con tiempo perdido y datos a destiempo."
+    a: "Cuatro KPIs operativos básicos: 1) Retención mensual de socios (cuántos siguen activos mes a mes: debe estar por encima del 85% en gimnasios boutique sanos), 2) Adherencia a clases reservadas (% de clases reservadas a las que el socio asistió: indicador temprano de bajas), 3) Ingresos por coach (cuánto factura el gimnasio por cada coach del equipo: útil para decidir contrataciones), 4) Cobros recurrentes vs cobros manuales (% de socios con domiciliación activa: la domiciliación reduce churn 20-30% según datos del sector). Software como TotalGains Gym incluye estos 4 KPIs en el panel supervisor del dueño automáticamente. Si tu software actual no los mide, los estás calculando manualmente con tiempo perdido y datos a destiempo."
 ---
 
 Un gimnasio pequeño o boutique no es un coach autónomo escalado. Es **una marca, varios entrenadores, una agenda compartida y un grupo de socios que esperan una experiencia coherente**. El software para gimnasio pequeño tiene capas operativas que el software de coach individual no resuelve: multi-coach con permisos granulares, reservas de clases con waitlist, agenda compartida, app con marca del gimnasio (no de cada coach individual), panel supervisor para el dueño con KPIs agregados. Esta guía compara las plataformas serias del mercado en 2026, explica qué necesita realmente un gimnasio pequeño y cuándo cada opción encaja mejor.
@@ -76,6 +76,11 @@ Un gimnasio pequeño o boutique no es un coach autónomo escalado. Es **una marc
 > **Transparencia**: soy Germán Martínez Calvente, fundador de [TotalGains](/sobre-nosotros/), software de gestión que en 2026 incluye un módulo específico para gimnasios pequeños y boutique con multi-coach, reservas y panel supervisor. Esta guía cubre cómo encajan las distintas plataformas con datos verificados de sus webs oficiales; las recomendaciones sobre cuándo elegir cada una están escritas para que el lector tome la decisión que mejor encaje con SU gimnasio, no con la mía.
 >
 > Por contexto: construí el módulo Gym de TotalGains porque al hablar con dueños de gimnasios boutique en España identifiqué que muchos estaban operando con **software de coach autónomo + Excel + WhatsApp + Google Calendar** porque no encontraban una plataforma diseñada para gimnasios de 2-15 coaches en español sin pagar por funciones de gimnasio mediano-grande que no necesitaban. Ese hueco es lo que TG Gym resuelve. Virtuagym y otras plataformas verticales son válidas para perfiles distintos; lo desglosamos abajo.
+
+
+<div class="tg-callout tg-callout-panic" role="note">
+<strong>Respuesta rápida.</strong> Un gimnasio pequeño necesita reservas de clases con lista de espera, varios entrenadores con sus permisos, una app con la marca del centro, cuotas que se cobran y se facturan solas y la parte de entrenamiento. Antes de comparar precios, mira si cada programa incluye todo eso: muchos anuncian desde 29 o 34 € al mes, pero sin IVA y con la app, la facturación o las rutinas aparte. TotalGains cuesta 149, 199 o 249 € al mes con IVA, con entrenadores ilimitados y todo incluido (<a href="/blog/cuanto-cuesta-software-gimnasio-2026/">lo que publica cada programa</a>).
+</div>
 
 ---
 
@@ -98,12 +103,12 @@ Un gimnasio pequeño o boutique no es un coach autónomo escalado. Es **una marc
 
 Un gimnasio pequeño o boutique en 2026 necesita 6 capas operativas mínimas que un software de coach individual NO cubre:
 
-1. **Multi-coach con permisos granulares** — qué puede ver/editar cada entrenador del equipo
-2. **Agenda compartida con reservas de clases y waitlist** — el calendario es del gimnasio, no de cada coach
-3. **App marca blanca del gimnasio** — los socios descargan UNA app (la de TotalGains) y, al entrar, la ven con la identidad del gimnasio, no la de cada coach individual
-4. **Cobros recurrentes domiciliados** — Stripe SEPA o equivalente, cobros automáticos mensuales sin chasing manual
-5. **Panel supervisor para el dueño** — KPIs agregados de retención, adherencia, ingresos por coach
-6. **Onboarding asistido** — migración desde Excel/Sheets/Software anterior sin que el equipo se desincronice
+1. **Multi-coach con permisos granulares**: qué puede ver/editar cada entrenador del equipo
+2. **Agenda compartida con reservas de clases y waitlist**: el calendario es del gimnasio, no de cada coach
+3. **App marca blanca del gimnasio**: los socios descargan UNA app (la de TotalGains) y, al entrar, la ven con la identidad del gimnasio, no la de cada coach individual
+4. **Cobros recurrentes domiciliados**: Stripe SEPA o equivalente, cobros automáticos mensuales sin chasing manual
+5. **Panel supervisor para el dueño**: KPIs agregados de retención, adherencia, ingresos por coach
+6. **Onboarding asistido**: migración desde Excel/Sheets/Software anterior sin que el equipo se desincronice
 
 Si tu software actual cubre 0-3 de estas capas, estás operando en modo "coach autónomo escalado", que funciona hasta los 30-40 socios pero se rompe operativamente a partir de ahí.
 
@@ -113,19 +118,19 @@ Si tu software actual cubre 0-3 de estas capas, estás operando en modo "coach a
 
 Una de las confusiones más caras del sector: contratar Trainerize, Harbiz o TotalGains en su versión de **coach autónomo** cuando lo que tienes es un **gimnasio con varios entrenadores**. Funciona los primeros meses, falla en 4 puntos concretos:
 
-### Punto 1 — Privacidad de clientes entre coaches
+### Punto 1: Privacidad de clientes entre coaches
 
 En software de coach autónomo cada cuenta es independiente. Cuando varios coaches trabajan bajo un gimnasio, necesitas separar quién ve qué: un coach freelance que también tiene clientes personales propios NO debería compartir esos clientes con el resto del equipo del gimnasio. Sin permisos granulares, esto se gestiona "a la confianza", lo cual rompe con cualquier rotación de equipo.
 
-### Punto 2 — Agenda compartida
+### Punto 2: Agenda compartida
 
 El calendario del gimnasio (clases grupales, sesiones personales, reservas de sala) es del **gimnasio**, no de cada coach. Software de coach autónomo no tiene concepto de agenda compartida con reservas. Acabas duplicando en Google Calendar y se desincroniza.
 
-### Punto 3 — Branding único del gimnasio
+### Punto 3: Branding único del gimnasio
 
 La app marca blanca debe reflejar la marca DEL GIMNASIO. Si cada coach tiene su propia [app marca blanca](/blog/app-marca-blanca-entrenadores-personales/), los socios se confunden: ¿es la app del gimnasio o la del coach? Necesitas una sola app con la identidad del gimnasio donde cada socio ve a su coach asignado.
 
-### Punto 4 — Reporting agregado para el dueño
+### Punto 4: Reporting agregado para el dueño
 
 El dueño del gimnasio necesita KPIs **del gimnasio entero**, no de cada coach por separado. Software de coach autónomo solo muestra métricas de la cartera de un coach. El dueño no tiene panel supervisor.
 
@@ -178,7 +183,7 @@ Tabla comparativa de las 3 plataformas relevantes para gimnasios pequeños y bou
 | Migración asistida en español | ✅ Gratuita | ❌ No documentada | ⚠️ Servicio profesional aparte |
 | Base alimentos español integrada | ✅ +240.000 productos | ❌ MyFitnessPal (productos USA) | ⚠️ Base genérica |
 | Control de acceso por torno físico | ❌ No incluido | ❌ No incluido | ✅ Integración con tornos |
-| POS para venta en mostrador | ❌ No incluido | ❌ No incluido | ✅ POS integrado |
+| Venta en mostrador (tienda y caja) | ✅ Incluida | ❌ No incluido | ✅ POS integrado |
 
 ![Comparativa visual de software para gimnasios pequeños y boutique: TotalGains Gym, Trainerize Studio Plus y Virtuagym](/images/blog/gym-boutique-comparativa.webp)
 
@@ -186,32 +191,29 @@ Tabla comparativa de las 3 plataformas relevantes para gimnasios pequeños y bou
 
 Las 3 plataformas son **válidas para perfiles distintos**:
 
-- **TotalGains Gym** encaja con gimnasios boutique en español de 2-15 coaches y hasta ~250 socios que priorizan multi-coach con permisos granulares, app marca blanca del gimnasio, cobros automáticos y soporte en español. No incluye POS ni control por torno físico.
+- **TotalGains Gym** encaja con gimnasios boutique en español de 2-15 coaches y hasta ~250 socios que priorizan multi-coach con permisos granulares, app marca blanca del gimnasio, cobros automáticos y soporte en español. Incluye tienda con venta en mostrador y caja; no integra tornos físicos.
 
 - **Trainerize Studio Plus** encaja con estudios anglosajones o gimnasios con clientes que ya usan MyFitnessPal/wearables intensivamente. La interfaz en inglés y la facturación USD son fricción real para gimnasios hispanos.
 
-- **Virtuagym** encaja con gimnasios medianos-grandes (+200 socios) que necesitan POS en mostrador, control de acceso físico y catálogo amplio de funciones tradicionales de gimnasio. Para gimnasios pequeños y boutique puede ser sobreingeniería.
+- **Virtuagym** encaja con gimnasios medianos-grandes (+200 socios) que necesitan control de acceso físico con tornos, kioscos y un catálogo amplio de funciones tradicionales de gimnasio. Para gimnasios pequeños y boutique puede ser sobreingeniería.
 
-> **Decisión de diseño en TotalGains**: TG Gym deliberadamente NO incluye POS de mostrador ni integración con tornos físicos. Lo decidimos así porque el 80% de gimnasios boutique con los que hablamos NO tienen recepción permanente ni necesitan venta de productos en mostrador como flujo principal. Concentrarnos en lo que sí necesita el gimnasio boutique (multi-coach, reservas, branding, cobros) nos permite hacerlo mejor que tratar de cubrir todas las funciones de gimnasio mediano. El trade-off honesto: si tu gimnasio vende productos en mostrador o necesita control físico de acceso, Virtuagym encaja mejor con ese modelo.
+> **Decisión de diseño en TotalGains**: TG Gym no integra tornos físicos. La mayoría de gimnasios boutique con los que hablamos no tienen recepción permanente y les basta con las reservas y la asistencia desde la app. La venta en mostrador sí está incluida: tienda con stock, caja y pedidos desde la app del socio. Si tu gimnasio necesita control de acceso físico con tornos, Virtuagym encaja mejor con ese modelo.
 
 ---
 
 ## <span id="coste"></span>Coste real por plataforma con IVA aplicado
 
-| Plataforma | Plan | Coste mensual con IVA | Incluye |
-|---|---|---|---|
-| **TotalGains Gym Starter** | Coaches ilimitados, <100 socios | **149 €/mes** | Multi-coach con permisos, reservas, app marca blanca, IA, panel supervisor |
-| **TotalGains Gym Pro** | Coaches ilimitados, 100-200 socios | **199 €/mes** | Todo lo anterior + onboarding asistido prioritario + panel KPIs avanzado |
-| **TotalGains Gym Elite** | Coaches ilimitados, >200 socios | **249 €/mes** | Todo lo anterior + soporte VIP + sesión mensual con el fundador |
-| **Trainerize Studio Plus** | 500 clientes, entrenadores ilimitados | **~330 €/mes** ($275 + IVA 21%) | Marca blanca, Stripe, MyFitnessPal — todo en inglés |
-| **Virtuagym Pequeños/Boutique** | Bajo demanda | Presupuesto a medida | POS, control acceso, reservas, marca blanca |
+El precio que anuncia cada programa casi nunca es el que pagas: suele ir **sin IVA** (un 21 % más), muchos **limitan o cobran los entrenadores** y la app con la marca del centro, la facturación o las rutinas son **módulos de pago**. Lo hemos comprobado en las webs oficiales de 14 programas el 24 de noviembre de 2026: ninguno de los otros 13 publica su precio con IVA.
 
-**Lectura clave**: en el rango 149-330 €/mes con IVA tienes 3 filosofías de producto distintas. La elección depende de tu perfil (no de quién es más barato), porque las diferencias funcionales son significativas:
+| Plan TotalGains | €/mes con IVA | Socios activos |
+|---|---|---|
+| **Gym Starter** | **149** | Hasta 100 |
+| **Gym Pro** | **199** | De 100 a 200 |
+| **Gym Elite** | **249** | Más de 200 |
 
-- Si tu equipo trabaja en español con menos de 200 socios y NO necesitas POS/torno → **TG Gym Starter o Pro** (149-199 €/mes con IVA según volumen)
-- Si tu gimnasio supera los 200 socios y quieres soporte VIP → **TG Gym Elite** (249 €/mes con IVA)
-- Si tu cartera es internacional con clientes MyFitnessPal intensivos → **Trainerize Studio Plus** (~330 €/mes)
-- Si tienes mostrador con venta y necesitas torno físico → **Virtuagym** (consultar)
+Los tres traen lo mismo, con **entrenadores ilimitados**, sin módulos aparte y sin permanencia: reservas, cuotas y facturación, tienda con venta en mostrador, app con la marca del centro y rutinas y dietas con IA. Solo cambia el número de socios activos.
+
+Lo que publica cada programa (precio, IVA, entrenadores y lo que se paga aparte) está en **[cuánto cuesta de verdad un software para gimnasio](/blog/cuanto-cuesta-software-gimnasio-2026/)**.
 
 ---
 
@@ -221,10 +223,10 @@ Esta es la función más diferenciadora entre software diseñado para gimnasios 
 
 ### Los 4 booleanos críticos por coach
 
-1. **viewAllClients** — ¿puede ver clientes de OTROS coaches del gimnasio o solo los suyos asignados?
-2. **manageClients** — ¿puede crear/editar/eliminar clientes del gimnasio?
-3. **manageBilling** — ¿puede ver y gestionar cobros (cuotas, facturas, impagos) del gimnasio?
-4. **manageClasses** — ¿puede crear/editar/eliminar clases en el calendario compartido?
+1. **viewAllClients**: ¿puede ver clientes de OTROS coaches del gimnasio o solo los suyos asignados?
+2. **manageClients**: ¿puede crear/editar/eliminar clientes del gimnasio?
+3. **manageBilling**: ¿puede ver y gestionar cobros (cuotas, facturas, impagos) del gimnasio?
+4. **manageClasses**: ¿puede crear/editar/eliminar clases en el calendario compartido?
 
 ### Por qué importa cada uno
 
@@ -238,27 +240,27 @@ Esta es la función más diferenciadora entre software diseñado para gimnasios 
 
 ## <span id="errores"></span>Errores comunes al elegir software para gimnasio pequeño
 
-### Error 1 — Elegir por funciones que NO vas a usar
+### Error 1: Elegir por funciones que NO vas a usar
 
 Comprar Virtuagym con POS, control de acceso y catálogo de productos físicos cuando tu gimnasio boutique no tiene mostrador ni vende suplementos físicos. Acabas pagando por capacidad operativa que no usas. **Solución**: lista las 5-6 funciones que SÍ vas a usar a diario y elige software que las cubra bien sin pagar por el resto.
 
-### Error 2 — Confundir software de coach autónomo escalado con software de gimnasio
+### Error 2: Confundir software de coach autónomo escalado con software de gimnasio
 
 Contratar 5 cuentas de Trainerize/Harbiz (una por coach) y tratar de coordinar 5 calendarios independientes. Funciona los primeros meses, colapsa al llegar a 50-70 socios. **Solución**: software multi-coach desde el día 1, aunque solo tengas 2 coaches al inicio.
 
-### Error 3 — No verificar permisos granulares antes de contratar
+### Error 3: No verificar permisos granulares antes de contratar
 
 Algunos software prometen "multi-coach" pero en realidad ofrecen "varios coaches dentro de una cuenta" sin separación real de privacidad entre carteras. **Solución**: pide demo y verifica que cada coach SOLO ve a sus clientes asignados si así lo configuras.
 
-### Error 4 — Posponer la app marca blanca al "cuando crezcamos"
+### Error 4: Posponer la app marca blanca al "cuando crezcamos"
 
 La app marca blanca del gimnasio es marketing operativo cada día que un socio abre la app. Posponerla 12 meses es 365 oportunidades perdidas de refuerzo de marca. **Solución**: si el software no incluye marca blanca del gimnasio en el plan base, considéralo como coste adicional desde el principio.
 
-### Error 5 — Cobros manuales en lugar de domiciliación
+### Error 5: Cobros manuales en lugar de domiciliación
 
 Cobrar cuotas manualmente cada mes (Bizum, transferencia, tarjeta cada vez) tiene churn 20-30% superior a domiciliación bancaria con Stripe SEPA. Cada renovación es un punto de decisión adicional del socio. **Solución**: software con Stripe SEPA integrado desde el inicio.
 
-### Error 6 — No medir retención mes a mes
+### Error 6: No medir retención mes a mes
 
 Sin KPI de retención mensual, las bajas se notan demasiado tarde (cuando ya son irreversibles). **Solución**: panel supervisor con retención mensual visible y alertas tempranas para socios en riesgo (inactividad de 10-15 días).
 
@@ -302,7 +304,7 @@ Sin esta automatización, el dueño y los coaches están perdiendo entre 8 y 15 
 ### Gimnasio pequeño en español con menos de 100 socios
 - Plan recomendado: **[TotalGains Gym Starter](/para-gimnasios/)** (149 €/mes con IVA, coaches ilimitados)
 - Funciones que aprovechas: multi-coach con permisos granulares, agenda + reservas, app marca blanca del gimnasio, IA rutinas + nutrición, panel supervisor
-- Funciones que NO necesitas: POS, control torno físico (encaja con Virtuagym o vertical de centros)
+- Funciones que NO necesitas: control de acceso con torno físico (encaja con Virtuagym o vertical de centros)
 
 ### Gimnasio en crecimiento con 100 a 200 socios
 - Plan recomendado: **TotalGains Gym Pro** (199 €/mes con IVA, coaches ilimitados)
@@ -332,11 +334,11 @@ El software para entrenador autónomo está pensado para una sola persona gestio
 
 ### ¿Cuánto cuesta un software para gimnasio pequeño en 2026?
 
-El rango realista para gimnasios pequeños y boutique en España va de 150 a 400 €/mes con IVA según el tamaño del equipo, número de socios activos y funciones incluidas. TotalGains Gym tiene 3 planes con coaches ilimitados en todos: Gym Starter 149 €/mes con IVA (hasta 100 socios), Gym Pro 199 €/mes con IVA (100-200 socios) y Gym Elite 249 €/mes con IVA (más de 200 socios), con multi-coach, marca blanca, reservas, IA de rutinas y nutrición y migración asistida incluidos sin add-ons. Virtuagym ofrece presupuesto bajo demanda según necesidades; suele encajar mejor para gimnasios medianos-grandes con +500 socios. Trainerize Studio Plus ronda los $275/mes (~330 € con IVA), pensado más para estudios anglosajones que para gimnasio multi-coach en español.
+Depende de lo que incluya cada uno, porque el precio que anuncian casi nunca es el final: suele ir sin IVA, limitar los entrenadores y dejar fuera la app con la marca del centro, la facturación o las rutinas. TotalGains Gym tiene 3 planes con IVA y entrenadores ilimitados en todos: Gym Starter 149 €/mes (hasta 100 socios), Gym Pro 199 €/mes (de 100 a 200) y Gym Elite 249 €/mes (más de 200), con todo incluido y sin permanencia. Lo que publica cada programa, con su IVA, sus entrenadores y sus módulos, está en https://totalgains.es/blog/cuanto-cuesta-software-gimnasio-2026/
 
 ### ¿Necesito un software con control de acceso por torno físico en mi gimnasio pequeño?
 
-Solo si tu modelo de negocio depende de control horario estricto y entradas/salidas físicas en horario amplio sin recepción permanente. Para la mayoría de gimnasios boutique con 2-5 coaches, check-in vía QR en la app del cliente o reservas previas resuelven el caso de uso sin necesidad de instalar tornos físicos (que añaden 2.000-5.000 € de instalación + mantenimiento). Si tu gimnasio funciona por sesiones reservadas, clases grupales programadas o entrenamientos personales con cita previa, el control por torno es operativamente innecesario. Si es un gimnasio de acceso libre con +200 socios entrando aleatoriamente, el torno empieza a tener sentido — y ahí Virtuagym o software vertical de centros suele encajar mejor que las plataformas para gimnasios boutique.
+Solo si tu modelo de negocio depende de control horario estricto y entradas/salidas físicas en horario amplio sin recepción permanente. Para la mayoría de gimnasios boutique con 2-5 coaches, check-in vía QR en la app del cliente o reservas previas resuelven el caso de uso sin necesidad de instalar tornos físicos (que añaden 2.000-5.000 € de instalación + mantenimiento). Si tu gimnasio funciona por sesiones reservadas, clases grupales programadas o entrenamientos personales con cita previa, el control por torno es operativamente innecesario. Si es un gimnasio de acceso libre con +200 socios entrando aleatoriamente, el torno empieza a tener sentido, y ahí Virtuagym o software vertical de centros suele encajar mejor que las plataformas para gimnasios boutique.
 
 ### ¿Cómo gestiono permisos entre coaches en un gimnasio pequeño?
 
@@ -356,7 +358,7 @@ La migración asistida es la fórmula más eficiente. En TotalGains Gym la migra
 
 ### ¿Qué KPIs debe monitorizar el dueño de un gimnasio pequeño en 2026?
 
-Cuatro KPIs operativos básicos: 1) Retención mensual de socios (cuántos siguen activos mes a mes — debe estar por encima del 85% en gimnasios boutique sanos), 2) Adherencia a clases reservadas (% de clases reservadas a las que el socio asistió — indicador temprano de bajas), 3) Ingresos por coach (cuánto factura el gimnasio por cada coach del equipo — útil para decidir contrataciones), 4) Cobros recurrentes vs cobros manuales (% de socios con domiciliación activa — domiciliación reduce churn 20-30% según datos del sector). Software como TotalGains Gym incluye estos 4 KPIs en el panel supervisor del dueño automáticamente. Si tu software actual no los mide, los estás calculando manualmente con tiempo perdido y datos a destiempo.
+Cuatro KPIs operativos básicos: 1) Retención mensual de socios (cuántos siguen activos mes a mes: debe estar por encima del 85% en gimnasios boutique sanos), 2) Adherencia a clases reservadas (% de clases reservadas a las que el socio asistió: indicador temprano de bajas), 3) Ingresos por coach (cuánto factura el gimnasio por cada coach del equipo: útil para decidir contrataciones), 4) Cobros recurrentes vs cobros manuales (% de socios con domiciliación activa: la domiciliación reduce churn 20-30% según datos del sector). Software como TotalGains Gym incluye estos 4 KPIs en el panel supervisor del dueño automáticamente. Si tu software actual no los mide, los estás calculando manualmente con tiempo perdido y datos a destiempo.
 
 ---
 
@@ -377,10 +379,10 @@ Cuatro KPIs operativos básicos: 1) Retención mensual de socios (cuántos sigue
 
 ## Artículos relacionados que te pueden interesar
 
-- 🏆 **[Los 5 Mejores Software para Entrenadores Personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)** — Comparativa completa de plataformas para coach autónomo
-- 📱 **[App de Marca Blanca para Entrenadores: Guía Completa 2026](/blog/app-marca-blanca-entrenadores-personales/)** — Cómo funciona la marca blanca, modelos técnicos y coste real
-- 🥗 **[Cómo Crear Planes Nutricionales para Clientes: Guía 2026](/blog/crear-planes-nutricionales-clientes-entrenador-personal/)** — Workflow paso a paso del nutricionista online
-- 💶 **[Harbiz Precios 2026: Guía Completa con IVA y Add-ons](/alternativas/harbiz/precios/)** — Tablas verificadas para coach autónomo y gimnasio multi-coach con Harbiz
+- 🏆 **[Los 5 Mejores Software para Entrenadores Personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)**: Comparativa completa de plataformas para coach autónomo
+- 📱 **[App de Marca Blanca para Entrenadores: Guía Completa 2026](/blog/app-marca-blanca-entrenadores-personales/)**: Cómo funciona la marca blanca, modelos técnicos y coste real
+- 🥗 **[Cómo Crear Planes Nutricionales para Clientes: Guía 2026](/blog/crear-planes-nutricionales-clientes-entrenador-personal/)**: Workflow paso a paso del nutricionista online
+- 💶 **[Harbiz Precios 2026: Guía Completa con IVA y Add-ons](/alternativas/harbiz/precios/)**: Tablas verificadas para coach autónomo y gimnasio multi-coach con Harbiz
 
 ---
 
