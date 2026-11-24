@@ -29,14 +29,14 @@ export const PARA_GIMNASIOS_FAQS = [
   },
   {
     q: "¿Cuánto cuesta de verdad un software para gimnasio pequeño?",
-    a: "Con TotalGains, lo que ves es lo que pagas: 149, 199 o 249 € al mes con IVA según tus socios activos, con entrenadores ilimitados y todo incluido. Muchos programas anuncian desde 29 o 34 € al mes, pero sin IVA (un 21 % más) y con la app con la marca del centro, la facturación o las rutinas como módulos de pago. De los 13 programas que revisamos en sus webs oficiales el 24 de noviembre de 2026, ninguno publica su precio con IVA. Comparativa completa en https://totalgains.es/blog/cuanto-cuesta-software-gimnasio-2026/",
+    a: "Con TotalGains, lo que ves es lo que pagas: 149, 199 o 249 € al mes con IVA según tus socios activos, con entrenadores ilimitados y todo incluido. Otros programas anuncian desde 29 o 34 € al mes, pero sin IVA o sin aclararlo, y en varios la facturación, las rutinas o la app propia del centro son módulos de pago o van en planes superiores. De los 13 programas que revisamos en sus webs oficiales el 24 de noviembre de 2026, ninguno dice que su precio lleve el IVA incluido. Comparativa completa en https://totalgains.es/blog/cuanto-cuesta-software-gimnasio-2026/",
   },
   {
     q: "¿Cobráis por entrenador o por módulos?",
-    a: "No. Los entrenadores son ilimitados en los tres planes y no hay módulos aparte: reservas, cuotas y facturación, tienda, app con la marca del centro y rutinas y dietas con IA van incluidas. En otros programas, el número de entrenadores depende del plan (TIMP: 1, 3, 10 o 15 profesionales; Gestión Gym: 1, 5 o ilimitados) o se paga por empleado (Trainin: 5 € al mes desde el tercero), según sus webs oficiales a 24 de noviembre de 2026.",
+    a: "No. Los entrenadores son ilimitados en los tres planes y no hay módulos aparte: reservas, cuotas y facturación, tienda, app con el logo y los colores del centro y rutinas y dietas con IA van incluidas. En otros programas, el número de entrenadores depende del plan (TIMP: 1, 3, 10 o 15 profesionales; Gestión Gym: 1, 5 o ilimitados) o se paga por empleado (Trainin, plan Pro: 5 € al mes por cada uno a partir del tercero), según sus webs oficiales a 24 de noviembre de 2026.",
   },
   {
     q: "¿Incluye la facturación y la parte de entrenamiento?",
-    a: "Sí, las dos y en todos los planes. Las cuotas y los bonos se registran y se facturan solos, y las ventas de la tienda salen con su ticket. La parte de entrenamiento también va incluida: rutinas y dietas con IA a partir de la biblioteca del centro, seguimiento de cada socio y una app donde el socio reserva sus clases y ve su rutina. En otros programas son módulos de pago (GestionaTuBox: facturación y rutinas, 15 € al mes cada una; Trainin: entrenamiento, 24 €) o no aparecen en su web (la parte de entrenamiento en Gestión Gym, Mindbody o Bsport).",
+    a: "Sí, las dos y en todos los planes. Las cuotas y los bonos se registran y se facturan solos, y las ventas de la tienda salen con su ticket. La parte de entrenamiento también va incluida: rutinas y dietas con IA a partir de la biblioteca del centro, seguimiento de cada socio y una app donde el socio reserva sus clases y ve su rutina. Según la web oficial de cada programa a 24 de noviembre de 2026, en GestionaTuBox la facturación y las rutinas son módulos de 15 € al mes cada uno, en Trainin el entrenamiento es un complemento de 24 € al mes, y en las páginas de precios de Gestión Gym, Mindbody y Bsport no figura la parte de entrenamiento.",
   },
 ];

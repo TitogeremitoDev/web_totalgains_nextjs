@@ -54,7 +54,7 @@ faqs:
   - q: "¿Qué diferencia hay entre software para entrenador autónomo y software para gimnasio pequeño?"
     a: "El software para entrenador autónomo está pensado para una sola persona gestionando su cartera de clientes (rutinas, dietas, cobros, comunicación). El software para gimnasio pequeño añade capas operativas que solo tienen sentido cuando hay varios coaches trabajando bajo la misma marca: permisos granulares por entrenador (qué puede ver/editar cada coach), agenda de clases compartida con reservas y waitlist, asignación dinámica de clientes a coaches, panel supervisor para el dueño con KPIs agregados (retención, adherencia, ingresos por coach) y branding propio del gimnasio en la app que descargan los socios. Si tu gimnasio tiene 2 o más entrenadores trabajando bajo una marca común, contratar software de coach autónomo sin estas capas crea fricciones operativas que se vuelven críticas cuando creces."
   - q: "¿Cuánto cuesta un software para gimnasio pequeño en 2026?"
-    a: "Depende de lo que incluya cada uno, porque el precio que anuncian casi nunca es el final: suele ir sin IVA, limitar los entrenadores y dejar fuera la app con la marca del centro, la facturación o las rutinas. TotalGains Gym tiene 3 planes con IVA y entrenadores ilimitados en todos: Gym Starter 149 €/mes (hasta 100 socios), Gym Pro 199 €/mes (de 100 a 200) y Gym Elite 249 €/mes (más de 200), con todo incluido y sin permanencia. Lo que publica cada programa, con su IVA, sus entrenadores y sus módulos, está en https://totalgains.es/blog/cuanto-cuesta-software-gimnasio-2026/"
+    a: "Depende de lo que incluya cada uno, porque el precio que anuncian no siempre es el final: suele ir sin IVA, algunos limitan los entrenadores y, en varios, la facturación, las rutinas o la app propia del centro se pagan aparte. TotalGains Gym tiene 3 planes con IVA y entrenadores ilimitados en todos: Gym Starter 149 €/mes (hasta 100 socios), Gym Pro 199 €/mes (de 100 a 200) y Gym Elite 249 €/mes (más de 200), con todo incluido y sin permanencia. Lo que publica cada programa, con su IVA, sus entrenadores y sus módulos, está en https://totalgains.es/blog/cuanto-cuesta-software-gimnasio-2026/"
   - q: "¿Necesito un software con control de acceso por torno físico en mi gimnasio pequeño?"
     a: "Solo si tu modelo de negocio depende de control horario estricto y entradas/salidas físicas en horario amplio sin recepción permanente. Para la mayoría de gimnasios boutique con 2-5 coaches, check-in vía QR en la app del cliente o reservas previas resuelven el caso de uso sin necesidad de instalar tornos físicos (que añaden 2.000-5.000 € de instalación + mantenimiento). Si tu gimnasio funciona por sesiones reservadas, clases grupales programadas o entrenamientos personales con cita previa, el control por torno es operativamente innecesario. Si es un gimnasio de acceso libre con +200 socios entrando aleatoriamente, el torno empieza a tener sentido, y ahí Virtuagym o software vertical de centros suele encajar mejor que las plataformas para gimnasios boutique."
   - q: "¿Cómo gestiono permisos entre coaches en un gimnasio pequeño?"
@@ -79,7 +79,7 @@ Un gimnasio pequeño o boutique no es un coach autónomo escalado. Es **una marc
 
 
 <div class="tg-callout tg-callout-panic" role="note">
-<strong>Respuesta rápida.</strong> Un gimnasio pequeño necesita reservas de clases con lista de espera, varios entrenadores con sus permisos, una app con la marca del centro, cuotas que se cobran y se facturan solas y la parte de entrenamiento. Antes de comparar precios, mira si cada programa incluye todo eso: muchos anuncian desde 29 o 34 € al mes, pero sin IVA y con la app, la facturación o las rutinas aparte. TotalGains cuesta 149, 199 o 249 € al mes con IVA, con entrenadores ilimitados y todo incluido (<a href="/blog/cuanto-cuesta-software-gimnasio-2026/">lo que publica cada programa</a>).
+<strong>Respuesta rápida.</strong> Un gimnasio pequeño necesita reservas de clases con lista de espera, varios entrenadores con sus permisos, una app con la marca del centro, cuotas que se cobran y se facturan solas y la parte de entrenamiento. Antes de comparar precios, mira si cada programa incluye todo eso: varios anuncian desde 29 o 34 € al mes, pero sin IVA o sin aclararlo, y con la facturación, las rutinas o la app propia del centro como módulos de pago o en planes superiores. TotalGains cuesta 149, 199 o 249 € al mes con IVA, con entrenadores ilimitados y todo incluido (<a href="/blog/cuanto-cuesta-software-gimnasio-2026/">lo que publica cada programa</a>).
 </div>
 
 ---
@@ -203,7 +203,7 @@ Las 3 plataformas son **válidas para perfiles distintos**:
 
 ## <span id="coste"></span>Coste real por plataforma con IVA aplicado
 
-El precio que anuncia cada programa casi nunca es el que pagas: suele ir **sin IVA** (un 21 % más), muchos **limitan o cobran los entrenadores** y la app con la marca del centro, la facturación o las rutinas son **módulos de pago**. Lo hemos comprobado en las webs oficiales de 14 programas el 24 de noviembre de 2026: ninguno de los otros 13 publica su precio con IVA.
+El precio que anuncia cada programa no siempre es el que pagas: suele ir **sin IVA** (un 21 % más), algunos **limitan o cobran los entrenadores** y, en varios, la facturación, las rutinas o la app propia del centro son **módulos de pago** o van en planes superiores. Lo hemos mirado en las webs oficiales de 14 programas el 24 de noviembre de 2026: ninguno de los otros 13 dice que su precio lleve el IVA incluido.
 
 | Plan TotalGains | €/mes con IVA | Socios activos |
 |---|---|---|
@@ -334,7 +334,7 @@ El software para entrenador autónomo está pensado para una sola persona gestio
 
 ### ¿Cuánto cuesta un software para gimnasio pequeño en 2026?
 
-Depende de lo que incluya cada uno, porque el precio que anuncian casi nunca es el final: suele ir sin IVA, limitar los entrenadores y dejar fuera la app con la marca del centro, la facturación o las rutinas. TotalGains Gym tiene 3 planes con IVA y entrenadores ilimitados en todos: Gym Starter 149 €/mes (hasta 100 socios), Gym Pro 199 €/mes (de 100 a 200) y Gym Elite 249 €/mes (más de 200), con todo incluido y sin permanencia. Lo que publica cada programa, con su IVA, sus entrenadores y sus módulos, está en https://totalgains.es/blog/cuanto-cuesta-software-gimnasio-2026/
+Depende de lo que incluya cada uno, porque el precio que anuncian no siempre es el final: suele ir sin IVA, algunos limitan los entrenadores y, en varios, la facturación, las rutinas o la app propia del centro se pagan aparte. TotalGains Gym tiene 3 planes con IVA y entrenadores ilimitados en todos: Gym Starter 149 €/mes (hasta 100 socios), Gym Pro 199 €/mes (de 100 a 200) y Gym Elite 249 €/mes (más de 200), con todo incluido y sin permanencia. Lo que publica cada programa, con su IVA, sus entrenadores y sus módulos, está en https://totalgains.es/blog/cuanto-cuesta-software-gimnasio-2026/
 
 ### ¿Necesito un software con control de acceso por torno físico en mi gimnasio pequeño?
 
