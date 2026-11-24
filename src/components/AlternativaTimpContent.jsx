@@ -57,7 +57,7 @@ export default function AlternativaTimpContent() {
                     <p>
                         Si vienes de Timp o lo estás valorando, la diferencia de fondo está en qué pagas. En Timp el
                         precio depende de cuántos profesionales usan la herramienta (1, 3, 10 o 15) y las funciones se
-                        van sumando al subir de plan: el registro horario desde Basic, y la tienda online, el CRM y
+                        van sumando al subir de plan: el registro horario y el CRM desde Basic, y la tienda online y
                         las estadísticas desde Pro.
                     </p>
                     <p>

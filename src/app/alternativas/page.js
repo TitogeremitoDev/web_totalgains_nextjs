@@ -25,6 +25,7 @@ const alternativas = [
   { slug: "dudyfit", name: "Dudyfit", desc: "App genérica sin personalización de marca ni generación IA de contenido." },
   { slug: "virtuagym", name: "Virtuagym", desc: "Pensado para gimnasios y clubs. TotalGains tiene producto para el entrenador y otro para centros pequeños." },
   { slug: "timp", name: "Timp", desc: "Para gimnasios. Precio por tramos de profesionales y funciones según el plan; en TotalGains, todo incluido y entrenadores ilimitados." },
+  { slug: "trainingym", name: "Trainingym", desc: "Para gimnasios. Precios sin IVA, pago anual y puesta en marcha aparte; en TotalGains, IVA y app con tu marca incluidos desde el primer plan." },
 ];
 
 export default function AlternativasHub() {

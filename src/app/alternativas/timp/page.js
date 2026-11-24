@@ -5,7 +5,7 @@ import { ofertasGym, aggregateRatingNode, organizationNode } from "@/data/produc
 export const metadata = {
   title: { absolute: "Alternativa a Timp: TotalGains para gimnasios y estudios" },
   description:
-    "Timp cobra por profesional y TotalGains por socios activos, con entrenadores ilimitados de 149 a 249 €/mes con IVA. Comparativa verificada en sept. 2026.",
+    "Timp cobra por profesional y TotalGains por socios activos, con entrenadores ilimitados de 149 a 249 €/mes con IVA. Comparativa verificada en nov. 2026.",
   alternates: {
     canonical: "https://totalgains.es/alternativas/timp/",
   },

@@ -11,7 +11,8 @@
    de filas ni secciones que vendan al competidor.
 
    ⚠️ La veracidad no cambia (LGP): todo lo de Timp sale de su página de
-   precios oficial, consultada el 27-sep-2026. Ni esa página ni sus términos
+   precios oficial, consultada el 27-sep-2026 y otra vez el 24-nov-2026 (el CRM
+   pasó al plan Basic y la app con marca es una «App Progressive»). Ni esa página ni sus términos
    (versión 09-07-2026) dicen si los precios llevan IVA, así que se reproducen
    tal cual y la cuenta con IVA va en condicional. Antes de tocar un número,
    volver a mirar la fuente y cambiar la fecha.
@@ -21,7 +22,7 @@
 
 import { PLANES_GYM } from "@/data/productSchema";
 
-export const FECHA_VERIFICACION_TIMP = "27 de septiembre de 2026";
+export const FECHA_VERIFICACION_TIMP = "24 de noviembre de 2026";
 export const FUENTE_TIMP = "https://timp.pro/precios/";
 
 // Precio de entrada del producto de gimnasio: fuente única en PLANES_GYM.
@@ -46,7 +47,7 @@ export const COMPARATIVA_TIMP = [
     {
         aspecto: "Seguimiento de socios y estadísticas",
         tg: "Incluido: riesgo de baja con la asistencia real, panel del gestor y comunicados segmentados",
-        timp: "CRM y estadísticas desde el plan Pro (130 €/mes)",
+        timp: "CRM desde el plan Basic (85 €/mes) y estadísticas desde el Pro (130 €/mes)",
     },
     {
         aspecto: "Registro horario del equipo",
@@ -65,8 +66,8 @@ export const COMPARATIVA_TIMP = [
     },
     {
         aspecto: "App con la marca de tu centro",
-        tg: "Incluida: logo, nombre y colores del centro",
-        timp: "No aparece en su página de precios",
+        tg: "Incluida: tus socios ven la app de TotalGains con el logo, el nombre y los colores del centro",
+        timp: "App web progresiva (PWA), según su página de precios",
     },
 ];
 
@@ -90,11 +91,11 @@ export const POR_QUE_TG = [
 ];
 
 /* El precio, AL FINAL y comparando lo mismo: el plan de Timp que hace falta
-   para tener tienda, CRM y estadísticas, frente a TotalGains, que lo incluye
+   para tener tienda y estadísticas, frente a TotalGains, que lo incluye
    todo. TotalGains cambia de plan por socios activos, no por entrenadores. */
 export const PRECIO_IGUALADO = [
     {
-        caso: "Tienda, CRM y estadísticas, con hasta 10 entrenadores",
+        caso: "Tienda y estadísticas, con hasta 10 entrenadores",
         timp: "Plan Pro: 130 €/mes",
         tg: `Gym Starter: ${DESDE_TG_GYM} €/mes con IVA incluido`,
     },
@@ -115,7 +116,7 @@ export const PRECIO_IGUALADO = [
 export const TIMP_FAQS = [
     {
         question: "¿Qué diferencia hay entre TotalGains y Timp?",
-        answer: "TotalGains incluye todas sus funciones en todos los planes y no limita los entrenadores: el precio depende de tus socios activos. Timp cobra por centro según cuántos profesionales usan la herramienta (1, 3, 10 o 15) y va sumando funciones al subir de plan: la tienda online, el CRM y las estadísticas están desde su plan Pro. Además, TotalGains incluye rutinas y dietas con IA para tus socios y una app con la marca de tu centro.",
+        answer: "TotalGains incluye todas sus funciones en todos los planes y no limita los entrenadores: el precio depende de tus socios activos. Timp cobra por centro según cuántos profesionales usan la herramienta (1, 3, 10 o 15) y va sumando funciones al subir de plan: la tienda online y las estadísticas están desde su plan Pro. Además, TotalGains incluye rutinas y dietas con IA para tus socios y una app con la marca de tu centro.",
     },
     {
         question: "¿Cuánto cuesta TotalGains para un gimnasio?",
