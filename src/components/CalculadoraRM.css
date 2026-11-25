@@ -333,8 +333,8 @@
 }
 
 .calc-rm .calc-rm__btn--principal {
-    color: #fff;
-    background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    color: #052e16;
+    background: linear-gradient(135deg, #4ade80 0%, #22c55e 100%);
     border-color: transparent;
 }
 
