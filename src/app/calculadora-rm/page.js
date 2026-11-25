@@ -14,12 +14,12 @@ const URL = "https://totalgains.es/calculadora-rm/";
 export const metadata = {
     title: { absolute: "Calculadora de RM (1RM): tu repetición máxima y tus porcentajes | TotalGains" },
     description:
-        "Calculadora de RM gratis: pon el peso y las repeticiones y te da tu 1RM estimado (Epley y Brzycki) y la tabla de pesos del 50 al 100 %, con repeticiones orientativas.",
+        "Calculadora de RM gratis por ejercicio (sentadilla, banca, peso muerto, press militar y hip thrust): tu 1RM estimado con Epley y Brzycki, tus pesos del 50 al 100 % y qué discos poner en la barra.",
     alternates: { canonical: URL },
     openGraph: {
         type: "website",
         title: "Calculadora de RM (1RM) gratis | TotalGains",
-        description: "Tu repetición máxima estimada y tus pesos por porcentaje, en segundos y sin probar tu máximo.",
+        description: "Tu repetición máxima por ejercicio, tus pesos por porcentaje y los discos de cada lado, en segundos y sin probar tu máximo.",
         url: URL,
         images: [{ url: "https://totalgains.es/og-image.jpg", width: 1200, height: 630, alt: "TotalGains" }],
     },
@@ -40,7 +40,7 @@ export default function PaginaCalculadoraRM() {
                 isAccessibleForFree: true,
                 offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
                 description:
-                    "Estima la repetición máxima (1RM) a partir del peso y las repeticiones con las fórmulas de Epley y Brzycki, y calcula los pesos por porcentaje del 1RM con las repeticiones orientativas de la tabla de la NSCA.",
+                    "Estima la repetición máxima (1RM) por ejercicio (sentadilla, press de banca, peso muerto, press militar y hip thrust) a partir del peso y las repeticiones con las fórmulas de Epley y Brzycki, calcula los pesos por porcentaje del 1RM con las repeticiones orientativas de la tabla de la NSCA y dice qué discos poner a cada lado de la barra de 20 o 15 kg. Permite compartir el resultado como enlace o como imagen.",
                 publisher: { "@id": "https://totalgains.es/#organization" },
             },
             organizationNode(),
@@ -65,8 +65,9 @@ export default function PaginaCalculadoraRM() {
                 <span className="calc-rm-pagina__etiqueta">Herramienta gratis</span>
                 <h1>Calculadora de RM: tu repetición máxima y tus porcentajes</h1>
                 <p>
-                    Calcula tu 1RM sin arriesgarte a probar tu máximo: con el peso que mueves y las repeticiones que haces, sale tu
-                    repetición máxima estimada y la tabla de pesos para cada porcentaje. Para tu box, tu gimnasio o tu propio entreno.
+                    Calcula tu 1RM sin arriesgarte a probar tu máximo: elige el ejercicio, pon el peso que mueves y las repeticiones
+                    que haces, y sale tu repetición máxima estimada, el peso para cada porcentaje y qué discos poner en la barra. Para
+                    tu box, tu gimnasio o tu propio entreno.
                 </p>
             </div>
 
