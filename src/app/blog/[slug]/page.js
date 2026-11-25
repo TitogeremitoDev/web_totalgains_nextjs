@@ -6,6 +6,7 @@ import { Calendar, Clock, ArrowLeft, User } from "lucide-react";
 import BlogCTAButton from "@/components/BlogCTAButton";
 import GuiasGratis from "@/components/GuiasGratis";
 import PriceCalculatorCoach from "@/components/PriceCalculatorCoach";
+import CalculadoraRM from "@/components/CalculadoraRM";
 import LTVCACVisualizer from "@/components/LTVCACVisualizer";
 import CoachTiersVisualizer from "@/components/CoachTiersVisualizer";
 import WaterfallHourlyRate from "@/components/WaterfallHourlyRate";
@@ -84,6 +85,7 @@ import "./post.css";
 // HTML por cada marker que encuentra y renderiza el componente correspondiente.
 const COMPONENT_MARKERS = [
   { marker: '<div class="__calculator_mount__"></div>', Component: PriceCalculatorCoach, gate: (post) => post.calculator === "coach-price" },
+  { marker: '<div class="__calculadora_rm__"></div>', Component: CalculadoraRM, gate: () => true },
   { marker: '<div class="__ltv_cac_visual__"></div>', Component: LTVCACVisualizer, gate: () => true },
   { marker: '<div class="__coach_tiers_visual__"></div>', Component: CoachTiersVisualizer, gate: () => true },
   { marker: '<div class="__waterfall_hourly__"></div>', Component: WaterfallHourlyRate, gate: () => true },
