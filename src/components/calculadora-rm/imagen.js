@@ -1,7 +1,7 @@
 /* Imagen para compartir el RM (1080 × 1920, formato de historia de Instagram y estado de WhatsApp).
    Se dibuja en un canvas con la misma pose y los mismos discos que el escenario animado. No sale nada del navegador. */
 
-import { COLOR, EJERCICIOS, VISTA, formas } from "./geometria";
+import { DEGRADADOS, EJERCICIOS, VISTA, formas, plataforma } from "./geometria";
 
 const W = 1080;
 const H = 1920;
@@ -42,7 +42,9 @@ function cajaDe(lista) {
         y2 = Math.max(y2, y);
     };
     for (const f of lista) {
+        if (f.k === "text") continue;
         if (f.k === "poly") f.pts.forEach((q) => meter(q.x, q.y));
+        else if (f.k === "path") f.d.forEach(([, ...ps]) => ps.forEach((q) => meter(q.x, q.y)));
         else if (f.k === "circle") {
             meter(f.c.x - f.r, f.c.y - f.r);
             meter(f.c.x + f.r, f.c.y + f.r);
@@ -54,8 +56,77 @@ function cajaDe(lista) {
     return { x1, y1, x2, y2 };
 }
 
-/* Dibuja el atleta encajado en el rectángulo (izq, arriba, ancho, suelo): apoyado en el suelo y centrado. */
-function dibujarAtleta(ctx, ej, t, discos, hueco) {
+/* Pinta una forma de geometria.js en el canvas; X e Y pasan del escenario a píxeles y k es la escala. */
+function pintar(ctx, f, X, Y, k, fuente) {
+    ctx.save();
+    ctx.globalAlpha = f.opacity ?? 1;
+    const pts = f.k === "path" ? f.d.flatMap(([, ...ps]) => ps) : f.k === "poly" ? f.pts : null;
+    let fill = f.fill;
+    if (typeof fill === "string" && fill.startsWith("grad:")) {
+        const [c1, c2] = DEGRADADOS[fill.slice(5)];
+        let x1;
+        let y1;
+        let x2;
+        let y2;
+        if (pts) {
+            x1 = Math.min(...pts.map(X));
+            x2 = Math.max(...pts.map(X));
+            y1 = Math.min(...pts.map(Y));
+            y2 = Math.max(...pts.map(Y));
+        } else if (f.k === "circle") {
+            x1 = X(f.c) - f.r * k;
+            x2 = X(f.c) + f.r * k;
+            y1 = Y(f.c) - f.r * k;
+            y2 = Y(f.c) + f.r * k;
+        } else {
+            x1 = X(f);
+            y1 = Y(f);
+            x2 = x1 + f.w * k;
+            y2 = y1 + f.h * k;
+        }
+        const g = ctx.createLinearGradient(x1, y1, x2, y2);
+        g.addColorStop(0, c1);
+        g.addColorStop(1, c2);
+        fill = g;
+    }
+    if (f.k === "text") {
+        ctx.fillStyle = f.fill;
+        ctx.font = `800 ${f.size * k}px ${fuente}`;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(f.s, X(f.p), Y(f.p));
+        ctx.restore();
+        return;
+    }
+    ctx.beginPath();
+    if (f.k === "path") {
+        for (const [cmd, ...ps] of f.d) {
+            if (cmd === "M") ctx.moveTo(X(ps[0]), Y(ps[0]));
+            else if (cmd === "L") ctx.lineTo(X(ps[0]), Y(ps[0]));
+            else if (cmd === "C") ctx.bezierCurveTo(X(ps[0]), Y(ps[0]), X(ps[1]), Y(ps[1]), X(ps[2]), Y(ps[2]));
+            else if (cmd === "Z") ctx.closePath();
+        }
+    } else if (f.k === "poly") {
+        f.pts.forEach((q, i) => (i ? ctx.lineTo(X(q), Y(q)) : ctx.moveTo(X(q), Y(q))));
+        ctx.closePath();
+    } else if (f.k === "circle") ctx.arc(X(f.c), Y(f.c), f.r * k, 0, Math.PI * 2);
+    else caja(ctx, X(f), Y(f), f.w * k, f.h * k, Math.min((f.rx || 0) * k, (f.h * k) / 2));
+    if (fill && fill !== "none") {
+        ctx.fillStyle = fill;
+        ctx.fill();
+    }
+    if (f.stroke) {
+        ctx.strokeStyle = f.stroke;
+        ctx.lineWidth = (f.sw || 1) * k;
+        ctx.lineCap = "round";
+        ctx.lineJoin = "round";
+        ctx.stroke();
+    }
+    ctx.restore();
+}
+
+/* Dibuja el atleta encajado en el rectángulo (izq, arriba, ancho, suelo): apoyado en la tarima y centrado. */
+function dibujarAtleta(ctx, ej, t, discos, hueco, fuente) {
     const lista = formas(ej, t, discos);
     const c = cajaDe(lista);
     const k = Math.min(3.6, hueco.ancho / (c.x2 - c.x1), (hueco.suelo - hueco.arriba) / (VISTA.suelo - c.y1));
@@ -63,41 +134,8 @@ function dibujarAtleta(ctx, ej, t, discos, hueco) {
     const y0 = hueco.suelo - VISTA.suelo * k;
     const X = (q) => x0 + q.x * k;
     const Y = (q) => y0 + q.y * k;
-    // suelo
-    ctx.fillStyle = COLOR.suelo;
-    const sx1 = Math.max(60, X({ x: c.x1 - 30 }));
-    const sx2 = Math.min(W - 60, X({ x: c.x2 + 30 }));
-    caja(ctx, sx1, hueco.suelo, sx2 - sx1, 9 * k, 3 * k);
-    ctx.fill();
-    for (const f of lista) {
-        ctx.save();
-        ctx.globalAlpha = f.opacity ?? 1;
-        let fill = f.fill;
-        if (fill === "grad:tronco") {
-            const xs = f.pts ? f.pts.map(X) : [X(f.c) - f.r * k, X(f.c) + f.r * k];
-            const ys = f.pts ? f.pts.map(Y) : [Y(f.c) - f.r * k, Y(f.c) + f.r * k];
-            const g = ctx.createLinearGradient(Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys));
-            g.addColorStop(0, "#818cf8");
-            g.addColorStop(1, "#c084fc");
-            fill = g;
-        }
-        ctx.beginPath();
-        if (f.k === "poly") {
-            f.pts.forEach((q, i) => (i ? ctx.lineTo(X(q), Y(q)) : ctx.moveTo(X(q), Y(q))));
-            ctx.closePath();
-        } else if (f.k === "circle") ctx.arc(X(f.c), Y(f.c), f.r * k, 0, Math.PI * 2);
-        else caja(ctx, X(f), Y(f), f.w * k, f.h * k, Math.min((f.rx || 0) * k, (f.h * k) / 2));
-        if (fill && fill !== "none") {
-            ctx.fillStyle = fill;
-            ctx.fill();
-        }
-        if (f.stroke) {
-            ctx.strokeStyle = f.stroke;
-            ctx.lineWidth = (f.sw || 1) * k;
-            ctx.stroke();
-        }
-        ctx.restore();
-    }
+    for (const f of plataforma()) pintar(ctx, f, X, Y, k, fuente);
+    for (const f of lista) pintar(ctx, f, X, Y, k, fuente);
 }
 
 /* datos: { ej, rm, peso, reps, discos, filas: [{ pct, kg, reps }], fuente } → Promise<Blob> (PNG). */
@@ -140,7 +178,7 @@ export async function crearImagen(datos) {
     ctx.fillText(EJERCICIOS[ej].nombre.toUpperCase(), W / 2, 410, W - 120);
 
     // escenario: entre el titular y la cifra
-    dibujarAtleta(ctx, ej, EJERCICIOS[ej].foto, discos, { izq: 90, arriba: 470, ancho: W - 180, suelo: 1170 });
+    dibujarAtleta(ctx, ej, EJERCICIOS[ej].foto, discos, { izq: 90, arriba: 470, ancho: W - 180, suelo: 1170 }, letra);
 
     // cifra
     ctx.fillStyle = "#22c55e";
