@@ -380,6 +380,25 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/cuanto-cobra-entrenador-personal-online (rehecho)
+*Rehecho 2026-11-27 con `gemini-3-pro-image`. Siguen las dos imágenes de 2025: `cuanto_cobra_hero.webp` y `cuanto_cobra_value.webp`.*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `cuanto-cobra-tablero.webp` | eye-level, algo desde la izquierda | tablero en el tercio derecho | medium close-up | mostrador de un estudio de entrenamiento | tablero de fieltro negro SIN letras, planta y toalla lavanda, mancuernas al fondo | cálida de tarde con resplandor coral | cada uno pone su tarifa |
+| `cuanto-cobra-domicilio.webp` | 3/4 bajo | esterilla en primer término, sofá y ventana al fondo | wide | salón de una casa | esterilla azul marino con pesa rusa coral y mancuernas | sol de mañana por la ventana, sombras largas | entrenar en casa |
+| `cuanto-cobra-datafono.webp` | frontal algo elevado | datáfono centro-derecha, toalla y botella a la izquierda | macro | mostrador de piedra de un gimnasio | datáfono blanco con la pantalla EN BLANCO, toalla y botella de acero | luces cálidas y lavanda desenfocadas | cobrar sin esfuerzo |
+| `cuanto-cobra-app-gym-catalogo.webp` | captura de app | ventana entera | UI escritorio | panel del gimnasio › Catálogo de planes | bono de 5 clases, bono de 10 clases y cuota mensual con su precio | n/a (captura real) | producto real |
+| `cuanto-cobra-app-cobros.webp` | captura de app | ventana entera | UI escritorio | panel del entrenador › Cobros por tarjeta y SEPA | pagos recibidos este mes y lo que queda tras la comisión de Stripe | n/a (captura real) | producto real |
+| `cuanto-cobra-app-activa-plan.webp` | captura de app | pantalla entera de móvil | UI móvil | app del cliente › Activa tu plan | plan, precio al mes y botón «Pagar y empezar» | n/a (captura real) | producto real |
+| `cuanto-cobra-app-cuota-automatica.webp` | captura de app | pantalla entera de móvil | UI móvil | app del cliente › Cuota automática | 60 € cada mes, domiciliación bancaria o tarjeta | n/a (captura real) | producto real |
+
+**Origen de las 4 capturas reales (pantallas ENTERAS):** las de los tutoriales de cobros ya publicados, con datos inventados (coach «Lorena», «Gimnasio Vital»): `~/Escritorio/hyperframes-test/totalgains-tutorial-cobros-entrenador/_src/shots-lorena/` (`t03`, `p01`, `p06`) y `…-cobros-gimnasio/assets/shots/t03-catalogo.png`.
+
+**Notas:** el datáfono necesitó dos intentos: en el primero salió un letrero de neón con letras inventadas al fondo; se arregló pidiendo «no signs, no neon lettering» y un fondo de luces desenfocadas. El tablero de letras salió vacío a la primera pidiendo «completely empty: only its horizontal grooves».
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -451,6 +470,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-11-27** — Rehecho `blog/cuanto-cobra-entrenador-personal-online` (3 imágenes generadas, conceptos nuevos, y 4 capturas reales enteras de cobros).
 
 **2026-11-27** — Rehecho `blog/como-calcular-1rm-porcentajes` (3 imágenes generadas, conceptos nuevos, y 3 capturas reales enteras del 1RM en la app).
 

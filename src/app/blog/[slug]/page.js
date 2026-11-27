@@ -12,6 +12,14 @@ import RmFormulaCompare from "@/components/RmFormulaCompare";
 import RmRepsTable from "@/components/RmRepsTable";
 import RmZones from "@/components/RmZones";
 import RmWorkflowTG from "@/components/RmWorkflowTG";
+import PtPriceQuick from "@/components/PtPriceQuick";
+import PtPriceByExperience from "@/components/PtPriceByExperience";
+import PtPriceWhere from "@/components/PtPriceWhere";
+import PtOnlineFormats from "@/components/PtOnlineFormats";
+import PtSalaryCompare from "@/components/PtSalaryCompare";
+import TarifaCalculator from "@/components/TarifaCalculator";
+import PtCobrosTG from "@/components/PtCobrosTG";
+import CobrosTutorialVideo from "@/components/CobrosTutorialVideo";
 import LTVCACVisualizer from "@/components/LTVCACVisualizer";
 import CoachTiersVisualizer from "@/components/CoachTiersVisualizer";
 import WaterfallHourlyRate from "@/components/WaterfallHourlyRate";
@@ -96,6 +104,14 @@ const COMPONENT_MARKERS = [
   { marker: '<div class="__rm_reps_table__"></div>', Component: RmRepsTable, gate: () => true },
   { marker: '<div class="__rm_zones__"></div>', Component: RmZones, gate: () => true },
   { marker: '<div class="__rm_workflow__"></div>', Component: RmWorkflowTG, gate: () => true },
+  { marker: '<div class="__pt_price_quick__"></div>', Component: PtPriceQuick, gate: () => true },
+  { marker: '<div class="__pt_price_experience__"></div>', Component: PtPriceByExperience, gate: () => true },
+  { marker: '<div class="__pt_price_where__"></div>', Component: PtPriceWhere, gate: () => true },
+  { marker: '<div class="__pt_online_formats__"></div>', Component: PtOnlineFormats, gate: () => true },
+  { marker: '<div class="__pt_salary__"></div>', Component: PtSalaryCompare, gate: () => true },
+  { marker: '<div class="__tarifa_calculator__"></div>', Component: TarifaCalculator, gate: () => true },
+  { marker: '<div class="__pt_cobros__"></div>', Component: PtCobrosTG, gate: () => true },
+  { marker: '<div class="__cobros_tutorial_video__"></div>', Component: CobrosTutorialVideo, gate: () => true },
   { marker: '<div class="__ltv_cac_visual__"></div>', Component: LTVCACVisualizer, gate: () => true },
   { marker: '<div class="__coach_tiers_visual__"></div>', Component: CoachTiersVisualizer, gate: () => true },
   { marker: '<div class="__waterfall_hourly__"></div>', Component: WaterfallHourlyRate, gate: () => true },
