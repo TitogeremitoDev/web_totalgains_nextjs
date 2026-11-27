@@ -480,16 +480,26 @@ export default async function PostPage({ params }) {
                   </Link>
                 </span>
               )}
-              {post.date && (
-                <span>
-                  <Calendar size={14} />
-                  {new Date(post.date).toLocaleDateString("es-ES", {
-                    day: "numeric",
-                    month: "long",
-                    year: "numeric",
-                  })}
-                </span>
-              )}
+              {/* Si el artículo se ha revisado después de publicarse, la cabecera
+                  enseña la fecha de la revisión («Actualizado el…»): un artículo
+                  de 2025 puesto al día en 2026 no puede parecer viejo. La fecha
+                  original sigue en los datos estructurados (datePublished). */}
+              {post.date && (() => {
+                const revisado = post.lastModified && new Date(post.lastModified) > new Date(post.date);
+                const fecha = new Date(revisado ? post.lastModified : post.date).toLocaleDateString("es-ES", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                });
+                return (
+                  <span>
+                    <Calendar size={14} />
+                    <time dateTime={revisado ? post.lastModified : post.date}>
+                      {revisado ? `Actualizado el ${fecha}` : fecha}
+                    </time>
+                  </span>
+                );
+              })()}
               {post.readTime && (
                 <span>
                   <Clock size={14} /> {post.readTime} min de lectura

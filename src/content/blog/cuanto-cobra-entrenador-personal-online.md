@@ -50,7 +50,7 @@ faqs:
 
 En esta guía tienes los precios de 2026, cada uno con su fuente: por sesión, al mes, en el gimnasio, a domicilio y online. Y si el entrenador eres tú, o llevas un gimnasio, más abajo está cuánto se gana de verdad, cómo calcular tu tarifa con una calculadora y cómo cobrarla sin perseguir a nadie.
 
-*Actualizado el 27 de noviembre de 2026, con cada precio comprobado en su fuente.*
+*Cada precio está comprobado en su fuente el 27 de noviembre de 2026.*
 
 <div class="__pt_price_quick__"></div>
 

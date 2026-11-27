@@ -64,10 +64,13 @@
     max-width: 680px;
 }
 
+/* Con «Actualizado el 27 de noviembre de 2026» la línea ya no cabe en el
+   móvil: que salte de renglón entera, en vez de partir cada dato en tres. */
 .post-meta {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 16px;
+    gap: 6px 16px;
     font-size: 0.82rem;
     color: var(--text-muted);
 }
@@ -76,6 +79,10 @@
     display: flex;
     align-items: center;
     gap: 5px;
+}
+
+.post-meta span svg {
+    flex: 0 0 auto;
 }
 
 /* ── Layout (article + sidebar) ── */
