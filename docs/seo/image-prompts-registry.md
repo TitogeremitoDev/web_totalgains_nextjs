@@ -381,10 +381,12 @@ Antes de inventar uno nuevo, considerar esta lista:
 ---
 
 ### blog/cuanto-cobra-entrenador-personal-online (rehecho)
-*Rehecho 2026-11-27 con `gemini-3-pro-image`. Siguen las dos imágenes de 2025: `cuanto_cobra_hero.webp` y `cuanto_cobra_value.webp`.*
+*Rehecho 2026-11-27 con `gemini-3-pro-image`. Segunda vuelta el mismo día: fuera las dos imágenes de 2025 (`cuanto_cobra_hero.webp` y `cuanto_cobra_value.webp`, cuadradas y con marcas inventadas en inglés: «Evolve Fitness», «FitPro»). Los ficheros se quedan en el servidor, pero el artículo ya no los usa.*
 
 | Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
 |---|---|---|---|---|---|---|---|
+| `cuanto-cobra-portada.webp` | eye-level | entrenadora y cliente en el tercio izquierdo y el centro, mancuernero desenfocado a la derecha | wide | estudio boutique con ventanal | entrenadora corrigiendo el codo a un cliente en sentadilla goblet con pesa rusa, ropa lisa SIN logos | sol de tarde por la ventana, sombras lavanda | el entrenador personal trabajando (portada) |
+| `cuanto-cobra-fuera-de-sesion.webp` | 3/4 frontal bajo | entrenador centro-derecha, flexo a la izquierda | medium | esquina de un gimnasio vacío, de noche | entrenador con sudadera lisa tecleando en un portátil visto por detrás (tapa lisa), cronómetro, botella y toalla | un flexo cálido sobre azul nocturno | el trabajo que no se ve |
 | `cuanto-cobra-tablero.webp` | eye-level, algo desde la izquierda | tablero en el tercio derecho | medium close-up | mostrador de un estudio de entrenamiento | tablero de fieltro negro SIN letras, planta y toalla lavanda, mancuernas al fondo | cálida de tarde con resplandor coral | cada uno pone su tarifa |
 | `cuanto-cobra-domicilio.webp` | 3/4 bajo | esterilla en primer término, sofá y ventana al fondo | wide | salón de una casa | esterilla azul marino con pesa rusa coral y mancuernas | sol de mañana por la ventana, sombras largas | entrenar en casa |
 | `cuanto-cobra-datafono.webp` | frontal algo elevado | datáfono centro-derecha, toalla y botella a la izquierda | macro | mostrador de piedra de un gimnasio | datáfono blanco con la pantalla EN BLANCO, toalla y botella de acero | luces cálidas y lavanda desenfocadas | cobrar sin esfuerzo |
@@ -481,7 +483,7 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 
 ## Última actualización
 
-**2026-11-27** — Rehecho `blog/cuanto-cobra-entrenador-personal-online` (3 imágenes generadas, conceptos nuevos, y 4 capturas reales enteras de cobros).
+**2026-11-27** — Rehecho `blog/cuanto-cobra-entrenador-personal-online` (3 imágenes generadas, conceptos nuevos, y 4 capturas reales enteras de cobros). Segunda vuelta: portada y «fuera de sesión» nuevas (personas con ropa lisa, sin texto) en lugar de las dos de 2025.
 
 **2026-11-27** — Rehecho `blog/como-calcular-1rm-porcentajes` (3 imágenes generadas, conceptos nuevos, y 3 capturas reales enteras del 1RM en la app).
 

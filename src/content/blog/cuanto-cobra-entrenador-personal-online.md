@@ -18,9 +18,9 @@ keywords:
   - "tarifas de entrenamiento online"
   - "cuánto gana un entrenador personal"
   - "precio entrenador personal gimnasio"
-image: "/images/blog/cuanto_cobra_hero.webp"
-imageWidth: 800
-imageHeight: 800
+image: "/images/blog/cuanto-cobra-portada.webp"
+imageWidth: 1344
+imageHeight: 768
 faqs:
   - q: "¿Cuánto cobra un entrenador personal en España en 2026?"
     a: "Por una sesión presencial, entre 15 y 60 €, con una media de 30 a 35 € (Cronoshare, enero de 2026). Al mes, con dos sesiones por semana, entre 240 y 400 € (Trustlocal). Online, entre 50 y 150 € al mes con plan y seguimiento, y hasta 225 € si incluye videollamadas semanales (Enfaf y Trustlocal). En el gimnasio, de 25 a 50 € por sesión, y menos por sesión con un bono."
@@ -31,7 +31,7 @@ faqs:
   - q: "¿Cuánto cuesta un entrenador personal en el gimnasio?"
     a: "De 25 a 50 € por sesión según Enfaf, y de 25 a 60 € por hora según Trustlocal. Lo habitual es comprarlo en bonos: un paquete de 10 sesiones sale desde unos 250 €. Normalmente se paga aparte de la cuota del gimnasio."
   - q: "¿Cuánto cuesta un entrenador personal online?"
-    a: "Entre 50 y 150 € al mes con plan de entrenamiento y seguimiento (Enfaf). Trustlocal publica de 50 a 100 € al mes sin videollamadas y de 100 a 225 € con llamadas semanales. Una sesión suelta por videollamada cuesta de 15 a 35 €."
+    a: "Entre 50 y 150 € al mes con plan de entrenamiento y seguimiento (Enfaf). Trustlocal publica de 50 a 100 € al mes sin videollamadas y de 100 a 225 € con llamadas semanales, y Cronoshare sitúa los planes prémium entre 150 y 300 €. Una sesión suelta por videollamada cuesta de 15 a 35 €."
   - q: "¿Cuánto gana un entrenador personal?"
     a: "En nómina y a jornada completa, desde 1.221 € brutos al mes en 14 pagas (17.094 € al año), que es el salario mínimo de 2026 y queda por encima de las tablas de 2025 del convenio de gimnasios (de 16.280 a 16.681 € al año para un monitor). Por su cuenta, un entrenador con 20 sesiones a la semana a 30 o 35 € factura de 2.600 a 3.000 € al mes, antes de IVA, cuota de autónomos, IRPF y gastos."
   - q: "¿200 € al mes por un entrenador personal es caro?"
@@ -66,7 +66,7 @@ En esta guía tienes los precios de 2026, cada uno con su fuente: por sesión, a
 6. [Cuánto gana un entrenador personal](#cuanto-gana)
 7. [Cómo calcular tu tarifa, con calculadora](#calcular-tarifa)
 8. [Errores al poner el precio](#errores-precios)
-9. [Cómo ganan más los que más ingresan](#mas-ingresos)
+9. [Cómo se llega a facturar más](#mas-ingresos)
 10. [Cómo cobrarlo en un gimnasio o como entrenador](#cobrar)
 11. [Preguntas frecuentes](#faq)
 
@@ -115,17 +115,17 @@ En el gimnasio, el entrenamiento personal suele venderse en **bonos de sesiones*
 
 ## <span id="abanico-precios"></span>Cuánto cobra un entrenador personal online: tarifas por formato
 
-Hay entrenadores online cobrando 60 € al mes y otros cobrando 300 €. Muchas veces hacen un trabajo parecido. La diferencia está en el formato que venden, en su experiencia y en cómo se posicionan.
+En los precios que se publican, el entrenamiento online va desde 50 € al mes hasta más de 300 € (Trustlocal y Cronoshare). La diferencia está en el formato: no cuesta lo mismo un plan con revisión por mensaje que uno con videollamada cada semana.
 
-El online no se paga por sesión, sino por un servicio: la [programación personalizada](/blog/como-crear-plan-entrenamiento-personalizado/), la revisión de cada semana y las respuestas por mensaje. Estos son los cuatro formatos más habituales:
+El online no se paga por sesión, sino por un servicio: la [programación personalizada](/blog/como-crear-plan-entrenamiento-personalizado/), la revisión de cada semana y las respuestas por mensaje. Estos son los cuatro formatos que publican esas fuentes, con su precio:
 
 <div class="__pt_online_formats__"></div>
 
-El seguimiento mensual sin llamadas es el formato que mejor escala: no ata tu agenda a la del cliente. Las sesiones sueltas en directo son lo contrario: se cobran bien, pero tu techo son tus horas.
+Si eres entrenador, fíjate en qué ata tu agenda. El seguimiento sin llamadas no depende de que coincidáis a una hora, así que puedes llevar a más personas. Con sesiones en directo, tu techo son tus horas.
 
 ## <span id="que-incluye"></span>Qué incluye el precio de un entrenador personal
 
-![Entrenadora personal revisando en su portátil el seguimiento de sus clientes](/images/blog/cuanto_cobra_value.webp "Buena parte del trabajo de un entrenador no se ve en la sesión. | 800x800")
+![Entrenador personal trabajando con su portátil en una esquina del gimnasio ya vacío, a la luz de un flexo](/images/blog/cuanto-cobra-fuera-de-sesion.webp "Buena parte del trabajo de un entrenador no se ve en la sesión. | 1344x768")
 
 Cuando comparas precios, mira qué hay dentro. Un buen servicio incluye:
 
@@ -136,7 +136,7 @@ Cuando comparas precios, mira qué hay dentro. Un buen servicio incluye:
 5. **Respuesta a tus dudas** por mensaje entre sesiones.
 6. **Ajustes** del plan según cómo respondes.
 
-Si eres entrenador, esta lista es también tu argumento: muchos cobran poco porque no cuentan todo lo que hacen fuera de la sesión.
+Si eres entrenador, esta lista es también tu argumento para explicar tu precio: casi todo lo que hay en ella pasa fuera de la sesión.
 
 ## <span id="cuanto-gana"></span>Cuánto gana un entrenador personal
 
@@ -152,7 +152,7 @@ Por su cuenta, las cifras suben, pero no todo es para él. De lo que factura sal
 
 Si el entrenador eres tú, no copies el precio del vecino. Haz la cuenta al revés, desde lo que necesitas ganar:
 
-1. **Cuántos clientes puedes llevar bien.** Con seguimiento manual, lo habitual es poder con 15 a 25 antes de que baje la calidad. Con una [herramienta que te quite trabajo repetido](/plataforma-entrenamiento-online/), bastantes más.
+1. **Cuántos clientes puedes llevar bien.** Haz la cuenta en horas: si entre el plan, la revisión y los mensajes cada cliente te lleva una hora a la semana, 25 clientes son 25 horas. Con una [herramienta que te quite trabajo repetido](/plataforma-entrenamiento-online/), esa hora baja y caben más.
 2. **Cuánto necesitas facturar.** Lo que quieres ganar limpio, más impuestos, cuota de autónomo y gastos fijos.
 3. **Divide.** Lo que tienes que facturar, entre tus clientes.
 
@@ -160,25 +160,25 @@ Si el entrenador eres tú, no copies el precio del vecino. Haz la cuenta al rev�
 
 Un ejemplo: para ganar 2.000 € limpios, con un 30 % en impuestos y cuota, 300 € de gastos y 25 clientes, salen unos 126 € por cliente al mes, más IVA.
 
-Si la tarifa que te sale te parece alta, el problema no suele ser el precio: es que faltan clientes para repartir. Aquí tienes cómo [conseguir clientes como entrenador personal online](/blog/como-conseguir-clientes-entrenador-personal-online/).
+Si la tarifa que te sale te parece alta, mira antes entre cuántos clientes la estás repartiendo: con 15 en lugar de 25, la misma cuenta da 210 € por cliente. Aquí tienes cómo [conseguir clientes como entrenador personal online](/blog/como-conseguir-clientes-entrenador-personal-online/).
 
 ## <span id="errores-precios"></span>Errores al poner el precio
 
 - **Cobrar solo por hora.** Tu tiempo es limitado: si cobras 40 € la hora, tu techo es tu agenda. Es uno de [los errores que más frenan a un entrenador](/blog/errores-entrenadores-personales-online/).
-- **Ponerte en el rango bajo «para conseguir más clientes».** El precio que pones decide quién entra: muy barato atrae a quien menos se compromete.
+- **Ponerte en el rango bajo «para conseguir más clientes».** Con la mitad de precio necesitas el doble de clientes para ganar lo mismo, y el doble de horas para atenderlos.
 - **No subir nunca las tarifas.** Lo normal es revisarlas una vez al año, avisando con uno o dos meses y explicando qué has mejorado.
-- **Darlo todo por poco.** Nutrición, revisiones diarias, llamadas ilimitadas y soporte a todas horas por 60 € al mes: te quemas en tres meses. Define qué incluye cada tarifa.
+- **Darlo todo por poco.** Nutrición, revisiones diarias, llamadas ilimitadas y soporte a todas horas por 60 € al mes no se sostiene. Define qué incluye cada tarifa.
 
-## <span id="mas-ingresos"></span>Cómo ganan más los entrenadores que más ingresan
+## <span id="mas-ingresos"></span>Cómo se llega a facturar más sin subir el precio hasta el techo
 
-No es solo cobrar más por cliente. Los que pasan de 5.000 € al mes combinan cuatro cosas:
+La cuenta es una multiplicación: clientes por precio. Un ejemplo: 40 clientes a 125 € al mes son 5.000 € facturados. Se puede llegar por cuatro caminos, y lo normal es combinarlos:
 
-1. **Precio medio-alto** por cliente, de 100 a 200 € al mes.
-2. **Cartera amplia**, de 30 a 50 clientes activos.
-3. **[Sistemas que ahorran tiempo](/gestion-clientes-fitness/)**: lo repetitivo no lo hacen a mano.
+1. **Un precio medio**, dentro de los rangos de arriba, en lugar del más bajo.
+2. **Más clientes** de los que caben haciéndolo todo a mano.
+3. **[Sistemas que ahorran tiempo](/gestion-clientes-fitness/)**: lo repetitivo no se hace a mano.
 4. **Servicios añadidos**: packs, mentorías en grupo o guías.
 
-La tercera es la que marca la diferencia: cuánto tiempo dedican a lo que da dinero y cuánto a tareas de oficina. Entrenadores como Nacho Pulido, que cuenta su historia en [nuestra web](/casos-de-exito/nacho-pulido/), pasaron de 15 a 40 clientes sin trabajar más horas. Tienes el detalle en [el precio real de tu tarifa por hora](/blog/precio-real-tarifa-coach-online-2026/) y en [cómo pasar tu techo de clientes](/blog/techo-clientes-entrenador-personal-escalar-2026/).
+El tercero es el que hace posible el segundo. Nacho Pulido, entrenador de fuerza, lo cuenta en [su caso](/casos-de-exito/nacho-pulido/): pasó de 15 a 40 clientes activos y dice que ahorra entre 8 y 10 horas a la semana. Tienes el detalle en [el precio real de tu tarifa por hora](/blog/precio-real-tarifa-coach-online-2026/) y en [cómo pasar tu techo de clientes](/blog/techo-clientes-entrenador-personal-escalar-2026/).
 
 ![Pequeño datáfono blanco con la pantalla en blanco sobre el mostrador de piedra de un gimnasio, junto a una toalla doblada y una botella de acero](/images/blog/cuanto-cobra-datafono.webp "Una tarifa bien puesta sirve de poco si luego cuesta cobrarla. | 1344x768")
 
@@ -215,9 +215,11 @@ TotalGains no se queda comisión de esos cobros, y todo viene incluido en todos 
 
 ## <span id="conclusion"></span>Entonces, ¿cuánto deberías cobrar tú?
 
-- Si acabas de empezar: de **60 a 90 € al mes** de seguimiento online, o de **15 a 25 € la sesión** presencial, es un rango razonable para ganar experiencia y casos de éxito.
-- Si llevas dos años o más y tienes resultados que enseñar: de **100 a 180 € al mes**, o de **30 a 60 € la sesión**.
-- Si tienes especialización y un método propio: de **150 a 300 € al mes**, o de **50 a 80 € la sesión**.
+Como orientación nuestra, a partir de los rangos publicados de arriba:
+
+- Si acabas de empezar: de **50 a 100 € al mes** de seguimiento online, o de **15 a 25 € la sesión** presencial. Es el tramo bajo de las tres fuentes, y sirve para ganar experiencia y casos que enseñar.
+- Si llevas dos años o más y tienes resultados: de **100 a 150 € al mes**, o de **30 a 60 € la sesión**.
+- Si tienes una especialidad y un método propio: de **150 a 300 € al mes**, que es el tramo prémium de Cronoshare, o de **50 a 80 € la sesión**.
 
 Lo que no deberías hacer es cobrar tan poco que necesites 60 clientes para vivir bien. Eso no es crecer: es agotarse. Y si lo que te frena para subir el precio es elegir programa, aquí están [los 5 mejores software para entrenadores personales](/blog/mejores-software-entrenadores-personales-2026/), con precios comprobados.
 
@@ -241,7 +243,7 @@ De 25 a 50 € por sesión. En bonos sale mejor: 10 sesiones, desde unos 250 €
 
 ### ¿Cuánto cuesta un entrenador personal online?
 
-De 50 a 150 € al mes con plan y seguimiento, y de 100 a 225 € si incluye videollamadas semanales.
+De 50 a 150 € al mes con plan y seguimiento, y de 100 a 225 € si incluye videollamadas semanales. Los planes prémium llegan a 300 €.
 
 ### ¿Cuánto gana un entrenador personal?
 
@@ -267,7 +269,7 @@ Lo normal es una vez al año, avisando con uno o dos meses y explicando qué has
 - **Boletín Oficial del Estado**. *V Convenio colectivo estatal de instalaciones deportivas y gimnasios*, tablas salariales de 2025. [BOE-A-2024-1506](https://www.boe.es/boe/dias/2024/01/26/pdfs/BOE-A-2024-1506.pdf).
 - **Boletín Oficial del Estado**. *Real Decreto 126/2026, de 18 de febrero, por el que se fija el salario mínimo interprofesional para 2026*. [BOE-A-2026-3815](https://www.boe.es/buscar/act.php?id=BOE-A-2026-3815).
 
-Los precios de mercado son orientativos: los publican un portal de presupuestos, una escuela de formación y un directorio, y no coinciden entre sí. Los rangos del entrenamiento online por formato son orientativos de TotalGains. Este artículo no es asesoramiento fiscal ni laboral: para tu caso, consulta con tu gestoría.
+Los precios de mercado son orientativos: los publican un portal de presupuestos, una escuela de formación y un directorio, y no coinciden entre sí. Las recomendaciones del apartado final son orientación de TotalGains a partir de esos rangos. Este artículo no es asesoramiento fiscal ni laboral: para tu caso, consulta con tu gestoría.
 
 ## Sobre el autor
 

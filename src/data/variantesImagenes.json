@@ -39,6 +39,30 @@
    720
   ]
  },
+ "/images/blog/calcular-1rm-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/precio-real-gimnasio-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
+ "/images/blog/software-gratis-hero.webp": {
+  "w": 1344,
+  "h": 768,
+  "copias": [
+   480,
+   800
+  ]
+ },
  "/images/blog/bf-invertir-hero.webp": {
   "w": 1344,
   "h": 768,
@@ -147,11 +171,12 @@
    480
   ]
  },
- "/images/blog/cuanto_cobra_hero.webp": {
-  "w": 800,
-  "h": 800,
+ "/images/blog/cuanto-cobra-portada.webp": {
+  "w": 1344,
+  "h": 768,
   "copias": [
-   480
+   480,
+   800
   ]
  }
 }

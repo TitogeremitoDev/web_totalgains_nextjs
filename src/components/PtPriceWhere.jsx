@@ -17,7 +17,7 @@ const sitios = [
   { icon: Building2, color: "#eab308", nombre: "En el gimnasio", precio: "25-50 € por sesión", texto: "Suele venderse en bonos: diez sesiones salen desde unos 250 €. Normalmente se paga aparte de la cuota." },
   { icon: Home, color: "#fa709a", nombre: "A domicilio", precio: "De 17 a 45 €, más el desplazamiento", texto: "El desplazamiento suma de 5 a 20 € por sesión según la fuente. En grandes ciudades puede llegar a 80 €." },
   { icon: Smartphone, color: "#22c55e", nombre: "Online", precio: "50-150 € al mes", texto: "No se paga por sesión, sino una cuota con plan, seguimiento y mensajes. Con videollamadas semanales, de 100 a 225 €." },
-  { icon: Shuffle, color: "#8fa4f5", nombre: "Híbrido", precio: "80-250 € al mes", texto: "Una o dos sesiones presenciales al mes y el resto, online. Cada vez más habitual." },
+  { icon: Shuffle, color: "#8fa4f5", nombre: "Híbrido", precio: "80-250 € al mes", texto: "Una o dos sesiones presenciales al mes y el resto, online." },
 ];
 
 export default function PtPriceWhere() {

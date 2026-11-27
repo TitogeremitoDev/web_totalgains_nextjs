@@ -1,25 +1,30 @@
-import { MessageSquare, Video, MonitorPlay, Package } from "lucide-react";
+import { MessageSquare, Video, MonitorPlay, Star } from "lucide-react";
 
 /**
- * PtOnlineFormats — Los cuatro formatos del entrenamiento personal online y su
- * rango por experiencia. Sustituye a la tabla de Markdown del artículo de 2025,
- * que en el móvil solo enseñaba la primera columna. Los rangos son los
- * orientativos que ya publicaba el artículo; el pie los contrasta con lo que
- * publican Trustlocal (50-100 € sin videollamadas, 100-225 € con llamadas) y
- * Cronoshare (90-150 € básico y semanal, 150-300 € premium), leído el 27-nov-2026.
+ * PtOnlineFormats: los cuatro formatos del entrenamiento personal online con
+ * el precio que publica cada fuente (leídas el 27-nov-2026). Sustituye a la
+ * tabla de Markdown del artículo de 2025, que en el móvil solo enseñaba la
+ * primera columna.
+ *  - Trustlocal: 50-100 € al mes sin videollamadas, 100-225 € con llamadas
+ *    semanales, 15-35 € la sesión por videollamada.
+ *  - Cronoshare (10-ene-2026): básico 90-120, con revisión semanal 120-150,
+ *    prémium 150-300 y élite 180-340 € al mes.
+ * Antes llevaba rangos orientativos de TotalGains sin fuente (hasta 400 € al
+ * mes, 200 € la sesión y packs de 1.500 €) que no casaban con el resto del
+ * artículo: fuera (27-nov-2026).
  */
 
 const formatos = [
-  { icon: MessageSquare, color: "#22c55e", nombre: "Seguimiento mensual sin llamadas", rango: "50-300 € al mes", tramos: ["50-90 € con menos de 2 años de experiencia", "90-150 € con 2 a 5 años", "150-300 € con especialización o marca consolidada"] },
-  { icon: Video, color: "#8fa4f5", nombre: "Seguimiento con videollamadas", rango: "120-400 € al mes", tramos: ["De 1 a 4 llamadas al mes", "120-200 € en gama media", "200-400 € en gama alta o especialistas"] },
-  { icon: MonitorPlay, color: "#fa709a", nombre: "Sesión suelta en directo", rango: "25-200 € por sesión", tramos: ["25-45 € un entrenador junior", "50-100 € uno sénior", "100-200 € alto rendimiento o imagen pública"] },
-  { icon: Package, color: "#eab308", nombre: "Pack de 8 a 12 semanas", rango: "200-1.500 €", tramos: ["200-400 € solo programación", "400-800 € con seguimiento completo", "800-1.500 € con llamadas, nutrición y comunidad"] },
+  { icon: MessageSquare, color: "#22c55e", nombre: "Seguimiento sin llamadas", rango: "50-120 € al mes", tramos: ["Plan, revisión y dudas por mensaje", "50-100 € sin videollamadas (Trustlocal)", "90-120 € el plan básico (Cronoshare)"] },
+  { icon: Video, color: "#8fa4f5", nombre: "Con revisión o llamada semanal", rango: "100-225 € al mes", tramos: ["Lo anterior y una llamada cada semana", "100-225 € con llamadas semanales (Trustlocal)", "120-150 € con revisión semanal (Cronoshare)"] },
+  { icon: Star, color: "#eab308", nombre: "Prémium y especialistas", rango: "150-340 € al mes", tramos: ["Más contacto y un entrenador especializado", "150-300 € el plan prémium (Cronoshare)", "180-340 € el plan élite (Cronoshare)"] },
+  { icon: MonitorPlay, color: "#fa709a", nombre: "Sesión suelta por videollamada", rango: "15-35 € por sesión", tramos: ["Una clase en directo, sin cuota mensual", "15-35 € por sesión (Trustlocal)"] },
 ];
 
 export default function PtOnlineFormats() {
   return (
     <section
-      aria-label="Precios del entrenamiento personal online por formato: seguimiento mensual sin llamadas de 50 a 300 euros, con videollamadas de 120 a 400 euros, sesión suelta en directo de 25 a 200 euros y pack de 8 a 12 semanas de 200 a 1.500 euros"
+      aria-label="Precios del entrenamiento personal online por formato: seguimiento sin llamadas de 50 a 120 euros al mes, con llamada semanal de 100 a 225 euros, planes prémium de 150 a 340 euros y sesión suelta por videollamada de 15 a 35 euros"
       style={{
         maxWidth: 900, margin: "40px auto", padding: "28px 24px",
         background: "linear-gradient(180deg, rgba(102,126,234,0.05) 0%, rgba(118,75,162,0.04) 100%)",
@@ -30,7 +35,7 @@ export default function PtOnlineFormats() {
         Tarifas del entrenamiento online, por formato
       </h3>
       <p style={{ margin: "0 0 24px", textAlign: "center", fontSize: "0.86rem", color: "var(--text-secondary,#aaa)", lineHeight: 1.5 }}>
-        Rangos orientativos en España según la experiencia del entrenador.
+        Lo que publican Trustlocal y Cronoshare para cada formato, en España.
       </p>
 
       <ul style={{ listStyle: "none", margin: 0, padding: 0, display: "flex", gap: 12, flexWrap: "wrap" }}>
@@ -61,7 +66,7 @@ export default function PtOnlineFormats() {
       </ul>
 
       <p style={{ marginTop: 18, fontSize: "0.8rem", fontStyle: "italic", color: "var(--text-secondary,#999)", lineHeight: 1.6, textAlign: "center" }}>
-        Rangos orientativos de TotalGains. Como contraste, Trustlocal publica de 50 a 100 € al mes sin videollamadas y de 100 a 225 € con ellas, y Cronoshare, de 90 a 150 € el seguimiento básico y de 150 a 300 € el prémium (noviembre de 2026).
+        Precios publicados por Trustlocal y por Cronoshare (enero de 2026), consultados el 27 de noviembre de 2026. Son orientativos y no coinciden entre sí: por eso cada cifra lleva su fuente.
       </p>
     </section>
   );
