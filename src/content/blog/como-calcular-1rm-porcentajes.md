@@ -51,7 +51,7 @@ Probar ese máximo cansa, lleva tiempo y pide experiencia. No hace falta: con un
 
 ## Índice del artículo
 
-1. [Calculadora de 1RM](#calculadora)
+1. [Calculadora de 1RM, por ejercicio y con discos](#calculadora)
 2. [Qué es el 1RM y para qué sirve](#que-es)
 3. [Cómo hacer la serie de prueba](#serie)
 4. [Las dos fórmulas más usadas](#formulas)
@@ -69,7 +69,13 @@ Probar ese máximo cansa, lleva tiempo y pide experiencia. No hace falta: con un
 
 <div class="__calculadora_rm__"></div>
 
-También la tienes en su propia página: [calculadora de RM](/calculadora-rm/).
+### Por ejercicio y con los discos que tocan
+
+La calculadora no se queda en el número. Eliges el ejercicio (sentadilla, press de banca, peso muerto, press militar o hip thrust) y, además de tu 1RM, te da el peso de cada porcentaje ya **redondeado a lo que se puede cargar** y te dice qué discos poner a cada lado de la barra.
+
+Un ejemplo: con 100 kg y 5 repeticiones tu 1RM estimado es de 116,7 kg, y el 85 % son 99,2 kg. Ese peso no existe en ningún gimnasio. En la barra son 100 kg: la barra de 20 kg y, a cada lado, un disco de 25 y otro de 15.
+
+Si entrenas con más gente, puedes compartir tu marca o retar a un compañero de box. También la tienes en su propia página: [calculadora de RM](/calculadora-rm/).
 
 ## <span id="que-es"></span>Qué es el 1RM y para qué sirve
 
