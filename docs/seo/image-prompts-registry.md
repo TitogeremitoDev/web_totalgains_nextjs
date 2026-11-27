@@ -362,6 +362,24 @@ Antes de inventar uno nuevo, considerar esta lista:
 
 ---
 
+### blog/como-calcular-1rm-porcentajes
+*Rehecho 2026-11-27 con `gemini-3-pro-image` (el hero `calcular-1rm-hero.webp` es la infografía del 25-nov y no cambia)*
+
+| Archivo | Ángulo | Composición | Encuadre | Locación | Contenido | Luz | Mood |
+|---|---|---|---|---|---|---|---|
+| `calcular-1rm-barra.webp` | eye-level lateral | manga y discos en los dos tercios derechos | close-up | gimnasio boutique con luces cálidas y pared lavanda | extremo de barra olímpica en un rack con dos discos negros SIN números | tungsteno cálido, fondo desenfocado | antes de un levantamiento pesado |
+| `calcular-1rm-libreta.webp` | 3/4 elevado | libreta en el tercio izquierdo, kettlebells al fondo a la derecha | medium close-up | box de entrenamiento funcional con ventanales industriales | libreta de espiral EN BLANCO, lápiz y bloque de magnesio sobre un cajón de madera | fría de día por ventanales | apuntar la serie |
+| `calcular-1rm-discos.webp` | frontal | repetición y simetría, fila horizontal | medium | pared de hormigón claro y suelo de caucho | discos de goma azul marino, lavanda, coral y blancos SIN números, de mayor a menor | luz de día suave desde la izquierda | orden y precisión |
+| `calcular-1rm-app-records.webp` | captura de app | pantalla entera de móvil | UI móvil | Perfil › Evolución, indicador «PRs» | 68 récords por 1RM estimado, barras por semana | n/a (captura real) | producto real |
+| `calcular-1rm-app-carga-alta.webp` | captura de app | pantalla entera de móvil | UI móvil | Perfil › Evolución, indicador «Carga Alta» | porcentaje de series al 85 % o más del peso máximo, por semana | n/a (captura real) | producto real |
+| `calcular-1rm-app-editor.webp` | captura de app | ventana entera | UI escritorio | Rutinas › editor | «Progreso por ejercicio» encendido con su ejemplo y la nota del «≈» | n/a (captura real) | producto real |
+
+**Origen de las 3 capturas reales (pantallas ENTERAS):** hechas el 27-nov con el kit `~/.cache/tg-e2e/centro-feedback/` (BD efímera, clienta Marta con 33 entrenos; `up.sh` / `down.sh`) y los guiones `~/.cache/tg-blog/calcular-1rm/cap-atleta.mjs` y `cap-coach.mjs` (en el editor, el interruptor de «Progreso por ejercicio» se enciende con un clic en 1390,203). Las de móvil llevan arriba la tira de 80 px. ⛔ En Evolución NO hay gráfica del 1RM: lo que hay son los indicadores «PRs» y «Carga Alta» (se abren tocando «Volumen»).
+
+**Notas:** las tres salieron al primer intento. Décima vez que funciona pedir los soportes **sin números ni texto** (discos, libreta). La barra en el rack se diferencia de `preparacion-natural-entreno` (barra en el suelo, gran angular, luz fría) en ángulo, encuadre y luz.
+
+---
+
 ## 📂 Imágenes legacy (no generadas en este flujo)
 
 Solo registradas para evitar repetir conceptos. **Antes de generar una nueva, verificar visualmente si alguna legacy ya cubre el concepto.**
@@ -433,6 +451,8 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 ---
 
 ## Última actualización
+
+**2026-11-27** — Rehecho `blog/como-calcular-1rm-porcentajes` (3 imágenes generadas, conceptos nuevos, y 3 capturas reales enteras del 1RM en la app).
 
 **2026-11-20** — Añadido `blog/black-friday-entrenador-personal-en-que-invertir-2026` (4 imágenes generadas, conceptos nuevos: escaparate nocturno, sumadora, montaje de vídeo con móvil y cajas sin abrir).
 

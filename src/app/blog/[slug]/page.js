@@ -7,6 +7,11 @@ import BlogCTAButton from "@/components/BlogCTAButton";
 import GuiasGratis from "@/components/GuiasGratis";
 import PriceCalculatorCoach from "@/components/PriceCalculatorCoach";
 import CalculadoraRM from "@/components/CalculadoraRM";
+import RmTestSetSteps from "@/components/RmTestSetSteps";
+import RmFormulaCompare from "@/components/RmFormulaCompare";
+import RmRepsTable from "@/components/RmRepsTable";
+import RmZones from "@/components/RmZones";
+import RmWorkflowTG from "@/components/RmWorkflowTG";
 import LTVCACVisualizer from "@/components/LTVCACVisualizer";
 import CoachTiersVisualizer from "@/components/CoachTiersVisualizer";
 import WaterfallHourlyRate from "@/components/WaterfallHourlyRate";
@@ -86,6 +91,11 @@ import "./post.css";
 const COMPONENT_MARKERS = [
   { marker: '<div class="__calculator_mount__"></div>', Component: PriceCalculatorCoach, gate: (post) => post.calculator === "coach-price" },
   { marker: '<div class="__calculadora_rm__"></div>', Component: CalculadoraRM, gate: () => true },
+  { marker: '<div class="__rm_test_set__"></div>', Component: RmTestSetSteps, gate: () => true },
+  { marker: '<div class="__rm_formulas__"></div>', Component: RmFormulaCompare, gate: () => true },
+  { marker: '<div class="__rm_reps_table__"></div>', Component: RmRepsTable, gate: () => true },
+  { marker: '<div class="__rm_zones__"></div>', Component: RmZones, gate: () => true },
+  { marker: '<div class="__rm_workflow__"></div>', Component: RmWorkflowTG, gate: () => true },
   { marker: '<div class="__ltv_cac_visual__"></div>', Component: LTVCACVisualizer, gate: () => true },
   { marker: '<div class="__coach_tiers_visual__"></div>', Component: CoachTiersVisualizer, gate: () => true },
   { marker: '<div class="__waterfall_hourly__"></div>', Component: WaterfallHourlyRate, gate: () => true },
