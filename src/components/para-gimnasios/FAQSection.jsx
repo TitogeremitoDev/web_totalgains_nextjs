@@ -7,8 +7,8 @@ import { ChevronDown } from "lucide-react";
 /* ───────────────────────────────────────────────────────────
    10. FAQ
    ─────────────────────────────────────────────────────────── */
-export default function FAQSection() {
-  const faqs = PARA_GIMNASIOS_FAQS;
+/* `faqs`: /app-para-gimnasios/ pasa las suyas; sin nada, las de /para-gimnasios/. */
+export default function FAQSection({ faqs = PARA_GIMNASIOS_FAQS }) {
 
   const [openIndex, setOpenIndex] = useState(0);
 

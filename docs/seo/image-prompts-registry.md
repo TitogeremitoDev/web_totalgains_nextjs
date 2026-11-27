@@ -445,6 +445,16 @@ Las screenshots reales del producto en `public/images/gym/` NO se regeneran nunc
 | `gym/clientes.webp` | Vista listado de clientes del gym | Para mostrar gestión de socios |
 | `gym/clases.webp` | Calendario de clases del gym con ocupación | Para mostrar agenda y reservas |
 | `gym/pagos.webp` | Vista de pagos del gym con KPIs financieros | Para mostrar cobros y churn |
+| `gym/app-socio-portada-atlas.webp` | Portada de la app del SOCIO con la marca de «Gimnasio Atlas» (inventado), azul. 27-nov-2026, 640x1385, entera. Web de la app a tamaño de móvil, sin la corona (en el móvil no la ve el socio de un gimnasio) | /app-para-gimnasios/ (cabecera) |
+| `gym/app-socio-portada-vital.webp` | La misma portada con la marca de «Gimnasio Vital» (inventado), verde | /app-para-gimnasios/ (cabecera) |
+| `gym/app-socio-portada-cumbre.webp` | La misma portada con la marca de «Box Cumbre» (inventado), naranja sobre tema oscuro | /app-para-gimnasios/ (cabecera) |
+| `gym/app-socio-reservas.webp` | App del socio: clases de hoy con plazas libres y botón Reservar | /app-para-gimnasios/ (Reservas) |
+| `gym/app-socio-mis-reservas.webp` | App del socio: sus reservas, una reservada y otra en lista de espera | /app-para-gimnasios/ (Reservas) |
+| `gym/app-socio-pagos.webp` | App del socio, «Mi gimnasio»: toca renovar la cuota, Pagar ahora 45,00 € | /app-para-gimnasios/ (Pagos) |
+| `gym/app-socio-tienda.webp` | App del socio: pedido de la tienda del centro con código de recogida | /app-para-gimnasios/ (Pagos) |
+| `gym/app-socio-rutinas.webp` | App del socio: «Rutinas de Gimnasio Atlas» con el WOD de hoy | /app-para-gimnasios/ (Rutinas y WOD) |
+| `gym/app-socio-dieta.webp` | App del socio, Nutrición: la comida de hoy con cuatro platos a elegir (dieta inventada) | /app-para-gimnasios/ (Dietas) |
+| `gym/app-socio-avisos.webp` | App del socio, «Mi gimnasio»: logo del centro y dos comunicados nuevos | /app-para-gimnasios/ (Avisos) |
 
 ---
 

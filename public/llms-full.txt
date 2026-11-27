@@ -455,6 +455,7 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 ### Vertical Gimnasios
 
 - https://totalgains.es/para-gimnasios/ — Software para gimnasios pequeños y boutique: clases con reserva, multi-coach con permisos granulares, app marca blanca del gimnasio y cuotas con caja y facturación. Desde 149 €/mes con IVA.
+- https://totalgains.es/app-para-gimnasios/ — App para los socios con la marca del gimnasio (logo, nombre y colores): reservas con lista de espera, pago de cuotas y bonos con la cuenta de Stripe del centro, rutinas y WOD del día, dietas y comunicados. Una sola app, TotalGains, que el socio descarga en App Store o Google Play y ve con la marca de su centro al entrar con el código; no es una app aparte del gimnasio en las tiendas. El gestor entra por la web. Incluida en los planes Gym.
 
 ### Vertical Nutricionistas
 

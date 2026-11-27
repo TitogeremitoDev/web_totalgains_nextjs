@@ -5,6 +5,7 @@ import Link from "next/link";
    ─────────────────────────────────────────────────────────── */
 export default function RelatedSection() {
   const items = [
+    { href: "/app-para-gimnasios/", label: "La app de tus socios, con tu marca" },
     { href: "/blog/software-gimnasios-pequenos-boutique-2026/", label: "Guía completa software gimnasios 2026" },
     { href: "/alternativas/harbiz/", label: "TotalGains vs Harbiz" },
     { href: "/alternativas/harbiz/precios/", label: "Precios Harbiz 2026" },
