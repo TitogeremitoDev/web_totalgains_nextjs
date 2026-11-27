@@ -49,7 +49,16 @@ const navLinks = [
     // Ruta real, no ancla: desde cualquier página que no fuese la home esto
     // obligaba a viajar a "/" y bajar. Y un ancla no sirve de destino de anuncio.
     { href: '/precios/', label: 'Precios' },
-    { href: '/blog/', label: 'Blog' },
+    // «Recursos» y no un apartado más: el blog y las herramientas gratis caben en el
+    // mismo hueco que tenía «Blog» (German, 27-nov: «puede que el nav se llene demasiado»).
+    // El padre sigue llevando al blog; en el móvil se ve como «Blog» y debajo las herramientas.
+    {
+        href: '/blog/', label: 'Recursos', labelMovil: 'Blog',
+        hijas: [
+            { href: '/blog/', label: 'Blog', desc: 'Guías para gimnasios, boxes y entrenadores' },
+            { href: '/herramientas/', label: 'Herramientas gratis', desc: 'Calculadora de RM por ejercicio y más, sin registro' },
+        ],
+    },
 ];
 
 const Navbar = () => {
@@ -198,14 +207,14 @@ const Navbar = () => {
                                 onClick={(e) => handleNavigation(e, link.href)}
                                 prefetch={false}
                             >
-                                {link.label}
+                                {link.labelMovil || link.label}
                                 <svg className="mobile-link-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="5" y1="12" x2="19" y2="12"></line>
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
                             </Link>
                             {/* Sin hover en un móvil: las dos hijas van a la vista */}
-                            {link.hijas?.map((h) => (
+                            {link.hijas?.filter((h) => h.href !== link.href).map((h) => (
                                 <Link
                                     key={h.href}
                                     href={h.href}

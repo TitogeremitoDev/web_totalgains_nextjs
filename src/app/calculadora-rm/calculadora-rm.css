@@ -11,6 +11,7 @@
 
 .calc-rm-pagina__etiqueta {
     display: inline-block;
+    text-decoration: none;
     padding: 4px 12px;
     border-radius: 999px;
     font-size: 0.78rem;

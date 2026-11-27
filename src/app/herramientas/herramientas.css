@@ -1,0 +1,185 @@
+.herr-pagina {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 110px 16px 64px;
+}
+
+.herr-cabecera {
+    max-width: 720px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.herr-etiqueta {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+    background: rgba(34, 197, 94, 0.08);
+}
+
+.herr-cabecera h1 {
+    margin: 14px 0 10px;
+    font-size: clamp(1.7rem, 4.5vw, 2.5rem);
+    line-height: 1.15;
+    font-weight: 800;
+    color: var(--text-primary, #fff);
+}
+
+.herr-cabecera p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.55;
+    color: var(--text-secondary, #aaa);
+}
+
+.herr-rejilla {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.herr-tarjeta {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background: linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.06) 100%);
+    border: 1px solid rgba(102, 126, 234, 0.28);
+    border-radius: 20px;
+    transition: transform 0.18s, border-color 0.18s;
+}
+
+.herr-tarjeta:hover,
+.herr-tarjeta:focus-visible {
+    transform: translateY(-3px);
+    border-color: rgba(165, 180, 252, 0.7);
+}
+
+.herr-arte {
+    position: relative;
+    height: 220px;
+    background:
+        radial-gradient(55% 60% at 50% 45%, rgba(129, 140, 248, 0.28) 0%, rgba(129, 140, 248, 0) 100%),
+        linear-gradient(rgba(148, 163, 184, 0.06) 1px, transparent 1px) 0 0 / 22px 22px,
+        linear-gradient(90deg, rgba(148, 163, 184, 0.06) 1px, transparent 1px) 0 0 / 22px 22px,
+        #0b1020;
+}
+
+.herr-atleta {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.herr-precio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 100%;
+    color: #a5b4fc;
+}
+
+.herr-precio-cifra {
+    font-size: 2.6rem;
+    font-weight: 800;
+    line-height: 1;
+    color: #22c55e;
+}
+
+.herr-precio-nota {
+    font-size: 0.85rem;
+    color: var(--text-secondary, #aaa);
+}
+
+.herr-cuerpo {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px 20px 20px;
+}
+
+.herr-para {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    color: #a5b4fc;
+}
+
+.herr-cuerpo h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-primary, #fff);
+}
+
+.herr-cuerpo p {
+    flex: 1;
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.55;
+    color: var(--text-secondary, #bbb);
+}
+
+.herr-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #c4b5fd;
+}
+
+.herr-bloque {
+    margin: 40px 0 0;
+    padding: 24px 22px;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.16) 0%, rgba(118, 75, 162, 0.16) 100%);
+    border: 1px solid rgba(165, 180, 252, 0.3);
+    border-radius: 18px;
+}
+
+.herr-bloque h2 {
+    margin: 0 0 8px;
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--text-primary, #fff);
+}
+
+.herr-bloque p {
+    margin: 0 0 16px;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: var(--text-secondary, #cbd5e1);
+}
+
+.herr-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+@media (max-width: 520px) {
+    .herr-arte {
+        height: 190px;
+    }
+
+    .herr-botones .btn {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .herr-tarjeta {
+        transition: none;
+    }
+}

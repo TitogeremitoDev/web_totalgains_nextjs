@@ -97,6 +97,7 @@ const Footer = () => {
                             <h4>Recursos</h4>
                             <ul>
                                 <li><Link href="/blog/" prefetch={false}>Blog</Link></li>
+                                <li><Link href="/herramientas/" prefetch={false}>Herramientas gratis</Link></li>
                                 <li><Link href="/calculadora-rm/" prefetch={false}>Calculadora de RM</Link></li>
                                 <li><Link href="/funciones/entrenadores/" prefetch={false}>Funciones para entrenadores</Link></li>
                                 <li><Link href="/funciones/gimnasios/" prefetch={false}>Funciones para gimnasios</Link></li>

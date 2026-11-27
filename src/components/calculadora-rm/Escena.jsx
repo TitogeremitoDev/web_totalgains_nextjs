@@ -2,7 +2,8 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { COLOR, DEGRADADOS, VISTA, formas, plataforma, trayectoria, segundosSubida } from "./geometria";
+import { COLOR, VISTA, formas, plataforma, trayectoria, segundosSubida } from "./geometria";
+import { DefsDegradados, Forma, n1 } from "./FormaSvg";
 
 /* Escenario animado de la calculadora de RM: el atleta de perfil haciendo el ejercicio con los discos del peso elegido,
    el recorrido de la barra punteado y, debajo (BarraDeFrente), la barra de frente con los discos de cada lado.
@@ -40,26 +41,6 @@ function useFase(pct, parado) {
     return parado ? 1 : t;
 }
 
-const n1 = (x) => Math.round(x * 10) / 10;
-
-const pintura = (c) => (typeof c === "string" && c.startsWith("grad:") ? `url(#tg-rm-${c.slice(5)})` : c);
-const trazo = (d) => d.map(([cmd, ...ps]) => cmd + ps.map((q) => `${n1(q.x)} ${n1(q.y)}`).join(" ")).join(" ");
-
-function Forma({ f }) {
-    const comun = { fill: pintura(f.fill), stroke: f.stroke, strokeWidth: f.sw, opacity: f.opacity };
-    if (f.k === "path") return <path d={trazo(f.d)} strokeLinecap="round" strokeLinejoin="round" {...comun} />;
-    if (f.k === "poly") return <polygon points={f.pts.map((q) => `${n1(q.x)},${n1(q.y)}`).join(" ")} {...comun} />;
-    if (f.k === "circle") return <circle cx={n1(f.c.x)} cy={n1(f.c.y)} r={n1(f.r)} {...comun} />;
-    if (f.k === "text") {
-        return (
-            <text x={n1(f.p.x)} y={n1(f.p.y)} fontSize={n1(f.size)} fontWeight="800" fill={f.fill} textAnchor="middle" dominantBaseline="central">
-                {f.s}
-            </text>
-        );
-    }
-    return <rect x={n1(f.x)} y={n1(f.y)} width={n1(f.w)} height={n1(f.h)} rx={f.rx} {...comun} />;
-}
-
 export function Atleta({ ej, t, discos }) {
     const lista = formas(ej, t, discos);
     return (
@@ -89,12 +70,7 @@ export function Escena({ ej, pct, discos, quieto, etiqueta, children }) {
         <div className="calc-rm__escena" ref={caja}>
             <svg viewBox={`${x} ${y} ${w} ${h}`} className="calc-rm__svg" role="img" aria-label={etiqueta}>
                 <defs>
-                    {Object.entries(DEGRADADOS).map(([id, [c1, c2]]) => (
-                        <linearGradient key={id} id={`tg-rm-${id}`} x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%" stopColor={c1} />
-                            <stop offset="100%" stopColor={c2} />
-                        </linearGradient>
-                    ))}
+                    <DefsDegradados />
                 </defs>
                 <ellipse cx="210" cy={suelo + 1} rx="150" ry="6" fill="rgba(0,0,0,0.4)" />
                 {plataforma().map((f, i) => (

@@ -28,6 +28,7 @@ export default function sitemap() {
         { url: `${baseUrl}/alternativas/trainingym/`, lastModified: '2026-11-24' },
         { url: `${baseUrl}/software-entrenador-personal/`, lastModified: '2026-08-22' },
         { url: `${baseUrl}/para-gimnasios/`, lastModified: '2026-10-31' },
+        { url: `${baseUrl}/herramientas/`, lastModified: '2026-11-27' },
         { url: `${baseUrl}/calculadora-rm/`, lastModified: '2026-11-27' },
         { url: `${baseUrl}/invita-un-entrenador/`, lastModified: '2026-10-31' },
         { url: `${baseUrl}/ia-entrenador-personal/`, lastModified: '2026-08-22' },

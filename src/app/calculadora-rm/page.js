@@ -52,7 +52,8 @@ export default function PaginaCalculadoraRM() {
                 "@type": "BreadcrumbList",
                 itemListElement: [
                     { "@type": "ListItem", position: 1, name: "Inicio", item: "https://totalgains.es/" },
-                    { "@type": "ListItem", position: 2, name: "Calculadora de RM", item: URL },
+                    { "@type": "ListItem", position: 2, name: "Herramientas gratis", item: "https://totalgains.es/herramientas/" },
+                    { "@type": "ListItem", position: 3, name: "Calculadora de RM", item: URL },
                 ],
             },
         ],
@@ -62,7 +63,7 @@ export default function PaginaCalculadoraRM() {
         <main className="calc-rm-pagina">
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
             <div className="calc-rm-pagina__cabecera">
-                <span className="calc-rm-pagina__etiqueta">Herramienta gratis</span>
+                <Link href="/herramientas/" className="calc-rm-pagina__etiqueta" prefetch={false}>Herramienta gratis · ver todas</Link>
                 <h1>Calculadora de RM: tu repetición máxima y tus porcentajes</h1>
                 <p>
                     Calcula tu 1RM sin arriesgarte a probar tu máximo: elige el ejercicio, pon el peso que mueves y las repeticiones
