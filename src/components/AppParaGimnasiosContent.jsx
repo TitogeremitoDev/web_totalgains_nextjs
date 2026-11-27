@@ -1,7 +1,12 @@
 /* /app-para-gimnasios/: la app del SOCIO con la marca del centro (27-nov-2026).
    Todo es texto fijo que se pinta al compilar; las únicas piezas con código en
    el navegador son las que ya existían en /para-gimnasios/ (barra de progreso,
-   vídeo, formulario «Te llamamos» y preguntas desplegables).
+   formulario «Te llamamos» y preguntas desplegables).
+
+   Reparto con /para-gimnasios/ (para que no se pisen): aquí va SOLO la parte
+   del socio. El programa entero, la demo de 2 minutos, la comparativa y el
+   detalle de los planes viven allí y desde aquí se enlazan; lo único que se
+   repite son los casos reales y el formulario.
 
    Las capturas son reales y van ENTERAS (640x1385), con gimnasios inventados:
    «Gimnasio Atlas», «Gimnasio Vital» y «Box Cumbre».
@@ -12,13 +17,10 @@ import {
   ArrowRight, Bell, CalendarCheck, Check, CreditCard, Dumbbell, Monitor, Phone, Smartphone, Utensils, X,
 } from "lucide-react";
 import ImagenAdaptable from "@/components/ImagenAdaptable";
-import DemoVideo from "@/components/DemoVideo";
 import CasoGimnasio from "@/components/CasoGimnasio";
 import TeLlamamosGimnasio from "@/components/TeLlamamosGimnasio";
 import ScrollProgress from "./para-gimnasios/ScrollProgress";
-import PricingSection from "./para-gimnasios/PricingSection";
 import FAQSection from "./para-gimnasios/FAQSection";
-import FinalCTASection from "./para-gimnasios/FinalCTASection";
 import { CASOS_GIMNASIO } from "./para-gimnasios/datos";
 import { APP_PARA_GIMNASIOS_FAQS } from "@/data/appParaGimnasiosFaqs";
 
@@ -144,6 +146,12 @@ export default function AppParaGimnasiosContent() {
           </div>
           <div className="apg-hero-grid" style={{ position: "relative" }}>
             <div>
+              <nav aria-label="Estás en" style={{ fontSize: "0.82rem", color: "var(--text-muted)", marginBottom: 14 }}>
+                <Link href="/para-gimnasios/" prefetch={false} style={{ color: "var(--text-secondary)", textDecoration: "underline", textUnderlineOffset: 3 }}>
+                  Software para gimnasios
+                </Link>{" "}
+                <span aria-hidden="true">›</span> App del socio
+              </nav>
               <span
                 style={{
                   display: "inline-flex",
@@ -311,7 +319,9 @@ export default function AppParaGimnasiosContent() {
                 ))}
               </ul>
               <p className="apg-nota">
-                <Link href="/para-gimnasios/" prefetch={false}>Ver todo lo que incluye TotalGains para gimnasios</Link>
+                Esta página enseña solo la app del socio.{" "}
+                <Link href="/para-gimnasios/" prefetch={false}>Mira el programa completo para gimnasios</Link>{" "}
+                o <Link href="/para-gimnasios/#demo" prefetch={false}>la demo de 2 minutos</Link>.
               </p>
             </div>
             <div className="apg-panel-img aparece">
@@ -326,33 +336,40 @@ export default function AppParaGimnasiosContent() {
           </div>
         </section>
 
-        {/* 7. VÍDEO */}
-        <section id="demo" style={{ padding: "0 24px 90px" }}>
-          <div style={{ maxWidth: 1100, margin: "0 auto" }}>
-            <div className="aparece" style={{ textAlign: "center", marginBottom: 32 }}>
-              <p style={eyebrow}>La demo</p>
-              <h2 style={h2}>
-                Un gimnasio de ejemplo, <span style={{ color: "var(--accent)" }}>en 2 minutos</span>
-              </h2>
-              <p style={sub}>
-                El panel, las clases, los socios, los cobros y la app con la marca del centro, de punta a punta.
-              </p>
+        {/* 7. PRECIO: resumen; el detalle de cada plan está en /para-gimnasios/#precios */}
+        <section id="precio" style={{ padding: "0 24px 90px" }}>
+          <div className="apg-precio aparece">
+            <p style={eyebrow}>Precio</p>
+            <h2 style={h2}>
+              La app va incluida <span style={{ color: "var(--accent)" }}>en el plan del gimnasio</span>
+            </h2>
+            <p style={sub}>
+              No es un módulo aparte ni se paga por socio. Pagas el plan de tu centro según tus socios activos y la app, con tu marca, entra en los tres.
+            </p>
+            <div className="apg-planes">
+              {[
+                ["Hasta 100 socios", "149 €"],
+                ["De 100 a 200 socios", "199 €"],
+                ["Más de 200 socios", "249 €"],
+              ].map(([tramo, precio]) => (
+                <div className="apg-plan" key={tramo}>
+                  <span className="apg-plan-tramo">{tramo}</span>
+                  <span className="apg-plan-precio">{precio}</span>
+                  <span className="apg-plan-nota">al mes, con IVA</span>
+                </div>
+              ))}
             </div>
-            <DemoVideo
-              src="/video/gym-demo.mp4"
-              poster="/video/gym-demo.jpg"
-              titulo="Demo de TotalGains para gimnasios: el panel y la app del socio con la marca del centro"
-              ubicacion="app_para_gimnasios"
-            />
+            <p className="apg-precio-pie">
+              Entrenadores ilimitados, sin módulos aparte y sin permanencia.{" "}
+              <Link href="/para-gimnasios/#precios" prefetch={false}>Ver qué incluye cada plan</Link>
+            </p>
           </div>
         </section>
 
-        <PricingSection />
-        <TeLlamamosGimnasio />
         <FAQSection faqs={APP_PARA_GIMNASIOS_FAQS} />
-        <FinalCTASection />
+        <TeLlamamosGimnasio />
 
-        {/* 12. TAMBIÉN */}
+        {/* 10. TAMBIÉN */}
         <section style={{ padding: "60px 24px 100px" }}>
           <div style={{ maxWidth: 900, margin: "0 auto" }}>
             <h2 style={{ fontSize: "0.92rem", fontWeight: 700, color: "var(--text-secondary)", marginBottom: 16, textAlign: "center", letterSpacing: "0.5px" }}>

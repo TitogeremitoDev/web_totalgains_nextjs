@@ -154,6 +154,24 @@
 }
 .apg-panel-img img { display: block; width: 100%; height: auto; }
 
+/* Precio: resumen en una franja (el detalle vive en /para-gimnasios/#precios) */
+.apg-precio { max-width: 900px; margin: 0 auto; text-align: center; }
+.apg-planes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 30px 0 18px; }
+.apg-plan {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.apg-plan-tramo { font-size: 0.88rem; color: var(--text-secondary); }
+.apg-plan-precio { font-family: var(--font-display); font-size: 1.9rem; font-weight: 800; line-height: 1.15; }
+.apg-plan-nota { font-size: 0.78rem; color: var(--text-muted); }
+.apg-precio .apg-precio-pie { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+.apg-precio-pie a { color: var(--primary-light); text-decoration: underline; text-underline-offset: 3px; }
+
 @media (max-width: 900px) {
   .apg-hero-grid { grid-template-columns: minmax(0, 1fr); gap: 36px; }
   .apg-panel { grid-template-columns: minmax(0, 1fr); gap: 28px; }
@@ -168,6 +186,7 @@
   .apg-moviles.apg-dupla .apg-phone + .apg-phone { margin-top: 28px; }
   .apg-dos { grid-template-columns: minmax(0, 1fr); }
   .apg-pasos { grid-template-columns: minmax(0, 1fr); }
+  .apg-planes { grid-template-columns: minmax(0, 1fr); }
 }
 @media (max-width: 480px) {
   .apg-phone { padding: 5px; border-radius: 24px; }

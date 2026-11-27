@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Users, Calendar, Lock, Palette, CreditCard, Layers } from "lucide-react";
+import { ArrowRight, Users, Calendar, Lock, Palette, CreditCard, Layers } from "lucide-react";
 
 /* ───────────────────────────────────────────────────────────
    3. SOLUCIÓN — 6 features con iconos
@@ -25,6 +25,8 @@ export default function SolutionSection() {
       icon: <Palette size={22} />,
       title: "App marca blanca del gimnasio",
       desc: "Tus socios descargan la app de TotalGains y, al entrar, la ven con el nombre, el logo y los colores de tu centro. Reservas, rutinas, dietas y mensajes en un solo entorno.",
+      /* La app del socio tiene su página propia (27-nov-2026): aquí va el resumen y el enlace. */
+      enlace: { href: "/app-para-gimnasios/", texto: "Ver la app de tus socios" },
     },
     {
       icon: <CreditCard size={22} />,
@@ -128,6 +130,15 @@ export default function SolutionSection() {
               <p style={{ margin: 0, color: "var(--text-secondary)", lineHeight: 1.6, fontSize: "0.93rem" }}>
                 {f.desc}
               </p>
+              {f.enlace && (
+                <Link
+                  href={f.enlace.href}
+                  prefetch={false}
+                  style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 14, fontSize: "0.92rem", fontWeight: 700, color: "var(--primary-light)", textDecoration: "underline", textUnderlineOffset: 3 }}
+                >
+                  {f.enlace.texto} <ArrowRight size={15} aria-hidden="true" />
+                </Link>
+              )}
             </div>
           ))}
         </div>

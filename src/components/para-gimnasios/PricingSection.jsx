@@ -58,7 +58,7 @@ export default function PricingSection() {
   ];
 
   return (
-    <section style={{ padding: "100px 24px" }}>
+    <section id="precios" style={{ padding: "100px 24px" }}>
       <div style={{ maxWidth: 980, margin: "0 auto" }}>
         <div className="aparece" style={{ textAlign: "center", marginBottom: 56 }}>
           <p
