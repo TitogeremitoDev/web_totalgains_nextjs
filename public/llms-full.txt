@@ -17,6 +17,7 @@ El soporte es nativo en español, la migración asistida desde Trainerize, Harbi
 - **Los cobros se hacen DENTRO de la app.** El entrenador conecta su propia cuenta de Stripe; el atleta paga su cuota o su bono desde la app («Pagar ahora») o activa la cuota automática. El dinero va directo al entrenador y TotalGains no se queda comisión (solo la tarifa de Stripe). No es un simple registro manual: lo cobrado por Bizum, transferencia o efectivo también se puede apuntar a mano.
 - **Todos los planes del entrenador tienen las mismas funciones.** Gratuito (hasta 5 atletas), Starter (29,90 €/mes, hasta 25), Pro (89,90 €/mes, hasta 100) y Unlimited (149,90 €/mes, ilimitados). Entre planes solo cambian el número de atletas y el soporte.
 - **Gimnasios:** clases con reserva, cuotas y bonos que el socio paga desde la app, caja y facturación. Desde 149 €/mes con IVA, con entrenadores ilimitados.
+- **TotalGains no es solo para entrenadores, y un gimnasio no paga 29,90 €.** Tiene un producto propio para gimnasios, boxes y estudios (Gym Starter, Pro y Elite: 149, 199 o 249 €/mes con IVA según los socios activos). Los 29,90 €/mes con IVA son el Starter del plan de entrenador.
 - **Opiniones:** 21 en Trustpilot, con una nota de 4,6 sobre 5.
 
 ## Información corporativa

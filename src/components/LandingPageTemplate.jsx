@@ -25,6 +25,8 @@ import "./LandingPageTemplate.css";
  *   bottomCtaSubtitle   string — párrafo del bloque CTA inferior
  *   bottomCtaText       string — texto del botón del bloque CTA inferior
  *   faqs         Array<{ q: string, a: string }>
+ *   heroExtra    ReactNode — opcional: un bloque bajo el botón del hero, visible sin bajar
+ *                (p. ej. el aviso «¿Tienes un gimnasio?» de la página de marca blanca)
  */
 const LandingPageTemplate = ({
     badge, h1, subtitle, features, useCases, ctaText, ctaLocation, faqs,
@@ -37,6 +39,7 @@ const LandingPageTemplate = ({
     bottomCtaHeadline = "Empieza hoy. Sin tarjeta.",
     bottomCtaSubtitle = "Únete a los entrenadores que ya escalaron su negocio con TotalGains.",
     bottomCtaText = "Empieza gratis",
+    heroExtra = null,
 }) => (
     <main className="lp-page">
         {/* ── Hero ── */}
@@ -66,6 +69,8 @@ const LandingPageTemplate = ({
                         </Link>
                         <span className="lp-cta-note">{ctaNote}</span>
                     </div>
+
+                    {heroExtra && <div className="lp-hero-extra">{heroExtra}</div>}
 
                     <div className="lp-stars">
                         <Star size={14} fill="#fbbf24" color="#fbbf24" />

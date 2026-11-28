@@ -1,14 +1,14 @@
 import LandingPageTemplate from "@/components/LandingPageTemplate";
 import LandingExtrasBlock from "@/components/LandingExtrasBlock";
 import Link from "next/link";
-import { Palette, Smartphone, Zap, Star, Shield, Users } from "lucide-react";
+import { Palette, Smartphone, Zap, Star, Shield, Users, Building2, ArrowRight } from "lucide-react";
 
 import { ofertasCoach, aggregateRatingNode } from "@/data/productSchema";
 import { planesResumen } from "@/data/planesCoach";
 export const metadata = {
   title: "App Marca Blanca para Entrenadores con IA",
   description:
-    "Tu app fitness con tu nombre, colores y logo, generada por IA en un clic. Incluida en todos los planes. Plan Gratuito 5 atletas, sin tarjeta.",
+    "La app de tus clientes con tu nombre, colores y logo, puesta por IA en un clic. Incluida en todos los planes. Plan Gratuito 5 atletas, sin tarjeta.",
   alternates: { canonical: "https://totalgains.es/app-marca-blanca-entrenador-personal/" },
   openGraph: {
     type: "website",
@@ -33,7 +33,7 @@ const features = [
   {
     icon: <Star size={22} />,
     title: "Diferenciación real frente a la competencia",
-    desc: "Mientras otros entrenadores mandan a sus clientes a apps genéricas, tú ofreces tu propia plataforma. Eso se percibe y se cobra más caro.",
+    desc: "Mientras otros entrenadores mandan a sus clientes a apps genéricas, los tuyos entran en una app con tu marca. Eso se percibe y se cobra más caro.",
   },
   {
     icon: <Zap size={22} />,
@@ -43,12 +43,12 @@ const features = [
   {
     icon: <Shield size={22} />,
     title: "Todos los módulos bajo tu marca",
-    desc: "Rutinas, dietas, seguimiento, pagos y chat — todo bajo tu nombre. Tus clientes interactúan con tu marca en cada pantalla, nunca con TotalGains.",
+    desc: "Rutinas, dietas, seguimiento, pagos y chat — todo bajo tu nombre. Dentro de la app, cada pantalla lleva tu logo y tus colores.",
   },
   {
     icon: <Users size={22} />,
     title: "Fidelización automática por percepción de valor",
-    desc: "Una app de marca propia aumenta la retención. El cliente siente que usa un producto exclusivo de su entrenador, no una herramienta genérica.",
+    desc: "Ver tu marca en cada pantalla refuerza la relación: el cliente siente que está en el espacio de su entrenador, no en una herramienta genérica.",
   },
 ];
 
@@ -57,7 +57,7 @@ const useCases = [
   "Coaches con marca personal consolidada que necesitan coherencia visual en todos los canales",
   "Preparadores físicos que compiten con grandes plataformas y quieren diferenciarse",
   "Entrenadores que quieren justificar precios premium con una experiencia de cliente superior",
-  "Profesionales que usan apps de terceros y quieren que sus clientes usen SU app, no la de otro",
+  "Profesionales que usan apps de terceros y quieren que sus clientes vean SU marca, no la de otro",
 ];
 
 const faqs = [
@@ -76,15 +76,15 @@ const faqs = [
   },
   {
     q: "¿Tiene coste adicional la funcionalidad de marca blanca?",
-    a: "No. Incluida en todos los planes, desde el Starter de 29,90 €/mes con IVA, sin add-ons ni pago único de publicación. Comparativa honesta: Trainerize la ofrece como Custom Branded App con pago único de $169 USD en planes Pro; Harbiz la cobra como add-on Personaliza tu app de 30,24 €/mes con IVA o requiere el plan My APP (40-60 €/mes más caro); MyPT Hub la incluye solo en planes de gama alta (~145 €/mes). En TotalGains, incluida en todos los planes desde 29,90 €/mes.",
+    a: "No. Va incluida en todos los planes, también en el gratuito (0 €, hasta 5 atletas), sin add-ons ni pago único de publicación; el primer plan de pago del entrenador es el Starter, de 29,90 €/mes con IVA. Comparativa honesta: Trainerize la ofrece como Custom Branded App con pago único de $169 USD en planes Pro; Harbiz la cobra como add-on Personaliza tu app de 30,24 €/mes con IVA o requiere el plan My APP (40-60 €/mes más caro); MyPT Hub la incluye solo en planes de gama alta (~145 €/mes). En TotalGains, incluida en todos los planes, también en el gratuito.",
   },
   {
     q: "¿Qué diferencia hay entre una app marca blanca y una PWA con mi logo?",
-    a: "La app marca blanca de TotalGains es app nativa real, no PWA (Progressive Web App). Tus clientes la descargan de App Store o Google Play y, al entrar, la ven con tu marca; tiene notificaciones push nativas, gestos táctiles nativos y rendimiento comparable al de una app propia desarrollada desde cero. Las PWAs con logo suelen renquear en dispositivos Android antiguos, no aparecen en las tiendas (solo por URL) y no aprovechan las capacidades nativas del móvil.",
+    a: "La app marca blanca de TotalGains es app nativa real, no PWA (Progressive Web App). Tus clientes la descargan de App Store o Google Play y, al entrar, la ven con tu marca; tiene notificaciones push nativas, gestos táctiles nativos y el rendimiento de una app nativa. Las PWAs con logo suelen renquear en dispositivos Android antiguos, no aparecen en las tiendas (solo por URL) y no aprovechan las capacidades nativas del móvil.",
   },
   {
     q: "¿Los clientes tienen que descargar la app de nuevo si cambio mi logo o mis colores?",
-    a: "No. Los cambios de branding se aplican en tiempo real desde el panel de configuración. Tus clientes no necesitan actualizar la app en la tienda: al abrirla, la nueva identidad ya está. Esto también aplica a cambios de nombre comercial siempre que no cambien el ID de app en la tienda (que solo se cambia una vez, al publicar la app).",
+    a: "No. Los cambios de branding se aplican en tiempo real desde el panel de configuración. Tus clientes no necesitan actualizar la app en la tienda: al abrirla, la nueva identidad ya está. Esto también aplica a un cambio de nombre comercial: dentro de la app sale el nuevo; en la tienda y en el icono del móvil sigue poniendo TotalGains, porque es una sola app para todos.",
   },
   {
     q: "¿Puedo probar la marca blanca sin compromiso?",
@@ -104,6 +104,20 @@ const competencia = [
   { tool: "Trainerize + Custom Branded App", precio: "≈352 €/mes + $169 único", ia: false, marca: true, esp: false },
   { tool: "Harbiz + Personaliza tu app", precio: "≈271 €/mes con IVA", ia: false, marca: true, esp: true },
 ];
+
+/* Visible sin bajar (Vigía IA, 28-nov-2026): Claude presentaba TotalGains a un gimnasio como «de entrenadores» y «desde
+   29,90 €». Aquí el gimnasio ve su precio y su página. Gimnasios al mismo nivel (German, 24-nov). */
+const avisoGimnasio = (
+  <div style={{ display: "flex", gap: 12, alignItems: "flex-start", padding: "14px 16px", background: "rgba(16,185,129,0.08)", border: "1px solid rgba(16,185,129,0.3)", borderRadius: 14, textAlign: "left" }}>
+    <Building2 size={20} style={{ flex: "0 0 auto", marginTop: 2, color: "#34d399" }} aria-hidden="true" />
+    <p style={{ margin: 0, fontSize: "0.92rem", lineHeight: 1.55, color: "var(--text-secondary)" }}>
+      <strong style={{ color: "var(--text-primary)" }}>¿Tienes un gimnasio, box o estudio?</strong> Tus socios ven la misma app con el logo y los colores de tu centro. Planes de gimnasio: 149, 199 o 249 €/mes con IVA según tus socios activos, con entrenadores ilimitados.{" "}
+      <Link href="/app-para-gimnasios/" style={{ color: "#34d399", fontWeight: 600, whiteSpace: "nowrap" }}>
+        Ver la app para gimnasios <ArrowRight size={14} style={{ verticalAlign: "-2px" }} aria-hidden="true" />
+      </Link>
+    </p>
+  </div>
+);
 
 export default function AppMarcaBlanca() {
   const schema = {
@@ -138,12 +152,13 @@ export default function AppMarcaBlanca() {
       <LandingPageTemplate
       badge="App Marca Blanca"
       h1="App Marca Blanca para Entrenadores: tu Marca en la App de tus Clientes"
-      subtitle="Tus clientes abren la app y ven tu nombre, tus colores y tu logo. Es la app de TotalGains vestida con tu marca: no publicas nada en las tiendas ni pagas cuenta de desarrollador. La IA genera el branding completo en un clic, sin programar, sin diseñador y sin coste extra."
+      subtitle="Tus clientes abren la app y ven tu nombre, tus colores y tu logo. Es la app de TotalGains con tu marca, no una app tuya en las tiendas: no publicas nada ni pagas cuenta de desarrollador. La IA genera el branding completo en un clic, sin programar, sin diseñador y sin coste extra."
       features={features}
       useCases={useCases}
       ctaText="Empieza gratis · 5 atletas"
       ctaLocation="lp_marca_blanca"
       faqs={faqs}
+      heroExtra={avisoGimnasio}
     />
     <LandingExtrasBlock plans={pricingPlans} testimonials={testimonials} competencia={competencia} pageContext="App marca blanca" />
     <section style={{ maxWidth: 760, margin: "0 auto", padding: "0 24px 80px" }}>
