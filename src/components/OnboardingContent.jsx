@@ -332,7 +332,7 @@ export default function OnboardingContent() {
             <Dispositivos
                 izq={vista.izq}
                 der={vista.der}
-                etiqueta={[vista.etqIzq, vista.etqDer].filter(Boolean).join(" · ") || "Elige y te enseñamos tu TotalGains"}
+                rasgos={vista.rasgos}
                 aviso={aviso}
                 avisoPc={avisoPc}
                 quieto={quieto}
@@ -433,8 +433,8 @@ function Cabecera({ titulo, sub, pantalla, aviso }) {
     );
 }
 
-// Ancho de la pantalla del móvil grande (210 px de marco menos 8 px de borde a cada lado): sirve para colocar el dedo.
-const TEL_PANTALLA = 194;
+// Ancho de la pantalla del móvil grande (200 px de marco menos 8 px de borde a cada lado): sirve para colocar el dedo.
+const TEL_PANTALLA = 184;
 
 /* Pantalla de marca (antes de elegir): el logo de TotalGains, sin gimnasio ni entrenador concreto. */
 function PantallaMarca({ tipo }) {
@@ -459,6 +459,7 @@ function Capa({ pantalla, quieto, sizes }) {
             <motion.div
                 key={pantalla.src}
                 className={`ob-pantalla-capa ${pantalla.entera ? "ob-pantalla-capa--entera" : ""}`}
+                style={pantalla.entera ? { background: pantalla.fondo } : undefined}
                 initial={quieto ? false : { opacity: 0, scale: 1.03 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -477,10 +478,11 @@ function Capa({ pantalla, quieto, sizes }) {
 /* Un solo grupo (German, 28-nov: «dos pantallas sueltas quedan cutres»): el portátil con el panel y, delante, el móvil
    con la app del socio o cliente. Alrededor, las etiquetas y la tarjeta del plan; dentro, el dedo y los avisos.
    Con el deportista, en vez del portátil va otro móvil detrás. */
-function Dispositivos({ izq, der, etiqueta, aviso, avisoPc, quieto, etiquetas, activa, toque, plan }) {
+function Dispositivos({ izq, der, rasgos, aviso, avisoPc, quieto, etiquetas, activa, toque, plan }) {
     const detrasMovil = der.tipo === "movil";
     return (
-        <aside className={`ob-grupo ${detrasMovil ? "ob-grupo--dos-tel" : ""} ${quieto ? "" : "ob-flota"}`} aria-hidden="true">
+        <aside className={`ob-grupo ${detrasMovil ? "ob-grupo--dos-tel" : ""}`}>
+            <div className={`ob-grupo-disp ${quieto ? "" : "ob-flota"}`} aria-hidden="true">
             {etiquetas && (
                 <div className="ob-etiquetas">
                     <AnimatePresence>
@@ -577,7 +579,30 @@ function Dispositivos({ izq, der, etiqueta, aviso, avisoPc, quieto, etiquetas, a
                     )}
                 </AnimatePresence>
             </div>
-            <p className="ob-grupo-etq">{etiqueta}</p>
+            </div>
+            {/* Las «features» de lo elegido (o de la etapa): título grande y tres puntos. */}
+            <AnimatePresence mode="wait" initial={false}>
+                <motion.div
+                    key={rasgos.titulo}
+                    className="ob-rasgos"
+                    initial={quieto ? false : { opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.22 }}
+                >
+                    <p className="ob-rasgos-tit">{rasgos.titulo}</p>
+                    <ul>
+                        {rasgos.items.map((t) => (
+                            <li key={t}>
+                                <span className="ob-rasgos-ico">
+                                    <Check size={13} />
+                                </span>
+                                {t}
+                            </li>
+                        ))}
+                    </ul>
+                </motion.div>
+            </AnimatePresence>
         </aside>
     );
 }

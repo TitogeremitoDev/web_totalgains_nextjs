@@ -515,7 +515,7 @@
 .ob-escena {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 600px) 580px;
+    grid-template-columns: minmax(0, 600px) 600px;
     align-items: center;
     justify-content: center;
     gap: 56px;
@@ -536,14 +536,21 @@
     max-width: none;
 }
 
-/* el grupo: caja fija para que todo encaje igual siempre */
+/* el grupo: los dispositivos en una caja fija (para que todo encaje igual siempre) y, debajo, las «features» */
 .ob-grupo {
-    position: relative;
-    width: 580px;
-    height: 480px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    width: 600px;
 }
 
-.ob-flota.ob-grupo {
+.ob-grupo-disp {
+    position: relative;
+    width: 600px;
+    height: 440px;
+}
+
+.ob-flota.ob-grupo-disp {
     animation: ob-flota 8s ease-in-out infinite;
 }
 
@@ -554,9 +561,9 @@
 
 .ob-pc {
     position: absolute;
-    top: 20px;
+    top: 10px;
     right: 0;
-    width: 470px;
+    width: 430px;
     overflow: hidden;
     background: #0b1020;
     border: 1px solid rgba(255, 255, 255, 0.12);
@@ -603,7 +610,7 @@
 
 .ob-tel {
     position: absolute;
-    width: 210px;
+    width: 200px;
     padding: 8px;
     background: #05070f;
     border: 1px solid rgba(255, 255, 255, 0.14);
@@ -620,7 +627,7 @@
 
 .ob-tel--detras {
     top: 0;
-    right: 50px;
+    right: 40px;
     transform: rotate(5deg);
 }
 
@@ -638,7 +645,7 @@
 
 .ob-tel .ob-pantalla {
     position: relative;
-    height: 420px;
+    height: 398px;
     overflow: hidden;
     background: #f8fafc;
     border-radius: 27px;
@@ -668,16 +675,47 @@
     object-fit: contain;
 }
 
-.ob-grupo-etq {
-    position: absolute;
-    right: 0;
-    bottom: -34px;
-    width: 470px;
+/* las «features» de lo elegido */
+.ob-rasgos {
+    padding: 16px 18px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(165, 180, 252, 0.22);
+    border-radius: 16px;
+}
+
+.ob-rasgos-tit {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--text-primary, #fff);
+}
+
+.ob-rasgos ul {
+    display: grid;
+    gap: 8px;
     margin: 0;
-    font-size: 0.82rem;
-    font-weight: 600;
-    text-align: center;
-    color: var(--text-secondary);
+    padding: 0;
+    list-style: none;
+}
+
+.ob-rasgos li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.92rem;
+    line-height: 1.4;
+    color: var(--text-secondary, #cbd5e1);
+}
+
+.ob-rasgos-ico {
+    display: grid;
+    flex: 0 0 auto;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    color: #052e16;
+    background: #4ade80;
+    border-radius: 50%;
 }
 
 /* pantalla de marca: antes de elegir */
@@ -856,13 +894,18 @@
 /* etiquetas alrededor del grupo */
 .ob-etiquetas {
     position: absolute;
-    inset: 0;
+    top: 300px;
+    left: 216px;
+    right: 0;
     z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
     pointer-events: none;
 }
 
 .ob-etq {
-    position: absolute;
+    position: relative;
     display: inline-flex;
     align-items: center;
     gap: 4px;
@@ -883,16 +926,12 @@
     border-color: #4ade80;
 }
 
-.ob-etq--0 { top: 34px; left: 0; }
-.ob-etq--1 { top: -6px; left: 250px; }
-.ob-etq--2 { top: 340px; right: 150px; }
-.ob-etq--3 { top: 340px; right: 10px; }
 
 /* tarjeta del plan, encima del portátil */
 .ob-plan-flota {
     position: absolute;
-    top: -14px;
-    right: -14px;
+    top: -18px;
+    right: -12px;
     z-index: 6;
     display: flex;
     flex-direction: column;
@@ -1040,13 +1079,13 @@
 
 @media (max-width: 1239px) {
     .ob-escena {
-        grid-template-columns: minmax(0, 1fr) 470px;
+        grid-template-columns: minmax(0, 1fr) 480px;
         gap: 32px;
     }
 
     .ob-grupo {
         transform-origin: top left;
-        scale: 0.81;
+        scale: 0.8;
     }
 }
 
@@ -1074,7 +1113,7 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .ob-flota.ob-grupo,
+    .ob-flota.ob-grupo-disp,
     .ob-mini-aviso,
     .ob-toque-dedo,
     .ob-toque-onda,
