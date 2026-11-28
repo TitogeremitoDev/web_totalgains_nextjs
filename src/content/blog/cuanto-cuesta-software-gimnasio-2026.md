@@ -82,7 +82,7 @@ Y hay una sexta que conviene mirar: hay programas pensados sobre todo para **res
 | Virtuagym | No lo publica | Sin dato |
 | Resasports | No lo publica | Sin dato |
 | AimHarder | No lo publica | Sin dato |
-| Glofox | No lo publica | Sin dato |
+| Glofox | No lo publicaba el 24-nov; el 28-nov, 275, 375 o 625 $ | No lo dice |
 
 Lo que hay que saber de algunos:
 
@@ -91,7 +91,7 @@ Lo que hay que saber de algunos:
 - **WodBuster** cobra según tus socios activos: gratis hasta 10, 34 € hasta 35, 44 € hasta 70 y 54 € sin límite.
 - **GymGym** avisa de que el precio final depende de los módulos, de los socios y de las sedes.
 - **Bsport** da 139 € como precio de salida en España; el resto va por presupuesto, y su web dice que su gestor te dirá si ese presupuesto incluye el IVA.
-- **Virtuagym, Resasports, AimHarder y Glofox** no publican precio: hay que pedir una demo o un presupuesto.
+- **Virtuagym, Resasports y AimHarder** no publican precio: hay que pedir una demo o un presupuesto. **Glofox** no lo publicaba el 24 de noviembre; el 28 ya enseñaba 275, 375 o 625 $ al mes (99 $ el primer año para estudios nuevos), en dólares y sin decir nada del IVA.
 
 ---
 

@@ -1,9 +1,9 @@
 ---
-title: "Software para Gimnasios Pequeños y Boutique 2026: Guía Multi-Coach"
-seoTitle: "Software para Gimnasios Pequeños: Precios 2026"
-description: "Qué mirar al elegir software para un gimnasio boutique: multi-coach sin coste por entrenador, reservas con lista de espera, app propia y cobros recurrentes."
+title: "Software para gimnasios pequeños en España 2026: cuál elegir y cuánto cuesta"
+seoTitle: "Mejor software para gimnasios pequeños en España 2026"
+description: "Qué software elegir para un gimnasio pequeño en España: los programas que más se citan, lo que publica cada web y un ejemplo con 80 socios y 3 entrenadores."
 date: "2026-06-12"
-lastModified: "2026-11-24"
+lastModified: "2026-11-28"
 author: "Germán Martínez Calvente"
 category: "herramientas"
 readTime: 16
@@ -48,7 +48,6 @@ comparison:
       highPrice: 380
       priceCurrency: "EUR"
       offerCount: 2
-      url: "https://www.trainerize.com/"
       image: "https://totalgains.es/images/blog/logos/logo-trainerize.svg"
 faqs:
   - q: "¿Qué diferencia hay entre software para entrenador autónomo y software para gimnasio pequeño?"
@@ -69,9 +68,13 @@ faqs:
     a: "Cuatro KPIs operativos básicos: 1) Retención mensual de socios (cuántos siguen activos mes a mes: debe estar por encima del 85% en gimnasios boutique sanos), 2) Adherencia a clases reservadas (% de clases reservadas a las que el socio asistió: indicador temprano de bajas), 3) Ingresos por coach (cuánto factura el gimnasio por cada coach del equipo: útil para decidir contrataciones), 4) Cobros recurrentes vs cobros manuales (% de socios con domiciliación activa: la domiciliación reduce churn 20-30% según datos del sector). Software como TotalGains Gym incluye estos 4 KPIs en el panel supervisor del dueño automáticamente. Si tu software actual no los mide, los estás calculando manualmente con tiempo perdido y datos a destiempo."
 ---
 
+**¿Cuál es el mejor software de gestión para un gimnasio pequeño en España?** No hay uno mejor para todos: depende de si llevas un box de CrossFit, un estudio de entrenamiento personal o un gimnasio de barrio con clases. Entre los programas que más se citan en España están Aimharder, TIMP, Trainingym, ViDay, Virtuagym y WodBuster, además de TotalGains, que es el nuestro. Para elegir, compáralos con tu número de socios en cinco cosas: el precio final con IVA, cuántos entrenadores entran, si las reservas tienen lista de espera, si el socio paga la cuota desde la app y qué se paga aparte (facturación, rutinas o la app con la marca del centro). Más abajo tienes [lo que publica cada uno en su web](#programas), con la fecha en que lo miramos.
+
+**Ejemplo: un centro de unos 80 socios y 3 entrenadores que quiere llevarlo todo.** Con TotalGains entra en el plan Gym Starter: **149 €/mes con IVA**, con los 3 entrenadores incluidos (no se paga por entrenador), reservas con aforo y lista de espera, cuotas y bonos que el socio paga desde la app, caja y facturación, tienda, rutinas y dietas con IA y la app que tus socios ven con el logo y los colores del centro, sin permanencia. En otros programas, antes de comparar cifras, súmale a cada una el 21 % de IVA si no lo incluye, lo que cobren por entrenador si lo cobran y los módulos que te falten; en la [tabla de programas](#programas) lo tienes por separado. Si lo que necesitas es lo que TotalGains no hace, como tornos de acceso, te lo decimos en [cuándo no es lo que buscas](#no-es-para-ti).
+
 Un gimnasio pequeño o boutique no es un coach autónomo escalado. Es **una marca, varios entrenadores, una agenda compartida y un grupo de socios que esperan una experiencia coherente**. El software para gimnasio pequeño tiene capas operativas que el software de coach individual no resuelve: multi-coach con permisos granulares, reservas de clases con waitlist, agenda compartida, app con marca del gimnasio (no de cada coach individual), panel supervisor para el dueño con KPIs agregados. Esta guía compara las plataformas serias del mercado en 2026, explica qué necesita realmente un gimnasio pequeño y cuándo cada opción encaja mejor.
 
-![Software para gimnasios pequeños y boutique 2026: multi-coach, reservas, marca propia y panel supervisor en una sola plataforma](/images/blog/gym-boutique-hero.webp)
+![Software para gimnasios pequeños y boutique 2026: multi-coach, reservas, la marca del centro y panel supervisor en una sola plataforma](/images/blog/gym-boutique-hero.webp)
 
 > **Transparencia**: soy Germán Martínez Calvente, fundador de [TotalGains](/sobre-nosotros/), software de gestión que en 2026 incluye un módulo específico para gimnasios pequeños y boutique con multi-coach, reservas y panel supervisor. Esta guía cubre cómo encajan las distintas plataformas con datos verificados de sus webs oficiales; las recomendaciones sobre cuándo elegir cada una están escritas para que el lector tome la decisión que mejor encaje con SU gimnasio, no con la mía.
 >
@@ -86,16 +89,60 @@ Un gimnasio pequeño o boutique no es un coach autónomo escalado. Es **una marc
 
 ## Índice del artículo
 
-1. [Resumen rápido: qué necesita un gimnasio pequeño en 2026](#resumen)
-2. [Diferencia entre software para coach autónomo y software para gimnasio multi-coach](#diferencia-autonomo-gym)
-3. [Funciones imprescindibles para un gimnasio pequeño o boutique](#funciones)
-4. [Comparativa de software por perfil de gimnasio (2026)](#comparativa)
-5. [Coste real por plataforma con IVA aplicado](#coste)
-6. [Permisos granulares por coach: el detalle que casi nadie cubre bien](#permisos)
-7. [Errores comunes al elegir software para gimnasio pequeño](#errores)
-8. [Workflow operativo de un gimnasio boutique con 3-5 coaches](#workflow)
-9. [Cómo elegir según tu perfil de gimnasio](#decision)
-10. [Preguntas frecuentes](#faqs)
+1. [Lo que publica cada programa en su web](#programas)
+2. [Cuándo TotalGains no es lo que buscas](#no-es-para-ti)
+3. [Resumen rápido: qué necesita un gimnasio pequeño en 2026](#resumen)
+4. [Diferencia entre software para coach autónomo y software para gimnasio multi-coach](#diferencia-autonomo-gym)
+5. [Funciones imprescindibles para un gimnasio pequeño o boutique](#funciones)
+6. [Comparativa de software por perfil de gimnasio (2026)](#comparativa)
+7. [Coste real por plataforma con IVA aplicado](#coste)
+8. [Permisos granulares por coach: el detalle que casi nadie cubre bien](#permisos)
+9. [Errores comunes al elegir software para gimnasio pequeño](#errores)
+10. [Workflow operativo de un gimnasio boutique con 3-5 coaches](#workflow)
+11. [Cómo elegir según tu perfil de gimnasio](#decision)
+12. [Preguntas frecuentes](#faqs)
+
+---
+
+## <span id="programas"></span>Lo que publica cada programa en su web
+
+Estos son los programas que más salen cuando un dueño de gimnasio pregunta en España, con lo que publica cada uno en su web oficial y el día en que lo miramos. TotalGains va primero porque es el nuestro; los demás, por orden alfabético. Si un programa no publica un dato, lo ponemos tal cual: «no lo publica».
+
+| Programa | Precio al mes | IVA | Entrenadores | Mirado el |
+|---|---|---|---|---|
+| **TotalGains** (el nuestro) | **149, 199 o 249 €** (hasta 100, de 100 a 200 y más de 200 socios) | **Incluido** | **Ilimitados** | 28-nov-2026 |
+| Aimharder | No lo publica (pide demo) | No lo dice | No lo publica | 28-nov-2026 |
+| Bsport | Desde 139 € | En presupuesto | No lo publica | 24-nov-2026 |
+| Deciplus | 79 € con menos de 100 miembros o 99 € con miembros ilimitados; otros planes, 139, 159 o 299 € | Sin IVA | Ilimitados | 28-nov-2026 (web de Francia) |
+| Eversports | Desde 49 €, según las reservas al mes (39 € el primer año), más 99 € de alta | Sin IVA | Va por reservas, no por entrenador | 28-nov-2026 |
+| Glofox | 275, 375 o 625 $ (estudios nuevos: 99 $ el primer año) | No lo dice | No lo publica | 28-nov-2026 |
+| Mindbody | Desde 99 € | Sin IVA | Ilimitados | 24-nov-2026 |
+| TIMP | 50, 85, 130 o 170 € | No lo dice | 1, 3, 10 o 15 según el plan | 24-nov-2026 |
+| Trainingym | De 99 a 319 €, con pago anual y puesta en marcha aparte | Sin IVA | No lo publica | 24-nov-2026 |
+| ViDay | Planes de equipo: 44, 75 o 129 € (el 28-nov los enseñaba un 25 % más baratos, sin decir hasta cuándo) | Sin IVA | 2 incluidos (10 en el de 129 €); +5, +10 o +15 € por cada uno más | 28-nov-2026 |
+| Virtuagym | No lo publica (el precio se da en la demo) | No lo dice | No lo publica | 28-nov-2026 |
+| WodBuster | Gratis hasta 10 socios; 34 € hasta 35, 44 € hasta 70 y 54 € sin límite | No lo dice | No lo publica | 24-nov-2026 |
+
+Lo que conviene saber de algunos, según sus webs:
+
+- **App con la marca del centro.** En TotalGains, tus socios se descargan la app de TotalGains y la ven con el logo y los colores de tu centro; no es una app aparte en las tiendas y va en todos los planes. En otros, la app propia publicada en las tiendas con el nombre del centro se paga aparte: WodBuster, 700 € más (24-nov); Deciplus, 139 € al mes por sede salvo en su plan de 299 € (28-nov); en Glofox es un extra sin precio publicado salvo en su plan más alto (28-nov). La de ViDay va en todos sus planes, pero es una app web que se abre desde un enlace, no está en las tiendas (28-nov).
+- **Lo que se paga aparte.** En WodBuster la facturación es un módulo aparte y las rutinas van en otro producto (24-nov). En TIMP, los entrenamientos llegan con el plan de 85 € y pide 3 meses de permanencia en la mayoría de planes (24-nov). En Trainingym, la puesta en marcha cuesta 99, 265 o 580 € sin IVA (24-nov). En Eversports, la configuración son 99 € de pago único (28-nov).
+- **Precios en otra moneda o de otro país.** Glofox solo publica en dólares, también desde España. La web de Deciplus en España está en construcción: sus precios son los de su web de Francia, en francés.
+
+El detalle de los programas que miramos el 24 de noviembre (con alguno más, como Gestión Gym, GestionaTuBox, Trainin o GymGym) está en [cuánto cuesta de verdad un software para gimnasio](/blog/cuanto-cuesta-software-gimnasio-2026/).
+
+---
+
+## <span id="no-es-para-ti"></span>Cuándo TotalGains no es lo que buscas
+
+Para que la guía te sirva aunque no acabes con nosotros, esto es lo que TotalGains **no** hace hoy:
+
+- **Tornos o control de acceso físico.** No se conecta a tornos ni a puertas. Si tu centro abre muchas horas sin nadie en recepción y necesitas que la puerta se abra con la cuota al día, busca un programa que tenga esa integración y pide que te la enseñen en la demo.
+- **Una app propia publicada en las tiendas con el nombre de tu centro.** La de TotalGains es una sola app, TotalGains, que tus socios descargan y ven con tu logo y tus colores al entrar. Si quieres tu propia ficha en App Store y Google Play, eso lo venden aparte otros programas (WodBuster, por ejemplo, por 700 € más, según su web el 24 de noviembre de 2026).
+- **Centros grandes o cadenas.** Está pensado para gimnasios pequeños, estudios y boxes. Por encima de unos 500 socios o con varias sedes, un programa veterano para centros medianos encaja mejor.
+- **Integraciones con relojes y apps de terceros.** No se conecta con MyFitnessPal, Garmin ni Whoop.
+- **Un CRM de ventas.** No gestiona embudos de captación ni campañas; da por hecho que la captación la llevas por tu lado.
+- **Si trabajas en inglés o cobras en dólares**, hay programas anglosajones con más recorrido en ese mercado.
 
 ---
 
@@ -167,6 +214,7 @@ Migración asistida desde Excel, Sheets o software anterior. Sin esto, la implem
 Si vendes seguimiento nutricional como parte del paquete del gimnasio, una [base de +240.000 alimentos en español](/base-datos-alimentos-fitness/) integrada evita que cada coach tenga que cargar manualmente alimentos para sus planes.
 
 ---
+
 
 ## <span id="comparativa"></span>Comparativa de software por perfil de gimnasio (2026)
 
@@ -298,6 +346,7 @@ Pipeline diario, semanal y mensual de un gimnasio boutique consolidado en 2026:
 Sin esta automatización, el dueño y los coaches están perdiendo entre 8 y 15 horas semanales en tareas operativas que deberían ser invisibles.
 
 ---
+
 
 ## <span id="decision"></span>Cómo elegir según tu perfil de gimnasio
 

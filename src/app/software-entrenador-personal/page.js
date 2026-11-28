@@ -201,6 +201,8 @@ export default function SoftwareEntrenadorPersonal() {
         <p style={{ textAlign: "center", marginTop: 20, fontSize: "0.86rem", color: "var(--text-secondary,#aaa)" }}>
           Ver comparativa completa:{" "}
           <Link href="/blog/mejores-software-entrenadores-personales-2026/" style={{ color: "var(--primary-light,#8fa4f5)" }}>Los 5 mejores software para coaches en España 2026</Link>
+          {" · "}
+          <Link href="/blog/cuanto-cuesta-software-entrenador-personal-2026/" style={{ color: "var(--primary-light,#8fa4f5)" }}>Cuánto cuesta cada uno en euros y con IVA</Link>
         </p>
       </section>
 
@@ -208,6 +210,7 @@ export default function SoftwareEntrenadorPersonal() {
         <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
           {[
+            { href: "/blog/cuanto-cuesta-software-entrenador-personal-2026/", label: "Cuánto cuesta un software de entrenador" },
             { href: "/ia-entrenador-personal/", label: "IA para entrenadores" },
             { href: "/app-marca-blanca-entrenador-personal/", label: "App marca blanca" },
             { href: "/gestion-clientes-fitness/", label: "Gestión de clientes" },

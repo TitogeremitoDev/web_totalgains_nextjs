@@ -105,6 +105,8 @@ Mientras lleves 5 clientes o menos, no pagas nada. Al llegar al sexto, eliges pl
 | Pro | 89,90 | 100 |
 | Unlimited | 149,90 | Sin límite |
 
+¿Y cuando pases de 5 clientes? En [cuánto cuesta un software para entrenadores personales](/blog/cuanto-cuesta-software-entrenador-personal-2026/) comparamos lo que pagas con 25, 50 y 100 clientes en seis programas, en euros y con IVA.
+
 Todos traen las mismas funciones y ninguno tiene permanencia. Con pago anual pagas 10 mensualidades.
 
 Para hacerte una idea: un entrenador online cobra entre 50 y 300 € al mes por cliente, según [nuestra guía de tarifas](/blog/cuanto-cobra-entrenador-personal-online/). Con el sexto cliente, el plan Starter suele pagarse solo.
@@ -139,6 +141,7 @@ El plan Starter cuesta 29,90 € al mes con IVA y llega a 25 atletas activos; el
 
 ## Artículos relacionados que te pueden interesar
 
+- 💶 **[Cuánto cuesta un software para entrenadores personales en 2026](/blog/cuanto-cuesta-software-entrenador-personal-2026/)**: Lo que pagas con 5, 25, 50 y 100 clientes, en euros y con IVA
 - 🛠️ **[Los 5 mejores software para entrenadores personales en España 2026](/blog/mejores-software-entrenadores-personales-2026/)**: Comparativa completa con precios comprobados
 - 💰 **[¿Cuánto cobra un entrenador personal online?](/blog/cuanto-cobra-entrenador-personal-online/)**: Tarifas reales del mercado español
 - 🎯 **[Cómo conseguir clientes como entrenador personal online](/blog/como-conseguir-clientes-entrenador-personal-online/)**: Las 5 estrategias que funcionan sin pagar publicidad

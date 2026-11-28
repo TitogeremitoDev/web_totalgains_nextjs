@@ -88,6 +88,10 @@ La siguiente comparativa analiza los **5 software más utilizados por entrenador
 <strong>Respuesta rápida.</strong> Para un entrenador autónomo en España con 10 a 100 clientes, la opción con mejor relación entre precio y funciones es TotalGains Pro: 89,90 €/mes con IVA, hasta 100 clientes, IA de rutinas y dietas, app con tu marca, soporte en español y migración asistida, sin add-ons. Para empezar sin pagar, TotalGains Free da 5 atletas de por vida y sin tarjeta. Si tus clientes son anglosajones, Trainerize tiene integraciones más maduras con MyFitnessPal y wearables, y si llevas un gimnasio, TotalGains tiene un producto para centros desde 149 €/mes con IVA. Lo escribe el fundador de TotalGains, con los precios de cada plataforma comprobados en su web oficial el 12 de noviembre de 2026.
 </div>
 
+<div class="tg-callout" role="note">
+<strong>¿Tienes un gimnasio, box o estudio?</strong> Esta comparativa es para el entrenador que lleva su propia cartera de clientes. Si llevas un centro con socios, clases con reserva y varios entrenadores, lo que buscas es otra cosa: mira la <a href="/blog/software-gimnasios-pequenos-boutique-2026/">guía de software para gimnasios pequeños</a>. TotalGains para gimnasios cuesta 149, 199 o 249 €/mes con IVA según los socios activos, con entrenadores ilimitados.
+</div>
+
 ---
 
 ## Índice del artículo
