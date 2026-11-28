@@ -163,3 +163,77 @@ export function planDe(perfil, tamanoId) {
         ? { nombre: `Plan ${c.nombre}`, precio: `${euros(c.mes)}/mes`, nota: "con IVA", detalle: c.atletas ? `Hasta ${c.atletas} atletas.` : "Atletas ilimitados." }
         : null;
 }
+
+/* ── Lo que se ve a los lados mientras responde: el móvil (la app del socio, cliente o paciente) y el portátil
+   (el panel del centro o del entrenador). Cambian al pasar por una respuesta y al elegirla. Capturas reales. ── */
+const P = (src, ancho, alto, alt) => ({ src, ancho, alto, alt, tipo: alto > ancho ? "movil" : "pc" });
+
+export const PANTALLAS = {
+    socioPortadaAtlas: P("/images/gym/app-socio-portada-atlas.webp", 640, 1385, "App de un gimnasio con su marca"),
+    socioPortadaVital: P("/images/gym/app-socio-portada-vital.webp", 640, 1385, "App del socio con la marca del gimnasio"),
+    socioPortadaCumbre: P("/images/gym/app-socio-portada-cumbre.webp", 640, 1385, "App del socio con la marca del centro"),
+    socioReservas: P("/images/gym/app-socio-reservas.webp", 640, 1385, "Reservar clase desde la app del socio"),
+    socioPagos: P("/images/gym/app-socio-pagos.webp", 640, 1385, "Renovar la cuota desde la app"),
+    socioAvisos: P("/images/gym/app-socio-avisos.webp", 640, 1385, "Avisos del gimnasio en la app"),
+    socioDieta: P("/images/gym/app-socio-dieta.webp", 640, 1385, "La dieta en la app"),
+    clienteSeguimiento: P("/images/blog/checkin-app-movil-cliente.webp", 780, 1768, "Seguimiento diario en la app del cliente"),
+    clienteCuota: P("/images/blog/cuanto-cobra-app-cuota-automatica.webp", 780, 1768, "Cuota automática en la app del cliente"),
+    atletaEvolucion: P("/images/blog/calcular-1rm-app-records.webp", 780, 1768, "Evolución de los récords en la app"),
+    atletaCarga: P("/images/blog/calcular-1rm-app-carga-alta.webp", 780, 1768, "Evolución de la carga en la app"),
+    gymClases: P("/images/gym/clases-w1280.webp", 1280, 638, "Horario de clases del gimnasio"),
+    gymPanel: P("/images/gym/dashboard-w1280.webp", 1280, 638, "Panel del gimnasio"),
+    gymCobros: P("/images/gym/facturacion.webp", 1600, 798, "Cobros y facturación del gimnasio"),
+    coachRutina: P("/images/blog/calcular-1rm-app-editor.webp", 1440, 900, "Editor de rutinas del entrenador"),
+    coachDieta: P("/images/blog/dieta-adherencia-ia-revisar.webp", 1205, 1060, "Revisar la dieta que propone la IA"),
+    coachSeguimiento: P("/images/blog/checkin-app-por-revisar.webp", 1440, 1000, "Seguimiento de los clientes por revisar"),
+    coachCobros: P("/images/blog/cuanto-cobra-app-cobros.webp", 1440, 900, "Cobros por tarjeta y SEPA"),
+};
+
+const VISTA_PERFIL = {
+    inicio: { izq: "socioPortadaAtlas", der: "coachRutina", etqIzq: "La app de tus socios y clientes", etqDer: "Tu panel" },
+    gimnasio: { izq: "socioPortadaVital", der: "gymPanel", etqIzq: "La app de tu socio, con tu marca", etqDer: "El panel de tu centro" },
+    entrenador: { izq: "clienteSeguimiento", der: "coachRutina", etqIzq: "La app de tu cliente", etqDer: "Tu panel" },
+    nutricionista: { izq: "socioDieta", der: "coachDieta", etqIzq: "La app de tu paciente", etqDer: "Tu panel" },
+    atleta: { izq: "atletaEvolucion", der: "atletaCarga", etqIzq: "Tu progreso", etqDer: "Tu carga semana a semana" },
+};
+
+const VISTA_DOLOR = {
+    reservas: { izq: "socioReservas", der: "gymClases" },
+    cuotas: { izq: "socioPagos", der: "gymCobros" },
+    avisos: { izq: "socioAvisos", der: "gymPanel" },
+    marca: { izq: "socioPortadaCumbre", der: "gymPanel" },
+    rutinas: { izq: "atletaCarga", der: "coachRutina" },
+    dietas: { izq: "socioDieta", der: "coachDieta" },
+    seguimiento: { izq: "clienteSeguimiento", der: "coachSeguimiento" },
+    cobros: { izq: "clienteCuota", der: "coachCobros" },
+};
+
+/* Qué se ve a los lados: lo que se tiene el ratón encima manda; si no, lo ya elegido. */
+export function vistaDe(r, encima) {
+    const perfil = encima?.campo === "perfil" ? encima.valor : r.perfil;
+    const base = VISTA_PERFIL[perfil || "inicio"];
+    const dolorId = encima?.campo === "dolor" ? encima.valor : r.dolor;
+    const d = perfil && perfil !== "atleta" && VISTA_DOLOR[dolorId] ? VISTA_DOLOR[dolorId] : null;
+    return {
+        izq: PANTALLAS[d ? d.izq : base.izq],
+        der: PANTALLAS[d ? d.der : base.der],
+        etqIzq: base.etqIzq,
+        etqDer: base.etqDer,
+    };
+}
+
+/* La notificación que salta en el móvil al responder. */
+export function avisoDe(campo, valor, r) {
+    if (campo === "perfil") {
+        return { perfil: valor, texto: { gimnasio: "Tu centro, en el bolsillo de cada socio", entrenador: "Tus clientes, en una sola app", nutricionista: "Tus pacientes, en una sola app", atleta: "Tu entreno, apuntado y medido" }[valor] };
+    }
+    if (campo === "tamano") {
+        const plan = planDe(r.perfil, valor);
+        return plan ? { texto: `${plan.nombre} · ${plan.precio}` } : null;
+    }
+    if (campo === "dolor") {
+        const d = dolores(r.perfil).find((x) => x.id === valor);
+        return d ? { texto: `${d.titulo}: resuelto` } : null;
+    }
+    return { texto: "¡Listo! Ya está todo preparado" };
+}

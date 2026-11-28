@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
@@ -8,7 +8,7 @@ import { Activity, Apple, ArrowLeft, Building2, Check, Dumbbell } from "lucide-r
 import { trackEvent } from "@/components/Analytics";
 import DemoVideo from "@/components/DemoVideo";
 import { EN_TODOS_LOS_PLANES } from "@/data/planesCoach";
-import { ORIGENES, PERFILES, dolores, esProfesional, pasos, planDe, tamano } from "@/data/onboarding";
+import { ORIGENES, PERFILES, avisoDe, dolores, esProfesional, pasos, planDe, tamano, vistaDe } from "@/data/onboarding";
 import "@/app/onboarding/Onboarding.css";
 
 /* «Empieza gratis»: un recorrido que se adapta a quien entra (datos y textos en src/data/onboarding.js).
@@ -24,18 +24,35 @@ export default function OnboardingContent() {
     const [paso, setPaso] = useState(0);
     const [r, setR] = useState({ perfil: null, tamano: null, dolor: null, origen: null });
     const [elegido, setElegido] = useState(null);
+    const [encima, setEncima] = useState(null);
+    const [aviso, setAviso] = useState(null);
+    const temporizador = useRef(null);
+    const nAviso = useRef(0);
     const quieto = useReducedMotion();
+    useEffect(() => () => clearTimeout(temporizador.current), []);
 
     const lista = pasos(r.perfil);
     const actual = lista[paso];
     const plan = useMemo(() => planDe(r.perfil, r.tamano), [r.perfil, r.tamano]);
     const dolor = r.perfil && r.perfil !== "atleta" ? dolores(r.perfil).find((d) => d.id === r.dolor) : null;
+    const vista = vistaDe(r, encima);
+
+    // La notificación que salta en el móvil de la izquierda al responder.
+    const avisar = (a) => {
+        if (!a?.texto) return;
+        nAviso.current += 1;
+        setAviso({ ...a, n: nAviso.current });
+        clearTimeout(temporizador.current);
+        temporizador.current = setTimeout(() => setAviso(null), 2800);
+    };
 
     const responder = (campo, valor) => {
         setElegido(valor);
         const nuevo = { ...r, [campo]: valor };
         if (campo === "perfil") Object.assign(nuevo, { tamano: null, dolor: null });
         setR(nuevo);
+        setEncima(null);
+        avisar(avisoDe(campo, valor, nuevo));
         trackEvent("onboarding_respuesta", { paso: campo, valor, perfil: nuevo.perfil });
         const siguiente = paso + 1;
         const ruta = pasos(nuevo.perfil);
@@ -71,6 +88,10 @@ export default function OnboardingContent() {
             type="button"
             className={`ob-opcion ${className} ${elegido === valor || r[campo] === valor ? "is-on" : ""}`}
             onClick={() => responder(campo, valor)}
+            onMouseEnter={() => setEncima({ campo, valor })}
+            onMouseLeave={() => setEncima(null)}
+            onFocus={() => setEncima({ campo, valor })}
+            onBlur={() => setEncima(null)}
         >
             {contenido}
             <span className="ob-opcion-check" aria-hidden="true">
@@ -81,6 +102,8 @@ export default function OnboardingContent() {
 
     return (
         <main className="onboarding-page">
+            <div className="ob-escena">
+            <Marco lado="izq" pantalla={vista.izq} etiqueta={vista.etqIzq} aviso={aviso} quieto={quieto} />
             <div className={`glass onboarding-card ${actual === "final" ? "onboarding-card--final" : ""}`}>
                 <div className="onboarding-content">
                     <h1 className="sr-only">Empieza con TotalGains: gimnasios, entrenadores, nutricionistas y deportistas</h1>
@@ -102,8 +125,7 @@ export default function OnboardingContent() {
                         <motion.div key={`${actual}-${r.perfil}`} className="step-container" {...anim}>
                             {actual === "perfil" && (
                                 <>
-                                    <h2 className="step-title">¿Qué te trae a TotalGains?</h2>
-                                    <p className="step-subtitle">Elige lo que mejor te describe y te enseñamos lo que hay para ti.</p>
+                                    <Cabecera titulo="¿Qué te trae a TotalGains?" sub="Elige lo que mejor te describe y te enseñamos lo que hay para ti." pantalla={vista.izq} aviso={aviso} />
                                     <div className="ob-perfiles">
                                         {PERFILES.map((p) => {
                                             const Icono = ICONOS[p.icono];
@@ -128,8 +150,7 @@ export default function OnboardingContent() {
 
                             {actual === "tamano" && (
                                 <>
-                                    <h2 className="step-title">{tamano(r.perfil).pregunta}</h2>
-                                    <p className="step-subtitle">{tamano(r.perfil).ayuda}</p>
+                                    <Cabecera titulo={tamano(r.perfil).pregunta} sub={tamano(r.perfil).ayuda} pantalla={vista.izq} aviso={aviso} />
                                     <div className="options-grid">
                                         {tamano(r.perfil).opciones.map((o) => opcion("tamano", o.id, o.texto))}
                                     </div>
@@ -138,8 +159,7 @@ export default function OnboardingContent() {
 
                             {actual === "dolor" && (
                                 <>
-                                    <h2 className="step-title">¿Qué te quita más tiempo ahora?</h2>
-                                    <p className="step-subtitle">Te enseñamos cómo se resuelve con TotalGains.</p>
+                                    <Cabecera titulo="¿Qué te quita más tiempo ahora?" sub="Elige una y te enseñamos cómo se resuelve con TotalGains." pantalla={vista.izq} aviso={aviso} />
                                     <div className="options-grid">
                                         {dolores(r.perfil).map((d) => opcion("dolor", d.id, d.texto))}
                                     </div>
@@ -148,8 +168,7 @@ export default function OnboardingContent() {
 
                             {actual === "origen" && (
                                 <>
-                                    <h2 className="step-title">¿Cómo nos has conocido?</h2>
-                                    <p className="step-subtitle">Nos ayuda a saber dónde contar lo que hacemos. Es lo último.</p>
+                                    <Cabecera titulo="¿Cómo nos has conocido?" sub="Nos ayuda a saber dónde contar lo que hacemos. Es lo último." pantalla={vista.izq} aviso={aviso} />
                                     <div className="options-grid">
                                         {ORIGENES.map((o) => opcion("origen", o.id, o.texto))}
                                     </div>
@@ -250,6 +269,8 @@ export default function OnboardingContent() {
                     </AnimatePresence>
                 </div>
             </div>
+            <Marco lado="der" pantalla={vista.der} etiqueta={vista.etqDer} quieto={quieto} />
+            </div>
         </main>
     );
 }
@@ -318,5 +339,76 @@ function Final({ titulo, plan, dolor, incluido, nota, resumen, alCambiar, childr
 
             {children}
         </div>
+    );
+}
+
+/* Cabecera de cada pregunta. En el móvil lleva al lado un mini teléfono con la app (en el ordenador están los marcos). */
+function Cabecera({ titulo, sub, pantalla, aviso }) {
+    return (
+        <div className="ob-cab">
+            <div>
+                <h2 className="step-title">{titulo}</h2>
+                <p className="step-subtitle">{sub}</p>
+            </div>
+            <div className="ob-mini" aria-hidden="true">
+                <AnimatePresence mode="popLayout" initial={false}>
+                    <motion.div key={pantalla.src} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
+                        <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes="96px" />
+                    </motion.div>
+                </AnimatePresence>
+                {aviso && <span key={aviso.n} className="ob-mini-aviso" />}
+            </div>
+        </div>
+    );
+}
+
+/* Marco de un lado: un teléfono (captura vertical) o un portátil (horizontal), con su etiqueta debajo.
+   La captura cambia con un fundido; el de la izquierda enseña la notificación al responder. */
+function Marco({ lado, pantalla, etiqueta, aviso, quieto }) {
+    const movil = pantalla.tipo === "movil";
+    return (
+        <aside className={`ob-marco ob-marco--${lado} ${movil ? "ob-marco--tel" : "ob-marco--pc"} ${quieto ? "" : "ob-flota"}`} aria-hidden="true">
+            <div className={movil ? "ob-tel" : "ob-pc"}>
+                {movil ? <span className="ob-tel-isla" /> : (
+                    <div className="ob-pc-barra">
+                        <span /><span /><span />
+                        <em>totalgains.es/app</em>
+                    </div>
+                )}
+                <div className="ob-pantalla">
+                    <AnimatePresence initial={false}>
+                        <motion.div
+                            key={pantalla.src}
+                            className="ob-pantalla-capa"
+                            initial={quieto ? false : { opacity: 0, scale: 1.03 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.35 }}
+                        >
+                            <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes={movil ? "240px" : "440px"} />
+                        </motion.div>
+                    </AnimatePresence>
+                </div>
+                <AnimatePresence>
+                    {aviso && (
+                        <motion.div
+                            key={aviso.n}
+                            className="ob-aviso"
+                            initial={{ opacity: 0, y: -16, scale: 0.96 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: -10 }}
+                            transition={{ type: "spring", stiffness: 420, damping: 30 }}
+                        >
+                            <span className="ob-aviso-logo">TG</span>
+                            <span>
+                                <strong>TotalGains</strong>
+                                <span>{aviso.texto}</span>
+                            </span>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
+            </div>
+            <p className="ob-marco-etq">{etiqueta}</p>
+        </aside>
     );
 }
