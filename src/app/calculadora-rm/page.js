@@ -82,7 +82,7 @@ export default function PaginaCalculadoraRM() {
                 </p>
                 <ul>
                     <li><strong>Epley:</strong> 1RM = peso × (1 + repeticiones ÷ 30). Es la que usa la app de TotalGains.</li>
-                    <li><strong>Brzycki:</strong> 1RM = peso × 36 ÷ (37 − repeticiones). Da cifras algo más bajas con muchas repeticiones.</li>
+                    <li><strong>Brzycki:</strong> 1RM = peso × 36 ÷ (37 − repeticiones). Entre 2 y 9 repeticiones da algo menos que Epley; con 10, lo mismo; y con 11 o 12, algo más.</li>
                 </ul>
                 <p>
                     Las dos son más fiables con series cortas, de 3 a 8 repeticiones. Con más de 10, el error crece. La explicación

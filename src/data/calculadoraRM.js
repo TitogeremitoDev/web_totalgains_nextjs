@@ -8,7 +8,7 @@ export const FAQS_RM = [
     },
     {
         q: "¿Qué fórmula es más fiable, Epley o Brzycki?",
-        a: "Con pocas repeticiones dan casi lo mismo; con más de 6 u 8, la de Brzycki da cifras algo más bajas. Ninguna es exacta para todo el mundo: lo importante es usar siempre la misma para comparar tu progreso. La app de TotalGains usa la de Epley.",
+        a: "Dan cifras parecidas. Entre 2 y 9 repeticiones, la de Brzycki da algo menos que la de Epley (con 100 kg y 5 repeticiones, 112,5 kg frente a 116,7 kg); con 10 repeticiones coinciden, y con 11 o 12 la de Brzycki da algo más. Ninguna es exacta para todo el mundo: lo importante es usar siempre la misma para comparar tu progreso. La app de TotalGains usa la de Epley.",
     },
     {
         q: "¿Cuántas repeticiones hago para calcular mi 1RM?",
@@ -20,10 +20,10 @@ export const FAQS_RM = [
     },
     {
         q: "¿Sirve para cualquier ejercicio?",
-        a: "Funciona mejor en ejercicios con barra que mueven varias articulaciones, como la sentadilla, el press de banca, el peso muerto o el press militar. En máquinas o ejercicios aislados la estimación es menos fiable.",
+        a: "Funciona mejor en ejercicios con barra que mueven varias articulaciones, como la sentadilla, el press de banca o el press militar. En el peso muerto la estimación es menos precisa y suele quedarse corta: toma el resultado como un mínimo. En máquinas o ejercicios aislados la estimación es menos fiable.",
     },
     {
         q: "¿La calculadora guarda mis datos?",
-        a: "No. Todo se calcula en tu navegador y no se guarda ni se envía nada.",
+        a: "Tus pesos y repeticiones se calculan en tu navegador y no se guardan; tampoco hace falta registrarse. Si aceptas las cookies de analítica, contamos de forma anónima cómo se usa la página: qué ejercicio se elige y qué botones se pulsan. Y si compartes tu resultado con un enlace, los números van escritos en ese enlace.",
     },
 ];
