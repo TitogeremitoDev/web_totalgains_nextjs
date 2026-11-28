@@ -93,11 +93,11 @@ export function dolores(perfil) {
         {
             id: "rutinas",
             texto: "Hacer las rutinas",
-            titulo: "Rutinas en minutos",
-            detalle: "Series, descansos y RIR de cada ejercicio, con la biblioteca de ejercicios a mano.",
-            img: "/video/coach-primera-rutina.webp",
-            ancho: 1200,
-            alto: 676,
+            titulo: "Rutinas en un minuto",
+            detalle: "El asistente te la monta por días (Full Body, Torso/Pierna, Push-Pull-Legs…) y tú ajustas series, descansos y RIR. Tu cliente la sigue serie a serie en la app.",
+            img: "/images/onboarding/coach-rutina-asistente.webp",
+            ancho: 793,
+            alto: 546,
             movil: false,
         },
         {
@@ -113,11 +113,11 @@ export function dolores(perfil) {
         {
             id: "seguimiento",
             texto: "El seguimiento por WhatsApp",
-            titulo: "El seguimiento, ordenado",
-            detalle: "Check-in diario y semanal, sensaciones, medidas y fotos de progreso dentro de la app, no en mensajes sueltos.",
-            img: "/video/app-seguimiento.webp",
-            ancho: 720,
-            alto: 1280,
+            titulo: "Tu feedback, en menos de 10 minutos",
+            detalle: "Montas su informe con todo lo suyo al lado y le llega al chat con «Ver mi feedback»: su gráfica, su figura con los cm que ha cambiado y tu vídeo, en grande.",
+            img: "/images/onboarding/app-feedback-cliente.webp",
+            ancho: 234,
+            alto: 511,
             movil: true,
         },
         {
@@ -204,6 +204,10 @@ export const PANTALLAS = {
     coachMando: P("/images/onboarding/coach-centro-mando.webp", 804, 522, "Ficha del cliente con su centro de mando", "#0b1222"),
     appRecetas: P("/images/onboarding/app-recetas.webp", 720, 992, "Las recetas en la app del cliente", "#050710"),
     gymClientes: P("/images/gym/clientes-w1280.webp", 1280, 638, "Los clientes del gimnasio", "#f1f5f9"),
+    coachRutinaAsistente: P("/images/onboarding/coach-rutina-asistente.webp", 793, 546, "El asistente que monta la rutina en un minuto", "#7d8188"),
+    appEntreno: P("/images/onboarding/app-entreno-semaforo.webp", 565, 896, "La rutina en la app del cliente, serie a serie", "#09111f"),
+    coachFeedback: P("/images/onboarding/coach-feedback-figura.webp", 804, 509, "El informe de feedback con la figura y los cm que ha cambiado", "#0b1220"),
+    appFeedback: P("/images/onboarding/app-feedback-cliente.webp", 234, 511, "El feedback del entrenador en la app del cliente", "#edeef1"),
     gymRetencion: P("/images/gym/retencion.webp", 377, 825, "Socios en riesgo en la app del gestor"),
 };
 
@@ -214,6 +218,18 @@ const RASGOS_PERFIL = {
     entrenador: { titulo: "Tus clientes, en una sola app", items: ["Rutinas en minutos", "Dietas con IA que revisas tú", "Seguimiento y cobros dentro de la app"] },
     nutricionista: { titulo: "Tus pacientes, en una sola app", items: ["Dietas con IA que revisas tú", "Recetas con sus macros", "Seguimiento diario y semanal"] },
     atleta: { titulo: "Tu entreno, apuntado y medido", items: ["Tu RM estimado de cada ejercicio", "Tu evolución, semana a semana", "Si tienes entrenador o gimnasio, te vinculas con su código"] },
+};
+
+/* «Features» de cada respuesta de «qué te quita tiempo» (mandan sobre las de la etapa mientras están encima o elegidas). */
+const RASGOS_DOLOR = {
+    reservas: { titulo: "Reservas sin perseguir a nadie", items: ["Reservas con aforo y lista de espera", "Si se libera una plaza, entra el primero de la lista", "El horario de toda la semana en tu panel"] },
+    cuotas: { titulo: "Cuotas y bonos desde la app", items: ["El socio renueva con «Pagar ahora»", "Cada pago, una venta con su ticket", "Bonos y cuotas en un solo sitio"] },
+    avisos: { titulo: "Avisos en la app de tu centro", items: ["Horarios, cambios y clases nuevas en la app", "Sin depender del grupo de WhatsApp", "Cada socio lo ve en su móvil"] },
+    marca: { titulo: "La app con la marca de tu centro", items: ["Tu logo y tus colores en la app del socio", "Reservas, rutinas, nutrición y seguimiento", "Tus socios la ven como la app de tu centro"] },
+    rutinas: { titulo: "Tu sistema de rutinas", items: ["El asistente te la monta en un minuto por días", "Tú ajustas series, descansos y RIR", "Tu cliente la sigue serie a serie, con su semáforo"] },
+    dietas: { titulo: "Dietas con IA que revisas tú", items: ["La IA propone el plan con más de 240.000 alimentos", "Te avisa de lo que debes revisar antes de guardar", "Tu cliente cambia un plato por otro equivalente"] },
+    seguimiento: { titulo: "Feedback en menos de 10 minutos", items: ["Montas su informe con peso, medidas, entrenos y fotos al lado", "Su gráfica, su figura con los cm que ha cambiado y tu vídeo", "Le llega al chat con «Ver mi feedback» y lo ve en grande"] },
+    cobros: { titulo: "Cobros dentro de la app", items: ["Tu cliente paga su cuota con un toque", "Cuota automática, si la activas", "El dinero va directo a tu cuenta"] },
 };
 
 /* Lo que se ve según el tamaño (German, 28-nov: «con pocos, el de marketing; intermedio, recetas; muchos, la gestión»). */
@@ -249,9 +265,9 @@ const VISTA_DOLOR = {
     cuotas: { izq: "socioPagos", der: "gymCobros" },
     avisos: { izq: "socioAvisos", der: "gymPanel" },
     marca: { izq: "socioPortadaCumbre", der: "gymPanel" },
-    rutinas: { izq: "atletaCarga", der: "coachRutina" },
+    rutinas: { izq: "appEntreno", der: "coachRutinaAsistente" },
     dietas: { izq: "socioDieta", der: "coachDieta" },
-    seguimiento: { izq: "clienteSeguimiento", der: "coachSeguimiento" },
+    seguimiento: { izq: "appFeedback", der: "coachFeedback" },
     cobros: { izq: "clienteCuota", der: "coachCobros" },
 };
 
@@ -268,7 +284,7 @@ export function vistaDe(r, encima) {
     return {
         izq: PANTALLAS[d ? d.izq : e?.izq || base.izq],
         der: PANTALLAS[d ? d.der : e?.der || base.der],
-        rasgos: etapa?.rasgos || RASGOS_PERFIL[perfil || "inicio"],
+        rasgos: (d && RASGOS_DOLOR[dolorId]) || etapa?.rasgos || RASGOS_PERFIL[perfil || "inicio"],
     };
 }
 
@@ -347,8 +363,8 @@ export const ESCENAS = {
     },
     rutinas: {
         momentos: [
-            { en: "pc", texto: "Rutina «Fuerza 4 días · Fase 2» guardada" },
-            { en: "movil", texto: "Tienes una rutina nueva" },
+            { en: "pc", texto: "Rutina «Full Body 3 días» montada en un minuto" },
+            { en: "movil", texto: "Tienes una rutina nueva: Full Body 3 días" },
         ],
     },
     dietas: {
@@ -359,10 +375,9 @@ export const ESCENAS = {
         ],
     },
     seguimiento: {
-        toque: { x: 0.499, y: 0.718 },
         momentos: [
-            { en: "movil", texto: "Check-in enviado · 68,4 kg, 7 h de sueño" },
-            { en: "pc", texto: "Nuevo check-in por revisar" },
+            { en: "pc", texto: "Informe montado: su gráfica, su figura y tu vídeo" },
+            { en: "movil", texto: "Tu feedback · semana 9: «Ver mi feedback»" },
         ],
     },
     cobros: {

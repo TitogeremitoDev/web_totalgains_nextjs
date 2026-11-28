@@ -1066,14 +1066,61 @@
     to { transform: scale(1); }
 }
 
-/* en pantallas anchas, la captura del final ya está en el grupo */
-@media (min-width: 900px) {
-    .ob-escena .ob-dolor {
-        grid-template-columns: 1fr;
-    }
+/* el final va solo, centrado y más ancho; el plan y «lo que más tiempo te quita» lado a lado */
+.ob-escena--final {
+    grid-template-columns: minmax(0, 900px);
+}
 
-    .ob-escena .ob-dolor-img {
-        display: none;
+.ob-final-rejilla {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 16px;
+    align-items: start;
+    margin-bottom: var(--spacing-md);
+}
+
+.ob-final-rejilla--sola {
+    grid-template-columns: 1fr;
+}
+
+.ob-final-col .ob-plan {
+    margin-bottom: 4px;
+}
+
+.ob-final-rejilla .ob-dolor,
+.ob-final-rejilla .ob-dolor--movil {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin: 0;
+}
+
+.ob-final-rejilla .ob-dolor-img img {
+    max-height: 230px;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.ob-final-rejilla .ob-dolor--movil .ob-dolor-img img {
+    width: auto;
+    max-height: 260px;
+    margin: 0 auto;
+    border-radius: 16px;
+}
+
+.ob-escena--final .ob-video {
+    max-width: 640px;
+    margin: 18px auto;
+}
+
+.ob-escena--final .ob-final .btn-lg {
+    min-height: 56px;
+    font-size: 1.05rem;
+}
+
+@media (max-width: 760px) {
+    .ob-final-rejilla {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1120,4 +1167,41 @@
     .ob-cargando {
         animation: none;
     }
+}
+
+/* las «features» de la etapa, bajo el plan, en el final */
+.ob-final-rasgos {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(165, 180, 252, 0.2);
+    border-radius: 14px;
+}
+
+.ob-final-rasgos p {
+    margin: 0 0 8px;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text-primary, #fff);
+}
+
+.ob-final-rasgos ul {
+    display: grid;
+    gap: 7px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ob-final-rasgos li {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.88rem;
+    line-height: 1.4;
+    color: var(--text-secondary, #cbd5e1);
+}
+
+.ob-final-rejilla .ob-dolor--movil .ob-dolor-img img {
+    max-height: 300px;
 }

@@ -76,7 +76,7 @@ export default function OnboardingContent() {
         nAviso.current += 1;
         setAvisoPc({ ...a, n: nAviso.current });
         clearTimeout(temporizadorPc.current);
-        temporizadorPc.current = setTimeout(() => setAvisoPc(null), a.carga ? 1500 : 3000);
+        temporizadorPc.current = setTimeout(() => setAvisoPc(null), a.carga ? 1500 : 2400);
     };
 
     // La escena de cada respuesta: el dedo pulsa el botón de la captura y saltan los avisos, uno detrás de otro.
@@ -163,7 +163,7 @@ export default function OnboardingContent() {
 
     return (
         <main className="onboarding-page">
-            <div className="ob-escena">
+            <div className={`ob-escena ${actual === "final" ? "ob-escena--final" : ""}`}>
             <div className={`glass onboarding-card ${actual === "final" ? "onboarding-card--final" : ""}`}>
                 <div className="onboarding-content">
                     <h1 className="sr-only">Empieza con TotalGains: gimnasios, entrenadores, nutricionistas y deportistas</h1>
@@ -242,6 +242,7 @@ export default function OnboardingContent() {
                                 <Final
                                     titulo="Esto es TotalGains para tu centro"
                                     plan={plan}
+                                    rasgos={etapaDe(r.perfil, r.tamano)?.rasgos}
                                     dolor={dolor}
                                     incluido={["Coaches ilimitados", "App con la marca de tu centro", "Clases con reserva"]}
                                     resumen={resumenDe(r)}
@@ -268,6 +269,7 @@ export default function OnboardingContent() {
                                 <Final
                                     titulo="Tu TotalGains, listo para empezar"
                                     plan={plan}
+                                    rasgos={etapaDe(r.perfil, r.tamano)?.rasgos}
                                     dolor={dolor}
                                     incluido={EN_TODOS_LOS_PLANES}
                                     nota="Empiezas con 14 días para probarlo todo. Si al acabar llevas 5 atletas o menos, sigues gratis para siempre."
@@ -329,10 +331,12 @@ export default function OnboardingContent() {
                     </AnimatePresence>
                 </div>
             </div>
+            {/* En el final no van los dispositivos (German, 28-nov: «quita la parte derecha para que no desborde»). */}
+            {actual !== "final" && (
             <Dispositivos
                 izq={vista.izq}
                 der={vista.der}
-                rasgos={vista.rasgos}
+                rasgos={actual === "origen" ? resumenRasgos(r, plan, dolor) : vista.rasgos}
                 aviso={aviso}
                 avisoPc={avisoPc}
                 quieto={quieto}
@@ -341,9 +345,20 @@ export default function OnboardingContent() {
                 toque={toque}
                 plan={plan}
             />
+            )}
             </div>
         </main>
     );
+}
+
+/* En «¿Cómo nos has conocido?»: lo que llevas elegido, para que no se repita lo de antes. */
+function resumenRasgos(r, plan, dolor) {
+    const marca =
+        r.perfil === "gimnasio" ? "La app con la marca de tu centro" : r.perfil === "atleta" ? "Tu entreno, apuntado y medido" : "La app con tu marca, incluida en todos los planes";
+    return {
+        titulo: "Así queda tu TotalGains",
+        items: [plan ? `Tu plan: ${plan.nombre} · ${plan.precio}` : null, dolor ? dolor.titulo : null, marca].filter(Boolean),
+    };
 }
 
 function resumenDe(r) {
@@ -353,7 +368,7 @@ function resumenDe(r) {
     return [perfil, t, d].filter(Boolean);
 }
 
-function Final({ titulo, plan, dolor, incluido, nota, resumen, alCambiar, children }) {
+function Final({ titulo, plan, dolor, incluido, nota, rasgos, resumen, alCambiar, children }) {
     return (
         <div className="ob-final">
             <span className="ob-final-etiqueta">
@@ -371,6 +386,8 @@ function Final({ titulo, plan, dolor, incluido, nota, resumen, alCambiar, childr
                 </button>
             </div>
 
+            <div className={`ob-final-rejilla ${dolor ? "" : "ob-final-rejilla--sola"}`}>
+            <div className="ob-final-col">
             {plan && (
                 <div className="ob-plan">
                     <div>
@@ -394,7 +411,23 @@ function Final({ titulo, plan, dolor, incluido, nota, resumen, alCambiar, childr
                     ))}
                 </ul>
             )}
+            {rasgos && (
+                <div className="ob-final-rasgos">
+                    <p>{rasgos.titulo}</p>
+                    <ul>
+                        {rasgos.items.map((t) => (
+                            <li key={t}>
+                                <span className="ob-rasgos-ico">
+                                    <Check size={13} />
+                                </span>
+                                {t}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+            )}
 
+            </div>
             {dolor && (
                 <div className={`ob-dolor ${dolor.movil ? "ob-dolor--movil" : ""}`}>
                     <div className="ob-dolor-img">
@@ -407,6 +440,7 @@ function Final({ titulo, plan, dolor, incluido, nota, resumen, alCambiar, childr
                     </div>
                 </div>
             )}
+            </div>
 
             {children}
         </div>
