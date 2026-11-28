@@ -505,7 +505,7 @@ function Cabecera({ titulo, sub, pantalla, aviso, nodo }) {
                 ) : (
                     <AnimatePresence mode="popLayout" initial={false}>
                         <motion.div key={pantalla.src} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
-                            {pantalla.marca ? <PantallaMarca tipo="mini" /> : <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes="96px" />}
+                            {pantalla.marca ? <PantallaMarca tipo="mini" /> : <Captura pantalla={pantalla} />}
                         </motion.div>
                     </AnimatePresence>
                 )}
@@ -534,8 +534,14 @@ function PantallaMarca({ tipo }) {
     );
 }
 
+/* La captura, ya a su tamaño: 1x para pantallas normales y 2x para las de alta densidad (sin que el navegador la encoja). */
+function Captura({ pantalla }) {
+    // eslint-disable-next-line @next/next/no-img-element -- la web es estática (sin optimizador): el srcset va a mano
+    return <img src={pantalla.src} srcSet={`${pantalla.src} 1x, ${pantalla.src2} 2x`} alt="" width={pantalla.ancho} height={pantalla.alto} decoding="async" />;
+}
+
 /* Lo que se ve dentro de una pantalla, con fundido al cambiar. */
-function Capa({ pantalla, quieto, sizes }) {
+function Capa({ pantalla, quieto }) {
     return (
         <AnimatePresence initial={false}>
             <motion.div
@@ -550,7 +556,7 @@ function Capa({ pantalla, quieto, sizes }) {
                 {pantalla.marca ? (
                     <PantallaMarca tipo={pantalla.tipo === "pc" ? "pc" : "movil"} />
                 ) : (
-                    <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes={sizes} />
+                    <Captura pantalla={pantalla} />
                 )}
             </motion.div>
         </AnimatePresence>
@@ -652,7 +658,7 @@ function Dispositivos({ izq, der, rasgos, aviso, avisoPc, quieto, etiquetas, act
                     </div>
                 )}
                 <div className="ob-pantalla">
-                    <Capa pantalla={der} quieto={quieto} sizes={detrasMovil ? "210px" : "470px"} />
+                    <Capa pantalla={der} quieto={quieto} />
                 </div>
                 <AnimatePresence>
                     {avisoPc && (
@@ -674,7 +680,7 @@ function Dispositivos({ izq, der, rasgos, aviso, avisoPc, quieto, etiquetas, act
             <div className="ob-tel ob-tel--delante">
                 <span className="ob-tel-isla" />
                 <div className="ob-pantalla">
-                    <Capa pantalla={izq} quieto={quieto} sizes="210px" />
+                    <Capa pantalla={izq} quieto={quieto} />
                     {toque && !izq.marca && (
                         <span key={toque.n} className="ob-toque" style={{ left: `${toque.x * 100}%`, top: `${toque.y * izq.alto * (TEL_PANTALLA / izq.ancho)}px` }}>
                             <span className="ob-toque-onda" />

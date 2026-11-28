@@ -618,17 +618,16 @@
     box-shadow: 0 40px 70px -24px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(129, 140, 248, 0.18);
 }
 
+/* sin giro (German, 28-nov: «pixeladas»): una captura girada sale con la letra dentada */
 .ob-tel--delante {
     left: 0;
     bottom: 0;
     z-index: 3;
-    transform: rotate(-4deg);
 }
 
 .ob-tel--detras {
     top: 0;
     right: 40px;
-    transform: rotate(5deg);
 }
 
 .ob-tel-isla {
@@ -1025,7 +1024,6 @@
     background: #05070f;
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 18px;
-    transform: rotate(4deg);
 }
 
 .ob-mini > div {
@@ -1288,7 +1286,6 @@
 .ob-tel.ob-tel--origen {
     position: relative;
     width: 272px;
-    transform: rotate(-2deg);
 }
 
 .ob-tel--origen .ob-pantalla {

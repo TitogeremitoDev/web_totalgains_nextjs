@@ -279,10 +279,15 @@ export function planDe(perfil, tamanoId) {
 // Proporción de cada pantalla: móvil 184 × 398 y portátil 16:10. Si la captura no encaja (más de un 10 % de diferencia),
 // se ve ENTERA sobre su color de borde en vez de recortada (German, 28-nov: «hay imágenes que están cortadas»).
 const PROPORCION = { movil: 184 / 398, pc: 16 / 10 };
-const P = (src, ancho, alto, alt, fondo = "#f8fafc") => {
+/* Cada captura llega ya a su tamaño en pantalla, en 1x y 2x (images/onboarding/pantallas/, hechas con Lanczos por
+   ~/.cache/tg-seo-nov/pixel/generar_pantallas.py). German, 28-nov: «las imágenes están pixeladas»: el navegador las
+   encogía 4 veces (y giradas) y la letra salía dentada. Si cambias o añades una captura, vuelve a generarlas. */
+const P = (original, ancho, alto, alt, fondo = "#f8fafc") => {
     const tipo = alto > ancho ? "movil" : "pc";
     const entera = Math.abs(ancho / alto - PROPORCION[tipo]) / PROPORCION[tipo] > 0.1;
-    return { src, ancho, alto, alt, tipo, entera, fondo };
+    const base = original.split("/").pop().replace(/\.\w+$/, "");
+    const src = `/images/onboarding/pantallas/${base}-1x.webp`;
+    return { src, src2: `/images/onboarding/pantallas/${base}-2x.webp`, original, ancho, alto, alt, tipo, entera, fondo };
 };
 
 export const PANTALLAS = {
