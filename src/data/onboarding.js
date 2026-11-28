@@ -166,7 +166,8 @@ export function planDe(perfil, tamanoId) {
 
 /* ── Lo que se ve a los lados mientras responde: el móvil (la app del socio, cliente o paciente) y el portátil
    (el panel del centro o del entrenador). Cambian al pasar por una respuesta y al elegirla. Capturas reales. ── */
-const P = (src, ancho, alto, alt) => ({ src, ancho, alto, alt, tipo: alto > ancho ? "movil" : "pc" });
+// encaje «contain» para las muy panorámicas (se verían cortadas), con fondo oscuro.
+const P = (src, ancho, alto, alt) => ({ src, ancho, alto, alt, tipo: alto > ancho ? "movil" : "pc", entera: ancho / alto > 1.9 });
 
 export const PANTALLAS = {
     socioPortadaAtlas: P("/images/gym/app-socio-portada-atlas.webp", 640, 1385, "App de un gimnasio con su marca"),
@@ -187,7 +188,34 @@ export const PANTALLAS = {
     coachDieta: P("/images/blog/dieta-adherencia-ia-revisar.webp", 1205, 1060, "Revisar la dieta que propone la IA"),
     coachSeguimiento: P("/images/blog/checkin-app-por-revisar.webp", 1440, 1000, "Seguimiento de los clientes por revisar"),
     coachCobros: P("/images/blog/cuanto-cobra-app-cobros.webp", 1440, 900, "Cobros por tarjeta y SEPA"),
+    // Recortes de los vídeos tutoriales (public/video), solo la parte de la app: images/onboarding/
+    coachMarketing: P("/images/onboarding/coach-marketing-testimonios.webp", 1076, 447, "Opiniones de tus clientes listas para compartir en redes"),
+    coachReceta: P("/images/onboarding/coach-receta-macros.webp", 746, 529, "Una receta con sus macros en tu biblioteca"),
+    coachMando: P("/images/onboarding/coach-centro-mando.webp", 804, 522, "Ficha del cliente con su centro de mando"),
+    appRecetas: P("/images/onboarding/app-recetas.webp", 720, 992, "Las recetas en la app del cliente"),
+    gymClientes: P("/images/gym/clientes-w1280.webp", 1280, 638, "Los clientes del gimnasio"),
+    gymRetencion: P("/images/gym/retencion.webp", 377, 825, "Socios en riesgo en la app del gestor"),
 };
+
+/* Lo que se ve según el tamaño (German, 28-nov: «con pocos, el de marketing; intermedio, recetas; muchos, la gestión»). */
+const VISTA_TAMANO = {
+    profesional: {
+        "hasta-5": { izq: null, der: "coachMarketing", etqDer: "Para conseguir clientes: piezas para tus redes", aviso: "Para empezar: opiniones y piezas para tus redes, con tu marca" },
+        "6-25": { izq: "appRecetas", der: "coachReceta", etqDer: "Para crecer sin repetir trabajo: tus recetas", aviso: "Para crecer: tus recetas, guardadas y con sus macros" },
+        "26-100": { izq: "clienteCuota", der: "coachSeguimiento", etqDer: "Para llegar a todo: seguimiento y cuota automática", aviso: "Para llegar a todo: los check-in por revisar, en una lista" },
+        "mas-100": { izq: null, der: "coachMando", etqDer: "Para llevar a muchos: cada cliente, de un vistazo", aviso: "Para llevar a muchos: el centro de mando de cada cliente" },
+    },
+    gimnasio: {
+        "hasta-100": { izq: "socioReservas", der: "gymClases", etqDer: "Para llenar tus clases", aviso: "Para llenar tus clases: reservas con aforo y lista de espera" },
+        "100-200": { izq: "socioPagos", der: "gymCobros", etqDer: "Para cobrar sin perseguir a nadie", aviso: "Para cobrar: cuotas, bonos y caja en un sitio" },
+        "mas-200": { izq: "gymRetencion", der: "gymClientes", etqDer: "Para cuidar a los socios en riesgo", aviso: "Para cuidar a tus socios: quién lleva tiempo sin venir" },
+    },
+};
+
+export function etapaDe(perfil, tamanoId) {
+    if (!perfil || perfil === "atleta" || !tamanoId) return null;
+    return VISTA_TAMANO[perfil === "gimnasio" ? "gimnasio" : "profesional"][tamanoId] || null;
+}
 
 const VISTA_PERFIL = {
     inicio: { izq: "socioPortadaAtlas", der: "coachRutina", etqIzq: "La app de tus socios y clientes", etqDer: "Tu panel" },
@@ -214,11 +242,14 @@ export function vistaDe(r, encima) {
     const base = VISTA_PERFIL[perfil || "inicio"];
     const dolorId = encima?.campo === "dolor" ? encima.valor : r.dolor;
     const d = perfil && perfil !== "atleta" && VISTA_DOLOR[dolorId] ? VISTA_DOLOR[dolorId] : null;
+    // El tamaño manda mientras no haya «qué te quita tiempo» encima o elegido.
+    const tamanoId = encima?.campo === "tamano" ? encima.valor : encima?.campo === "perfil" ? null : r.tamano;
+    const e = !d ? etapaDe(perfil, tamanoId) : null;
     return {
-        izq: PANTALLAS[d ? d.izq : base.izq],
-        der: PANTALLAS[d ? d.der : base.der],
+        izq: PANTALLAS[d ? d.izq : e?.izq || base.izq],
+        der: PANTALLAS[d ? d.der : e?.der || base.der],
         etqIzq: base.etqIzq,
-        etqDer: base.etqDer,
+        etqDer: e?.etqDer || base.etqDer,
     };
 }
 

@@ -978,3 +978,14 @@
         animation: none;
     }
 }
+
+.ob-pantalla-capa--entera {
+    display: grid;
+    place-items: center;
+    background: #0b1020;
+}
+
+.ob-pantalla-capa--entera img {
+    height: auto;
+    object-fit: contain;
+}

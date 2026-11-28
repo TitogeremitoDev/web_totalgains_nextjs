@@ -8,7 +8,7 @@ import { Activity, Apple, ArrowLeft, Building2, Check, Dumbbell } from "lucide-r
 import { trackEvent } from "@/components/Analytics";
 import DemoVideo from "@/components/DemoVideo";
 import { EN_TODOS_LOS_PLANES } from "@/data/planesCoach";
-import { ESCENAS, ETIQUETAS, ORIGENES, PANTALLAS, PERFILES, avisoDe, dolores, esProfesional, pasos, planDe, tamano, vistaDe } from "@/data/onboarding";
+import { ESCENAS, ETIQUETAS, ORIGENES, PANTALLAS, PERFILES, avisoDe, dolores, esProfesional, etapaDe, pasos, planDe, tamano, vistaDe } from "@/data/onboarding";
 import "@/app/onboarding/Onboarding.css";
 
 /* «Empieza gratis»: un recorrido que se adapta a quien entra (datos y textos en src/data/onboarding.js).
@@ -105,6 +105,12 @@ export default function OnboardingContent() {
         setEncima(null);
         if (campo === "dolor") reproducir(valor);
         else avisar(avisoDe(campo, valor, nuevo));
+        // Al elegir el tamaño, el panel cuenta qué te sirve en esa etapa del negocio.
+        const etapa = campo === "tamano" ? etapaDe(nuevo.perfil, valor) : null;
+        if (etapa) {
+            escenaTimers.current.forEach(clearTimeout);
+            escenaTimers.current = [setTimeout(() => avisarPc({ texto: etapa.aviso }), 900)];
+        }
         trackEvent("onboarding_respuesta", { paso: campo, valor, perfil: nuevo.perfil });
         const siguiente = paso + 1;
         const ruta = pasos(nuevo.perfil);
@@ -466,7 +472,7 @@ function Marco({ lado, pantalla, etiqueta, aviso, avisoPc, quieto, etiquetas, ac
                     <AnimatePresence initial={false}>
                         <motion.div
                             key={pantalla.src}
-                            className="ob-pantalla-capa"
+                            className={`ob-pantalla-capa ${pantalla.entera ? "ob-pantalla-capa--entera" : ""}`}
                             initial={quieto ? false : { opacity: 0, scale: 1.03 }}
                             animate={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0 }}
