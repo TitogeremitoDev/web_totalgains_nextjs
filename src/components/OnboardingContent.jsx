@@ -8,7 +8,7 @@ import { Activity, Apple, ArrowLeft, Building2, Check, Dumbbell } from "lucide-r
 import { trackEvent } from "@/components/Analytics";
 import DemoVideo from "@/components/DemoVideo";
 import { EN_TODOS_LOS_PLANES } from "@/data/planesCoach";
-import { ORIGENES, PERFILES, avisoDe, dolores, esProfesional, pasos, planDe, tamano, vistaDe } from "@/data/onboarding";
+import { ESCENAS, ETIQUETAS, ORIGENES, PANTALLAS, PERFILES, avisoDe, dolores, esProfesional, pasos, planDe, tamano, vistaDe } from "@/data/onboarding";
 import "@/app/onboarding/Onboarding.css";
 
 /* «Empieza gratis»: un recorrido que se adapta a quien entra (datos y textos en src/data/onboarding.js).
@@ -26,16 +26,41 @@ export default function OnboardingContent() {
     const [elegido, setElegido] = useState(null);
     const [encima, setEncima] = useState(null);
     const [aviso, setAviso] = useState(null);
+    const [avisoPc, setAvisoPc] = useState(null);
+    const [toque, setToque] = useState(null);
+    const [vuelta, setVuelta] = useState(0);
     const temporizador = useRef(null);
+    const temporizadorPc = useRef(null);
+    const escenaTimers = useRef([]);
     const nAviso = useRef(0);
     const quieto = useReducedMotion();
-    useEffect(() => () => clearTimeout(temporizador.current), []);
+    useEffect(
+        () => () => {
+            clearTimeout(temporizador.current);
+            clearTimeout(temporizadorPc.current);
+            escenaTimers.current.forEach(clearTimeout);
+        },
+        [],
+    );
 
     const lista = pasos(r.perfil);
     const actual = lista[paso];
     const plan = useMemo(() => planDe(r.perfil, r.tamano), [r.perfil, r.tamano]);
     const dolor = r.perfil && r.perfil !== "atleta" ? dolores(r.perfil).find((d) => d.id === r.dolor) : null;
-    const vista = vistaDe(r, encima);
+    const base = vistaDe(r, encima);
+
+    // «Tu marca»: mientras está encima o elegida, la app va cambiando de gimnasio.
+    const perfilVisto = encima?.campo === "perfil" ? encima.valor : r.perfil;
+    const dolorVisto = encima?.campo === "dolor" ? encima.valor : r.dolor;
+    const marcaActiva = perfilVisto === "gimnasio" && dolorVisto === "marca" && !quieto;
+    useEffect(() => {
+        if (!marcaActiva) return undefined;
+        const id = setInterval(() => setVuelta((v) => v + 1), 1500);
+        return () => clearInterval(id);
+    }, [marcaActiva]);
+    const carrusel = ESCENAS.marca.carrusel;
+    const vista = marcaActiva ? { ...base, izq: PANTALLAS[carrusel[vuelta % carrusel.length]] } : base;
+    const etiquetas = perfilVisto ? ETIQUETAS[perfilVisto] : null;
 
     // La notificación que salta en el móvil de la izquierda al responder.
     const avisar = (a) => {
@@ -46,13 +71,40 @@ export default function OnboardingContent() {
         temporizador.current = setTimeout(() => setAviso(null), 2800);
     };
 
+    // El aviso del portátil (el panel del centro o del entrenador).
+    const avisarPc = (a) => {
+        nAviso.current += 1;
+        setAvisoPc({ ...a, n: nAviso.current });
+        clearTimeout(temporizadorPc.current);
+        temporizadorPc.current = setTimeout(() => setAvisoPc(null), a.carga ? 1500 : 3000);
+    };
+
+    // La escena de cada respuesta: el dedo pulsa el botón de la captura y saltan los avisos, uno detrás de otro.
+    const reproducir = (id) => {
+        const escena = ESCENAS[id];
+        if (!escena) return;
+        escenaTimers.current.forEach(clearTimeout);
+        escenaTimers.current = [];
+        if (escena.toque && !quieto) {
+            nAviso.current += 1;
+            setToque({ ...escena.toque, n: nAviso.current });
+            escenaTimers.current.push(setTimeout(() => setToque(null), 1100));
+        }
+        let t = escena.toque ? 650 : 250;
+        escena.momentos.forEach((m) => {
+            escenaTimers.current.push(setTimeout(() => (m.en === "movil" ? avisar(m) : avisarPc(m)), t));
+            t += m.carga ? 1500 : 1200;
+        });
+    };
+
     const responder = (campo, valor) => {
         setElegido(valor);
         const nuevo = { ...r, [campo]: valor };
         if (campo === "perfil") Object.assign(nuevo, { tamano: null, dolor: null });
         setR(nuevo);
         setEncima(null);
-        avisar(avisoDe(campo, valor, nuevo));
+        if (campo === "dolor") reproducir(valor);
+        else avisar(avisoDe(campo, valor, nuevo));
         trackEvent("onboarding_respuesta", { paso: campo, valor, perfil: nuevo.perfil });
         const siguiente = paso + 1;
         const ruta = pasos(nuevo.perfil);
@@ -103,7 +155,7 @@ export default function OnboardingContent() {
     return (
         <main className="onboarding-page">
             <div className="ob-escena">
-            <Marco lado="izq" pantalla={vista.izq} etiqueta={vista.etqIzq} aviso={aviso} quieto={quieto} />
+            <Marco lado="izq" pantalla={vista.izq} etiqueta={vista.etqIzq} aviso={aviso} quieto={quieto} etiquetas={etiquetas} activa={dolorVisto} toque={toque} />
             <div className={`glass onboarding-card ${actual === "final" ? "onboarding-card--final" : ""}`}>
                 <div className="onboarding-content">
                     <h1 className="sr-only">Empieza con TotalGains: gimnasios, entrenadores, nutricionistas y deportistas</h1>
@@ -269,7 +321,7 @@ export default function OnboardingContent() {
                     </AnimatePresence>
                 </div>
             </div>
-            <Marco lado="der" pantalla={vista.der} etiqueta={vista.etqDer} quieto={quieto} />
+            <Marco lado="der" pantalla={vista.der} etiqueta={vista.etqDer} quieto={quieto} avisoPc={avisoPc} plan={plan} />
             </div>
         </main>
     );
@@ -364,10 +416,45 @@ function Cabecera({ titulo, sub, pantalla, aviso }) {
 
 /* Marco de un lado: un teléfono (captura vertical) o un portátil (horizontal), con su etiqueta debajo.
    La captura cambia con un fundido; el de la izquierda enseña la notificación al responder. */
-function Marco({ lado, pantalla, etiqueta, aviso, quieto }) {
+function Marco({ lado, pantalla, etiqueta, aviso, avisoPc, quieto, etiquetas, activa, toque, plan }) {
     const movil = pantalla.tipo === "movil";
+    const escala = movil ? 222 / pantalla.ancho : 0;
     return (
         <aside className={`ob-marco ob-marco--${lado} ${movil ? "ob-marco--tel" : "ob-marco--pc"} ${quieto ? "" : "ob-flota"}`} aria-hidden="true">
+            {etiquetas && (
+                <div className="ob-etiquetas">
+                    <AnimatePresence>
+                        {etiquetas.map((e, i) => (
+                            <motion.span
+                                key={e.id}
+                                className={`ob-etq ob-etq--${i} ${activa === e.id ? "is-on" : ""}`}
+                                initial={quieto ? false : { opacity: 0, scale: 0.6 }}
+                                animate={{ opacity: 1, scale: activa === e.id ? 1.08 : 1 }}
+                                exit={{ opacity: 0, scale: 0.6 }}
+                                transition={{ type: "spring", stiffness: 380, damping: 24, delay: quieto ? 0 : 0.08 * i }}
+                            >
+                                {activa === e.id && <Check size={12} />} {e.texto}
+                            </motion.span>
+                        ))}
+                    </AnimatePresence>
+                </div>
+            )}
+            <AnimatePresence>
+                {plan && (
+                    <motion.div
+                        key={plan.nombre}
+                        className="ob-plan-flota"
+                        initial={quieto ? false : { opacity: 0, y: -24, rotate: -6 }}
+                        animate={{ opacity: 1, y: 0, rotate: -3 }}
+                        exit={{ opacity: 0, y: -12 }}
+                        transition={{ type: "spring", stiffness: 300, damping: 22 }}
+                    >
+                        <span>Tu plan</span>
+                        <strong>{plan.nombre}</strong>
+                        <em>{plan.precio}</em>
+                    </motion.div>
+                )}
+            </AnimatePresence>
             <div className={movil ? "ob-tel" : "ob-pc"}>
                 {movil ? <span className="ob-tel-isla" /> : (
                     <div className="ob-pc-barra">
@@ -388,7 +475,28 @@ function Marco({ lado, pantalla, etiqueta, aviso, quieto }) {
                             <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes={movil ? "240px" : "440px"} />
                         </motion.div>
                     </AnimatePresence>
+                    {toque && movil && (
+                        <span key={toque.n} className="ob-toque" style={{ left: `${toque.x * 100}%`, top: `${toque.y * pantalla.alto * escala}px` }}>
+                            <span className="ob-toque-onda" />
+                            <span className="ob-toque-dedo" />
+                        </span>
+                    )}
                 </div>
+                <AnimatePresence>
+                    {avisoPc && (
+                        <motion.div
+                            key={avisoPc.n}
+                            className="ob-aviso-pc"
+                            initial={{ opacity: 0, y: 16 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            exit={{ opacity: 0, y: 8 }}
+                            transition={{ type: "spring", stiffness: 380, damping: 28 }}
+                        >
+                            {avisoPc.carga ? <span className="ob-cargando" /> : <Check size={15} />}
+                            <span>{avisoPc.texto}</span>
+                        </motion.div>
+                    )}
+                </AnimatePresence>
                 <AnimatePresence>
                     {aviso && (
                         <motion.div

@@ -156,11 +156,11 @@ export function planDe(perfil, tamanoId) {
         return g ? { nombre: g.name.replace("TotalGains ", ""), precio: `${g.price} €/mes`, nota: "con IVA", detalle: g.description } : null;
     }
     if (opcion.plan === "gratis") {
-        return { nombre: "Plan gratuito", precio: "0 €", nota: "para siempre", detalle: "Hasta 5 atletas, sin tarjeta y sin caducidad." };
+        return { nombre: "Gratuito", precio: "0 €", nota: "para siempre", detalle: "Hasta 5 atletas, sin tarjeta y sin caducidad." };
     }
     const c = PLANES_COACH[opcion.plan];
     return c
-        ? { nombre: `Plan ${c.nombre}`, precio: `${euros(c.mes)}/mes`, nota: "con IVA", detalle: c.atletas ? `Hasta ${c.atletas} atletas.` : "Atletas ilimitados." }
+        ? { nombre: c.nombre, precio: `${euros(c.mes)}/mes`, nota: "con IVA", detalle: c.atletas ? `Hasta ${c.atletas} atletas.` : "Atletas ilimitados." }
         : null;
 }
 
@@ -237,3 +237,89 @@ export function avisoDe(campo, valor, r) {
     }
     return { texto: "¡Listo! Ya está todo preparado" };
 }
+
+/* ── Escenas: lo que aparece según lo que pulsas (German, 28-nov: «que según qué pulses aparezca una cosa u otra»).
+   - etiquetas alrededor del móvil al elegir perfil (se encienden con la respuesta que tienes encima);
+   - al elegir lo que más tiempo te quita: un dedo pulsa el botón de verdad de la captura (toque, en fracción de la
+     imagen) y saltan avisos en el móvil y en el portátil, con datos que salen de las propias capturas;
+   - «Tu marca»: la app va cambiando de gimnasio (tres marcas inventadas). ── */
+export const ETIQUETAS = {
+    gimnasio: [
+        { id: "reservas", texto: "Reservas" },
+        { id: "cuotas", texto: "Cuotas" },
+        { id: "avisos", texto: "Avisos" },
+        { id: "marca", texto: "Tu marca" },
+    ],
+    entrenador: [
+        { id: "rutinas", texto: "Rutinas" },
+        { id: "dietas", texto: "Dietas con IA" },
+        { id: "seguimiento", texto: "Seguimiento" },
+        { id: "cobros", texto: "Cobros" },
+    ],
+    nutricionista: [
+        { id: "dietas", texto: "Dietas con IA" },
+        { id: "seguimiento", texto: "Seguimiento" },
+        { id: "cobros", texto: "Cobros" },
+        { id: "rutinas", texto: "Rutinas" },
+    ],
+    atleta: [
+        { id: "rm", texto: "Tu RM" },
+        { id: "evolucion", texto: "Evolución" },
+        { id: "records", texto: "Récords" },
+    ],
+};
+
+export const ESCENAS = {
+    reservas: {
+        toque: { x: 0.812, y: 0.434 },
+        momentos: [
+            { en: "movil", texto: "Plaza reservada · Funcional, 19:00" },
+            { en: "pc", texto: "La clase de las 19:00 suma una reserva" },
+        ],
+    },
+    cuotas: {
+        toque: { x: 0.443, y: 0.496 },
+        momentos: [
+            { en: "movil", texto: "Pago recibido · Cuota mensual, 45,00 €" },
+            { en: "pc", texto: "Venta registrada, con su ticket" },
+        ],
+    },
+    avisos: {
+        toque: { x: 0.5, y: 0.45 },
+        momentos: [
+            { en: "pc", texto: "Aviso publicado para tus socios" },
+            { en: "movil", texto: "Nueva clase de movilidad los jueves" },
+        ],
+    },
+    marca: {
+        carrusel: ["socioPortadaAtlas", "socioPortadaVital", "socioPortadaCumbre"],
+        momentos: [{ en: "movil", texto: "Tu logo y tus colores en la app" }],
+    },
+    rutinas: {
+        momentos: [
+            { en: "pc", texto: "Rutina «Fuerza 4 días · Fase 2» guardada" },
+            { en: "movil", texto: "Tienes una rutina nueva" },
+        ],
+    },
+    dietas: {
+        momentos: [
+            { en: "pc", texto: "La IA está preparando el plan…", carga: true },
+            { en: "pc", texto: "Dieta lista · 2.158 kcal: revísala y guarda" },
+            { en: "movil", texto: "Tienes una dieta nueva" },
+        ],
+    },
+    seguimiento: {
+        toque: { x: 0.499, y: 0.718 },
+        momentos: [
+            { en: "movil", texto: "Check-in enviado · 68,4 kg, 7 h de sueño" },
+            { en: "pc", texto: "Nuevo check-in por revisar" },
+        ],
+    },
+    cobros: {
+        toque: { x: 0.499, y: 0.67 },
+        momentos: [
+            { en: "movil", texto: "Cuota automática activada · 60,00 € al mes" },
+            { en: "pc", texto: "Cobro programado para cada mes" },
+        ],
+    },
+};

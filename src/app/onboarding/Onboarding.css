@@ -812,3 +812,169 @@
         animation: none;
     }
 }
+
+/* ── Escenas: etiquetas alrededor del móvil, el dedo que pulsa, el aviso del portátil y la tarjeta del plan ── */
+.ob-marco {
+    position: relative;
+}
+
+.ob-etiquetas {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.ob-etq {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 11px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    white-space: nowrap;
+    color: #e2e8f0;
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(165, 180, 252, 0.35);
+    border-radius: 999px;
+    box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.8);
+}
+
+.ob-etq.is-on {
+    color: #052e16;
+    background: #4ade80;
+    border-color: #4ade80;
+}
+
+.ob-etq--0 { top: 70px; left: -34px; }
+.ob-etq--1 { top: 170px; right: -40px; }
+.ob-etq--2 { top: 300px; left: -40px; }
+.ob-etq--3 { top: 400px; right: -30px; }
+
+.ob-plan-flota {
+    position: absolute;
+    top: -6px;
+    left: -18px;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 14px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 14px;
+    box-shadow: 0 18px 40px -14px rgba(118, 75, 162, 0.9);
+}
+
+.ob-plan-flota span {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.ob-plan-flota strong {
+    font-size: 0.95rem;
+    color: #fff;
+}
+
+.ob-plan-flota em {
+    font-size: 0.85rem;
+    font-style: normal;
+    font-weight: 800;
+    color: #bbf7d0;
+}
+
+.ob-marco--izq .ob-plan-flota {
+    display: none;
+}
+
+.ob-toque {
+    position: absolute;
+    z-index: 3;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.ob-toque-onda,
+.ob-toque-dedo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ob-toque-dedo {
+    width: 26px;
+    height: 26px;
+    background: rgba(15, 23, 42, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    animation: ob-dedo 1s ease-out forwards;
+}
+
+.ob-toque-onda {
+    width: 26px;
+    height: 26px;
+    border: 3px solid rgba(102, 126, 234, 0.9);
+    animation: ob-onda 1s ease-out forwards;
+}
+
+@keyframes ob-dedo {
+    0% { opacity: 0; transform: translate(-50%, -50%) scale(1.6); }
+    25% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+    45% { transform: translate(-50%, -50%) scale(0.82); }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes ob-onda {
+    0%, 35% { opacity: 0; transform: translate(-50%, -50%) scale(0.6); }
+    45% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-50%, -50%) scale(3.2); }
+}
+
+.ob-aviso-pc {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 82%;
+    padding: 9px 13px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    background: rgba(15, 23, 42, 0.94);
+    border: 1px solid rgba(74, 222, 128, 0.45);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.8);
+}
+
+.ob-aviso-pc svg {
+    flex: 0 0 auto;
+    color: #4ade80;
+}
+
+.ob-cargando {
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(165, 180, 252, 0.35);
+    border-top-color: #a5b4fc;
+    border-radius: 50%;
+    animation: ob-gira 0.8s linear infinite;
+}
+
+@keyframes ob-gira {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ob-toque,
+    .ob-cargando {
+        animation: none;
+    }
+}
