@@ -85,6 +85,9 @@ export default function OnboardingContent() {
         if (!escena) return;
         escenaTimers.current.forEach(clearTimeout);
         escenaTimers.current = [];
+        // Lo que quedara de la respuesta anterior se quita: la escena empieza limpia.
+        clearTimeout(temporizadorPc.current);
+        setAvisoPc(null);
         if (escena.toque && !quieto) {
             nAviso.current += 1;
             setToque({ ...escena.toque, n: nAviso.current });
@@ -161,7 +164,6 @@ export default function OnboardingContent() {
     return (
         <main className="onboarding-page">
             <div className="ob-escena">
-            <Marco lado="izq" pantalla={vista.izq} etiqueta={vista.etqIzq} aviso={aviso} quieto={quieto} etiquetas={etiquetas} activa={dolorVisto} toque={toque} />
             <div className={`glass onboarding-card ${actual === "final" ? "onboarding-card--final" : ""}`}>
                 <div className="onboarding-content">
                     <h1 className="sr-only">Empieza con TotalGains: gimnasios, entrenadores, nutricionistas y deportistas</h1>
@@ -327,7 +329,18 @@ export default function OnboardingContent() {
                     </AnimatePresence>
                 </div>
             </div>
-            <Marco lado="der" pantalla={vista.der} etiqueta={vista.etqDer} quieto={quieto} avisoPc={avisoPc} plan={plan} />
+            <Dispositivos
+                izq={vista.izq}
+                der={vista.der}
+                etiqueta={[vista.etqIzq, vista.etqDer].filter(Boolean).join(" · ") || "Elige y te enseñamos tu TotalGains"}
+                aviso={aviso}
+                avisoPc={avisoPc}
+                quieto={quieto}
+                etiquetas={etiquetas}
+                activa={dolorVisto}
+                toque={toque}
+                plan={plan}
+            />
             </div>
         </main>
     );
@@ -411,7 +424,7 @@ function Cabecera({ titulo, sub, pantalla, aviso }) {
             <div className="ob-mini" aria-hidden="true">
                 <AnimatePresence mode="popLayout" initial={false}>
                     <motion.div key={pantalla.src} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
-                        <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes="96px" />
+                        {pantalla.marca ? <PantallaMarca tipo="mini" /> : <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes="96px" />}
                     </motion.div>
                 </AnimatePresence>
                 {aviso && <span key={aviso.n} className="ob-mini-aviso" />}
@@ -420,13 +433,54 @@ function Cabecera({ titulo, sub, pantalla, aviso }) {
     );
 }
 
-/* Marco de un lado: un teléfono (captura vertical) o un portátil (horizontal), con su etiqueta debajo.
-   La captura cambia con un fundido; el de la izquierda enseña la notificación al responder. */
-function Marco({ lado, pantalla, etiqueta, aviso, avisoPc, quieto, etiquetas, activa, toque, plan }) {
-    const movil = pantalla.tipo === "movil";
-    const escala = movil ? 222 / pantalla.ancho : 0;
+// Ancho de la pantalla del móvil grande (210 px de marco menos 8 px de borde a cada lado): sirve para colocar el dedo.
+const TEL_PANTALLA = 194;
+
+/* Pantalla de marca (antes de elegir): el logo de TotalGains, sin gimnasio ni entrenador concreto. */
+function PantallaMarca({ tipo }) {
     return (
-        <aside className={`ob-marco ob-marco--${lado} ${movil ? "ob-marco--tel" : "ob-marco--pc"} ${quieto ? "" : "ob-flota"}`} aria-hidden="true">
+        <div className={`ob-marca ob-marca--${tipo}`}>
+            <Image src="/logo.png" alt="" width={96} height={96} className="ob-marca-logo" />
+            <strong>TotalGains</strong>
+            <span>{tipo === "pc" ? "Tu panel, a tu medida" : "Gimnasios · Entrenadores · Deportistas"}</span>
+            <i className="ob-marca-esqueleto" aria-hidden="true">
+                <b />
+                <b />
+                <b />
+            </i>
+        </div>
+    );
+}
+
+/* Lo que se ve dentro de una pantalla, con fundido al cambiar. */
+function Capa({ pantalla, quieto, sizes }) {
+    return (
+        <AnimatePresence initial={false}>
+            <motion.div
+                key={pantalla.src}
+                className={`ob-pantalla-capa ${pantalla.entera ? "ob-pantalla-capa--entera" : ""}`}
+                initial={quieto ? false : { opacity: 0, scale: 1.03 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.35 }}
+            >
+                {pantalla.marca ? (
+                    <PantallaMarca tipo={pantalla.tipo === "pc" ? "pc" : "movil"} />
+                ) : (
+                    <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes={sizes} />
+                )}
+            </motion.div>
+        </AnimatePresence>
+    );
+}
+
+/* Un solo grupo (German, 28-nov: «dos pantallas sueltas quedan cutres»): el portátil con el panel y, delante, el móvil
+   con la app del socio o cliente. Alrededor, las etiquetas y la tarjeta del plan; dentro, el dedo y los avisos.
+   Con el deportista, en vez del portátil va otro móvil detrás. */
+function Dispositivos({ izq, der, etiqueta, aviso, avisoPc, quieto, etiquetas, activa, toque, plan }) {
+    const detrasMovil = der.tipo === "movil";
+    return (
+        <aside className={`ob-grupo ${detrasMovil ? "ob-grupo--dos-tel" : ""} ${quieto ? "" : "ob-flota"}`} aria-hidden="true">
             {etiquetas && (
                 <div className="ob-etiquetas">
                     <AnimatePresence>
@@ -461,32 +515,20 @@ function Marco({ lado, pantalla, etiqueta, aviso, avisoPc, quieto, etiquetas, ac
                     </motion.div>
                 )}
             </AnimatePresence>
-            <div className={movil ? "ob-tel" : "ob-pc"}>
-                {movil ? <span className="ob-tel-isla" /> : (
+
+            <div className={detrasMovil ? "ob-tel ob-tel--detras" : "ob-pc"}>
+                {detrasMovil ? (
+                    <span className="ob-tel-isla" />
+                ) : (
                     <div className="ob-pc-barra">
-                        <span /><span /><span />
+                        <span />
+                        <span />
+                        <span />
                         <em>totalgains.es/app</em>
                     </div>
                 )}
                 <div className="ob-pantalla">
-                    <AnimatePresence initial={false}>
-                        <motion.div
-                            key={pantalla.src}
-                            className={`ob-pantalla-capa ${pantalla.entera ? "ob-pantalla-capa--entera" : ""}`}
-                            initial={quieto ? false : { opacity: 0, scale: 1.03 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.35 }}
-                        >
-                            <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes={movil ? "240px" : "440px"} />
-                        </motion.div>
-                    </AnimatePresence>
-                    {toque && movil && (
-                        <span key={toque.n} className="ob-toque" style={{ left: `${toque.x * 100}%`, top: `${toque.y * pantalla.alto * escala}px` }}>
-                            <span className="ob-toque-onda" />
-                            <span className="ob-toque-dedo" />
-                        </span>
-                    )}
+                    <Capa pantalla={der} quieto={quieto} sizes={detrasMovil ? "210px" : "470px"} />
                 </div>
                 <AnimatePresence>
                     {avisoPc && (
@@ -503,6 +545,19 @@ function Marco({ lado, pantalla, etiqueta, aviso, avisoPc, quieto, etiquetas, ac
                         </motion.div>
                     )}
                 </AnimatePresence>
+            </div>
+
+            <div className="ob-tel ob-tel--delante">
+                <span className="ob-tel-isla" />
+                <div className="ob-pantalla">
+                    <Capa pantalla={izq} quieto={quieto} sizes="210px" />
+                    {toque && !izq.marca && (
+                        <span key={toque.n} className="ob-toque" style={{ left: `${toque.x * 100}%`, top: `${toque.y * izq.alto * (TEL_PANTALLA / izq.ancho)}px` }}>
+                            <span className="ob-toque-onda" />
+                            <span className="ob-toque-dedo" />
+                        </span>
+                    )}
+                </div>
                 <AnimatePresence>
                     {aviso && (
                         <motion.div
@@ -522,7 +577,7 @@ function Marco({ lado, pantalla, etiqueta, aviso, avisoPc, quieto, etiquetas, ac
                     )}
                 </AnimatePresence>
             </div>
-            <p className="ob-marco-etq">{etiqueta}</p>
+            <p className="ob-grupo-etq">{etiqueta}</p>
         </aside>
     );
 }

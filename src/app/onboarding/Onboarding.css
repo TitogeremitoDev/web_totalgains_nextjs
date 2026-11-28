@@ -510,16 +510,17 @@
     }
 }
 
-/* ── Escenario: el móvil y el portátil con la app de verdad a los lados, que cambian con cada respuesta ── */
+/* ── Escenario (28-nov-2026, 2.ª vuelta): las preguntas a la izquierda y, a la derecha, UN grupo con el portátil del panel
+   y el móvil de la app delante. Antes de elegir, las dos pantallas enseñan la marca TotalGains. ── */
 .ob-escena {
     position: relative;
     display: grid;
-    grid-template-columns: minmax(0, 250px) minmax(0, 600px) minmax(0, 440px);
+    grid-template-columns: minmax(0, 600px) 580px;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 56px;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1300px;
 }
 
 .ob-escena::before {
@@ -527,9 +528,7 @@
     position: absolute;
     inset: -60px 0;
     z-index: -1;
-    background:
-        radial-gradient(40% 50% at 15% 50%, rgba(129, 140, 248, 0.18) 0%, transparent 70%),
-        radial-gradient(40% 50% at 85% 50%, rgba(192, 132, 252, 0.16) 0%, transparent 70%);
+    background: radial-gradient(45% 55% at 75% 50%, rgba(129, 140, 248, 0.2) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -537,70 +536,32 @@
     max-width: none;
 }
 
-.ob-marco {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 14px;
+/* el grupo: caja fija para que todo encaje igual siempre */
+.ob-grupo {
+    position: relative;
+    width: 580px;
+    height: 480px;
 }
 
-.ob-flota.ob-marco--izq {
-    animation: ob-flota 7s ease-in-out infinite;
-}
-
-.ob-flota.ob-marco--der {
-    animation: ob-flota 7s ease-in-out 1.8s infinite;
+.ob-flota.ob-grupo {
+    animation: ob-flota 8s ease-in-out infinite;
 }
 
 @keyframes ob-flota {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-}
-
-.ob-tel {
-    position: relative;
-    width: 240px;
-    padding: 9px;
-    background: #05070f;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 38px;
-    box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(129, 140, 248, 0.15);
-    transform: rotate(-3deg);
-}
-
-.ob-marco--der .ob-tel {
-    transform: rotate(3deg);
-}
-
-.ob-tel-isla {
-    position: absolute;
-    top: 15px;
-    left: 50%;
-    z-index: 3;
-    width: 74px;
-    height: 20px;
-    margin-left: -37px;
-    background: #05070f;
-    border-radius: 999px;
-}
-
-.ob-tel .ob-pantalla {
-    position: relative;
-    height: 480px;
-    overflow: hidden;
-    background: #f8fafc;
-    border-radius: 30px;
+    50% { transform: translateY(-8px); }
 }
 
 .ob-pc {
-    position: relative;
-    width: 100%;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 470px;
     overflow: hidden;
     background: #0b1020;
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 14px;
     box-shadow: 0 40px 80px -30px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(192, 132, 252, 0.15);
-    transform: perspective(1200px) rotateY(-8deg) rotate(1deg);
 }
 
 .ob-pc-barra {
@@ -617,7 +578,6 @@
     width: 9px;
     height: 9px;
     border-radius: 50%;
-    background: #334155;
 }
 
 .ob-pc-barra span:nth-child(1) { background: #ef4444; }
@@ -641,6 +601,49 @@
     background: #f8fafc;
 }
 
+.ob-tel {
+    position: absolute;
+    width: 210px;
+    padding: 8px;
+    background: #05070f;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 34px;
+    box-shadow: 0 40px 70px -24px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(129, 140, 248, 0.18);
+}
+
+.ob-tel--delante {
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+    transform: rotate(-4deg);
+}
+
+.ob-tel--detras {
+    top: 0;
+    right: 50px;
+    transform: rotate(5deg);
+}
+
+.ob-tel-isla {
+    position: absolute;
+    top: 14px;
+    left: 50%;
+    z-index: 3;
+    width: 64px;
+    height: 18px;
+    margin-left: -32px;
+    background: #05070f;
+    border-radius: 999px;
+}
+
+.ob-tel .ob-pantalla {
+    position: relative;
+    height: 420px;
+    overflow: hidden;
+    background: #f8fafc;
+    border-radius: 27px;
+}
+
 .ob-pantalla-capa {
     position: absolute;
     inset: 0;
@@ -654,27 +657,131 @@
     object-position: top center;
 }
 
-.ob-marco-etq {
-    margin: 0;
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-secondary);
-    text-align: center;
+.ob-pantalla-capa--entera {
+    display: grid;
+    place-items: center;
+    background: #0b1020;
 }
 
+.ob-pantalla-capa--entera img {
+    height: auto;
+    object-fit: contain;
+}
+
+.ob-grupo-etq {
+    position: absolute;
+    right: 0;
+    bottom: -34px;
+    width: 470px;
+    margin: 0;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-secondary);
+}
+
+/* pantalla de marca: antes de elegir */
+.ob-marca {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px;
+    text-align: center;
+    background:
+        radial-gradient(70% 50% at 50% 35%, rgba(129, 140, 248, 0.35) 0%, transparent 70%),
+        linear-gradient(180deg, #151b3a 0%, #0b1020 100%);
+}
+
+.ob-marca .ob-marca-logo {
+    width: 64px;
+    height: 64px;
+    border-radius: 16px;
+    box-shadow: 0 12px 30px -8px rgba(102, 126, 234, 0.7);
+}
+
+.ob-marca strong {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.ob-marca span {
+    font-size: 0.68rem;
+    font-weight: 600;
+    color: #a5b4fc;
+}
+
+.ob-marca-esqueleto {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 70%;
+    margin-top: 14px;
+}
+
+.ob-marca-esqueleto b {
+    height: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 6px;
+}
+
+.ob-marca-esqueleto b:nth-child(2) { width: 80%; }
+.ob-marca-esqueleto b:nth-child(3) { width: 60%; }
+
+.ob-marca--pc .ob-marca-esqueleto {
+    flex-direction: row;
+    width: 80%;
+}
+
+.ob-marca--pc .ob-marca-esqueleto b {
+    flex: 1;
+    height: 46px;
+    border-radius: 10px;
+}
+
+.ob-marca--pc .ob-marca-esqueleto b:nth-child(2),
+.ob-marca--pc .ob-marca-esqueleto b:nth-child(3) {
+    width: auto;
+}
+
+.ob-marca--mini {
+    gap: 3px;
+    padding: 6px;
+}
+
+.ob-marca--mini .ob-marca-logo {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.ob-marca--mini strong {
+    font-size: 0.62rem;
+}
+
+.ob-marca--mini span,
+.ob-marca--mini .ob-marca-esqueleto {
+    display: none;
+}
+
+/* notificación del móvil */
 .ob-aviso {
     position: absolute;
-    top: 44px;
-    left: 16px;
-    right: 16px;
+    top: 40px;
+    left: 14px;
+    right: 14px;
     z-index: 4;
     display: flex;
     align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
+    gap: 9px;
+    padding: 9px 11px;
     background: rgba(15, 23, 42, 0.92);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 16px;
+    border-radius: 15px;
     box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -684,140 +791,69 @@
     display: grid;
     flex: 0 0 auto;
     place-items: center;
-    width: 30px;
-    height: 30px;
-    font-size: 0.7rem;
+    width: 28px;
+    height: 28px;
+    font-size: 0.66rem;
     font-weight: 800;
     color: #fff;
     background: linear-gradient(135deg, #667eea, #764ba2);
-    border-radius: 9px;
+    border-radius: 8px;
 }
 
 .ob-aviso > span:last-child {
     display: flex;
     flex-direction: column;
     gap: 1px;
-    font-size: 0.74rem;
+    font-size: 0.72rem;
     line-height: 1.3;
     color: #e2e8f0;
 }
 
 .ob-aviso strong {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: #a5b4fc;
 }
 
-/* cabecera de cada pregunta (con el mini móvil, que solo se ve en pantallas estrechas) */
-.ob-cab {
-    display: grid;
-    grid-template-columns: 1fr;
+/* aviso del portátil */
+.ob-aviso-pc {
+    position: absolute;
+    right: 14px;
+    bottom: 14px;
+    z-index: 4;
+    display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 8px;
+    max-width: 70%;
+    padding: 9px 13px;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #e2e8f0;
+    background: rgba(15, 23, 42, 0.94);
+    border: 1px solid rgba(74, 222, 128, 0.45);
+    border-radius: 12px;
+    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.8);
 }
 
-.ob-mini {
-    display: none;
-    position: relative;
-    width: 84px;
-    height: 170px;
-    padding: 4px;
-    overflow: hidden;
-    background: #05070f;
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 18px;
-    transform: rotate(4deg);
+.ob-aviso-pc svg {
+    flex: 0 0 auto;
+    color: #4ade80;
 }
 
-.ob-mini > div {
-    position: absolute;
-    inset: 4px;
-    overflow: hidden;
-    border-radius: 14px;
-    background: #f8fafc;
-}
-
-.ob-mini img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-}
-
-.ob-mini-aviso {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    width: 12px;
-    height: 12px;
-    background: #22c55e;
-    border: 2px solid #05070f;
+.ob-cargando {
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(165, 180, 252, 0.35);
+    border-top-color: #a5b4fc;
     border-radius: 50%;
-    animation: ob-pop 0.4s ease-out;
+    animation: ob-gira 0.8s linear infinite;
 }
 
-@keyframes ob-pop {
-    from { transform: scale(0); }
-    to { transform: scale(1); }
+@keyframes ob-gira {
+    to { transform: rotate(360deg); }
 }
 
-/* en pantallas anchas, la captura del final ya está en los marcos */
-@media (min-width: 900px) {
-    .ob-escena .ob-dolor {
-        grid-template-columns: 1fr;
-    }
-
-    .ob-escena .ob-dolor-img {
-        display: none;
-    }
-}
-
-@media (max-width: 1239px) {
-    .ob-escena {
-        grid-template-columns: minmax(0, 250px) minmax(0, 600px);
-    }
-
-    .ob-marco--der {
-        display: none;
-    }
-}
-
-@media (max-width: 899px) {
-    .ob-escena {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    .ob-escena .onboarding-card {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .ob-marco {
-        display: none;
-    }
-
-    .ob-cab {
-        grid-template-columns: 1fr 84px;
-    }
-
-    .ob-mini {
-        display: block;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .ob-flota.ob-marco--izq,
-    .ob-flota.ob-marco--der,
-    .ob-mini-aviso {
-        animation: none;
-    }
-}
-
-/* ── Escenas: etiquetas alrededor del móvil, el dedo que pulsa, el aviso del portátil y la tarjeta del plan ── */
-.ob-marco {
-    position: relative;
-}
-
+/* etiquetas alrededor del grupo */
 .ob-etiquetas {
     position: absolute;
     inset: 0;
@@ -835,7 +871,7 @@
     font-weight: 700;
     white-space: nowrap;
     color: #e2e8f0;
-    background: rgba(15, 23, 42, 0.92);
+    background: rgba(15, 23, 42, 0.94);
     border: 1px solid rgba(165, 180, 252, 0.35);
     border-radius: 999px;
     box-shadow: 0 10px 24px -12px rgba(0, 0, 0, 0.8);
@@ -847,16 +883,17 @@
     border-color: #4ade80;
 }
 
-.ob-etq--0 { top: 70px; left: -34px; }
-.ob-etq--1 { top: 170px; right: -40px; }
-.ob-etq--2 { top: 300px; left: -40px; }
-.ob-etq--3 { top: 400px; right: -30px; }
+.ob-etq--0 { top: 34px; left: 0; }
+.ob-etq--1 { top: -6px; left: 250px; }
+.ob-etq--2 { top: 340px; right: 150px; }
+.ob-etq--3 { top: 340px; right: 10px; }
 
+/* tarjeta del plan, encima del portátil */
 .ob-plan-flota {
     position: absolute;
-    top: -6px;
-    left: -18px;
-    z-index: 5;
+    top: -14px;
+    right: -14px;
+    z-index: 6;
     display: flex;
     flex-direction: column;
     padding: 10px 14px;
@@ -885,10 +922,7 @@
     color: #bbf7d0;
 }
 
-.ob-marco--izq .ob-plan-flota {
-    display: none;
-}
-
+/* el dedo que pulsa */
 .ob-toque {
     position: absolute;
     z-index: 3;
@@ -934,58 +968,117 @@
     100% { opacity: 0; transform: translate(-50%, -50%) scale(3.2); }
 }
 
-.ob-aviso-pc {
-    position: absolute;
-    right: 14px;
-    bottom: 14px;
-    z-index: 4;
-    display: flex;
+/* cabecera de cada pregunta (con el mini móvil, que solo se ve en pantallas estrechas) */
+.ob-cab {
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
-    gap: 8px;
-    max-width: 82%;
-    padding: 9px 13px;
-    font-size: 0.76rem;
-    font-weight: 600;
-    color: #e2e8f0;
-    background: rgba(15, 23, 42, 0.94);
-    border: 1px solid rgba(74, 222, 128, 0.45);
-    border-radius: 12px;
-    box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.8);
+    gap: 14px;
 }
 
-.ob-aviso-pc svg {
-    flex: 0 0 auto;
-    color: #4ade80;
+.ob-mini {
+    display: none;
+    position: relative;
+    width: 84px;
+    height: 170px;
+    padding: 4px;
+    overflow: hidden;
+    background: #05070f;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 18px;
+    transform: rotate(4deg);
 }
 
-.ob-cargando {
-    flex: 0 0 auto;
-    width: 14px;
-    height: 14px;
-    border: 2px solid rgba(165, 180, 252, 0.35);
-    border-top-color: #a5b4fc;
+.ob-mini > div {
+    position: absolute;
+    inset: 4px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #f8fafc;
+}
+
+.ob-mini img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.ob-mini .ob-marca .ob-marca-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.ob-mini-aviso {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 12px;
+    height: 12px;
+    background: #22c55e;
+    border: 2px solid #05070f;
     border-radius: 50%;
-    animation: ob-gira 0.8s linear infinite;
+    animation: ob-pop 0.4s ease-out;
 }
 
-@keyframes ob-gira {
-    to { transform: rotate(360deg); }
+@keyframes ob-pop {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    .ob-toque,
-    .ob-cargando {
-        animation: none;
+/* en pantallas anchas, la captura del final ya está en el grupo */
+@media (min-width: 900px) {
+    .ob-escena .ob-dolor {
+        grid-template-columns: 1fr;
+    }
+
+    .ob-escena .ob-dolor-img {
+        display: none;
     }
 }
 
-.ob-pantalla-capa--entera {
-    display: grid;
-    place-items: center;
-    background: #0b1020;
+@media (max-width: 1239px) {
+    .ob-escena {
+        grid-template-columns: minmax(0, 1fr) 470px;
+        gap: 32px;
+    }
+
+    .ob-grupo {
+        transform-origin: top left;
+        scale: 0.81;
+    }
 }
 
-.ob-pantalla-capa--entera img {
-    height: auto;
-    object-fit: contain;
+@media (max-width: 899px) {
+    .ob-escena {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .ob-escena .onboarding-card {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .ob-grupo {
+        display: none;
+    }
+
+    .ob-cab {
+        grid-template-columns: 1fr 84px;
+    }
+
+    .ob-mini {
+        display: block;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ob-flota.ob-grupo,
+    .ob-mini-aviso,
+    .ob-toque-dedo,
+    .ob-toque-onda,
+    .ob-cargando {
+        animation: none;
+    }
 }

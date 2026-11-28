@@ -170,6 +170,9 @@ export function planDe(perfil, tamanoId) {
 const P = (src, ancho, alto, alt) => ({ src, ancho, alto, alt, tipo: alto > ancho ? "movil" : "pc", entera: ancho / alto > 1.9 });
 
 export const PANTALLAS = {
+    // Al entrar, antes de elegir: la marca TotalGains (German, 28-nov: un gimnasio de primeras despista al entrenador).
+    marcaMovil: { marca: true, tipo: "movil", src: "marca-movil", alt: "TotalGains" },
+    marcaPc: { marca: true, tipo: "pc", src: "marca-pc", alt: "TotalGains" },
     socioPortadaAtlas: P("/images/gym/app-socio-portada-atlas.webp", 640, 1385, "App de un gimnasio con su marca"),
     socioPortadaVital: P("/images/gym/app-socio-portada-vital.webp", 640, 1385, "App del socio con la marca del gimnasio"),
     socioPortadaCumbre: P("/images/gym/app-socio-portada-cumbre.webp", 640, 1385, "App del socio con la marca del centro"),
@@ -218,7 +221,7 @@ export function etapaDe(perfil, tamanoId) {
 }
 
 const VISTA_PERFIL = {
-    inicio: { izq: "socioPortadaAtlas", der: "coachRutina", etqIzq: "La app de tus socios y clientes", etqDer: "Tu panel" },
+    inicio: { izq: "marcaMovil", der: "marcaPc", etqIzq: null, etqDer: null },
     gimnasio: { izq: "socioPortadaVital", der: "gymPanel", etqIzq: "La app de tu socio, con tu marca", etqDer: "El panel de tu centro" },
     entrenador: { izq: "clienteSeguimiento", der: "coachRutina", etqIzq: "La app de tu cliente", etqDer: "Tu panel" },
     nutricionista: { izq: "socioDieta", der: "coachDieta", etqIzq: "La app de tu paciente", etqDer: "Tu panel" },
@@ -248,7 +251,7 @@ export function vistaDe(r, encima) {
     return {
         izq: PANTALLAS[d ? d.izq : e?.izq || base.izq],
         der: PANTALLAS[d ? d.der : e?.der || base.der],
-        etqIzq: base.etqIzq,
+        etqIzq: e ? null : base.etqIzq,
         etqDer: e?.etqDer || base.etqDer,
     };
 }
