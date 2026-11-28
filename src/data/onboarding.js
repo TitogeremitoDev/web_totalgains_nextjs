@@ -1,0 +1,165 @@
+/* Recorrido de «Empieza gratis» (/onboarding/). German, 28-nov-2026: «¿podemos hacer el onboarding más interesante?».
+   Antes: 3 preguntas solo para entrenadores cuyas respuestas no se usaban. Ahora se adapta a quien entra:
+   gimnasio o box (primero), entrenador, nutricionista o «entreno por mi cuenta». Cada respuesta sirve para algo:
+   el tamaño elige el plan (con los precios de planesCoach.js y productSchema.js, que son los de /precios/),
+   lo que más tiempo le quita enseña cómo lo resuelve TotalGains con una captura real, y «¿cómo nos has conocido?»
+   empieza a medir de dónde viene la gente (evento de GA4; la app todavía no guarda el origen).
+   ⛔ Todo lo que se dice aquí está comprobado: si cambia una función, cambia su texto. */
+
+import { PLANES_COACH, euros } from "@/data/planesCoach";
+import { PLANES_GYM } from "@/data/productSchema";
+
+export const PERFILES = [
+    { id: "gimnasio", titulo: "Tengo un gimnasio, box o estudio", texto: "Clases, cuotas y la app de tu centro", icono: "gimnasio" },
+    { id: "entrenador", titulo: "Soy entrenador personal", texto: "Rutinas, dietas y seguimiento de tus clientes", icono: "entrenador" },
+    { id: "nutricionista", titulo: "Soy nutricionista", texto: "Dietas y seguimiento de tus pacientes", icono: "nutricionista" },
+    { id: "atleta", titulo: "Entreno por mi cuenta", texto: "Tu rutina, tu RM y cómo progresas", icono: "atleta" },
+];
+
+export const esProfesional = (perfil) => perfil === "entrenador" || perfil === "nutricionista";
+
+export function tamano(perfil) {
+    if (perfil === "gimnasio") {
+        return {
+            pregunta: "¿Cuántos socios activos tenéis?",
+            ayuda: "Con esto te decimos qué plan os toca.",
+            opciones: [
+                { id: "hasta-100", texto: "Menos de 100", plan: "gym-starter" },
+                { id: "100-200", texto: "De 100 a 200", plan: "gym-pro" },
+                { id: "mas-200", texto: "Más de 200", plan: "gym-elite" },
+            ],
+        };
+    }
+    const quien = perfil === "nutricionista" ? "pacientes" : "clientes";
+    return {
+        pregunta: `¿Cuántos ${quien} llevas ahora?`,
+        ayuda: "Sea cual sea tu caso, empiezas gratis.",
+        opciones: [
+            { id: "hasta-5", texto: "Hasta 5", plan: "gratis" },
+            { id: "6-25", texto: "De 6 a 25", plan: "starter" },
+            { id: "26-100", texto: "De 26 a 100", plan: "pro" },
+            { id: "mas-100", texto: "Más de 100", plan: "unlimited" },
+        ],
+    };
+}
+
+/* Lo que más tiempo le quita → cómo lo resuelve TotalGains, con una captura real de la app. */
+export function dolores(perfil) {
+    if (perfil === "gimnasio") {
+        return [
+            {
+                id: "reservas",
+                texto: "Las reservas de clases y la lista de espera",
+                titulo: "Reservas con aforo y lista de espera",
+                detalle: "Tus socios reservan su plaza desde la app y, si se libera una, entra el primero de la lista de espera.",
+                img: "/images/gym/app-socio-reservas.webp",
+                ancho: 640,
+                alto: 1385,
+                movil: true,
+            },
+            {
+                id: "cuotas",
+                texto: "Cobrar las cuotas y los bonos",
+                titulo: "Cuotas y bonos desde la app",
+                detalle: "El socio ve lo que le toca renovar y paga con «Pagar ahora»; queda como una venta más, con su ticket.",
+                img: "/images/gym/app-socio-pagos.webp",
+                ancho: 640,
+                alto: 1385,
+                movil: true,
+            },
+            {
+                id: "avisos",
+                texto: "Avisar a los socios de horarios y cambios",
+                titulo: "Avisos dentro de la app de tu centro",
+                detalle: "Horarios, cambios y clases nuevas aparecen en la app de tus socios, sin depender del grupo de WhatsApp.",
+                img: "/images/gym/app-socio-avisos.webp",
+                ancho: 640,
+                alto: 1385,
+                movil: true,
+            },
+            {
+                id: "marca",
+                texto: "Tener una app con nuestra marca",
+                titulo: "La app con la marca de tu centro",
+                detalle: "Tus socios entran en una app con tu logo y tus colores: reservas, rutinas, nutrición y seguimiento.",
+                img: "/images/gym/app-socio-portada-vital.webp",
+                ancho: 640,
+                alto: 1385,
+                movil: true,
+            },
+        ];
+    }
+    return [
+        {
+            id: "rutinas",
+            texto: "Hacer las rutinas",
+            titulo: "Rutinas en minutos",
+            detalle: "Series, descansos y RIR de cada ejercicio, con la biblioteca de ejercicios a mano.",
+            img: "/video/coach-primera-rutina.webp",
+            ancho: 1200,
+            alto: 676,
+            movil: false,
+        },
+        {
+            id: "dietas",
+            texto: "Hacer las dietas",
+            titulo: "Dietas con IA que revisas tú",
+            detalle: "La IA te propone el plan con más de 240.000 alimentos en español; tú lo revisas y decides.",
+            img: "/video/coach-primera-dieta.webp",
+            ancho: 1200,
+            alto: 676,
+            movil: false,
+        },
+        {
+            id: "seguimiento",
+            texto: "El seguimiento por WhatsApp",
+            titulo: "El seguimiento, ordenado",
+            detalle: "Check-in diario y semanal, sensaciones, medidas y fotos de progreso dentro de la app, no en mensajes sueltos.",
+            img: "/video/app-seguimiento.webp",
+            ancho: 720,
+            alto: 1280,
+            movil: true,
+        },
+        {
+            id: "cobros",
+            texto: "Cobrar a mis clientes",
+            titulo: "Cobros dentro de la app",
+            detalle: "Tu cliente paga su cuota con un toque y el dinero va directo a tu cuenta.",
+            img: "/video/coach-cobros.webp",
+            ancho: 1200,
+            alto: 675,
+            movil: false,
+        },
+    ];
+}
+
+export const ORIGENES = [
+    { id: "google", texto: "Buscando en Google" },
+    { id: "redes", texto: "Instagram o TikTok" },
+    { id: "ia", texto: "ChatGPT, Gemini u otra IA" },
+    { id: "recomendacion", texto: "Me lo recomendó alguien" },
+    { id: "otro", texto: "De otra forma" },
+];
+
+/* Pasos del recorrido según el perfil (el deportista no necesita tamaño ni «qué te quita tiempo»). */
+export function pasos(perfil) {
+    if (perfil === "atleta") return ["perfil", "origen", "final"];
+    return ["perfil", "tamano", "dolor", "origen", "final"];
+}
+
+/* Plan que le toca, con su precio real (con IVA). */
+export function planDe(perfil, tamanoId) {
+    const opcion = perfil ? tamano(perfil).opciones.find((o) => o.id === tamanoId) : null;
+    if (!opcion) return null;
+    if (perfil === "gimnasio") {
+        const g = PLANES_GYM.find((p) => p.id === opcion.plan);
+        return g ? { nombre: g.name.replace("TotalGains ", ""), precio: `${g.price} €/mes`, nota: "con IVA", detalle: g.description } : null;
+    }
+    if (opcion.plan === "gratis") {
+        return { nombre: "Plan gratuito", precio: "0 €", nota: "para siempre", detalle: "Hasta 5 atletas, sin tarjeta y sin caducidad." };
+    }
+    const c = PLANES_COACH[opcion.plan];
+    return c
+        ? { nombre: `Plan ${c.nombre}`, precio: `${euros(c.mes)}/mes`, nota: "con IVA", detalle: c.atletas ? `Hasta ${c.atletas} atletas.` : "Atletas ilimitados." }
+        : null;
+}

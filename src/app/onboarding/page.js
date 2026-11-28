@@ -12,7 +12,7 @@ import OnboardingContent from "@/components/OnboardingContent";
 export const metadata = {
   title: "Empieza gratis · 5 atletas sin tarjeta",
   description:
-    "Crea tu cuenta de TotalGains en menos de 2 minutos. Plan gratuito permanente hasta 5 atletas, sin tarjeta y sin caducidad. Panel profesional para gestionar atletas, rutinas con IA y seguimiento.",
+    "Empieza con TotalGains en menos de 2 minutos: para gimnasios y boxes, entrenadores personales, nutricionistas y deportistas. Plan gratuito permanente hasta 5 atletas, sin tarjeta y sin caducidad.",
   alternates: {
     canonical: "https://totalgains.es/onboarding/",
   },
