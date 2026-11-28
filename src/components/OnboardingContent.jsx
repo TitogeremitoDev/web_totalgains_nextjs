@@ -534,20 +534,34 @@ function PantallaMarca({ tipo }) {
     );
 }
 
-/* La captura, ya a su tamaño: 1x para pantallas normales y 2x para las de alta densidad (sin que el navegador la encoja). */
-function Captura({ pantalla }) {
-    // eslint-disable-next-line @next/next/no-img-element -- la web es estática (sin optimizador): el srcset va a mano
-    return <img src={pantalla.src} srcSet={`${pantalla.src} 1x, ${pantalla.src2} 2x`} alt="" width={pantalla.ancho} height={pantalla.alto} decoding="async" />;
+/* La captura, ya a su tamaño: 1x para pantallas normales y 2x para las de alta densidad (sin que el navegador la encoja).
+   En el móvil de delante va la versión ya girada (-4°), que el CSS contragira: el navegador no la gira y la letra sale limpia. */
+function Captura({ pantalla, girada }) {
+    const v = girada && pantalla.girada ? pantalla.girada : pantalla;
+    return (
+        // eslint-disable-next-line @next/next/no-img-element -- la web es estática (sin optimizador): el srcset va a mano
+        <img
+            className={v === pantalla ? undefined : "ob-captura-girada"}
+            src={v.src}
+            srcSet={`${v.src} 1x, ${v.src2} 2x`}
+            alt=""
+            width={v === pantalla ? pantalla.ancho : 211}
+            height={v === pantalla ? pantalla.alto : 410}
+            decoding="async"
+        />
+    );
 }
 
 /* Lo que se ve dentro de una pantalla, con fundido al cambiar. */
-function Capa({ pantalla, quieto }) {
+function Capa({ pantalla, quieto, girada }) {
+    // La versión girada ya trae la captura colocada en su pantalla (y el color de fondo si va entera).
+    const entera = pantalla.entera && !(girada && pantalla.girada);
     return (
         <AnimatePresence initial={false}>
             <motion.div
                 key={pantalla.src}
-                className={`ob-pantalla-capa ${pantalla.entera ? "ob-pantalla-capa--entera" : ""}`}
-                style={pantalla.entera ? { background: pantalla.fondo } : undefined}
+                className={`ob-pantalla-capa ${entera ? "ob-pantalla-capa--entera" : ""}`}
+                style={entera ? { background: pantalla.fondo } : undefined}
                 initial={quieto ? false : { opacity: 0, scale: 1.03 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 }}
@@ -556,7 +570,7 @@ function Capa({ pantalla, quieto }) {
                 {pantalla.marca ? (
                     <PantallaMarca tipo={pantalla.tipo === "pc" ? "pc" : "movil"} />
                 ) : (
-                    <Captura pantalla={pantalla} />
+                    <Captura pantalla={pantalla} girada={girada} />
                 )}
             </motion.div>
         </AnimatePresence>
@@ -680,7 +694,7 @@ function Dispositivos({ izq, der, rasgos, aviso, avisoPc, quieto, etiquetas, act
             <div className="ob-tel ob-tel--delante">
                 <span className="ob-tel-isla" />
                 <div className="ob-pantalla">
-                    <Capa pantalla={izq} quieto={quieto} />
+                    <Capa pantalla={izq} quieto={quieto} girada />
                     {toque && !izq.marca && (
                         <span key={toque.n} className="ob-toque" style={{ left: `${toque.x * 100}%`, top: `${toque.y * izq.alto * (TEL_PANTALLA / izq.ancho)}px` }}>
                             <span className="ob-toque-onda" />

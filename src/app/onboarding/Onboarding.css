@@ -618,16 +618,18 @@
     box-shadow: 0 40px 70px -24px rgba(0, 0, 0, 0.95), 0 0 0 1px rgba(129, 140, 248, 0.18);
 }
 
-/* sin giro (German, 28-nov: «pixeladas»): una captura girada sale con la letra dentada */
+/* girado (German, 28-nov: «me gustan girados»), con la captura ya girada en alta calidad (.ob-captura-girada) */
 .ob-tel--delante {
     left: 0;
     bottom: 0;
     z-index: 3;
+    transform: rotate(-4deg);
 }
 
 .ob-tel--detras {
     top: 0;
     right: 40px;
+    transform: rotate(5deg);
 }
 
 .ob-tel-isla {
@@ -661,6 +663,25 @@
     height: 100%;
     object-fit: cover;
     object-position: top center;
+}
+
+/* La captura ya girada -4° (como el móvil de delante): se coloca en el centro de su pantalla y se contragira +4°, así que el
+   navegador la pinta sin girar y la letra no se dentea. Mide lo que ocupa la pantalla de 184×398 girada (211×410). */
+.ob-pantalla-capa img.ob-captura-girada {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 211px;
+    max-width: none;
+    height: 410px;
+    object-fit: fill;
+    transform: translate(-50%, -50%) rotate(4deg);
+}
+
+/* las demás capturas que van giradas (el móvil de detrás y el pequeño): el mejor suavizado del navegador */
+.ob-tel--detras .ob-pantalla-capa img,
+.ob-mini img {
+    image-rendering: high-quality;
 }
 
 .ob-pantalla-capa--entera {
@@ -1024,6 +1045,7 @@
     background: #05070f;
     border: 1px solid rgba(255, 255, 255, 0.14);
     border-radius: 18px;
+    transform: rotate(4deg);
 }
 
 .ob-mini > div {
@@ -1286,6 +1308,7 @@
 .ob-tel.ob-tel--origen {
     position: relative;
     width: 272px;
+    transform: rotate(-2deg);
 }
 
 .ob-tel--origen .ob-pantalla {

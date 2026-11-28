@@ -287,7 +287,9 @@ const P = (original, ancho, alto, alt, fondo = "#f8fafc") => {
     const entera = Math.abs(ancho / alto - PROPORCION[tipo]) / PROPORCION[tipo] > 0.1;
     const base = original.split("/").pop().replace(/\.\w+$/, "");
     const src = `/images/onboarding/pantallas/${base}-1x.webp`;
-    return { src, src2: `/images/onboarding/pantallas/${base}-2x.webp`, original, ancho, alto, alt, tipo, entera, fondo };
+    // Las del móvil, además, ya giradas como el móvil de delante (-4°): así se ven giradas y nítidas a la vez.
+    const girada = tipo === "movil" ? { src: `/images/onboarding/pantallas/${base}-g4-1x.webp`, src2: `/images/onboarding/pantallas/${base}-g4-2x.webp` } : null;
+    return { src, src2: `/images/onboarding/pantallas/${base}-2x.webp`, girada, original, ancho, alto, alt, tipo, entera, fondo };
 };
 
 export const PANTALLAS = {
