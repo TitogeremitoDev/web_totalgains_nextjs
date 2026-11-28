@@ -141,6 +141,116 @@ export const ORIGENES = [
     { id: "otro", texto: "De otra forma" },
 ];
 
+/* «¿Cómo nos has conocido?»: el móvil enseña lo que eliges (German, 28-nov: «un reel de TikTok, un chat de Gemini…
+   algo que muestre lo que están seleccionando, no el resumen»). Sin ratón encima, va pasando solo de una a otra.
+   Los resultados de Google llevan el <title> y la descripción REALES de cada página; sin logos de otras marcas ni cifras. */
+export const ORIGEN_GIRO = ["google", "redes", "ia", "recomendacion"];
+export const ORIGEN_DURA = { google: 4600, redes: 6500, ia: 5600, recomendacion: 5600, otro: 3000 };
+export const ORIGEN_ETQ = {
+    google: "Buscando en Google",
+    redes: "@totalgainsfitness en Instagram · @totalgainsapp en TikTok",
+    ia: "Preguntando a ChatGPT, Gemini u otra IA",
+    recomendacion: "Te lo cuenta alguien que ya lo usa",
+    otro: "totalgains.es",
+};
+
+const REEL_GIMNASIO = { src: "/video/gym-entrenos-reel.mp4", poster: "/video/gym-entrenos-reel.jpg", texto: "Cuelgas el cartel, escanean y la rutina se abre en su app" };
+
+export const ORIGEN_PERFIL = {
+    gimnasio: {
+        busqueda: "app para gestionar mi gimnasio",
+        resultado: {
+            ruta: "totalgains.es › para-gimnasios",
+            titulo: "Software Gimnasios Pequeños 2026: Multi-Coach | TotalGains",
+            texto: "Software para gimnasios pequeños y boutique: clases con reserva, multi-coach, app marca blanca y cuotas con caja y facturación.",
+        },
+        reel: REEL_GIMNASIO,
+        ia: {
+            pregunta: "¿Qué app me recomiendas para las clases y las cuotas de mi box?",
+            respuesta: "Puedes mirar TotalGains, pensada para centros pequeños:",
+            puntos: ["Reservas de clases desde la app del socio", "Cuotas con caja y facturación", "La app con la marca de tu centro"],
+        },
+        chat: {
+            nombre: "Laura",
+            mensajes: [
+                { yo: false, t: "¿Cómo lleváis las reservas de las clases?" },
+                { yo: true, t: "Por WhatsApp… un caos" },
+                { yo: false, t: "Prueba TotalGains, los socios reservan desde la app" },
+            ],
+            enlace: "Software para gimnasios",
+        },
+    },
+    entrenador: {
+        busqueda: "app para entrenador personal",
+        resultado: {
+            ruta: "totalgains.es › software-entrenador-personal",
+            titulo: "Software Entrenadores Personales · 29,90 €/mes | TotalGains",
+            texto: "Rutinas con IA en menos de 2 min, +240.000 alimentos y app marca blanca en todos los planes. Gratis hasta 5 atletas.",
+        },
+        reel: { src: "/video/reel-dieta-ia.mp4", poster: "/video/reel-dieta-ia.jpg", texto: "Le das a «Generar con IA» y la revisas tú" },
+        ia: {
+            pregunta: "¿Qué app uso para las rutinas y el seguimiento de mis clientes?",
+            respuesta: "Puedes mirar TotalGains, hecha para entrenadores:",
+            puntos: ["Rutinas y dietas en la app de tus clientes", "El feedback semanal, en un solo sitio", "Gratis hasta 5 atletas"],
+        },
+        chat: {
+            nombre: "Marta",
+            mensajes: [
+                { yo: false, t: "¿Sigues mandando las rutinas en PDF?" },
+                { yo: true, t: "Sí, y el seguimiento por WhatsApp…" },
+                { yo: false, t: "Pásate a TotalGains, tus clientes lo ven todo en la app" },
+            ],
+            enlace: "Software para entrenadores personales",
+        },
+    },
+    nutricionista: {
+        busqueda: "programa de dietas para nutricionistas",
+        resultado: {
+            ruta: "totalgains.es › software-nutricionista-online",
+            titulo: "Software para Nutricionistas: programa de dietas con IA",
+            texto: "Programa de dietas para nutricionistas: planes con IA y +240.000 alimentos, pacientes, seguimiento y agenda de citas, con tu marca.",
+        },
+        reel: { src: "/video/reel-ia-edita-dieta.mp4", poster: "/video/reel-ia-edita-dieta.jpg", texto: "Le pides el cambio con una frase y tú lo revisas" },
+        ia: {
+            pregunta: "¿Qué programa me recomiendas para hacer dietas a mis pacientes?",
+            respuesta: "Puedes mirar TotalGains, con un apartado para nutricionistas:",
+            puntos: ["Dietas con ayuda de la IA, que revisas tú", "+240.000 alimentos", "Seguimiento de tus pacientes en su app"],
+        },
+        chat: {
+            nombre: "Marta",
+            mensajes: [
+                { yo: false, t: "¿Con qué haces ahora las dietas?" },
+                { yo: true, t: "Con plantillas en el ordenador…" },
+                { yo: false, t: "Mira TotalGains, el paciente la tiene en su app" },
+            ],
+            enlace: "Programa de dietas para nutricionistas",
+        },
+    },
+    atleta: {
+        busqueda: "calculadora de rm",
+        resultado: {
+            ruta: "totalgains.es › calculadora-rm",
+            titulo: "Calculadora de RM (1RM): tu repetición máxima y tus porcentajes | TotalGains",
+            texto: "Calculadora de RM gratis por ejercicio: tu 1RM estimado con Epley y Brzycki, tus pesos del 50 al 100 % y qué discos poner en la barra.",
+        },
+        reel: REEL_GIMNASIO,
+        ia: {
+            pregunta: "¿Qué app me sirve para apuntar mis series y ver mi RM?",
+            respuesta: "Puedes mirar TotalGains:",
+            puntos: ["Apuntas tus series y calcula tu RM estimado", "En «Evolución» ves cómo progresas", "Si tienes entrenador, te vinculas con su código"],
+        },
+        chat: {
+            nombre: "Marta",
+            mensajes: [
+                { yo: false, t: "¿Dónde apuntas los pesos?" },
+                { yo: true, t: "En las notas del móvil" },
+                { yo: false, t: "Bájate TotalGains, te calcula el RM de cada ejercicio" },
+            ],
+            enlace: "Entrena con la app de TotalGains",
+        },
+    },
+};
+
 /* Pasos del recorrido según el perfil (el deportista no necesita tamaño ni «qué te quita tiempo»). */
 export function pasos(perfil) {
     if (perfil === "atleta") return ["perfil", "origen", "final"];

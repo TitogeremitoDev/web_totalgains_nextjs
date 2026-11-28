@@ -1,14 +1,15 @@
 "use client";
 
-import React, { useEffect, useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
-import { Activity, Apple, ArrowLeft, Building2, Check, Dumbbell } from "lucide-react";
+import { Activity, Apple, ArrowLeft, Building2, Check, Dumbbell, Globe, MessageCircle, Play, Search, Sparkles } from "lucide-react";
 import { trackEvent } from "@/components/Analytics";
 import DemoVideo from "@/components/DemoVideo";
 import { EN_TODOS_LOS_PLANES } from "@/data/planesCoach";
-import { ESCENAS, ETIQUETAS, ORIGENES, PANTALLAS, PERFILES, avisoDe, dolores, esProfesional, etapaDe, pasos, planDe, tamano, vistaDe } from "@/data/onboarding";
+import PantallaOrigen from "@/components/onboarding/PantallaOrigen";
+import { ESCENAS, ETIQUETAS, ORIGEN_DURA, ORIGEN_ETQ, ORIGEN_GIRO, ORIGENES, PANTALLAS, PERFILES, avisoDe, dolores, esProfesional, etapaDe, pasos, planDe, tamano, vistaDe } from "@/data/onboarding";
 import "@/app/onboarding/Onboarding.css";
 
 /* «Empieza gratis»: un recorrido que se adapta a quien entra (datos y textos en src/data/onboarding.js).
@@ -19,6 +20,16 @@ import "@/app/onboarding/Onboarding.css";
 
 const ICONOS = { gimnasio: Building2, entrenador: Dumbbell, nutricionista: Apple, atleta: Activity };
 const APP_REGISTER = "https://totalgains.es/app/register";
+const ICONO_ORIGEN = { google: Search, redes: Play, ia: Sparkles, recomendacion: MessageCircle, otro: Globe };
+
+// ¿Pantalla ancha (se ve el escenario de la derecha)? Así el reel solo se descarga donde se ve.
+const ANCHO = "(min-width: 900px)";
+const suscribirAncho = (avisar) => {
+    const mq = window.matchMedia(ANCHO);
+    mq.addEventListener("change", avisar);
+    return () => mq.removeEventListener("change", avisar);
+};
+const esAncho = () => window.matchMedia(ANCHO).matches;
 
 export default function OnboardingContent() {
     const [paso, setPaso] = useState(0);
@@ -29,6 +40,7 @@ export default function OnboardingContent() {
     const [avisoPc, setAvisoPc] = useState(null);
     const [toque, setToque] = useState(null);
     const [vuelta, setVuelta] = useState(0);
+    const [giro, setGiro] = useState(0);
     const temporizador = useRef(null);
     const temporizadorPc = useRef(null);
     const escenaTimers = useRef([]);
@@ -61,6 +73,16 @@ export default function OnboardingContent() {
     const carrusel = ESCENAS.marca.carrusel;
     const vista = marcaActiva ? { ...base, izq: PANTALLAS[carrusel[vuelta % carrusel.length]] } : base;
     const etiquetas = perfilVisto ? ETIQUETAS[perfilVisto] : null;
+
+    // «¿Cómo nos has conocido?»: el móvil enseña la opción que tienes encima; si no, va pasando solo por las cuatro.
+    const ancho = useSyncExternalStore(suscribirAncho, esAncho, () => false);
+    const origenFijo = encima?.campo === "origen" ? encima.valor : null;
+    const fuente = origenFijo || ORIGEN_GIRO[giro % ORIGEN_GIRO.length];
+    useEffect(() => {
+        if (actual !== "origen" || origenFijo || quieto) return undefined;
+        const t = setTimeout(() => setGiro((g) => g + 1), ORIGEN_DURA[fuente]);
+        return () => clearTimeout(t);
+    }, [actual, origenFijo, quieto, fuente, giro]);
 
     // La notificación que salta en el móvil de la izquierda al responder.
     const avisar = (a) => {
@@ -228,7 +250,13 @@ export default function OnboardingContent() {
 
                             {actual === "origen" && (
                                 <>
-                                    <Cabecera titulo="¿Cómo nos has conocido?" sub="Nos ayuda a saber dónde contar lo que hacemos. Es lo último." pantalla={vista.izq} aviso={aviso} />
+                                    <Cabecera
+                                        titulo="¿Cómo nos has conocido?"
+                                        sub="Nos ayuda a saber dónde contar lo que hacemos. Es lo último."
+                                        pantalla={vista.izq}
+                                        aviso={aviso}
+                                        nodo={ancho ? null : <PantallaOrigen key={fuente} fuente={fuente} perfil={r.perfil} quieto={quieto} mini />}
+                                    />
                                     <div className="options-grid">
                                         {ORIGENES.map((o) => opcion("origen", o.id, o.texto))}
                                     </div>
@@ -247,22 +275,25 @@ export default function OnboardingContent() {
                                     incluido={["Coaches ilimitados", "App con la marca de tu centro", "Clases con reserva"]}
                                     resumen={resumenDe(r)}
                                     alCambiar={empezarDeNuevo}
-                                >
-                                    <div className="ob-botones">
-                                        <Link
-                                            href="/demo/gimnasios/"
-                                            className="btn btn-primary btn-lg"
-                                            prefetch={false}
-                                            onClick={() => trackEvent("cta_click", { cta_text: "Pide tu demo", cta_location: "onboarding_gimnasio" })}
-                                        >
-                                            Pide tu demo
-                                        </Link>
-                                        <Link href="/para-gimnasios/" className="btn btn-outline btn-lg" prefetch={false}>
-                                            Ver TotalGains para gimnasios
-                                        </Link>
-                                    </div>
-                                    <p className="microcopy-secure mt-4">Te contestamos en menos de 24 horas, sin compromiso.</p>
-                                </Final>
+                                    acciones={
+                                        <>
+                                            <div className="ob-botones">
+                                                <Link
+                                                    href="/demo/gimnasios/"
+                                                    className="btn btn-primary btn-lg"
+                                                    prefetch={false}
+                                                    onClick={() => trackEvent("cta_click", { cta_text: "Pide tu demo", cta_location: "onboarding_gimnasio" })}
+                                                >
+                                                    Pide tu demo
+                                                </Link>
+                                                <Link href="/para-gimnasios/" className="btn btn-outline btn-lg" prefetch={false}>
+                                                    Ver TotalGains para gimnasios
+                                                </Link>
+                                            </div>
+                                            <p className="microcopy-secure">Te contestamos en menos de 24 horas, sin compromiso.</p>
+                                        </>
+                                    }
+                                />
                             )}
 
                             {actual === "final" && esProfesional(r.perfil) && (
@@ -275,7 +306,20 @@ export default function OnboardingContent() {
                                     nota="Empiezas con 14 días para probarlo todo. Si al acabar llevas 5 atletas o menos, sigues gratis para siempre."
                                     resumen={resumenDe(r)}
                                     alCambiar={empezarDeNuevo}
+                                    acciones={
+                                        <>
+                                            <a
+                                                href={APP_REGISTER}
+                                                className="btn btn-primary btn-lg w-full"
+                                                onClick={() => trackEvent("signup_redirect", { destination: "app_register", perfil: r.perfil })}
+                                            >
+                                                Crear mi cuenta gratis
+                                            </a>
+                                            <p className="microcopy-secure">Sin tarjeta de crédito. Cancela cuando quieras.</p>
+                                        </>
+                                    }
                                 >
+                                    <p className="ob-final-extra-t">Así es TotalGains por dentro</p>
                                     <div className="ob-video ob-video--wide">
                                         <DemoVideo
                                             src="/video/coach-bienvenida-escritorio.mp4"
@@ -294,49 +338,52 @@ export default function OnboardingContent() {
                                             ubicacion="onboarding"
                                         />
                                     </div>
-                                    <a
-                                        href={APP_REGISTER}
-                                        className="btn btn-primary btn-lg w-full"
-                                        onClick={() => trackEvent("signup_redirect", { destination: "app_register", perfil: r.perfil })}
-                                    >
-                                        Crear mi cuenta gratis
-                                    </a>
-                                    <p className="microcopy-secure mt-4">Sin tarjeta de crédito. Cancela cuando quieras.</p>
                                 </Final>
                             )}
 
                             {actual === "final" && r.perfil === "atleta" && (
-                                <Final titulo="Entrena con la app de TotalGains" resumen={resumenDe(r)} alCambiar={empezarDeNuevo}>
-                                    <ul className="ob-lista">
-                                        <li>Apuntas tus series y la app calcula tu RM estimado de cada ejercicio.</li>
-                                        <li>En «Evolución» ves cómo progresas semana a semana.</li>
-                                        <li>Si tienes entrenador o gimnasio, te vinculas con su código.</li>
-                                    </ul>
-                                    <div className="ob-botones">
-                                        <a
-                                            href={APP_REGISTER}
-                                            className="btn btn-primary btn-lg"
-                                            onClick={() => trackEvent("signup_redirect", { destination: "app_register", perfil: "atleta" })}
-                                        >
-                                            Crear mi cuenta gratis
-                                        </a>
-                                        <Link href="/calculadora-rm/" className="btn btn-outline btn-lg" prefetch={false}>
-                                            Calcula tu RM ahora
-                                        </Link>
-                                    </div>
-                                    <p className="microcopy-secure mt-4">Al crear la cuenta, elige «Entreno por mi cuenta». Sin tarjeta.</p>
-                                </Final>
+                                <Final
+                                    titulo="Entrena con la app de TotalGains"
+                                    resumen={resumenDe(r)}
+                                    alCambiar={empezarDeNuevo}
+                                    acciones={
+                                        <>
+                                            <div className="ob-botones">
+                                                <a
+                                                    href={APP_REGISTER}
+                                                    className="btn btn-primary btn-lg"
+                                                    onClick={() => trackEvent("signup_redirect", { destination: "app_register", perfil: "atleta" })}
+                                                >
+                                                    Crear mi cuenta gratis
+                                                </a>
+                                                <Link href="/calculadora-rm/" className="btn btn-outline btn-lg" prefetch={false}>
+                                                    Calcula tu RM ahora
+                                                </Link>
+                                            </div>
+                                            <p className="microcopy-secure">Al crear la cuenta, elige «Entreno por mi cuenta». Sin tarjeta.</p>
+                                        </>
+                                    }
+                                    lado={
+                                        <ul className="ob-lista">
+                                            <li>Apuntas tus series y la app calcula tu RM estimado de cada ejercicio.</li>
+                                            <li>En «Evolución» ves cómo progresas semana a semana.</li>
+                                            <li>Si tienes entrenador o gimnasio, te vinculas con su código.</li>
+                                        </ul>
+                                    }
+                                />
                             )}
                         </motion.div>
                     </AnimatePresence>
                 </div>
             </div>
-            {/* En el final no van los dispositivos (German, 28-nov: «quita la parte derecha para que no desborde»). */}
-            {actual !== "final" && (
+            {/* En el final no van los dispositivos (German, 28-nov: «quita la parte derecha para que no desborde»).
+                En «¿Cómo nos has conocido?», un móvil grande con lo que eliges (búsqueda, reel, chat con una IA o un amigo). */}
+            {actual === "origen" && <EscenaOrigen fuente={fuente} perfil={r.perfil} quieto={quieto} ancho={ancho} />}
+            {actual !== "final" && actual !== "origen" && (
             <Dispositivos
                 izq={vista.izq}
                 der={vista.der}
-                rasgos={actual === "origen" ? resumenRasgos(r, plan, dolor) : vista.rasgos}
+                rasgos={vista.rasgos}
                 aviso={aviso}
                 avisoPc={avisoPc}
                 quieto={quieto}
@@ -351,16 +398,6 @@ export default function OnboardingContent() {
     );
 }
 
-/* En «¿Cómo nos has conocido?»: lo que llevas elegido, para que no se repita lo de antes. */
-function resumenRasgos(r, plan, dolor) {
-    const marca =
-        r.perfil === "gimnasio" ? "La app con la marca de tu centro" : r.perfil === "atleta" ? "Tu entreno, apuntado y medido" : "La app con tu marca, incluida en todos los planes";
-    return {
-        titulo: "Así queda tu TotalGains",
-        items: [plan ? `Tu plan: ${plan.nombre} · ${plan.precio}` : null, dolor ? dolor.titulo : null, marca].filter(Boolean),
-    };
-}
-
 function resumenDe(r) {
     const perfil = PERFILES.find((p) => p.id === r.perfil)?.titulo;
     const t = r.perfil && r.perfil !== "atleta" ? tamano(r.perfil).opciones.find((o) => o.id === r.tamano)?.texto : null;
@@ -368,87 +405,94 @@ function resumenDe(r) {
     return [perfil, t, d].filter(Boolean);
 }
 
-function Final({ titulo, plan, dolor, incluido, nota, rasgos, resumen, alCambiar, children }) {
+/* El final (German, 28-nov: «si tienen que scrollear para crear mi cuenta gratis, algo estamos haciendo mal»): a la izquierda
+   el plan y, justo debajo, el botón, que se ve sin bajar; a la derecha lo que más tiempo te quita y las «features» de tu
+   etapa. El vídeo, si lo hay, va debajo de todo. */
+function Final({ titulo, plan, dolor, incluido, nota, rasgos, resumen, alCambiar, acciones, lado, children }) {
+    const hayLado = Boolean(dolor || rasgos || lado);
     return (
         <div className="ob-final">
-            <span className="ob-final-etiqueta">
-                <Check size={14} aria-hidden="true" /> Hecho a tu medida
-            </span>
-            <h2 className="step-title">{titulo}</h2>
-            <div className="ob-resumen">
-                {resumen.map((t) => (
-                    <span key={t} className="ob-chip">
-                        {t}
+            <div className={`ob-final-rejilla ${hayLado ? "" : "ob-final-rejilla--sola"}`}>
+                <div className="ob-final-col">
+                    <span className="ob-final-etiqueta">
+                        <Check size={14} aria-hidden="true" /> Hecho a tu medida
                     </span>
-                ))}
-                <button type="button" className="ob-cambiar" onClick={alCambiar}>
-                    Cambiar
-                </button>
-            </div>
-
-            <div className={`ob-final-rejilla ${dolor ? "" : "ob-final-rejilla--sola"}`}>
-            <div className="ob-final-col">
-            {plan && (
-                <div className="ob-plan">
-                    <div>
-                        <p className="ob-plan-etq">Tu plan</p>
-                        <p className="ob-plan-nombre">{plan.nombre}</p>
-                        <p className="ob-plan-detalle">{plan.detalle}</p>
-                    </div>
-                    <div className="ob-plan-precio">
-                        <span>{plan.precio}</span>
-                        <small>{plan.nota}</small>
-                    </div>
-                </div>
-            )}
-            {nota && <p className="ob-nota">{nota}</p>}
-            {incluido && (
-                <ul className="ob-incluido">
-                    {incluido.map((t) => (
-                        <li key={t}>
-                            <Check size={15} aria-hidden="true" /> {t}
-                        </li>
-                    ))}
-                </ul>
-            )}
-            {rasgos && (
-                <div className="ob-final-rasgos">
-                    <p>{rasgos.titulo}</p>
-                    <ul>
-                        {rasgos.items.map((t) => (
-                            <li key={t}>
-                                <span className="ob-rasgos-ico">
-                                    <Check size={13} />
-                                </span>
+                    <h2 className="step-title">{titulo}</h2>
+                    <div className="ob-resumen">
+                        {resumen.map((t) => (
+                            <span key={t} className="ob-chip">
                                 {t}
-                            </li>
+                            </span>
                         ))}
-                    </ul>
-                </div>
-            )}
-
-            </div>
-            {dolor && (
-                <div className={`ob-dolor ${dolor.movil ? "ob-dolor--movil" : ""}`}>
-                    <div className="ob-dolor-img">
-                        <Image src={dolor.img} alt={dolor.titulo} width={dolor.ancho} height={dolor.alto} sizes="(max-width: 600px) 90vw, 320px" />
+                        <button type="button" className="ob-cambiar" onClick={alCambiar}>
+                            Cambiar
+                        </button>
                     </div>
-                    <div className="ob-dolor-textos">
-                        <p className="ob-dolor-etq">Lo que más tiempo te quita, resuelto</p>
-                        <p className="ob-dolor-t">{dolor.titulo}</p>
-                        <p className="ob-dolor-d">{dolor.detalle}</p>
-                    </div>
+                    {plan && (
+                        <div className="ob-plan">
+                            <div>
+                                <p className="ob-plan-etq">Tu plan</p>
+                                <p className="ob-plan-nombre">{plan.nombre}</p>
+                                <p className="ob-plan-detalle">{plan.detalle}</p>
+                            </div>
+                            <div className="ob-plan-precio">
+                                <span>{plan.precio}</span>
+                                <small>{plan.nota}</small>
+                            </div>
+                        </div>
+                    )}
+                    <div className="ob-final-cta">{acciones}</div>
+                    {nota && <p className="ob-nota">{nota}</p>}
+                    {incluido && (
+                        <ul className="ob-incluido">
+                            {incluido.map((t) => (
+                                <li key={t}>
+                                    <Check size={15} aria-hidden="true" /> {t}
+                                </li>
+                            ))}
+                        </ul>
+                    )}
                 </div>
-            )}
+                {hayLado && (
+                    <div className="ob-final-lado">
+                        {dolor && (
+                            <div className={`ob-dolor ${dolor.movil ? "ob-dolor--movil" : ""}`}>
+                                <div className="ob-dolor-img">
+                                    <Image src={dolor.img} alt={dolor.titulo} width={dolor.ancho} height={dolor.alto} sizes="(max-width: 600px) 90vw, 420px" />
+                                </div>
+                                <div className="ob-dolor-textos">
+                                    <p className="ob-dolor-etq">Lo que más tiempo te quita, resuelto</p>
+                                    <p className="ob-dolor-t">{dolor.titulo}</p>
+                                    <p className="ob-dolor-d">{dolor.detalle}</p>
+                                </div>
+                            </div>
+                        )}
+                        {rasgos && (
+                            <div className="ob-final-rasgos">
+                                <p>{rasgos.titulo}</p>
+                                <ul>
+                                    {rasgos.items.map((t) => (
+                                        <li key={t}>
+                                            <span className="ob-rasgos-ico">
+                                                <Check size={13} />
+                                            </span>
+                                            {t}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        )}
+                        {lado}
+                    </div>
+                )}
             </div>
-
-            {children}
+            {children && <div className="ob-final-extra">{children}</div>}
         </div>
     );
 }
 
 /* Cabecera de cada pregunta. En el móvil lleva al lado un mini teléfono con la app (en el ordenador están los marcos). */
-function Cabecera({ titulo, sub, pantalla, aviso }) {
+function Cabecera({ titulo, sub, pantalla, aviso, nodo }) {
     return (
         <div className="ob-cab">
             <div>
@@ -456,11 +500,15 @@ function Cabecera({ titulo, sub, pantalla, aviso }) {
                 <p className="step-subtitle">{sub}</p>
             </div>
             <div className="ob-mini" aria-hidden="true">
-                <AnimatePresence mode="popLayout" initial={false}>
-                    <motion.div key={pantalla.src} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
-                        {pantalla.marca ? <PantallaMarca tipo="mini" /> : <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes="96px" />}
-                    </motion.div>
-                </AnimatePresence>
+                {nodo ? (
+                    <div className="ob-mini-nodo">{nodo}</div>
+                ) : (
+                    <AnimatePresence mode="popLayout" initial={false}>
+                        <motion.div key={pantalla.src} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} transition={{ duration: 0.25 }}>
+                            {pantalla.marca ? <PantallaMarca tipo="mini" /> : <Image src={pantalla.src} alt="" width={pantalla.ancho} height={pantalla.alto} sizes="96px" />}
+                        </motion.div>
+                    </AnimatePresence>
+                )}
                 {aviso && <span key={aviso.n} className="ob-mini-aviso" />}
             </div>
         </div>
@@ -506,6 +554,46 @@ function Capa({ pantalla, quieto, sizes }) {
                 )}
             </motion.div>
         </AnimatePresence>
+    );
+}
+
+/* «¿Cómo nos has conocido?»: un móvil grande con lo que eliges y, debajo, de dónde viene (sin el resumen de antes). */
+function EscenaOrigen({ fuente, perfil, quieto, ancho }) {
+    const Icono = ICONO_ORIGEN[fuente];
+    return (
+        <aside className="ob-grupo ob-grupo--origen">
+            <div className={`ob-or-escenario ${quieto ? "" : "ob-flota"}`} aria-hidden="true">
+                <div className="ob-tel ob-tel--origen">
+                    <span className="ob-tel-isla" />
+                    <div className="ob-pantalla">
+                        <AnimatePresence initial={false}>
+                            <motion.div
+                                key={fuente}
+                                className="ob-pantalla-capa"
+                                initial={quieto ? false : { opacity: 0, scale: 1.03 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.3 }}
+                            >
+                                {ancho && <PantallaOrigen fuente={fuente} perfil={perfil} quieto={quieto} />}
+                            </motion.div>
+                        </AnimatePresence>
+                    </div>
+                </div>
+            </div>
+            <AnimatePresence mode="wait" initial={false}>
+                <motion.p
+                    key={fuente}
+                    className="ob-or-etq"
+                    initial={quieto ? false : { opacity: 0, y: 8 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -6 }}
+                    transition={{ duration: 0.2 }}
+                >
+                    <Icono size={15} aria-hidden="true" /> {ORIGEN_ETQ[fuente]}
+                </motion.p>
+            </AnimatePresence>
+        </aside>
     );
 }
 

@@ -1068,15 +1068,63 @@
 
 /* el final va solo, centrado y más ancho; el plan y «lo que más tiempo te quita» lado a lado */
 .ob-escena--final {
-    grid-template-columns: minmax(0, 900px);
+    grid-template-columns: minmax(0, 1060px);
+}
+
+/* el botón tiene que verse sin bajar: menos aire arriba y el plan + botón a la izquierda */
+.ob-escena--final .onboarding-card {
+    padding-top: var(--spacing-xl);
+}
+
+.ob-escena--final .ob-arriba {
+    margin-bottom: var(--spacing-md);
 }
 
 .ob-final-rejilla {
     display: grid;
-    grid-template-columns: 1.1fr 1fr;
-    gap: 16px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+    gap: 32px;
     align-items: start;
-    margin-bottom: var(--spacing-md);
+}
+
+.ob-final-cta {
+    margin: 16px 0 4px;
+}
+
+.ob-final-cta .microcopy-secure {
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.ob-final-lado {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.ob-final-lado .ob-final-rasgos {
+    margin-top: 0;
+}
+
+.ob-final-lado .ob-lista {
+    margin: 0;
+    padding: 16px 18px 16px 34px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(165, 180, 252, 0.2);
+    border-radius: 14px;
+}
+
+.ob-final-extra {
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ob-final-extra-t {
+    margin: 0 0 12px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--text-primary, #fff);
 }
 
 .ob-final-rejilla--sola {
@@ -1160,6 +1208,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
+    .ob-or-escenario.ob-flota,
+    .ob-or *,
+    .ob-or *::after,
     .ob-flota.ob-grupo-disp,
     .ob-mini-aviso,
     .ob-toque-dedo,
@@ -1204,4 +1255,740 @@
 
 .ob-final-rejilla .ob-dolor--movil .ob-dolor-img img {
     max-height: 300px;
+}
+
+/* ── «¿Cómo nos has conocido?» (28-nov, 5.ª vuelta): un móvil grande con lo que eliges — la búsqueda, el reel, el chat con
+   una IA o el mensaje de alguien que te lo cuenta. Todo genérico, sin logos de otras marcas. ── */
+.ob-grupo--origen {
+    align-items: center;
+    gap: 16px;
+}
+
+.ob-or-escenario {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 600px;
+    height: 570px;
+}
+
+.ob-or-escenario::before {
+    content: "";
+    position: absolute;
+    inset: 40px 120px;
+    z-index: -1;
+    background: radial-gradient(closest-side, rgba(129, 140, 248, 0.35), transparent);
+    filter: blur(20px);
+}
+
+.ob-or-escenario.ob-flota {
+    animation: ob-flota 8s ease-in-out infinite;
+}
+
+.ob-tel.ob-tel--origen {
+    position: relative;
+    width: 272px;
+    transform: rotate(-2deg);
+}
+
+.ob-tel--origen .ob-pantalla {
+    height: 548px;
+    background: #0b1020;
+}
+
+.ob-or-etq {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 8px 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary, #fff);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(165, 180, 252, 0.3);
+    border-radius: 999px;
+}
+
+.ob-or-etq svg {
+    color: #a5b4fc;
+}
+
+.ob-or {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    text-align: left;
+}
+
+/* la web pone tamaño y color a todos los <p> y <li>: dentro de las pantallas mandan las de cada pantalla */
+.ob-or p,
+.ob-or li {
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+/* las capturas ocupan toda la pantalla, pero los logos de estas pantallas van a su tamaño */
+.ob-or .ob-or-logo {
+    display: block;
+    flex: 0 0 auto;
+    object-fit: contain;
+}
+
+/* en el móvil pequeño de la cabecera (pantallas estrechas): la misma pantalla, encogida */
+.ob-mini-nodo .ob-or {
+    inset: auto;
+    top: 0;
+    left: 0;
+    width: 256px;
+    height: 548px;
+    transform: scale(0.29);
+    transform-origin: top left;
+}
+
+/* buscador */
+.ob-or--buscador {
+    gap: 10px;
+    padding: 46px 14px 14px;
+    color: #202124;
+    background: #fff;
+}
+
+.ob-or-bus-barra {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    height: 40px;
+    padding: 0 10px 0 12px;
+    font-size: 12px;
+    color: #5f6368;
+    background: #fff;
+    border-radius: 999px;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+}
+
+.ob-or-bus-barra span {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #202124;
+}
+
+.ob-or-escribe::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 14px;
+    margin-left: 1px;
+    vertical-align: -2px;
+    background: #1a73e8;
+    animation: ob-or-cursor 0.8s steps(1) infinite;
+}
+
+.ob-or-bus-mic {
+    color: #1a73e8;
+}
+
+.ob-or-bus-pestanas {
+    display: flex;
+    gap: 14px;
+    padding: 2px 6px 0;
+    font-size: 11.5px;
+    color: #5f6368;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.ob-or-bus-pestanas b,
+.ob-or-bus-pestanas span {
+    padding-bottom: 7px;
+}
+
+.ob-or-bus-pestanas b {
+    font-weight: 600;
+    color: #1a73e8;
+    border-bottom: 2px solid #1a73e8;
+}
+
+.ob-or-bus-res {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    animation: ob-or-entra 0.35s ease-out;
+}
+
+.ob-or-bus-uno {
+    position: relative;
+    padding: 10px;
+    border-radius: 12px;
+    transition: background 0.2s;
+}
+
+.ob-or-bus-uno.is-tocado {
+    background: #f1f3f4;
+}
+
+.ob-or-bus-sitio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.ob-or .ob-or-bus-sitio img {
+    width: 22px;
+    height: 22px;
+    padding: 2px;
+    background: #0b1020;
+    border-radius: 50%;
+}
+
+.ob-or-bus-sitio span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+
+.ob-or-bus-sitio strong {
+    font-size: 12px;
+    font-weight: 500;
+    color: #202124;
+}
+
+.ob-or-bus-sitio em {
+    font-size: 10.5px;
+    font-style: normal;
+    color: #4d5156;
+}
+
+.ob-or .ob-or-bus-tit {
+    margin: 7px 0 4px;
+    font-size: 15px;
+    line-height: 1.3;
+    color: #1a0dab;
+}
+
+.ob-or .ob-or-bus-txt {
+    font-size: 11.5px;
+    line-height: 1.45;
+    color: #4d5156;
+}
+
+.ob-or-hueso {
+    display: block;
+    height: 10px;
+    margin: 0 10px;
+    background: #eceff1;
+    border-radius: 6px;
+}
+
+.ob-or-hueso--corto {
+    width: 60%;
+}
+
+/* los otros resultados, en gris (no se inventa ninguno) */
+.ob-or-bus-otro {
+    display: grid;
+    gap: 7px;
+    padding: 4px 10px;
+}
+
+.ob-or-bus-otro .ob-or-hueso {
+    margin: 0;
+}
+
+.ob-or-hueso--titulo {
+    width: 78%;
+    height: 13px;
+    background: #e3e9f8;
+}
+
+.ob-or-bus-cargando {
+    width: 24px;
+    height: 24px;
+    margin: 30px auto;
+    border: 3px solid #e8eaed;
+    border-top-color: #1a73e8;
+    border-radius: 50%;
+    animation: ob-gira 0.8s linear infinite;
+}
+
+.ob-or-dedo {
+    position: absolute;
+    top: 46px;
+    left: 58%;
+    width: 30px;
+    height: 30px;
+    background: rgba(26, 115, 232, 0.22);
+    border: 2px solid rgba(26, 115, 232, 0.6);
+    border-radius: 50%;
+    animation: ob-or-toque 0.7s ease-out 2;
+}
+
+/* reel */
+.ob-or--reel {
+    color: #fff;
+    background: #000;
+}
+
+.ob-or .ob-or-reel-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ob-or-reel-sombra {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 36%), linear-gradient(to bottom, rgba(0, 0, 0, 0.35), transparent 16%);
+}
+
+.ob-or-reel-botones {
+    position: absolute;
+    right: 10px;
+    bottom: 118px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.6));
+}
+
+.ob-or-reel-like {
+    display: flex;
+    color: #ff3b5c;
+    animation: ob-or-late 1.4s ease-in-out infinite;
+}
+
+.ob-or-reel-pie {
+    position: absolute;
+    right: 52px;
+    bottom: 16px;
+    left: 12px;
+}
+
+.ob-or-reel-cuenta {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 12px;
+}
+
+.ob-or .ob-or-reel-cuenta img {
+    width: 24px;
+    height: 24px;
+    background: #0b1020;
+    border: 1.5px solid #fff;
+    border-radius: 50%;
+}
+
+.ob-or-reel-cuenta span {
+    padding: 2px 8px;
+    font-size: 10.5px;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 6px;
+}
+
+.ob-or .ob-or-reel-pie p {
+    margin: 7px 0 5px;
+    font-size: 11.5px;
+    line-height: 1.35;
+}
+
+.ob-or-reel-pie small {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+    opacity: 0.85;
+}
+
+.ob-or-corazones {
+    position: absolute;
+    right: 12px;
+    bottom: 268px;
+    width: 30px;
+    height: 150px;
+    color: #ff3b5c;
+    pointer-events: none;
+}
+
+.ob-or-corazones svg {
+    position: absolute;
+    bottom: 0;
+    left: 6px;
+    opacity: 0;
+    animation: ob-or-sube 2.6s ease-out infinite;
+}
+
+.ob-or-corazones svg:nth-child(2) {
+    left: 0;
+    color: #fff;
+    animation-delay: 0.9s;
+}
+
+.ob-or-corazones svg:nth-child(3) {
+    left: 13px;
+    animation-delay: 1.7s;
+}
+
+.ob-or-reel-progreso {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.ob-or-reel-progreso::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #fff;
+    transform-origin: left;
+    animation: ob-or-barra 6.5s linear forwards;
+}
+
+/* chat con una IA */
+.ob-or--ia {
+    padding: 42px 12px 12px;
+    color: #e3e3e3;
+    background: #131314;
+}
+
+.ob-or-ia-cab {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 0 4px 10px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ob-or-ia-cab svg {
+    color: #a78bfa;
+}
+
+.ob-or-ia-hilo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 2px;
+    overflow: hidden;
+}
+
+.ob-or .ob-or-ia-yo {
+    align-self: flex-end;
+    max-width: 86%;
+    padding: 9px 12px;
+    font-size: 12px;
+    line-height: 1.4;
+    background: #2a2b2e;
+    border-radius: 16px 16px 4px 16px;
+    animation: ob-or-entra 0.3s ease-out;
+}
+
+.ob-or-ia-resp {
+    display: grid;
+    grid-template-columns: 22px 1fr;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 1.45;
+    animation: ob-or-entra 0.3s ease-out;
+}
+
+.ob-or-ia-ico {
+    display: grid;
+    place-items: center;
+    width: 22px;
+    height: 22px;
+    color: #fff;
+    background: linear-gradient(135deg, #818cf8, #c084fc);
+    border-radius: 50%;
+}
+
+.ob-or .ob-or-ia-resp p {
+    margin: 2px 0 6px;
+}
+
+.ob-or-ia-resp strong {
+    color: #fff;
+}
+
+.ob-or-ia-resp ul {
+    display: grid;
+    gap: 5px;
+    margin: 0;
+    padding-left: 16px;
+}
+
+.ob-or-ia-resp li {
+    animation: ob-or-entra 0.3s ease-out;
+}
+
+.ob-or-ia-enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 11px;
+    color: #c7d2fe;
+    background: #1f2937;
+    border: 1px solid rgba(165, 180, 252, 0.35);
+    border-radius: 999px;
+    animation: ob-or-entra 0.3s ease-out;
+}
+
+.ob-or .ob-or-ia-enlace img {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.ob-or-ia-caja {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 8px 8px 14px;
+    font-size: 11.5px;
+    color: #8e918f;
+    background: #1e1f20;
+    border-radius: 999px;
+}
+
+.ob-or-ia-caja svg {
+    width: 24px;
+    height: 24px;
+    padding: 5px;
+    color: #e3e3e3;
+    background: #2a2b2e;
+    border-radius: 50%;
+}
+
+.ob-or-pensando {
+    display: inline-flex;
+    align-self: flex-start;
+    gap: 4px;
+    padding: 10px 12px;
+}
+
+.ob-or-pensando i {
+    width: 6px;
+    height: 6px;
+    background: #a78bfa;
+    border-radius: 50%;
+    animation: ob-or-punto 1s ease-in-out infinite;
+}
+
+.ob-or-pensando i:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.ob-or-pensando i:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+/* mensaje de alguien que te lo recomienda */
+.ob-or--chat {
+    color: #e2e8f0;
+    background: #0f172a;
+}
+
+.ob-or-chat-cab {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 42px 10px 10px;
+    font-size: 12.5px;
+    background: #1e293b;
+}
+
+.ob-or-chat-avatar {
+    display: grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #f472b6, #fb923c);
+    border-radius: 50%;
+}
+
+.ob-or-chat-cab > span:last-child {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.25;
+}
+
+.ob-or-chat-cab small {
+    font-size: 10px;
+    color: #94a3b8;
+}
+
+.ob-or-chat-hilo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    padding: 14px 10px;
+    overflow: hidden;
+    background: radial-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 14px 14px;
+}
+
+.ob-or .ob-or-chat-el,
+.ob-or .ob-or-chat-yo {
+    max-width: 82%;
+    padding: 7px 10px;
+    font-size: 12px;
+    line-height: 1.4;
+    border-radius: 12px;
+    animation: ob-or-entra 0.25s ease-out;
+}
+
+.ob-or .ob-or-chat-el {
+    align-self: flex-start;
+    background: #1e293b;
+    border-top-left-radius: 3px;
+}
+
+.ob-or .ob-or-chat-yo {
+    align-self: flex-end;
+    background: #4f46e5;
+    border-top-right-radius: 3px;
+}
+
+.ob-or-pensando--chat {
+    background: #1e293b;
+    border-radius: 12px 12px 12px 3px;
+}
+
+.ob-or-pensando--chat i {
+    background: #94a3b8;
+}
+
+.ob-or-chat-enlace {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    gap: 9px;
+    max-width: 88%;
+    padding: 8px;
+    background: #1e293b;
+    border: 1px solid rgba(165, 180, 252, 0.3);
+    border-radius: 12px;
+    border-top-left-radius: 3px;
+    animation: ob-or-entra 0.3s ease-out;
+}
+
+.ob-or .ob-or-chat-enlace img {
+    width: 34px;
+    height: 34px;
+    background: #0b1020;
+    border-radius: 8px;
+}
+
+.ob-or-chat-enlace span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.ob-or-chat-enlace strong {
+    font-size: 12px;
+}
+
+.ob-or-chat-enlace small {
+    font-size: 10.5px;
+    color: #cbd5e1;
+}
+
+.ob-or-chat-enlace em {
+    font-size: 10px;
+    font-style: normal;
+    color: #a5b4fc;
+}
+
+.ob-or-chat-caja {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 8px 10px;
+    padding: 9px 12px;
+    font-size: 11.5px;
+    color: #94a3b8;
+    background: #1e293b;
+    border-radius: 999px;
+}
+
+/* «De otra forma»: la marca */
+.ob-or--marca {
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #fff;
+    background: radial-gradient(60% 40% at 50% 45%, rgba(129, 140, 248, 0.35), transparent), #0b1020;
+}
+
+.ob-or--marca .ob-or-logo {
+    width: 72px;
+    height: 72px;
+}
+
+.ob-or--marca strong {
+    font-size: 20px;
+}
+
+.ob-or--marca span {
+    font-size: 12px;
+    color: #a5b4fc;
+}
+
+/* solo movimiento, sin opacidad: con opacidad, los mensajes se quedaban a medio encender en Chrome */
+@keyframes ob-or-entra {
+    from { transform: translateY(10px) scale(0.96); }
+    to { transform: none; }
+}
+
+@keyframes ob-or-cursor {
+    50% { opacity: 0; }
+}
+
+@keyframes ob-or-toque {
+    from { transform: scale(0.4); opacity: 1; }
+    to { transform: scale(1.5); opacity: 0; }
+}
+
+@keyframes ob-or-late {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.18); }
+}
+
+@keyframes ob-or-sube {
+    0% { opacity: 0; transform: translateY(0) scale(0.6); }
+    15% { opacity: 1; }
+    100% { opacity: 0; transform: translate(-10px, -130px) scale(1.15); }
+}
+
+@keyframes ob-or-barra {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@keyframes ob-or-punto {
+    0%, 80%, 100% { opacity: 0.3; transform: translateY(0); }
+    40% { opacity: 1; transform: translateY(-3px); }
+}
+
+/* en el final, los dos botones del gimnasio en una línea cuando caben (si no, uno debajo del otro) */
+.ob-final-cta .ob-botones .btn {
+    flex: 1 1 auto;
+    white-space: nowrap;
 }
