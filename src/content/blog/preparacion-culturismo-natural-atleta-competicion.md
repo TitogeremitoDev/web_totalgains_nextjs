@@ -204,7 +204,7 @@ Mi consejo: escribe ese plan antes de competir, cuando todos tenéis la cabeza f
 
 ## <span id="totalgains"></span>Cómo te ayuda TotalGains a cumplir cada objetivo
 
-El Modo Elite junta todo lo anterior en un panel por atleta y un tablero para todos. Y como en TotalGains todo está incluido, lo tienes en cualquier plan, también en el gratuito, dentro de [tu propia app con tu marca](/blog/app-marca-blanca-entrenadores-personales/).
+El Modo Elite junta todo lo anterior en un panel por atleta y un tablero para todos. Y como en TotalGains todo está incluido, lo tienes en cualquier plan, también en el gratuito, dentro de [la app con tu marca](/blog/app-marca-blanca-entrenadores-personales/).
 
 ![Panel Modo Elite de TotalGains de un atleta de ejemplo: cuenta atrás de 51 días, preparación al 60 %, línea de fases hasta el stage y tarjetas de peso, objetivo, ritmo necesario y pulso en reposo](/images/blog/preparacion-natural-app-resumen.webp "El panel de cada atleta: cuenta atrás, fase, peso, ritmo y salud de un vistazo. Datos de ejemplo. | shot | 1400x628")
 

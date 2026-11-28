@@ -47,7 +47,7 @@ const ESPECIFICAS = {
         },
         {
             question: "¿Cuánto cuesta tener marca blanca e IA en cada plataforma?",
-            answer: "En MyPT Hub, marca blanca e IA se contratan aparte: plan Premium (~59 €) + White Label (~145 €/mes) + Check-Ins AI (~17 €/mes) suman alrededor de 221 €/mes. En TotalGains las dos van incluidas en cualquier plan, desde 29,90 €/mes con IVA. Precios de MyPT Hub según mypthub.net, verificados en abril de 2026: confírmalos en su web antes de contratar.",
+            answer: "En MyPT Hub, marca blanca e IA se contratan aparte: plan Premium (~59 €) + White Label (~145 €/mes) + Check-Ins AI (~17 €/mes) suman alrededor de 221 €/mes. En TotalGains las dos van incluidas en cualquier plan, también en el gratuito. Precios de MyPT Hub según mypthub.net, verificados en abril de 2026: confírmalos en su web antes de contratar.",
         },
         {
             question: "¿Necesito integraciones externas para la parte de nutrición?",
@@ -74,7 +74,7 @@ const ESPECIFICAS = {
         },
         {
             question: "¿Mis clientes verán mi marca en la app?",
-            answer: "Sí: la app que descargan en iOS y Android lleva tu nombre, tu logo y tus colores, y va incluida en todos los planes desde 29,90 €/mes con IVA.",
+            answer: "Sí: tus clientes descargan la app de TotalGains en iOS y Android y, al entrar, la ven con tu nombre, tu logo y tus colores (no es una app aparte en las tiendas). Va incluida en todos los planes, también en el gratuito.",
         },
     ],
 
@@ -119,7 +119,7 @@ const ESPECIFICAS = {
     dudyfit: [
         {
             question: "¿Mis clientes descargarán una app con mi marca?",
-            answer: "Sí: nombre, logo y colores tuyos en iOS y Android, incluido en todos los planes desde 29,90 €/mes con IVA. En Dudyfit tus clientes usan la app de la plataforma, sin personalización de marca para el coach (verificado en su web en abril de 2026).",
+            answer: "Sí: tus clientes ven la app de TotalGains con tu nombre, tu logo y tus colores en iOS y Android (no es una app aparte en las tiendas), incluida en todos los planes, también en el gratuito. En Dudyfit tus clientes usan la app de la plataforma, sin personalización de marca para el coach (verificado en su web en abril de 2026).",
         },
         {
             question: "¿TotalGains avisa a mis clientes de la renovación?",

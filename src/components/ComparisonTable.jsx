@@ -11,7 +11,7 @@ const rows = [
     { feature: '+240.000 alimentos en BD',      tg: true,  tr: false, ha: false },
     { feature: 'App marca blanca para clientes',tg: true,  tr: false, ha: true  },
     { feature: 'Sin penalización por volumen',  tg: true,  tr: false, ha: false },
-    { feature: 'Precio desde (plan de entrada)', tg: '29,90 €/mes', tr: '≈$10/mes', ha: '22,99 €/mes' },
+    { feature: 'Precio desde (plan de entrada)', tg: '0 € (hasta 5 atletas); de pago, 29,90 €/mes', tr: '≈$10/mes', ha: '22,99 €/mes' },
     { feature: 'Prueba gratuita sin tarjeta',   tg: true,  tr: false, ha: false },
     { feature: 'Seguimiento de progreso',        tg: true,  tr: true,  ha: true  },
     { feature: 'Gestión de rutinas',            tg: true,  tr: true,  ha: true  },

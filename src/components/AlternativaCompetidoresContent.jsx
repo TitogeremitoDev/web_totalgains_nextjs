@@ -26,7 +26,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
                 { feature: "Idioma y soporte", tg: "Español nativo, soporte en menos de 24h", bg: "Inglés, soporte con franjas horarias EE.UU./Canadá" },
                 { feature: "IA integrada en plan base", tg: "Rutinas y dietas con IA incluidas en todos los planes", bg: "Advanced Nutrition como add-on ($45/mes)" },
                 { feature: "Base de alimentos propia", tg: "Base personalizable con +240.000 alimentos", bg: "Integración con MyFitnessPal" },
-                { feature: "App marca blanca", tg: "Incluida en todos los planes (desde 29,90€)", bg: "Requiere tiers altos + $169 pago único + $99/año" },
+                { feature: "App marca blanca", tg: "Incluida en todos los planes, también en el gratuito", bg: "Requiere tiers altos + $169 pago único + $99/año" },
                 { feature: "Modelo de precios", tg: "Plan plano por tramos — predecible", bg: "Facturación en USD con add-ons acumulables" },
                 { feature: "Migración asistida", tg: "Incluida en todos los planes, en español", bg: "No ofrecida" }
             ]
@@ -38,7 +38,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
             features: [
                 { feature: "Idioma y soporte", tg: "Español nativo, soporte en menos de 24h", bg: "Inglés, soporte en franjas UK/AU" },
                 { feature: "IA integrada en plan base", tg: "Rutinas y dietas con IA incluidas", bg: "Check-Ins AI como add-on (17€/mes)" },
-                { feature: "App marca blanca", tg: "Incluida en todos los planes (desde 29,90€)", bg: "Add-on de 145€/mes adicionales" },
+                { feature: "App marca blanca", tg: "Incluida en todos los planes, también en el gratuito", bg: "Add-on de 145€/mes adicionales" },
                 { feature: "Precio con marca blanca + IA", tg: "89,90€/mes todo incluido", bg: "~221€/mes (Premium 59€ + White Label 145€ + AI 17€)" },
                 { feature: "Módulo resistencia/cardio", tg: "Integrado con fuerza — carrera, bici, natación", bg: "Enfoque principal en fuerza" },
                 { feature: "Migración asistida", tg: "Incluida en todos los planes, en español", bg: "No ofrecida en español" }
@@ -50,7 +50,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
             painPoint: "Si quieres IA y marca blanca incluidas en el plan base, sin add-ons acumulables, y con capacidad para más de 50 clientes.",
             features: [
                 { feature: "IA integrada en plan base", tg: "Rutinas y dietas con IA incluidas", bg: "Nutri AI como add-on (14,99€/mes)" },
-                { feature: "App marca blanca", tg: "Incluida en todos los planes (desde 29,90€)", bg: "Add-on Personaliza tu app (30,24€/mes con IVA)" },
+                { feature: "App marca blanca", tg: "Incluida en todos los planes, también en el gratuito", bg: "Add-on Personaliza tu app (30,24€/mes con IVA)" },
                 { feature: "Precio con marca blanca + IA", tg: "89,90€/mes todo incluido", bg: "~192€/mes (Pro 50: 143,99€ + Personaliza: 30,24€ + Nutri AI: 18,14€, con IVA)" },
                 { feature: "Límite de clientes plan medio", tg: "Hasta 100 clientes en plan Pro", bg: "Hasta 50 clientes en plan Pro" },
                 { feature: "Base de alimentos propia", tg: "Base personalizable con +240.000 alimentos", bg: "Base estándar" },
@@ -78,7 +78,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
                 { feature: "Idioma y soporte", tg: "Español nativo, soporte en menos de 24h", bg: "Solo inglés" },
                 { feature: "IA integrada", tg: "Rutinas y dietas generadas con IA", bg: "IA no incluida según su web oficial" },
                 { feature: "Nutrición", tg: "Base propia de +240.000 alimentos + generador IA", bg: "Integración con MyFitnessPal (en inglés)" },
-                { feature: "App marca blanca", tg: "Incluida en todos los planes (desde 29,90€)", bg: "Custom branding disponible en Standard/Pro" },
+                { feature: "App marca blanca", tg: "Incluida en todos los planes, también en el gratuito", bg: "Custom branding disponible en Standard/Pro" },
                 { feature: "Precio de entrada", tg: "Desde 29,90€/mes (25 clientes)", bg: "Desde $26,34/mes (5 clientes)" },
                 { feature: "Migración asistida", tg: "Incluida por soporte humano en español", bg: "No ofrecida en español" }
             ]
@@ -90,7 +90,7 @@ export default function AlternativaCompetidoresContent({ defaultCompetitor = 'tr
             features: [
                 { feature: "Idioma y soporte", tg: "Español nativo + equipo de desarrollo directo", bg: "Inglés, soporte por chat" },
                 { feature: "IA integrada", tg: "Rutinas y dietas generadas con IA", bg: "IA no promocionada en su oferta pública" },
-                { feature: "App marca blanca", tg: "Incluida en todos los planes (desde 29,90€)", bg: "Add-on de $40/mes adicionales" },
+                { feature: "App marca blanca", tg: "Incluida en todos los planes, también en el gratuito", bg: "Add-on de $40/mes adicionales" },
                 { feature: "Base de alimentos", tg: "Base propia de +240.000 alimentos + generador IA", bg: "Planificador de nutrición sin base integrada específica" },
                 { feature: "Modelo de precios", tg: "Plan plano por tramos en EUR", bg: "Planes por tramos en USD con add-ons" },
                 { feature: "Migración asistida", tg: "Incluida por soporte humano en español", bg: "No ofrecida en español" }

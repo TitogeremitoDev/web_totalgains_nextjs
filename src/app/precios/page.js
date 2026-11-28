@@ -24,15 +24,15 @@ import "./precios.css";
    ────────────────────────────────────────────── */
 
 export const metadata = {
-  title: { absolute: "Precios de TotalGains 2026: plan gratis y desde 29,90 €" },
+  title: { absolute: "Precios TotalGains 2026: gratis, entrenador 29,90 € y gimnasio 149 €" },
   description:
-    "Todos los planes con IVA incluido: gratuito de por vida hasta 5 atletas, Starter 29,90 €, Pro 89,90 € y Unlimited. Sin permanencia y sin tarjeta.",
+    "Con IVA incluido. Gimnasios: 149, 199 o 249 €/mes con entrenadores ilimitados. Entrenadores: gratis hasta 5 atletas, Starter 29,90 €, Pro 89,90 € y Unlimited 149,90 €. Sin permanencia.",
   alternates: { canonical: "https://totalgains.es/precios/" },
   openGraph: {
     type: "website",
     title: "Precios de TotalGains: planes para entrenadores y gimnasios",
     description:
-      "Plan gratuito permanente hasta 5 atletas y planes de pago desde 29,90 €/mes con IVA incluido. Sin permanencia.",
+      "Gimnasios: 149, 199 o 249 €/mes con IVA y entrenadores ilimitados. Entrenadores: plan gratuito permanente hasta 5 atletas y de pago desde 29,90 €/mes con IVA. Sin permanencia.",
     url: "https://totalgains.es/precios/",
     images: [{ url: "https://totalgains.es/og-image.jpg", width: 1200, height: 630, alt: "Precios de TotalGains" }],
   },
@@ -48,7 +48,7 @@ export default function PreciosPage() {
       // IAs crean que lo más barato son 29,90 €.
       softwareApplicationNode({
         description:
-          "Software español para entrenadores personales, nutricionistas y gimnasios. Plan gratuito permanente hasta 5 atletas y planes de pago desde 29,90 €/mes con IVA incluido.",
+          "Software español para gimnasios, entrenadores personales y nutricionistas. Gimnasios: 149, 199 o 249 €/mes con IVA. Entrenadores: plan gratuito permanente hasta 5 atletas y planes de pago desde 29,90 €/mes con IVA incluido.",
       }),
       {
         "@type": "BreadcrumbList",

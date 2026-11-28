@@ -161,7 +161,7 @@ export default function SobreNosotros() {
               { title: "Construido desde dentro del sector", desc: "No somos una empresa de software genérico que se metió en fitness. Entendemos la diferencia entre adherencia y retención, entre un mesociclo y una periodización, entre un macro y un micronutriente." },
               { title: "IA que no alucina", desc: "Nuestra IA genera rutinas y dietas usando exclusivamente tu base de datos. Sin inventar ejercicios. Sin sustituir alimentos por otros que no usas. Tu metodología, automatizada." },
               { title: "Soporte de personas reales", desc: "Cuando escribes a soporte@totalgains.es, te responde alguien del equipo en menos de 24 horas. En español. Sin tickets que tardan una semana." },
-              { title: "Precio justo", desc: "Desde 29,90€/mes con IVA incluido. Sin penalización por crecer. Sin comisiones sobre tus ventas. Sin módulos de pago adicionales." },
+              { title: "Precio justo", desc: "Entrenadores: gratis hasta 5 atletas y de pago desde 29,90 €/mes. Gimnasios: desde 149 €/mes. Siempre con IVA incluido. Sin penalización por crecer. Sin comisiones sobre tus ventas. Sin módulos de pago adicionales." },
               ].map(({ title, desc }) => (
                 <div key={title} className="glass" style={{ padding: 22 }}>
                   <h3 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 8 }}>{title}</h3>

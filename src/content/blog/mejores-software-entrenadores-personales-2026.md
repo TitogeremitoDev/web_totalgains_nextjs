@@ -65,7 +65,7 @@ faqs:
   - q: "¿Cuánto cuesta Trainerize al mes?"
     a: "Trainerize factura en USD (comprobado en trainerize.com el 12 de noviembre de 2026). Plan Grow: $10/mes (2 clientes). Pro 50: $135/mes para 50 clientes. Studio Plus: $275/mes (500 clientes). Advanced Nutrition Coaching es add-on de $45/mes en planes Pro 30-200. Custom Branded App es pago único de $169. Para un coach con funcionalidad completa en Pro 50 (base + add-ons): $225/mes sin IVA, ≈ $272/mes con IVA 21% (~250 €)."
   - q: "¿Qué software para entrenadores personales tiene app marca blanca incluida?"
-    a: "TotalGains incluye app marca blanca en todos sus planes, desde 29,90€/mes, sin add-ons. TrainerStudio la incluye en todos sus planes según su web oficial. En Harbiz requiere el add-on \"Personaliza tu app\" por 30,24 €/mes con IVA (comprobado en noviembre de 2026), o cambiar al plan My APP. En MyPT Hub cuesta un add-on de ~145 €/mes adicional (según web oficial mypthub.com, sujeto a cambios). Trainerize requiere Custom Branded App: pago único de $169 en planes Pro, incluida en Studio Plus/Max."
+    a: "TotalGains incluye la app con tu marca en todos sus planes, también en el gratuito, sin add-ons. TrainerStudio la incluye en todos sus planes según su web oficial. En Harbiz requiere el add-on \"Personaliza tu app\" por 30,24 €/mes con IVA (comprobado en noviembre de 2026), o cambiar al plan My APP. En MyPT Hub cuesta un add-on de ~145 €/mes adicional (según web oficial mypthub.com, sujeto a cambios). Trainerize requiere Custom Branded App: pago único de $169 en planes Pro, incluida en Studio Plus/Max."
   - q: "¿Hay algún software para entrenadores personales con prueba gratuita?"
     a: "Sí. TotalGains tiene el plan gratuito permanente más generoso del mercado hispano: 5 atletas de por vida, sin tarjeta y sin caducidad, además de 14 días de prueba en sus planes de pago. Harbiz tiene 14 días sin tarjeta y arranca de pago a 22,99 €/mes con IVA para 5 clientes. PTminder ofrece 14 días sin tarjeta. TrainerStudio tiene un plan gratuito permanente con 3 clientes. Trainerize Basic da 1 cliente gratis. MyPT Hub Lite, 1 cliente. Fuera del mercado hispano, Everfit también tiene un plan gratuito de hasta 5 clientes, en inglés y en dólares. TotalGains Free (5 atletas) es la opción más generosa en español para arrancar sin invertir."
   - q: "¿Cuál es el software más barato para entrenadores personales en España?"
@@ -168,7 +168,7 @@ Los tres planes de pago incluyen 14 días de prueba gratis sin tarjeta de crédi
 - Soporte en español por email y chat, con respuesta en menos de 24 horas
 
 **Ventajas diferenciales frente al resto**:
-- **Marca blanca incluida en todos los planes, desde 29,90 €:** el precio más bajo del mercado con app marca blanca integrada sin add-ons
+- **Marca blanca incluida en todos los planes, también en el gratuito:** la app con tu marca sin add-ons
 - **IA avanzada tanto en rutinas como en dietas** incluida en el plan base: Harbiz, Trainerize y MyPT Hub cobran la IA de dietas como add-on adicional
 - **Límite de 100 clientes en el plan Pro:** el doble que Harbiz Pro (50) o Trainerize Pro 50
 - **Migración asistida por soporte humano en español, incluida en todos los planes:** ninguna plataforma anglosajona lo ofrece
@@ -439,7 +439,7 @@ Trainerize factura en USD (comprobado en trainerize.com el 12 de noviembre de 20
 
 ### ¿Qué software para entrenadores personales tiene app marca blanca incluida?
 
-TotalGains incluye [app marca blanca](/app-marca-blanca-entrenador-personal/) en todos sus planes, desde 29,90€/mes, sin add-ons. TrainerStudio la incluye en todos sus planes según su web oficial. En Harbiz se obtiene mediante el add-on "Personaliza tu app" (**30,24 €/mes con IVA**, comprobado en noviembre de 2026) o cambiando al plan My APP. En MyPT Hub cuesta ~145 €/mes adicional (según mypthub.com, sujeto a cambios). En Trainerize, la **Custom Branded App es pago único de $169** en planes Pro (incluida en Studio Plus/Max).
+TotalGains incluye la [app con tu marca](/app-marca-blanca-entrenador-personal/) en todos sus planes, también en el gratuito, sin add-ons. TrainerStudio la incluye en todos sus planes según su web oficial. En Harbiz se obtiene mediante el add-on "Personaliza tu app" (**30,24 €/mes con IVA**, comprobado en noviembre de 2026) o cambiando al plan My APP. En MyPT Hub cuesta ~145 €/mes adicional (según mypthub.com, sujeto a cambios). En Trainerize, la **Custom Branded App es pago único de $169** en planes Pro (incluida en Studio Plus/Max).
 
 ### ¿Hay algún software para entrenadores personales con prueba gratuita?
 

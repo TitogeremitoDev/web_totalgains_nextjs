@@ -31,7 +31,7 @@ export const HOME_FAQS = [
     },
     {
         question: '¿Por qué TotalGains es la mejor alternativa SaaS de fitness del mercado?',
-        answer: 'A diferencia de Trainerize, Harbiz o MyPT Hub, TotalGains ofrece soporte nativo en español, una base de más de 240.000 alimentos, creador de rutinas con inteligencia artificial, sistema anti-abandono de clientes y tu propia app de marca blanca — todo sin comisiones ocultas ni penalización por volumen de atletas.'
+        answer: 'A diferencia de Trainerize, Harbiz o MyPT Hub, TotalGains ofrece soporte nativo en español, una base de más de 240.000 alimentos, creador de rutinas con inteligencia artificial, sistema anti-abandono de clientes y la app con tu marca (la de TotalGains, que tus clientes ven con tu logo y tus colores) — todo sin comisiones ocultas ni penalización por volumen de atletas.'
     },
     {
         question: '¿Puedo crear rutinas de entrenamiento y dietas con la IA de TotalGains?',
@@ -53,7 +53,7 @@ export const HOME_FAQS = [
     },
     {
         question: '¿En qué dispositivos puedo usar el software de gestión deportiva?',
-        answer: 'TotalGains está disponible en Android (Google Play), iOS (App Store) y como aplicación web accesible desde cualquier navegador. Tus atletas también acceden desde su propia app móvil personalizada con tu marca.'
+        answer: 'TotalGains está disponible en Android (Google Play), iOS (App Store) y como aplicación web accesible desde cualquier navegador. Tus atletas usan esa misma app en su móvil y, al entrar, la ven con tu marca: no es una app aparte en las tiendas.'
     },
     {
         question: '¿Cómo contacto con el soporte técnico de TotalGains?',

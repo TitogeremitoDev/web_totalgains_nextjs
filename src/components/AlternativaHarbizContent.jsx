@@ -39,7 +39,7 @@ export default function AlternativaHarbizContent() {
                         Mejor Alternativa a Harbiz para Entrenadores Personales
                     </h1>
                     <p className="alternativas-subtitle mt-4">
-                        Si quieres IA y marca blanca incluidas en el plan base, sin add-ons acumulables, y con capacidad para más de 50 clientes. TotalGains es la alternativa en español con todo incluido (IA y marca blanca) desde 29,90 €/mes.
+                        Si quieres IA y marca blanca incluidas en el plan base, sin add-ons acumulables, y con capacidad para más de 50 clientes. TotalGains es la alternativa en español con todo incluido (IA y marca blanca), con plan gratuito hasta 5 atletas y de pago desde 29,90 €/mes.
                     </p>
                     <div style={{ marginTop: 20 }}>
                         <TrustpilotBadge score={TRUSTPILOT.score} totalReviews={TRUSTPILOT.reviews} variant="compact" />

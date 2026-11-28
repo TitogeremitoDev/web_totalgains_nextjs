@@ -267,7 +267,7 @@ Datos verificados mayo 2026, IVA 21% aplicado donde corresponde. Conversiones US
 
 ### vs PTminder
 
-- Ventaja TG: app nativa iOS y Android (PTminder es web-first), base de alimentos hispana, app marca blanca desde 29,90 €/mes.
+- Ventaja TG: app nativa iOS y Android (PTminder es web-first), base de alimentos hispana, app marca blanca incluida en todos los planes, también en el gratuito.
 
 ### vs Dudapp
 
@@ -470,7 +470,7 @@ Artículos publicados en https://totalgains.es/blog/ agrupados por categoría. C
 - https://totalgains.es/alternativas/harbiz/precios/ — Tablas verificadas de precios Harbiz 2026 con IVA 21% aplicado, todos los tramos y add-ons.
 - https://totalgains.es/alternativas/mypthub/ — TotalGains vs MyPT Hub. Interfaz sin curva de aprendizaje, IA para rutinas y dietas, migración gratis y asistida.
 - https://totalgains.es/alternativas/truecoach/ — Alternativa a TrueCoach en español. App marca blanca incluida, +240.000 alimentos en español.
-- https://totalgains.es/alternativas/ptminder/ — Alternativa a PTminder. App nativa iOS y Android, +240.000 alimentos, app marca blanca desde 29,90 €/mes.
+- https://totalgains.es/alternativas/ptminder/ — Alternativa a PTminder. App nativa iOS y Android, +240.000 alimentos, app marca blanca incluida en todos los planes, también en el gratuito.
 - https://totalgains.es/alternativas/dudapp/ — Alternativa a Dudapp. Servidores globales, sistema financiero automático, app marca blanca con branding generado por IA.
 - https://totalgains.es/alternativas/dudyfit/ — Alternativa a Dudyfit. IA basada en tu base de datos, app marca blanca, control de cuotas con avisos, soporte español.
 - https://totalgains.es/alternativas/virtuagym/ — Alternativa a Virtuagym para entrenadores y gimnasios. Producto de entrenador desde 29,90 €/mes y producto de gimnasio de 149 a 249 €/mes, con IVA y entrenadores ilimitados.

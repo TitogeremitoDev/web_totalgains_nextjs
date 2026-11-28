@@ -8,12 +8,12 @@ import { planesResumen } from "@/data/planesCoach";
 export const metadata = {
   title: "Gestión de Clientes Fitness para Entrenadores",
   description:
-    "Gestiona hasta 100 clientes desde una sola plataforma: rutinas con IA, dietas y seguimiento estructurado. App marca blanca incluida desde 29,90 €/mes con IVA.",
+    "Gestiona hasta 100 clientes desde una sola plataforma: rutinas con IA, dietas y seguimiento estructurado. App con tu marca incluida en todos los planes, también en el gratuito.",
   alternates: { canonical: "https://totalgains.es/gestion-clientes-fitness/" },
   openGraph: {
     type: "website",
     title: "Gestión de Clientes Fitness para Entrenadores | TotalGains",
-    description: "Gestiona hasta 100 clientes desde una sola plataforma: rutinas con IA, dietas y seguimiento estructurado. App marca blanca incluida desde 29,90 €/mes con IVA.",
+    description: "Gestiona hasta 100 clientes desde una sola plataforma: rutinas con IA, dietas y seguimiento estructurado. App con tu marca incluida en todos los planes, también en el gratuito.",
     url: "https://totalgains.es/gestion-clientes-fitness/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
   },
