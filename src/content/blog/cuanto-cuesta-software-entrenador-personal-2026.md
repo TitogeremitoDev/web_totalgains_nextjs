@@ -144,7 +144,7 @@ Todo esto va en los cuatro:
 - **Seguimiento** de cada cliente: revisiones, fotos, medidas y avisos.
 - **Puesta en marcha**: te ayudamos a pasar tus clientes desde tu programa actual o desde Excel, en español y sin coste.
 
-El plan gratuito es para siempre y no pide tarjeta. El Pro se puede probar 14 días, también sin tarjeta. Los planes, en [software para entrenadores personales](/software-entrenador-personal/).
+El plan gratuito es para siempre y no pide tarjeta. El Pro se puede probar 14 días, también sin tarjeta. Los planes, en [TotalGains para entrenadores](/software-entrenador-personal/).
 
 ---
 

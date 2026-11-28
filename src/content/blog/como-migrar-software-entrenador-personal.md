@@ -81,7 +81,7 @@ Esta guía es el proceso exacto que sigo personalmente cuando un entrenador con 
 
 ## <span id="por-que-miedo"></span>Por qué la migración da miedo (y por qué no debería)
 
-El miedo a migrar de [software de entrenamiento](/software-entrenador-personal/) viene de tres lugares concretos:
+El miedo a migrar de [software de entrenamiento](/blog/mejores-software-entrenadores-personales-2026/) viene de tres lugares concretos:
 
 1. **Miedo a perder datos**: clientes, rutinas guardadas, histórico de progreso.
 2. **Miedo a perder clientes**: que los atletas se cabreen con el cambio y se vayan.

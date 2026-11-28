@@ -97,7 +97,7 @@ El reloj puede ser un reloj estupendo. Lo que pasa es que no es una inversión p
 
 ### Un software que centralice a tus atletas
 
-Si aún llevas rutinas en Excel, dietas en PDF y check-ins por WhatsApp, ahí tienes tu mayor fuga de horas. Un buen [software para entrenador personal](/software-entrenador-personal/) lo junta todo en un sitio y automatiza lo repetitivo. Lo detallo en las [5 automatizaciones del coach de más de 50 clientes](/blog/top-5-automatizaciones-coach-50-clientes-2026/). Solo con un [check-in semanal que se revisa en 10 minutos](/blog/check-in-semanal-clientes-que-preguntar/) ya recuperas tardes enteras.
+Si aún llevas rutinas en Excel, dietas en PDF y check-ins por WhatsApp, ahí tienes tu mayor fuga de horas. Un buen [software para entrenador personal](/blog/mejores-software-entrenadores-personales-2026/) lo junta todo en un sitio y automatiza lo repetitivo. Lo detallo en las [5 automatizaciones del coach de más de 50 clientes](/blog/top-5-automatizaciones-coach-50-clientes-2026/). Solo con un [check-in semanal que se revisa en 10 minutos](/blog/check-in-semanal-clientes-que-preguntar/) ya recuperas tardes enteras.
 
 Antes de pagar, mira qué entra en cada plan. En TotalGains todas las funciones (la IA para rutinas y dietas, la marca blanca, los check-ins) están en todos los planes, también en el gratuito: lo único que cambia es cuántos atletas activos caben y el soporte. Lo tienes en la página de [precios](/precios/). Y si te frena el cambio, sigue la guía para [migrar tus clientes sin perder datos](/blog/como-migrar-software-entrenador-personal/).
 

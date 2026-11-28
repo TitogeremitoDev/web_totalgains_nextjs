@@ -12,7 +12,7 @@ export const metadata = {
 
 const destinos = [
     { href: "/", label: "Inicio", desc: "Qué es TotalGains y para quién" },
-    { href: "/software-entrenador-personal/", label: "Software para entrenadores", desc: "Funcionalidades y precios" },
+    { href: "/software-entrenador-personal/", label: "Planes para entrenadores", desc: "Funcionalidades y precios" },
     { href: "/para-gimnasios/", label: "Para gimnasios", desc: "Clases, reservas y multi-coach" },
     { href: "/alternativas/", label: "Comparativas", desc: "Harbiz, Trainerize, MyPT Hub y más" },
     { href: "/blog/", label: "Blog", desc: "Guías para coaches y nutricionistas" },

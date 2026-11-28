@@ -106,7 +106,7 @@ export default function AppEntrenadorPersonalOnline() {
         {[
           { href: "/app-marca-blanca-entrenador-personal/", label: "App marca blanca" },
           { href: "/plataforma-entrenamiento-online/", label: "Plataforma de entrenamiento" },
-          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+          { href: "/software-entrenador-personal/", label: "Planes para entrenadores" },
         ].map(({ href, label }) => (
           <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
         ))}

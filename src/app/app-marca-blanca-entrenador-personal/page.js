@@ -169,7 +169,7 @@ export default function AppMarcaBlanca() {
           { href: "/blog/app-marca-blanca-entrenadores-personales/", label: "Guía completa app marca blanca 2026" },
           { href: "/app-entrenador-personal-online/", label: "App entrenador online" },
           { href: "/gestion-clientes-fitness/", label: "Gestión de clientes" },
-          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+          { href: "/software-entrenador-personal/", label: "Planes para entrenadores" },
         ].map(({ href, label }) => (
           <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
         ))}

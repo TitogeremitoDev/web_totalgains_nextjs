@@ -108,7 +108,8 @@ const Footer = () => {
                                 <li><Link href="/casos-de-exito/nacho-pulido/" prefetch={false}>Caso: Nacho Pulido</Link></li>
                                 <li><Link href="/casos-de-exito/lorena-eses/" prefetch={false}>Caso: Lorena Eses</Link></li>
                                 <li><Link href="/opiniones-clientes/" prefetch={false}>Opiniones de clientes</Link></li>
-                                <li><Link href="/software-entrenador-personal/" prefetch={false}>Software para EP</Link></li>
+                                <li><Link href="/blog/mejores-software-entrenadores-personales-2026/" prefetch={false}>Mejores software para entrenadores personales</Link></li>
+                                <li><Link href="/software-entrenador-personal/" prefetch={false}>Planes para entrenadores</Link></li>
                                 <li><Link href="/ia-entrenador-personal/" prefetch={false}>IA para entrenadores</Link></li>
                                 <li><Link href="/app-marca-blanca-entrenador-personal/" prefetch={false}>App marca blanca</Link></li>
                                 <li><Link href="/base-datos-alimentos-fitness/" prefetch={false}>Base datos alimentos</Link></li>

@@ -158,7 +158,7 @@ export default function BaseDatosAlimentos() {
         {[
           { href: "/ia-entrenador-personal/", label: "IA para entrenadores" },
           { href: "/software-nutricionista-online/", label: "Software para nutricionistas" },
-          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+          { href: "/software-entrenador-personal/", label: "Planes para entrenadores" },
           { href: "/blog/top-10-alimentos-proteina-por-euro-2026/", label: "Top 10 alimentos proteicos por euro" },
           { href: "/blog/crear-planes-nutricionales-clientes-entrenador-personal/", label: "Crear planes nutricionales" },
         ].map(({ href, label }) => (

@@ -151,7 +151,7 @@ export default function IAEntrenadorPersonal() {
       <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
         {[
-          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+          { href: "/software-entrenador-personal/", label: "Planes para entrenadores" },
           { href: "/base-datos-alimentos-fitness/", label: "Base de datos alimentos" },
           { href: "/plataforma-entrenamiento-online/", label: "Plataforma de entrenamiento" },
         ].map(({ href, label }) => (

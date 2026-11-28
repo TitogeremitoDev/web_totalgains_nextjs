@@ -118,7 +118,7 @@ export default function SoftwareNutricionistaOnline() {
           { href: "/blog/crear-planes-nutricionales-clientes-entrenador-personal/", label: "Guía: crear planes nutricionales 2026" },
           { href: "/base-datos-alimentos-fitness/", label: "Base de datos alimentos" },
           { href: "/ia-entrenador-personal/", label: "IA para entrenadores" },
-          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+          { href: "/software-entrenador-personal/", label: "Planes para entrenadores" },
         ].map(({ href, label }) => (
           <Link key={href} href={href} style={{ padding: "8px 18px", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)", borderRadius: 100, fontSize: "0.88rem", color: "var(--text-secondary,#aaa)", textDecoration: "none" }}>{label}</Link>
         ))}

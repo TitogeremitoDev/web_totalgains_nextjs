@@ -105,7 +105,7 @@ export default function GestionClientesFitness() {
       <h2 style={{ fontSize: "1rem", fontWeight: 700, marginBottom: 14, color: "var(--text-secondary,#aaa)" }}>También te puede interesar</h2>
       <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
         {[
-          { href: "/software-entrenador-personal/", label: "Software para entrenadores" },
+          { href: "/software-entrenador-personal/", label: "Planes para entrenadores" },
           { href: "/plataforma-entrenamiento-online/", label: "Plataforma de entrenamiento" },
           { href: "/ia-entrenador-personal/", label: "IA para entrenadores" },
         ].map(({ href, label }) => (

@@ -53,7 +53,7 @@ El cliente que se va sin avisar. Esa es la frase que más se repite cuando hablo
 
 El contexto B2B que me ha tocado mirar de cerca este último año, hablando con entrenadores que llevan cinco o diez años en activo, es coherente: el verano es la ventana del año en la que la inercia juega en contra del coach. No es que el cliente quiera dejar de entrenar, es que el entorno (viajes, cambio de horario, hijos sin cole, mil planes) le empuja a soltar el hábito antes de que el coach pueda intervenir. Y cuando la intervención llega, casi siempre llega tarde.
 
-Este artículo es el protocolo que aplicaría yo si estuviera al frente de una cartera consolidada este julio: cómo leer las señales tempranas, cuánto cuesta de verdad una baja silenciosa, qué pasos operativos seguir esta semana y qué piezas del [software de entrenador personal](/software-entrenador-personal/) ayudan a no llegar tarde. Vamos al grano.
+Este artículo es el protocolo que aplicaría yo si estuviera al frente de una cartera consolidada este julio: cómo leer las señales tempranas, cuánto cuesta de verdad una baja silenciosa, qué pasos operativos seguir esta semana y qué piezas del [software de entrenador personal](/blog/mejores-software-entrenadores-personales-2026/) ayudan a no llegar tarde. Vamos al grano.
 
 ![Coach personal online preparando su protocolo de retención en verano: el sistema que evita que tus clientes desaparezcan en julio y agosto](/images/blog/retencion-verano-hero.webp)
 
@@ -211,7 +211,7 @@ Calendario semana a semana para que termines el mes con el sistema corriendo.
 
 ### Semana 1: auditoría de cartera
 
-Bloquea dos horas. Saca la lista entera de clientes activos. Márcalos por categoría de riesgo: alto (viaja más de dos semanas o históricamente baja en verano), medio (cambia de horario o viaja una semana) y bajo (se queda y mantiene rutina). Si usas [software para entrenador personal](/software-entrenador-personal/) con histórico decente, esto es un Excel rápido. Si no, libreta y a mano. Da igual el formato, lo que importa es tener el mapa.
+Bloquea dos horas. Saca la lista entera de clientes activos. Márcalos por categoría de riesgo: alto (viaja más de dos semanas o históricamente baja en verano), medio (cambia de horario o viaja una semana) y bajo (se queda y mantiene rutina). Si usas [software para entrenador personal](/blog/mejores-software-entrenadores-personales-2026/) con histórico decente, esto es un Excel rápido. Si no, libreta y a mano. Da igual el formato, lo que importa es tener el mapa.
 
 ### Semana 2: mensaje de expectativas
 

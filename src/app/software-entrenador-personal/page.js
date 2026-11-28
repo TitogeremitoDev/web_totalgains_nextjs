@@ -5,13 +5,13 @@ import { Users, LayoutDashboard, Bell, CreditCard, Palette, BarChart3, Check, X,
 import { planesResumen } from "@/data/planesCoach";
 
 export const metadata = {
-  title: "Software Entrenadores Personales · 29,90 €/mes",
+  title: { absolute: "TotalGains para entrenadores personales: precio y planes" },
   description:
     "Rutinas con IA en menos de 2 min, +240.000 alimentos y app marca blanca en todos los planes. Gratis hasta 5 atletas; de pago desde 29,90 €/mes con IVA.",
   alternates: { canonical: "https://totalgains.es/software-entrenador-personal/" },
   openGraph: {
     type: "website",
-    title: "Software Entrenadores Personales · Desde 29,90 €/mes | TotalGains",
+    title: "TotalGains para entrenadores personales: precio y planes",
     description: "Rutinas con IA en <2 min, +240.000 alimentos y app marca blanca en todos los planes. Plan Gratuito de por vida para 5 atletas, sin tarjeta. De pago desde 29,90 €/mes con IVA.",
     url: "https://totalgains.es/software-entrenador-personal/",
     images: [{ url: 'https://totalgains.es/og-image.jpg', width: 1200, height: 630, alt: 'TotalGains' }],
@@ -200,7 +200,7 @@ export default function SoftwareEntrenadorPersonal() {
         </div>
         <p style={{ textAlign: "center", marginTop: 20, fontSize: "0.86rem", color: "var(--text-secondary,#aaa)" }}>
           Ver comparativa completa:{" "}
-          <Link href="/blog/mejores-software-entrenadores-personales-2026/" style={{ color: "var(--primary-light,#8fa4f5)" }}>Los 5 mejores software para coaches en España 2026</Link>
+          <Link href="/blog/mejores-software-entrenadores-personales-2026/" style={{ color: "var(--primary-light,#8fa4f5)" }}>Los mejores software para entrenadores personales en 2026 (comparativa)</Link>
           {" · "}
           <Link href="/blog/cuanto-cuesta-software-entrenador-personal-2026/" style={{ color: "var(--primary-light,#8fa4f5)" }}>Cuánto cuesta cada uno en euros y con IVA</Link>
         </p>
